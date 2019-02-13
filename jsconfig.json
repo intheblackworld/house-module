@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "sections/*": ["./src/sections/*"],
+      "plugins/*": ["./src/plugins/*"],
+      "utils/*": ["./src/utils/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,26 @@
+{
+  "presets": [
+    "babel-preset-env",
+    "react",
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["ie >= 9", "chrome >= 62"]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "syntax-dynamic-import",
+    [
+      "transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
+  ]
+}

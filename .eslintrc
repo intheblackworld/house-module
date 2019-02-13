@@ -1,0 +1,32 @@
+{
+  "extends": "airbnb",
+  "plugins": ["react"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": 0,
+    "eol-last": 0,
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "life-cycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "react/no-unused-prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/prop-types": 0
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
