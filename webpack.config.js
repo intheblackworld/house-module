@@ -16,11 +16,14 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      assets: path.resolve(__dirname, './src/assets'),
-      components: path.resolve(__dirname, './src/components'),
-      sections: path.resolve(__dirname, './src/sections'),
-      utils: path.resolve(__dirname, './src/store/utils'),
-      plugins: path.resolve(__dirname, './src/store/plugins'),
+      assets: path.resolve(__dirname, 'src/assets/'),
+      components: path.resolve(__dirname, 'src/components/'),
+      sections: path.resolve(__dirname, 'src/sections/'),
+      pages: path.resolve(__dirname, 'src/pages/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
+      plugins: path.resolve(__dirname, 'src/plugins/'),
+      // test react new feature or concept
+      testConcept: path.resolve(__dirname, 'src/testConcept/'),
     },
   },
 

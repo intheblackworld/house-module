@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
+import Page from 'pages'
 
-const App = () => <div>Hello House</div>
+const App = () => <Page />
 
 render(<App />, document.getElementById('app'))

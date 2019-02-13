@@ -11,6 +11,8 @@
       "sections/*": ["./src/sections/*"],
       "plugins/*": ["./src/plugins/*"],
       "utils/*": ["./src/utils/*"],
+      "testConcept/*": ["./src/testConcept/*"],
+      "pages/*": ["./src/pages/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
