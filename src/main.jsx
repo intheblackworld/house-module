@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import Page from 'pages'
+import Test from 'pages/test'
 
-const App = () => <Page />
+const App = () => <Test />
 
 render(<App />, document.getElementById('app'))

@@ -5,12 +5,12 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    index: './src/main.jsx',
+    main: './src/main.jsx',
   },
   output: {
     filename: '[name].bundle.[hash:8].js',
+    chunkFilename: '[name].bundle.[hash:8].js',
     path: path.resolve(__dirname, 'dist'),
-    chunkFilename: '[name].[hash:8].js',
   },
 
   resolve: {
@@ -22,6 +22,7 @@ module.exports = {
       pages: path.resolve(__dirname, 'src/pages/'),
       utils: path.resolve(__dirname, 'src/utils/'),
       plugins: path.resolve(__dirname, 'src/plugins/'),
+      routers: path.resolve(__dirname, 'src/routers/'),
       // test react new feature or concept
       testConcept: path.resolve(__dirname, 'src/testConcept/'),
     },
@@ -94,7 +95,6 @@ module.exports = {
     // new BundleAnalyzerPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'), // 將 production 加入了全局的環境變數之後，第三方函式庫或專案內代碼會根據 production 做打包優化的判斷
-      // TODO: change ENV config
     }),
     new AsyncChunkNames(), // TODO: change ENV config
   ],
@@ -109,10 +109,10 @@ module.exports = {
    */
   optimization: {
     splitChunks: {
-      minChunks: 2, // 在分割之前，这个代码块最小应该被引用的次数（译注：保证代码块复用性，默认配置的策略是不需要多次引用也可以被分割）
+      // minChunks: 2, // 在分割之前，这个代码块最小应该被引用的次数（译注：保证代码块复用性，默认配置的策略是不需要多次引用也可以被分割）
       name: true,
       chunks: 'all', // 代码块类型 必须三选一： "initial"（初始化） | "all"(默认就是all) | "async"（动态加载）
-      minSize: 30000, // 形成一个新代码块最小的体积
+      // minSize: 30000, // 形成一个新代码块最小的体积
 
       /** 要切割成的每一个新chunk就是一个cache group
        * webpack根据下述条件自动进行代码块分割：

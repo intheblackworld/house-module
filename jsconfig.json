@@ -12,7 +12,8 @@
       "plugins/*": ["./src/plugins/*"],
       "utils/*": ["./src/utils/*"],
       "testConcept/*": ["./src/testConcept/*"],
-      "pages/*": ["./src/pages/*"]
+      "pages/*": ["./src/pages/*"],
+      "routers/*": ["./src/routers/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
