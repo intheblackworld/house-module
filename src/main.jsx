@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import Test from 'pages/test'
+import Routers from 'routers'
 
-const App = () => <Test />
+const App = () => <Routers />
 
 render(<App />, document.getElementById('app'))

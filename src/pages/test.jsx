@@ -3,7 +3,7 @@ import Test from 'testConcept/PureComponent'
 import LazyAndSuspense from 'testConcept/MemoComponent'
 import HookComponent from 'testConcept/Hook'
 
-export default class Test extends React.Component {
+export default class TestFeature extends React.Component {
   state = {
     options: [1, 2, 3],
     name: '',
