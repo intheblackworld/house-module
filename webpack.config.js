@@ -26,7 +26,7 @@ module.exports = {
       // test react new feature or concept
       testConcept: path.resolve(__dirname, 'src/testConcept/'),
       /* semantic ui custom theme */
-      '../../theme.config': path.join(__dirname, 'custom-theme/theme.config'),
+      '../../theme.config': path.join(__dirname, 'public/semantic-ui/theme.config'),
     },
   },
 

@@ -9,7 +9,8 @@
     "build": "yarn clear && cross-env NODE_ENV=prd webpack --config webpack.config.js && echo $NODE_ENV",
     "mock-api": "mock-json-server ./mockAPI/api.json",
     "eslint": "eslint \"src/*.{js,jsx}\" --fix",
-    "precommit": "yarn eslint"
+    "precommit": "yarn eslint",
+    "postinstall": "node scripts/semantic-ui-less-postinstall"
   },
   "lint-staged": {
     "linters": {
@@ -25,8 +26,10 @@
     "@emotion/core": "^10.0.7",
     "babel-loader": "7.1.5",
     "dayjs": "^1.8.5",
+    "find-in-files": "^0.5.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "ncp": "^2.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",

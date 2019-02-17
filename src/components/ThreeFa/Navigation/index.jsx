@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Image, Grid } from 'semantic-ui-react'
+import { Container, Image } from 'semantic-ui-react'
 
 import logo from 'assets/img/navigation/logo.png'
 
@@ -40,21 +40,22 @@ const Navigation = () => {
   const [list] = useState(NavItems)
   return (
     <Container fluid className={css.navigation}>
-      <Container>
-        <Grid centered>
+      <Container height={127}>
+        <div className={css.nav}>
           <div className={css.logo}>
             <Image src={logo} alt="" />
           </div>
           <ul className={css.navlist}>
             {list
-              && list.map(item => (
+              && list.map((item, index) => (
                 <a href={item.path} key={item.name} className={css.link}>
                   <Image src={item.imgSrc} />
-                  {item.name}
+                  <span>{item.name}</span>
+                  {list.length - 1 !== index && <span className={css.divided}>|</span>}
                 </a>
               ))}
           </ul>
-        </Grid>
+        </div>
       </Container>
     </Container>
   )
