@@ -25,6 +25,8 @@ module.exports = {
       routers: path.resolve(__dirname, 'src/routers/'),
       // test react new feature or concept
       testConcept: path.resolve(__dirname, 'src/testConcept/'),
+      /* semantic ui custom theme */
+      '../../theme.config': path.join(__dirname, 'custom-theme/theme.config'),
     },
   },
 
@@ -77,6 +79,21 @@ module.exports = {
           },
           {
             loader: 'css-loader', // translates CSS into CommonJS
+          },
+        ],
+      },
+
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'less-loader', // translates CSS into CommonJS
           },
         ],
       },

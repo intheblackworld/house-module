@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import Routers from 'routers'
 
 import 'reset-css'
-import 'semantic-ui-css/semantic.min.css'
+import 'semantic-ui-less/semantic.less'
 
 const App = () => <Routers />
 
