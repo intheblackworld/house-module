@@ -25,6 +25,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "babel-loader": "7.1.5",
+    "classnames": "^2.2.6",
     "dayjs": "^1.8.5",
     "find-in-files": "^0.5.0",
     "less": "^3.9.0",

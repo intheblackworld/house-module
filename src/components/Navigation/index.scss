@@ -1,0 +1,200 @@
+$navigationPCHeight: 127px;
+$navigationTabletHeight: 78px;
+$navigationMobileHeight: 49px;
+$navigationBg: rgba(229, 212, 143, 0.7); 
+
+$logoPCWidth: 62px;
+$logoTabletWidth: 38px;
+$logoMobileWidth: 32px;
+
+.navigation {
+  background: $navigationBg;
+  height: $navigationPCHeight;
+  display: flex !important;
+  align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  width: $logoPCWidth;
+  height: auto;
+  position: absolute;
+  left: 0;
+}
+
+.mask {
+  display: none;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .link {
+    color: #fff;
+    font-size: 3.5vmin;
+    text-align: center;
+    width: 125px;
+    transition: all 0.3s;
+
+    img {
+      height: 50px;
+      margin: 0 auto 10px;
+    }
+
+    span {
+      transition: all 0.3s;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .divided {
+      margin-left: 3px;
+    }
+
+    &:hover {
+      span {
+        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+.menu {
+  display: none;
+}
+
+.link {
+  color: #fff;
+  font-size: 27px;
+}
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .navigation {
+    height: $navigationMobileHeight;
+  }
+
+  .logo {
+    width: $logoMobileWidth;
+    left: 15px;
+  }
+
+  .nav {
+    position: static;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 15px;
+    width: 18px;
+  }
+
+  .navlist {
+    position: absolute;
+    background: $navigationBg;
+    width: 0%;
+    right: 0;
+    top: $navigationMobileHeight;
+    height: calc(100vh - $navigationMobileHeight);
+    text-align: center;
+    transition: all 0.3s;
+    display: block;
+    transform: translateX(40%);
+
+    .link {
+      height: 40px;
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img,
+      span {
+        display: block;
+        transform: scaleX(0);
+        opacity: 0;
+        transition: all 0.5s;
+      }
+    }
+
+    &.open {
+      width: 40%;
+      transform: translateX(0%);
+
+      .link {
+        span {
+          white-space: nowrap;
+          transform: scaleX(1);
+          opacity: 1;
+        }
+
+        img,
+        .divided {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .mask {
+    width: 0;
+    top: $navigationMobileHeight;
+    right: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: calc(100vh - $navigationMobileHeight);
+    opacity: 0;
+    transition: all 0.3s;
+    &.open {
+      width: 100vw;
+      opacity: 1;
+    }
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navigation {
+    height: $navigationTabletHeight;
+    justify-content: center;
+  }
+
+  .logo {
+    width: $logoTabletWidth;
+    left: -240px;
+  }
+
+  .navlist .link {
+    font-size: 17px;
+    width: 83px;
+
+    img {
+      height: 35px;
+      margin-bottom: 5px;
+    }
+
+    .divided {
+      margin-left: 6px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+/* 電腦尺寸 */
+@media (min-width: 1200px) {
+}

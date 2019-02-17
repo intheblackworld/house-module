@@ -21,6 +21,9 @@
         ]
       }
     ],
+    
+    "jsx-ally/click-events-have-key-events": 1,
+    "jsx-a11y/no-static-element-interactions": 1,
     "global-require": 0,
     "react/no-unused-prop-types": 0,
     "react/destructuring-assignment": 0,
