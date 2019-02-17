@@ -21,6 +21,7 @@
         ]
       }
     ],
+    "global-require": 0,
     "react/no-unused-prop-types": 0,
     "react/destructuring-assignment": 0,
     "react/jsx-one-expression-per-line": 0,

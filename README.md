@@ -18,6 +18,6 @@
 - [ ] react-content-loader
 - [ ] fetch
 - [x] Babel
-- [ ] React-motion
+- [ ] React transition group or React motion or other lib
 - [ ] React-i18n
 - [x] ESLint + hook

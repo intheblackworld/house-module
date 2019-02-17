@@ -1,0 +1,20 @@
+.navigation {
+  background: rgba(229, 212, 143, .7);
+  height: 127px;
+}
+
+.logo {
+  width: 62px;
+  height: auto;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  color: #fff;
+  font-size: 27px;
+}
