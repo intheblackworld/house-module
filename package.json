@@ -31,6 +31,7 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "ncp": "^2.0.0",
+    "nuka-carousel": "^4.4.8",
     "prop-types": "^15.7.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",

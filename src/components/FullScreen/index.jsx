@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import css from './FullScreen.scss'
+import css from './index.scss'
 
 const FullScreen = (props) => {
   const { children } = props
