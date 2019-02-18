@@ -10,7 +10,7 @@
     "mock-api": "mock-json-server ./mockAPI/api.json",
     "eslint": "eslint \"src/*.{js,jsx}\" --fix",
     "precommit": "yarn eslint",
-    "postinstall": "node scripts/semantic-ui-less-postinstall"
+    "custom-semantic": "node scripts/semantic-ui-less-postinstall"
   },
   "lint-staged": {
     "linters": {
@@ -35,6 +35,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-in-viewport": "^0.0.37",
     "react-router": "^4.4.0-beta.6",
     "react-router-dom": "^4.4.0-beta.6",
     "react-spinners": "^0.5.1",

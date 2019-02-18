@@ -1,5 +1,7 @@
 import React, { lazy } from 'react'
 
+import ViewPort from 'components/ViewPort'
+
 const Master = lazy(() => import('sections/ThreeFa/Master'))
 const Section2 = lazy(() => import('sections/ThreeFa/Section2'))
 const Section3 = lazy(() => import('sections/ThreeFa/Section3'))
@@ -14,7 +16,7 @@ const SectionList = () => (
     <Section3 />
     <Section4 />
     <Section5 />
-    <Section6 />
+    <ViewPort><Section6 /></ViewPort>
   </React.Fragment>
 )
 
