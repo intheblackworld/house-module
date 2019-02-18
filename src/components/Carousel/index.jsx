@@ -7,13 +7,15 @@ import css from './index.scss'
 const Carousel = ({
   children,
   autoplay = true,
-  autoplayInterval = 3000,
+  autoplayInterval = 5000,
   slideIndex = 0,
   transitionMode = 'fade',
-  width = '100vw',
-  withoutControls = false,
+  width = '100%',
+  withoutControls = true,
   swiping = true,
-  speed = 500,
+  speed = 800,
+  pauseOnHover = false,
+  wrapAround = true,
 }) => (
   <NukaCarousel
     autoplay={autoplay}
@@ -24,7 +26,9 @@ const Carousel = ({
     withoutControls={withoutControls}
     swiping={swiping}
     speed={speed}
+    pauseOnHover={pauseOnHover}
     className={css.carousel}
+    wrapAround={wrapAround}
   >
     {children}
   </NukaCarousel>
