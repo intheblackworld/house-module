@@ -15,6 +15,9 @@ const Section3 = () => (
       <Image src={cross} alt="" />
       <Image src={company2} alt="" />
     </div>
+    <div className={css.imgGroup}>
+      三發地產上市公司
+    </div>
   </React.Fragment>
 )
 
