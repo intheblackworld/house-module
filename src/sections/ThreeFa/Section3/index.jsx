@@ -17,11 +17,21 @@ import css from './index.scss'
 
 const Section3 = () => (
   <React.Fragment>
-    <SectionTitle titleTop="上市保證" titleBottom="BRAND" iconUrl={home} />
+    <SectionTitle
+      titleTop="上市保證"
+      titleBottom="BRAND"
+      iconUrl={home}
+      slolganMain="三發地產上市公司，讓年輕的你更驕傲！"
+      sloganDescription="上市公司品質保證更保心，加上金革唱片優雅音韻，品牌與品質的雙重加持，一次買最好！"
+    />
     <div className={css.imgs}>
       <Image src={company1} alt="" />
       <Image src={cross} alt="" />
       <Image src={company2} alt="" />
+    </div>
+    <div className={css.title}>
+      <h3>豪宅團隊聯名齊鑄，就像王與后生活!</h3>
+      <p>台北豪宅團隊點名首選，李兆嘉、張家豪建築師、老圃團隊、特墨設計，就是住的比別人豪！</p>
     </div>
     <div className={css.slider}>
       <Carousel slidesToShow={4} fade={false}>
@@ -68,10 +78,10 @@ const Section3 = () => (
         <div className={css.sliderItem}>
           <Image src={person5} alt="" />
           <div className={css.sliderContent}>
-            <h3>建築營照</h3>
+            <h3>公設設計</h3>
             <p>
-              三發產地 鍾俊榮 董事長 <br />
-              三發產地 讓鶯歌響起迷人樂章
+              特墨 張真一設計師 <br />
+              人們能互動 建築就能更溫熱
             </p>
           </div>
         </div>
