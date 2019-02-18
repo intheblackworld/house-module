@@ -1,5 +1,14 @@
 .section-title {
-  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 90px;
+  font-family: 'Noto Sans TC', sans-serif;
+  .title-area {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
   .left {
     background-image: url('../../assets/img/sectionTitle/left.png');
     width: 112px;
@@ -30,20 +39,39 @@
     border-radius: 50%; 
     background-color: #e5d48f;
     margin-bottom: 40px;
-    .icon {
-      background-image: url('../../assets/img/navigation/heart.png');
-      width: 66px;
-      height: 66px;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
   }
   .title-top {
     font-size: 58px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
   }
   .title-bottom {
     font-size: 36px;
     position: absolute;
     bottom: -8px;
   }
+  .slogan-area{
+    text-align: center;
+    .slogan-area-main {
+      color: #b50007;
+      font-size: 29px;
+      margin-bottom: 20px;
+    }
+    .slogan-area-description {
+      font-size: 17px;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
