@@ -1,5 +1,8 @@
 import React, { lazy } from 'react'
 
+import FullScreen from 'components/FullScreen'
+import Section from 'components/Section'
+
 import ViewPort from 'components/ViewPort'
 
 const Master = lazy(() => import('sections/ThreeFa/Master'))
@@ -11,12 +14,18 @@ const Section6 = lazy(() => import('sections/ThreeFa/Section6'))
 
 const SectionList = () => (
   <React.Fragment>
-    <Master />
+    <FullScreen needCutHeader={false}>
+      <Master />
+    </FullScreen>
     <Section2 />
-    <Section3 />
+    <Section>
+      <Section3 />
+    </Section>
     <Section4 />
     <Section5 />
-    <ViewPort><Section6 /></ViewPort>
+    <ViewPort>
+      <Section6 />
+    </ViewPort>
   </React.Fragment>
 )
 

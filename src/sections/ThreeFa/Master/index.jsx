@@ -1,6 +1,5 @@
 import React from 'react'
 
-import FullScreen from 'components/FullScreen'
 import Carousel from 'components/Carousel'
 import { Image } from 'semantic-ui-react'
 
@@ -11,19 +10,17 @@ import bg3 from 'assets/img/master/bg-3.png'
 import css from './index.scss'
 
 const Master = () => (
-  <FullScreen needCutHeader={false}>
-    <Carousel>
-      <div>
-        <Image src={bg1} alt="1" className={css.image} />
-      </div>
-      <div>
-        <Image src={bg2} alt="2" className={css.image} />
-      </div>
-      <div>
-        <Image src={bg3} alt="3" className={css.image} />
-      </div>
-    </Carousel>
-  </FullScreen>
+  <Carousel>
+    <div>
+      <Image src={bg1} alt="1" className={css.image} />
+    </div>
+    <div>
+      <Image src={bg2} alt="2" className={css.image} />
+    </div>
+    <div>
+      <Image src={bg3} alt="3" className={css.image} />
+    </div>
+  </Carousel>
 )
 
 export default Master
