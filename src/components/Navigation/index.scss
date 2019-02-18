@@ -40,7 +40,6 @@ $logoMobileWidth: 32px;
 
   .link {
     color: #fff;
-    font-size: 3.5vmin;
     text-align: center;
     width: 125px;
     transition: all 0.3s;
@@ -105,26 +104,25 @@ $logoMobileWidth: 32px;
     width: 0%;
     right: 0;
     top: $navigationMobileHeight;
-    height: calc(100vh - $navigationMobileHeight);
+    height: calc(100vh - #{$navigationMobileHeight});
     text-align: center;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in;
     display: block;
     transform: translateX(40%);
 
     .link {
       height: 40px;
       width: 100%;
+      font-size: 17px;
       margin-top: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+      display: none;
 
       img,
       span {
         display: block;
-        transform: scaleX(0);
-        opacity: 0;
-        transition: all 0.5s;
       }
     }
 
@@ -133,10 +131,9 @@ $logoMobileWidth: 32px;
       transform: translateX(0%);
 
       .link {
+        display: block;
         span {
           white-space: nowrap;
-          transform: scaleX(1);
-          opacity: 1;
         }
 
         img,
@@ -154,9 +151,9 @@ $logoMobileWidth: 32px;
     display: block;
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
-    height: calc(100vh - $navigationMobileHeight);
+    height: calc(100vh - #{$navigationMobileHeight});
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in;
     &.open {
       width: 100vw;
       opacity: 1;

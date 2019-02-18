@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Master = () => <div>三發主視覺</div>
+import FullScreen from 'components/FullScreen'
 
+// import css from './index.scss'
+
+const Master = () => <FullScreen>三發主視覺</FullScreen>
 
 export default Master

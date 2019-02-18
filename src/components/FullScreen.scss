@@ -1,0 +1,29 @@
+@import './Navigation/index.scss';
+
+.fullScreen {
+  width: 100vw;
+  height: calc(100vh - #{$navigationPCHeight});
+  background: #666;
+}
+
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .fullScreen {
+    width: 100vw;
+    height: calc(100vh - #{$navigationMobileHeight})
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .fullScreen {
+    width: 100vw;
+    height: calc(100vh - #{$navigationTabletHeight})
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
