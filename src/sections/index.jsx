@@ -5,6 +5,8 @@ import Section from 'components/Section'
 
 import ViewPort from 'components/ViewPort'
 
+import './index.scss'
+
 const Master = lazy(() => import('sections/ThreeFa/Master'))
 const Section2 = lazy(() => import('sections/ThreeFa/Section2'))
 const Section3 = lazy(() => import('sections/ThreeFa/Section3'))

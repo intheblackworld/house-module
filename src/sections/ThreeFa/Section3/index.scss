@@ -5,8 +5,6 @@
   width: 445px;
   margin: 0 auto;
   margin-bottom: 75px;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-family: 'Noto Serif TC', serif;
 }
 
 .title {
@@ -15,13 +13,11 @@
 
   h3 {
     font-size: 29px;
-    font-family: 'Noto Serif TC', serif;
     color: #b50007;
   }
 
   p {
     font-size: 17px;
-    font-family: 'Noto Sans TC', sans-serif;
     color: #333;
   }
 }
@@ -46,13 +42,11 @@
     padding-left: 10px;
     h3 {
       font-size: 28px;
-      font-family: 'Noto Serif TC', serif;
       color: #b50007;
     }
 
     p {
       color: #333;
-      font-family: 'Noto Sans TC', sans-serif;
       font-size: 16px;
       line-height: 1.5;
     }
@@ -82,13 +76,21 @@
 
   .title {
     margin-bottom: 48px;
+
+    h3 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 13px;
+    }
   }
 
   .slider {
     margin: 0 auto;
     width: 900px;
     float: none;
-    margin-left: -50%;
+    margin-left: calc(-50% + 10px);
   }
 
   .sliderItem {
@@ -121,6 +123,14 @@
 
   .title {
     margin-bottom: 55px;
+
+    h3 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 13px;
+    }
   }
 
   .slider {

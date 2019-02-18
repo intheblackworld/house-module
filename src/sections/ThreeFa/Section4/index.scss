@@ -1,5 +1,6 @@
 .slider {
   width: 859px;
+  position: relative;
 }
 
 .descBg {
@@ -7,15 +8,77 @@
   height: 222px;
   background-image: url('../../../assets/img/section4/desc-bg.png');
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  padding: 30px 72px;
+  bottom: 30px;
+  right: -210px;
+
+  h3 {
+    font-size: 29px;
+    color: #b50007;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.5;
+  }
 }
 
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .slider {
+    width: 270px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+  
+  .descBg {
+    width: 200px;
+    height: 110px;
+    padding: 0;
+    position: absolute;
+    left: 38px;
+    bottom: -75px;
+  
+    h3 {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    p {
+      display: none;
+    }
+  }
 }
 
 /* 平板尺寸 */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .slider {
+    width: 652px;
+  }
+  
+  .descBg {
+    width: 311px;
+    height: 170px;
+    padding: 15px 55px;
+  
+    h3 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 13px;
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
