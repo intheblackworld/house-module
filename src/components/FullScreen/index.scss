@@ -1,9 +1,14 @@
 @import '../Navigation/index.scss';
 
 .fullScreen {
-  width: 100vw;
-  height: calc(100vh - #{$navigationPCHeight});
+  width: 100%;
   background: #666;
+  overflow-x: hidden;
+  height: 100vh;
+  &.cutHeader {
+    height: calc(100vh - #{$navigationPCHeight});
+    margin-top: $navigationPCHeight;
+  }
 }
 
 
@@ -12,7 +17,12 @@
 @media only screen and (max-width: 767px) {
   .fullScreen {
     width: 100vw;
-    height: calc(100vh - #{$navigationMobileHeight})
+    height: 100vh;
+
+    &.cutHeader {
+      height: calc(100vh - #{$navigationMobileHeight});
+      margin-top: $navigationMobileHeight;
+    }
   }
 }
 
@@ -20,7 +30,12 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .fullScreen {
     width: 100vw;
-    height: calc(100vh - #{$navigationTabletHeight})
+    height: 100vh;
+
+    &.cutHeader {
+      height: calc(100vh - #{$navigationMobileHeight});
+      margin-top: $navigationMobileHeight;
+    }
   }
 }
 
