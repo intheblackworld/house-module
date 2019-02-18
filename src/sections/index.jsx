@@ -21,7 +21,9 @@ const SectionList = () => (
     <Section>
       <Section3 />
     </Section>
-    <Section4 />
+    <Section>
+      <Section4 />
+    </Section>
     <Section5 />
     <ViewPort>
       <Section6 />
