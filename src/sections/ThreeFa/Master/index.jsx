@@ -13,9 +13,15 @@ import css from './index.scss'
 const Master = () => (
   <FullScreen needCutHeader={false}>
     <Carousel>
-      <Image src={bg1} alt="1" className={css.image} />
-      <Image src={bg2} alt="2" className={css.image} />
-      <Image src={bg3} alt="3" className={css.image} />
+      <div>
+        <Image src={bg1} alt="1" className={css.image} />
+      </div>
+      <div>
+        <Image src={bg2} alt="2" className={css.image} />
+      </div>
+      <div>
+        <Image src={bg3} alt="3" className={css.image} />
+      </div>
     </Carousel>
   </FullScreen>
 )

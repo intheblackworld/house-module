@@ -1,37 +1,43 @@
 import React from 'react'
 
-import NukaCarousel from 'nuka-carousel'
+import Slider from 'react-slick'
 
 import css from './index.scss'
 
 const Carousel = ({
   children,
   autoplay = true,
-  autoplayInterval = 5000,
-  slideIndex = 0,
-  transitionMode = 'fade',
-  width = '100%',
-  withoutControls = true,
-  swiping = true,
-  speed = 800,
+  autoplaySpeed = 3000,
+  draggable = false,
+  fade = true,
+  easing = 'ease-in',
+  infinite = true,
+  dots = false,
+  arrows = false,
   pauseOnHover = false,
-  wrapAround = true,
+  speed = 500,
+  accessibility = true,
+  slidesToShow = 1,
+  slidesToScroll = 1,
 }) => (
-  <NukaCarousel
+  <Slider
     autoplay={autoplay}
-    autoplayInterval={autoplayInterval}
-    slideIndex={slideIndex}
-    transitionMode={transitionMode}
-    width={width}
-    withoutControls={withoutControls}
-    swiping={swiping}
-    speed={speed}
+    autoplaySpeed={autoplaySpeed}
+    draggable={draggable}
+    fade={fade}
+    easing={easing}
+    infinite={infinite}
+    dots={dots}
+    arrows={arrows}
     pauseOnHover={pauseOnHover}
+    speed={speed}
+    accessibility={accessibility}
+    slidesToShow={slidesToShow}
+    slidesToScroll={slidesToScroll}
     className={css.carousel}
-    wrapAround={wrapAround}
   >
     {children}
-  </NukaCarousel>
+  </Slider>
 )
 
 export default Carousel

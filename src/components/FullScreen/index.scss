@@ -2,8 +2,7 @@
 
 .fullScreen {
   width: 100%;
-  background: #666;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100vh;
   &.cutHeader {
     height: calc(100vh - #{$navigationPCHeight});
