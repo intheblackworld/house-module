@@ -1,4 +1,4 @@
-.imgGroup {
+.imgs {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,4 +6,50 @@
   margin: 0 auto;
   font-family: 'Noto Sans TC', sans-serif;
   font-family: 'Noto Serif TC', serif;
+}
+
+.slider {
+  width: 1150px;
+  float: right;
+}
+
+.sliderItem {
+  max-width: 278px;
+  margin-right: 12px;
+  
+  img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 24px;
+  }
+
+  .sliderContent {
+    border-left: 10px solid #e5d48f;
+    padding-left: 10px;
+    h3 {
+      font-size: 28px;
+      font-family: 'Noto Serif TC', serif;
+      color: #b50007;
+    }
+
+    p {
+      color: #333;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
