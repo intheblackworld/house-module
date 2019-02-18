@@ -1,0 +1,49 @@
+.section-title {
+  display: flex;
+  .left {
+    background-image: url('../../assets/img/sectionTitle/left.png');
+    width: 112px;
+    height: 212px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .right {
+    background-image: url('../../assets/img/sectionTitle/right.png');
+    width: 112px;
+    height: 212px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .middle {
+    display: flex;
+    flex-direction: column;
+    margin: 0 45px;
+    position: relative;
+    align-items: center;
+  }
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%; 
+    background-color: #e5d48f;
+    margin-bottom: 40px;
+    .icon {
+      background-image: url('../../assets/img/navigation/heart.png');
+      width: 66px;
+      height: 66px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .title-top {
+    font-size: 58px;
+  }
+  .title-bottom {
+    font-size: 36px;
+    position: absolute;
+    bottom: -8px;
+  }
+}
