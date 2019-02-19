@@ -1,0 +1,54 @@
+.subTitle {
+  margin-top: 30px;
+  h3 {
+    font-size: 29px;
+    color: #b50007;
+    text-align: center;
+  }
+
+  .subTitleImg {
+    background-image: url('../../assets/img/sectionSubTitle/subtitle-line.png');
+    background-size: cover;
+    height: 22px;
+    width: 320px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .subTitle {
+    margin-top: 20px;
+    h3 {
+      font-size: 23px;
+    }
+
+    .subTitleImg {
+      height: 21px;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .subTitle {
+    margin-top: 30px;
+    h3 {
+      font-size: 22px;
+    }
+
+    .subTitleImg {
+      height: 17px;
+      width: 243px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

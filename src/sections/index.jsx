@@ -28,7 +28,9 @@ const SectionList = () => (
     </Section>
     <Section5 />
     <ViewPort>
-      <Section6 />
+      <Section>
+        <Section6 />
+      </Section>
     </ViewPort>
   </React.Fragment>
 )
