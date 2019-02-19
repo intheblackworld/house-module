@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-
+import { Element } from 'react-scroll'
 import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
 // import ViewPort from 'components/ViewPort'
@@ -21,23 +21,33 @@ const SectionList = () => (
       <Master />
     </FullScreen>
     <Section>
-      <Section2 />
+      <Element id="section2">
+        <Section2 />
+      </Element>
     </Section>
     <Section>
-      <Section3 />
+      <Element id="section3">
+        <Section3 />
+      </Element>
     </Section>
     <Section>
-      <Section4 />
+      <Element id="section4">
+        <Section4 />
+      </Element>
     </Section>
     <Section>
-      <Section5 />
+      <Element id="section5">
+        <Section5 />
+      </Element>
     </Section>
     {/* <ViewPort>
       <Section>
         <Section6 />
       </Section>
     </ViewPort> */}
-    <ContactSection />
+    <Element id="section6">
+      <ContactSection />
+    </Element>
   </React.Fragment>
 )
 
