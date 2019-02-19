@@ -41,7 +41,7 @@ const Section2 = () => (
       {items.map((item, index) => {
         if (index % 2 === 0) {
           return (
-            <div className={[css.main, css.right].join(' ')}>
+            <div key={`right-${item.url}`} className={[css.main, css.right].join(' ')}>
               <Image src={item.url} alt="" key={item.url} />
               <div className={css.descBg}>
                 <h3>
@@ -55,7 +55,7 @@ const Section2 = () => (
           )
         }
         return (
-          <div className={[css.main, css.left].join(' ')}>
+          <div key={`left-${item.url}`} className={[css.main, css.left].join(' ')}>
             <div className={css.descBg}>
               <h3>
                 {item.titleTop}
