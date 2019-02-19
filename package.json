@@ -37,6 +37,7 @@
     "react-in-viewport": "^0.0.37",
     "react-router": "^4.4.0-beta.6",
     "react-router-dom": "^4.4.0-beta.6",
+    "react-scroll-horizontal": "^1.6.2",
     "react-slick": "^0.23.2",
     "react-spinners": "^0.5.1",
     "redux-devtools-extension": "^2.13.8",

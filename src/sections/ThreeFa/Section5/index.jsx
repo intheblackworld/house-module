@@ -58,7 +58,7 @@ const Section5 = () => (
       <SectionSubTitle title="六大品牌理念" />
       <div className={css['container-detail']}>
         {items.map(item => (
-          <div className={css['detail-item']}>
+          <div className={css['detail-item']} key={item.desc}>
             <div className={css['item-icon-wrap']}>
               <Image className={css['item-icon']} src={item.imgSrc} alt="" />
             </div>

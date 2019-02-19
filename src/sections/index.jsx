@@ -2,8 +2,9 @@ import React, { lazy } from 'react'
 
 import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
-import GoogleMap from 'components/GoogleMap'
-import ViewPort from 'components/ViewPort'
+// import ViewPort from 'components/ViewPort'
+
+import ContactSection from 'sections/ContactSection'
 
 import './index.scss'
 
@@ -12,7 +13,7 @@ const Section2 = lazy(() => import('sections/ThreeFa/Section2'))
 const Section3 = lazy(() => import('sections/ThreeFa/Section3'))
 const Section4 = lazy(() => import('sections/ThreeFa/Section4'))
 const Section5 = lazy(() => import('sections/ThreeFa/Section5'))
-const Section6 = lazy(() => import('sections/ThreeFa/Section6'))
+// const Section6 = lazy(() => import('sections/ThreeFa/Section6'))
 
 const SectionList = () => (
   <React.Fragment>
@@ -27,12 +28,12 @@ const SectionList = () => (
       <Section4 />
     </Section>
     <Section5 />
-    <ViewPort>
+    {/* <ViewPort>
       <Section>
         <Section6 />
       </Section>
-    </ViewPort>
-    <GoogleMap />
+    </ViewPort> */}
+    <ContactSection />
   </React.Fragment>
 )
 

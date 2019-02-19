@@ -30,6 +30,7 @@
     .item-title {
       line-height: 55px;
       font-size: 31px;
+      font-weight: bold;
       font-family: 'Noto Serif TC', serif;
       background-color: #fff;
       margin: 0 auto;
@@ -86,10 +87,10 @@
         height: 54px;
       }
       .item-title {
-        font-size: 25px;
+        font-size: 22px;
       }
       .item-description {
-        font-size: 18px;
+        font-size: 13px;
         width: 196px;
       }
     }
@@ -100,7 +101,11 @@
 @media only screen and (max-width: 767px) {
   .section5 {
     .detail-item {
+      .item-title {
+        font-size: 28px;
+      }
       .item-description {
+        font-size: 16px;
         margin-bottom: 36px;
       }
     }

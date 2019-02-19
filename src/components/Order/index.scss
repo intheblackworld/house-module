@@ -1,0 +1,159 @@
+.orderContainer {
+  width: 920px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  > div {
+    flex: 1;
+  }
+
+  .group {
+    height: 250px;
+
+    &:nth-child(1) {
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      .control {
+        justify-content: flex-start;
+      }
+    }
+
+    &:nth-child(2) {
+      .control {
+        justify-content: flex-end;
+        height: 100%;
+      }
+    }
+  }
+
+  .control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    label {
+      width: 92px;
+      font-size: 16px;
+      opacity: 0.8;
+      color: #fff;
+    }
+  }
+
+  .field {
+    width: 310px;
+
+    input,
+    .select,
+    .select div {
+      border-radius: 0 !important;
+      background: #82191d !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      // border: 1px solid #82191d !important;
+    }
+
+    .select div {
+      background: #82191d !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      border: none !important;
+    }
+  }
+}
+
+.textarea {
+  width: 400px !important;
+  border-radius: 0 !important;
+  background: #82191d !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  height: 100%;
+}
+
+.checkbox {
+  text-align: center;
+  margin-top: 60px;
+
+  label {
+    font-size: 14px !important;
+    color: #fff !important;
+  }
+
+  a {
+    color: #e5d48f !important;
+  }
+}
+
+.submit {
+  width: 320px !important;
+  height: 72px !important;
+  opacity: 0.6 !important;
+  border-radius: 0 !important;
+  background-color: #e5d48f !important;
+  font-size: 20px !important;
+  margin: 0 auto !important;
+  margin-top: 20px !important;
+}
+
+.orderTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  h3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  p {
+    font-size: 20px;
+    font-family: 'Noto Serif TC', serif;
+    color: #e5d48f;
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .orderContainer {
+    width: 920px;
+    margin: 0 auto;
+  }
+
+  .orderTitle {
+    h3 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .orderContainer {
+    width: 920px;
+    margin: 0 auto;
+  }
+
+  .orderTitle {
+    h3 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

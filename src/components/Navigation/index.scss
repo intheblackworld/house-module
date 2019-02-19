@@ -11,7 +11,7 @@ $logoMobileWidth: 32px;
   background: $navigationBg;
   height: $navigationPCHeight;
   z-index: 2;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex !important;
