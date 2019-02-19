@@ -20,14 +20,18 @@ const SectionList = () => (
     <FullScreen needCutHeader={false}>
       <Master />
     </FullScreen>
-    <Section2 />
+    <Section>
+      <Section2 />
+    </Section>
     <Section>
       <Section3 />
     </Section>
     <Section>
       <Section4 />
     </Section>
-    <Section5 />
+    <Section>
+      <Section5 />
+    </Section>
     {/* <ViewPort>
       <Section>
         <Section6 />
