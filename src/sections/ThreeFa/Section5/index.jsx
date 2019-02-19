@@ -1,6 +1,8 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
+
 import SectionTitle from 'components/SectionTitle'
+import SectionSubTitle from 'components/SectionSubTitle'
 import heart from 'assets/img/section5/heart.png'
 import css from './index.scss'
 
@@ -42,6 +44,9 @@ const items = [
 
 const Section5 = () => (
   <div className={css.section5}>
+    {/* <div className={css['leaf-top']} />
+    <div className={css['leaf-middle']} />
+    <div className={css['leaf-bottom']} /> */}
     <SectionTitle
       titleTop="無敵安心"
       titleBottom="REASSURANCE"
@@ -50,14 +55,12 @@ const Section5 = () => (
       sloganDescription="上市公司口碑嚴選，加上精工品質與服務，就是要給你最安心的家！"
     />
     <div className={css.container}>
-      <div className={css['sub-title']}>六大品牌理念</div>
-      <div className={css['sub-title-img']} />
+      <SectionSubTitle title="六大品牌理念" />
       <div className={css['container-detail']}>
         {items.map(item => (
           <div className={css['detail-item']}>
             <div className={css['item-icon-wrap']}>
-              <Image src={item.imgSrc} alt="" />
-              {/* <div className={css['item-icon']} /> */}
+              <Image className={css['item-icon']} src={item.imgSrc} alt="" />
             </div>
             <div className={css['item-title']}>{item.name}</div>
             <p className={css['item-description']}>{item.desc}</p>

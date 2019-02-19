@@ -1,32 +1,10 @@
 .section5 {
   max-width: 975px;
   margin: 0 auto;
-  .title-area {
-    text-align: center;
-  }
-  .title {
-    color: #b50007;
-    font-size: 29px;
-    margin-bottom: 20px;
-  }
-  .description {
-    font-size: 17px;
-  }
   .container {
     color: #b50007;
     text-align: center;
     margin-top: 88px;
-  }
-  .sub-title {
-    font-size: 29px;
-  }
-  .sub-title-img {
-    background-image: url('../../../assets/img/section5/subtitle-line.png');
-    background-size: cover;
-    height: 22px;
-    width: 320px;
-    margin: 0 auto;
-    margin-bottom: 50px;
   }
   .container-detail {
     display: flex;
@@ -46,11 +24,8 @@
       align-items: center;
     }
     .item-icon {
-      background-image: url('../../../assets/img/section5/green-icon.png');
       width: 71px;
       height: 71px;
-      background-size: cover;
-      background-repeat: no-repeat;
     }
     .item-title {
       line-height: 55px;
@@ -72,4 +47,69 @@
       top: -28px;
     }
   }
+  // .leaf-top {
+  //   background-image: url('../../../assets/img/section5/leaf-1.png');
+  //   height: 390px;
+  //   background-repeat: no-repeat;
+  //   position: absolute;
+  //   width: 180px;
+  //   right: 0px;
+  // }
+  // .leaf-middle {
+  //   background-image: url('../../../assets/img/section5/leaf-3.png');
+  //   height: 420px;
+  //   background-repeat: no-repeat;
+  //   position: absolute;
+  //   width: 360px;
+  //   left: 0px;
+  // }
+  // .leaf-bottom {
+  //   background-image: url('../../../assets/img/section5/leaf-2.png');
+  //   height: 555px;
+  //   background-repeat: no-repeat;
+  //   position: absolute;
+  //   width: 360px;
+  //   right: 0px;
+  // }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .section5 {
+    .detail-item {
+      .item-icon-wrap {
+        width: 124px;
+        height: 124px;
+      }
+      .item-icon {
+        width: 54px;
+        height: 54px;
+      }
+      .item-title {
+        font-size: 25px;
+      }
+      .item-description {
+        font-size: 18px;
+        width: 196px;
+      }
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .section5 {
+    .detail-item {
+      .item-description {
+        margin-bottom: 36px;
+      }
+    }
+    .detail-item {
+      width: 100%;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
