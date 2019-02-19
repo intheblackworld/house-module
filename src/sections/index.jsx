@@ -2,7 +2,7 @@ import React, { lazy } from 'react'
 
 import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
-
+import GoogleMap from 'components/GoogleMap'
 import ViewPort from 'components/ViewPort'
 
 import './index.scss'
@@ -36,6 +36,7 @@ const SectionList = () => (
         <Section6 />
       </Section>
     </ViewPort>
+    <GoogleMap />
   </React.Fragment>
 )
 
