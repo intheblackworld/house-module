@@ -1,8 +1,14 @@
 import React from 'react'
 
-const Section6 = (props) => {
-  console.log('show:', props.show)
-  return <div>上市公司品質保證</div>
-}
+import SectionSubTitle from 'components/SectionSubTitle'
+import HorizontalTimeline from 'components/HorizontalTimeline'
+// import css from './index.scss'
+
+const Section6 = () => (
+  <React.Fragment>
+    <SectionSubTitle title="上市公司 品質保證" />
+    <HorizontalTimeline />
+  </React.Fragment>
+)
 
 export default Section6
