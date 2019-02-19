@@ -36,9 +36,13 @@
     justify-content: center;
     width: 98px;
     height: 98px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background-color: #e5d48f;
     margin-bottom: 40px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
   }
   .title-top {
     font-size: 58px;
@@ -51,7 +55,7 @@
     position: absolute;
     bottom: -8px;
   }
-  .slogan-area{
+  .slogan-area {
     text-align: center;
     .slogan-area-main {
       font-family: 'Noto Serif TC', serif;
@@ -68,10 +72,91 @@
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section-title {
+    margin-top: 64px;
+    margin-bottom: 78px;
+    .left {
+      width: 56px;
+      height: 107px;
+    }
+    .right {
+      width: 56px;
+      height: 107px;
+    }
+    .middle {
+      margin: 0 24px;
+    }
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 12px;
+      img {
+        width: 34px;
+        height: 34px;
+      }
+    }
+    .title-top {
+      font-size: 29px;
+    }
+    .title-bottom {
+      font-size: 18px;
+    }
+    .slogan-area {
+      .slogan-area-main {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+      .slogan-area-description {
+        font-size: 17px;
+        margin-left: 60px;
+        margin-right: 60px;
+        text-align: left;
+      }
+    }
+  }
 }
 
 /* 平板尺寸 */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .section-title {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    .left {
+      width: 86px;
+      height: 162px;
+    }
+    .right {
+      width: 86px;
+      height: 162px;
+    }
+    .middle {
+      margin: 0 40px;
+    }
+    .icon-container {
+      width: 75px;
+      height: 75px;
+      margin-bottom: 28px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .title-top {
+      font-size: 44px;
+    }
+    .title-bottom {
+      font-size: 32px;
+    }
+    .slogan-area {
+      .slogan-area-main {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      .slogan-area-description {
+        font-size: 13px;
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
