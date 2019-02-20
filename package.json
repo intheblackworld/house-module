@@ -6,7 +6,7 @@
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "clear": "rimraf ./dist",
+    "clear": "rimraf ./build",
     "start": "cross-env NODE_ENV=dev webpack-dev-server -d",
     "build": "yarn clear && cross-env NODE_ENV=prd webpack --config webpack.config.js && echo $NODE_ENV",
     "mock-api": "mock-json-server ./mockAPI/api.json",
