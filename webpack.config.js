@@ -126,7 +126,13 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '三發豐悅',
+      title: '三發丰悅',
+      metaTitle: '三發丰悅',
+      metaDescription: '三發丰悅',
+      metaKeywords: '三發丰悅',
+      ogMetaTitle: '三發丰悅',
+      ogMetaType: 'website',
+      ogMetaDescription: '三發丰悅',
       template: 'index.html',
       hash: true,
     }),

@@ -9,6 +9,29 @@
       @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&subset=chinese-traditional');
       @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&subset=chinese-traditional');
     </style>
+
+    <!--SEO meta-->
+    <meta
+      name="title"
+      content="<%= htmlWebpackPlugin.options.metaTitle %>"
+    />
+    <meta
+      name="description"
+      content="<%= htmlWebpackPlugin.options.metaDescription %>"
+    />
+    <meta
+      name="keywords"
+      content="<%= htmlWebpackPlugin.options.metaKeywords %>"
+    />
+    <meta
+      property="og:title"
+      content="<%= htmlWebpackPlugin.options.ogMetaTitle %>"
+    />
+    <meta property="og:type" content="<%= htmlWebpackPlugin.options.ogMetaType %>" />
+    <meta
+      property="og:description"
+      content="<%= htmlWebpackPlugin.options.ogMetaDescription %>"
+    />
   </head>
   <body>
     <div id="app"></div>
