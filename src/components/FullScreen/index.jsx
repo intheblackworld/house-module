@@ -6,6 +6,7 @@ import css from './index.scss'
 const FullScreen = (props) => {
   const className = cx(css.fullScreen, {
     [css.cutHeader]: props.needCutHeader || false,
+    [css.alignCenter]: props.alignCenter || false,
   })
   const { children } = props
   return <div className={className}>{children}</div>

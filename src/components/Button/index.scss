@@ -1,0 +1,87 @@
+.btn {
+  width: 270px;
+  height: 60px;
+  color: rgba(0, 0 ,0 , .6);
+  border: 1px solid #e5d48f;
+  background: transparent;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: hand;
+  text-align: center;
+  text-transform: capitalize;
+  overflow: hidden !important;
+
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+
+  svg {
+    margin-right: 15px;
+  }
+}
+.flashTwice {
+  &:hover {
+    border: 1px solid #e5d48f; // first border
+    color: #fff !important;
+  }
+  &::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #9c1e23; // second bg
+    position: absolute;
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+  }
+
+  &::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #e5d48f; // first bg
+    position: absolute;
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+  }
+  &:hover::before,
+  &:hover::before {
+    opacity: 1;
+    width: 116%;
+  }
+  &:hover::after,
+  &:hover::after {
+    opacity: 1;
+    width: 120%;
+  }
+}
+
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

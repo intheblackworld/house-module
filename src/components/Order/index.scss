@@ -1,7 +1,6 @@
 .orderContainer {
   width: 920px;
   margin: 0 auto;
-  margin-top: 80px;
   display: flex;
   flex-direction: column;
 }
@@ -152,8 +151,56 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .orderContainer {
-    width: 920px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .orderTitle {
+    margin-bottom: 20px;
+    p {
+      display: none;
+    }
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .group {
+    width: 100%;
+    height: auto !important;
+    margin-bottom: 12px !important;
+    border: none !important;
+  }
+
+  .control {
+    margin-bottom: 12px !important;
+    label {
+      width: 30% !important;
+    }
+
+    .field {
+      width: 70% !important;
+    }
+
+    .textarea {
+      width: 100% !important;
+    }
+  }
+
+  .checkbox {
+    margin-top: 0;
+    white-space: nowrap;
+
+    label {
+      padding-left: 28px !important;
+    }
+  }
+
+  .submit {
+    width: 100% !important;
+    height: 45px !important;
+    margin-top: 10px !important;
   }
 
   .orderTitle {
