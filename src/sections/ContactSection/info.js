@@ -1,5 +1,5 @@
 export default {
-  address: '221 新北市汐止區樟樹二路 93 號',
+  address: '23943 新北市鶯歌區永和街83號',
   phone: '02-86421155',
   fbLink: 'https://www.facebook.com/sanfarlightluxury',
   googleLink: 'https://goo.gl/maps/3YwsMdrBB582',

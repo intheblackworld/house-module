@@ -1,10 +1,10 @@
 import React from 'react'
 import css from './MapLink.scss'
 
-const MapLink = ({ children }) => (
+const MapLink = ({ children, link }) => (
   <div className={css.mapLink}>
     <div className={css.info}>{children}</div>
-    <a className={css.link}>
+    <a className={css.link} href={link} target="_blank" rel="noopener noreferrer">
       <span>開啟 Google 地圖</span>
     </a>
   </div>
