@@ -126,7 +126,7 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: 'React base on flow',
+      title: '三發豐悅',
       template: 'index.html',
       hash: true,
     }),
