@@ -27,18 +27,38 @@
     position: absolute;
     width: 500px;
     top: -40px;
-    left: -70px; 
+    left: -70px;
+    animation: showHide 6s infinite;
+    animation-delay: 0;
+  }
+
+  @keyframes showHide {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
   .leaf2 {
     position: absolute;
     right: 0;
     width: 500px;
+    animation: showHide 6s infinite;
+    animation-delay: 2s;
   }
   .leaf3 {
     position: absolute;
     right: 0;
     bottom: 0;
     width: 330px;
+    animation: showHide 6s infinite;
+    animation-delay: 4s;
   }
   h3 {
     font-size: 55px;

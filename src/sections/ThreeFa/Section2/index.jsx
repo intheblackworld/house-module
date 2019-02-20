@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image, Container } from 'semantic-ui-react'
 import SectionTitle from 'components/SectionTitle'
+import Viewport from 'components/ViewPort'
 import hand from 'assets/img/section2/hand.png'
 import css from './index.scss'
 
@@ -37,7 +38,9 @@ const Section2 = () => (
   <React.Fragment>
     <Container>
       <div className={css.title}>4招買房必勝關鍵</div>
-      <SectionTitle titleTop="租不如買" titleBottom="NEW FUTURE" iconUrl={hand} />
+      <Viewport>
+        <SectionTitle titleTop="租不如買" titleBottom="NEW FUTURE" iconUrl={hand} />
+      </Viewport>
       {items.map((item, index) => {
         if (index % 2 === 0) {
           return (

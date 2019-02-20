@@ -1,8 +1,45 @@
+@import '../../assets/animate.scss';
+
 .section-title {
   flex-direction: column;
   margin-top: 100px;
   margin-bottom: 90px;
   font-family: 'Noto Sans TC', sans-serif;
+  
+  &.hide {
+    opacity: 0;
+  }
+  
+  &.show {
+    .left {
+      @include animate(fadeInRight, .8s, 0);
+    }
+
+    .right {
+      @include animate(fadeInLeft, .8s, 0);
+    }
+
+    .middle {
+      @include animate(fadeIn, .8s, 0);
+    }
+
+    .title-top {
+      @include animate(fadeInUp, .8s, 200);
+    }
+
+    .title-bottom {
+      @include animate(fadeInUp, .8s, 200);
+    }
+
+    .slogan-area-main {
+      @include animate(fadeInUp, .8s, 400);
+    }
+
+    .slogan-area-description {
+      @include animate(fadeInUp, .8s, 400);
+    }
+
+  }
   .title-area {
     flex-direction: row;
     display: flex;

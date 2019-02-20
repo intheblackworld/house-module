@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
-
+import Viewport from 'components/ViewPort'
 import SectionTitle from 'components/SectionTitle'
 import SectionSubTitle from 'components/SectionSubTitle'
 import heart from 'assets/img/section5/heart.png'
@@ -47,13 +47,16 @@ const Section5 = () => (
     {/* <div className={css['leaf-top']} />
     <div className={css['leaf-middle']} />
     <div className={css['leaf-bottom']} /> */}
-    <SectionTitle
-      titleTop="無敵安心"
-      titleBottom="REASSURANCE"
-      iconUrl={heart}
-      slolganMain="三發安心保固 永續好宅指標"
-      sloganDescription="上市公司口碑嚴選，加上精工品質與服務，就是要給你最安心的家！"
-    />
+    <Viewport>
+      <SectionTitle
+        titleTop="無敵安心"
+        titleBottom="REASSURANCE"
+        iconUrl={heart}
+        slolganMain="三發安心保固 永續好宅指標"
+        sloganDescription="上市公司口碑嚴選，加上精工品質與服務，就是要給你最安心的家！"
+      />
+    </Viewport>
+
     <div className={css.container}>
       <SectionSubTitle title="六大品牌理念" />
       <div className={css['container-detail']}>
