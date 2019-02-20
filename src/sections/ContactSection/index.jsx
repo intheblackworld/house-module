@@ -5,11 +5,10 @@ import FullScreen from 'components/FullScreen'
 import GoogleMap from 'components/GoogleMap'
 import css from './index.scss'
 
-
 const ContactSection = () => (
   <div className={css.contactSection}>
     <div className={css.orderBg}>
-      <FullScreen needCutHeader={false}>
+      <FullScreen needCutHeader alignCenter>
         <Order />
       </FullScreen>
       <ContactInfo />

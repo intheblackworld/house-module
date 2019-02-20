@@ -1,3 +1,75 @@
+$contactBg: #fff;
+$boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
+
 .contactInfo {
-  
+  background: $contactBg;
+  box-shadow: $boxShadow;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  transform: translateY(14%);
+  position: relative;
+  z-index: 3;
+  width: 1200px;
+  height: 460px;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+}
+
+.logo {
+  width: 193px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.info {
+  width: 566px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .contactInfo {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    transform: translateY(0);
+  }
+
+  .info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+
+    > * {
+      margin-bottom: 12px;
+    }
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .contactInfo {
+    display: flex;
+    width: 90%;
+    height: 460px;
+    padding: 60px 0 80px;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }

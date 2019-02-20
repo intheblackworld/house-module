@@ -8,6 +8,11 @@
     height: calc(100vh - #{$navigationPCHeight});
     margin-top: $navigationPCHeight;
   }
+
+  &.alignCenter {
+    display: flex;
+    align-items: center;
+  }
 }
 
 
