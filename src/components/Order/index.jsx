@@ -15,6 +15,18 @@ import { cityList, renderAreaList } from './address'
 import css from './index.scss'
 
 const Order = () => {
+  // 從網址接收 utm 資料
+  const urlParams = new URLSearchParams(window.location.search)
+  const utmSource = urlParams.get('utm_source')
+  const utmMedium = urlParams.get('utm_medium')
+  const utmContent = urlParams.get('utm_content')
+  const utmCampaign = urlParams.get('utm_campaign')
+  const [utm_source] = useState(utmSource)
+  const [utm_medium] = useState(utmMedium)
+  const [utm_content] = useState(utmContent)
+  const [utm_campaign] = useState(utmCampaign)
+  console.log(utm_source, utm_medium, utm_content, utm_campaign)
+
   // 選擇居住
   const [area, setArea] = useState('')
   const [city, setCity] = useState('')
@@ -44,9 +56,7 @@ const Order = () => {
 
   // 表單驗證
   const [alert, triggerAlert] = useState(false)
-  const [success, triggerSuccess] = useState(false)
   const submitForm = () => {
-    console.log(city, area)
     if (!isCheck) return
     if (
       !document.getElementById('name').value
@@ -60,16 +70,33 @@ const Order = () => {
     const name = document.getElementById('name').value
     const phone = document.getElementById('phone').value
     const email = document.getElementById('email').value
-    const reqData = {
-      name,
-      phone,
-      email,
-      city,
-      area,
-    }
-    console.log(reqData)
-    triggerSuccess(true)
+    const msg = document.getElementById('msg').value
+
+    const formData = new FormData()
+    formData.append('name', name)
+    formData.append('phone', phone)
+    formData.append('email', email)
+    formData.append('msg', msg)
+    formData.append('city', city)
+    formData.append('area', area)
+    formData.append('utm_source', utm_source)
+    formData.append('utm_medium', utm_medium)
+    formData.append('utm_content', utm_content)
+    formData.append('utm_campaign', utm_campaign)
+    fetch('contact-form.php', {
+      method: 'POST',
+      body: formData,
+    })
+    // .then(response => response.json())
+    // .then((myJson) => {
+    //   console.log(myJson)
+    // })
+    // .catch(error => console.error('Error', error))
+    // console.log(reqData)
+    // console.log(utm_source)
+    // window.location.href = 'formThanks'
   }
+
   return (
     <div className={css.orderContainer}>
       <div className={css.orderTitle}>
@@ -123,7 +150,7 @@ const Order = () => {
         </div>
         <div className={css.group}>
           <div className={css.control}>
-            <TextArea id="content" className={css.textarea} placeholder="請輸入您的留言" />
+            <TextArea id="msg" className={css.textarea} placeholder="請輸入您的留言" />
           </div>
         </div>
       </Form>
@@ -154,14 +181,6 @@ const Order = () => {
         confirmButtonText="我知道了"
         confirmButtonColor="#e5d48f"
         onConfirm={() => triggerAlert(false)}
-      />
-      <SweetAlert
-        show={success}
-        title=""
-        text="成功送出資料，期待與您會面"
-        confirmButtonText="好"
-        confirmButtonColor="#e5d48f"
-        onConfirm={() => triggerSuccess(false)}
       />
       <Button className={submitClassName} onClick={submitForm}>
         立即預約

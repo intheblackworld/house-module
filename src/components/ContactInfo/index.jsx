@@ -18,7 +18,9 @@ const ContactInfo = ({
     <div className={css.info}>
       {/* 在手機或平板上顯示可撥打電話的按鈕 */}
       <div className={css.hideOnPhone}>
-        <HButton icon={faPhone}>{phone}</HButton>
+        <HButton icon={faPhone}>
+          {phone}
+        </HButton>
       </div>
       <div className={css.showOnPhone}>
         <HButton icon={faPhone} link={`tel:${phone.replace('-', '')}`}>
