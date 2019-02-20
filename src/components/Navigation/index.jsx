@@ -12,7 +12,6 @@ const NavItems = [
   {
     name: '租不如買',
     imgSrc: require('assets/img/navigation/hand.png'),
-    path: '#one',
     section: 'section2',
     OffsetValue: -147,
   },
@@ -20,7 +19,6 @@ const NavItems = [
   {
     name: '上市保證',
     imgSrc: require('assets/img/navigation/house.png'),
-    path: '#two',
     section: 'section3',
     OffsetValue: -147,
   },
@@ -28,7 +26,6 @@ const NavItems = [
   {
     name: '最潮建築',
     imgSrc: require('assets/img/navigation/no1.png'),
-    path: '#three',
     section: 'section4',
     OffsetValue: -147,
   },
@@ -36,14 +33,12 @@ const NavItems = [
   {
     name: '無敵安心',
     imgSrc: require('assets/img/navigation/heart.png'),
-    path: '#four',
     section: 'section5',
     OffsetValue: -147,
   },
   {
     name: '預約賞屋',
     imgSrc: require('assets/img/navigation/pen.png'),
-    path: '#five',
     section: 'section6',
     OffsetValue: -127,
   },
@@ -100,11 +95,11 @@ const Navigation = () => {
                     offset={item.OffsetValue}
                     key={item.section}
                   >
-                    <a href={item.path} key={item.name} className={css.link}>
+                    <span className={css.link}>
                       <Image src={item.imgSrc} />
                       <span>{item.name}</span>
                       {list.length - 1 !== index && <span className={css.divided}>|</span>}
-                    </a>
+                    </span>
                   </Link>
                 ))}
             </ul>

@@ -25,7 +25,6 @@ const Order = () => {
   const [utm_medium] = useState(utmMedium)
   const [utm_content] = useState(utmContent)
   const [utm_campaign] = useState(utmCampaign)
-  console.log(utm_source, utm_medium, utm_content, utm_campaign)
 
   // 選擇居住
   const [area, setArea] = useState('')
