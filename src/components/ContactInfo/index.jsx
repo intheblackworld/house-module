@@ -10,13 +10,17 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 
 import css from './index.scss'
 
-const ContactInfo = () => (
+const ContactInfo = ({
+  phone, fbLink, address, googleLink,
+}) => (
   <div className={css.contactInfo}>
     <Image src={logo} className={css.logo} />
     <div className={css.info}>
-      <HButton icon={faPhone}>02-86421155</HButton>
-      <HButton icon={faFacebookF}>FACEBOOK</HButton>
-      <MapLink>221 新北市汐止區樟樹二路 93 號</MapLink>
+      <HButton icon={faPhone}>{phone}</HButton>
+      <HButton icon={faFacebookF} link={fbLink}>
+        FACEBOOK
+      </HButton>
+      <MapLink link={googleLink}>{address}</MapLink>
     </div>
   </div>
 )
