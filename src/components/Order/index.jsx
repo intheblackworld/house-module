@@ -6,6 +6,9 @@ import {
 import cx from 'classnames'
 import SweetAlert from 'sweetalert2-react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
 import PolicyDialog from 'components/PolicyDialog'
 
 import { cityList, renderAreaList } from './address'
@@ -41,6 +44,7 @@ const Order = () => {
 
   // 表單驗證
   const [alert, triggerAlert] = useState(false)
+  const [success, triggerSuccess] = useState(false)
   const submitForm = () => {
     console.log(city, area)
     if (!isCheck) return
@@ -64,6 +68,7 @@ const Order = () => {
       area,
     }
     console.log(reqData)
+    triggerSuccess(true)
   }
   return (
     <div className={css.orderContainer}>
@@ -138,13 +143,25 @@ const Order = () => {
       </Form.Field>
       <PolicyDialog show={isShow} />
       <div className={closeClass} onClick={closeDialog} onKeyDown={closeDialog}>
-        x
+        <FontAwesomeIcon icon={faTimes} />
       </div>
       <SweetAlert
         show={alert}
-        title="Demo"
-        text="SweetAlert in React"
+        type="error"
+        title=""
+        text="「姓名、手機、 E-mail、居住城市、居住地區」
+        是必填欄位"
+        confirmButtonText="我知道了"
+        confirmButtonColor="#e5d48f"
         onConfirm={() => triggerAlert(false)}
+      />
+      <SweetAlert
+        show={success}
+        title=""
+        text="成功送出資料，期待與您會面"
+        confirmButtonText="好"
+        confirmButtonColor="#e5d48f"
+        onConfirm={() => triggerSuccess(false)}
       />
       <Button className={submitClassName} onClick={submitForm}>
         立即預約

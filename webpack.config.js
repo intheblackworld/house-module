@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.[hash:8].js',
     chunkFilename: '[name].bundle.[hash:8].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
   },
 
   resolve: {
@@ -116,7 +116,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, './dist'),
+    contentBase: path.join(__dirname, './build'),
     compress: true,
     port: 9000,
     historyApiFallback: true,
@@ -126,7 +126,7 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: 'React base on flow',
+      title: '三發豐悅',
       template: 'index.html',
       hash: true,
     }),

@@ -12,6 +12,7 @@
 @absoluteBorderRadius: 0;
 @focusedFormBorderColor: #e5d48f;
 @selectedTextColor: #fff;
+@textColor: #fff;
 
 /* Input */
 @inputFont: @pageFont;

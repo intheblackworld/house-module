@@ -2,14 +2,73 @@
   display: none;
   width: 100vw;
   height: 100vh;
-  background: #fff;
-  color: #333;
+  background: rgba(0, 0, 0, .7);
   position: fixed;
   top: 0;
   z-index: 50;
   left: 0;
 
+  .dialogContent {
+    width: 600px;
+    height: 70%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 51;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 40px;
+    overflow-y: scroll;
+  }
+
+  .title {
+    font-size: 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .8);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .subTitle {
+    font-size: 14px;
+    font-family: 'Noto Sans TC', serif;
+    color: rgba(0, 0, 0, .6);
+    line-height: 1.5;
+  }
+
+  h3 {
+    color: #82191d;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
   &.show {
     display: block;
   }
+}
+
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .dialogContent {
+    width: 90% !important;
+    height: 80% !important;
+    padding: 20px !important;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
