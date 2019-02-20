@@ -1,10 +1,10 @@
 /* 螢幕尺寸標準 */
-/* 手機尺寸 */
-@media only screen and (max-width: 767px) {
-}
-
 /* 平板尺寸 */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

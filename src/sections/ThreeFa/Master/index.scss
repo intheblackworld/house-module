@@ -1,4 +1,176 @@
-.image {
-  width: 100%;
-  height: 100vh;
+.master-carousel-wrap {
+  :global {
+    .slick-slider {
+      width: 512px;
+      height: 100vh;
+      margin: 0 auto;
+      position: relative;
+    }
+    .slick-list {
+      position: relative;
+      top: calc(50% - 230px);
+    }
+  }
+  .imgWrap {
+    width: 512px;
+    height: 342px;
+    display: flex;
+    align-content: center;
+  }
+  .bgImage {
+    // width: 512px;
+    height: 260px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .leaf1 {
+    position: absolute;
+    width: 500px;
+    top: -40px;
+    left: -70px; 
+  }
+  .leaf2 {
+    position: absolute;
+    right: 0;
+    width: 500px;
+  }
+  .leaf3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 330px;
+  }
+  h3 {
+    font-size: 55px;
+    text-align: center;
+    color: #B50007;
+  }
+  .sealWrap {
+    display: flex;
+    margin-top: 30px; 
+    justify-content: center;
+  }
+  .seal {
+    padding: 3px;
+    text-align: center;
+    width: 84px;
+    height: 84px;
+    background-color: #b50007;
+    color: #fff;
+    font-size: 32px;
+    margin-right: 16px;
+    line-height: 38px;
+  }
+  .sealTitle {
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 84px;
+    font-family: 'Noto Serif TC', serif;
+    letter-spacing: -4px;
+  }
+}
+
+
+/* 平板尺寸 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .master-carousel-wrap {
+    .bgImage {
+      width: 315px;
+      height: 210px;
+    }
+    .imgWrap {
+      height: 300px;
+    }
+    .flowerLogo.bgImage {
+      width: 160px;
+      height: 160px;
+      margin-top: 100px;
+    }
+    .leaf1 {
+      width: 260px;
+      top: -20px;
+      left: 0px;
+    }
+    .leaf2 {
+      width: 260px;
+    }
+    .leaf3 {
+      width: 170px;
+    }
+    h3 {
+      font-size: 46px;
+    }
+    .seal {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+    .sealTitle {
+      font-size: 46px;
+      line-height: 46px;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .master-carousel-wrap {
+    :global {
+      .slick-slider {
+        width: 100%;
+       
+      }
+      .slick-list {
+        position: relative;
+        top: calc(50% - 150px);
+      }
+    }
+    .imgWrap {
+      width: 100%;
+      height: 100%;
+    }
+    .bgImage {
+      width: 230px;
+      height: 150px;
+    }
+    .flowerLogo.bgImage {
+      width: 116px;
+      height: 116px;
+    }
+    .leaf1 {
+      width: 210px;
+      top: 0px;
+      left: 0px;
+    }
+    .leaf2 {
+      width: 200px;
+    }
+    .leaf3 {
+      width: 205px;
+    }
+    h3 {
+      font-size: 26px;
+    }
+    .sealWrap {
+      // justify-content: center;
+    }
+    .seal {
+      width: 36px;
+      height: 36px;
+      font-size: 12px;
+      line-height: 16px;
+      margin-right: 6px;
+    }
+    .sealTitle {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
