@@ -1,6 +1,20 @@
 .footer {
   width: 100vw;
+  height: 40px;
+  background: #302626;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .6);
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  a {
+    font-size: 12px;
+    color: #fff;
+  }
 }
