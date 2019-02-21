@@ -1,5 +1,5 @@
 <?php
-    $name = $_POST['widget-contact-form-name'];
+    $name = $_POST['name'];
     if(!$name) {
         header('Location:/');
         die();

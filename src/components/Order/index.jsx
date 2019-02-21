@@ -21,10 +21,10 @@ const Order = () => {
   const utmMedium = urlParams.get('utm_medium')
   const utmContent = urlParams.get('utm_content')
   const utmCampaign = urlParams.get('utm_campaign')
-  const [utm_source] = useState(utmSource)
-  const [utm_medium] = useState(utmMedium)
-  const [utm_content] = useState(utmContent)
-  const [utm_campaign] = useState(utmCampaign)
+  const [utm_source] = useState(utmSource || '')
+  const [utm_medium] = useState(utmMedium || '')
+  const [utm_content] = useState(utmContent || '')
+  const [utm_campaign] = useState(utmCampaign || '')
 
   // 選擇居住
   const [area, setArea] = useState('')
@@ -86,11 +86,15 @@ const Order = () => {
       method: 'POST',
       body: formData,
     })
-    // .then(response => response.json())
-    // .then((myJson) => {
-    //   console.log(myJson)
-    // })
-    // .catch(error => console.error('Error', error))
+      .then((response) => {
+        if (response.status === 200) {
+          window.location.href = '#/formThanks'
+        }
+      })
+      // .then((myJson) => {
+      //   console.log(myJson)
+      // })
+      // .catch(error => console.error('Error', error))
     // console.log(reqData)
     // console.log(utm_source)
     // window.location.href = 'formThanks'
