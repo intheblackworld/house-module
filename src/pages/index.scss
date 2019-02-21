@@ -1,0 +1,27 @@
+@import '../sections/index.scss';
+
+.thanks {
+  width: 100vw;
+  height: 100vh;
+  background-color: #9c1e23;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    font-size: 36px;
+    color: #fff;
+  }
+
+  p {
+    font-size: 24px;
+    color: #e5d48f;
+  }
+  
+  a {
+    color: #e5d48f !important;
+    width: 270px !important;
+  }
+}

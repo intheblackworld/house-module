@@ -2,6 +2,7 @@ import React from 'react'
 import SectionTitle from 'components/SectionTitle'
 import { Image } from 'semantic-ui-react'
 import Carousel from 'components/Carousel'
+import Viewport from 'components/ViewPort'
 
 import home from 'assets/img/section3/home.png'
 import company1 from 'assets/img/section3/company-1.png'
@@ -17,13 +18,15 @@ import css from './index.scss'
 
 const Section3 = () => (
   <React.Fragment>
-    <SectionTitle
-      titleTop="上市保證"
-      titleBottom="BRAND"
-      iconUrl={home}
-      slolganMain="三發地產上市公司，讓年輕的你更驕傲！"
-      sloganDescription="上市公司品質保證更保心，加上金革唱片優雅音韻，品牌與品質的雙重加持，一次買最好！"
-    />
+    <Viewport>
+      <SectionTitle
+        titleTop="上市保證"
+        titleBottom="BRAND"
+        iconUrl={home}
+        slolganMain="三發地產上市公司，讓年輕的你更驕傲！"
+        sloganDescription="上市公司品質保證更保心，加上金革唱片優雅音韻，品牌與品質的雙重加持，一次買最好！"
+      />
+    </Viewport>
     <div className={css.imgs}>
       <Image src={company1} alt="" />
       <Image src={cross} alt="" />

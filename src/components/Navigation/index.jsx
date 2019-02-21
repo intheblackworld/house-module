@@ -12,7 +12,6 @@ const NavItems = [
   {
     name: '租不如買',
     imgSrc: require('assets/img/navigation/hand.png'),
-    path: '#one',
     section: 'section2',
     OffsetValue: -127,
   },
@@ -20,7 +19,6 @@ const NavItems = [
   {
     name: '上市保證',
     imgSrc: require('assets/img/navigation/house.png'),
-    path: '#two',
     section: 'section3',
     OffsetValue: -127,
   },
@@ -28,7 +26,6 @@ const NavItems = [
   {
     name: '最潮建築',
     imgSrc: require('assets/img/navigation/no1.png'),
-    path: '#three',
     section: 'section4',
     OffsetValue: -127,
   },
@@ -36,14 +33,12 @@ const NavItems = [
   {
     name: '無敵安心',
     imgSrc: require('assets/img/navigation/heart.png'),
-    path: '#four',
     section: 'section5',
     OffsetValue: -127,
   },
   {
     name: '預約賞屋',
     imgSrc: require('assets/img/navigation/pen.png'),
-    path: '#five',
     section: 'section6',
     OffsetValue: -127,
   },
@@ -110,24 +105,22 @@ const Navigation = () => {
             />
             <ul className={navlist}>
               {list
-                && list.map((item, index) => {
-                  return (
-                    <Link
-                      to={item.section}
-                      spy
-                      smooth
-                      duration={500}
-                      offset={item.OffsetValue}
-                      key={item.section}
-                    >
-                      <a href={item.path} key={item.name} className={css.link}>
-                        <Image src={item.imgSrc} />
-                        <span>{item.name}</span>
-                        {list.length - 1 !== index && <span className={css.divided}>|</span>}
-                      </a>
-                    </Link>
-                  )
-                })}
+                && list.map((item, index) => (
+                  <Link
+                    to={item.section}
+                    spy
+                    smooth
+                    duration={500}
+                    offset={item.OffsetValue}
+                    key={item.section}
+                  >
+                    <span className={css.link}>
+                      <Image src={item.imgSrc} />
+                      <span>{item.name}</span>
+                      {list.length - 1 !== index && <span className={css.divided}>|</span>}
+                    </span>
+                  </Link>
+                ))}
             </ul>
           </div>
         </Container>
