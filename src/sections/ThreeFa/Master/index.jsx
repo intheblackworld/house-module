@@ -4,7 +4,7 @@ import Carousel from 'components/Carousel'
 import { Image } from 'semantic-ui-react'
 
 import bg1 from 'assets/img/master/bg1.png'
-import bg2 from 'assets/img/master/bg2.png'
+import bg3 from 'assets/img/master/bg3.png'
 import leaf1 from 'assets/img/master/leaf-left-top.png'
 import leaf2 from 'assets/img/master/leaf-right-top.png'
 import leaf3 from 'assets/img/master/leaf-right-bottom.png'
@@ -19,8 +19,9 @@ const Master = () => (
     <Image src={leaf3} alt="1" className={css.leaf3} />
     <Carousel>
       <div>
+        <div className={css.imageTitle}>三發丰悅</div>
         <div className={css.imgWrap}>
-          <Image src={bg2} alt="1" className={[css.bgImage, css.flowerLogo].join(' ')} />
+          <Image src={bg3} alt="1" className={css.bgImage} />
         </div>
         <div className={css.sealWrap}>
           <div className={css.seal}>
@@ -37,7 +38,7 @@ const Master = () => (
       </div>
       <div>
         <div className={css.imgWrap}>
-          <Image src={bg2} alt="3" className={[css.bgImage, css.flowerLogo].join(' ')} />
+          <Image src={bg3} alt="3" className={css.bgImage} />
         </div>
         <h3>神祕百萬購物金</h3>
         <h3>等你拿</h3>
