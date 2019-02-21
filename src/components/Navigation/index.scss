@@ -125,10 +125,14 @@ $logoMobileWidth: 32px;
       align-items: center;
       justify-content: center;
       display: none;
+      border-bottom: 1px solid #8e7734;
 
       img,
       span {
         display: block;
+      }
+      span {
+        line-height: 28px;
       }
     }
 
