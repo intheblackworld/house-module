@@ -8,7 +8,7 @@ const Frame = (props: { inViewport: boolean }) => {
 
 const ViewportFrame = handleViewport(Frame)
 
-const Component = (props) => {
+const Viewport = (props) => {
   const { children } = props
   const [show, setShow] = React.useState(false)
   return (
@@ -19,4 +19,4 @@ const Component = (props) => {
   )
 }
 
-export default Component
+export default Viewport

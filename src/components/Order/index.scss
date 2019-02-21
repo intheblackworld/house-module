@@ -1,3 +1,5 @@
+@import '../../assets/animate.scss';
+
 .orderContainer {
   width: 920px;
   margin: 0 auto;
@@ -10,6 +12,29 @@
   align-items: center;
   > div {
     flex: 1;
+  }
+
+  // animate
+
+  & {
+    .group,
+    .control {
+      opacity: 0;
+    }
+  }
+
+  &.show {
+    .group {
+      @include animate(fadeInUp, .6s, 0.2s);
+    }
+
+    .control {
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeInUp, .6s, 0.2s + $i * 0.15s);
+        }
+      }
+    }
   }
 
   .group {
@@ -50,7 +75,8 @@
   .field {
     width: 310px;
 
-    .select, .select div {
+    .select,
+    .select div {
       border-radius: 0 !important;
       background: #82191d !important;
       color: rgba(255, 255, 255, 0.8) !important;
@@ -72,6 +98,10 @@
 .checkbox {
   text-align: center;
   margin-top: 60px;
+  opacity: 0;
+  &.show {
+    @include animate(fadeInUp, .8s, .6s);
+  }
 
   label {
     font-size: 14px !important;
@@ -104,22 +134,56 @@
 .submit {
   width: 320px !important;
   height: 72px !important;
-  opacity: 0.6 !important;
+  opacity: 0 !important;
   border-radius: 0 !important;
   background-color: #e5d48f !important;
   font-size: 20px !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
-  transition: all .3s !important;
-
+  transition: all 0.3s !important;
+  
   &.enable {
     opacity: 1 !important;
+  }
+
+  &.show {
+    animation: showForSubmit 1s ease-in-out 0s forwards;
+    animation-delay: .6s;
+  }
+}
+
+@keyframes showForSubmit {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, -20px);
+  }
+
+  100% {
+    opacity: 0.6;
+    transform: none;
   }
 }
 
 .orderTitle {
   text-align: center;
   margin-bottom: 40px;
+
+  & {
+    h3,
+    p {
+      opacity: 0;
+    }
+  }
+
+  &.show {
+    h3 {
+      @include animate(fadeInDown, 0.6s, 0);
+    }
+
+    p {
+      @include animate(fadeInUp, 0.6s, 0.4s);
+    }
+  }
   h3 {
     font-size: 36px;
     font-weight: bold;

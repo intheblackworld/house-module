@@ -1,4 +1,5 @@
 import React from 'react'
+import Viewport from 'components/ViewPort'
 import Order from 'components/Order'
 import ContactInfo from 'components/ContactInfo'
 import FullScreen from 'components/FullScreen'
@@ -15,19 +16,25 @@ const ContactSection = () => (
   <div className={css.contactSection}>
     <div className={css.orderBg}>
       <FullScreen needCutHeader alignCenter>
-        <Order />
+        <Viewport>
+          <Order />
+        </Viewport>
       </FullScreen>
-      <ContactInfo
-        address={address}
-        phone={phone}
-        fbLink={fbLink}
-        googleLink={googleLink}
-      />
+      <Viewport>
+        <ContactInfo
+          address={address}
+          phone={phone}
+          fbLink={fbLink}
+          googleLink={googleLink}
+        />
+      </Viewport>
     </div>
     <GoogleMap />
     <div className={css.houseBg}>
       <Section>
-        <HouseInfo houseInfos={houseInfos} />
+        <Viewport>
+          <HouseInfo houseInfos={houseInfos} />
+        </Viewport>
       </Section>
     </div>
   </div>

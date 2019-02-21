@@ -2,6 +2,7 @@ import React, { lazy } from 'react'
 import { Element } from 'react-scroll'
 import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
+import Mask from 'components/AstrictMask'
 // import ViewPort from 'components/ViewPort'
 
 import ContactSection from 'sections/ContactSection'
@@ -17,6 +18,7 @@ const Section5 = lazy(() => import('sections/ThreeFa/Section5'))
 
 const SectionList = () => (
   <React.Fragment>
+    <Mask />
     <FullScreen needCutHeader={false}>
       <Master />
     </FullScreen>

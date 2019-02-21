@@ -2,6 +2,7 @@ import React from 'react'
 import { Image, Container } from 'semantic-ui-react'
 import SectionTitle from 'components/SectionTitle'
 import Viewport from 'components/ViewPort'
+import cx from 'classnames'
 import hand from 'assets/img/section2/hand.png'
 import css from './index.scss'
 
@@ -34,6 +35,30 @@ const items = [
   },
 ]
 
+const Item = ({ show, item, index }) => {
+  const even = index % 2 === 0
+  const odd = !even
+  const itemClass = cx(css.main, {
+    [css.right]: odd,
+    [css.left]: even,
+    [css.show]: show,
+  })
+  return (
+    <div key={item.url} className={itemClass}>
+      {odd && <Image src={item.url} alt="" key={item.url} />}
+      <div className={css.descBg}>
+        <h3>
+          {item.titleTop}
+          <br />
+          {item.titleBottom}
+        </h3>
+        <p>{item.desc}</p>
+      </div>
+      {even && <Image src={item.url} alt="" key={item.url} />}
+    </div>
+  )
+}
+
 const Section2 = () => (
   <React.Fragment>
     <Container>
@@ -41,36 +66,11 @@ const Section2 = () => (
       <Viewport>
         <SectionTitle titleTop="租不如買" titleBottom="NEW FUTURE" iconUrl={hand} />
       </Viewport>
-      {items.map((item, index) => {
-        if (index % 2 === 0) {
-          return (
-            <div key={`right-${item.url}`} className={[css.main, css.right].join(' ')}>
-              <Image src={item.url} alt="" key={item.url} />
-              <div className={css.descBg}>
-                <h3>
-                  {item.titleTop}
-                  <br />
-                  {item.titleBottom}
-                </h3>
-                <p>{item.desc}</p>
-              </div>
-            </div>
-          )
-        }
-        return (
-          <div key={`left-${item.url}`} className={[css.main, css.left].join(' ')}>
-            <div className={css.descBg}>
-              <h3>
-                {item.titleTop}
-                <br />
-                {item.titleBottom}
-              </h3>
-              <p>{item.desc}</p>
-            </div>
-            <Image src={item.url} alt="" key={item.url} />
-          </div>
-        )
-      })}
+      {items.map((item, index) => (
+        <Viewport>
+          <Item item={item} index={index + 1} />
+        </Viewport>
+      ))}
     </Container>
   </React.Fragment>
 )

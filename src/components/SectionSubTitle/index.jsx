@@ -1,12 +1,17 @@
 import React from 'react'
-
+import cx from 'classnames'
 import css from './index.scss'
 
-const SectionSubtitle = ({ title }) => (
-  <div className={css.subTitle}>
-    <h3>{title}</h3>
-    <div className={css.subTitleImg} />
-  </div>
-)
+const SectionSubtitle = ({ title, show }) => {
+  const subTitleClass = cx(css.subTitle, {
+    [css.show]: show,
+  })
+  return (
+    <div className={subTitleClass}>
+      <h3>{title}</h3>
+      <div className={css.subTitleImg} />
+    </div>
+  )
+}
 
 export default SectionSubtitle

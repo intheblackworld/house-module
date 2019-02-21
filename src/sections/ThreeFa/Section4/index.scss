@@ -1,6 +1,36 @@
+@import '../../../assets/animate.scss';
+
 .slider {
   width: 859px;
   position: relative;
+
+  .carousel,
+  .descBg {
+    opacity: 0;
+
+    & {
+      h3,
+      p {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.show {
+    .carousel {
+      @include animate(fadeInRight, 0.8s, 0);
+    }
+    .descBg {
+      @include animate(fadeInUp, 0.8s, 0.2s);
+    }
+
+    .descBg {
+      h3,
+      p {
+        @include animate(fadeInUp, 0.8s, 0.6s);
+      }
+    }
+  }
 }
 
 .descBg {
@@ -39,7 +69,7 @@
     margin: 0 auto;
     margin-bottom: 70px;
   }
-  
+
   .descBg {
     width: 200px;
     height: 110px;
@@ -47,12 +77,12 @@
     position: absolute;
     left: calc(50% - 100px);
     bottom: -75px;
-  
+
     h3 {
       font-size: 18px;
       text-align: center;
     }
-  
+
     p {
       display: none;
     }
@@ -61,20 +91,19 @@
 
 /* 平板尺寸 */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
   .slider {
     width: 652px;
   }
-  
+
   .descBg {
     width: 311px;
     height: 170px;
     padding: 15px 55px;
-  
+
     h3 {
       font-size: 22px;
     }
-  
+
     p {
       font-size: 13px;
     }
@@ -84,4 +113,3 @@
 // 避免內容電腦過渡平板時，設計未考量的調整
 @media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
-

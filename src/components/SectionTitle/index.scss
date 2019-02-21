@@ -24,19 +24,19 @@
     }
 
     .title-top {
-      @include animate(fadeInUp, .8s, 200);
+      @include animate(fadeInUp, .8s, 0);
     }
 
     .title-bottom {
-      @include animate(fadeInUp, .8s, 200);
+      @include animate(fadeInUp, .8s, 0);
     }
 
     .slogan-area-main {
-      @include animate(fadeInUp, .8s, 400);
+      @include animate(fadeInUp, .8s, 0);
     }
 
     .slogan-area-description {
-      @include animate(fadeInUp, .8s, 400);
+      @include animate(fadeInUp, .8s, 0);
     }
 
   }

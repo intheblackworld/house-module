@@ -1,3 +1,5 @@
+@import '../../../assets/animate.scss';
+
 .section5 {
   max-width: 975px;
   margin: 0 auto;
@@ -13,6 +15,16 @@
 
   .detail-item {
     width: 33.33%;
+    opacity: 0;
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        &.show {
+          @include animate(fadeIn, .6s, $i * 0.05s);
+        }
+      }
+    }
+    
+    
     .item-icon-wrap {
       width: 162px;
       height: 162px;
@@ -101,6 +113,10 @@
 @media only screen and (max-width: 767px) {
   .section5 {
     .detail-item {
+      &.show {
+        animation: fadeIn .6s ease-in-out 0s forwards !important;
+        animation-delay: .2s !important;
+      }
       .item-title {
         font-size: 28px;
       }

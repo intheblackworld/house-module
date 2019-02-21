@@ -1,3 +1,5 @@
+@import '../../assets/animate.scss';
+
 .houseInfo {
   width: 686px;
   margin: 0 auto;
@@ -5,6 +7,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  .title, .item,  {
+    opacity: 0;
+  }
+
+  &.show {
+    .title {
+      @include animate(fadeInUp, .4s, 0);
+    }
+
+    .item {
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeInUp, .4s, 0.2s + $i * 0.15s);
+        }
+      }
+    }
+  }
 }
 
 .title {

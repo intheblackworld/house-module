@@ -1,3 +1,5 @@
+@import '../../assets/animate.scss';
+
 $contactBg: #fff;
 $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 
@@ -21,6 +23,11 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   width: 193px;
   height: 120px;
   margin: 0 auto;
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeInUp, .6s, 0);
+  }
 }
 
 .info {
@@ -29,6 +36,20 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  > * {
+    opacity: 0;
+  }
+
+  &.show {
+    > * {
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeInUp, .4s, $i * 0.1s);
+        }
+      }
+    }
+  }
 }
 
 .showOnPhone {

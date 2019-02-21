@@ -1,9 +1,12 @@
+@import '../../assets/animate.scss';
+
 .subTitle {
   margin-top: 30px;
   h3 {
     font-size: 29px;
     color: #b50007;
     text-align: center;
+    opacity: 0;
   }
 
   .subTitleImg {
@@ -13,6 +16,17 @@
     width: 320px;
     margin: -10px auto 0;
     margin-bottom: 50px;
+    opacity: 0;
+  }
+
+  &.show {
+    h3 {
+      @include animate(fadeInUp, .6s, .2s);
+    }
+
+    .subTitleImg {
+      @include animate(fadeIn, 1s, 0);
+    }
   }
 }
 

@@ -62,4 +62,16 @@
   }
 }
 
+@keyframes spreadIn {
+  from { 
+    opacity: 0;
+    letter-spacing: -0.15em;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+  }
+}
+
 

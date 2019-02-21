@@ -14,7 +14,7 @@ import PolicyDialog from 'components/PolicyDialog'
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
 
-const Order = () => {
+const Order = ({ show }) => {
   // 從網址接收 utm 資料
   const urlParams = new URLSearchParams(window.location.search)
   const utmSource = urlParams.get('utm_source')
@@ -39,6 +39,7 @@ const Order = () => {
   const [isCheck, check] = useState(false)
   const submitClassName = cx(css.submit, {
     [css.enable]: isCheck,
+    [css.show]: show,
   })
 
   // 彈窗
@@ -85,28 +86,39 @@ const Order = () => {
     fetch('contact-form.php', {
       method: 'POST',
       body: formData,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = '#/formThanks'
+      }
     })
-      .then((response) => {
-        if (response.status === 200) {
-          window.location.href = '#/formThanks'
-        }
-      })
-      // .then((myJson) => {
-      //   console.log(myJson)
-      // })
-      // .catch(error => console.error('Error', error))
+    // .then((myJson) => {
+    //   console.log(myJson)
+    // })
+    // .catch(error => console.error('Error', error))
     // console.log(reqData)
     // console.log(utm_source)
     // window.location.href = 'formThanks'
   }
 
+  const titleClass = cx(css.orderTitle, {
+    [css.show]: show,
+  })
+
+  const formClass = cx(css.form, {
+    [css.show]: show,
+  })
+
+  const checkboxClass = cx(css.checkbox, {
+    [css.show]: show,
+  })
+
   return (
     <div className={css.orderContainer}>
-      <div className={css.orderTitle}>
+      <div className={titleClass}>
         <h3>預約賞屋</h3>
         <p>買得起，住更好</p>
       </div>
-      <Form className={css.form}>
+      <Form className={formClass}>
         <div className={css.group}>
           <div className={css.control}>
             <label>姓名</label> {/* eslint-disable-line */}
@@ -157,7 +169,7 @@ const Order = () => {
           </div>
         </div>
       </Form>
-      <Form.Field className={css.checkbox}>
+      <Form.Field className={checkboxClass}>
         <Checkbox
           onChange={(e, { checked }) => check(checked)}
           label={(
@@ -188,7 +200,6 @@ const Order = () => {
       <Button className={submitClassName} onClick={submitForm}>
         立即預約
       </Button>
-      `
     </div>
   )
 }

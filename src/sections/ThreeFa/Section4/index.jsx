@@ -3,6 +3,7 @@ import SectionTitle from 'components/SectionTitle'
 import { Image, Container } from 'semantic-ui-react'
 import Carousel from 'components/Carousel'
 import Viewport from 'components/ViewPort'
+import cx from 'classnames'
 
 import reward from 'assets/img/section4/reward.png'
 // import descBg from 'assets/img/section4/descBg.png'
@@ -24,6 +25,31 @@ const imgList = [
   require('assets/img/section4/public-12.png'),
 ]
 
+const Sliders = ({ show = false }) => {
+  const sliderClass = cx(css.slider, {
+    [css.show]: show,
+  })
+  return (
+    <div className={sliderClass}>
+      <div className={css.carousel}>
+        <Carousel slidesToShow={1} fade={false}>
+          {imgList.map(url => (
+            <Image src={url} alt="" key={url} />
+          ))}
+        </Carousel>
+      </div>
+      <div className={css.descBg}>
+        <h3>
+          回家都有音韻的陪伴
+          <br />
+          生活優雅漫舞
+        </h3>
+        <p>在公設規劃的每一個角落，都有金革唱片的優雅音韻，伴隨著美好的生活，共舞！</p>
+      </div>
+    </div>
+  )
+}
+
 const Section4 = () => (
   <React.Fragment>
     <Container>
@@ -36,21 +62,9 @@ const Section4 = () => (
           sloganDescription="大器內退前院、挑高迎賓大廳、第二門廳、休憩閱讀區，搭配飯店式簡約外觀，襯托人生優雅品味！"
         />
       </Viewport>
-      <div className={css.slider}>
-        <Carousel slidesToShow={1} fade={false}>
-          {imgList.map(url => (
-            <Image src={url} alt="" key={url} />
-          ))}
-        </Carousel>
-        <div className={css.descBg}>
-          <h3>
-            回家都有音韻的陪伴
-            <br />
-            生活優雅漫舞
-          </h3>
-          <p>在公設規劃的每一個角落，都有金革唱片的優雅音韻，伴隨著美好的生活，共舞！</p>
-        </div>
-      </div>
+      <Viewport>
+        <Sliders />
+      </Viewport>
     </Container>
   </React.Fragment>
 )

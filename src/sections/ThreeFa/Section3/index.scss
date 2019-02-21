@@ -1,3 +1,5 @@
+@import '../../../assets/animate.scss';
+
 .imgs {
   display: flex;
   align-items: center;
@@ -5,11 +7,21 @@
   width: 445px;
   margin: 0 auto;
   margin-bottom: 75px;
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeInUp, .6s, .2s);
+  }
 }
 
 .title {
   text-align: center;
   margin-bottom: 75px;
+  opacity: 0;
+
+  &.show {
+    @include animate(spreadIn, .8s, .2s);
+  }
 
   h3 {
     font-size: 29px;
@@ -25,6 +37,10 @@
 .slider {
   width: 1150px;
   float: right;
+  opacity: 0;
+  &.show {
+    @include animate(fadeInRight, .6s, 0);
+  }
 }
 
 .sliderItem {

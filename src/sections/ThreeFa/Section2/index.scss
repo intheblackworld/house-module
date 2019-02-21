@@ -1,3 +1,5 @@
+@import '../../../assets/animate.scss';
+
 .title {
   color: #b50007;
   font-family: 'Noto Serif TC', serif;
@@ -10,53 +12,85 @@
 }
 .main {
   display: flex;
-    justify-content: center;
-    vertical-align: center;
-    margin-bottom: 36px;
-    img {
-      position: relative;
-      z-index: 1;
-      width: 389px;
-      height: 259px;
-      background-size: cover;
-      background-position: center; 
-    
-    }
-    .descBg {
-      z-index: 2;
-      position: relative;
-      top: 40px;
-      width: 366px;
-      height: 200px;
-      padding: 22px;
-      background-image: url('../../../assets/img/section2/desc-bg.png');
-      background-size: cover;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      h3 {
-        font-size: 26px;
-        color: #b50007;
-        line-height: 1.5;
-      }
+  justify-content: center;
+  vertical-align: center;
+  margin-bottom: 36px;
+
+  img,
+  .descBg {
+    opacity: 0;
+
+    & {
+      h3,
       p {
-        font-size: 15px;
-        width: 260px;
-        color: #000000;
-        line-height: 1.5;
+        opacity: 0;
       }
     }
-    &.right {
-      .descBg {
-        right: 44px;
+  }
+
+  &.show {
+    &.right img {
+      @include animate(fadeInRight, 1s, 0);
+    }
+
+    &.left img {
+      @include animate(fadeInLeft, 1s, 0);
+    }
+
+    .descBg {
+      @include animate(fadeInUp, 0.8s, 0.2s);
+    }
+
+    .descBg {
+      h3,
+      p {
+        @include animate(fadeInUp, 0.6s, 0.6s);
       }
     }
-    &.left {
-      .descBg {
-        left: 44px;
-      }
-    } 
+  }
+  img {
+    position: relative;
+    z-index: 1;
+    width: 389px;
+    height: 259px;
+    background-size: cover;
+    background-position: center;
+  }
+  .descBg {
+    z-index: 2;
+    position: relative;
+    top: 40px;
+    width: 366px;
+    height: 200px;
+    padding: 22px;
+    background-image: url('../../../assets/img/section2/desc-bg.png');
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      font-size: 26px;
+      color: #b50007;
+      line-height: 1.5;
+    }
+    p {
+      font-size: 15px;
+      width: 260px;
+      color: #000000;
+      line-height: 1.5;
+    }
+  }
+  &.right {
+    .descBg {
+      right: 44px;
+    }
+  }
+  &.left {
+    .descBg {
+      left: 44px;
+    }
+  }
 }
 
 /* 螢幕尺寸標準 */
@@ -85,7 +119,6 @@
       p {
         font-size: 12.7px;
         width: 220px;
-      
       }
     }
   }
@@ -147,8 +180,7 @@
           display: none;
         }
       }
-    } 
-    
+    }
   }
 }
 

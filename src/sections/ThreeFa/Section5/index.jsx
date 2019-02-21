@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
 import Viewport from 'components/ViewPort'
+import cx from 'classnames'
 import SectionTitle from 'components/SectionTitle'
 import SectionSubTitle from 'components/SectionSubTitle'
 import heart from 'assets/img/section5/heart.png'
@@ -42,6 +43,20 @@ const items = [
   },
 ]
 
+const Item = ({ show, item }) => {
+  const itemClass = cx(css['detail-item'], {
+    [css.show]: show,
+  })
+  return (
+    <div className={itemClass} key={item.desc}>
+      <div className={css['item-icon-wrap']}>
+        <Image className={css['item-icon']} src={item.imgSrc} alt="" />
+      </div>
+      <div className={css['item-title']}>{item.name}</div>
+      <p className={css['item-description']}>{item.desc}</p>
+    </div>
+  )
+}
 const Section5 = () => (
   <div className={css.section5}>
     {/* <div className={css['leaf-top']} />
@@ -58,16 +73,14 @@ const Section5 = () => (
     </Viewport>
 
     <div className={css.container}>
-      <SectionSubTitle title="六大品牌理念" />
+      <Viewport>
+        <SectionSubTitle title="六大品牌理念" />
+      </Viewport>
       <div className={css['container-detail']}>
         {items.map(item => (
-          <div className={css['detail-item']} key={item.desc}>
-            <div className={css['item-icon-wrap']}>
-              <Image className={css['item-icon']} src={item.imgSrc} alt="" />
-            </div>
-            <div className={css['item-title']}>{item.name}</div>
-            <p className={css['item-description']}>{item.desc}</p>
-          </div>
+          <Viewport>
+            <Item item={item} />
+          </Viewport>
         ))}
       </div>
     </div>
