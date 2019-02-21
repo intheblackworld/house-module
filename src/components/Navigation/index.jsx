@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Image } from 'semantic-ui-react'
 import { Link } from 'react-scroll'
 import cx from 'classnames'
@@ -14,7 +14,7 @@ const NavItems = [
     imgSrc: require('assets/img/navigation/hand.png'),
     path: '#one',
     section: 'section2',
-    OffsetValue: -147,
+    OffsetValue: -127,
   },
 
   {
@@ -22,7 +22,7 @@ const NavItems = [
     imgSrc: require('assets/img/navigation/house.png'),
     path: '#two',
     section: 'section3',
-    OffsetValue: -147,
+    OffsetValue: -127,
   },
 
   {
@@ -30,7 +30,7 @@ const NavItems = [
     imgSrc: require('assets/img/navigation/no1.png'),
     path: '#three',
     section: 'section4',
-    OffsetValue: -147,
+    OffsetValue: -127,
   },
 
   {
@@ -38,7 +38,7 @@ const NavItems = [
     imgSrc: require('assets/img/navigation/heart.png'),
     path: '#four',
     section: 'section5',
-    OffsetValue: -147,
+    OffsetValue: -127,
   },
   {
     name: '預約賞屋',
@@ -52,12 +52,31 @@ const NavItems = [
 const menuStatus = false
 
 const Navigation = () => {
-  const [list] = useState(NavItems)
+  const [list, setListItemOffsetValue] = useState(NavItems)
   const [isShowMenu, setMenu] = useState(menuStatus)
-
   const toggleSidebar = () => {
     setMenu(!isShowMenu)
   }
+
+  useEffect(() => {
+    const wh = window.innerWidth
+    let h
+    if (wh < 1024 && wh > 767) {
+      h = 78
+    } else if (wh < 768) {
+      h = 49
+    } else {
+      h = 127
+    }
+    if (-h === list[list.length - 1].OffsetValue) return
+
+    setListItemOffsetValue(
+      list.map(item => ({
+        ...item,
+        OffsetValue: -h,
+      })),
+    )
+  }, [list])
 
   const navlist = cx(css.navlist, {
     [css.open]: isShowMenu,
@@ -91,22 +110,24 @@ const Navigation = () => {
             />
             <ul className={navlist}>
               {list
-                && list.map((item, index) => (
-                  <Link
-                    to={item.section}
-                    spy
-                    smooth
-                    duration={500}
-                    offset={item.OffsetValue}
-                    key={item.section}
-                  >
-                    <a href={item.path} key={item.name} className={css.link}>
-                      <Image src={item.imgSrc} />
-                      <span>{item.name}</span>
-                      {list.length - 1 !== index && <span className={css.divided}>|</span>}
-                    </a>
-                  </Link>
-                ))}
+                && list.map((item, index) => {
+                  return (
+                    <Link
+                      to={item.section}
+                      spy
+                      smooth
+                      duration={500}
+                      offset={item.OffsetValue}
+                      key={item.section}
+                    >
+                      <a href={item.path} key={item.name} className={css.link}>
+                        <Image src={item.imgSrc} />
+                        <span>{item.name}</span>
+                        {list.length - 1 !== index && <span className={css.divided}>|</span>}
+                      </a>
+                    </Link>
+                  )
+                })}
             </ul>
           </div>
         </Container>
