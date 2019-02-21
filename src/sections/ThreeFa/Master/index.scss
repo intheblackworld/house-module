@@ -102,12 +102,17 @@
 /* 平板尺寸 */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .master-carousel-wrap {
+    :global {
+      .slick-list {
+        top: calc(50% - 200px);
+      }
+    }
     .bgImage {
       width: 315px;
       height: 210px;
     }
     .imgWrap {
-      height: 300px;
+      height: 100%;
     }
     .imageTitle {
       line-height: 50px;
@@ -148,7 +153,6 @@
     :global {
       .slick-slider {
         width: 100%;
-       
       }
       .slick-list {
         position: relative;
