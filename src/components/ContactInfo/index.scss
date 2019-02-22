@@ -96,10 +96,10 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* 平板尺寸 */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .contactInfo {
     display: flex;
-    width: 90%;
+    width: 90% !important;
     height: 460px;
     padding: 60px 0 80px;
   }
