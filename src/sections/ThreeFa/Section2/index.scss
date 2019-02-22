@@ -48,6 +48,28 @@
       }
     }
   }
+
+  &.hide {
+    &.right img {
+      @include animate(fadeOutRight, 1s, 0);
+    }
+
+    &.left img {
+      @include animate(fadeOutLeft, 1s, 0);
+    }
+
+    .descBg {
+      @include animate(fadeOutUp, 0.8s, 0);
+    }
+
+    .descBg {
+      h3,
+      p {
+        @include animate(fadeOutUp, 0.6s, 0);
+      }
+    }
+  }
+
   img {
     position: relative;
     z-index: 1;

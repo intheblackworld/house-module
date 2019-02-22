@@ -46,6 +46,7 @@ const items = [
 const Item = ({ show, item }) => {
   const itemClass = cx(css['detail-item'], {
     [css.show]: show,
+    [css.hide]: !show,
   })
   return (
     <div className={itemClass} key={item.desc}>

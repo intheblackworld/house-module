@@ -40,6 +40,7 @@ const Order = ({ show }) => {
   const submitClassName = cx(css.submit, {
     [css.enable]: isCheck,
     [css.show]: show,
+    [css.hide]: !show,
   })
 
   // 彈窗
@@ -103,14 +104,17 @@ const Order = ({ show }) => {
 
   const titleClass = cx(css.orderTitle, {
     [css.show]: show,
+    [css.hide]: !show,
   })
 
   const formClass = cx(css.form, {
     [css.show]: show,
+    [css.hide]: !show,
   })
 
   const checkboxClass = cx(css.checkbox, {
     [css.show]: show,
+    [css.hide]: !show,
   })
 
   return (

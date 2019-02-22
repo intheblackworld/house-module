@@ -13,9 +13,11 @@ const Viewport = (props) => {
   const [show, setShow] = React.useState(false)
   return (
     <React.Fragment>
-      <ViewportFrame onEnterViewport={() => setShow(true)} />
       {React.cloneElement(children || <div />, { show })}
-      <ViewportFrame onLeaveViewport={() => setShow(false)} />
+      <ViewportFrame
+        onEnterViewport={() => { setShow(true) }}
+        onLeaveViewport={() => { setShow(false) }}
+      />
     </React.Fragment>
   )
 }

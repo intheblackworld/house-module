@@ -16,10 +16,12 @@ const ContactInfo = ({
 }) => {
   const logoClass = cx(css.logo, {
     [css.show]: show,
+    [css.hide]: !show,
   })
 
   const infoClass = cx(css.info, {
     [css.show]: show,
+    [css.hide]: !show,
   })
   return (
     <div className={css.contactInfo}>

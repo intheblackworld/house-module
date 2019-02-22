@@ -5,6 +5,7 @@ import css from './index.scss'
 const HouseInfo = ({ houseInfos, show }) => {
   const houseInfoClass = cx(css.houseInfo, {
     [css.show]: show,
+    [css.hide]: !show,
   })
 
   return (

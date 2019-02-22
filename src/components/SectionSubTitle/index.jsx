@@ -5,6 +5,7 @@ import css from './index.scss'
 const SectionSubtitle = ({ title, show }) => {
   const subTitleClass = cx(css.subTitle, {
     [css.show]: show,
+    [css.hide]: !show,
   })
   return (
     <div className={subTitleClass}>

@@ -28,6 +28,16 @@
       @include animate(fadeIn, 1s, 0);
     }
   }
+
+  &.hide {
+    h3 {
+      @include animate(fadeOutUp, .6s, 0);
+    }
+
+    .subTitleImg {
+      @include animate(fadeOut, 1s, 0);
+    }
+  }
 }
 
 /* 螢幕尺寸標準 */
