@@ -232,6 +232,13 @@
       }
     }
   }
+  .leaf1 {
+    top: 25%;
+  }
+  .leaf2 {
+    transform: rotate(16deg);
+    right: -85px;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
