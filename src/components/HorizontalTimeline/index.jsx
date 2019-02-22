@@ -43,26 +43,30 @@ const HorizontalTimelineStyled = styled.div`
   }
 `
 const ref = React.createRef()
-const HorizontalTimeline = () => (
-  <HorizontalTimelineStyled>
-    <Controller>
-      <Scene triggerHook="onLeave" duration="200%" pin>
-        <Timeline wrapper={<div id="pinContainer" />}>
-          <Tween from={{ x: '0' }} to={{ x: '-3330px' }}>
-            <ThreeFaTimeline ref={ref} />
-          </Tween>
-          {/* <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
+const HorizontalTimeline = () => {
+  const width = document.getElementById('app').offsetWidth
+  console.log(width)
+  return (
+    <HorizontalTimelineStyled>
+      <Controller>
+        <Scene triggerHook="onLeave" duration="200%" pin>
+          <Timeline wrapper={<div id="pinContainer" />}>
+            <Tween from={{ x: '0' }} to={{ x: `${-3330 + width}px` }}>
+              <ThreeFaTimeline ref={ref} />
+            </Tween>
+            {/* <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
 
-          </Tween>
-          <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
-            <section className="panel green">
-              <span>Panel</span>
-            </section>
-          </Tween> */}
-        </Timeline>
-      </Scene>
-    </Controller>
-  </HorizontalTimelineStyled>
-)
+            </Tween>
+            <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
+              <section className="panel green">
+                <span>Panel</span>
+              </section>
+            </Tween> */}
+          </Timeline>
+        </Scene>
+      </Controller>
+    </HorizontalTimelineStyled>
+  )
+}
 
 export default HorizontalTimeline

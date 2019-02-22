@@ -7,23 +7,23 @@
 
 .item {
   display: flex;
-  .title, img, p, .content {
-    opacity: 0;
-  }
+  // .title, img, p, .content {
+  //   opacity: 0;
+  // }
 
-  &.show {
-    .title {
-      @include animate(fadeInRight, .6s, 0s);
-    }
+  // &.show {
+  //   .title {
+  //     @include animate(fadeInRight, .6s, 0s);
+  //   }
 
-    img, .content {
-      @include animate(fadeInUp, .6s, .2s);
-    }
+  //   img, .content {
+  //     @include animate(fadeInUp, .6s, .2s);
+  //   }
 
-    p {
-      @include animate(fadeInUp, .6s, .4s);
-    }
-  }
+  //   p {
+  //     @include animate(fadeInUp, .6s, .4s);
+  //   }
+  // }
 
   // &.hide {
   //   .title {
@@ -46,6 +46,7 @@
     color: #b50007;
     font-family: 'Noto Seri TC', serif;
     text-align: center;
+    transform: translateY(-10px);
   }
   
   .content {
@@ -75,19 +76,19 @@
       opacity: 1;
     }
 
-    &.show {
-      .title {
-        @include animate(fadeInRight, 0s, 0s);
-      }
+    // &.show {
+    //   .title {
+    //     @include animate(fadeInRight, 0s, 0s);
+    //   }
   
-      img, .content {
-        @include animate(fadeInUp, 0s, 0s);
-      }
+    //   img, .content {
+    //     @include animate(fadeInUp, 0s, 0s);
+    //   }
   
-      p {
-        @include animate(fadeInUp, 0s, 0s);
-      }
-    }
+    //   p {
+    //     @include animate(fadeInUp, 0s, 0s);
+    //   }
+    // }
   }
 }
 
@@ -99,19 +100,19 @@
       opacity: 1;
     }
 
-    &.show {
-      .title {
-        @include animate(fadeInRight, 0s, 0s);
-      }
+    // &.show {
+    //   .title {
+    //     @include animate(fadeInRight, 0s, 0s);
+    //   }
   
-      img, .content {
-        @include animate(fadeInUp, 0s, 0s);
-      }
+    //   img, .content {
+    //     @include animate(fadeInUp, 0s, 0s);
+    //   }
   
-      p {
-        @include animate(fadeInUp, 0s, 0s);
-      }
-    }
+    //   p {
+    //     @include animate(fadeInUp, 0s, 0s);
+    //   }
+    // }
   }
 }
 

@@ -14,53 +14,51 @@
     flex: 1;
   }
 
-  // animate
+  // & {
+  //   .group,
+  //   .control {
+  //     opacity: 0;
+  //   }
+  // }
 
-  & {
-    .group,
-    .control {
-      opacity: 0;
-    }
-  }
+  // &.show {
+  //   .group {
+  //     @include animate(fadeInUp, .6s, 0.2s);
+  //     @for $i from 1 through 2 {
+  //       &:nth-child(#{$i}) {
+  //         z-index: 3 - $i;
+  //         position: relative;
+  //       }
+  //     }
+  //   }
 
-  &.show {
-    .group {
-      @include animate(fadeInUp, .6s, 0.2s);
-      @for $i from 1 through 2 {
-        &:nth-child(#{$i}) {
-          z-index: 3 - $i;
-          position: relative;
-        }
-      }
-    }
+  //   .control {
+  //     @for $i from 1 through 5 {
+  //       &:nth-child(#{$i}) {
+  //         @include animate(fadeInUp, .6s, 0.2s + $i * 0.15s);
+  //         z-index: 10 - $i;
+  //         position: relative;
+  //       }
+  //     }
 
-    .control {
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          @include animate(fadeInUp, .6s, 0.2s + $i * 0.15s);
-          z-index: 10 - $i;
-          position: relative;
-        }
-      }
+  //     &:nth-child(1) {
+  //       z-index: 1;
+  //     }
+  //   }
+  // }
 
-      &:nth-child(1) {
-        z-index: 1;
-      }
-    }
-  }
-
-  &.hide {
-    .group {
-      @include animate(fadeOutUp, .6s, 0);
-    }
-    .control {
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          @include animate(fadeOutUp, .6s, 0);
-        }
-      }
-    }
-  }
+  // &.hide {
+  //   .group {
+  //     @include animate(fadeOutUp, .6s, 0);
+  //   }
+  //   .control {
+  //     @for $i from 1 through 5 {
+  //       &:nth-child(#{$i}) {
+  //         @include animate(fadeOutUp, .6s, 0);
+  //       }
+  //     }
+  //   }
+  // }
 
   .group {
     height: 250px;
@@ -123,13 +121,13 @@
 .checkbox {
   text-align: center;
   margin-top: 60px;
-  opacity: 0;
-  &.show {
-    @include animate(fadeInUp, .8s, .6s);
-  }
-  &.hide {
-    @include animate(fadeOutUp, .8s, 0);
-  }
+  // opacity: 0;
+  // &.show {
+  //   @include animate(fadeInUp, 0.8s, 0.6s);
+  // }
+  // &.hide {
+  //   @include animate(fadeOutUp, 0.8s, 0);
+  // }
 
   label {
     font-size: 14px !important;
@@ -162,53 +160,53 @@
 .submit {
   width: 320px !important;
   height: 72px !important;
-  opacity: 0 !important;
+  // opacity: 0 !important;
   border-radius: 0 !important;
-  background-color: rgba(229, 212, 143, .6) !important;
+  background-color: rgba(229, 212, 143, 0.6) !important;
   font-size: 20px !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
   transition: all 0.3s !important;
 
-  &.show {
-    @include animate(fadeInUp, .8s, .6s);
-  }
+  // &.show {
+  //   @include animate(fadeInUp, 0.8s, 0.6s);
+  // }
 
-  &.enable {
-    background-color: rgba(229, 212, 143, 1) !important;
-  }
+  // &.enable {
+  //   background-color: rgba(229, 212, 143, 1) !important;
+  // }
 }
 
 .orderTitle {
   text-align: center;
   margin-bottom: 40px;
 
-  & {
-    h3,
-    p {
-      opacity: 0;
-    }
-  }
+  // & {
+  //   h3,
+  //   p {
+  //     opacity: 0;
+  //   }
+  // }
 
-  &.show {
-    h3 {
-      @include animate(fadeInDown, 0.6s, 0);
-    }
+  // &.show {
+  //   h3 {
+  //     @include animate(fadeInDown, 0.6s, 0);
+  //   }
 
-    p {
-      @include animate(fadeInUp, 0.6s, 0.4s);
-    }
-  }
+  //   p {
+  //     @include animate(fadeInUp, 0.6s, 0.4s);
+  //   }
+  // }
 
-  &.hide {
-    h3 {
-      @include animate(fadeOutDown, 0.6s, 0);
-    }
+  // &.hide {
+  //   h3 {
+  //     @include animate(fadeOutDown, 0.6s, 0);
+  //   }
 
-    p {
-      @include animate(fadeOutUp, 0.6s, 0);
-    }
-  }
+  //   p {
+  //     @include animate(fadeOutUp, 0.6s, 0);
+  //   }
+  // }
 
   h3 {
     font-size: 36px;
@@ -256,6 +254,29 @@
 
   .form {
     flex-direction: column;
+
+    // & {
+    //   .group,
+    //   .control {
+    //     opacity: 0;
+    //   }
+    // }
+
+    // &.show {
+    // }
+
+    // &.hide {
+    //   .group {
+    //     @include animate(fadeOutUp, 0.6s, 0);
+    //   }
+    //   .control {
+    //     @for $i from 1 through 5 {
+    //       &:nth-child(#{$i}) {
+    //         @include animate(fadeOutUp, 0.6s, 0);
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   .group {
@@ -295,7 +316,7 @@
         border-radius: 0 !important;
         border: 1px solid #fff !important;
       }
-  
+
       &:after {
         color: #82191d !important;
         background: #fff !important;
@@ -349,6 +370,49 @@
   }
 }
 
-// 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 1025px) {
+  // & {
+  //   .group,
+  //   .control {
+  //     opacity: 0;
+  //   }
+  // }
+  // &.show {
+  //   .group {
+  //     @include animate(fadeInUp, 0.6s, 0.2s);
+  //     @for $i from 1 through 2 {
+  //       &:nth-child(#{$i}) {
+  //         z-index: 3 - $i;
+  //         position: relative;
+  //       }
+  //     }
+  //   }
+
+  //   .control {
+  //     @for $i from 1 through 5 {
+  //       &:nth-child(#{$i}) {
+  //         @include animate(fadeInUp, 0.6s, 0.2s + $i * 0.15s);
+  //         z-index: 10 - $i;
+  //         position: relative;
+  //       }
+  //     }
+
+  //     &:nth-child(1) {
+  //       z-index: 1;
+  //     }
+  //   }
+  // }
+
+  // &.hide {
+  //   .group {
+  //     @include animate(fadeOutUp, 0.6s, 0);
+  //   }
+  //   .control {
+  //     @for $i from 1 through 5 {
+  //       &:nth-child(#{$i}) {
+  //         @include animate(fadeOutUp, 0.6s, 0);
+  //       }
+  //     }
+  //   }
+  // }
 }

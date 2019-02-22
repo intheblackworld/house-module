@@ -15,6 +15,7 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   z-index: 3;
   width: 1200px;
   height: 460px;
+
   margin: 0 auto;
   padding: 60px 0 80px;
 }
@@ -23,15 +24,15 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   width: 193px;
   height: 120px;
   margin: 0 auto;
-  opacity: 0;
+  // opacity: 0;
 
-  &.show {
-    @include animate(fadeInUp, .6s, 0);
-  }
+  // &.show {
+  //   @include animate(fadeInUp, .6s, 0);
+  // }
 
-  &.hide {
-    @include animate(fadeOutUp, .6s, 0);
-  }
+  // &.hide {
+  //   @include animate(fadeOutUp, .6s, 0);
+  // }
 }
 
 .info {
@@ -41,29 +42,29 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
   justify-content: space-between;
 
-  > * {
-    opacity: 0;
-  }
+  // > * {
+  //   opacity: 0;
+  // }
 
-  &.show {
-    > * {
-      @for $i from 1 through 12 {
-        &:nth-child(#{$i}) {
-          @include animate(fadeInUp, .4s, $i * 0.1s);
-        }
-      }
-    }
-  }
+  // &.show {
+  //   > * {
+  //     @for $i from 1 through 12 {
+  //       &:nth-child(#{$i}) {
+  //         @include animate(fadeInUp, .4s, $i * 0.1s);
+  //       }
+  //     }
+  //   }
+  // }
 
-  &.hide {
-    > * {
-      @for $i from 1 through 12 {
-        &:nth-child(#{$i}) {
-          @include animate(fadeOutUp, .4s, 0);
-        }
-      }
-    }
-  }
+  // &.hide {
+  //   > * {
+  //     @for $i from 1 through 12 {
+  //       &:nth-child(#{$i}) {
+  //         @include animate(fadeOutUp, .4s, 0);
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .showOnPhone {
@@ -72,13 +73,10 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 }
 
 .hideOnPhone {
-  svg{
+  svg {
     transform: scaleX(-1);
   }
 }
-
-
-
 
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
@@ -112,11 +110,10 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   .showOnPhone {
     display: block;
     width: 100%;
-    svg{
+    svg {
       transform: scaleX(-1);
     }
   }
-
 }
 
 /* 平板尺寸 */
@@ -135,7 +132,7 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   .showOnPhone {
     display: block;
     width: 270px;
-    svg{
+    svg {
       transform: scaleX(-1);
     }
   }
