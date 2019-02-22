@@ -1,0 +1,67 @@
+@import '../../assets/animate.scss';
+
+.timeline {
+  display: flex;
+  position: absolute;
+}
+
+.item {
+  display: flex;
+  .title, img, p, .content {
+    opacity: 0;
+  }
+
+  &.show {
+    .title {
+      @include animate(fadeInRight, .6s, 0s);
+    }
+
+    img, .content {
+      @include animate(fadeInUp, .6s, .2s);
+    }
+
+    p {
+      @include animate(fadeInUp, .6s, .4s);
+    }
+  }
+
+  &.hide {
+    .title {
+      @include animate(fadeOutRight, .6s, 0s);
+    }
+
+    img, .content {
+      @include animate(fadeOutUp, .6s, 0s);
+    }
+
+    p {
+      @include animate(fadeOutUp, .6s, 0s);
+    }
+  }
+
+  .title {
+    width: 100px;
+    font-size: 29px;
+    font-weight: bold;
+    color: #b50007;
+    font-family: 'Noto Seri TC', serif;
+    text-align: center;
+  }
+  
+  .content {
+    border-top: 2px solid #b50007;
+    padding-top: 35px;
+    width: 233px;
+    img {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 18px;
+    }
+  
+    p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.4;
+    }
+  }
+}
