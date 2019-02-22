@@ -32,7 +32,7 @@ const Sliders = ({ show = false }) => {
   return (
     <div className={sliderClass}>
       <div className={css.carousel}>
-        <Carousel slidesToShow={1} fade={false}>
+        <Carousel slidesToShow={1} fade={false} dots>
           {imgList.map(url => (
             <Image src={url} alt="" key={url} />
           ))}

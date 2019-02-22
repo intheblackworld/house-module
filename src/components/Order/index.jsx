@@ -66,6 +66,7 @@ const Order = ({ show }) => {
       || !area
     ) {
       triggerAlert(true)
+      return
     }
     const name = document.getElementById('name').value
     const phone = document.getElementById('phone').value
