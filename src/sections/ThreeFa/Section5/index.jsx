@@ -5,7 +5,6 @@ import cx from 'classnames'
 import SectionTitle from 'components/SectionTitle'
 import SectionSubTitle from 'components/SectionSubTitle'
 import heart from 'assets/img/section5/heart.png'
-import leaf1 from 'assets/img/master/leaf-left-top.png'
 import leaf3 from 'assets/img/master/leaf-right-bottom.png'
 
 import css from './index.scss'

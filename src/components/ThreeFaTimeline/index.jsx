@@ -54,7 +54,7 @@ const timeItems = [
     img: require('assets/img/section6/item-3.png'),
     desc: `國家卓越建設金質獎<br>
     最佳施工品質類<br>
-    【三發匯世界】【三發晶沙】<br>
+    【三發匯世界】【三發晶沙】 <br>
     <br>
     中華建設金石獎、規劃設計類<br>
     【三發匯世界】【三發晶沙】<br>
@@ -88,13 +88,13 @@ const TimeItem = ({ show, item }) => {
     [css.hide]: !show,
   })
   return (
-    <div className={itemClass} key={item.desc}>
+    <div className={itemClass}>
       <div className={css.title}>{item.year}</div>
       <div className={css.content}>
         { item.img && <img src={item.img} alt="" />}
         <div className={css.desc}>
-          {item.desc.split('<br>').map(text => (
-            <p>{text}</p>
+          {item.desc.split('<br>').map((text, index) => (
+            <p key={`${index}-${text}`}>{text}</p> // eslint-disable-line
           ))}
         </div>
       </div>
@@ -104,7 +104,7 @@ const TimeItem = ({ show, item }) => {
 const Timeline = React.forwardRef((props, ref) => (
   <section className={css.timeline} ref={ref}>
     {timeItems.map(item => (
-      <ViewPort key={item.year}>
+      <ViewPort key={item.desc}>
         <TimeItem item={item} />
       </ViewPort>
     ))}
