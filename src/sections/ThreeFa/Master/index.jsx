@@ -40,7 +40,7 @@ const Master = () => (
         <div className={css.imgWrap}>
           <Image src={bg3} alt="3" className={css.bgImage} />
         </div>
-        <h3>神祕百萬購物金</h3>
+        <h3>神祕百萬購屋金</h3>
         <h3>等你拿</h3>
       </div>
     </Carousel>

@@ -1,34 +1,68 @@
 import React from 'react'
+import styled from 'styled-components'
+import { Controller, Scene } from 'react-scrollmagic'
+import { Tween, Timeline } from 'react-gsap'
 
-import HorizontalScroll from 'react-scroll-horizontal'
+import ThreeFaTimeline from 'components/ThreeFaTimeline'
 
-import css from './index.scss'
-/* 水平時間軸元件 */
-const HorizontalTimeline = () => {
-  const child = { width: '30em', height: '200px', border: '1px solid red' }
-  const parent = { width: '100vw', height: '200px' }
-  return (
-    <div className={css.horizontalTimeline}>
-      <div>水平時間軸元件</div>
-      <div style={parent}>
-        <HorizontalScroll pageLock reverseScroll>
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-          <div style={child} />
-        </HorizontalScroll>
-      </div>
-    </div>
-  )
-}
+const HorizontalTimelineStyled = styled.div`
+  overflow: hidden;
+  #pinContainer {
+    width: 100vw;
+    height: calc(100vh + 128px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  #pinContainer .panel {
+    position: absolute;
+    text-align: center;
+  }
+  .panel span {
+    position: relative;
+    display: block;
+    top: 50%;
+    font-size: 80px;
+  }
+
+  .panel.blue {
+    background-color: #3883d8;
+    white-space: nowrap;
+  }
+
+  .panel.turqoise {
+    background-color: #38ced7;
+  }
+
+  .panel.green {
+    background-color: #22d659;
+  }
+
+  .panel.bordeaux {
+    background-color: #953543;
+  }
+`
+const ref = React.createRef()
+const HorizontalTimeline = () => (
+  <HorizontalTimelineStyled>
+    <Controller>
+      <Scene triggerHook="onLeave" duration="200%" pin>
+        <Timeline wrapper={<div id="pinContainer" />}>
+          <Tween from={{ x: '0' }} to={{ x: '-50%' }}>
+            <ThreeFaTimeline ref={ref} />
+          </Tween>
+          {/* <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
+
+          </Tween>
+          <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
+            <section className="panel green">
+              <span>Panel</span>
+            </section>
+          </Tween> */}
+        </Timeline>
+      </Scene>
+    </Controller>
+  </HorizontalTimelineStyled>
+)
 
 export default HorizontalTimeline
