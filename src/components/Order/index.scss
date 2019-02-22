@@ -26,13 +26,25 @@
   &.show {
     .group {
       @include animate(fadeInUp, .6s, 0.2s);
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          z-index: 3 - $i;
+          position: relative;
+        }
+      }
     }
 
     .control {
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
           @include animate(fadeInUp, .6s, 0.2s + $i * 0.15s);
+          z-index: 10 - $i;
+          position: relative;
         }
+      }
+
+      &:nth-child(1) {
+        z-index: 1;
       }
     }
   }
@@ -155,7 +167,7 @@
 @keyframes showForSubmit {
   0% {
     opacity: 0;
-    transform: translate3d(0, 20px, -20px);
+    transform: translate(0, 20px);
   }
 
   100% {
