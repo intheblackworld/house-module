@@ -80,6 +80,19 @@
   }
 }
 
+.leaf1 {
+  position: absolute !important;
+  transform: rotate(167deg);
+  right: -46px;
+  top: 20%;
+}
+.leaf2 {
+  position: absolute !important;
+  transform: rotate(8deg) scale(-1.5);
+  left: -96px;
+  top: 40%;
+}
+
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {

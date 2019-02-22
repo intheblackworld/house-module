@@ -14,6 +14,8 @@ import person3 from 'assets/img/section3/person-3.png'
 import person4 from 'assets/img/section3/person-4.png'
 import person5 from 'assets/img/section3/person-5.png'
 import cross from 'assets/img/section3/cross.png'
+import leaf1 from 'assets/img/master/leaf-left-top.png'
+import leaf3 from 'assets/img/master/leaf-right-bottom.png'
 
 import css from './index.scss'
 
@@ -105,6 +107,8 @@ const Slides = ({ show = false }) => {
 }
 const Section3 = () => (
   <React.Fragment>
+    <Image src={leaf1} alt="1" className={css.leaf1} />
+    <Image src={leaf3} alt="1" className={css.leaf2} />
     <Viewport>
       <SectionTitle
         titleTop="上市保證"

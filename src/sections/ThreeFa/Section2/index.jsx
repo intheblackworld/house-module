@@ -4,6 +4,8 @@ import SectionTitle from 'components/SectionTitle'
 import Viewport from 'components/ViewPort'
 import cx from 'classnames'
 import hand from 'assets/img/section2/hand.png'
+import leaf1 from 'assets/img/master/leaf-left-top.png'
+import leaf3 from 'assets/img/master/leaf-right-bottom.png'
 import css from './index.scss'
 
 const items = [
@@ -62,6 +64,9 @@ const Item = ({ show, item, index }) => {
 
 const Section2 = () => (
   <React.Fragment>
+    <Image src={leaf1} alt="1" className={css.leaf1} />
+    <Image src={leaf3} alt="1" className={css.leaf2} />
+    <Image src={leaf3} alt="1" className={css.leaf3} />
     <Container>
       <div className={css.title}>4招買房必勝關鍵</div>
       <Viewport>

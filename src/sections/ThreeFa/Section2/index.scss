@@ -114,6 +114,34 @@
     }
   }
 }
+.leaf1 {
+  position: absolute !important;
+  left: 0;
+}
+.leaf2 {
+  position: absolute !important;
+  transform: rotate(34deg) scale(1.5);
+  right: -136px;
+  top: 50%;
+}
+.leaf3 {
+  position: absolute !important;
+  left: 0;
+  bottom: 45px;
+  transform: rotate(87deg) scale(1.1);
+  left: -10px;
+}
+
+// .leaf1 {
+//   position: absolute;
+// }
+// .leaf2 {
+//   position: absolute;
+// }
+// .leaf3 {
+//   position: absolute;
+// }
+
 
 /* 螢幕尺寸標準 */
 

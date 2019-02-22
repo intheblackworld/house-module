@@ -5,6 +5,9 @@ import cx from 'classnames'
 import SectionTitle from 'components/SectionTitle'
 import SectionSubTitle from 'components/SectionSubTitle'
 import heart from 'assets/img/section5/heart.png'
+import leaf1 from 'assets/img/master/leaf-left-top.png'
+import leaf3 from 'assets/img/master/leaf-right-bottom.png'
+
 import css from './index.scss'
 
 const items = [
@@ -60,9 +63,8 @@ const Item = ({ show, item }) => {
 }
 const Section5 = () => (
   <div className={css.section5}>
-    {/* <div className={css['leaf-top']} />
-    <div className={css['leaf-middle']} />
-    <div className={css['leaf-bottom']} /> */}
+    <Image src={leaf3} alt="1" className={css.leaf1} />
+    <Image src={leaf3} alt="1" className={css.leaf2} />
     <Viewport>
       <SectionTitle
         titleTop="無敵安心"

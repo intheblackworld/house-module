@@ -63,30 +63,18 @@
       top: -28px;
     }
   }
-  // .leaf-top {
-  //   background-image: url('../../../assets/img/section5/leaf-1.png');
-  //   height: 390px;
-  //   background-repeat: no-repeat;
-  //   position: absolute;
-  //   width: 180px;
-  //   right: 0px;
-  // }
-  // .leaf-middle {
-  //   background-image: url('../../../assets/img/section5/leaf-3.png');
-  //   height: 420px;
-  //   background-repeat: no-repeat;
-  //   position: absolute;
-  //   width: 360px;
-  //   left: 0px;
-  // }
-  // .leaf-bottom {
-  //   background-image: url('../../../assets/img/section5/leaf-2.png');
-  //   height: 555px;
-  //   background-repeat: no-repeat;
-  //   position: absolute;
-  //   width: 360px;
-  //   right: 0px;
-  // }
+  .leaf1 {
+    position: absolute !important;
+    right: -73px;
+    top: 15%;
+    transform: rotate(10deg);
+  }
+  .leaf2 {
+    position: absolute !important;
+    transform: rotate(12deg) scale(-1);
+    left: -45px;
+    top: 50%;
+  }
 }
 
 /* 平板尺寸 */

@@ -7,6 +7,8 @@ import cx from 'classnames'
 
 import reward from 'assets/img/section4/reward.png'
 // import descBg from 'assets/img/section4/descBg.png'
+import leaf1 from 'assets/img/master/leaf-left-top.png'
+import leaf3 from 'assets/img/master/leaf-right-bottom.png'
 
 import css from './index.scss'
 
@@ -53,6 +55,8 @@ const Sliders = ({ show = false }) => {
 
 const Section4 = () => (
   <React.Fragment>
+    <Image src={leaf1} alt="1" className={css.leaf1} />
+    <Image src={leaf3} alt="1" className={css.leaf2} />
     <Container>
       <Viewport>
         <SectionTitle
