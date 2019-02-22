@@ -10,7 +10,7 @@ $logoMobileWidth: 32px;
 .navigation {
   background: $navigationBg;
   height: $navigationPCHeight;
-  z-index: 3;
+  z-index: 10;
   position: fixed;
   top: 0;
   width: 100%;

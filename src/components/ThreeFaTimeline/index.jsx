@@ -91,7 +91,7 @@ const TimeItem = ({ show, item }) => {
     <div className={itemClass} key={item.desc}>
       <div className={css.title}>{item.year}</div>
       <div className={css.content}>
-        <img src={item.img} alt="" />
+        { item.img && <img src={item.img} alt="" />}
         <div className={css.desc}>
           {item.desc.split('<br>').map(text => (
             <p>{text}</p>
