@@ -45,7 +45,7 @@ const Slides = ({ show = false }) => {
   })
   return (
     <div className={sliderClass}>
-      <Carousel slidesToShow={4} fade={false}>
+      <Carousel slidesToShow={4} fade={false} arrows>
         <div className={css.sliderItem}>
           <Image src={person1} alt="" />
           <div className={css.sliderContent}>

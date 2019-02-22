@@ -78,7 +78,7 @@ const Section5 = () => (
       </Viewport>
       <div className={css['container-detail']}>
         {items.map(item => (
-          <Viewport>
+          <Viewport key={item.name}>
             <Item item={item} />
           </Viewport>
         ))}

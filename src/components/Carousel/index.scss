@@ -1,2 +1,72 @@
 .carousel {
 }
+
+:global {
+  .slick-arrow {
+    width: 55px !important;
+    height: 55px !important;
+
+    &.slick-next {
+      left: -10% !important;
+      transform: rotate(180deg) !important;
+    }
+    &.slick-prev {
+      display: none !important;
+    }
+
+    &:before {
+      font-size: 55px !important;
+      opacity: 1 !important;
+      color: #000 !important;
+    }
+  }
+
+  /* 手機尺寸 */
+  @media only screen and (max-width: 767px) {
+    .slick-arrow {
+      display: none !important;
+    }
+  }
+  /* 平板尺寸 */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .slick-arrow {
+      width: 40px !important;
+      height: 40px !important;
+
+      &.slick-next {
+        left: -25px !important;
+        transform: rotate(180deg) !important;
+      }
+      &.slick-prev {
+        display: block !important;
+        left: 915px !important;
+        transform: rotate(180deg) !important;
+      }
+
+      &:before {
+        font-size: 40px !important;
+        opacity: 1 !important;
+        color: #000 !important;
+      }
+    }
+  }
+
+  .slick-dots {
+    li button:before {
+      color: #e5d48f;
+      opacity: 1;
+    }
+
+    .slick-active button:before {
+      color: #82191d !important;
+      opacity: 1;
+    }
+  }
+
+  /* 手機尺寸 */
+  @media only screen and (max-width: 767px) {
+    .slick-dots {
+      display: none !important;
+    }
+  }
+}

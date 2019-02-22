@@ -44,7 +44,7 @@ const Item = ({ show, item, index }) => {
     [css.show]: show,
   })
   return (
-    <div key={item.url} className={itemClass}>
+    <div className={itemClass}>
       {odd && <Image src={item.url} alt="" key={item.url} />}
       <div className={css.descBg}>
         <h3>
@@ -67,7 +67,7 @@ const Section2 = () => (
         <SectionTitle titleTop="租不如買" titleBottom="NEW FUTURE" iconUrl={hand} />
       </Viewport>
       {items.map((item, index) => (
-        <Viewport>
+        <Viewport key={item.url}>
           <Item item={item} index={index + 1} />
         </Viewport>
       ))}

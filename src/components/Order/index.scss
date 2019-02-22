@@ -221,7 +221,8 @@
   }
 
   .orderTitle {
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     p {
       display: none;
     }
@@ -234,7 +235,7 @@
   .group {
     width: 100%;
     height: auto !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 0px !important;
     border: none !important;
   }
 
@@ -259,13 +260,30 @@
 
     label {
       padding-left: 28px !important;
+      line-height: 20px !important;
+
+      &:before {
+        width: 20px !important;
+        height: 20px !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        border: 1px solid #fff !important;
+      }
+  
+      &:after {
+        color: #82191d !important;
+        background: #fff !important;
+        font-size: 22px !important;
+        width: 20px !important;
+        height: 20px !important;
+      }
     }
   }
 
   .submit {
     width: 100% !important;
-    height: 45px !important;
     margin-top: 10px !important;
+    font-size: 16px !important;
   }
 
   .orderTitle {
