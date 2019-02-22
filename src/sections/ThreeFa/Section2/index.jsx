@@ -42,6 +42,7 @@ const Item = ({ show, item, index }) => {
     [css.right]: odd,
     [css.left]: even,
     [css.show]: show,
+    [css.hide]: !show,
   })
   return (
     <div className={itemClass}>

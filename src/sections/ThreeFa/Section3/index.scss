@@ -12,6 +12,10 @@
   &.show {
     @include animate(fadeInUp, .6s, .2s);
   }
+
+  &.hide {
+    @include animate(fadeOutUp, .6s, 0);
+  }
 }
 
 .title {
@@ -21,6 +25,10 @@
 
   &.show {
     @include animate(spreadIn, .8s, .2s);
+  }
+
+  &.hide {
+    @include animate(spreadOut, .8s, 0);
   }
 
   h3 {
@@ -40,6 +48,9 @@
   opacity: 0;
   &.show {
     @include animate(fadeInRight, .6s, 0);
+  }
+  &.hide {
+    @include animate(fadeOutRight, .6s, 0);
   }
 }
 

@@ -21,6 +21,9 @@
         &.show {
           @include animate(fadeIn, .6s, $i * 0.05s);
         }
+        &.hide {
+          @include animate(fadeOut, .6s, 0);
+        }
       }
     }
     

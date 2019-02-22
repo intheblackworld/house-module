@@ -25,6 +25,20 @@
       }
     }
   }
+
+  &.hide {
+    .title {
+      @include animate(fadeOutUp, .4s, 0);
+    }
+
+    .item {
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeOutUp, .4s, 0);
+        }
+      }
+    }
+  }
 }
 
 .title {

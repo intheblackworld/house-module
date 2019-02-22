@@ -7,7 +7,33 @@
   font-family: 'Noto Sans TC', sans-serif;
   
   &.hide {
-    opacity: 0;
+    .left {
+      @include animate(fadeOutRight, .8s, 0);
+    }
+
+    .right {
+      @include animate(fadeOutLeft, .8s, 0);
+    }
+
+    .middle {
+      @include animate(fadeOut, .8s, 0);
+    }
+
+    .title-top {
+      @include animate(fadeOutUp, .8s, 0);
+    }
+
+    .title-bottom {
+      @include animate(fadeOutUp, .8s, 0);
+    }
+
+    .slogan-area-main {
+      @include animate(fadeOutUp, .8s, 0);
+    }
+
+    .slogan-area-description {
+      @include animate(fadeOutUp, .8s, 0);
+    }
   }
   
   &.show {
@@ -38,7 +64,6 @@
     .slogan-area-description {
       @include animate(fadeInUp, .8s, 0);
     }
-
   }
   .title-area {
     flex-direction: row;

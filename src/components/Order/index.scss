@@ -49,6 +49,19 @@
     }
   }
 
+  &.hide {
+    .group {
+      @include animate(fadeOutUp, .6s, 0);
+    }
+    .control {
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeOutUp, .6s, 0);
+        }
+      }
+    }
+  }
+
   .group {
     height: 250px;
 
@@ -113,6 +126,9 @@
   opacity: 0;
   &.show {
     @include animate(fadeInUp, .8s, .6s);
+  }
+  &.hide {
+    @include animate(fadeOutUp, .8s, 0);
   }
 
   label {
@@ -196,6 +212,17 @@
       @include animate(fadeInUp, 0.6s, 0.4s);
     }
   }
+
+  &.hide {
+    h3 {
+      @include animate(fadeOutDown, 0.6s, 0);
+    }
+
+    p {
+      @include animate(fadeOutUp, 0.6s, 0);
+    }
+  }
+
   h3 {
     font-size: 36px;
     font-weight: bold;

@@ -28,6 +28,10 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   &.show {
     @include animate(fadeInUp, .6s, 0);
   }
+
+  &.hide {
+    @include animate(fadeOutUp, .6s, 0);
+  }
 }
 
 .info {
@@ -46,6 +50,16 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
       @for $i from 1 through 12 {
         &:nth-child(#{$i}) {
           @include animate(fadeInUp, .4s, $i * 0.1s);
+        }
+      }
+    }
+  }
+
+  &.hide {
+    > * {
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeOutUp, .4s, 0);
         }
       }
     }

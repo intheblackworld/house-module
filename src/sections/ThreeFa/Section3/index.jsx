@@ -20,9 +20,11 @@ import css from './index.scss'
 const CompanyImgs = ({ show = false }) => {
   const imgClass = cx(css.imgs, {
     [css.show]: show,
+    [css.hide]: !show,
   })
   const titleClass = cx(css.title, {
     [css.show]: show,
+    [css.hide]: !show,
   })
   return (
     <React.Fragment>
@@ -42,6 +44,7 @@ const CompanyImgs = ({ show = false }) => {
 const Slides = ({ show = false }) => {
   const sliderClass = cx(css.slider, {
     [css.show]: show,
+    [css.hide]: !show,
   })
   return (
     <div className={sliderClass}>

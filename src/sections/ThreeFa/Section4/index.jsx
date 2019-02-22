@@ -28,6 +28,7 @@ const imgList = [
 const Sliders = ({ show = false }) => {
   const sliderClass = cx(css.slider, {
     [css.show]: show,
+    [css.hide]: !show,
   })
   return (
     <div className={sliderClass}>
