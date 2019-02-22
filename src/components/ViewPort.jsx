@@ -8,16 +8,31 @@ const Frame = (props: { inViewport: boolean }) => {
 
 const ViewportFrame = handleViewport(Frame)
 
-const Viewport = (props) => {
-  const { children } = props
+const Viewport = ({ children, isBottom = true }) => {
   const [show, setShow] = React.useState(false)
   return (
     <React.Fragment>
+      {!isBottom && (
+        <ViewportFrame
+          onEnterViewport={() => {
+            setShow(true)
+          }}
+          onLeaveViewport={() => {
+            setShow(false)
+          }}
+        />
+      )}
       {React.cloneElement(children || <div />, { show })}
-      <ViewportFrame
-        onEnterViewport={() => { setShow(true) }}
-        onLeaveViewport={() => { setShow(false) }}
-      />
+      {isBottom && (
+        <ViewportFrame
+          onEnterViewport={() => {
+            setShow(true)
+          }}
+          onLeaveViewport={() => {
+            setShow(false)
+          }}
+        />
+      )}
     </React.Fragment>
   )
 }

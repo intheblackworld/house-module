@@ -123,7 +123,7 @@ const Section3 = () => (
       <CompanyImgs />
     </Viewport>
 
-    <Viewport>
+    <Viewport isBottom={false}>
       <Slides />
     </Viewport>
     <div style={{ clear: 'both' }} />

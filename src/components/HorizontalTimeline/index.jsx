@@ -48,7 +48,7 @@ const HorizontalTimeline = () => (
     <Controller>
       <Scene triggerHook="onLeave" duration="200%" pin>
         <Timeline wrapper={<div id="pinContainer" />}>
-          <Tween from={{ x: '0' }} to={{ x: '-50%' }}>
+          <Tween from={{ x: '0' }} to={{ x: '-3330px' }}>
             <ThreeFaTimeline ref={ref} />
           </Tween>
           {/* <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>

@@ -20,7 +20,7 @@ const ContactSection = () => (
           <Order />
         </Viewport>
       </FullScreen>
-      <Viewport>
+      <Viewport isBottom={false}>
         <ContactInfo
           address={address}
           phone={phone}
@@ -32,7 +32,7 @@ const ContactSection = () => (
     <GoogleMap />
     <div className={css.houseBg}>
       <Section>
-        <Viewport>
+        <Viewport isBottom={false}>
           <HouseInfo houseInfos={houseInfos} />
         </Viewport>
       </Section>
