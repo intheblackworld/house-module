@@ -7,11 +7,12 @@
     height: 55px !important;
 
     &.slick-next {
-      left: -10% !important;
+      left: -80px !important;
       transform: rotate(180deg) !important;
     }
     &.slick-prev {
-      display: none !important;
+      left: 1175px !important;
+      transform: rotate(180deg) !important;
     }
 
     &:before {

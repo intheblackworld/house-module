@@ -44,7 +44,7 @@
 
 .slider {
   width: 1150px;
-  float: right;
+  margin: 0 auto;
   opacity: 0;
   &.show {
     @include animate(fadeInRight, .6s, 0);
