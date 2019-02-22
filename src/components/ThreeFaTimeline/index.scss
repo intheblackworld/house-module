@@ -25,19 +25,19 @@
     }
   }
 
-  &.hide {
-    .title {
-      @include animate(fadeOutRight, .6s, 0s);
-    }
+  // &.hide {
+  //   .title {
+  //     @include animate(fadeOutRight, .6s, 0s);
+  //   }
 
-    img, .content {
-      @include animate(fadeOutUp, .6s, 0s);
-    }
+  //   img, .content {
+  //     @include animate(fadeOutUp, .6s, 0s);
+  //   }
 
-    p {
-      @include animate(fadeOutUp, .6s, 0s);
-    }
-  }
+  //   p {
+  //     @include animate(fadeOutUp, .6s, 0s);
+  //   }
+  // }
 
   .title {
     width: 100px;
@@ -74,6 +74,20 @@
     .title, img, p, .content {
       opacity: 1;
     }
+
+    &.show {
+      .title {
+        @include animate(fadeInRight, 0s, 0s);
+      }
+  
+      img, .content {
+        @include animate(fadeInUp, 0s, 0s);
+      }
+  
+      p {
+        @include animate(fadeInUp, 0s, 0s);
+      }
+    }
   }
 }
 
@@ -83,6 +97,20 @@
     display: flex;
     .title, img, p, .content {
       opacity: 1;
+    }
+
+    &.show {
+      .title {
+        @include animate(fadeInRight, 0s, 0s);
+      }
+  
+      img, .content {
+        @include animate(fadeInUp, 0s, 0s);
+      }
+  
+      p {
+        @include animate(fadeInUp, 0s, 0s);
+      }
     }
   }
 }
