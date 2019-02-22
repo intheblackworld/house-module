@@ -164,31 +164,18 @@
   height: 72px !important;
   opacity: 0 !important;
   border-radius: 0 !important;
-  background-color: #e5d48f !important;
+  background-color: rgba(229, 212, 143, .6) !important;
   font-size: 20px !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
   transition: all 0.3s !important;
-  
-  &.enable {
-    opacity: 1 !important;
-  }
 
   &.show {
-    animation: showForSubmit 1s ease-in-out 0s forwards;
-    animation-delay: .6s;
-  }
-}
-
-@keyframes showForSubmit {
-  0% {
-    opacity: 0;
-    transform: translate(0, 20px);
+    @include animate(fadeInUp, .8s, .6s);
   }
 
-  100% {
-    opacity: 0.6;
-    transform: none;
+  &.enable {
+    background-color: rgba(229, 212, 143, 1) !important;
   }
 }
 
@@ -345,7 +332,7 @@
 }
 
 /* 平板尺寸 */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .orderContainer {
     width: 920px;
     margin: 0 auto;

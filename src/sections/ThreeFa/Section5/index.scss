@@ -16,7 +16,7 @@
   .detail-item {
     width: 33.33%;
     opacity: 0;
-    @for $i from 1 through 12 {
+    @for $i from 1 through 30 {
       &:nth-child(#{$i}) {
         &.show {
           @include animate(fadeIn, .6s, $i * 0.05s);
@@ -90,7 +90,7 @@
 }
 
 /* 平板尺寸 */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .section5 {
     .detail-item {
       .item-icon-wrap {
