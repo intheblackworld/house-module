@@ -57,6 +57,12 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
+.hideOnPhone {
+  svg{
+    transform: scaleX(-1);
+  }
+}
+
 
 
 
@@ -84,7 +90,7 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   .logo {
     margin-bottom: 20px;
   }
-  
+
   .hideOnPhone {
     display: none;
   }
@@ -92,7 +98,11 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   .showOnPhone {
     display: block;
     width: 100%;
+    svg{
+      transform: scaleX(-1);
+    }
   }
+
 }
 
 /* 平板尺寸 */
@@ -111,6 +121,9 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   .showOnPhone {
     display: block;
     width: 270px;
+    svg{
+      transform: scaleX(-1);
+    }
   }
 }
 
