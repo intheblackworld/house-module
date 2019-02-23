@@ -48,7 +48,7 @@ const Item = ({ show, item, index }) => {
   })
   return (
     <div className={itemClass}>
-      {odd && <Image src={item.url} alt="" key={item.url} />}
+      {odd && <Image src={item.url} alt="三發丰悅的圖片" key={item.url} />}
       <div className={css.descBg}>
         <h3>
           {item.titleTop}
@@ -57,16 +57,16 @@ const Item = ({ show, item, index }) => {
         </h3>
         <p>{item.desc}</p>
       </div>
-      {even && <Image src={item.url} alt="" key={item.url} />}
+      {even && <Image src={item.url} alt="三發丰悅的圖片" key={item.url} />}
     </div>
   )
 }
 
 const Section2 = () => (
   <React.Fragment>
-    <Image src={leaf1} alt="1" className={css.leaf1} />
-    <Image src={leaf3} alt="1" className={css.leaf2} />
-    <Image src={leaf3} alt="1" className={css.leaf3} />
+    <Image src={leaf1} alt="三發丰悅的圖片" className={css.leaf1} />
+    <Image src={leaf3} alt="三發丰悅的圖片" className={css.leaf2} />
+    <Image src={leaf3} alt="三發丰悅的圖片" className={css.leaf3} />
     <Container>
       <div className={css.title}>4招買房必勝關鍵</div>
       <Viewport>

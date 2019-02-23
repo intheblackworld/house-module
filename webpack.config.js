@@ -128,12 +128,12 @@ module.exports = {
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
       title: '三發丰悅',
-      metaTitle: '三發丰悅',
-      metaDescription: '三發丰悅',
-      metaKeywords: '三發丰悅',
-      ogMetaTitle: '三發丰悅',
+      metaTitle: '三發丰悅 | 新北門牌桃園價，綠態建築好生活 | 官網',
+      metaDescription: '三發丰悅：350米捷運鶯桃福德站，新北門牌桃園價，未來增值第一站，接待中心：新北市鶯歌區永和街 83 號，禮賓專線：02-86421155',
+      metaKeywords: '三發丰悅,三發建設,鶯歌房屋,新北買房,鶯歌建案,台北買房',
+      ogMetaTitle: '三發丰悅 | 新北門牌桃園價，綠態建築好生活 | 官網',
       ogMetaType: 'website',
-      ogMetaDescription: '三發丰悅',
+      ogMetaDescription: '三發丰悅：350米捷運鶯桃福德站，新北門牌桃園價，未來增值第一站，接待中心：新北市鶯歌區永和街 83 號，禮賓專線：02-86421155',
       template: 'index.html',
       hash: true,
     }),

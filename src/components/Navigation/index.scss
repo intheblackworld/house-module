@@ -1,4 +1,4 @@
-$navigationPCHeight: 127px;
+$navigationPCHeight: 80px;
 $navigationTabletHeight: 78px;
 $navigationMobileHeight: 49px;
 $navigationBg: rgba(229, 212, 143, 0.7); 
@@ -45,12 +45,13 @@ $logoMobileWidth: 32px;
   .link {
     color: #fff;
     text-align: center;
-    width: 125px;
+    width: 93px;
+    display: block;
     cursor: pointer;
     transition: all 0.3s;
 
     img {
-      height: 50px;
+      height: 33px;
       margin: 0 auto 10px;
     }
 
@@ -60,7 +61,7 @@ $logoMobileWidth: 32px;
     }
 
     .divided {
-      margin-left: 3px;
+      margin-left: 10px;
     }
 
     &:hover {
@@ -77,7 +78,7 @@ $logoMobileWidth: 32px;
 
 .link {
   color: #fff;
-  font-size: 27px;
+  font-size: 18px;
   font-family: 'Noto Serif TC', serif;
 }
 

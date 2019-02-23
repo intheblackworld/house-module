@@ -15,7 +15,7 @@ const SectionTitle = ({
         <div className={css.left} />
         <div className={css.middle}>
           <div className={css['icon-container']}>
-            <img src={iconUrl} alt="" />
+            <img src={iconUrl} alt="三發丰悅的圖片" />
           </div>
           <div className={css['title-top']}>{titleTop}</div>
           <div className={css['title-bottom']}>{titleBottom}</div>

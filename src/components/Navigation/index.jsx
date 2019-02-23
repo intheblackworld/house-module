@@ -87,7 +87,7 @@ const Navigation = () => {
         <Container>
           <div className={css.nav}>
             <div className={css.logo}>
-              <Image src={logo} alt="" />
+              <Image src={logo} alt="三發丰悅的圖片" />
             </div>
             <div
               className={css.menu}
@@ -95,7 +95,7 @@ const Navigation = () => {
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             >
-              <Image src={menu} alt="" />
+              <Image src={menu} alt="三發丰悅的圖片" />
             </div>
             <div
               className={mask}
