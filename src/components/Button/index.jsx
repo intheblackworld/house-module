@@ -16,7 +16,7 @@ const Btn = ({
     e.preventDefault()
     window.location.href = link
     setTimeout(() => {
-      window.location.href = '#/phoneThanks'
+      window.location.href = 'phoneThanks'
     }, 1000)
   }
 

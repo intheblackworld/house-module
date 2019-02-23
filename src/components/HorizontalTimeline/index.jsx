@@ -45,7 +45,6 @@ const HorizontalTimelineStyled = styled.div`
 const ref = React.createRef()
 const HorizontalTimeline = () => {
   const width = document.getElementById('app').offsetWidth
-  console.log(width)
   return (
     <HorizontalTimelineStyled>
       <Controller>

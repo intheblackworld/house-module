@@ -90,7 +90,7 @@ const Order = ({ show }) => {
       body: formData,
     }).then((response) => {
       if (response.status === 200) {
-        window.location.href = '#/formThanks'
+        window.location.href = 'formThanks'
       }
     })
     // .then((myJson) => {
