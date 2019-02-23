@@ -17,12 +17,12 @@ export default class Thanks extends React.Component {
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NLL3TCD');`
+    })(window,document,'script','dataLayer','GTM-KJJ89PT');`
 
     const n = document.createElement('noscript')
     n.type = 'text/javascript'
     n.async = true
-    n.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLL3TCD"
+    n.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJJ89PT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
     this.script.current.appendChild(s)
     this.noscript.current.appendChild(n)
