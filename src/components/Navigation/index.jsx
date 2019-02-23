@@ -8,39 +8,43 @@ import menu from 'assets/img/navigation/menu-btn.png'
 
 import css from './index.scss'
 
+const PCNavigationHeight = 80
+const TabletNavigationHeight = 78
+const MobileNavigationHeight = 49
+
 const NavItems = [
   {
     name: '租不如買',
     imgSrc: require('assets/img/navigation/hand.png'),
     section: 'section2',
-    OffsetValue: -127,
+    OffsetValue: -(PCNavigationHeight),
   },
 
   {
     name: '上市保證',
     imgSrc: require('assets/img/navigation/house.png'),
     section: 'section3',
-    OffsetValue: -127,
+    OffsetValue: -(PCNavigationHeight),
   },
 
   {
     name: '最潮建築',
     imgSrc: require('assets/img/navigation/no1.png'),
     section: 'section4',
-    OffsetValue: -127,
+    OffsetValue: -(PCNavigationHeight),
   },
 
   {
     name: '無敵安心',
     imgSrc: require('assets/img/navigation/heart.png'),
     section: 'section5',
-    OffsetValue: -127,
+    OffsetValue: -(PCNavigationHeight),
   },
   {
     name: '預約賞屋',
     imgSrc: require('assets/img/navigation/pen.png'),
     section: 'section6',
-    OffsetValue: -127,
+    OffsetValue: -(PCNavigationHeight),
   },
 ]
 
@@ -57,11 +61,11 @@ const Navigation = () => {
     const wh = window.innerWidth
     let h
     if (wh < 1024 && wh > 767) {
-      h = 78
+      h = TabletNavigationHeight
     } else if (wh < 768) {
-      h = 49
+      h = MobileNavigationHeight
     } else {
-      h = 127
+      h = (PCNavigationHeight)
     }
     if (-h === list[list.length - 1].OffsetValue) return
 
