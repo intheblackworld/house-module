@@ -1,243 +1,61 @@
-@import '../../../assets/animate.scss';
-
 .title {
-  color: #b50007;
-  font-family: 'Noto Serif TC', serif;
+  font-size: 40px;
+  color: #fff;
   text-align: center;
-  font-size: 52px;
-  line-height: 52px;
-  margin-bottom: 16px;
-  margin-top: 40px;
-  font-weight: 700;
+  margin: 60px 0;
 }
-.main {
+
+.videoList {
   display: flex;
+  align-items: center;
   justify-content: center;
-  vertical-align: center;
-  margin-bottom: 36px;
-
-  img,
-  .descBg {
-    opacity: 0;
-
-    & {
-      h3,
-      p {
-        opacity: 0;
-      }
-    }
-  }
-
-  &.show {
-    &.right img {
-      @include animate(fadeInRight, 1s, 0);
-    }
-
-    &.left img {
-      @include animate(fadeInLeft, 1s, 0);
-    }
-
-    .descBg {
-      @include animate(fadeInUp, 0.8s, 0.2s);
-    }
-
-    .descBg {
-      h3,
-      p {
-        @include animate(fadeInUp, 0.6s, 0.6s);
-      }
-    }
-  }
-
-  &.hide {
-    &.right img {
-      @include animate(fadeOutRight, 1s, 0);
-    }
-
-    &.left img {
-      @include animate(fadeOutLeft, 1s, 0);
-    }
-
-    .descBg {
-      @include animate(fadeOutUp, 0.8s, 0);
-    }
-
-    .descBg {
-      h3,
-      p {
-        @include animate(fadeOutUp, 0.6s, 0);
-      }
-    }
-  }
-
-  img {
-    position: relative;
-    z-index: 1;
-    width: 389px;
-    height: 259px;
-    background-size: cover;
-    background-position: center;
-  }
-  .descBg {
-    z-index: 2;
-    position: relative;
-    top: 40px;
-    width: 366px;
-    height: 200px;
-    padding: 22px;
-    background-image: url('../../../assets/img/section2/desc-bg.png');
-    background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    h3 {
-      font-size: 26px;
-      color: #b50007;
-      line-height: 1.5;
-    }
-    p {
-      font-size: 15px;
-      width: 260px;
-      color: #000000;
-      line-height: 1.5;
-    }
-  }
-  &.right {
-    .descBg {
-      right: 44px;
-    }
-  }
-  &.left {
-    .descBg {
-      left: 44px;
-    }
-  }
-}
-.leaf1 {
-  position: absolute !important;
-  left: 0;
-}
-.leaf2 {
-  position: absolute !important;
-  transform: rotate(34deg) scale(1.5);
-  right: -136px;
-  top: 50%;
-}
-.leaf3 {
-  position: absolute !important;
-  left: 0;
-  bottom: 45px;
-  transform: rotate(87deg) scale(1.1);
-  left: -10px;
+  margin-bottom: 60px;
 }
 
-// .leaf1 {
-//   position: absolute;
-// }
-// .leaf2 {
-//   position: absolute;
-// }
-// .leaf3 {
-//   position: absolute;
-// }
+.video {
+  border: 1px solid #fff;
+  width: 395px;
+  height: 254px;
+  margin: 0 15px;
+}
 
-
-/* 螢幕尺寸標準 */
 
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .title {
-    font-size: 44px;
-    line-height: 44px;
+    font-size: 34px;
+    margin: 40px 0;
   }
-  .main {
-    margin-bottom: 26px;
-    img {
-      width: 330px;
-      height: 220px;
-    }
-    .descBg {
-      width: 311px;
-      height: 169px;
-      padding: 22px;
-      h3 {
-        font-size: 22px;
-        font-weight: 400;
-        margin-bottom: 4px;
-      }
-      p {
-        font-size: 12.7px;
-        width: 220px;
-      }
-    }
+
+  .videoList {
+    margin-bottom: 40px;
+  }
+
+  .video {
+    width: 257px;
+    height: 166px;
+    margin: 0 15px;
   }
 }
-
+/* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+
   .title {
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 23px;
+    margin: 30px 0;
   }
-  .main {
-    margin-bottom: 0;
-    flex-direction: column;
-    img {
-      width: 270px;
-      height: 180px;
-      margin: 0 auto;
-    }
-    &.right {
-      .descBg {
-        margin: 0 auto;
-        right: 0;
-        padding: 0px;
-        top: -31px;
-        text-align: center;
-        width: 211px;
-        height: 126px;
-        background-position: center;
-        background-size: 100% 100%;
-        h3 {
-          font-size: 18px;
-          font-weight: 400;
-        }
-        p {
-          display: none;
-        }
-      }
-    }
-    &.left {
-      img {
-        bottom: 120px;
-      }
-      .descBg {
-        margin: 0 auto;
-        left: 0;
-        padding: 0px;
-        top: 155px;
-        text-align: center;
-        width: 211px;
-        height: 126px;
-        background-position: center;
-        background-size: 100% 100%;
-        h3 {
-          font-size: 18px;
-          font-weight: 400;
-        }
-        p {
-          display: none;
-        }
-      }
-    }
+
+  .videoList {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
   }
-  .leaf1 {
-    top: 25%;
-  }
-  .leaf2 {
-    transform: rotate(16deg);
-    right: -85px;
+
+  .video {
+    width: 280px;
+    height: 166px;
+    margin: 0;
+    margin-bottom: 15px;
   }
 }
 

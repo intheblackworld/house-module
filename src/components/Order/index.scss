@@ -97,17 +97,19 @@
 
   .field {
     width: 310px;
-
+    .select {
+      border: 1px solid #fff !important;
+    }
     .select,
     .select div {
       border-radius: 0 !important;
-      background: #82191d !important;
+      background: #000 !important;
       color: rgba(255, 255, 255, 0.8) !important;
-      border: none !important;
+      border-top: none !important;
     }
 
     .select i {
-      color: #e5d48f;
+      color: #56D8FF;
     }
   }
 }
@@ -144,8 +146,8 @@
     }
 
     &:after {
-      color: #82191d !important;
-      background: #fff !important;
+      color: #56D8FF !important;
+      background: transparent !important;
       font-size: 22px !important;
       width: 24px !important;
       height: 24px !important;
@@ -153,7 +155,7 @@
   }
 
   a {
-    color: #e5d48f !important;
+    color: #56D8FF !important;
   }
 }
 
@@ -162,19 +164,20 @@
   height: 72px !important;
   // opacity: 0 !important;
   border-radius: 0 !important;
-  background-color: rgba(229, 212, 143, 0.6) !important;
+  background-color: rgba(86, 216, 255, .6) !important;
   font-size: 20px !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
   transition: all 0.3s !important;
+  color: #333;
 
   // &.show {
   //   @include animate(fadeInUp, 0.8s, 0.6s);
   // }
 
-  // &.enable {
-  //   background-color: rgba(229, 212, 143, 1) !important;
-  // }
+  &.enable {
+    background-color: rgba(229, 212, 143, 1) !important;
+  }
 }
 
 .orderTitle {

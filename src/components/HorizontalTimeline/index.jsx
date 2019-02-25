@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap'
 
-import ThreeFaTimeline from 'components/ThreeFaTimeline'
+import WJTimeline from 'components/WJTimeline'
 
 const HorizontalTimelineStyled = styled.div`
   overflow: hidden;
@@ -51,7 +51,7 @@ const HorizontalTimeline = () => {
         <Scene triggerHook="onLeave" duration="200%" pin>
           <Timeline wrapper={<div id="pinContainer" />}>
             <Tween from={{ x: '0' }} to={{ x: `${-3330 + width}px` }}>
-              <ThreeFaTimeline ref={ref} />
+              <WJTimeline ref={ref} />
             </Tween>
             {/* <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
 

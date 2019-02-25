@@ -7,10 +7,10 @@
 --------------------*/
 
 /* form 樣式變數 (select有bug還是要自己蓋) */
-@inputBackground: #82191d;
-@borderColor: #82191d;
+@inputBackground: transparent;
+@borderColor: #fff;
 @absoluteBorderRadius: 0;
-@focusedFormBorderColor: #e5d48f;
+@focusedFormBorderColor: #56D8FF;
 @selectedTextColor: #fff;
 @textColor: #fff;
 

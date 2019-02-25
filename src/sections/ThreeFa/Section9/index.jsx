@@ -53,8 +53,9 @@ const Section5 = () => (
   <React.Fragment>
     <Viewport>
       <SectionTitle
-        title="客製服務 我的世界 由我做主"
-        desc="經由專人服務，依家庭成員需求，預先規劃裝潢，省時省力省錢，交屋即住"
+        title="豪宅施工團隊 十年防水保固"
+        desc="立信工營造為甲級營造，成員擁有璞園、國泰、大陸工程、昇陽、基泰、達欣⋯⋯等層峰豪宅建商資歷"
+        desc2="以精湛工法、嚴謹工地管理，宣示十年防水保固，給予消費者更全面保障"
       />
     </Viewport>
     <Viewport isBottom={false}>

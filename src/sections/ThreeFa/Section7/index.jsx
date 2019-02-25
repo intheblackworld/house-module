@@ -53,8 +53,8 @@ const Section5 = () => (
   <React.Fragment>
     <Viewport>
       <SectionTitle
-        title="客製服務 我的世界 由我做主"
-        desc="經由專人服務，依家庭成員需求，預先規劃裝潢，省時省力省錢，交屋即住"
+        title="全齡化貼心公設 輝襯幸福生活"
+        desc="從生活細節出發，舉凡冷藏包裹代收、兒童遊戲區、健身房，或親友拜訪到交誼廳聊天，多樣化公設，讓生活更為精彩充實"
       />
     </Viewport>
     <Viewport isBottom={false}>

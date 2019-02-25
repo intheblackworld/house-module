@@ -1,77 +1,89 @@
 import React from 'react'
-import SectionTitle from 'components/SectionTitle'
-import { Image, Container } from 'semantic-ui-react'
-import Carousel from 'components/Carousel'
+import { Image } from 'semantic-ui-react'
 import Viewport from 'components/ViewPort'
 import cx from 'classnames'
-
-import reward from 'assets/img/section4/reward.png'
-// import descBg from 'assets/img/section4/descBg.png'
-import leaf1 from 'assets/img/master/leaf-left-top.png'
-import leaf3 from 'assets/img/master/leaf-right-bottom.png'
+import SectionTitle from 'components/SectionTitle'
 
 import css from './index.scss'
 
-const imgList = [
-  require('assets/img/section4/public-1.png'),
-  require('assets/img/section4/public-2.png'),
-  require('assets/img/section4/public-3.png'),
-  require('assets/img/section4/public-4.png'),
-  require('assets/img/section4/public-5.png'),
-  require('assets/img/section4/public-6.png'),
-  require('assets/img/section4/public-7.png'),
-  require('assets/img/section4/public-8.png'),
-  require('assets/img/section4/public-9.png'),
-  require('assets/img/section4/public-10.png'),
-  require('assets/img/section4/public-11.png'),
-  require('assets/img/section4/public-12.png'),
+const items = [
+  {
+    name: '十大建商信譽保證',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+
+  {
+    name: '十年防水完善保固',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+
+  {
+    name: '甲級營造品質保障',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+
+  {
+    name: '立信直營完善服務',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+  {
+    name: '量身定製省時省錢',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+  {
+    name: '豪宅團隊精鑄帝標',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+  {
+    name: '近五千坪帝國廣場',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+  {
+    name: '江翠F區領秀地段',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+  {
+    name: '精雕細琢核心住宅',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
+  {
+    name: '連結台北市第一線',
+    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+  },
 ]
 
-const Sliders = ({ show = false }) => {
-  const sliderClass = cx(css.slider, {
+const Item = ({ show, item }) => {
+  const itemClass = cx(css['detail-item'], {
     [css.show]: show,
     [css.hide]: !show,
   })
   return (
-    <div className={sliderClass}>
-      <div className={css.carousel}>
-        <Carousel slidesToShow={1} fade={false} dots>
-          {imgList.map(url => (
-            <Image src={url} alt="" key={url} />
-          ))}
-        </Carousel>
+    <div className={itemClass} key={item.desc}>
+      <div className={css['item-icon-wrap']}>
+        <Image className={css['item-icon']} src={item.imgSrc} alt="" />
       </div>
-      <div className={css.descBg}>
-        <h3>
-          回家都有音韻的陪伴
-          <br />
-          生活優雅漫舞
-        </h3>
-        <p>在公設規劃的每一個角落，都有金革唱片的優雅音韻，伴隨著美好的生活，共舞！</p>
-      </div>
+      <h3 className={css['item-title']}>{item.name}</h3>
     </div>
   )
 }
-
 const Section4 = () => (
-  <React.Fragment>
-    <Image src={leaf1} alt="1" className={css.leaf1} />
-    <Image src={leaf3} alt="1" className={css.leaf2} />
-    <Container>
-      <Viewport>
-        <SectionTitle
-          titleTop="最潮建築"
-          titleBottom="ARCHITECTURE"
-          iconUrl={reward}
-          slolganMain="文青必來新地標，藝術美感全都上身!"
-          sloganDescription="大器內退前院、挑高迎賓大廳、第二門廳、休憩閱讀區，搭配飯店式簡約外觀，襯托人生優雅品味！"
-        />
-      </Viewport>
-      <Viewport>
-        <Sliders />
-      </Viewport>
-    </Container>
-  </React.Fragment>
+  <div className={css.section4}>
+    <Viewport>
+      <SectionTitle
+        title="十大優勢 必買首選"
+      />
+    </Viewport>
+
+    <div className={css.container}>
+      <div className={css['container-detail']}>
+        {items.map(item => (
+          <Viewport key={item.name}>
+            <Item item={item} />
+          </Viewport>
+        ))}
+      </div>
+    </div>
+  </div>
 )
 
 export default Section4

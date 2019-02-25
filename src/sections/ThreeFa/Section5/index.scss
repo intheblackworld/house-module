@@ -1,130 +1,24 @@
-@import '../../../assets/animate.scss';
-
-.section5 {
-  max-width: 975px;
-  margin: 0 auto;
-  .container {
-    color: #b50007;
-    text-align: center;
-    margin-top: 88px;
-  }
-  .container-detail {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .detail-item {
-    width: 33.33%;
-    opacity: 0;
-    @for $i from 1 through 30 {
-      &:nth-child(#{$i}) {
-        &.show {
-          @include animate(fadeIn, .6s, $i * 0.05s);
-        }
-        &.hide {
-          @include animate(fadeOut, .6s, 0);
-        }
-      }
-    }
-    
-    
-    .item-icon-wrap {
-      width: 162px;
-      height: 162px;
-      border-radius: 50%;
-      background-color: #e5d48f;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .item-icon {
-      width: 71px;
-      height: 71px;
-    }
-    .item-title {
-      line-height: 55px;
-      font-size: 31px;
-      font-weight: bold;
-      font-family: 'Noto Serif TC', serif;
-      background-color: #fff;
-      margin: 0 auto;
-      width: 162px;
-      height: 55px;
-      position: relative;
-      top: -28px;
-    }
-    .item-description {
-      color: #000000;
-      font-size: 23px;
-      width: 232px;
-      margin: 0 auto;
-      position: relative;
-      top: -28px;
-    }
-  }
-  .leaf1 {
-    position: absolute !important;
-    right: -73px;
-    top: 15%;
-    transform: rotate(10deg);
-  }
-  .leaf2 {
-    position: absolute !important;
-    transform: rotate(12deg) scale(-1);
-    left: -45px;
-    top: 50%;
-  }
+.leaf1 {
+  position: absolute !important;
+  right: -43px;
+  top: 0px;
+  transform: rotate(159deg);
+}
+.leaf2 {
+  position: absolute !important;
+  transform: rotate(-83deg) scale(-1.5);
+  left: -45px;
+  bottom: 0%;
 }
 
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .section5 {
-    .detail-item {
-      .item-icon-wrap {
-        width: 124px;
-        height: 124px;
-      }
-      .item-icon {
-        width: 54px;
-        height: 54px;
-      }
-      .item-title {
-        font-size: 22px;
-      }
-      .item-description {
-        font-size: 13px;
-        width: 130px;
-      }
-    }
-  }
+  
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .section5 {
-    .detail-item {
-      &.show {
-        animation: fadeIn .6s ease-in-out 0s forwards !important;
-        animation-delay: .2s !important;
-      }
-      .item-title {
-        font-size: 28px;
-      }
-      .item-description {
-        width: 170px;
-        font-size: 16px;
-        margin-bottom: 36px;
-      }
-    }
-    .detail-item {
-      width: 100%;
-    }
-  }
-  .leaf2 {
-    left: -123px !important;
-    top: 43% !important;
-  } 
+  
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

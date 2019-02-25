@@ -14,37 +14,63 @@ const MobileNavigationHeight = 49
 
 const NavItems = [
   {
-    name: '租不如買',
-    imgSrc: require('assets/img/navigation/hand.png'),
+    name: '首頁',
+    imgSrc: '',
+    section: 'master',
+    OffsetValue: -PCNavigationHeight,
+  },
+  {
+    name: '黃金地段',
+    imgSrc: '',
     section: 'section2',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '上市保證',
-    imgSrc: require('assets/img/navigation/house.png'),
+    name: '十在首選',
+    imgSrc: '',
     section: 'section3',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '最潮建築',
-    imgSrc: require('assets/img/navigation/no1.png'),
+    name: '量身定製',
+    imgSrc: '',
     section: 'section4',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '無敵安心',
-    imgSrc: require('assets/img/navigation/heart.png'),
+    name: '飯店公設',
+    imgSrc: '',
     section: 'section5',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
+  },
+  {
+    name: '建築團隊',
+    imgSrc: '',
+    section: 'section6',
+    OffsetValue: -PCNavigationHeight,
+  },
+
+  {
+    name: '營造精英',
+    imgSrc: '',
+    section: 'section7',
+    OffsetValue: -PCNavigationHeight,
+  },
+
+  {
+    name: '五大貼心',
+    imgSrc: '',
+    section: 'section8',
+    OffsetValue: -PCNavigationHeight,
   },
   {
     name: '預約賞屋',
-    imgSrc: require('assets/img/navigation/pen.png'),
-    section: 'section6',
-    OffsetValue: -(PCNavigationHeight),
+    imgSrc: '',
+    section: 'section9',
+    OffsetValue: -PCNavigationHeight,
   },
 ]
 
@@ -65,7 +91,7 @@ const Navigation = () => {
     } else if (wh < 768) {
       h = MobileNavigationHeight
     } else {
-      h = (PCNavigationHeight)
+      h = PCNavigationHeight
     }
     if (-h === list[list.length - 1].OffsetValue) return
 
@@ -119,7 +145,7 @@ const Navigation = () => {
                     key={item.section}
                   >
                     <span className={css.link}>
-                      <Image src={item.imgSrc} />
+                      {item.imgSrc && <Image src={item.imgSrc} />}
                       <span>{item.name}</span>
                       {list.length - 1 !== index && <span className={css.divided}>|</span>}
                     </span>

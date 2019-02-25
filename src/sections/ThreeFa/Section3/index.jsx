@@ -1,132 +1,74 @@
 import React from 'react'
-import SectionTitle from 'components/SectionTitle'
 import { Image } from 'semantic-ui-react'
-import Carousel from 'components/Carousel'
+import SectionTitle from 'components/SectionTitle'
 import Viewport from 'components/ViewPort'
 import cx from 'classnames'
-
-import home from 'assets/img/section3/home.png'
-import company1 from 'assets/img/section3/company-1.png'
-import company2 from 'assets/img/section3/company-2.png'
-import person1 from 'assets/img/section3/person-1.png'
-import person2 from 'assets/img/section3/person-2.png'
-import person3 from 'assets/img/section3/person-3.png'
-import person4 from 'assets/img/section3/person-4.png'
-import person5 from 'assets/img/section3/person-5.png'
-import cross from 'assets/img/section3/cross.png'
-import leaf1 from 'assets/img/master/leaf-left-top.png'
-import leaf3 from 'assets/img/master/leaf-right-bottom.png'
-
 import css from './index.scss'
 
-const CompanyImgs = ({ show = false }) => {
-  const imgClass = cx(css.imgs, {
-    [css.show]: show,
-    [css.hide]: !show,
-  })
-  const titleClass = cx(css.title, {
-    [css.show]: show,
-    [css.hide]: !show,
-  })
-  return (
-    <React.Fragment>
-      <div className={imgClass}>
-        <Image src={company1} alt="" />
-        <Image src={cross} alt="" />
-        <Image src={company2} alt="" />
-      </div>
-      <div className={titleClass}>
-        <h3>豪宅團隊聯名齊鑄，就像王與后生活!</h3>
-        <p>台北豪宅團隊點名首選，李兆嘉、張家豪建築師、老圃團隊、特墨設計，就是住的比別人豪！</p>
-      </div>
-    </React.Fragment>
-  )
-}
+const items = [
+  {
+    title: '超快捷效率',
+    desc: '江子翠站、華江橋、重翠橋、台64八里新店線、台65五股土城線、環河快速道全方位路網。',
+    url: `https://via.placeholder.com/${407}x${263}`,
+  },
+  {
+    title: '超近台北市',
+    desc: '雄踞板橋頭，以第一線地位，一橋直抵台北市，與雙子星相呼應。',
+    url: `https://via.placeholder.com/${407}x${263}`,
+  },
+  {
+    title: '超讚玩樂趣',
+    desc: '鄰近雙十路、文化路二段、華江市場、新板特區、新埔市場、四維市場、裕民夜市等繁華商圈。',
+    url: `https://via.placeholder.com/${407}x${263}`,
+  },
+  {
+    title: '超美樂休閒',
+    desc: '鄰近時光公園、光復賞鳥公園、河濱公園、稚匯公園等豐沛綠意。',
+    url: `https://via.placeholder.com/${407}x${263}`,
+  },
 
-const Slides = ({ show = false }) => {
-  const sliderClass = cx(css.slider, {
+  {
+    title: '超優質書香',
+    desc: '江翠國小、江翠國中、板橋圖書館總館、江子翠分館等，營造優雅文風。',
+    url: `https://via.placeholder.com/${407}x${263}`,
+  },
+
+  {
+    title: '超強大商場',
+    desc: '3000坪帝國廣場做鄰居，未來美食、商場開幕，貼身享受食衣住行等多元娛樂。',
+    url: `https://via.placeholder.com/${407}x${263}`,
+  },
+]
+
+const Item = ({ show, item }) => {
+  const itemClass = cx(css.main, {
     [css.show]: show,
     [css.hide]: !show,
   })
   return (
-    <div className={sliderClass}>
-      <Carousel slidesToShow={4} fade={false} arrows>
-        <div className={css.sliderItem}>
-          <Image src={person1} alt="" />
-          <div className={css.sliderContent}>
-            <h3>建築營照</h3>
-            <p>
-              三發產地 鍾俊榮 董事長 <br />
-              三發產地 讓鶯歌響起迷人樂章
-            </p>
-          </div>
-        </div>
-        <div className={css.sliderItem}>
-          <Image src={person2} alt="" />
-          <div className={css.sliderContent}>
-            <h3>總體規劃</h3>
-            <p>
-              李兆嘉建築師 <br />
-              建築之美 首重與土地的完美融合
-            </p>
-          </div>
-        </div>
-        <div className={css.sliderItem}>
-          <Image src={person3} alt="" />
-          <div className={css.sliderContent}>
-            <h3>外觀設計</h3>
-            <p>
-              MAG張家豪建築師 <br />
-              為建築 譜出完美風采
-            </p>
-          </div>
-        </div>
-        <div className={css.sliderItem}>
-          <Image src={person4} alt="" />
-          <div className={css.sliderContent}>
-            <h3>景觀設計</h3>
-            <p>
-              老圃團隊 <br />
-              構築真、善、美的生活空間
-            </p>
-          </div>
-        </div>
-        <div className={css.sliderItem}>
-          <Image src={person5} alt="" />
-          <div className={css.sliderContent}>
-            <h3>公設設計</h3>
-            <p>
-              特墨 張真一設計師 <br />
-              人們能互動 建築就能更溫熱
-            </p>
-          </div>
-        </div>
-      </Carousel>
+    <div className={itemClass}>
+      <Image src={item.url} alt="三發丰悅的圖片" key={item.url} />
+      <div className={css.content}>
+        <h3>{item.title}</h3>
+        <p>{item.desc}</p>
+      </div>
     </div>
   )
 }
+
 const Section3 = () => (
   <React.Fragment>
-    <Image src={leaf1} alt="1" className={css.leaf1} />
-    <Image src={leaf3} alt="1" className={css.leaf2} />
+    {/* <div className={css.title}>4招買房必勝關鍵</div> */}
     <Viewport>
-      <SectionTitle
-        titleTop="上市保證"
-        titleBottom="BRAND"
-        iconUrl={home}
-        slolganMain="三發地產上市公司，讓年輕的你更驕傲！"
-        sloganDescription="上市公司品質保證更保心，加上金革唱片優雅音韻，品牌與品質的雙重加持，一次買最好！"
-      />
+      <SectionTitle title="江翠第一線 核心金鑽區" />
     </Viewport>
-
-    <Viewport>
-      <CompanyImgs />
-    </Viewport>
-
-    <Viewport isBottom={false}>
-      <Slides />
-    </Viewport>
-    <div style={{ clear: 'both' }} />
+    <div className={css.container}>
+      {items.map(item => (
+        <Viewport key={item.url}>
+          <Item item={item} />
+        </Viewport>
+      ))}
+    </div>
   </React.Fragment>
 )
 
