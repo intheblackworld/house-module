@@ -49,24 +49,50 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section4-5">
-        <FullScreen needCutHeader>
-          <Section45 />
-        </FullScreen>
+        {width < 768 ? (
+          <Section>
+            <Section45 />
+          </Section>
+        ) : (
+          <FullScreen needCutHeader>
+            <Section45 />
+          </FullScreen>
+        )}
       </Element>
       <Section>
         <Element id="section5">
-          <Section5 />
+          {width < 768 ? (
+            <Section>
+              <Section5 />
+            </Section>
+          ) : (
+            <FullScreen needCutHeader>
+              <Section5 />
+            </FullScreen>
+          )}
         </Element>
       </Section>
       <Element id="section6">
-        <FullScreen needCutHeader>
-          <Section6 />
-        </FullScreen>
+        {width < 768 ? (
+          <Section>
+            <Section6 />
+          </Section>
+        ) : (
+          <FullScreen needCutHeader>
+            <Section6 />
+          </FullScreen>
+        )}
       </Element>
       <Element id="section7">
-        <FullScreen needCutHeader>
-          <Section7 />
-        </FullScreen>
+        {width < 768 ? (
+          <Section>
+            <Section7 />
+          </Section>
+        ) : (
+          <FullScreen needCutHeader>
+            <Section7 />
+          </FullScreen>
+        )}
       </Element>
       <Section>
         <Element id="section8">
@@ -74,9 +100,15 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section9">
-        <FullScreen needCutHeader>
-          <Section9 />
-        </FullScreen>
+        {width < 768 ? (
+          <Section>
+            <Section9 />
+          </Section>
+        ) : (
+          <FullScreen needCutHeader>
+            <Section9 />
+          </FullScreen>
+        )}
       </Element>
       <Element id="section10">
         {width < 768 ? (
