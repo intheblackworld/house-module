@@ -81,9 +81,14 @@
     font-size: 23px !important;
   }
 
+  .bg {
+    min-height: 147px !important;
+  }
+
   .desc {
     width: 80%;
     font-size: 14px !important;
+    display: none;
   }
 
   .parallexBg {

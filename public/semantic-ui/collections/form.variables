@@ -8,7 +8,7 @@
 
 /* form 樣式變數 (select有bug還是要自己蓋) */
 @inputBackground: transparent;
-@borderColor: #fff;
+@borderColor: rgba(255, 255, 255, 0.6);
 @absoluteBorderRadius: 0;
 @focusedFormBorderColor: #56D8FF;
 @selectedTextColor: #fff;

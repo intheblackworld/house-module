@@ -1,0 +1,138 @@
+@import '../../../assets/animate.scss';
+
+.title {
+  text-align: center;
+  margin-bottom: 75px;
+  opacity: 0;
+
+  &.show {
+    @include animate(spreadIn, .8s, .2s);
+  }
+
+  &.hide {
+    @include animate(spreadOut, .8s, 0);
+  }
+
+  h3 {
+    font-size: 29px;
+    color: #b50007;
+  }
+
+  p {
+    font-size: 17px;
+    color: #333;
+  }
+}
+
+.slider {
+  width: 1150px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  overflow: hidden;
+  opacity: 0;
+  &.show {
+    @include animate(fadeInRight, .6s, 0);
+  }
+  &.hide {
+    @include animate(fadeOutRight, .6s, 0);
+  }
+}
+
+.sliderItem {
+  max-width: 205px;
+  margin-right: 12px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .sliderContent {
+    background: rgba(35, 152, 187, 0.63);
+    position: absolute;
+    width: 100%;
+    height: 57px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      text-align: center;
+      font-size: 16px;
+      color: #fff;
+      margin-top: 0;
+    }
+
+    p {
+      text-align: center;
+      color: #fff;
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .slider {
+    margin: 0 auto;
+    width: 700px;
+    float: none;
+    margin-left: calc(-50% + -50px);
+  }
+
+  .sliderItem {
+    max-width: 214px;
+
+    img {
+      height: 310px;
+    }
+
+    .sliderContent {
+
+      h3 {
+        font-size: 16px;
+      }
+  
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .imgs {
+    width: 340px;
+  }
+
+  .slider {
+    margin: 0 auto;
+    width: 900px;
+    float: none;
+  }
+
+  .sliderItem {
+    max-width: 214px;
+
+    img {
+      height: 310px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

@@ -6,7 +6,7 @@
   height: 100vh;
   &.cutHeader {
     height: calc(100vh - #{$navigationPCHeight});
-    margin-top: $navigationPCHeight;
+    margin-top: 0;
   }
 
   &.alignCenter {
@@ -25,7 +25,7 @@
 
     &.cutHeader {
       height: calc(100vh - #{$navigationMobileHeight});
-      margin-top: $navigationMobileHeight;
+      margin-top: 0;
     }
   }
 }
@@ -38,7 +38,7 @@
 
     &.cutHeader {
       height: calc(100vh - #{$navigationMobileHeight});
-      margin-top: $navigationMobileHeight;
+      margin-top: 0;
     }
   }
 }

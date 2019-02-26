@@ -30,7 +30,7 @@ const Sliders = ({ show = false }) => {
   return (
     <div className={sliderClass}>
       <div className={css.carousel}>
-        <Carousel slidesToShow={1} fade={false} arrows>
+        <Carousel slidesToShow={1} fade={false}>
           {imgList.map(url => (
             <Image src={url} alt="" key={url} />
           ))}
@@ -53,8 +53,8 @@ const Section5 = () => (
   <React.Fragment>
     <Viewport>
       <SectionTitle
-        title="客製服務 我的世界 由我做主"
-        desc="經由專人服務，依家庭成員需求，預先規劃裝潢，省時省力省錢，交屋即住"
+        title="立信全面佈局 江翠指標建築"
+        desc="立信機構用心經營江翠北側，禮聘百萬豪宅名師，打造一座座媲美台北市的美學建築。"
       />
     </Viewport>
     <Viewport isBottom={false}>

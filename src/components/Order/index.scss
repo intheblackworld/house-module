@@ -98,14 +98,13 @@
   .field {
     width: 310px;
     .select {
-      border: 1px solid #fff !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
     }
     .select,
     .select div {
       border-radius: 0 !important;
-      background: #000 !important;
+      background: rgba(0, 0, 0, .5) !important;
       color: rgba(255, 255, 255, 0.8) !important;
-      border-top: none !important;
     }
 
     .select i {
@@ -142,7 +141,7 @@
       height: 24px !important;
       background: transparent !important;
       border-radius: 0 !important;
-      border: 1px solid #fff !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
     }
 
     &:after {
@@ -176,7 +175,7 @@
   // }
 
   &.enable {
-    background-color: rgba(229, 212, 143, 1) !important;
+    background-color: rgba(86, 216, 255, 1) !important;
   }
 }
 
@@ -220,7 +219,7 @@
   p {
     font-size: 20px;
     font-family: 'Noto Serif TC', serif;
-    color: #e5d48f;
+    color: #56D8FF;
   }
 }
 
@@ -317,7 +316,7 @@
         height: 20px !important;
         background: transparent !important;
         border-radius: 0 !important;
-        border: 1px solid #fff !important;
+        border: 1px solid rgba(255, 255, 255, 0.6) !important;
       }
 
       &:after {
@@ -418,4 +417,15 @@
   //     }
   //   }
   // }
+}
+
+
+:global {
+  .ui.selection.dropdown .menu > .item {
+    border-top: none !important;
+  }
+
+  .ui.selection.active.dropdown .menu {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+  }
 }

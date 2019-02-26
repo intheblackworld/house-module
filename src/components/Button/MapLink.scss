@@ -8,12 +8,15 @@
   }
 
   .info {
-    border: 1px solid #e5d48f;
+    border: 1px solid #000;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    color: #000;
+    white-space: nowrap;
+    padding-left: 10px;
   }
 
   .link {
@@ -24,8 +27,8 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
-    color: rgba(0, 0, 0, 0.6);
-    background: #e5d48f;
+    color: #fff;
+    background: #000;
     cursor: pointer;
     font-size: 16px;
 
@@ -47,7 +50,7 @@
 
     &::before,
     &::after {
-      background: #9c1e23;
+      background: #56D8FF;
       content: '';
       position: absolute;
       z-index: 2;
@@ -86,6 +89,10 @@
     .info, .link {
       width: 100%;
       height: 60px;
+    }
+
+    .info {
+      border: none !important;
     }
   }
 }

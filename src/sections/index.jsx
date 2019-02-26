@@ -13,6 +13,7 @@ const Master = lazy(() => import('sections/ThreeFa/Master'))
 const Section2 = lazy(() => import('sections/ThreeFa/Section2'))
 const Section3 = lazy(() => import('sections/ThreeFa/Section3'))
 const Section4 = lazy(() => import('sections/ThreeFa/Section4'))
+const Section45 = lazy(() => import('sections/ThreeFa/Section4-5'))
 const Section5 = lazy(() => import('sections/ThreeFa/Section5'))
 const Section6 = lazy(() => import('sections/ThreeFa/Section6'))
 const Section7 = lazy(() => import('sections/ThreeFa/Section7'))
@@ -43,6 +44,11 @@ const SectionList = () => (
         <Section4 />
       </Element>
     </Section>
+    <Element id="section4-5">
+      <FullScreen needCutHeader>
+        <Section45 />
+      </FullScreen>
+    </Element>
     <Section>
       <Element id="section5">
         <Section5 />

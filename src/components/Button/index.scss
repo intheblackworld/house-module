@@ -2,7 +2,7 @@
   width: 270px;
   height: 60px;
   color: rgba(0, 0 ,0 , .6);
-  border: 1px solid #e5d48f;
+  border: 1px solid #000;
   background: transparent;
   font-size: 16px;
   display: flex;
@@ -23,7 +23,7 @@
 }
 .flashTwice {
   &:hover {
-    border: 1px solid #e5d48f; // first border
+    border: 1px solid #56D8FF; // first border
     color: #fff !important;
   }
   &::before {
@@ -31,7 +31,7 @@
     width: 0%;
     height: 100%;
     display: block;
-    background: #9c1e23; // second bg
+    background: #56D8FF; // second bg
     position: absolute;
     transform: skewX(-20deg);
     left: -10%;
@@ -47,7 +47,7 @@
     width: 0%;
     height: 100%;
     display: block;
-    background: #e5d48f; // first bg
+    background: #000; // first bg
     position: absolute;
     transform: skewX(-20deg);
     left: -10%;
