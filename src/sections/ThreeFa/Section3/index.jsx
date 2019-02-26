@@ -86,7 +86,7 @@ const Slides = ({ show = false }) => {
           <div className={css.sliderContent}>
             <h3>景觀設計</h3>
             <p>
-              老圃團隊 <br />
+              老圃團隊-合圃景觀 <br />
               構築真、善、美的生活空間
             </p>
           </div>
