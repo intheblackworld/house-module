@@ -1,8 +1,8 @@
 export default {
   address: '新北市板橋區華將一路（龍一駕訓班旁）',
   phone: '02-2250-8111',
-  fbLink: 'https://www.facebook.com/sanfarlightluxury',
-  googleLink: 'https://goo.gl/maps/3YwsMdrBB582',
+  fbLink: 'https://www.facebook.com/%E7%AB%8B%E4%BF%A1%E5%90%BE%E7%95%8C-2242674725999748/',
+  googleLink: 'https://goo.gl/maps/25bztzCpW282',
 
   houseInfos: [
     ['投資興建', '立信偉業股份有限公司'],

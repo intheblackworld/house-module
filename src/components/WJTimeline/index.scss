@@ -21,10 +21,13 @@
   .content {
     border-top: 2px solid #fff;
     padding-top: 35px;
-    width: 233px;
+    width: 300px;
+    
     img {
-      width: 100%;
+      width: 260px;
       height: 150px;
+      margin: 0 auto;
+      display: block;
       margin-bottom: 18px;
     }
   
@@ -32,6 +35,7 @@
       font-size: 18px;
       color: #fff;
       line-height: 1.4;
+      margin-left: 20px;
     }
   }
 }

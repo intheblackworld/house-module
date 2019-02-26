@@ -8,18 +8,18 @@ import cx from 'classnames'
 import css from './index.scss'
 
 const imgList = [
-  require('assets/img/section4/public-1.png'),
-  require('assets/img/section4/public-2.png'),
-  require('assets/img/section4/public-3.png'),
-  require('assets/img/section4/public-4.png'),
-  require('assets/img/section4/public-5.png'),
-  require('assets/img/section4/public-6.png'),
-  require('assets/img/section4/public-7.png'),
-  require('assets/img/section4/public-8.png'),
-  require('assets/img/section4/public-9.png'),
-  require('assets/img/section4/public-10.png'),
-  require('assets/img/section4/public-11.png'),
-  require('assets/img/section4/public-12.png'),
+  require('./12667.jpg'),
+  require('./12668.jpg'),
+  require('./12669.jpg'),
+  require('./12670.jpg'),
+  require('./12671.jpg'),
+  require('./12672.jpg'),
+  require('./12673.jpg'),
+  require('./12674.jpg'),
+  require('./12675.jpg'),
+  require('./12676.jpg'),
+  require('./12677.jpg'),
+  require('./12678.jpg'),
 ]
 
 const Sliders = ({ show = false }) => {

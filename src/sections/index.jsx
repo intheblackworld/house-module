@@ -3,14 +3,14 @@ import { Element } from 'react-scroll'
 import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
 import Mask from 'components/AstrictMask'
-// import ViewPort from 'components/ViewPort'
+import ViewPort from 'components/ViewPort'
 
 import ContactSection from 'sections/ContactSection'
 
 import './index.scss'
 
 const Master = lazy(() => import('sections/ThreeFa/Master'))
-const Section2 = lazy(() => import('sections/ThreeFa/Section2'))
+// const Section2 = lazy(() => import('sections/ThreeFa/Section2'))
 const Section3 = lazy(() => import('sections/ThreeFa/Section3'))
 const Section4 = lazy(() => import('sections/ThreeFa/Section4'))
 const Section45 = lazy(() => import('sections/ThreeFa/Section4-5'))
@@ -28,14 +28,16 @@ const SectionList = () => {
       <Mask />
       <Element id="master">
         <FullScreen needCutHeader={false}>
-          <Master />
+          <ViewPort>
+            <Master />
+          </ViewPort>
         </FullScreen>
       </Element>
-      <Section>
+      {/* <Section>
         <Element id="section2">
           <Section2 />
         </Element>
-      </Section>
+      </Section> */}
       <Section>
         <Element id="section3">
           <Section3 />

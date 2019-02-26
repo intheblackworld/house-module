@@ -127,13 +127,13 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '吾界',
-      metaTitle: '三發丰悅 | 新北門牌桃園價，綠態建築好生活 | 官網',
-      metaDescription: '三發丰悅：350米捷運鶯桃福德站，新北門牌桃園價，未來增值第一站，接待中心：新北市鶯歌區永和街 83 號，禮賓專線：02-86421155',
-      metaKeywords: '三發丰悅,三發建設,鶯歌房屋,新北買房,鶯歌建案,台北買房',
-      ogMetaTitle: '三發丰悅 | 新北門牌桃園價，綠態建築好生活 | 官網',
+      title: '立信吾界 | 江翠第一線 核心金鑽區 | 官網',
+      metaTitle: '立信吾界 | 江翠第一線 核心金鑽區 | 官網',
+      metaDescription: '立信吾界：江翠第一線，核心金鑽區，全齡化貼心公設，輝襯幸福生活，禮賓專線：02-2250-8111，接待中心：華江一路長江路三段口。(龍一駕訓班旁)',
+      metaKeywords: '立信吾界,吾界,江子翠買房,江子翠建案,江子翠房屋',
+      ogMetaTitle: '立信吾界 | 江翠第一線 核心金鑽區 | 官網',
       ogMetaType: 'website',
-      ogMetaDescription: '三發丰悅：350米捷運鶯桃福德站，新北門牌桃園價，未來增值第一站，接待中心：新北市鶯歌區永和街 83 號，禮賓專線：02-86421155',
+      ogMetaDescription: '立信吾界：江翠第一線，核心金鑽區，全齡化貼心公設，輝襯幸福生活，禮賓專線：02-2250-8111，接待中心：華江一路長江路三段口。(龍一駕訓班旁)',
       template: 'index.html',
       hash: true,
     }),
