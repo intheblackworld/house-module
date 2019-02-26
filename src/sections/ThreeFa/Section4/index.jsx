@@ -9,46 +9,46 @@ import css from './index.scss'
 const items = [
   {
     name: '十大建商信譽保證',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./like.png'),
   },
 
   {
     name: '十年防水完善保固',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./home.png'),
   },
 
   {
     name: '甲級營造品質保障',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./megaphone.png'),
   },
 
   {
     name: '立信直營完善服務',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./idea.png'),
   },
   {
     name: '量身定製省時省錢',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./clock.png'),
   },
   {
     name: '豪宅團隊精鑄帝標',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./resume.png'),
   },
   {
     name: '近五千坪帝國廣場',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./picture.png'),
   },
   {
     name: '江翠F區領秀地段',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./map-location.png'),
   },
   {
     name: '精雕細琢核心住宅',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./diamond-icon-white.png'),
   },
   {
     name: '連結台北市第一線',
-    imgSrc: `https://via.placeholder.com/${74}x${74}`,
+    imgSrc: require('./route.png'),
   },
 ]
 

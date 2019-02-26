@@ -22,54 +22,54 @@ const NavItems = [
   {
     name: '黃金地段',
     imgSrc: '',
-    section: 'section2',
+    section: 'section3',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '十在首選',
     imgSrc: '',
-    section: 'section3',
+    section: 'section4',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '量身定製',
     imgSrc: '',
-    section: 'section4',
+    section: 'section6',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '飯店公設',
     imgSrc: '',
-    section: 'section5',
+    section: 'section7',
     OffsetValue: -PCNavigationHeight,
   },
   {
     name: '建築團隊',
     imgSrc: '',
-    section: 'section6',
+    section: 'section8',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '營造精英',
     imgSrc: '',
-    section: 'section7',
+    section: 'section9',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '五大貼心',
     imgSrc: '',
-    section: 'section8',
+    section: 'section10',
     OffsetValue: -PCNavigationHeight,
   },
   {
     name: '預約賞屋',
     imgSrc: '',
-    section: 'section9',
+    section: 'section11',
     OffsetValue: -PCNavigationHeight,
   },
 ]

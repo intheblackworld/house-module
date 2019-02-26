@@ -1,0 +1,153 @@
+.circle {
+  width: 400px;
+  height: 400px;
+  // border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: -30px;
+  position: relative;
+  margin-bottom: 50px;
+
+  .rotate {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+    &.first {
+      transform: rotate(72deg);
+    }
+
+    &.second {
+      transform: rotate(144deg);
+    }
+
+    &.third {
+      transform: rotate(216deg);
+    }
+
+    &.fourth {
+      transform: rotate(288deg);
+    }
+
+    &.fifth {
+      transform: rotate(360deg);
+    }
+  }
+
+  .item {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: 200px 200px;
+    border: 0px solid rgba(35, 152, 187, 0.63);;
+    transition: all .5s;
+    overflow: hidden;
+    transform: rotate(0deg);
+    filter: grayscale(1);
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        transform: rotate($i * 72deg - 27deg);
+        // @include animate(fadeInUp, .4s, 0.2s + $i * 0.15s);
+        img {
+          width: 100%;
+          height: auto;
+          transform: rotate(-$i * 72deg + 27deg);
+        }
+      }
+      &.active {
+        filter: none;
+        border: 7px solid rgba(35, 152, 187, 0.63);
+      }
+    }
+  }
+
+  .desc {
+    color: #fff;
+    width: 237px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .staticContent {
+    display: none;
+  }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .rotate, .desc {
+    display: none !important;
+  }
+
+  .circle {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 0px !important;
+  }
+
+  .staticContent {
+    display: block !important;
+  }
+
+  .staticItem {
+    width: 100%;
+
+    .staticImg {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      background: #fff;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .staticDesc {
+      width: 250px;
+      font-size: 16px;
+      color: #fff;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  // .circle {
+  //   width: 300px;
+  //   height: 300px;
+  // }
+
+  // .desc {
+  //   font-size: 14px;
+  // }
+
+  // .item {
+  //   width: 90px;
+  //   height: 90px;
+  //   transform-origin: 150px 150px;
+  // }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
