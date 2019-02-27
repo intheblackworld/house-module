@@ -24,6 +24,9 @@ $logoMobileWidth: 32px;
   align-items: center;
   justify-content: center;
   position: relative;
+  a {
+    display: block;
+  }
 }
 
 .logo {
