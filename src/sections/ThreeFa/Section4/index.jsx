@@ -22,9 +22,9 @@ const imgList = [
   require('assets/img/section4/public-7.png'),
   require('assets/img/section4/public-8.png'),
   require('assets/img/section4/public-9.png'),
-  require('assets/img/section4/public-10.png'),
-  require('assets/img/section4/public-11.png'),
-  require('assets/img/section4/public-12.png'),
+  // require('assets/img/section4/public-10.png'),
+  // require('assets/img/section4/public-11.png'),
+  // require('assets/img/section4/public-12.png'),
 ]
 
 const Sliders = ({ show = false }) => {
