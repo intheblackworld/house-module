@@ -8,9 +8,21 @@ import cx from 'classnames'
 import css from './index.scss'
 
 const imgList = [
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
+  require('./01.jpg'),
+  require('./02.jpg'),
+  require('./03.jpg'),
+  require('./04.jpg'),
+  require('./05.jpg'),
+  require('./06.jpg'),
+  require('./07.jpg'),
+  require('./08.jpg'),
+  require('./09.jpg'),
+  require('./10.jpg'),
+  require('./11.jpg'),
+  require('./12.jpg'),
+  require('./13.jpg'),
+  require('./14.jpg'),
+  require('./15.jpg'),
 ]
 
 const Sliders = ({ show = false }) => {
