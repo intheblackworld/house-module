@@ -183,6 +183,8 @@
 .orderTitle {
   text-align: center;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
 
   // & {
   //   h3,

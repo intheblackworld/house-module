@@ -48,7 +48,7 @@ const Slides = ({ show = false }) => {
     [css.show]: show,
     [css.hide]: !show,
   })
-  const width = document.getElementById('app').offsetWidth
+  const width = document.getElementById('master').offsetWidth
   let slideLength = 5
   let initialSlide = 1
   if (width <= 768) {
