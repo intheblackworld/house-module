@@ -54,7 +54,7 @@ const Slides = ({ show = false }) => {
   if (width <= 768) {
     slideLength = 3
     initialSlide = 2
-  } else if (width <= 1024 && width > 768) {
+  } else if (width <= 1030 && width > 768) {
     slideLength = 4
   }
   return (

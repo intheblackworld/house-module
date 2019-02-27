@@ -49,7 +49,7 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section4-5">
-        {width < 768 ? (
+        {width < 1028 ? (
           <Section>
             <Section45 />
           </Section>
@@ -65,7 +65,7 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section6">
-        {width < 768 ? (
+        {width < 1028 ? (
           <Section>
             <Section6 />
           </Section>
@@ -76,7 +76,7 @@ const SectionList = () => {
         )}
       </Element>
       <Element id="section7">
-        {width < 768 ? (
+        {width < 1028 ? (
           <Section>
             <Section7 />
           </Section>
@@ -92,7 +92,7 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section9">
-        {width < 768 ? (
+        {width < 1028 ? (
           <Section>
             <Section9 />
           </Section>
@@ -103,7 +103,7 @@ const SectionList = () => {
         )}
       </Element>
       <Element id="section10">
-        {width < 768 ? (
+        {width < 1028 ? (
           <Section>
             <Section10 />
           </Section>
