@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 import cx from 'classnames'
 
 import logo from 'assets/img/navigation/logo.png'
-import menu from 'assets/img/navigation/menu-btn.png'
+import menu from './menu-btn.png'
 
 import css from './index.scss'
 

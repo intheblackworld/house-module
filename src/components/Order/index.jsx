@@ -58,7 +58,9 @@ const Order = ({ show }) => {
   // 表單驗證
   const [alert, triggerAlert] = useState(false)
   const submitForm = () => {
+    console.log(1)
     if (!isCheck) return
+    console.log(2)
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value
