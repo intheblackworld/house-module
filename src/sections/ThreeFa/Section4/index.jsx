@@ -60,7 +60,7 @@ const Item = ({ show, item }) => {
   return (
     <div className={itemClass} key={item.desc}>
       <div className={css['item-icon-wrap']}>
-        <Image className={css['item-icon']} src={item.imgSrc} alt="" />
+        <Image className={css['item-icon']} src={item.imgSrc} alt="立信吾界的圖片" />
       </div>
       <h3 className={css['item-title']}>{item.name}</h3>
     </div>

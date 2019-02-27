@@ -26,7 +26,7 @@ const Sliders = ({ show = false }) => {
       <div className={css.carousel}>
         <Carousel slidesToShow={1} fade={false} arrows>
           {imgList.map(url => (
-            <Image src={url} alt="" key={url} />
+            <Image src={url} alt="立信吾界的圖片" key={url} />
           ))}
         </Carousel>
       </div>

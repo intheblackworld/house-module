@@ -31,9 +31,9 @@ const CompanyImgs = ({ show = false }) => {
   return (
     <React.Fragment>
       <div className={imgClass}>
-        <Image src={company1} alt="" />
-        <Image src={cross} alt="" />
-        <Image src={company2} alt="" />
+        <Image src={company1} alt="立信吾界的圖片" />
+        <Image src={cross} alt="立信吾界的圖片" />
+        <Image src={company2} alt="立信吾界的圖片" />
       </div>
       <div className={titleClass}>
         <h3>豪宅團隊聯名齊鑄，就像王與后生活!</h3>
@@ -52,7 +52,7 @@ const Slides = ({ show = false }) => {
     <div className={sliderClass}>
       <Carousel slidesToShow={4} fade={false} arrows>
         <div className={css.sliderItem}>
-          <Image src={person1} alt="" />
+          <Image src={person1} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <h3>建築營照</h3>
             <p>
@@ -62,7 +62,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person2} alt="" />
+          <Image src={person2} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <h3>總體規劃</h3>
             <p>
@@ -72,7 +72,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person3} alt="" />
+          <Image src={person3} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <h3>外觀設計</h3>
             <p>
@@ -82,7 +82,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person4} alt="" />
+          <Image src={person4} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <h3>景觀設計</h3>
             <p>
@@ -92,7 +92,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person5} alt="" />
+          <Image src={person5} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <h3>公設設計</h3>
             <p>
@@ -109,6 +109,15 @@ const Section3 = () => (
   <React.Fragment>
     <Image src={leaf1} alt="1" className={css.leaf1} />
     <Image src={leaf3} alt="1" className={css.leaf2} />
+    <Viewport>
+      <SectionTitle
+        titleTop="三發丰悅"
+        titleBottom="AESTHETICS"
+        iconUrl={home}
+        slolganMain="青年成家 超強首選"
+        sloganDescription="三發上市品質╳金革唱片音韻╳豪宅黃金陣容"
+      />
+    </Viewport>
     <Viewport>
       <SectionTitle
         titleTop="上市保證"

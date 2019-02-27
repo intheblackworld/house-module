@@ -47,7 +47,7 @@
       name="keywords"
       content="超級花園,汐止買房,南港買房,捷運輕軌,SUPER TREE"
     />
-    <meta name="image" content="img/web_cover.jpg?ver=1" alt="" />
+    <meta name="image" content="img/web_cover.jpg?ver=1" alt="立信吾界的圖片" />
     <meta
       property="og:title"
       content="SUPER TREE 超級花園｜千坪花園 景觀棟距 輕軌捷運｜官網"
@@ -460,7 +460,7 @@
               data-animation="fadeIn"
               data-animation-delay="200"
             >
-              <img src="img/bubbles.png" alt="" />
+              <img src="img/bubbles.png" alt="立信吾界的圖片" />
             </div>
           </div>
           <div class="container visible-sm visible-xs" style="">
@@ -492,7 +492,7 @@
               data-animation="fadeIn"
               data-animation-delay="200"
             >
-              <img src="img/bubbles.png" alt="" />
+              <img src="img/bubbles.png" alt="立信吾界的圖片" />
             </div>
           </div>
         </section>
@@ -502,14 +502,14 @@
           style="height: auto;"
         >
           <div class="" style="padding: 0;">
-            <img src="img/m-1-1-back.jpg" alt="" style="width: 100%;" />
+            <img src="img/m-1-1-back.jpg" alt="立信吾界的圖片" style="width: 100%;" />
             <div
               style="position: absolute;width: 100vw;top: 40vh;left: 0;"
               class="bubbles"
               data-animation="fadeIn"
               data-animation-delay="200"
             >
-              <img src="img/m-bubbles.png" alt="" style="width: 100vw;" />
+              <img src="img/m-bubbles.png" alt="立信吾界的圖片" style="width: 100vw;" />
             </div>
             <div
               class="heading heading-center p-20"
@@ -545,24 +545,24 @@
           <div class="hidden-sm hidden-xs">
             <img
               src="img/pc-3-desc.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 50%;height: auto;float: left;"
             />
             <img
               src="img/pc-3-redballandbg.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 50%;height: auto;float: left;"
             />
           </div>
           <div class="visible-sm visible-xs">
             <img
               src="img/pc-3-desc.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 100%;height: auto;float: left;"
             />
             <img
               src="img/pc-3-redballandbg.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 100%;height: auto;float: left;"
             />
           </div>
@@ -575,33 +575,33 @@
         >
           <div class="hidden-sm hidden-xs">
             <div class="ten-head">
-              <img src="img/pc-3-S.png" alt="" />
+              <img src="img/pc-3-S.png" alt="立信吾界的圖片" />
               <div class="ten-title">十項全能 美好盡收</div>
             </div>
             <img
               src="img/pc-3-1.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 50%;height: auto;float: left;"
             />
             <img
               src="img/pc-3-2.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 50%;height: auto;float: left;"
             />
           </div>
           <div class="visible-sm visible-xs">
             <div class="ten-head">
-              <img src="img/pc-3-S.png" alt="" />
+              <img src="img/pc-3-S.png" alt="立信吾界的圖片" />
               <div class="ten-title">十項全能 <br />美好盡收</div>
             </div>
             <img
               src="img/pc-3-1.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 100%;height: auto;float: left;"
             />
             <img
               src="img/pc-3-2.jpg"
-              alt=""
+              alt="立信吾界的圖片"
               style="width: 100%;height: auto;float: left;"
             />
           </div>
@@ -634,7 +634,7 @@
                 <h2>
                   <img
                     src="img/pc-4-superRICH.png"
-                    alt=""
+                    alt="立信吾界的圖片"
                   />&nbsp;&nbsp;&nbsp;&nbsp;富裕/便捷/悠活
                 </h2>
                 <span class="lead"
@@ -665,7 +665,7 @@
             <div class="col-md-6 rich-desc col-sm-12 col-xs-12" style="">
               <div class="p-20">
                 <h2>
-                  <img src="img/pc-4-superRICH.png" alt="" />
+                  <img src="img/pc-4-superRICH.png" alt="立信吾界的圖片" />
                   <div style="margin-left: 10px;font-size: 28px">富裕/便捷/悠活</div>
                 </h2>
                 <span class="lead"
@@ -681,7 +681,7 @@
             </div>
           </div>
           <!-- <div class="visible-sm visible-xs">
-              <img src="img/5m.jpg" alt="" style="width: 100%; height: auto;">
+              <img src="img/5m.jpg" alt="立信吾界的圖片" style="width: 100%; height: auto;">
           </div> -->
         </section>
 
@@ -691,7 +691,7 @@
         >
           <img
             src="img/pc-5.jpg"
-            alt=""
+            alt="立信吾界的圖片"
             style="width: 100%;height: auto;float: left;"
           />
         </section>
@@ -723,7 +723,7 @@
           </div>
           <!-- <img
             src="img/pc-6-back.jpg"
-            alt=""
+            alt="立信吾界的圖片"
             style="width: 100%;height: auto;float: left;"
           /> -->
         </section>
@@ -734,7 +734,7 @@
         >
           <img
             src="img/pc-7.jpg"
-            alt=""
+            alt="立信吾界的圖片"
             style="width: 100%;height: auto;float: left;"
           />
         </section>
@@ -744,17 +744,17 @@
         >
           <div class="scroll-hint-mask">
             <div class="scroll-hint-title">左右滑動觀看</div>
-            <img src="img/hand.png" alt="" />
+            <img src="img/hand.png" alt="立信吾界的圖片" />
           </div>
           <img
             src="img/pc-7.jpg"
-            alt=""
+            alt="立信吾界的圖片"
             style="width: auto;height: calc(100vh - 80px);float: left;"
           />
         </section>
 
         <!-- <div class="visible-sm visible-xs">
-            <img src="img/6m.jpg" alt="" style="width: 100%; height: auto;">
+            <img src="img/6m.jpg" alt="立信吾界的圖片" style="width: 100%; height: auto;">
         </div> -->
 
         <!-- 左文右圖-->
@@ -770,7 +770,7 @@
             <div class="col-md-6 garden-desc" data-animation="fadeIn">
               <div class="p-20" style="width:100%">
                 <h2>
-                  <img src="img/pc-8-superGARDEN.png" alt="" />
+                  <img src="img/pc-8-superGARDEN.png" alt="立信吾界的圖片" />
                   &nbsp;&nbsp;&nbsp;&nbsp;超級花園城
                 </h2>
                 <!-- <span class="lead">圖：800x500 72dpi</span> -->
@@ -814,7 +814,7 @@
             <div class="col-md-6 garden-desc" data-animation="fadeIn">
               <div class="p-20" style="width:100%">
                 <h2>
-                  <img src="img/pc-8-superGARDEN.png" alt="" />
+                  <img src="img/pc-8-superGARDEN.png" alt="立信吾界的圖片" />
                   &nbsp;&nbsp;&nbsp;&nbsp;超級花園城
                 </h2>
                 <!-- <span class="lead">圖：800x500 72dpi</span> -->
@@ -831,7 +831,7 @@
             </div>
           </div>
           <!-- <div class="visible-sm visible-xs">
-              <img src="img/7m.jpg" alt="" style="width: 100%; height: auto;">
+              <img src="img/7m.jpg" alt="立信吾界的圖片" style="width: 100%; height: auto;">
           </div> -->
         </section>
 
@@ -862,7 +862,7 @@
                 <h2>
                   <img
                     src="img/pc-9-superLIFE.png"
-                    alt=""
+                    alt="立信吾界的圖片"
                   />&nbsp;&nbsp;超級生活
                 </h2>
                 <!-- <span class="lead"
@@ -893,7 +893,7 @@
                 <h2>
                   <img
                     src="img/pc-9-superLIFE.png"
-                    alt=""
+                    alt="立信吾界的圖片"
                   />&nbsp;&nbsp;超級生活
                 </h2>
                 <!-- <span class="lead"
@@ -942,10 +942,10 @@
               data-animation-delay="200"
             >
               <div class="col-md-6 m-t-20">
-                <img class="img-responsive" src="img/pc-10-1.jpg" alt="" />
+                <img class="img-responsive" src="img/pc-10-1.jpg" alt="立信吾界的圖片" />
               </div>
               <div class="col-md-6 m-t-20">
-                <img class="img-responsive" src="img/pc-10-2.jpg" alt="" />
+                <img class="img-responsive" src="img/pc-10-2.jpg" alt="立信吾界的圖片" />
               </div>
             </div>
           </div>
@@ -973,16 +973,16 @@
               data-animation-delay="200"
             >
               <div class="col-md-6 m-t-20">
-                <img class="img-responsive" src="img/pc-11-1.jpg" alt="" />
+                <img class="img-responsive" src="img/pc-11-1.jpg" alt="立信吾界的圖片" />
               </div>
               <div class="col-md-6 m-t-20">
-                <img class="img-responsive" src="img/pc-11-2.jpg" alt="" />
+                <img class="img-responsive" src="img/pc-11-2.jpg" alt="立信吾界的圖片" />
               </div>
             </div>
           </div>
         </section>
         <!-- <div class="visible-sm visible-xs">
-            <img src="img/8m.jpg" alt="" style="width: 100%; height: auto;">
+            <img src="img/8m.jpg" alt="立信吾界的圖片" style="width: 100%; height: auto;">
         </div> -->
         <!-- 滑動區塊 -->
 
@@ -998,40 +998,40 @@
                     <div class="testimonial-items">
                           <div class="row">
                             <div class="col-md-12 visible-lg visible-md">
-                                <img class="img-responsive" src="img/responsive-1.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1.jpg" alt="立信吾界的圖片">
                             </div>
                             <div class="col-md-12 visible-xs visible-sm">
-                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="立信吾界的圖片">
                             </div>
                           </div>
                     </div>
                     <div class="testimonial-items">
                           <div class="row">
                             <div class="col-md-12 visible-lg visible-md">
-                                <img class="img-responsive" src="img/responsive-1.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1.jpg" alt="立信吾界的圖片">
                             </div>
                             <div class="col-md-12 visible-xs visible-sm">
-                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="立信吾界的圖片">
                             </div>
                           </div>
                     </div>
                     <div class="testimonial-items">
                           <div class="row">
                             <div class="col-md-12 visible-lg visible-md">
-                                <img class="img-responsive" src="img/responsive-1.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1.jpg" alt="立信吾界的圖片">
                             </div>
                             <div class="col-md-12 visible-xs visible-sm">
-                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="立信吾界的圖片">
                             </div>
                           </div>
                     </div>
                     <div class="testimonial-items">
                           <div class="row">
                             <div class="col-md-12 visible-lg visible-md">
-                                <img class="img-responsive" src="img/responsive-1.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1.jpg" alt="立信吾界的圖片">
                             </div>
                             <div class="col-md-12 visible-xs visible-sm">
-                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="">
+                                <img class="img-responsive" src="img/responsive-1m.jpg" alt="立信吾界的圖片">
                             </div>
                           </div>
                     </div>
@@ -1079,7 +1079,7 @@
                   title="日本YKKAP超高水密性鋁窗！"
                 >
                   <div class="image-box effect retro">
-                    <img src="img/m1.jpg" alt="" />
+                    <img src="img/m1.jpg" alt="立信吾界的圖片" />
                     <div class="image-box-content">
                       <!--h3>Working hard</h3-->
                       <p class="image-box-links Jp-t-20p">點圖放大</p>
@@ -1103,7 +1103,7 @@
                   title="日本YKKAP超高水密性鋁窗！"
                 >
                   <div class="image-box effect retro">
-                    <img src="img/m1.jpg" alt="" />
+                    <img src="img/m1.jpg" alt="立信吾界的圖片" />
                     <div class="image-box-content">
                       <!--h3>Working hard</h3-->
                       <p class="image-box-links Jp-t-20p">點圖放大</p>
@@ -1127,7 +1127,7 @@
                   title="日本YKKAP超高水密性鋁窗！"
                 >
                   <div class="image-box effect retro">
-                    <img src="img/m1.jpg" alt="" />
+                    <img src="img/m1.jpg" alt="立信吾界的圖片" />
                     <div class="image-box-content">
                       <!--h3>Working hard</h3-->
                       <p class="image-box-links Jp-t-20p">點圖放大</p>
@@ -1151,7 +1151,7 @@
                   title="日本YKKAP超高水密性鋁窗！"
                 >
                   <div class="image-box effect retro">
-                    <img src="img/m1.jpg" alt="" />
+                    <img src="img/m1.jpg" alt="立信吾界的圖片" />
                     <div class="image-box-content">
                       <!--h3>Working hard</h3-->
                       <p class="image-box-links Jp-t-20p">點圖放大</p>
@@ -1175,7 +1175,7 @@
                   title="日本YKKAP超高水密性鋁窗！"
                 >
                   <div class="image-box effect retro">
-                    <img src="img/m1.jpg" alt="" />
+                    <img src="img/m1.jpg" alt="立信吾界的圖片" />
                     <div class="image-box-content">
                       <!--h3>Working hard</h3-->
                       <p class="image-box-links Jp-t-20p">點圖放大</p>
@@ -1199,7 +1199,7 @@
                   title="日本YKKAP超高水密性鋁窗！"
                 >
                   <div class="image-box effect retro">
-                    <img src="img/m1.jpg" alt="" />
+                    <img src="img/m1.jpg" alt="立信吾界的圖片" />
                     <div class="image-box-content">
                       <!--h3>Working hard</h3-->
                       <p class="image-box-links Jp-t-20p">點圖放大</p>
@@ -1241,7 +1241,7 @@
                 data-animation-delay="0"
               >
                 <div class="portfolio-image effect social-links">
-                  <img src="img/m1.jpg" alt="" />
+                  <img src="img/m1.jpg" alt="立信吾界的圖片" />
                   <div class="image-box-content">
                     <p>
                       <a
@@ -1264,7 +1264,7 @@
                 data-animation-delay="0"
               >
                 <div class="portfolio-image effect social-links">
-                  <img src="img/m1.jpg" alt="" />
+                  <img src="img/m1.jpg" alt="立信吾界的圖片" />
                   <div class="image-box-content">
                     <p>
                       <a
@@ -1287,7 +1287,7 @@
                 data-animation-delay="200"
               >
                 <div class="portfolio-image effect social-links">
-                  <img src="img/m1.jpg" alt="" />
+                  <img src="img/m1.jpg" alt="立信吾界的圖片" />
                   <div class="image-box-content">
                     <p>
                       <a
@@ -1310,7 +1310,7 @@
                 data-animation-delay="200"
               >
                 <div class="portfolio-image effect social-links">
-                  <img src="img/m1.jpg" alt="" />
+                  <img src="img/m1.jpg" alt="立信吾界的圖片" />
                   <div class="image-box-content">
                     <p>
                       <a
@@ -1354,13 +1354,13 @@
                     <td>
                       <img
                         src="img/249.jpg"
-                        alt=""
+                        alt="立信吾界的圖片"
                         style="margin-top:10px;width:100%;"
                         class="visible-lg visible-md"
                       />
                       <img
                         src="img/249.jpg"
-                        alt=""
+                        alt="立信吾界的圖片"
                         style="margin-top:10px;height:300px;"
                         class="visible-xs visible-sm"
                       />
@@ -1370,7 +1370,7 @@
               </table>
             </div>
             <span class="lead visible-xs text-center"
-              ><img src="img/hand.png" alt="" style="margin-top:10px;"
+              ><img src="img/hand.png" alt="立信吾界的圖片" style="margin-top:10px;"
             /></span>
           </div>
         </section>
@@ -1404,7 +1404,7 @@
             <div id="testimonials5">
               <div class="testimonial-items">
                 <div class="row">
-                  <div class="col-md-7"><img src="img/te.jpg" alt="" /></div>
+                  <div class="col-md-7"><img src="img/te.jpg" alt="立信吾界的圖片" /></div>
                   <div class="col-md-5">
                     <h5 class="designerTitle">Juna Doe | 公設設計師</h5>
                     <span style="font-size:16px;">
@@ -1421,7 +1421,7 @@
               </div>
               <div class="testimonial-items">
                 <div class="row">
-                  <div class="col-md-7"><img src="img/te.jpg" alt="" /></div>
+                  <div class="col-md-7"><img src="img/te.jpg" alt="立信吾界的圖片" /></div>
                   <div class="col-md-5">
                     <h5 class="designerTitle">Juna Doe | 公設設計師</h5>
                     <span style="font-size:16px;">
@@ -1438,7 +1438,7 @@
               </div>
               <div class="testimonial-items">
                 <div class="row">
-                  <div class="col-md-7"><img src="img/te.jpg" alt="" /></div>
+                  <div class="col-md-7"><img src="img/te.jpg" alt="立信吾界的圖片" /></div>
                   <div class="col-md-5">
                     <h5 class="designerTitle">Juna Doe | 公設設計師</h5>
                     <span style="font-size:16px;">
@@ -1455,7 +1455,7 @@
               </div>
               <div class="testimonial-items">
                 <div class="row">
-                  <div class="col-md-7"><img src="img/te.jpg" alt="" /></div>
+                  <div class="col-md-7"><img src="img/te.jpg" alt="立信吾界的圖片" /></div>
                   <div class="col-md-5">
                     <h5 class="designerTitle">Juna Doe | 公設設計師</h5>
                     <span style="font-size:16px;">
@@ -1505,7 +1505,7 @@
                 data-animation-delay="0"
               >
                 <a href="img/27.jpg" data-lightbox-type="image" title="傢配圖"
-                  ><img class="img-responsive" src="img/2_13.jpg" alt=""
+                  ><img class="img-responsive" src="img/2_13.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div
@@ -1514,7 +1514,7 @@
                 data-animation-delay="0"
               >
                 <a href="img/27.jpg" data-lightbox-type="image" title="傢配圖"
-                  ><img class="img-responsive" src="img/2_13.jpg" alt=""
+                  ><img class="img-responsive" src="img/2_13.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
@@ -1525,7 +1525,7 @@
                 data-animation-delay="200"
               >
                 <a href="img/27.jpg" data-lightbox-type="image" title="傢配圖"
-                  ><img class="img-responsive" src="img/2_13.jpg" alt=""
+                  ><img class="img-responsive" src="img/2_13.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div
@@ -1534,7 +1534,7 @@
                 data-animation-delay="200"
               >
                 <a href="img/27.jpg" data-lightbox-type="image" title="傢配圖"
-                  ><img class="img-responsive" src="img/2_13.jpg" alt=""
+                  ><img class="img-responsive" src="img/2_13.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
@@ -1546,7 +1546,7 @@
                   href="img/1_1_21.jpg"
                   data-lightbox-type="image"
                   title="平面圖"
-                  ><img class="img-responsive" src="img/1_1_11.jpg" alt=""
+                  ><img class="img-responsive" src="img/1_1_11.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div class="col-md-6 m-t-20">
@@ -1554,7 +1554,7 @@
                   href="img/1_1_21.jpg"
                   data-lightbox-type="image"
                   title="平面圖"
-                  ><img class="img-responsive" src="img/1_1_11.jpg" alt=""
+                  ><img class="img-responsive" src="img/1_1_11.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
@@ -1564,7 +1564,7 @@
                   href="img/1_1_21.jpg"
                   data-lightbox-type="image"
                   title="平面圖"
-                  ><img class="img-responsive" src="img/1_1_11.jpg" alt=""
+                  ><img class="img-responsive" src="img/1_1_11.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div class="col-md-6 m-t-20">
@@ -1572,7 +1572,7 @@
                   href="img/1_1_21.jpg"
                   data-lightbox-type="image"
                   title="平面圖"
-                  ><img class="img-responsive" src="img/1_1_11.jpg" alt=""
+                  ><img class="img-responsive" src="img/1_1_11.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
@@ -1581,24 +1581,24 @@
             <div class="row" data-animation="fadeIn">
               <div class="col-md-6 m-t-20">
                 <a href="img/3-2.jpg" data-lightbox-type="image" title="實景圖"
-                  ><img class="img-responsive" src="img/3-1.jpg" alt=""
+                  ><img class="img-responsive" src="img/3-1.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div class="col-md-6 m-t-20">
                 <a href="img/3-2.jpg" data-lightbox-type="image" title="實景圖"
-                  ><img class="img-responsive" src="img/3-1.jpg" alt=""
+                  ><img class="img-responsive" src="img/3-1.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
             <div class="row" data-animation="fadeIn">
               <div class="col-md-6 m-t-20">
                 <a href="img/3-2.jpg" data-lightbox-type="image" title="實景圖"
-                  ><img class="img-responsive" src="img/3-1.jpg" alt=""
+                  ><img class="img-responsive" src="img/3-1.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div class="col-md-6 m-t-20">
                 <a href="img/3-2.jpg" data-lightbox-type="image" title="實景圖"
-                  ><img class="img-responsive" src="img/3-1.jpg" alt=""
+                  ><img class="img-responsive" src="img/3-1.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
@@ -1628,12 +1628,12 @@
             >
               <div class="col-md-12 m-t-20 visible-lg visible-md">
                 <a href="vr-2.html"
-                  ><img class="img-responsive" src="img/vrcover3.jpg" alt=""
+                  ><img class="img-responsive" src="img/vrcover3.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div class="col-md-12 m-t-20 visible-xs visible-sm">
                 <a href="vr-2.html"
-                  ><img class="img-responsive" src="img/vrcover2.jpg" alt=""
+                  ><img class="img-responsive" src="img/vrcover2.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
@@ -1659,7 +1659,7 @@
                 data-animation-delay="0"
               >
                 <a href="vr-1.html"
-                  ><img class="img-responsive" src="img/vrcover1.jpg" alt=""
+                  ><img class="img-responsive" src="img/vrcover1.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
               <div
@@ -1668,7 +1668,7 @@
                 data-animation-delay="200"
               >
                 <a href="vr-2.html"
-                  ><img class="img-responsive" src="img/vrcover2.jpg" alt=""
+                  ><img class="img-responsive" src="img/vrcover2.jpg" alt="立信吾界的圖片"
                 /></a>
               </div>
             </div>
@@ -1743,7 +1743,7 @@
               <div class="testimonial-items">
                 <div class="row">
                   <div class="col-md-7">
-                    <img src="img/event_year.jpg" alt="" />
+                    <img src="img/event_year.jpg" alt="立信吾界的圖片" />
                   </div>
                   <div class="col-md-5">
                     <h5 class="eventTitle">活動標題</h5>
@@ -1764,7 +1764,7 @@
               <div class="testimonial-items">
                 <div class="row">
                   <div class="col-md-7">
-                    <img src="img/event_year.jpg" alt="" />
+                    <img src="img/event_year.jpg" alt="立信吾界的圖片" />
                   </div>
                   <div class="col-md-5">
                     <h5 class="eventTitle">活動標題</h5>
@@ -1785,7 +1785,7 @@
               <div class="testimonial-items">
                 <div class="row">
                   <div class="col-md-7">
-                    <img src="img/event_year.jpg" alt="" />
+                    <img src="img/event_year.jpg" alt="立信吾界的圖片" />
                   </div>
                   <div class="col-md-5">
                     <h5 class="eventTitle">活動標題</h5>
@@ -1806,7 +1806,7 @@
               <div class="testimonial-items">
                 <div class="row">
                   <div class="col-md-7">
-                    <img src="img/event_year.jpg" alt="" />
+                    <img src="img/event_year.jpg" alt="立信吾界的圖片" />
                   </div>
                   <div class="col-md-5">
                     <h5 class="eventTitle">活動標題</h5>
@@ -1856,7 +1856,7 @@
             <div id="yearworks" class="shop-products">
               <div class="portfolio-item design artwork">
                 <div class="image-box effect victor image-box-custom">
-                  <img src="img/works1.jpg" alt="" />
+                  <img src="img/works1.jpg" alt="立信吾界的圖片" />
                   <div class="image-box-content">
                     <h3 class="workstitle">2014 中山區建案</h3>
                     <p class="text-center">
@@ -1874,7 +1874,7 @@
 
               <div class="portfolio-item design beauty">
                 <div class="image-box effect victor image-box-custom">
-                  <img src="img/works1.jpg" alt="" />
+                  <img src="img/works1.jpg" alt="立信吾界的圖片" />
                   <div class="image-box-content">
                     <h3 class="workstitle">2014 中山區建案</h3>
                     <p class="text-center">
@@ -1891,7 +1891,7 @@
               </div>
               <div class="portfolio-item design beauty">
                 <div class="image-box effect victor image-box-custom">
-                  <img src="img/works1.jpg" alt="" />
+                  <img src="img/works1.jpg" alt="立信吾界的圖片" />
                   <div class="image-box-content">
                     <h3 class="workstitle">2014 中山區建案</h3>
                     <p class="text-center">
@@ -1941,7 +1941,7 @@
                   <a
                     href="https://www.youtube.com/watch?v=eTXu9A2dWDc"
                     data-lightbox-type="iframe"
-                    ><img alt="" src="img/NewsCover＿video.jpg" />
+                    ><img alt="立信吾界的圖片" src="img/NewsCover＿video.jpg" />
                   </a>
                 </div>
                 <div class="product-description p-10 text-center">
@@ -1973,7 +1973,7 @@
                     href="img/NewsCover_big.jpg"
                     data-lightbox-type="image"
                     title="陽光PARK 安坑版小松菸"
-                    ><img alt="" src="img/NewsCover.jpg" />
+                    ><img alt="立信吾界的圖片" src="img/NewsCover.jpg" />
                   </a>
                 </div>
                 <div class="product-description p-10 text-center">
@@ -2005,7 +2005,7 @@
                     href="img/NewsCover_big.jpg"
                     data-lightbox-type="image"
                     title="陽光PARK 安坑版小松菸"
-                    ><img alt="" src="img/NewsCover.jpg" />
+                    ><img alt="立信吾界的圖片" src="img/NewsCover.jpg" />
                   </a>
                 </div>
                 <div class="product-description p-10 text-center">
@@ -2064,7 +2064,7 @@
               <div class="product">
                 <div class="product-image">
                   <a href="img/NewsCover_big.jpg" data-lightbox-type="image"
-                    ><img alt="" src="img/NewsCover.jpg" />
+                    ><img alt="立信吾界的圖片" src="img/NewsCover.jpg" />
                   </a>
                 </div>
                 <div class="product-description p-10">
@@ -2089,7 +2089,7 @@
               <div class="product">
                 <div class="product-image">
                   <a href="img/NewsCover_big.jpg" data-lightbox-type="image"
-                    ><img alt="" src="img/NewsCover.jpg" />
+                    ><img alt="立信吾界的圖片" src="img/NewsCover.jpg" />
                   </a>
                 </div>
                 <div class="product-description p-10">
@@ -2114,7 +2114,7 @@
               <div class="product">
                 <div class="product-image">
                   <a href="img/NewsCover.jpg" data-lightbox-type="image"
-                    ><img alt="" src="img/NewsCover.jpg" />
+                    ><img alt="立信吾界的圖片" src="img/NewsCover.jpg" />
                   </a>
                 </div>
                 <div class="product-description p-10">
@@ -2288,7 +2288,7 @@
               </table>
             </div>
             <span class="lead visible-xs text-center"
-              ><img src="img/hand.png" alt="" style="margin-top:10px;"
+              ><img src="img/hand.png" alt="立信吾界的圖片" style="margin-top:10px;"
             /></span>
           </div>
         </section>
@@ -2531,7 +2531,7 @@
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="house-info-title">facebook</div>
-            <!-- <a class="house-info-link" href="https://zh-tw.facebook.com/94garden/" target="_blank"><img src="img/fb.png" alt=""></a> -->
+            <!-- <a class="house-info-link" href="https://zh-tw.facebook.com/94garden/" target="_blank"><img src="img/fb.png" alt="立信吾界的圖片"></a> -->
             <iframe width='340' height='130' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F94garden&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'></iframe>
           </div>
         </section>
@@ -2546,7 +2546,7 @@
         <section class="sectionMP" style="padding: 0px 0px;height: auto;">
           <img
             src="img/pc-14.jpg"
-            alt=""
+            alt="立信吾界的圖片"
             style="width: 100%;height: auto;float: left;"
           />
         </section>
@@ -2554,13 +2554,13 @@
           <img
             class="hidden-sm hidden-xs"
             src="img/pc-15.jpg"
-            alt=""
+            alt="立信吾界的圖片"
             style="width: 100%;height: auto;float: left;max-height: 50px;"
           />
           <img
             class="visible-sm visible-xs"
             src="img/pc-15.jpg"
-            alt=""
+            alt="立信吾界的圖片"
             style="width: 100%;height: auto;float: left;max-height: 30px;"
           />
           <a
@@ -2582,31 +2582,31 @@
           data-carousel-autoplay="true"
         >
           <div>
-            <a href="#"><img alt="" src="images/clients/1.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/1.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/2.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/2.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/3.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/3.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/4.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/4.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/5.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/5.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/6.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/6.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/7.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/7.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/8.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/8.png" /> </a>
           </div>
           <div>
-            <a href="#"><img alt="" src="images/clients/9.png" /> </a>
+            <a href="#"><img alt="立信吾界的圖片" src="images/clients/9.png" /> </a>
           </div>
         </div>
 
@@ -2654,7 +2654,7 @@
           </div>
           <div class="copyright-content footer-border-color">
             <div class="row text-center">
-              <img alt="" src="images/logo-sm-dark.png" />
+              <img alt="立信吾界的圖片" src="images/logo-sm-dark.png" />
               <div class="copyright-text text-center m-b-10">
                 &copy; 2016 匯點廣告製作<BR />
                 <a
@@ -2709,7 +2709,7 @@
       ><i class="fa fa-chevron-up"></i
     ></a>
     <a class="goto-order nav-to visible-lg visible-md" href="#section-Reservation"
-      ><img src="img/preorder.png" alt=""></a>
+      ><img src="img/preorder.png" alt="立信吾界的圖片"></a>
 
     <!-- Theme Base, Components and Settings -->
     <script src="js/theme-functions.js?d=1222"></script>

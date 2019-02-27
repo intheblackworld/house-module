@@ -105,7 +105,7 @@ const CirclAnimate = ({ show }) => {
               }}
               key={item.img}
             >
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="立信吾界的圖片" />
             </div>
           )
         })}
@@ -115,7 +115,7 @@ const CirclAnimate = ({ show }) => {
         {itemList.map(item => (
           <div className={css.staticItem} key={item.desc}>
             <div className={css.staticImg}>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="立信吾界的圖片" />
             </div>
             <div className={css.staticDesc}>{item.desc}</div>
           </div>

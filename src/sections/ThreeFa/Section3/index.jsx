@@ -47,7 +47,7 @@ const Item = ({ show, item }) => {
   })
   return (
     <div className={itemClass}>
-      <Image src={item.url} alt="三發丰悅的圖片" key={item.url} />
+      <Image src={item.url} alt="立信吾界的圖片" key={item.url} />
       <div className={css.content}>
         <h3>{item.title}</h3>
         <p>{item.desc}</p>
