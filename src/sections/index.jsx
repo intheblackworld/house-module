@@ -22,7 +22,8 @@ const Section9 = lazy(() => import('sections/ThreeFa/Section9'))
 const Section10 = lazy(() => import('sections/ThreeFa/Section10'))
 
 const SectionList = () => {
-  const width = document.getElementById('app').offsetWidth
+  const isMobile = window.navigator.userAgent.match(/iPad/i) != null
+    || window.navigator.userAgent.match(/iPhone/i) != null
   return (
     <React.Fragment>
       <Mask />
@@ -49,7 +50,7 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section4-5">
-        {width < 1028 ? (
+        {isMobile ? (
           <Section>
             <Section45 />
           </Section>
@@ -65,7 +66,7 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section6">
-        {width < 1028 ? (
+        {isMobile ? (
           <Section>
             <Section6 />
           </Section>
@@ -76,7 +77,7 @@ const SectionList = () => {
         )}
       </Element>
       <Element id="section7">
-        {width < 1028 ? (
+        {isMobile ? (
           <Section>
             <Section7 />
           </Section>
@@ -92,7 +93,7 @@ const SectionList = () => {
         </Element>
       </Section>
       <Element id="section9">
-        {width < 1028 ? (
+        {isMobile ? (
           <Section>
             <Section9 />
           </Section>
@@ -103,7 +104,7 @@ const SectionList = () => {
         )}
       </Element>
       <Element id="section10">
-        {width < 1028 ? (
+        {isMobile ? (
           <Section>
             <Section10 />
           </Section>
