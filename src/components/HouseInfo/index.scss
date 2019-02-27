@@ -64,6 +64,7 @@
   padding-left: 12px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 
   &:nth-of-type(even) {
     margin-right: 0;
