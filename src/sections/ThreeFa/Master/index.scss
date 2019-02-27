@@ -71,11 +71,11 @@
   h3 {
     font-size: 55px;
     text-align: center;
-    color: #B50007;
+    color: #b50007;
   }
   .sealWrap {
     display: flex;
-    margin-top: 30px; 
+    margin-top: 30px;
     justify-content: center;
   }
   .seal {
@@ -96,8 +96,14 @@
     font-family: 'Noto Serif TC', serif;
     letter-spacing: -4px;
   }
-}
 
+  .smallTitle {
+    h3 {
+      font-size: 40px;
+      line-height: 1;
+    }
+  }
+}
 
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -142,6 +148,13 @@
     .sealTitle {
       font-size: 46px;
       line-height: 46px;
+    }
+
+    .smallTitle {
+      h3 {
+        font-size: 30px;
+        line-height: 1;
+      }
     }
   }
 }
@@ -199,6 +212,13 @@
       font-size: 32px;
       line-height: 36px;
     }
+
+    .smallTitle {
+      h3 {
+         font-size: 22px;
+         line-height: 1;
+      }
+   }
   }
 }
 

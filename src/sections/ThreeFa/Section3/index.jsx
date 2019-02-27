@@ -6,6 +6,7 @@ import Viewport from 'components/ViewPort'
 import cx from 'classnames'
 
 import home from 'assets/img/section3/home.png'
+import bg1 from 'assets/img/master/bg1.png'
 import company1 from 'assets/img/section3/company-1.png'
 import company2 from 'assets/img/section3/company-2.png'
 import person1 from 'assets/img/section3/person-1.png'
@@ -41,6 +42,14 @@ const CompanyImgs = ({ show = false }) => {
       </div>
     </React.Fragment>
   )
+}
+
+const BuildImgs = ({ show = false }) => {
+  const buildingClass = cx(css.buildImg, {
+    [css.show]: show,
+    [css.hide]: !show,
+  })
+  return <img src={bg1} alt="" className={buildingClass} />
 }
 
 const Slides = ({ show = false }) => {
@@ -109,6 +118,18 @@ const Section3 = () => (
   <React.Fragment>
     <Image src={leaf1} alt="1" className={css.leaf1} />
     <Image src={leaf3} alt="1" className={css.leaf2} />
+    <Viewport>
+      <SectionTitle
+        titleTop="三發丰悅"
+        titleBottom="AESTHETICS"
+        iconUrl={home}
+        slolganMain="青年成家 超強首選"
+        sloganDescription="三發上市品質╳金革唱片音韻╳豪宅黃金陣容"
+      />
+    </Viewport>
+    <Viewport>
+      <BuildImgs />
+    </Viewport>
     <Viewport>
       <SectionTitle
         titleTop="上市保證"

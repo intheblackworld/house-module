@@ -17,34 +17,34 @@ const NavItems = [
     name: '租不如買',
     imgSrc: require('assets/img/navigation/hand.png'),
     section: 'section2',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '上市保證',
     imgSrc: require('assets/img/navigation/house.png'),
     section: 'section3',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '最潮建築',
     imgSrc: require('assets/img/navigation/no1.png'),
     section: 'section4',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '無敵安心',
     imgSrc: require('assets/img/navigation/heart.png'),
     section: 'section5',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
   {
     name: '預約賞屋',
     imgSrc: require('assets/img/navigation/pen.png'),
     section: 'section6',
-    OffsetValue: -(PCNavigationHeight),
+    OffsetValue: -PCNavigationHeight,
   },
 ]
 
@@ -65,7 +65,7 @@ const Navigation = () => {
     } else if (wh < 768) {
       h = MobileNavigationHeight
     } else {
-      h = (PCNavigationHeight)
+      h = PCNavigationHeight
     }
     if (-h === list[list.length - 1].OffsetValue) return
 
@@ -91,7 +91,9 @@ const Navigation = () => {
         <Container>
           <div className={css.nav}>
             <div className={css.logo}>
-              <Image src={logo} alt="三發丰悅的圖片" />
+              <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
+                <Image src={logo} alt="三發丰悅的圖片" />
+              </Link>
             </div>
             <div
               className={css.menu}

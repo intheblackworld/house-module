@@ -20,7 +20,9 @@ const SectionList = () => (
   <React.Fragment>
     <Mask />
     <FullScreen needCutHeader={false}>
-      <Master />
+      <Element id="master">
+        <Master />
+      </Element>
     </FullScreen>
     <Section>
       <Element id="section2">
