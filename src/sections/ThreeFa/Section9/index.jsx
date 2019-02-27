@@ -8,14 +8,12 @@ import cx from 'classnames'
 import css from './index.scss'
 
 const imgList = [
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
-  `https://via.placeholder.com/${872}x${514}`,
+  require('./team1.png'),
+  require('./team2.png'),
+  require('./team3.png'),
+  require('./team4.png'),
+  require('./team5.png'),
+  require('./team6.png'),
 ]
 
 const Sliders = ({ show = false }) => {
@@ -32,7 +30,14 @@ const Sliders = ({ show = false }) => {
           ))}
         </Carousel>
       </div>
-      <p>公設情境示意圖，建設公司保有修改之權利；<br />裝潢示意圖，建設公司保有修改之權利</p>
+      <div className={css.descBg}>
+        <li>工務協理：馮 志華</li>
+        <li>工務經理：劉 春平</li>
+        <li>主任技師：朱 駿魁</li>
+        <li>機電副理：周 賜川</li>
+        <li>工務所長：張 健益</li>
+        <li>建設專案：吳 秋穆</li>
+      </div>
       {/* <div className={css.descBg}>
         <h3>
           回家都有音韻的陪伴

@@ -54,7 +54,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: [/\.scss$/, /\.sass$/],
         use: [
           {
             loader: 'style-loader', // creates style nodes from JS strings
@@ -129,11 +129,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '立信吾界 | 江翠第一線 核心金鑽區 | 官網',
       metaTitle: '立信吾界 | 江翠第一線 核心金鑽區 | 官網',
-      metaDescription: '立信吾界：江翠第一線，核心金鑽區，全齡化貼心公設，輝襯幸福生活，禮賓專線：02-2250-8111，接待中心：華江一路長江路三段口。(龍一駕訓班旁)',
+      metaDescription:
+        '立信吾界：江翠第一線，核心金鑽區，全齡化貼心公設，輝襯幸福生活，禮賓專線：02-2250-8111，接待中心：華江一路長江路三段口。(龍一駕訓班旁)',
       metaKeywords: '立信吾界,吾界,江子翠買房,江子翠建案,江子翠房屋',
       ogMetaTitle: '立信吾界 | 江翠第一線 核心金鑽區 | 官網',
       ogMetaType: 'website',
-      ogMetaDescription: '立信吾界：江翠第一線，核心金鑽區，全齡化貼心公設，輝襯幸福生活，禮賓專線：02-2250-8111，接待中心：華江一路長江路三段口。(龍一駕訓班旁)',
+      ogMetaDescription:
+        '立信吾界：江翠第一線，核心金鑽區，全齡化貼心公設，輝襯幸福生活，禮賓專線：02-2250-8111，接待中心：華江一路長江路三段口。(龍一駕訓班旁)',
       template: 'index.html',
       hash: true,
     }),
@@ -142,9 +144,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'), // 將 production 加入了全局的環境變數之後，第三方函式庫或專案內代碼會根據 production 做打包優化的判斷
     }),
     new AsyncChunkNames(), // TODO: change ENV config
-    new CopyPlugin([
-      { from: './src/assets/img/favicon.png', to: 'static/media/favicon.png' },
-    ]),
+    new CopyPlugin([{ from: './src/assets/img/favicon.png', to: 'static/media/favicon.png' }]),
   ],
 
   /* 抽公共代碼用的 (防止重复)

@@ -61,15 +61,7 @@ const SectionList = () => {
       </Element>
       <Section>
         <Element id="section5">
-          {width < 768 ? (
-            <Section>
-              <Section5 />
-            </Section>
-          ) : (
-            <FullScreen needCutHeader>
-              <Section5 />
-            </FullScreen>
-          )}
+          <Section5 />
         </Element>
       </Section>
       <Element id="section6">

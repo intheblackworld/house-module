@@ -1,21 +1,18 @@
 import React from 'react'
 import SectionTitle from 'components/SectionTitle'
-import CirclAnimate from 'components/CirclAnimate'
+import CircleAnimate from 'components/CircleAnimate'
+import ViewPort from 'components/ViewPort'
 // import cx from 'classnames'
 
 import './index.scss'
 
-
-const Section10 = () => {
-  const a = 1
-  console.log(a)
-
-  return (
-    <React.Fragment>
-      <SectionTitle title="五大友善設備 生活加倍舒適" />
-      <CirclAnimate />
-    </React.Fragment>
-  )
-}
+const Section10 = () => (
+  <React.Fragment>
+    <SectionTitle title="五大友善設備 生活加倍舒適" />
+    <ViewPort>
+      <CircleAnimate />
+    </ViewPort>
+  </React.Fragment>
+)
 
 export default Section10

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import cx from 'classnames'
 
 import css from './index.scss'
@@ -27,19 +27,49 @@ const itemList = [
     img: require('./item5.png'),
   },
 ]
+
+const useInterval = (callback, delay) => {
+  const savedCallback = useRef()
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback
+  })
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current()
+    }
+    if (delay !== null) {
+      const id = setInterval(tick, delay)
+      return () => clearInterval(id)
+    }
+    return false
+  }, [delay])
+}
 const CirclAnimate = ({ show }) => {
   const circleAnimateClass = cx(css.circle, {
     [css.show]: show,
   })
 
   const [active, setActive] = useState(0)
-  const timer = setTimeout(() => {
+  useInterval(() => {
     if (active === 0) {
       setActive(4)
     } else {
       setActive(active - 1)
     }
-  }, 3000)
+  }, 5000)
+  // clearTimeout(timer) // eslint-disable-line
+  // const timer = setTimeout(() => {
+  //   console.log(active)
+  //   if (active === 0) {
+  //     setActive(4)
+  //   } else {
+  //     setActive(active - 1)
+  //   }
+  // }, 3000)
 
   const rotateClass = cx(css.rotate, {
     [css.first]: active === 0,
@@ -52,8 +82,8 @@ const CirclAnimate = ({ show }) => {
   const { desc } = itemList[active]
 
   const handleClick = (index) => {
-    clearTimeout(timer)
     setActive(index)
+    // console.log('click', active)
   }
 
   return (
@@ -73,6 +103,7 @@ const CirclAnimate = ({ show }) => {
               onClick={() => {
                 handleClick(index)
               }}
+              key={item.img}
             >
               <img src={item.img} alt="" />
             </div>
@@ -82,7 +113,7 @@ const CirclAnimate = ({ show }) => {
       <div className={css.desc}>{desc}</div>
       <div className={css.staticContent}>
         {itemList.map(item => (
-          <div className={css.staticItem}>
+          <div className={css.staticItem} key={item.desc}>
             <div className={css.staticImg}>
               <img src={item.img} alt="" />
             </div>

@@ -1,0 +1,34 @@
+.parallelogram
+	transform: skew(-50deg)
+	position: absolute
+	z-index: -9
+
+// Colors
+$color1: #56D8FF
+$color2: rgb(67, 136, 156)
+$color3: rgb(143, 226, 252)
+	
+// Mixin
+=parallelogram($width, $height, $duration)
+	width: $width
+	height: $height
+	animation: moveBar $duration linear infinite
+
+=mixin($args...)
+	box-shadow: $args
+
+.parallelogram#one
+	+parallelogram(20px, 300px, 15s)
+	+mixin(100px 509px $color1, 20px 300px $color1, -120px 150px $color1)
+
+.parallelogram#two
+	+parallelogram(10px, 300px, 30s)
+	+mixin(250px 450px $color2, -50px 200px $color2)
+
+.parallelogram#three
+	+parallelogram(10px, 500px, 20s)
+	+mixin(70px 500px $color3, -100px 200px $color3)
+
+@keyframes moveBar
+	100%
+		transform: skew(-50deg) translateY(-1000px)

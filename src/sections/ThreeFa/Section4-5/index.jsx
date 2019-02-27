@@ -9,6 +9,7 @@ import css from './index.scss'
 
 const imgList = [
   require('./item1.jpg'),
+  require('./item2.jpg'),
 ]
 
 const Sliders = ({ show = false }) => {

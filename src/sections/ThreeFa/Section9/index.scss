@@ -9,14 +9,36 @@
   p {
     color: #fff;
     position: absolute;
-    bottom: 50px;
+    bottom: 20%;
     text-align: center;
     background: rgba(0, 0, 0, 0.3);
     width: 100%;
     font-size: 20px;
     line-height: 30px;
-    height: 30px;
+    height: 60px;
     opacity: 0;
+  }
+
+  .descBg {
+    background: rgba(35, 152, 187, 0.63);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    padding: 13px 40px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    li {
+      list-style: none;
+      min-width: 160px;
+      margin-right: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   .carousel {
@@ -81,7 +103,12 @@
       left: 0;
       right: 0;
       font-size: 12px;
+      height: 80px;
     }
+  }
+
+  .descBg {
+    display: none !important;
   }
 
   // .descBg {

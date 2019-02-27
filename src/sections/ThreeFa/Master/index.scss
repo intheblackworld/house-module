@@ -147,7 +147,7 @@
 
   &.hide {
     .bg, .logo1, .logo2, .logo3 {
-      @include animate(fadeOut, .5s, 0s);
+      @include animate(fadeOut, 3s, 0s);
     }
 
     .text {

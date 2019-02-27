@@ -47,6 +47,7 @@
     overflow: hidden;
     transform: rotate(0deg);
     filter: grayscale(1);
+    cursor: pointer;
 
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {

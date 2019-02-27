@@ -9,13 +9,13 @@
   p {
     color: #fff;
     position: absolute;
-    bottom: 50px;
+    bottom: 20%;
     text-align: center;
     background: rgba(0, 0, 0, 0.3);
     width: 100%;
     font-size: 20px;
     line-height: 30px;
-    height: 30px;
+    height: 60px;
     opacity: 0;
   }
 
@@ -81,6 +81,7 @@
       left: 0;
       right: 0;
       font-size: 12px;
+      height: 80px;
     }
   }
 
