@@ -201,7 +201,7 @@ const Order = ({ show }) => {
         text="「姓名、手機、 E-mail、居住城市、居住地區」
         是必填欄位"
         confirmButtonText="我知道了"
-        confirmButtonColor="#e5d48f"
+        confirmButtonColor="#56D8FF"
         onConfirm={() => triggerAlert(false)}
       />
       <Button className={submitClassName} onClick={submitForm}>
