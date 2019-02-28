@@ -4,10 +4,10 @@ import Carousel from 'components/Carousel'
 import { Image } from 'semantic-ui-react'
 
 
-import bg3 from 'assets/img/master/bg3.png'
-import leaf1 from 'assets/img/master/leaf-left-top.png'
-import leaf2 from 'assets/img/master/leaf-right-top.png'
-import leaf3 from 'assets/img/master/leaf-right-bottom.png'
+import bg3 from './bg3.png'
+import leaf1 from './leaf-left-top.png'
+import leaf2 from './leaf-right-top.png'
+import leaf3 from './leaf-right-bottom.png'
 
 import css from './index.scss'
 

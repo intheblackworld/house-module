@@ -1,11 +1,11 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
-import logo from 'assets/img/contactInfo/logo.png'
 import cx from 'classnames'
 import HButton from 'components/Button'
 import MapLink from 'components/Button/MapLink'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import logo from './logo.png'
 
 // import
 

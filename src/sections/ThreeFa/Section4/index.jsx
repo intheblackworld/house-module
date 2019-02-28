@@ -5,23 +5,23 @@ import Carousel from 'components/Carousel'
 import Viewport from 'components/ViewPort'
 import cx from 'classnames'
 
-import reward from 'assets/img/section4/reward.png'
+import reward from './reward.png'
 // import descBg from 'assets/img/section4/descBg.png'
-import leaf1 from 'assets/img/master/leaf-left-top.png'
-import leaf3 from 'assets/img/master/leaf-right-bottom.png'
+import leaf1 from '../Master/leaf-left-top.png'
+import leaf3 from '../Master/leaf-right-bottom.png'
 
 import css from './index.scss'
 
 const imgList = [
-  require('assets/img/section4/public-1.png'),
-  require('assets/img/section4/public-2.png'),
-  require('assets/img/section4/public-3.png'),
-  require('assets/img/section4/public-4.png'),
-  require('assets/img/section4/public-5.png'),
-  require('assets/img/section4/public-6.png'),
-  require('assets/img/section4/public-7.png'),
-  require('assets/img/section4/public-8.png'),
-  require('assets/img/section4/public-9.png'),
+  require('./public-1.png'),
+  require('./public-2.png'),
+  require('./public-3.png'),
+  require('./public-4.png'),
+  require('./public-5.png'),
+  require('./public-6.png'),
+  require('./public-7.png'),
+  require('./public-8.png'),
+  require('./public-9.png'),
   // require('assets/img/section4/public-10.png'),
   // require('assets/img/section4/public-11.png'),
   // require('assets/img/section4/public-12.png'),

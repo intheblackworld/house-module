@@ -3,8 +3,8 @@ import { Container, Image } from 'semantic-ui-react'
 import { Link } from 'react-scroll'
 import cx from 'classnames'
 
-import logo from 'assets/img/navigation/logo.png'
-import menu from 'assets/img/navigation/menu-btn.png'
+import logo from './logo.png'
+import menu from './menu-btn.png'
 
 import css from './index.scss'
 
@@ -15,34 +15,34 @@ const MobileNavigationHeight = 49
 const NavItems = [
   {
     name: '租不如買',
-    imgSrc: require('assets/img/navigation/hand.png'),
+    imgSrc: require('./hand.png'),
     section: 'section2',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '上市保證',
-    imgSrc: require('assets/img/navigation/house.png'),
+    imgSrc: require('./house.png'),
     section: 'section3',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '最潮建築',
-    imgSrc: require('assets/img/navigation/no1.png'),
+    imgSrc: require('./no1.png'),
     section: 'section4',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '無敵安心',
-    imgSrc: require('assets/img/navigation/heart.png'),
+    imgSrc: require('./heart.png'),
     section: 'section5',
     OffsetValue: -PCNavigationHeight,
   },
   {
     name: '預約賞屋',
-    imgSrc: require('assets/img/navigation/pen.png'),
+    imgSrc: require('./pen.png'),
     section: 'section6',
     OffsetValue: -PCNavigationHeight,
   },
