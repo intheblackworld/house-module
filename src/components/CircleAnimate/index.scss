@@ -17,22 +17,41 @@
     transition: all 0.5s;
     &.first {
       transform: rotate(72deg);
+
+      img {
+        transform: rotate(-117deg);
+      }
     }
 
     &.second {
       transform: rotate(144deg);
+      img {
+        transform: rotate(-144deg);
+      }
     }
 
     &.third {
       transform: rotate(216deg);
+
+      img {
+        transform: rotate(-216deg);
+      }
     }
 
     &.fourth {
       transform: rotate(288deg);
+
+      img {
+        transform: rotate(-288deg);
+      }
     }
 
     &.fifth {
       transform: rotate(360deg);
+
+      img {
+        transform: rotate(-117deg);
+      }
     }
   }
 
@@ -43,7 +62,7 @@
     border-radius: 50%;
     transform-origin: 200px 200px;
     border: 0px solid rgba(35, 152, 187, 0.63);;
-    transition: all .5s;
+    transition: all .7s;
     overflow: hidden;
     transform: rotate(0deg);
     filter: grayscale(1);
@@ -56,12 +75,13 @@
         img {
           width: 100%;
           height: auto;
-          transform: rotate(-$i * 72deg + 27deg);
+          transform: rotate(-117deg);
         }
-      }
-      &.active {
-        filter: none;
+        &.active {
+          filter: none;
         border: 7px solid rgba(35, 152, 187, 0.63);
+        transform: rotate($i * 72deg - 27deg) scale(1.1);
+        }
       }
     }
   }
