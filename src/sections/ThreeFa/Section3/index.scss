@@ -9,6 +9,20 @@
   margin-bottom: 75px;
   opacity: 0;
 
+  img {
+    &:nth-child(1) {
+      width: 123px;
+    }
+
+    &:nth-child(2) {
+      width: 57px;
+    }
+
+    &:nth-child(3) {
+      width: 198px;
+    }
+  }
+
   &.show {
     @include animate(fadeInUp, .6s, .2s);
   }
