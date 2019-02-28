@@ -24,6 +24,7 @@ const Section10 = lazy(() => import('sections/ThreeFa/Section10'))
 const SectionList = () => {
   const isMobile = window.navigator.userAgent.match(/iPad/i) != null
     || window.navigator.userAgent.match(/iPhone/i) != null
+    || window.navigator.userAgent.match(/Android/i) != null
   return (
     <React.Fragment>
       <Mask />

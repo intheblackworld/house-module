@@ -27,7 +27,7 @@ export default class GooglMap extends React.Component {
   initMap = () => {
     const { google } = window
     // 座標位置
-    const position = { lat: 24.968053, lng: 121.333049 }
+    const position = { lat: 25.0359272, lng: 121.4763091 }
     const map = new google.maps.Map(this.mapArea.current, {
       center: position,
       zoom: 18,

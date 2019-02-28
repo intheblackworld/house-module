@@ -14,12 +14,6 @@ const MobileNavigationHeight = 49
 
 const NavItems = [
   {
-    name: '首頁',
-    imgSrc: '',
-    section: 'master',
-    OffsetValue: -PCNavigationHeight,
-  },
-  {
     name: '黃金地段',
     imgSrc: '',
     section: 'section3',
@@ -116,9 +110,18 @@ const Navigation = () => {
       <Container fluid>
         <Container>
           <div className={css.nav}>
-            <div className={css.logo}>
-              <Image src={logo} alt="立信吾界的圖片" />
-            </div>
+            <Link
+              to="master"
+              spy
+              smooth
+              duration={500}
+              offset={-PCNavigationHeight}
+              key="master"
+            >
+              <div className={css.logo}>
+                <Image src={logo} alt="立信吾界的圖片" />
+              </div>
+            </Link>
             <div
               className={css.menu}
               role="presentation"
