@@ -12,6 +12,7 @@
     ]
   ],
   "plugins": [
+    "react-require",
     "transform-decorators-legacy",
     "transform-object-rest-spread",
     "transform-class-properties",

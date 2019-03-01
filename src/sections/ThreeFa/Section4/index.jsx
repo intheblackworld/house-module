@@ -1,4 +1,4 @@
-import React from 'react'
+import { Fragment } from 'react'
 import SectionTitle from 'components/SectionTitle'
 import { Image, Container } from 'semantic-ui-react'
 import Carousel from 'components/Carousel'
@@ -54,7 +54,7 @@ const Sliders = ({ show = false }) => {
 }
 
 const Section4 = () => (
-  <React.Fragment>
+  <Fragment>
     <Image src={leaf1} alt="1" className={css.leaf1} />
     <Image src={leaf3} alt="1" className={css.leaf2} />
     <Container>
@@ -71,7 +71,7 @@ const Section4 = () => (
         <Sliders />
       </Viewport>
     </Container>
-  </React.Fragment>
+  </Fragment>
 )
 
 export default Section4

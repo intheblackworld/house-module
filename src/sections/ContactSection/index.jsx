@@ -7,7 +7,7 @@ import Section from 'components/Section'
 import GoogleMap from 'components/GoogleMap'
 import HouseInfo from 'components/HouseInfo'
 import css from './index.scss'
-import info from './info'
+import info from '../../info'
 
 const {
   address, phone, fbLink, googleLink, houseInfos,

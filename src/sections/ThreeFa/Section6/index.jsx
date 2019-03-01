@@ -3,8 +3,8 @@ import { Image } from 'semantic-ui-react'
 import SectionSubTitle from 'components/SectionSubTitle'
 import HorizontalTimeline from 'components/HorizontalTimeline'
 import ViewPort from 'components/ViewPort'
-import leaf1 from 'assets/img/master/leaf-left-top.png'
-import leaf3 from 'assets/img/master/leaf-right-bottom.png'
+import leaf1 from '../Master/leaf-left-top.png'
+import leaf3 from '../Master/leaf-right-bottom.png'
 import css from './index.scss'
 
 const Section6 = () => (

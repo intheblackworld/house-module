@@ -1,4 +1,4 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import ViewPort from 'components/ViewPort'
 import cx from 'classnames'
 import css from './index.scss'
@@ -23,7 +23,7 @@ const timeItems = [
   },
   {
     year: '2012',
-    img: require('assets/img/section6/item-1.png'),
+    img: require('./item-1.png'),
     desc: '更名為三發地產<br>開拓台南房地產市場',
   },
 
@@ -45,13 +45,13 @@ const timeItems = [
 
   {
     year: '2015',
-    img: require('assets/img/section6/item-2.png'),
+    img: require('./item-2.png'),
     desc: '社團法人高雄市建築經營協會——第21屆建築園冶推手',
   },
 
   {
     year: '2016',
-    img: require('assets/img/section6/item-3.png'),
+    img: require('./item-3.png'),
     desc: `國家卓越建設金質獎<br>
     最佳施工品質類<br>
     【三發匯世界】【三發晶沙】 <br>
@@ -63,7 +63,7 @@ const timeItems = [
   },
   {
     year: '2017',
-    img: require('assets/img/section6/item-4.png'),
+    img: require('./item-4.png'),
     desc: `國家建築金質獎<br>
     施工品質類國首獎【三發晶沙】<br>
     首次建造高雄厝個案【三發晶沙】完工<br>`,
@@ -71,7 +71,7 @@ const timeItems = [
 
   {
     year: '2018',
-    img: require('assets/img/section6/item-5.png'),
+    img: require('./item-5.png'),
     desc: `高雄厝綠建築大獎、友善空間特別獎<br>
     民眾票選人氣獎【三發晶沙】<br>
     <br>
@@ -91,7 +91,7 @@ const TimeItem = ({ show, item }) => {
     <div className={itemClass}>
       <div className={css.title}>{item.year}</div>
       <div className={css.content}>
-        { item.img && <img src={item.img} alt="" />}
+        {item.img && <img src={item.img} alt="" />}
         <div className={css.desc}>
           {item.desc.split('<br>').map((text, index) => (
             <p key={`${index}-${text}`}>{text}</p> // eslint-disable-line
@@ -101,7 +101,7 @@ const TimeItem = ({ show, item }) => {
     </div>
   )
 }
-const Timeline = React.forwardRef((props, ref) => (
+const Timeline = forwardRef((props, ref) => (
   <section className={css.timeline} ref={ref}>
     {timeItems.map(item => (
       <ViewPort key={item.desc}>
