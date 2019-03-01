@@ -1,3 +1,26 @@
+// @mixin rotate($) {
+//   .item {
+//     @for $i from 1 through 5 {
+//       &:nth-child(#{$i}) {
+//         transform: rotate($i * 72deg - 27deg);
+//         // @include animate(fadeInUp, .4s, 0.2s + $i * 0.15s);
+//         &.active {
+//           filter: none;
+//           border: 7px solid rgba(35, 152, 187, 0.63);
+//           transform: rotate($i * 72deg - 27deg) scale(1.1);
+//         }
+        
+//         img {
+//           width: 100%;
+//           height: auto;
+//           transform: rotate(-($i - 1) * 72deg - 117deg);
+//         }
+//       }
+//     }
+//   }
+// }
+
+
 .circle {
   width: 400px;
   height: 400px;
@@ -18,39 +41,90 @@
     &.first {
       transform: rotate(72deg);
 
-      img {
-        transform: rotate(-117deg);
+      .item {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transform: rotate($i * 72deg - 27deg);
+            &.active {
+              transform: rotate($i * 72deg - 27deg) scale(1.1);
+            }
+            img {
+              transform: rotate(-($i - 1) * 72deg - 117deg);
+            }
+          }
+        }
       }
     }
 
     &.second {
       transform: rotate(144deg);
-      img {
-        transform: rotate(-144deg);
+
+      .item {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transform: rotate($i * 72deg - 27deg);
+            &.active {
+              transform: rotate($i * 72deg - 27deg) scale(1.1);
+            }
+            
+            img {
+              transform: rotate(-($i - 1) * 72deg - 117deg - 72deg);
+            }
+          }
+        }
       }
     }
 
     &.third {
       transform: rotate(216deg);
 
-      img {
-        transform: rotate(-216deg);
+      .item {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transform: rotate($i * 72deg - 27deg);
+            &.active {
+              transform: rotate($i * 72deg - 27deg) scale(1.1);
+            }
+            img {
+              transform: rotate(-($i - 1) * 72deg - 117deg - 72deg - 72deg);
+            }
+          }
+        }
       }
     }
 
     &.fourth {
       transform: rotate(288deg);
 
-      img {
-        transform: rotate(-288deg);
+      .item {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transform: rotate($i * 72deg - 27deg);
+            &.active {
+              transform: rotate($i * 72deg - 27deg) scale(1.1);
+            }
+            img {
+              transform: rotate(-($i - 1) * 72deg - 117deg - 72deg - 72deg - 72deg);
+            }
+          }
+        }
       }
     }
 
     &.fifth {
       transform: rotate(360deg);
-
-      img {
-        transform: rotate(-117deg);
+      .item {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transform: rotate($i * 72deg - 27deg);
+            &.active {
+              transform: rotate($i * 72deg - 27deg) scale(1.1);
+            }
+            img {
+              transform: rotate(-($i - 1) * 72deg - 117deg - 72deg - 72deg - 72deg - 72deg);
+            }
+          }
+        }
       }
     }
   }
@@ -67,20 +141,26 @@
     transform: rotate(0deg);
     filter: grayscale(1);
     cursor: pointer;
+    &.active {
+      filter: none;
+      border: 7px solid rgba(35, 152, 187, 0.63);
+    }
 
+    img {
+      width: 100%;
+      height: auto;
+      transition: all .7s;
+    }
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
         transform: rotate($i * 72deg - 27deg);
         // @include animate(fadeInUp, .4s, 0.2s + $i * 0.15s);
-        img {
-          width: 100%;
-          height: auto;
-          transform: rotate(-117deg);
-        }
         &.active {
-          filter: none;
-        border: 7px solid rgba(35, 152, 187, 0.63);
-        transform: rotate($i * 72deg - 27deg) scale(1.1);
+          transform: rotate($i * 72deg - 27deg) scale(1.1);
+        }
+        
+        img {    
+          transform: rotate(-117deg);
         }
       }
     }

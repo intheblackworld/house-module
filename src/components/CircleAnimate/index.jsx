@@ -53,13 +53,15 @@ const CirclAnimate = ({ show }) => {
     [css.show]: show,
   })
 
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(4)
   useInterval(() => {
-    if (active === 0) {
-      setActive(4)
-    } else {
-      setActive(active - 1)
-    }
+    console.log(1)
+    // return
+    // if (active === 0) {
+    //   setActive(4)
+    // } else {
+    //   setActive(active - 1)
+    // }
   }, 5000)
   // clearTimeout(timer) // eslint-disable-line
   // const timer = setTimeout(() => {
