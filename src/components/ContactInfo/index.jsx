@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
-import logo from 'assets/img/contactInfo/logo.png'
+import logo from 'assets/img/contactInfo/favicon.png'
 import cx from 'classnames'
 import HButton from 'components/Button'
 import MapLink from 'components/Button/MapLink'

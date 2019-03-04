@@ -36,7 +36,7 @@ const Sliders = ({ show = false }) => {
           ))}
         </Carousel>
       </div>
-      <p>公設情境示意圖，建設公司保有修改之權利；<br />裝潢示意圖，建設公司保有修改之權利</p>
+      <p>裝潢示意圖，建設公司保有修改之權利</p>
       {/* <div className={css.descBg}>
         <h3>
           回家都有音韻的陪伴

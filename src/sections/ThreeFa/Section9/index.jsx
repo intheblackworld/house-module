@@ -8,7 +8,7 @@ import cx from 'classnames'
 import css from './index.scss'
 
 const imgList = [
-  require('./team1.png'),
+  // require('./team1.png'),
   require('./team2.png'),
   require('./team3.png'),
   require('./team4.png'),
