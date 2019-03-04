@@ -11,6 +11,8 @@
 .bg {
   background-image: url('./bg.png');
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .ray {
@@ -116,7 +118,7 @@
 }
 
 .title {
-  font-family: 'DFPingJuStd', serif;
+  font-family: 'Noto Sans TC', serif;
   font-size: 45px;
   font-weight: bold;
   color: #f32218;

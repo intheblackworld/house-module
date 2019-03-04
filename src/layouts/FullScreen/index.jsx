@@ -5,6 +5,7 @@ import css from './index.scss'
 
 const FullScreen = (props) => {
   const className = cx(css.fullScreen, {
+    [css.master]: props.master || false,
     [css.cutHeader]: props.needCutHeader || false,
     [css.alignCenter]: props.alignCenter || false,
   })

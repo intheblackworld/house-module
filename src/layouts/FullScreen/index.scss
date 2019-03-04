@@ -4,8 +4,12 @@
   width: 100%;
   overflow: hidden;
   height: 100vh;
+
   &.cutHeader {
     height: calc(100vh - #{$navigationPCHeight});
+  }
+
+  &.master {
     margin-top: $navigationPCHeight;
   }
 

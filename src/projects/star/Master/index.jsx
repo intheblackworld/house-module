@@ -17,7 +17,7 @@ const Master = ({ show }) => {
       </div>
       <div className={c.main}>
         <div className={c.bubbleChat}>
-          <div className={c.title}>你當巨星！哥斗內你！</div>
+          <h2 className={c.title}>你當巨星！哥斗內你！</h2>
           <Link
             className={c.link}
             to="section2"

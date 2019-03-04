@@ -1,9 +1,19 @@
+@import '../assets/global.scss';
+
+h2 {
+  font-family: 'DFPingJuStd';
+  margin: 0;
+  font-weight: normal;
+}
 h3 {
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'Noto Sans TC', serif;
+  margin: 0;
+  font-weight: normal;
 }
 
 p {
   font-family: 'Noto Sans TC', serif;
+  margin: 0;
 }
 
 /* animate css */

@@ -1,7 +1,7 @@
 import React, { lazy } from 'react'
 import { Element } from 'react-scroll'
 import Mask from 'components/AstrictMask'
-import Order from 'components/Order'
+// import Order from 'components/Order'
 import ViewPort from 'components/ViewPort'
 import FullScreen from './FullScreen'
 import Section from './Section'
@@ -18,23 +18,21 @@ const Section4 = lazy(() => import('projects/star/Section4'))
 const Layout = () => (
   <React.Fragment>
     <Mask />
-    <FullScreen needCutHeader>
+    <FullScreen needCutHeader master>
       <Element id="master">
         <ViewPort>
           <Master />
         </ViewPort>
       </Element>
     </FullScreen>
-    <Section>
+    <FullScreen needCutHeader>
       <Element id="section2">
         <Section2 />
       </Element>
-    </Section>
-    <Section>
-      <Element id="section3">
-        <Section3 />
-      </Element>
-    </Section>
+    </FullScreen>
+    <Element id="section3">
+      <Section3 />
+    </Element>
     <Section>
       <Element id="section4">
         <Section4 />
@@ -48,9 +46,9 @@ const Layout = () => (
     <Section>
       <Section6 />
     </Section> */}
-    <Element id="section6">
+    {/* <Element id="section6">
       <Order />
-    </Element>
+    </Element> */}
   </React.Fragment>
 )
 

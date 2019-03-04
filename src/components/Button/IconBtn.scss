@@ -4,11 +4,15 @@
   background-color: #0047af;
   border-radius: 36px / 36px;
   cursor: pointer;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .desc {
     color: #fff;
     font-size: 20px;

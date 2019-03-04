@@ -8,9 +8,9 @@ import menu from './menu-btn.png'
 
 import css from './index.scss'
 
-const PCNavigationHeight = 80
-const TabletNavigationHeight = 78
-const MobileNavigationHeight = 49
+const PCNavigationHeight = 60
+const TabletNavigationHeight = 60
+const MobileNavigationHeight = 60
 
 const NavItems = [
   {
