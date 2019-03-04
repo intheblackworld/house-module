@@ -90,12 +90,11 @@ const Order = ({ show }) => {
     fetch('contact-form.php', {
       method: 'POST',
       body: formData,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = 'formThanks'
+      }
     })
-    // .then((response) => {
-    //   if (response.status === 200) {
-    //     window.location.href = 'formThanks'
-    //   }
-    // })
     // .then((myJson) => {
     //   console.log(myJson)
     // })
