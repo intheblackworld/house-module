@@ -7,12 +7,13 @@
 		- svg
 		- rwd.scss (斷點 example)
 		- plugin.css (引入第三方套件的樣式)
-  - sections
+  - projects (專案留存，保留組件用)
+  - layouts
 		- Master (主視覺)
 		- ContactSection （預約賞屋/聯絡資訊/GoogleMap/建案資訊，等四個組件的區塊，基本上不會大改風格)
       - ThreeFa/Section1...x (三發專案各區塊)
 		- index.jsx (將各區塊組合)
-		
+	
   - pages
 		- Home.jsx
 		- Thanks.jsx (感謝頁)
@@ -26,11 +27,10 @@
 		- FullScreen (for 滿版的區塊)
 		- ViewPort (偵測組件是否進入視區的組件)
       - GoogleMap (Google map js API 組件，可調整樣式)
-		- 
+		- 專案名稱下會有 sections 用來保留組合成 layouts 用
   
 
   - public (semantic custom theme variable)
-  - theme-example (semantic theme default variable example)
   - utils
 		- index.js
   - plugins

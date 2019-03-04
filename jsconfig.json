@@ -8,7 +8,8 @@
     "paths": {
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
-      "sections/*": ["./src/sections/*"],
+      "layouts/*": ["./src/layouts/*"],
+      "projects/*": ["./src/projects/*"],
       "plugins/*": ["./src/plugins/*"],
       "utils/*": ["./src/utils/*"],
       "testConcept/*": ["./src/testConcept/*"],

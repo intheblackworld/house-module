@@ -1,22 +1,22 @@
 import React, { lazy } from 'react'
 import { Element } from 'react-scroll'
-import FullScreen from 'components/FullScreen'
-import Section from 'components/Section'
 import Mask from 'components/AstrictMask'
+import FullScreen from './FullScreen'
+import Section from './Section'
 // import ViewPort from 'components/ViewPort'
 
-import ContactSection from 'sections/ContactSection'
+import ContactSection from './ContactSection'
 
 import './index.scss'
 
-const Master = lazy(() => import('sections/ThreeFa/Master'))
-const Section2 = lazy(() => import('sections/ThreeFa/Section2'))
-const Section3 = lazy(() => import('sections/ThreeFa/Section3'))
-const Section4 = lazy(() => import('sections/ThreeFa/Section4'))
-const Section5 = lazy(() => import('sections/ThreeFa/Section5'))
-const Section6 = lazy(() => import('sections/ThreeFa/Section6'))
+const Master = lazy(() => import('projects/fy/Master'))
+const Section2 = lazy(() => import('projects/fy/Section2'))
+const Section3 = lazy(() => import('projects/fy/Section3'))
+const Section4 = lazy(() => import('projects/fy/Section4'))
+const Section5 = lazy(() => import('projects/fy/Section5'))
+const Section6 = lazy(() => import('projects/fy/Section6'))
 
-const SectionList = () => (
+const Layout = () => (
   <React.Fragment>
     <Mask />
     <FullScreen needCutHeader={false}>
@@ -53,4 +53,4 @@ const SectionList = () => (
   </React.Fragment>
 )
 
-export default SectionList
+export default Layout

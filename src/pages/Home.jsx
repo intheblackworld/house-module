@@ -1,6 +1,6 @@
 import React from 'react'
 import Navigation from 'components/Navigation'
-import SectionList from 'sections'
+import Layout from 'layouts'
 import Footer from 'components/Footer'
 
 // const Home = () => (
@@ -45,7 +45,7 @@ export default class Home extends React.Component {
         <div ref={this.script} />
         <div ref={this.noscript} />
         <Navigation />
-        <SectionList />
+        <Layout />
         <Footer />
       </div>
     )
