@@ -14,35 +14,42 @@ const MobileNavigationHeight = 49
 
 const NavItems = [
   {
-    name: '租不如買',
-    imgSrc: require('./hand.png'),
+    name: '超級任務',
+    imgSrc: '',
     section: 'section2',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '上市保證',
-    imgSrc: require('./house.png'),
+    name: '追片看明星',
+    imgSrc: '',
     section: 'section3',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '最潮建築',
-    imgSrc: require('./no1.png'),
+    name: '鐵粉來踩點',
+    imgSrc: '',
     section: 'section4',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '無敵安心',
-    imgSrc: require('./heart.png'),
+    name: '新星領航員',
+    imgSrc: '',
     section: 'section5',
     OffsetValue: -PCNavigationHeight,
   },
   {
-    name: '預約賞屋',
-    imgSrc: require('./pen.png'),
+    name: '挑戰成功',
+    imgSrc: '',
+    section: 'section6',
+    OffsetValue: -PCNavigationHeight,
+  },
+
+  {
+    name: '注意事項',
+    imgSrc: '',
     section: 'section6',
     OffsetValue: -PCNavigationHeight,
   },
@@ -111,7 +118,7 @@ const Navigation = () => {
             />
             <ul className={navlist}>
               {list
-                && list.map((item, index) => (
+                && list.map(item => (
                   <Link
                     to={item.section}
                     spy
@@ -121,9 +128,8 @@ const Navigation = () => {
                     key={item.section}
                   >
                     <span className={css.link}>
-                      <Image src={item.imgSrc} />
+                      {item.imgSrc && <Image src={item.imgSrc} />}
                       <span>{item.name}</span>
-                      {list.length - 1 !== index && <span className={css.divided}>|</span>}
                     </span>
                   </Link>
                 ))}

@@ -1,0 +1,155 @@
+@import '../../../assets/animate.scss';
+
+.bg,
+.ray {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg {
+  background-image: url('./bg.png');
+  display: flex;
+}
+
+.ray {
+  position: absolute;
+  background-image: url('./ray.png');
+  animation: commicSurprise 0.2s ease-in-out 0s infinite;
+}
+
+.leftEffect,
+.rightEffect {
+  position: absolute;
+  height: 100%;
+  img {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: auto;
+  }
+
+  // 表情符號
+  .like {
+    width: 106px;
+  }
+
+  .laugh {
+    width: 70px;
+  }
+
+  .love, .smile {
+    width: 61px;
+  }
+
+  .flower {
+    width: 58px;
+    height: 61px;
+  }
+
+  .surprise {
+    width: 90px;
+  }
+}
+
+.leftEffect {
+  left: 0;
+  width: 20%;
+
+  .like {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20%;
+  }
+
+  .laugh {
+    left: 10%;
+    top: 50%;
+  }
+
+  .flower {
+    right: 20%;
+    bottom: 40%;
+  }
+
+  .love {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 20%;
+  }
+}
+
+.rightEffect {
+  right: 0;
+  width: 30%;
+
+  .flower {
+    right: 10%;
+    top: 20%;
+  }
+
+  .surprise {
+    left: 0%;
+    top: 5%;
+  }
+
+  .love {
+    right: 30%;
+    bottom: 60%;
+  }
+
+  .smile {
+    right: 10%;
+    bottom: 30%;
+  }
+}
+
+.main {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.title {
+  font-family: 'Noto Sans TC', serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #f32218;
+  position: absolute;
+  bottom: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.bubbleChat {
+  background-image: url('./bubbleChat.png');
+  position: absolute;
+  z-index: 3;
+  width: 596px;
+  height: 548px;
+  top: 50%;
+  transform: translateY(-60%);
+  left: 70px;
+}
+
+
+.brother {
+  background-image: url('./brother.png');
+  position: absolute;
+  z-index: 3;
+  width: 502px;
+  height: auto;
+  right: 0;
+  bottom: 0;
+}
+
+.link {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+}
