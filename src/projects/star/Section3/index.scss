@@ -90,6 +90,37 @@
     width: 308px;
     height: 380px;
     background: #fff;
+    padding: 28px 15px;
+    position: relative;
+    .carouselTitle {
+      font-size: 18px;
+      color: #0047af;
+      margin-bottom: 23px;
+    }
+
+    .carouselBubble {
+      background-image: url('./bubble.png');
+      width: 120px;
+      height: 72px;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: -35px;
+      right: 25px;
+      padding-top: 20px;
+      h2 {
+        color: #fff;
+        font-size: 18px;
+        transform: rotate(3deg);
+        text-align: center;
+      }
+    }
+
+    .carouselDesc {
+      margin-top: 23px;
+      font-size: 16px;
+      color: #4b4b4b;
+    }
   }
 
   .item {

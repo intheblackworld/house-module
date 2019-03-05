@@ -1,8 +1,9 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import IconBtn from 'components/Button/IconBtn'
 import Order from 'components/Order'
 import { withTrans } from 'utils'
 import ViewPort from 'components/ViewPort'
+import Carousel from 'components/Carousel'
 import c from './index.scss'
 
 const Title = ({
@@ -78,43 +79,68 @@ const FbBlock = ({ show }) => (
   </div>
 )
 
-const Task2 = ({ show }) => (
-  <div className={withTrans('task2', c, show)}>
-    <ViewPort>
-      <Title number="2" h2="任務二、鐵粉來踩點" p="到兩大星據點拍照打卡" />
-    </ViewPort>
-    <img src={require('./brother2.png')} alt="" className={c.brother2} />
-    <div className={c.taskHint2}>
-      <p>不用抽即可領取百元 7-11 禮券</p>
-      <p>（限量三百名）</p>
-    </div>
-    <div className={c.steps}>
-      <div className={c.item}>
-        <div className={c.label}>Step 1</div>
-        <div className={c.desc}>
-          至林板新特區拍下２張指定照片上傳至個人 FB
-          <br />
-          並同步在「新板巨星」打卡公開分享
-          <br />－ 範例如圖 －
+const Task2 = ({ show }) => {
+  const steps = ['Step 1', 'Step 2', '打卡成功！！']
+  const descs = ['在林板新特區「新板巨星」接待中心前，拍下小木屋美照。（如以上範例）', '在林板新特區大豐公園內，朝樹海及大棟距建物拍下美照。（如以上範例）', '打卡成功']
+  const [slideIndex, setSlideIndex] = useState(0)
+  return (
+    <div className={withTrans('task2', c, show)}>
+      <ViewPort>
+        <Title number="2" h2="任務二、鐵粉來踩點" p="到兩大星據點拍照打卡" />
+      </ViewPort>
+      <img src={require('./brother2.png')} alt="" className={c.brother2} />
+      <div className={c.taskHint2}>
+        <p>不用抽即可領取百元 7-11 禮券</p>
+        <p>（限量三百名）</p>
+      </div>
+      <div className={c.steps}>
+        <div className={c.item}>
+          <div className={c.label}>Step 1</div>
+          <div className={c.desc}>
+            至林板新特區拍下２張指定照片上傳至個人 FB
+            <br />
+            並同步在「新板巨星」打卡公開分享
+            <br />－ 範例如圖 －
+          </div>
+        </div>
+        <img src={require('./arrowDown.png')} alt="" className={c.arrowDown} />
+        <div className={c.item}>
+          <div className={c.label}>Step 2</div>
+          <div className={c.desc}>
+            進入「新板巨星」接待中心，向櫃檯人員表示
+            <br />
+            參加「一日林板新活動」出示達成任務之 FB 頁面
+            <br />
+            並完成登記，即可現場領取 7-11 百元禮卷
+            <br />－ 限量300名 －
+          </div>
         </div>
       </div>
-      <img src={require('./arrowDown.png')} alt="" className={c.arrowDown} />
-      <div className={c.item}>
-        <div className={c.label}>Step 2</div>
-        <div className={c.desc}>
-          進入「新板巨星」接待中心，向櫃檯人員表示
-          <br />
-          參加「一日林板新活動」出示達成任務之 FB 頁面
-          <br />
-          並完成登記，即可現場領取 7-11 百元禮卷
-          <br />－ 限量300名 －
+      {/* 拍照打卡範例輪播 */}
+      <div className={c.carousel}>
+        <h2 className={c.carouselTitle}>指定照片 {slideIndex + 1}</h2>
+        <div className={c.carouselBubble}>
+          <h2>{steps[slideIndex]}</h2>
+        </div>
+        <Carousel
+          slidesToShow={1}
+          fade={false}
+          arrows
+          className={c.caruselImg}
+          autoplaySpeed={3000}
+          afterChange={index => setSlideIndex(index)}
+        >
+          <img src={require('./slide1.png')} alt="" />
+          <img src={require('./slide2.png')} alt="" />
+          <img src={require('./slide3.png')} alt="" />
+        </Carousel>
+        <div className={c.carouselDesc}>
+          {descs[slideIndex]}
         </div>
       </div>
     </div>
-    {/* 拍照打卡範例輪播 */}
-    <div className={c.carousel}>123</div>
-  </div>
-)
+  )
+}
 
 const GoogleBtn = ({ show }) => (
   <div style={{ margin: '0 auto', width: '400px' }} className={withTrans('googleBtn', c, show)}>

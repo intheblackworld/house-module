@@ -19,7 +19,8 @@ const Carousel = ({
   accessibility = true,
   slidesToShow = 1,
   slidesToScroll = 1,
-  initialSlide = 1,
+  initialSlide = 0,
+  afterChange,
 }) => (
   <Slider
     autoplay={autoplay}
@@ -37,6 +38,7 @@ const Carousel = ({
     slidesToScroll={slidesToScroll}
     initialSlide={initialSlide}
     className={css.carousel}
+    afterChange={afterChange}
   >
     {children}
   </Slider>
