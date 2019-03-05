@@ -1,22 +1,29 @@
 import IconBtn from 'components/Button/IconBtn'
 import { Link } from 'react-scroll'
+import { withTrans } from 'utils'
 import c from './index.scss'
 
 const PCNavigationHeight = 60
 
 const Master = ({ show }) => {
-  console.log(show)
+  const brotherClass = withTrans('brother', c, show)
+  const bubbleClass = withTrans('bubbleChat', c, show)
+  const leftEffectClass = withTrans('leftEffect', c, show)
+  const rightEffectClass = withTrans('rightEffect', c, show)
   return (
     <div className={c.bg}>
       <div className={c.ray} />
-      <div className={c.leftEffect}>
+      <div className={leftEffectClass}>
         <img className={c.like} src={require('./like.png')} alt="" />
-        <img className={c.laugh} src={require('./laugh.png')} alt="" />
-        <img className={c.flower} src={require('./flower.png')} alt="" />
         <img className={c.love} src={require('./love.png')} alt="" />
+        <img className={c.like} src={require('./like.png')} alt="" />
+        <img className={c.flower} src={require('./flower.png')} alt="" />
+        <img className={c.laugh} src={require('./laugh.png')} alt="" />
+        <img className={c.love} src={require('./love.png')} alt="" />
+        <img className={c.like} src={require('./like.png')} alt="" />
       </div>
       <div className={c.main}>
-        <div className={c.bubbleChat}>
+        <div className={bubbleClass}>
           <h2 className={c.title}>你當巨星！哥斗內你！</h2>
           <Link
             className={c.link}
@@ -31,13 +38,16 @@ const Master = ({ show }) => {
           </Link>
         </div>
 
-        <img className={c.brother} src={require('./brother.png')} alt="" />
+        <img className={brotherClass} src={require('./brother.png')} alt="" />
       </div>
-      <div className={c.rightEffect}>
+      <div className={rightEffectClass}>
         <img className={c.flower} src={require('./flower.png')} alt="" />
         <img className={c.surprise} src={require('./surprise.png')} alt="" />
         <img className={c.love} src={require('./love.png')} alt="" />
+        <img className={c.flower} src={require('./flower.png')} alt="" />
         <img className={c.smile} src={require('./smile.png')} alt="" />
+        <img className={c.smile} src={require('./smile.png')} alt="" />
+        <img className={c.love} src={require('./love.png')} alt="" />
       </div>
     </div>
   )

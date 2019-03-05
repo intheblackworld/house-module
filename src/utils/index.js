@@ -1,3 +1,5 @@
+import cx from 'classnames'
+
 /* 回傳圖片列表 */
 export const imgUrls = (length, isFake, size = [300, 300]) => {
   // path, filePrefix, length,
@@ -12,4 +14,10 @@ export const imgUrls = (length, isFake, size = [300, 300]) => {
 
   // return urls
 }
+
+export const withTrans = (className, c, show) => cx(c[className], {
+  [c.show]: show,
+  [c.hide]: !show,
+})
+
 export default null

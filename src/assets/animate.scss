@@ -6,12 +6,10 @@
 @keyframes fadeIn {
   from { 
     opacity: 0;
-    transform: translate(0, 0);
   }
 
   to {
     opacity: 1;
-    transform: none;
   }
 }
 
@@ -143,6 +141,131 @@
   }
 }
 
+@keyframes emotionAnimationBig {
+  0% {
+    opacity: 0;
+    transform: translate(-5px, 140px) scale(0.2);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(5px, 120px) scale(0.2);
+  }
+
+  20% {
+    transform: translate(-5px, 100px) scale(0.2);
+  }
+
+  30% {
+    transform: translate(5px, 80px) scale(0.2);
+  }
+
+  40% {
+    transform: translate(-5px, 60px) scale(0.2);
+  }
+
+  50% {
+    transform: translate(5px, 40px) scale(0.2);
+  }
+
+  60% {
+    transform: translate(-5px, 20px) scale(0.2);
+  }
+
+  62% {
+    transform: translate(0px, 10px) scale(0.2);
+  }
+
+  70% {
+    transform: translate(5px, 0px) scale(0.76);
+  }
+
+  80% {
+    transform: translate(-5px, -20px) scale(0.65);
+  }
+
+  85% {
+    transform: translate(0px, -30px) scale(0.78);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translate(5px, -40px) scale(0.65);
+  }
+
+  95% {
+    transform: translate(0px, -50px) scale(.72);
+  }
+
+  100% {
+    transform: translate(-5px, -60px) scale(.7);
+    opacity: 0;
+  }
+}
+
+/* 表情符號飄升效果 */
+@keyframes emotionAnimationSmall {
+  0% {
+    opacity: 0;
+    transform: translate(-5px, 140px) scale(0.3);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(5px, 120px) scale(0.3);
+  }
+
+  20% {
+    transform: translate(-5px, 100px) scale(0.3);
+  }
+
+  30% {
+    transform: translate(5px, 80px) scale(0.3);
+  }
+
+  40% {
+    transform: translate(-5px, 60px) scale(0.3);
+  }
+
+  50% {
+    transform: translate(5px, 40px) scale(0.3);
+  }
+
+  60% {
+    transform: translate(-5px, 20px) scale(0.3);
+  }
+
+  62% {
+    transform: translate(0px, 10px) scale(0.3);
+  }
+
+  70% {
+    transform: translate(5px, 0px) scale(1.1);
+  }
+
+  80% {
+    transform: translate(-5px, -20px) scale(1.05);
+  }
+
+  85% {
+    transform: translate(0px, -30px) scale(1.15);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translate(5px, -40px) scale(1);
+  }
+
+  95% {
+    transform: translate(0px, -50px) scale(1.12);
+  }
+
+  100% {
+    transform: translate(-5px, -60px) scale(1.1);
+    opacity: 0;
+  }
+}
+
 
 // 漫畫效果 新版巨星 animation: commicSurprise .2s ease-in-out 0s infinite;
 @keyframes commicSurprise {
@@ -179,5 +302,25 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes commicYell {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: none;
   }
 }

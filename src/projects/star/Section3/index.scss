@@ -1,6 +1,5 @@
 @import '../../../assets/animate.scss';
 
-
 .bg {
   width: 100vw;
   background: #7ccbd8;
@@ -13,7 +12,9 @@
   padding-bottom: 100px;
 }
 
-.task1, .task2, .task3 {
+.task1,
+.task2,
+.task3 {
   position: relative;
 }
 
@@ -38,24 +39,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
-    .icon1, .icon2, .icon3 {
+
+    .icon1,
+    .icon2,
+    .icon3 {
       margin-bottom: 15px;
       img {
         width: 100%;
         height: auto;
       }
     }
-    
+
     .icon1 {
       width: 86px;
       height: 102px;
     }
-    .icon2, .icon3 {
+    .icon2,
+    .icon3 {
       width: 102px;
       height: 102px;
     }
-  
+
     .desc {
       width: 100%;
       font-weight: bold;
@@ -94,7 +98,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
     .desc {
       width: 100%;
       font-weight: bold;
@@ -143,6 +147,28 @@
     top: -10px;
     font-size: 90px;
     color: #fff;
+
+    opacity: 0;
+
+    &.show {
+      @include animate(fadeInUp, 0.6s, 0s);
+    }
+
+    &.hide {
+      @include animate(fadeOut, 1s, 0s);
+    }
+  }
+
+  .desc {
+    opacity: 0;
+
+    &.show {
+      @include animate(spreadIn, 0.6s, 0.2s);
+    }
+
+    &.hide {
+      @include animate(fadeOut, 1s, 0s);
+    }
   }
 
   h2 {
@@ -198,7 +224,9 @@
   z-index: 1;
 }
 
-.taskHint1, .taskHint2, .taskHint3 {
+.taskHint1,
+.taskHint2,
+.taskHint3 {
   position: absolute;
   padding: 5px 20px;
   background-position: center;
@@ -338,4 +366,170 @@
   color: #636363;
   text-align: center;
   width: 100%;
+}
+
+.task1 {
+  .brother1,
+  .taskHint1 h3,
+  .taskHint1 p,
+  .taskLabel,
+  .steps > *,
+  .brother11 {
+    opacity: 0;
+  }
+
+  &.show {
+    .brother1 {
+      @include animate(fadeInUp, 0.6s, 0s);
+    }
+
+    .taskHint1 {
+      h3,
+      p {
+        @include animate(fadeInUp, 0.6s, 0.2s);
+      }
+    }
+
+    .taskLabel {
+      @include animate(fadeInUp, 0.6s, 0.4s);
+    }
+
+    .steps > * {
+      &:nth-child(1) {
+        @include animate(fadeInUp, 0.6s, 0.6s);
+      }
+
+      &:nth-child(2) {
+        @include animate(fadeIn, 0.6s, 0.7s);
+      }
+
+      &:nth-child(3) {
+        @include animate(fadeInUp, 0.6s, 0.8s);
+      }
+
+      &:nth-child(4) {
+        @include animate(fadeIn, 0.6s, 0.9s);
+      }
+
+      &:nth-child(5) {
+        @include animate(fadeInUp, 0.6s, 1s);
+      }
+    }
+
+    .brother11 {
+      @include animate(fadeInUp, 0.6s, 1.2s);
+    }
+  }
+
+  &.hide {
+    .brother1,
+    .taskHint1 h3,
+    .taskHint1 p,
+    .taskLabel,
+    .steps > *,
+    .brother11 {
+      @include animate(fadeOut, 1s, 0s);
+    }
+  }
+}
+
+.task2 {
+  .brother2,
+  .taskHint2 h3,
+  .taskHint2 p,
+  .steps > *,
+  .carousel {
+    opacity: 0;
+  }
+  &.show {
+    // @include animate(fadeInUp, 0.6s, 0s);
+    .brother2 {
+      @include animate(fadeInUp, 0.6s, 0.2s);
+    }
+
+    .taskHint2 {
+      h3,
+      p {
+        @include animate(fadeIn, 0.6s, 0.2s);
+      }
+    }
+
+    .steps > * {
+      &:nth-child(1) {
+        @include animate(fadeInUp, 0.6s, 0.6s);
+      }
+
+      &:nth-child(2) {
+        @include animate(fadeIn, 0.6s, 0.7s);
+      }
+
+      &:nth-child(3) {
+        @include animate(fadeInUp, 0.6s, 0.8s);
+      }
+    }
+
+    .carousel {
+      @include animate(fadeInUp, 0.6s, 1s);
+    }
+  }
+
+  &.hide {
+    .brother2,
+    .taskHint2 h3,
+    .taskHint2 p,
+    .steps > *,
+    .carousel {
+      @include animate(fadeOut, 1s, 0s);
+    }
+  }
+}
+
+.fbBlock,
+.googleBtn,
+.mapTitle,
+.map {
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeInUp, 0.6s, 0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, 1s, 0s);
+  }
+}
+
+.task3 {
+  .brother3,
+  .brother31,
+  .taskHint3 h3,
+  .taskHint3 p {
+    opacity: 0;
+  }
+  &.show {
+    // @include animate(fadeInUp, 0.6s, 0s);
+    .brother3 {
+      @include animate(fadeInUp, 0.6s, 0.4s);
+    }
+
+    .taskHint3 {
+      h3,
+      p {
+        @include animate(fadeInUp, 0.6s, 0.6s);
+      }
+    }
+
+    .brother31 {
+      @include animate(fadeInUp, 0.6s, 0.8s);
+    }
+  }
+
+  &.hide {
+    .brother3,
+    .brother31,
+    .taskHint3 h3,
+    .taskHint3 p {
+      @include animate(fadeOut, 1s, 0s);
+    }
+  }
 }

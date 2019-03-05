@@ -20,6 +20,15 @@
 .head {
   font-size: 45px;
   color: #fff;
+  opacity: 0;
+
+  &.show {
+    @include animate(spreadIn, 0.6s, 0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, 1s, 0.2s);
+  }
 }
 
 .bg {
@@ -38,7 +47,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 120px;
-  
+
   .item {
     width: 33.33%;
     position: relative;
@@ -46,6 +55,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+  }
+
+  &.show {
+    .item {
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeInUp, 0.6s, $i * .2s);
+        }
+      }
+      
+    }
+  }
+
+  &.hide {
+    .item {
+      @include animate(fadeOut, 1s, 0s);
+    }
   }
 
   @for $i from 1 through 3 {

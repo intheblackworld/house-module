@@ -41,7 +41,8 @@
     width: 70px;
   }
 
-  .love, .smile {
+  .love,
+  .smile {
     width: 61px;
   }
 
@@ -58,54 +59,156 @@
 .leftEffect {
   left: 0;
   width: 20%;
+  opacity: 0;
 
-  .like {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 20%;
+  &.show {
+    @include animate(fadeInUp, 0.6s, 1s);
   }
 
-  .laugh {
-    left: 10%;
-    top: 50%;
+  &.hide {
+    @include animate(fadeOut, 1s, 0.2s);
   }
 
-  .flower {
-    right: 20%;
-    bottom: 40%;
+  img {
+    &:nth-child(1) {
+      left: 20%;
+      top: 14%;
+      animation: emotionAnimationBig 3s linear 0.2s infinite;
+    }
+
+    &:nth-child(2) {
+      left: 20px;
+      top: 24%;
+      animation: emotionAnimationBig 3s linear 0s infinite;
+    }
+
+    &:nth-child(3) {
+      left: 13%;
+      top: 47%;
+      animation: emotionAnimationSmall 3s linear 0.7s infinite;
+    }
+
+    &:nth-child(4) {
+      left: 24%;
+      bottom: 20%;
+      animation: emotionAnimationBig 3s linear 0.8s infinite;
+    }
+
+    &:nth-child(5) {
+      left: 33%;
+      bottom: 40%;
+      animation: emotionAnimationSmall 3s linear 0.2s infinite;
+    }
+
+    &:nth-child(6) {
+      left: 20%;
+      bottom: 70%;
+      animation: emotionAnimationSmall 3s linear 0.4s infinite;
+    }
+
+    &:nth-child(7) {
+      left: 35%;
+      bottom: 25%;
+      animation: emotionAnimationSmall 3s linear 0.9s infinite;
+    }
+
+    &:nth-child(8) {
+      left: 30%;
+      bottom: 50%;
+      animation: emotionAnimationBig 3s linear 0.3s infinite;
+    }
   }
 
-  .love {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 20%;
-  }
+  // .like {
+  //   left: 0;
+  //   right: 0;
+  //   margin: 0 auto;
+  //   top: 20%;
+  //   animation: emotionAnimationBig 3s linear 0s infinite;
+
+  // }
+
+  // .laugh {
+  //   left: 10%;
+  //   top: 50%;
+  //   animation: emotionAnimationSmall 3s linear .4s infinite;
+  // }
+
+  // .flower {
+  //   right: 20%;
+  //   bottom: 40%;
+  //   animation: emotionAnimationSmall 3s linear .8s infinite;
+  // }
+
+  // .love {
+  //   left: 0;
+  //   right: 0;
+  //   margin: 0 auto;
+  //   bottom: 20%;
+  //   animation: emotionAnimationSmall 3s linear 1.2s infinite;
+  // }
 }
 
 .rightEffect {
   right: 0;
   width: 30%;
 
-  .flower {
-    right: 10%;
-    top: 20%;
+  &.show {
+    @include animate(fadeInUp, 0.6s, 1s);
   }
 
-  .surprise {
-    left: 0%;
-    top: 5%;
+  &.hide {
+    @include animate(fadeOut, 1s, 0.2s);
   }
 
-  .love {
-    right: 30%;
-    bottom: 60%;
-  }
+  img {
+    &:nth-child(1) {
+      left: 40%;
+      top: 14%;
+      animation: emotionAnimationSmall 3s linear 0.2s infinite;
+    }
 
-  .smile {
-    right: 10%;
-    bottom: 30%;
+    &:nth-child(2) {
+      left: 30%;
+      top: 24%;
+      animation: emotionAnimationBig 3s linear 0s infinite;
+    }
+
+    &:nth-child(3) {
+      left: 63%;
+      top: 47%;
+      animation: emotionAnimationBig 3s linear 0.7s infinite;
+    }
+
+    &:nth-child(4) {
+      left: 54%;
+      bottom: 20%;
+      animation: emotionAnimationSmall 3s linear 0.8s infinite;
+    }
+
+    &:nth-child(5) {
+      left: 33%;
+      bottom: 40%;
+      animation: emotionAnimationSmall 3s linear 0.2s infinite;
+    }
+
+    &:nth-child(6) {
+      left: 52%;
+      bottom: 70%;
+      animation: emotionAnimationSmall 3s linear 0.4s infinite;
+    }
+
+    &:nth-child(7) {
+      left: 72%;
+      bottom: 25%;
+      animation: emotionAnimationSmall 3s linear 0.9s infinite;
+    }
+
+    &:nth-child(8) {
+      left: 30%;
+      bottom: 50%;
+      animation: emotionAnimationSmall 3s linear 0.3s infinite;
+    }
   }
 }
 
@@ -137,8 +240,16 @@
   top: 50%;
   transform: translateY(-60%);
   left: 70px;
-}
+  opacity: 0;
 
+  &.show {
+    @include animate(spreadIn, 0.6s, 0.4s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, 1s, 0.2s);
+  }
+}
 
 .brother {
   position: absolute;
@@ -147,6 +258,15 @@
   height: auto;
   right: 0;
   bottom: 0;
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeInUp, 0.6s, 0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, 1s, 0.2s);
+  }
 }
 
 .link {

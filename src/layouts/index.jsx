@@ -3,6 +3,7 @@ import { Element } from 'react-scroll'
 import Mask from 'components/AstrictMask'
 // import Order from 'components/Order'
 import ViewPort from 'components/ViewPort'
+import FixLink from 'components/FixLink'
 import FullScreen from './FullScreen'
 // import Section from './Section'
 
@@ -18,6 +19,7 @@ const Section4 = lazy(() => import('projects/star/Section4'))
 const Layout = () => (
   <React.Fragment>
     <Mask />
+    <FixLink />
     <FullScreen needCutHeader master>
       <Element id="master">
         <ViewPort>
