@@ -9,9 +9,9 @@ import SweetAlert from 'sweetalert2-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
+import PolicyDialog from 'components/PolicyDialog'
 import info from '../../sections/ContactSection/info'
 
-import PolicyDialog from 'components/PolicyDialog'
 
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
