@@ -1,0 +1,12 @@
+@import '../assets/animate.scss';
+
+
+.commicSuprice {
+  width: 100vw;
+  height: calc(100vh);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  background-image: url('../projects/star/Master/ray.png');
+  animation: commicSurprise 0.2s ease-in-out 0s infinite;
+}

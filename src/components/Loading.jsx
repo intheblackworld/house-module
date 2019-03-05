@@ -1,12 +1,11 @@
 import React from 'react'
-
 import { ClipLoader } from 'react-spinners'
+import c from './loading.scss'
 
 const Loading = () => (
   <div
     style={{
-      backgroundColor: '#9c1e23',
-      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0))',
+      backgroundImage: 'linear-gradient(to bottom, #ffed47, #ffce35',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -14,11 +13,8 @@ const Loading = () => (
       height: '100vh',
     }}
   >
-    <ClipLoader
-      sizeUnit="px"
-      size={150}
-      color="#e5d48f"
-    />
+    <div className={c.commicSuprice} />
+    <ClipLoader sizeUnit="px" size={150} color="#0047af" />
   </div>
 )
 

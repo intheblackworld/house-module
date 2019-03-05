@@ -22,13 +22,13 @@
     position: absolute;
     top: 0px;
     left: 20%;
-    animation: commicYell 1.5s linear 0s infinite;
+    animation: commicYell 2s linear 0s infinite;
   }
   .say2 {
     position: absolute;
     top: 0px;
     right: 20%;
-    animation: commicYell 1.5s linear .75s infinite;
+    animation: commicYell 2s linear 1s infinite;
   }
 
   .leftBrothers {
@@ -133,8 +133,7 @@
 }
 
 .ohya {
-  .say1,
-  .say2,
+  .sayGroup,
   .leftBrothers,
   .rightBrothers {
     opacity: 0;
