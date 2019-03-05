@@ -11,6 +11,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import PolicyDialog from 'components/PolicyDialog'
 
+import info from '../../info'
+
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
 
@@ -85,6 +87,33 @@ const Order = ({ show, noTitle }) => {
     formData.append('utm_medium', utm_medium)
     formData.append('utm_content', utm_content)
     formData.append('utm_campaign', utm_campaign)
+    const time = new Date()
+    const year = time.getFullYear()
+    const month = time.getMonth()
+    const day = time.getDay()
+    const hour = time.getHours()
+    const min = time.getMinutes()
+    const sec = time.getSeconds()
+    const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
+    console.log(date)
+    fetch(
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?
+      name=${name}&
+      phone=${phone}&
+      email=${email}&
+      cityarea=${city}${area}&
+      msg=${msg}&
+      utm_source=${utm_source}&
+      utm_medium=${utm_medium}&
+      utm_content=${utm_content}&
+      utm_campaign=${utm_campaign}&
+      date=${date}&
+      campaign_name=${info.caseName}&
+      `,
+      {
+        method: 'GET',
+      },
+    )
     fetch('contact-form.php', {
       method: 'POST',
       body: formData,
