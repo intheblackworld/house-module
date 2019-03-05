@@ -10,6 +10,145 @@
   margin: 0 auto;
   padding-top: 220px;
   padding-bottom: 100px;
+  position: relative;
+  z-index: 3;
+}
+
+.leftEffect, .rightEffect {
+  position: fixed;
+  width: calc(50vw - 475px);
+  opacity: .5;
+  height: 100%;
+  top: 0;
+  transition: all .3s;
+  img {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: auto;
+    opacity: 0;
+  }
+
+  // 表情符號
+  .like {
+    width: 70px;
+  }
+
+  .laugh {
+    width: 70px;
+  }
+
+  .love,
+  .smile {
+    width: 70px;
+  }
+}
+
+.leftEffect {
+  left: 0;
+  img {
+    &:nth-child(1) {
+      left: 20%;
+      top: 14%;
+      animation: emotionAnimationBig 3s linear 0.2s infinite;
+    }
+
+    &:nth-child(2) {
+      left: 20px;
+      top: 24%;
+      animation: emotionAnimationBig 3s linear 0s infinite;
+    }
+
+    &:nth-child(3) {
+      left: 13%;
+      top: 47%;
+      animation: emotionAnimationSmall 3s linear 0.7s infinite;
+    }
+
+    &:nth-child(4) {
+      left: 24%;
+      bottom: 20%;
+      animation: emotionAnimationBig 3s linear 0.8s infinite;
+    }
+
+    &:nth-child(5) {
+      left: 33%;
+      bottom: 40%;
+      animation: emotionAnimationSmall 3s linear 0.2s infinite;
+    }
+
+    &:nth-child(6) {
+      left: 20%;
+      bottom: 70%;
+      animation: emotionAnimationSmall 3s linear 0.4s infinite;
+    }
+
+    &:nth-child(7) {
+      left: 35%;
+      bottom: 25%;
+      animation: emotionAnimationSmall 3s linear 0.9s infinite;
+    }
+
+    &:nth-child(8) {
+      left: 30%;
+      bottom: 50%;
+      animation: emotionAnimationBig 3s linear 0.3s infinite;
+    }
+  }
+}
+
+.rightEffect {
+  right: 0;
+
+  img {
+    &:nth-child(1) {
+      left: 40%;
+      top: 14%;
+      animation: emotionAnimationSmall 3s linear 0.2s infinite;
+    }
+
+    &:nth-child(2) {
+      left: 30%;
+      top: 24%;
+      animation: emotionAnimationBig 3s linear 0s infinite;
+    }
+
+    &:nth-child(3) {
+      left: 63%;
+      top: 47%;
+      animation: emotionAnimationBig 3s linear 0.7s infinite;
+    }
+
+    &:nth-child(4) {
+      left: 54%;
+      bottom: 20%;
+      animation: emotionAnimationSmall 3s linear 0.8s infinite;
+    }
+
+    &:nth-child(5) {
+      left: 33%;
+      bottom: 40%;
+      animation: emotionAnimationSmall 3s linear 0.2s infinite;
+    }
+
+    &:nth-child(6) {
+      left: 52%;
+      bottom: 70%;
+      animation: emotionAnimationSmall 3s linear 0.4s infinite;
+    }
+
+    &:nth-child(7) {
+      left: 72%;
+      bottom: 25%;
+      animation: emotionAnimationSmall 3s linear 0.9s infinite;
+    }
+
+    &:nth-child(8) {
+      left: 30%;
+      bottom: 50%;
+      animation: emotionAnimationSmall 3s linear 0.3s infinite;
+    }
+  }
 }
 
 .task1,
@@ -151,6 +290,7 @@
   height: 502px;
   padding-top: 8px;
   margin-bottom: 130px;
+  margin-top: 200px;
 }
 
 .titleBg {
@@ -387,7 +527,6 @@
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-  margin-bottom: 260px;
 }
 
 .ps {

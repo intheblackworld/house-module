@@ -16,41 +16,41 @@ const NavItems = [
   {
     name: '超級任務',
     imgSrc: '',
-    section: 'section2',
+    section: 'point2',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '追片看明星',
     imgSrc: '',
-    section: 'section3',
+    section: 'point3',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '鐵粉來踩點',
     imgSrc: '',
-    section: 'section4',
+    section: 'point4',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '新星領航員',
     imgSrc: '',
-    section: 'section5',
+    section: 'point5',
     OffsetValue: -PCNavigationHeight,
   },
   {
     name: '挑戰成功',
     imgSrc: '',
-    section: 'section6',
+    section: 'point6',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
     name: '注意事項',
     imgSrc: '',
-    section: 'section6',
+    section: 'point7',
     OffsetValue: -PCNavigationHeight,
   },
 ]

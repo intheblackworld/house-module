@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 5;
 }
 
 .star {
@@ -35,6 +37,8 @@
   background: #ffdb32;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 5;
 }
 
 .main {

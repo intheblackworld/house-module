@@ -28,11 +28,11 @@ const Layout = () => (
       </Element>
     </FullScreen>
     <FullScreen needCutHeader>
-      <Element id="section2">
+      <Element id="point2">
         <Section2 />
       </Element>
     </FullScreen>
-    <Element id="section3">
+    <Element id="point3">
       <Section3 />
     </Element>
     <Element id="section4">

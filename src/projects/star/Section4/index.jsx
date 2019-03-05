@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { Element } from 'react-scroll'
 import { withTrans } from 'utils'
 import ViewPort from 'components/ViewPort'
 import c from './index.scss'
@@ -66,6 +67,7 @@ const Desc = ({ show }) => (
 
 const Section4 = () => (
   <Fragment>
+    <Element id="point6" />
     <ViewPort>
       <OhYa />
     </ViewPort>
@@ -81,6 +83,7 @@ const Section4 = () => (
         <Present />
       </ViewPort>
       <img src={require('./notice.png')} alt="" className={c.notice} />
+      <Element id="point7" />
       <ViewPort isBottom={false}>
         <Desc />
       </ViewPort>

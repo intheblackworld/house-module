@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import { Element } from 'react-scroll'
 import IconBtn from 'components/Button/IconBtn'
 import Order from 'components/Order'
 import { withTrans } from 'utils'
@@ -75,13 +76,18 @@ const FbBlock = ({ show }) => (
       粉絲專頁，
       <br />
       請得獎者於 1 週內以 FB 私訊真實姓名、電話供獎項領取聯繫
+      <Element id="point4" style={{ marginTop: '100px' }} />
     </div>
   </div>
 )
 
 const Task2 = ({ show }) => {
   const steps = ['Step 1', 'Step 2', '打卡成功！！']
-  const descs = ['在林板新特區「新板巨星」接待中心前，拍下小木屋美照。（如以上範例）', '在林板新特區大豐公園內，朝樹海及大棟距建物拍下美照。（如以上範例）', '打卡成功']
+  const descs = [
+    '在林板新特區「新板巨星」接待中心前，拍下小木屋美照。（如以上範例）',
+    '在林板新特區大豐公園內，朝樹海及大棟距建物拍下美照。（如以上範例）',
+    '打卡成功',
+  ]
   const [slideIndex, setSlideIndex] = useState(0)
   return (
     <div className={withTrans('task2', c, show)}>
@@ -134,9 +140,7 @@ const Task2 = ({ show }) => {
           <img src={require('./slide2.png')} alt="" />
           <img src={require('./slide3.png')} alt="" />
         </Carousel>
-        <div className={c.carouselDesc}>
-          {descs[slideIndex]}
-        </div>
+        <div className={c.carouselDesc}>{descs[slideIndex]}</div>
       </div>
     </div>
   )
@@ -176,10 +180,35 @@ const Task3 = ({ show }) => (
   </div>
 )
 const Map = ({ show }) => <div className={withTrans('map', c, show)} />
+
+const LeftEffect = ({ show }) => (
+  <div className={withTrans('leftEffect', c, show)}>
+    <img className={c.like} src={require('./like.png')} alt="" />
+    <img className={c.love} src={require('./love.png')} alt="" />
+    <img className={c.love} src={require('./love.png')} alt="" />
+    <img className={c.laugh} src={require('./laugh.png')} alt="" />
+    <img className={c.love} src={require('./love.png')} alt="" />
+  </div>
+)
+
+const RightEffect = ({ show }) => (
+  <div className={withTrans('rightEffect', c, show)}>
+    <img className={c.like} src={require('./like.png')} alt="" />
+    <img className={c.love} src={require('./love.png')} alt="" />
+    <img className={c.love} src={require('./love.png')} alt="" />
+    <img className={c.laugh} src={require('./laugh.png')} alt="" />
+    <img className={c.love} src={require('./love.png')} alt="" />
+  </div>
+)
 const Section3 = () => (
   <Fragment>
     <div className={c.bg}>
-      <div className={c.leftEffect} />
+      <ViewPort isBottom={false}>
+        <LeftEffect />
+      </ViewPort>
+      <ViewPort isBottom={false}>
+        <RightEffect />
+      </ViewPort>
       <div className={c.main}>
         {/* 任務一 */}
         <ViewPort isBottom={false}>
@@ -203,12 +232,12 @@ const Section3 = () => (
         <ViewPort isBottom={false}>
           <Map />
         </ViewPort>
+        <Element id="point5" style={{ marginTop: '30px' }} />
         {/* 任務三 */}
         <ViewPort isBottom={false}>
           <Task3 />
         </ViewPort>
       </div>
-      <div className={c.rightEffect} />
     </div>
   </Fragment>
 )
