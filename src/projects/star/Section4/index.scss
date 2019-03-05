@@ -1,0 +1,132 @@
+@import '../../../assets/animate.scss';
+
+
+.ohya {
+  position: relative;
+  background-image: url('./ohyaBg.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 297px;
+  overflow: hidden;
+
+  .ray {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: absolute;
+    background-image: url('./ohyaRay.png');
+    animation: commicSurprise 0.3s ease-in-out 0s infinite;
+  }
+
+  .say1 {
+    position: absolute;
+    top: 0px;
+    left: 20%;
+  }
+  .say2 {
+    position: absolute;
+    top: 0px;
+    right: 20%;
+  }
+
+  .leftBrothers {
+    position: absolute;
+    left: -70px;
+    bottom: -5px;
+  }
+
+  .rightBrothers {
+    position: absolute;
+    right: -70px;
+    bottom: -5px;
+  }
+}
+
+.finish {
+  background-image: url('./finishBg.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 80px;
+
+  .ray {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('./finishRay.png');
+    background-position: center;
+    background-size: cover;
+    // animation: commicSurprise 0.2s ease-in-out 0s infinite;
+  }
+
+  .ohyaTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -270px;
+    width: 400px;
+    height: auto;
+  }
+
+  .title {
+    width: 1016px;
+    height: 276px;
+    background-image: url('./title.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-top: 38px;
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #f32218;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 22.5px;
+      color: #000;
+      margin-bottom: 15px;
+    }
+  }
+
+  .present {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .ps {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .7);
+    margin-bottom: 50px;
+  }
+
+  .notice {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .desc {
+    width: 885px;
+    margin: 0 auto;
+
+    p {
+      width: 100%;
+      font-size: 18px;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, .7);
+      margin-bottom: 15px;
+    }
+  }
+}

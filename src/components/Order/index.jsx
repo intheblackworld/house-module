@@ -14,7 +14,7 @@ import PolicyDialog from 'components/PolicyDialog'
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
 
-const Order = ({ show }) => {
+const Order = ({ show, noTitle }) => {
   // 從網址接收 utm 資料
   const urlParams = new URLSearchParams(window.location.search)
   const utmSource = urlParams.get('utm_source')
@@ -120,10 +120,12 @@ const Order = ({ show }) => {
 
   return (
     <div className={css.orderContainer}>
-      <div className={titleClass}>
-        <h3>預約賞屋</h3>
-        <p>買得起，住更好</p>
-      </div>
+      {!noTitle && (
+        <div className={titleClass}>
+          <h3>預約賞屋</h3>
+          <p>買得起，住更好</p>
+        </div>
+      )}
       <Form className={formClass}>
         <div className={css.group}>
           <div className={css.control}>

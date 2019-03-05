@@ -4,7 +4,7 @@ import Mask from 'components/AstrictMask'
 // import Order from 'components/Order'
 import ViewPort from 'components/ViewPort'
 import FullScreen from './FullScreen'
-import Section from './Section'
+// import Section from './Section'
 
 import './index.scss'
 
@@ -33,11 +33,9 @@ const Layout = () => (
     <Element id="section3">
       <Section3 />
     </Element>
-    <Section>
-      <Element id="section4">
-        <Section4 />
-      </Element>
-    </Section>
+    <Element id="section4">
+      <Section4 />
+    </Element>
     {/* <Section>
       <Element id="section5">
         <Section5 />

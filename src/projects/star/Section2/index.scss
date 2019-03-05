@@ -109,13 +109,33 @@
     }
   }
 
-  .img {
+  .img1 {
+    position: absolute;
+    left: -80px;
+    bottom: -15px;
+    img {
+      width: 279px;
+      height: 248px;
+    }
+  }
+
+  .img2 {
+    position: absolute;
+    left: -30px;
+    bottom: -10px;
+    img {
+      width: 272px;
+      height: 203px;
+    }
+  }
+
+  .img3 {
     position: absolute;
     left: -40px;
-    bottom: -4px;
+    bottom: -10px;
     img {
-      width: 200px;
-      height: 240px;
+      width: 352px;
+      height: 207px;
     }
   }
 

@@ -27,7 +27,7 @@ const Section2 = ({ show }) => {
                 <h3>快來看哥！</h3>
                 <p>送你iphone X！</p>
               </div>
-              <div className={c.img}>
+              <div className={c.img1}>
                 <img src={require('./brother1.png')} alt="" />
               </div>
             </div>
@@ -57,8 +57,8 @@ const Section2 = ({ show }) => {
                   啾咪！
                 </h3>
               </div>
-              <div className={c.img}>
-                <img src={require('./brother1.png')} alt="" />
+              <div className={c.img2}>
+                <img src={require('./brother2.png')} alt="" />
               </div>
             </div>
             <Link
@@ -84,8 +84,8 @@ const Section2 = ({ show }) => {
                 <h3>哥撒錢啦！</h3>
                 <p>萬元紅包意思一下！</p>
               </div>
-              <div className={c.img}>
-                <img src={require('./brother1.png')} alt="" />
+              <div className={c.img3}>
+                <img src={require('./brother3.png')} alt="" />
               </div>
             </div>
             <Link

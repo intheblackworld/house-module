@@ -128,13 +128,15 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '三發丰悅 | 新北門牌桃園價，綠態建築好生活 | 官網',
-      metaTitle: '三發丰悅 | 新北門牌桃園價，綠態建築好生活 | 官網',
-      metaDescription: '三發丰悅：350米捷運鶯桃福德站，新北門牌桃園價，未來增值第一站，接待中心：新北市鶯歌區永和街 83 號，禮賓專線：02-86421155',
-      metaKeywords: '三發丰悅,三發建設,鶯歌房屋,新北買房,鶯歌建案,台北買房',
-      ogMetaTitle: '三發丰悅 | 新北門牌桃園價，綠態建築好生活 | 官網',
+      title: '一日林板新 挑戰當巨星｜活動官網',
+      metaTitle: '一日林板新 挑戰當巨星｜活動官網',
+      metaDescription:
+        '在一個屋簷下，比巨星還閃亮的林板新特區裡，會激盪出什麼火花?！林板新特區好吃好住又好玩！三大任務、萬元獎金等你來挑戰！活動地點：新板巨星，活動專線：02-8201-5333',
+      metaKeywords: '新板巨星,一日林板新,新板特區,林板新',
+      ogMetaTitle: '一日林板新 挑戰當巨星｜活動官網',
       ogMetaType: 'website',
-      ogMetaDescription: '三發丰悅：350米捷運鶯桃福德站，新北門牌桃園價，未來增值第一站，接待中心：新北市鶯歌區永和街 83 號，禮賓專線：02-86421155',
+      ogMetaDescription:
+        '在一個屋簷下，比巨星還閃亮的林板新特區裡，會激盪出什麼火花?！林板新特區好吃好住又好玩！三大任務、萬元獎金等你來挑戰！活動地點：新板巨星，活動專線：02-8201-5333',
       template: 'index.html',
       hash: true,
     }),
@@ -143,9 +145,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'), // 將 production 加入了全局的環境變數之後，第三方函式庫或專案內代碼會根據 production 做打包優化的判斷
     }),
     new AsyncChunkNames(), // TODO: change ENV config
-    new CopyPlugin([
-      { from: './src/assets/img/favicon.png', to: 'static/media/favicon.png' },
-    ]),
+    new CopyPlugin([{ from: './src/assets/img/favicon.png', to: 'static/media/favicon.png' }]),
   ],
 
   /* 抽公共代碼用的 (防止重复)

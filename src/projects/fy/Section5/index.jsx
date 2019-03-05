@@ -62,8 +62,8 @@ const Item = ({ show, item }) => {
 }
 const Section5 = () => (
   <div className={css.section5}>
-    <Image src={leaf3} alt="三發丰悅的圖片" className={css.leaf1} />
-    <Image src={leaf3} alt="三發丰悅的圖片" className={css.leaf2} />
+    <Image src={leaf3} alt="新板巨星的圖片" className={css.leaf1} />
+    <Image src={leaf3} alt="新板巨星的圖片" className={css.leaf2} />
     <Viewport>
       <SectionTitle
         titleTop="無敵安心"

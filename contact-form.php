@@ -53,7 +53,7 @@
     $utm_content = $_POST['utm_content'];
     $utm_campaign = $_POST['utm_campaign'];
     
-    $case_name = "三發丰悅";
+    $case_name = "新板巨星";
 
     // echo $name;
     // echo "<br>";

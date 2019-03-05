@@ -120,7 +120,7 @@ const Section3 = () => (
     <Image src={leaf3} alt="1" className={css.leaf2} />
     <Viewport>
       <SectionTitle
-        titleTop="三發丰悅"
+        titleTop="新板巨星"
         titleBottom="AESTHETICS"
         iconUrl={home}
         slolganMain="青年成家 超強首選"

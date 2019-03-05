@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import IconBtn from 'components/Button/IconBtn'
+import Order from 'components/Order'
 import c from './index.scss'
 
 const Title = ({
@@ -24,6 +25,7 @@ const Section3 = ({ show }) => {
       <div className={c.bg}>
         <div className={c.leftEffect} />
         <div className={c.main}>
+          {/* 任務一 */}
           <div className={c.task1}>
             <Title number="1" h2="任務一、追片看明星" p="按讚＋留言＋分享" />
             <img src={require('./brother1.png')} alt="" className={c.brother1} />
@@ -63,16 +65,20 @@ const Section3 = ({ show }) => {
             </div>
           </div>
           <div style={{ margin: '0 auto', width: '400px' }}>
-            <IconBtn width="400px" link="#">
+            <IconBtn width="400px" link="https://www.facebook.com/lbs.h35.tw">
               按讚＋留言＋分享活動影片
             </IconBtn>
           </div>
           <div className={c.fbDesc}>
-            將於指定日期 於FB抽獎軟體 抽出兩項獎項<br />
-            第 1 次未中獎者即有第 2 次抽獎機會，越早留言中獎機會越大，得獎者將公佈於「新板巨星」FB 粉絲專頁，<br />
+            將於指定日期 於FB抽獎軟體 抽出兩項獎項
+            <br />
+            第 1 次未中獎者即有第 2 次抽獎機會，越早留言中獎機會越大，得獎者將公佈於「新板巨星」FB
+            粉絲專頁，
+            <br />
             請得獎者於 1 週內以 FB 私訊真實姓名、電話供獎項領取聯繫
           </div>
           {/* 一個屋簷下(影片區塊暫時隱藏) */}
+          {/* 任務二 */}
           <div className={c.task2}>
             <Title number="2" h2="任務二、鐵粉來踩點" p="到兩大星據點拍照打卡" />
             <img src={require('./brother2.png')} alt="" className={c.brother2} />
@@ -107,7 +113,7 @@ const Section3 = ({ show }) => {
             <div className={c.carousel}>123</div>
           </div>
           <div style={{ margin: '0 auto', width: '400px' }}>
-            <IconBtn width="400px" link="#">
+            <IconBtn width="400px" link="https://goo.gl/maps/UUvHaMXa1at">
               開啟 Google Map 導航
             </IconBtn>
           </div>
@@ -118,7 +124,7 @@ const Section3 = ({ show }) => {
             </h2>
           </div>
           <div className={c.map} />
-
+          {/* 任務三 */}
           <div className={c.task3}>
             <Title number="3" h2="任務三、新星領航員" p="介紹賞屋簽約送" />
             <img src={require('./brother3.png')} alt="" className={c.brother3} />
@@ -128,7 +134,8 @@ const Section3 = ({ show }) => {
               <h3>・簽約成交 30坪(含)以下送 38,888 大紅包</h3>
               <h3>・簽約成交 30坪以上送 58,888 大紅包</h3>
             </div>
-            {/* order */}
+            <div className={c.ps}>請留下您的聯絡資訊，將有服務專員與您聯絡</div>
+            <Order noTitle />
           </div>
         </div>
         <div className={c.rightEffect} />
