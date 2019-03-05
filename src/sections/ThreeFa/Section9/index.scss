@@ -9,7 +9,7 @@
   p {
     color: #fff;
     position: absolute;
-    bottom: 29px;
+    bottom: 0px;
     text-align: center;
     background: rgba(0, 0, 0, 0.3);
     width: 100%;
@@ -144,6 +144,7 @@
 
     p {
       font-size: 13px;
+      bottom: 30px;
     }
   }
 }
