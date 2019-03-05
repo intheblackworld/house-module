@@ -9,6 +9,8 @@ import SweetAlert from 'sweetalert2-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
+import info from '../../sections/ContactSection/info'
+
 import PolicyDialog from 'components/PolicyDialog'
 
 import { cityList, renderAreaList } from './address'
@@ -87,6 +89,14 @@ const Order = ({ show }) => {
     formData.append('utm_medium', utm_medium)
     formData.append('utm_content', utm_content)
     formData.append('utm_campaign', utm_campaign)
+    const time = new Date()
+    const year = time.getFullYear()
+    const month = time.getMonth()
+    const day = time.getDay()
+    const hour = time.getHours()
+    const min = time.getMinutes()
+    const sec = time.getSeconds()
+    const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?
       name=${name}&
@@ -98,8 +108,8 @@ const Order = ({ show }) => {
       utm_medium=${utm_medium}&
       utm_content=${utm_content}&
       utm_campaign=${utm_campaign}&
-      date=${'2019-3-5 20:00:00'}&
-      campaign_name=${'立信吾界'}&
+      date=${date}&
+      campaign_name=${info.caseName}&
       `,
       {
         method: 'GET',
