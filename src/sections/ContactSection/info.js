@@ -3,6 +3,7 @@ export default {
   phone: '02-86421155',
   fbLink: 'https://www.facebook.com/sanfarlightluxury',
   googleLink: 'https://goo.gl/maps/3YwsMdrBB582',
+  caseName: '三發丰悅',
 
   houseInfos: [
     ['投資興建', '三發地產股份有限公司'],

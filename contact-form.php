@@ -126,22 +126,7 @@
 <script src="js/jquery.js"></script>
 
 <script type="text/javascript">
-jQuery.get("https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec",{
-            "name":"<?=$name?>",
-            "phone":"<?=$phone?>",
-            "email":"<?=$user_email?>",
-            "cityarea":"<?=$city?><?=$area?>",
-            "msg":"<?=$msg?>",
-            "utm_source":"<?=$utm_source?>",
-            "utm_medium":"<?=$utm_medium?>",
-            "utm_content":"<?=$utm_content?>",
-            "utm_campaign":"<?=$utm_campaign?>",
-            "date":"<?=$datetime?>",
-            "campaign_name":"<?=$case_name?>"
-          },
-          function (data) {
-              document.location.replace('formThanks');
-          });
+document.location.replace('formThanks');
 </script>
 </body>
 </html>
