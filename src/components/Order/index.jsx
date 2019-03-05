@@ -87,6 +87,24 @@ const Order = ({ show }) => {
     formData.append('utm_medium', utm_medium)
     formData.append('utm_content', utm_content)
     formData.append('utm_campaign', utm_campaign)
+    fetch(
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?
+      name=${name}&
+      phone=${phone}&
+      email=${email}&
+      cityarea=${city}${area}&
+      msg=${msg}&
+      utm_source=${utm_source}&
+      utm_medium=${utm_medium}&
+      utm_content=${utm_content}&
+      utm_campaign=${utm_campaign}&
+      date=${'2019-3-5 20:00:00'}&
+      campaign_name=${'立信吾界'}&
+      `,
+      {
+        method: 'GET',
+      },
+    )
     fetch('contact-form.php', {
       method: 'POST',
       body: formData,
