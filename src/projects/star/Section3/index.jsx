@@ -134,7 +134,7 @@ const Task2 = ({ show }) => {
           fade={false}
           arrows
           className={c.caruselImg}
-          autoplaySpeed={3000}
+          autoplaySpeed={slideIndex === 2 ? 5000 : 3000}
           afterChange={index => setSlideIndex(index)}
         >
           <img src={require('./slide1.png')} alt="" />
