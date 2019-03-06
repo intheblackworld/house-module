@@ -811,7 +811,9 @@
     width: 276px;
     height: 155px;
     top: -270px;
-    left: -28px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   .label {
@@ -824,7 +826,7 @@
   }
 
   .task1 {
-    width: 204px;
+    width: 80%;
     height: 634px;
     margin: 0 auto;
     padding: 20px 0;
@@ -881,7 +883,7 @@
   }
 
   .task2 {
-    width: 281px;
+    width: 90%;
     height: 760px;
     margin: 0 auto;
     padding: 20px 0;
@@ -943,17 +945,18 @@
   }
 
   .mapTitle {
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 150px;
+    padding: 28px 52px;
 
     h2 {
-      font-size: 18px;
+      font-size: 28px;
     }
   }
 
   .map {
-    width: 262px;
-    height: 182px;
+    width: 90%;
+    height: 196px;
     margin-bottom: 400px;
   }
 
@@ -969,7 +972,7 @@
   }
 
   .task3 {
-    width: 262px;
+    width: 90%;
     height: 382px;
     margin: 0 auto;
     padding: 20px 0;
