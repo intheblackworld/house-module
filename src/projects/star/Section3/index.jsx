@@ -111,7 +111,7 @@ const Task2 = ({ show }) => {
             <br />－ 範例如圖 －
           </div>
         </div>
-        <img src={require('./arrowDown.png')} alt="" className={c.arrowDown} />
+        { !isMobile && <img src={require('./arrowDown.png')} alt="" className={c.arrowDown} />}
         <div className={c.item}>
           <div className={c.label}>Step 2</div>
           <div className={c.desc}>
@@ -150,8 +150,8 @@ const Task2 = ({ show }) => {
 }
 
 const GoogleBtn = ({ show }) => (
-  <div style={{ margin: '0 auto', width: '400px' }} className={withTrans('googleBtn', c, show)}>
-    <IconBtn width="400px" link="https://goo.gl/maps/UUvHaMXa1at">
+  <div style={{ margin: '0 auto', width: isMobile ? '204px' : '400px' }} className={withTrans('googleBtn', c, show)}>
+    <IconBtn width={isMobile ? '204px' : '400px'} fontSize={isMobile ? '12px' : '20px'} link="https://goo.gl/maps/UUvHaMXa1at">
       開啟 Google Map 導航
     </IconBtn>
   </div>

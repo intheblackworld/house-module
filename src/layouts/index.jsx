@@ -45,22 +45,22 @@ const Layout = () => {
       )}
       {isMobile ? (
         <Fragment>
-          <Element id="section4">
+          <Element>
             <Section4 />
           </Element>
-          <Element id="section3">
+          <Element id="point3">
             <Section3 />
           </Element>
+          <MobileSection />
         </Fragment>
       ) : (
         <Fragment>
-          <Element id="section3">
+          <Element id="point3">
             <Section3 />
           </Element>
-          <Element id="section4">
+          <Element>
             <Section4 />
           </Element>
-          <MobileSection />
         </Fragment>
       )}
       {/* <Section>

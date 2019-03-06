@@ -66,3 +66,43 @@
     color: rgba(255, 255, 255, 1) !important;
   }
 }
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .orderContainer {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .form .control {
+    label {
+      font-size: 12px;
+      width: 20%;
+    }
+
+    .field {
+      width: 78%;
+    }
+  }
+
+  .checkbox {
+    margin-left: -40px;
+    margin-top: 125px;
+  }
+
+  .submit {
+    width: 163px !important;
+    height: 36px !important;
+    font-size: 15px !important;
+  }
+
+  :global {
+    .ui.selection.dropdown {
+      min-width: 11.1em;
+      min-height: 2.4em;
+    }
+    .ui.form input:not([type]) {
+      height: 28px;
+    }
+  }
+}

@@ -3,6 +3,7 @@
 .bg {
   width: 100vw;
   background: #7ccbd8;
+  padding-bottom: 190px;
 }
 
 .main {
@@ -760,6 +761,8 @@
 
   .titleBg {
     left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 250px;
     height: 70px;
     background-size: cover;
@@ -811,6 +814,15 @@
     left: -28px;
   }
 
+  .label {
+    width: 64px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px / 10px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
   .task1 {
     width: 204px;
     height: 634px;
@@ -827,15 +839,6 @@
         width: 100%;
         height: auto;
         margin-top: 26px;
-
-        .label {
-          width: 64px;
-          height: 20px;
-          line-height: 20px;
-          border-radius: 10px / 10px;
-          font-size: 12px;
-          margin-bottom: 5px;
-        }
         .icon1 {
           width: 44px;
           height: 52px;
@@ -879,11 +882,121 @@
 
   .task2 {
     width: 281px;
-    height: 741px;
+    height: 760px;
     margin: 0 auto;
     padding: 20px 0;
+    flex-wrap: wrap;
+    background-size: cover;
+    
+    .item {
+      width: 100%;
+
+      .desc {
+        width: 180px;
+        height: 96px;
+        font-size: 15px;
+      }
+    }
+
+    .carousel {
+      width: 245px;
+      height: 302px;
+      margin-top: 100px;
+
+      .carouselTitle {
+        font-size: 15px;
+      }
+
+      .carouselBubble {
+        h2 {
+          font-size: 15px;
+        }
+      }
+
+      .carouselDesc {
+        font-size: 15px;
+      }
+
+      .frame {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .taskHint2 {
+    width: 206px;
+    height: 81px;
+    top: -270px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 12px;
+  }
+
+  .brother2 {
+    width: 140px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -100px;
+  }
+
+  .mapTitle {
+    width: 200px;
+    height: 100px;
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .map {
+    width: 262px;
+    height: 182px;
+    margin-bottom: 400px;
+  }
+
+
+  .taskHint3 {
+    width: 275px;
+    height: 117px;
+    top: -270px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 13px 19px;
+  }
+
+  .task3 {
+    width: 262px;
+    height: 382px;
+    margin: 0 auto;
+    padding: 20px 0;
+    flex-wrap: wrap;
     background-size: cover;
   }
+
+  .brother3 {
+    width: 128px;
+    height: 116px;
+    left: 15px;
+    top: -115px;
+  }
+
+  .brother31 {
+    width: 118px;
+    height: 103px;
+    right: 13px;
+    bottom: -25px;
+  }
+
+  .ps {
+    font-size: 12px;
+    color: #636363;
+    bottom: -60px;
+  }
+
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

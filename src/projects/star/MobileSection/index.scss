@@ -1,0 +1,32 @@
+.bg {
+  background: #FFDB32;
+  width: 100vw;
+  height: auto;
+  padding: 37px 15px;
+}
+
+.export {
+  width: 114px;
+  height: 45px;
+  background-size: cover;
+  background-image: url('./export.png');
+  margin: 0 auto;
+  cursor: pointer;
+}
+.desc {
+  width: 885px;
+  margin: 0 auto;
+
+  p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+  }
+}
+
+.notice {
+  margin: 0 auto;
+  margin-top: 30px;
+}
