@@ -27,6 +27,7 @@
 .rightEffect {
   position: absolute;
   height: 100%;
+
   img {
     display: block;
     position: absolute;
@@ -154,6 +155,7 @@
 .rightEffect {
   right: 0;
   width: 30%;
+  opacity: 0;
 
   &.show {
     @include animate(fadeInUp, 0.6s, 1s);
@@ -275,4 +277,21 @@
   position: absolute;
   right: 50px;
   bottom: 0;
+}
+
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bubbleChat {
+    left: 20px;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }

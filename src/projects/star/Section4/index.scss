@@ -18,6 +18,11 @@
     animation: commicSurprise 0.3s ease-in-out 0s infinite;
   }
 
+  .sayGroup {
+    position: relative;
+    z-index: 1;
+  }
+
   .say1 {
     position: absolute;
     top: 0px;
@@ -202,3 +207,17 @@
 //     @include animate(fadeOut, 1s, 0s);
 //   }
 // }
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

@@ -7,12 +7,12 @@
     height: 55px !important;
 
     &.slick-next {
-      left: -80px !important;
-      transform: rotate(180deg) !important;
+      right: -72px !important;
+      // transform: rotate(180deg) !important;
     }
     &.slick-prev {
-      left: 1175px !important;
-      transform: rotate(180deg) !important;
+      left: -72px !important;
+      // transform: rotate(180deg) !important;
     }
 
     &:before {
@@ -35,13 +35,13 @@
       height: 40px !important;
 
       &.slick-next {
-        left: -50px !important;
-        transform: rotate(180deg) !important;
+        // left: -50px !important;
+        // transform: rotate(180deg) !important;
       }
       &.slick-prev {
         display: block !important;
-        left: 915px !important;
-        transform: rotate(180deg) !important;
+        // left: 915px !important;
+        // transform: rotate(180deg) !important;
       }
 
       &:before {

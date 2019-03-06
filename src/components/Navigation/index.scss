@@ -174,8 +174,8 @@ $logoMobileWidth: 220px;
   }
 
   .navlist .link {
-    font-size: 17px;
-    width: 83px;
+    font-size: 15px;
+    width: 75px;
 
     img {
       height: 35px;
@@ -184,6 +184,12 @@ $logoMobileWidth: 220px;
 
     .divided {
       margin-left: 6px;
+    }
+  }
+
+  :global {
+    .ui.fluid.container {
+      width: 100% !important;
     }
   }
 }

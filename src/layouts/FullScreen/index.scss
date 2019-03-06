@@ -19,6 +19,18 @@
   }
 }
 
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .fullScreen {
+    width: 100vw;
+    height: 100vh;
+
+    &.cutHeader {
+      height: calc(100vh - #{$navigationMobileHeight});
+      // margin-top: $navigationMobileHeight;
+    }
+  }
+}
 
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
@@ -29,20 +41,7 @@
 
     &.cutHeader {
       height: calc(100vh - #{$navigationMobileHeight});
-      margin-top: $navigationMobileHeight;
-    }
-  }
-}
-
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .fullScreen {
-    width: 100vw;
-    height: 100vh;
-
-    &.cutHeader {
-      height: calc(100vh - #{$navigationMobileHeight});
-      margin-top: $navigationMobileHeight;
+      // margin-top: $navigationMobileHeight;
     }
   }
 }

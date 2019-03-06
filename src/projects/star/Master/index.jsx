@@ -27,7 +27,7 @@ const Master = ({ show }) => {
           <h2 className={c.title}>你當巨星！哥斗內你！</h2>
           <Link
             className={c.link}
-            to="section2"
+            to="point2"
             spy
             smooth
             duration={500}

@@ -86,7 +86,7 @@ const Task2 = ({ show }) => {
   const descs = [
     '在林板新特區「新板巨星」接待中心前，拍下小木屋美照。（如以上範例）',
     '在林板新特區大豐公園內，朝樹海及大棟距建物拍下美照。（如以上範例）',
-    '打卡成功',
+    '',
   ]
   const [slideIndex, setSlideIndex] = useState(0)
   return (
@@ -128,6 +128,7 @@ const Task2 = ({ show }) => {
         <div className={c.carouselBubble}>
           <h2>{steps[slideIndex]}</h2>
         </div>
+        { slideIndex === 2 ? <img src={require('./frame.png')} alt="" className={c.frame} /> : ''}
         <Carousel
           slidesToShow={1}
           fade={false}

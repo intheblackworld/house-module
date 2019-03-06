@@ -244,9 +244,10 @@
       background-size: cover;
       background-position: center;
       position: absolute;
-      top: -35px;
+      top: -55px;
       right: 25px;
       padding-top: 20px;
+      z-index: 2;
       h2 {
         color: #fff;
         font-size: 18px;
@@ -702,4 +703,58 @@
       @include animate(fadeOut, 1s, 0s);
     }
   }
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .titleBg {
+    left: 30px;
+  }
+
+  .brother1 {
+    left: 95px;
+  }
+
+  .brother11 {
+    right: -37px;
+  }
+
+  .brother2 {
+    left: 145px;
+  }
+
+  .brother3 {
+    left: 130px;
+  }
+
+  .brother31 {
+    right: -20px;
+  }
+
+  .taskHint3 {
+    width: 348px;
+    height: 146px;
+    right: -35px;
+    top: -115px;
+    padding: 20px 0px 0 27px;
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }

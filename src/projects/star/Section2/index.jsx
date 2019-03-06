@@ -35,12 +35,12 @@ const Content = ({ show }) => (
         </div>
         <Link
           className={c.link}
-          to="task1"
+          to="point3"
           spy
           smooth
           duration={500}
           offset={-PCNavigationHeight}
-          key="task1"
+          key="point3"
         >
           <IconBtn>怎麼拿</IconBtn>
         </Link>
@@ -67,12 +67,12 @@ const Content = ({ show }) => (
         </div>
         <Link
           className={c.link}
-          to="task2"
+          to="point4"
           spy
           smooth
           duration={500}
           offset={-PCNavigationHeight}
-          key="task2"
+          key="point4"
         >
           <IconBtn>怎麼拍</IconBtn>
         </Link>
@@ -96,12 +96,12 @@ const Content = ({ show }) => (
         </div>
         <Link
           className={c.link}
-          to="task3"
+          to="point5"
           spy
           smooth
           duration={500}
           offset={-PCNavigationHeight}
-          key="task3"
+          key="point5"
         >
           <IconBtn>怎麼領</IconBtn>
         </Link>
