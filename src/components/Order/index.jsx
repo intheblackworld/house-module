@@ -89,13 +89,12 @@ const Order = ({ show, noTitle }) => {
     formData.append('utm_campaign', utm_campaign)
     const time = new Date()
     const year = time.getFullYear()
-    const month = time.getMonth()
-    const day = time.getDay()
+    const month = time.getMonth() + 1
+    const day = time.getDate()
     const hour = time.getHours()
     const min = time.getMinutes()
     const sec = time.getSeconds()
     const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
-    console.log(date)
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?
       name=${name}&
@@ -113,10 +112,15 @@ const Order = ({ show, noTitle }) => {
       {
         method: 'GET',
       },
-    )
-    fetch('contact-form.php', {
-      method: 'POST',
-      body: formData,
+    ).then(() => {
+      fetch('contact-form.php', {
+        method: 'POST',
+        body: formData,
+      }).then((response) => {
+        if (response.status === 200) {
+          window.location.href = 'formThanks'
+        }
+      })
     })
     // .then((response) => {
     //   if (response.status === 200) {
