@@ -8,30 +8,34 @@ const Frame = (props: { inViewport: boolean }) => {
 
 const ViewportFrame = handleViewport(Frame)
 
-const Viewport = ({ children, isBottom = true }) => {
+const Viewport = ({ children, isBottom = true, position = null }) => {
   const [show, setShow] = React.useState(false)
   return (
     <React.Fragment>
       {!isBottom && (
-        <ViewportFrame
-          onEnterViewport={() => {
-            setShow(true)
-          }}
-          onLeaveViewport={() => {
-            setShow(false)
-          }}
-        />
+        <div style={{ transform: `translateY(${position})` }}>
+          <ViewportFrame
+            onEnterViewport={() => {
+              setShow(true)
+            }}
+            onLeaveViewport={() => {
+              setShow(false)
+            }}
+          />
+        </div>
       )}
       {React.cloneElement(children || <div />, { show })}
       {isBottom && (
-        <ViewportFrame
-          onEnterViewport={() => {
-            setShow(true)
-          }}
-          onLeaveViewport={() => {
-            setShow(false)
-          }}
-        />
+        <div style={{ transform: `translateY(${position})` }}>
+          <ViewportFrame
+            onEnterViewport={() => {
+              setShow(true)
+            }}
+            onLeaveViewport={() => {
+              setShow(false)
+            }}
+          />
+        </div>
       )}
     </React.Fragment>
   )

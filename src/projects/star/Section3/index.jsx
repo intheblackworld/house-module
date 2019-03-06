@@ -23,7 +23,7 @@ const isMobile = window.navigator.userAgent.match(/iPhone/i) != null
   || window.navigator.userAgent.match(/Android/i) != null
 const Task1 = ({ show }) => (
   <div className={withTrans('task1', c, show)}>
-    <ViewPort>
+    <ViewPort position="-400px">
       <Title number="1" h2="任務一、追片看明星" p="按讚＋留言＋分享" />
     </ViewPort>
     <img src={require('./brother1.png')} alt="" className={c.brother1} />
@@ -67,7 +67,11 @@ const Task1 = ({ show }) => (
 const FbBlock = ({ show }) => (
   <div className={withTrans('fbBlock', c, show)}>
     <div style={{ margin: '0 auto', width: isMobile ? '204px' : '400px' }}>
-      <IconBtn width={isMobile ? '204px' : '400px'} fontSize={isMobile ? '12px' : '20px'} link="https://www.facebook.com/lbs.h35.tw">
+      <IconBtn
+        width={isMobile ? '204px' : '400px'}
+        fontSize={isMobile ? '12px' : '20px'}
+        link="https://www.facebook.com/lbs.h35.tw"
+      >
         按讚＋留言＋分享活動影片
       </IconBtn>
     </div>
@@ -93,7 +97,7 @@ const Task2 = ({ show }) => {
   const [slideIndex, setSlideIndex] = useState(0)
   return (
     <div className={withTrans('task2', c, show)}>
-      <ViewPort>
+      <ViewPort position="-400px">
         <Title number="2" h2="任務二、鐵粉來踩點" p="到兩大星據點拍照打卡" />
       </ViewPort>
       <img src={require('./brother2.png')} alt="" className={c.brother2} />
@@ -111,7 +115,7 @@ const Task2 = ({ show }) => {
             <br />－ 範例如圖 －
           </div>
         </div>
-        { !isMobile && <img src={require('./arrowDown.png')} alt="" className={c.arrowDown} />}
+        {!isMobile && <img src={require('./arrowDown.png')} alt="" className={c.arrowDown} />}
         <div className={c.item}>
           <div className={c.label}>Step 2</div>
           <div className={c.desc}>
@@ -150,8 +154,15 @@ const Task2 = ({ show }) => {
 }
 
 const GoogleBtn = ({ show }) => (
-  <div style={{ margin: '0 auto', width: isMobile ? '204px' : '400px' }} className={withTrans('googleBtn', c, show)}>
-    <IconBtn width={isMobile ? '204px' : '400px'} fontSize={isMobile ? '12px' : '20px'} link="https://goo.gl/maps/UUvHaMXa1at">
+  <div
+    style={{ margin: '0 auto', width: isMobile ? '204px' : '400px' }}
+    className={withTrans('googleBtn', c, show)}
+  >
+    <IconBtn
+      width={isMobile ? '204px' : '400px'}
+      fontSize={isMobile ? '12px' : '20px'}
+      link="https://goo.gl/maps/UUvHaMXa1at"
+    >
       開啟 Google Map 導航
     </IconBtn>
   </div>
@@ -168,7 +179,7 @@ const MapTitle = ({ show }) => (
 
 const Task3 = ({ show }) => (
   <div className={withTrans('task3', c, show)}>
-    <ViewPort>
+    <ViewPort position="-400px">
       <Title number="3" h2="任務三、新星領航員" p="介紹賞屋簽約送" />
     </ViewPort>
     <img src={require('./brother3.png')} alt="" className={c.brother3} />
@@ -214,7 +225,7 @@ const Section3 = () => (
       </ViewPort>
       <div className={c.main}>
         {/* 任務一 */}
-        <ViewPort isBottom={false}>
+        <ViewPort isBottom={false} position="-200px">
           <Task1 />
         </ViewPort>
         <ViewPort isBottom={false}>
@@ -223,7 +234,7 @@ const Section3 = () => (
         {/* 一個屋簷下(影片區塊暫時隱藏) */}
 
         {/* 任務二 */}
-        <ViewPort isBottom={false}>
+        <ViewPort isBottom={false} position="-200px">
           <Task2 />
         </ViewPort>
         <ViewPort isBottom={false}>
@@ -237,7 +248,7 @@ const Section3 = () => (
         </ViewPort>
         <Element id="point5" style={{ marginTop: '30px' }} />
         {/* 任務三 */}
-        <ViewPort isBottom={false}>
+        <ViewPort isBottom={false} position="-300px">
           <Task3 />
         </ViewPort>
       </div>
