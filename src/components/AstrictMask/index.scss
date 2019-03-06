@@ -1,10 +1,12 @@
 @import '../../assets/animate.scss';
 
 .mask {
-  background-color: #9c1e23;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
+  background-color: #ffed47;
+  // background-image: url('../../projects/star/Master/ray.png');
+  // animation: commicSurprise 0.2s ease-in-out 0s infinite;
   width: 100vw;
   height: 100vh;
+  top: 0;
   position: fixed;
   z-index: 1000;
   display: flex;
@@ -14,8 +16,8 @@
   display: none;
 
   p {
-    @include animate(fadeInUp, .8s, .5s);
-    color: #fff;
+    @include animate(fadeInUp, .8s, .0s);
+    color: #000;
     margin-top: 20px;
     font-size: 22px;
   }
@@ -23,9 +25,9 @@
   .icon {
     width: 100px;
     height: auto;
-    @include animate(fadeInUp, .8s, .5s);
+    @include animate(fadeInUp, .8s, .0s);
     svg {
-      fill: #fff;
+      fill: #000;
     }
 
   }

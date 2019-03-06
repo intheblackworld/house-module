@@ -18,7 +18,6 @@ const MobileSection = lazy(() => import('projects/star/MobileSection'))
 // const Section6 = lazy(() => import('projects/start/Section6'))
 
 const Layout = () => {
-  const isIpad = window.navigator.userAgent.match(/iPad/i) != null
   const isMobile = window.navigator.userAgent.match(/iPhone/i) != null
     || window.navigator.userAgent.match(/Android/i) != null
   return (
@@ -27,7 +26,7 @@ const Layout = () => {
       <FixLink />
       <FullScreen needCutHeader master>
         <Element id="master">
-          <ViewPort isBottom={!isIpad}>
+          <ViewPort isBottom={false}>
             <Master />
           </ViewPort>
         </Element>
