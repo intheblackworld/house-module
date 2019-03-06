@@ -19,6 +19,8 @@ const Title = ({
   </div>
 )
 
+const isMobile = window.navigator.userAgent.match(/iPhone/i) != null
+  || window.navigator.userAgent.match(/Android/i) != null
 const Task1 = ({ show }) => (
   <div className={withTrans('task1', c, show)}>
     <ViewPort>
@@ -40,7 +42,7 @@ const Task1 = ({ show }) => (
         </div>
         <div className={c.desc}>到新板巨星 FB 按讚追蹤</div>
       </div>
-      <img src={require('./arrowRight.png')} alt="" className={c.arrowRight} />
+      {!isMobile && <img src={require('./arrowRight.png')} alt="" className={c.arrowRight} />}
       <div className={c.item}>
         <div className={c.label}>Step 2</div>
         <div className={c.icon2}>
@@ -50,7 +52,7 @@ const Task1 = ({ show }) => (
           看活動影片，於貼文按讚+留言 「我在林板新，最愛新板巨星」 +TAG 標記 3 位朋友
         </div>
       </div>
-      <img src={require('./arrowRight.png')} alt="" className={c.arrowRight} />
+      {!isMobile && <img src={require('./arrowRight.png')} alt="" className={c.arrowRight} />}
       <div className={c.item}>
         <div className={c.label}>Step 3</div>
         <div className={c.icon3}>
@@ -64,8 +66,8 @@ const Task1 = ({ show }) => (
 
 const FbBlock = ({ show }) => (
   <div className={withTrans('fbBlock', c, show)}>
-    <div style={{ margin: '0 auto', width: '400px' }}>
-      <IconBtn width="400px" link="https://www.facebook.com/lbs.h35.tw">
+    <div style={{ margin: '0 auto', width: isMobile ? '204px' : '400px' }}>
+      <IconBtn width={isMobile ? '204px' : '400px'} fontSize={isMobile ? '12px' : '20px'} link="https://www.facebook.com/lbs.h35.tw">
         按讚＋留言＋分享活動影片
       </IconBtn>
     </div>
@@ -128,7 +130,7 @@ const Task2 = ({ show }) => {
         <div className={c.carouselBubble}>
           <h2>{steps[slideIndex]}</h2>
         </div>
-        { slideIndex === 2 ? <img src={require('./frame.png')} alt="" className={c.frame} /> : ''}
+        {slideIndex === 2 ? <img src={require('./frame.png')} alt="" className={c.frame} /> : ''}
         <Carousel
           slidesToShow={1}
           fade={false}

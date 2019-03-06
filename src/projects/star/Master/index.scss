@@ -237,6 +237,7 @@
 
 .bubbleChat {
   background-image: url('./bubbleChat.png');
+  background-size: cover;
   position: absolute;
   z-index: 3;
   width: 596px;
@@ -251,7 +252,7 @@
   }
 
   &.hide {
-    @include animate(fadeOut, 1s, 0.2s);
+    @include animate(fadeOut, 1s, 0s);
   }
 }
 
@@ -269,7 +270,7 @@
   }
 
   &.hide {
-    @include animate(fadeOut, 1s, 0.2s);
+    @include animate(fadeOut, 1s, 0s);
   }
 }
 
@@ -290,6 +291,43 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .bubbleChat {
+    width: 193px;
+    height: 177px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(0);
+    top: 20px;
+
+    .title {
+      font-size: 16px;
+      bottom: 60px;
+    }
+  }
+
+  .brother {
+    width: 280px;
+    right: -15px;
+    bottom: 70px;
+  }
+
+  .link {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    margin: 0 auto;
+    width: 166px;
+  }
+
+  .leftEffect {
+    width: 200%;
+  }
+
+  .rightEffect {
+    display: none;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

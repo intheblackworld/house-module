@@ -10,6 +10,9 @@ const Master = ({ show }) => {
   const bubbleClass = withTrans('bubbleChat', c, show)
   const leftEffectClass = withTrans('leftEffect', c, show)
   const rightEffectClass = withTrans('rightEffect', c, show)
+
+  const isMobile = window.navigator.userAgent.match(/iPhone/i) != null
+    || window.navigator.userAgent.match(/Android/i) != null
   return (
     <div className={c.bg}>
       <div className={c.ray} />
@@ -25,6 +28,23 @@ const Master = ({ show }) => {
       <div className={c.main}>
         <div className={bubbleClass}>
           <h2 className={c.title}>你當巨星！哥斗內你！</h2>
+          {!isMobile && (
+            <Link
+              className={c.link}
+              to="point2"
+              spy
+              smooth
+              duration={500}
+              offset={-PCNavigationHeight}
+              key="section2"
+            >
+              <IconBtn>挑戰任務</IconBtn>
+            </Link>
+          )}
+        </div>
+
+        <img className={brotherClass} src={require('./brother.png')} alt="" />
+        {isMobile && (
           <Link
             className={c.link}
             to="point2"
@@ -36,9 +56,7 @@ const Master = ({ show }) => {
           >
             <IconBtn>挑戰任務</IconBtn>
           </Link>
-        </div>
-
-        <img className={brotherClass} src={require('./brother.png')} alt="" />
+        )}
       </div>
       <div className={rightEffectClass}>
         <img className={c.flower} src={require('./flower.png')} alt="" />

@@ -216,6 +216,79 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .ohya {
+    overflow: inherit;
+    height: 94px;
+    z-index: 1;
+    
+    .ray {
+      animation: none;
+    }
+
+    .say1 {
+      width: 65px;
+      top: -10px;
+      left: 10px;
+    }
+  
+    .say2 {
+      width: 85px;
+      top: -10px;
+      right: 10px;
+    }
+  
+    .leftBrothers, .rightBrothers {
+      img {
+        width: 97px;
+      }
+    }
+  
+    .leftBrothers {
+      left: -15px;
+      bottom: -40px;
+      z-index: 3;
+    }
+  
+    .rightBrothers {
+      right: -15px;
+      bottom: -40px;
+      z-index: 3;
+    }
+  }
+
+  .finish {
+    .ohyaTitle {
+      width: 200px;
+      top: -150px;
+      z-index: 3;
+    }
+
+    .title {
+      width: 300px;
+      height: 297px;
+      padding: 38px 15px 0;
+
+      h2 {
+        font-size: 27px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .present {
+      width: 90%;
+    }
+
+    .ps {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+  }
+
+
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

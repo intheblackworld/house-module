@@ -14,13 +14,14 @@
   z-index: 3;
 }
 
-.leftEffect, .rightEffect {
+.leftEffect,
+.rightEffect {
   position: fixed;
   width: calc(50vw - 475px);
-  opacity: .5;
+  opacity: 0.5;
   height: 100%;
   top: 0;
-  transition: all .3s;
+  transition: all 0.3s;
   img {
     display: block;
     position: absolute;
@@ -711,7 +712,6 @@
   left: 0;
 }
 
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -753,6 +753,137 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+    padding-top: 400px;
+  }
+
+  .titleBg {
+    left: 0;
+    width: 250px;
+    height: 70px;
+    background-size: cover;
+    padding-left: 25px;
+    padding-top: 10px;
+    top: -360px;
+
+    .number {
+      width: 62px;
+      height: 63px;
+      font-size: 45px;
+      left: -40px;
+    }
+
+    .desc {
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .taskLabel {
+    font-size: 15px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .taskHint1,
+  .taskHint2,
+  .taskHint3 {
+    h3 {
+      font-size: 12px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .taskHint1 {
+    width: 276px;
+    height: 155px;
+    top: -270px;
+    left: -28px;
+  }
+
+  .task1 {
+    width: 204px;
+    height: 634px;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-size: cover;
+
+    .steps {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0 20px;
+
+      .item {
+        width: 100%;
+        height: auto;
+        margin-top: 26px;
+
+        .label {
+          width: 64px;
+          height: 20px;
+          line-height: 20px;
+          border-radius: 10px / 10px;
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+        .icon1 {
+          width: 44px;
+          height: 52px;
+        }
+
+        .icon2,
+        .icon3 {
+          width: 52px;
+          height: 52px;
+        }
+
+        .desc {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  .brother1 {
+    width: 105px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -122px;
+  }
+
+  .brother11 {
+    width: 114px;
+    right: 22px;
+    bottom: 30px;
+  }
+
+  
+
+  .fbDesc {
+    width: 90%;
+    line-height: 1.2;
+    font-size: 15px;
+    margin: 20px auto 380px;
+  }
+
+  .task2 {
+    width: 281px;
+    height: 741px;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-size: cover;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

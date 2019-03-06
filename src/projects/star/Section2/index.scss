@@ -52,8 +52,12 @@
   align-items: center;
   padding-top: 120px;
 
-  .item {
+  > div {
     width: 33.33%;
+  }
+  
+  .item {
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -62,21 +66,16 @@
     opacity: 0;
   }
 
-  &.show {
-    .item {
-      @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-          @include animate(fadeInUp, 0.6s, $i * .2s);
-        }
+  .item.show {
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        @include animate(fadeInUp, 0.6s, $i * .2s);
       }
-      
-    }
+    } 
   }
 
-  &.hide {
-    .item {
-      @include animate(fadeOut, 1s, 0s);
-    }
+  .item.hide {
+    @include animate(fadeOut, 1s, 0s);
   }
 
   @for $i from 1 through 3 {
@@ -195,6 +194,98 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .bg {
+    z-index: 0;
+    padding-bottom: 60px;
+  }
+
+  .titleHeader {
+    background-size: cover;
+  }
+
+  .star {
+    margin: 0 19px;
+  }
+  .head {
+    width: 135px;
+    font-size: 22px;
+  }
+
+  .main {
+    width: 100%;
+    padding-top: 30px;
+    height: auto;
+
+    > div {
+      position: relative;
+      width: 100%;
+    }
+
+    .item {
+      width: 100%;
+      margin-top: 100px;
+
+      .title {
+        width: 152px;
+        height: 111px;
+        left: 0px;
+        z-index: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: translate(-40px, 30px);
+
+        h2 {
+          font-size: 28px;
+        }
+
+
+      }
+
+      .content {
+        width: 153px;
+        height: 246px;
+
+        .contentTitle {
+          h3 {
+            font-size: 23px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+
+        .desc {
+          h3 {
+            font-size: 16px;
+            white-space: nowrap;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .img1 {
+      left: -50px;
+      img {
+        width: 175px;
+        height: auto;
+      }
+    }
+
+    .img2 img {
+      width: 173px;
+      height: auto;
+    }
+
+    .img3 img {
+      width: 190px;
+      height: auto;
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

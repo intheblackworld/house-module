@@ -1,5 +1,21 @@
 :global {
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: border-box;
+  }
+
+  .viewport-frame {
+    position: absolute;
+    height: 400px;
+  }
+
+  /* 手機尺寸 */
+  @media only screen and (max-width: 767px) {
+    .viewport-frame {
+      position: absolute;
+      height: 100vh;
+      width: 100px;
+    }
   }
 }
