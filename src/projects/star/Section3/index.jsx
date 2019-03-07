@@ -87,6 +87,33 @@ const FbBlock = ({ show }) => (
   </div>
 )
 
+const MovieBlock = ({ show }) => (
+  <div className={withTrans('movieBlock', c, show)}>
+    <div className={c.movieTitle}>
+      <h2>林板新特區X木曜4超玩</h2>
+    </div>
+    <div className={c.movie}>
+      <div className={c.video}>
+        <iframe
+          title="liveStream"
+          width={isMobile ? '407' : '262'}
+          height={isMobile ? '274' : '172'}
+          src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        />
+      </div>
+      <div className={c.desc}>
+        站前商圈、秀泰影城、水岸河濱、萬坪造鎮、飯店級休閒設施、３房靈活大空間‥林板新特區好吃好住又好玩！精采生活連「木曜４超玩」都親自來體驗。
+        <br />
+        <br />
+        快來看一個屋簷下，在比巨星還閃亮的林板新特區裡，會激盪出什麼火花！
+      </div>
+    </div>
+  </div>
+)
+
 const Task2 = ({ show }) => {
   const steps = ['Step 1', 'Step 2', '打卡成功！！']
   const descs = [
@@ -231,7 +258,9 @@ const Section3 = () => (
           <FbBlock />
         </ViewPort>
         {/* 一個屋簷下(影片區塊暫時隱藏) */}
-
+        <ViewPort isBottom={false} position="-200px">
+          <MovieBlock />
+        </ViewPort>
         {/* 任務二 */}
         <ViewPort isBottom={false} position="-200px">
           <Task2 />

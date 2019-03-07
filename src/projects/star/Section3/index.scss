@@ -503,8 +503,7 @@
   line-height: 1.33;
   font-size: 18px;
   color: #404040;
-  margin-top: 15px;
-  margin-bottom: 270px;
+  margin-top: 15px; 
   text-align: center;
 }
 
@@ -660,6 +659,7 @@
 
 .fbBlock,
 .googleBtn,
+.movieBlock,
 .mapTitle,
 .map {
   opacity: 0;
@@ -670,6 +670,48 @@
 
   &.hide {
     @include animate(fadeOut, 1s, 0s);
+  }
+}
+
+.movieBlock {
+  margin-bottom: 200px;
+  .movieTitle {
+    background-image: url('./movieTitle.png');
+    width: 510px;
+    height: 75px;
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 65px;
+
+
+    h2 {
+      font-size: 36px;
+      text-align: center;
+      padding-top: 5px;
+    }
+  }
+
+  .movie {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .video {
+    width: 407px;
+    height: 274px;
+
+    iframe {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .desc {
+    width: 327px;
+    font-size: 18px;
+    color: #404040;
   }
 }
 
@@ -884,7 +926,7 @@
     width: 90%;
     line-height: 1.2;
     font-size: 15px;
-    margin: 20px auto 380px;
+    margin: 20px auto;
   }
 
   .task2 {
@@ -1017,7 +1059,36 @@
     right: 70px !important;
   }
 
+  .movieBlock {
+    width: 100%;
+    margin-bottom: 400px;
+    .movieTitle {
+      width: 85%;
+      height: 50px;
+      margin-bottom: 45px;
+      
+      h2 {
+        font-size: 18px;
+      }
+    }
 
+    .movie {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+
+    .video {
+      width: 100%;
+      height: 220px;
+    }
+
+    .desc {
+      margin-top: 30px;
+      font-size: 15px;
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
