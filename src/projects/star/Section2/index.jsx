@@ -31,7 +31,7 @@ const Task1 = ({ show }) => (
       </div>
       <div className={c.desc}>
         <h3>快來看哥！</h3>
-        <p>送你iphone X！</p>
+        <p>送你iphone XS！</p>
       </div>
       <div className={c.img1}>
         <img src={require('./brother1.png')} alt="" />

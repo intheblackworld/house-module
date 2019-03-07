@@ -33,7 +33,7 @@ const Task1 = ({ show }) => (
       <p>第 1 次：108/03/23(六)下午 14:00 抽出 iPhoneXR 1台 (市價 26,900)</p>
       <p>第 2 次：108/04/20(六)下午 14:00 抽出 iPhoneXS 1台 (市價 35,900)</p>
     </div>
-    <div className={c.taskLabel}>如何抽iPhone</div>
+    <div className={c.taskLabel}>抽iPhone</div>
     <div className={c.steps}>
       <div className={c.item}>
         <div className={c.label}>Step 1</div>
@@ -70,7 +70,7 @@ const FbBlock = ({ show }) => (
       <IconBtn
         width={isMobile ? '204px' : '400px'}
         fontSize={isMobile ? '12px' : '20px'}
-        link="https://www.facebook.com/lbs.h35.tw"
+        link="https://www.facebook.com/lbs.h35.tw/posts/2250466511683638"
       >
         按讚＋留言＋分享活動影片
       </IconBtn>
@@ -103,7 +103,6 @@ const Task2 = ({ show }) => {
       <img src={require('./brother2.png')} alt="" className={c.brother2} />
       <div className={c.taskHint2}>
         <p>不用抽即可領取百元 7-11 禮券</p>
-        <p>（限量三百名）</p>
       </div>
       <div className={c.steps}>
         <div className={c.item}>

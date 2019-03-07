@@ -3,8 +3,8 @@
 .thanks {
   width: 100vw;
   height: 100vh;
-  background-color: #9c1e23;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
+  background-color: #FFDB32;
+  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,16 +12,16 @@
 
   h3 {
     font-size: 36px;
-    color: #fff;
+    color: #000;
   }
 
   p {
     font-size: 24px;
-    color: #e5d48f;
+    color: #000;
   }
   
   a {
-    color: #e5d48f !important;
+    color: #000 !important;
     width: 270px !important;
   }
 }
