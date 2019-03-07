@@ -94,18 +94,7 @@ const Order = ({ show }) => {
     const sec = time.getSeconds()
     const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?
-      name=${name}&
-      phone=${phone}&
-      email=${email}&
-      cityarea=${city}${area}&
-      msg=${msg}&
-      utm_source=${utm_source}&
-      utm_medium=${utm_medium}&
-      utm_content=${utm_content}&
-      utm_campaign=${utm_campaign}&
-      date=${date}&
-      campaign_name=${info.caseName}&
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${info.caseName}
       `,
       {
         method: 'GET',
