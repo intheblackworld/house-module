@@ -1004,6 +1004,15 @@
     bottom: -60px;
   }
 
+  .leftEffect {
+    opacity: 0 !important;
+  }
+
+  .rightEffect {
+    right: 70px !important;
+  }
+
+
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
