@@ -84,7 +84,7 @@ const Slides = ({ show = false }) => {
           <Image src={require('./person3.png')} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <p>工程精英 豪宅實力 優秀品質</p>
-            <h3>公務協理 馮志華</h3>
+            <h3>工務協理 馮志華</h3>
           </div>
         </div>
         <div className={css.sliderItem}>
@@ -98,7 +98,7 @@ const Slides = ({ show = false }) => {
           <Image src={require('./person5.png')} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <p>工程精英 豪宅實力 優秀品質</p>
-            <h3>公務經理 劉春平</h3>
+            <h3>工務經理 劉春平</h3>
           </div>
         </div>
         <div className={css.sliderItem}>

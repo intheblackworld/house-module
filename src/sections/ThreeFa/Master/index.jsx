@@ -17,7 +17,7 @@ const Master = ({ show }) => {
         <div className={css.logo3} />
       </div>
       <div className={css.text}>
-        <h3 className={css.subTitle}>－新外灘計畫－</h3>
+        <h3 className={css.subTitle}>－新外灘計劃－</h3>
         <h3 className={css.title}>縱橫天下 我的世界</h3>
       </div>
     </div>

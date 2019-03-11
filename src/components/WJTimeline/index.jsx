@@ -19,7 +19,7 @@ const timeItems = [
   {
     year: '2018',
     img: require('./2018.jpg'),
-    desc: '瀚疆日透',
+    desc: '瀚疆',
   },
   {
     year: '2019',
