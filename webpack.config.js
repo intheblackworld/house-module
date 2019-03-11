@@ -5,9 +5,7 @@ const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: {
-    main: './src/main.jsx',
-  },
+  entry: ['@babel/polyfill', './src/main.jsx'],
   output: {
     filename: '[name].bundle.[hash:8].js',
     chunkFilename: '[name].bundle.[hash:8].js',

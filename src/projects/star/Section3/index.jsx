@@ -98,9 +98,9 @@ const MovieBlock = ({ show }) => (
           title="liveStream"
           width={isMobile ? '407' : '262'}
           height={isMobile ? '274' : '172'}
-          src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG"
+          src="https://www.youtube.com/embed/mTUz5unNUDQ"
           frameBorder="0"
-          allow="autoplay; encrypted-media"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
       </div>
