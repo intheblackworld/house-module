@@ -11,7 +11,7 @@ import css from './index.scss'
 const items = [
   {
     titleTop: '新北門牌桃園價，',
-    titleBottom: '讓你輕鬆住進天龍國！',
+    titleBottom: '讓你輕鬆進駐雙北宅！',
     desc:
       '捷運三鶯線預計2023年完工通車，北接板南線、南接桃園八德，將大勢串起桃園與新北一日生活圈！',
     url: require('assets/img/section2/img-1.jpg'),
@@ -24,7 +24,7 @@ const items = [
   },
   {
     titleTop: '未來增值第一站，',
-    titleBottom: '瞄準錢能先收入囊袋！ ',
+    titleBottom: '瞄準潛能收囊袋！ ',
     desc: '捷運鶯桃福德站完工在即，鳳鳴唯一350米步行就到，交通更便利、地段最吸金！',
     url: require('assets/img/section2/img-3.jpg'),
   },
