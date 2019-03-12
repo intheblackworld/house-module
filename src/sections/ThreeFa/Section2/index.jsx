@@ -24,7 +24,7 @@ const items = [
   },
   {
     titleTop: '未來增值第一站，',
-    titleBottom: '瞄準潛能收囊袋！ ',
+    titleBottom: '瞄準錢能收囊袋！ ',
     desc: '捷運鶯桃福德站完工在即，鳳鳴唯一350米步行就到，交通更便利、地段最吸金！',
     url: require('assets/img/section2/img-3.jpg'),
   },
