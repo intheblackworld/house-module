@@ -50,7 +50,7 @@ const HorizontalTimeline = () => {
       <Controller>
         <Scene triggerHook="onLeave" duration="100%" pin>
           <Timeline wrapper={<div id="pinContainer" />}>
-            <Tween from={{ x: '0' }} to={{ x: `${-1800 + width}px` }}>
+            <Tween from={{ x: '0' }} to={{ x: `${width > 1800 ? 0 : -1800 + width}px` }}>
               <WJTimeline ref={ref} />
             </Tween>
             {/* <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
