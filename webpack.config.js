@@ -36,7 +36,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        include: [path.resolve(__dirname, 'src')],
         enforce: 'pre',
         loader: 'eslint-loader',
         options: {
@@ -44,8 +44,8 @@ module.exports = {
         },
       },
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        test: [/\.jsx?$/, /\.js?$/],
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules/react-in-viewport')],
         use: [
           {
             loader: 'babel-loader',
