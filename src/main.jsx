@@ -1,3 +1,5 @@
+import '@babel/polyfill'
+import 'url-search-params-polyfill'
 import * as React from 'react'
 import { render } from 'react-dom'
 import Routers from 'routers'
