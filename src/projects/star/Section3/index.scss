@@ -170,13 +170,13 @@
 
   .steps {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    padding-top: 35px;
   }
 
   .item {
     width: 220px;
-    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -882,6 +882,7 @@
 
     .steps {
       flex-direction: column;
+      align-items: center;
       justify-content: flex-start;
       padding: 0 20px;
 
