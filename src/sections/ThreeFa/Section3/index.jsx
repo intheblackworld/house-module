@@ -65,8 +65,8 @@ const Slides = ({ show = false }) => {
           <div className={css.sliderContent}>
             <h3>建築營照</h3>
             <p>
-              三發產地 鍾俊榮 董事長 <br />
-              三發產地 讓鶯歌響起迷人樂章
+              三發地產 鍾俊榮 董事長 <br />
+              三發地產 讓鶯歌響起迷人樂章
             </p>
           </div>
         </div>
