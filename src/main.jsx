@@ -7,6 +7,7 @@ import Routers from 'routers'
 import 'reset-css'
 import 'semantic-ui-less/semantic.less'
 import 'assets/plugin.css'
+import 'assets/global.scss'
 
 const App = () => <Routers />
 
