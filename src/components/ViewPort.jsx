@@ -8,7 +8,9 @@ const Frame = (props: { inViewport: boolean }) => {
 
 const ViewportFrame = handleViewport(Frame)
 
-const Viewport = ({ children, isBottom = true, position = null }) => {
+const Viewport = ({
+  children, isBottom = true, position = null, showOneTime = false,
+}) => {
   const [show, setShow] = React.useState(false)
   return (
     <React.Fragment>
@@ -19,7 +21,7 @@ const Viewport = ({ children, isBottom = true, position = null }) => {
               setShow(true)
             }}
             onLeaveViewport={() => {
-              setShow(false)
+              setShow(!!showOneTime)
             }}
           />
         </div>
@@ -32,7 +34,7 @@ const Viewport = ({ children, isBottom = true, position = null }) => {
               setShow(true)
             }}
             onLeaveViewport={() => {
-              setShow(false)
+              setShow(!!showOneTime)
             }}
           />
         </div>
