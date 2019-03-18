@@ -18,7 +18,7 @@ const Viewport = ({ children, isBottom = true }) => {
             setShow(true)
           }}
           onLeaveViewport={() => {
-            setShow(false)
+            setShow(true)
           }}
         />
       )}
@@ -29,7 +29,7 @@ const Viewport = ({ children, isBottom = true }) => {
             setShow(true)
           }}
           onLeaveViewport={() => {
-            setShow(false)
+            setShow(true)
           }}
         />
       )}

@@ -6,35 +6,35 @@
   margin-bottom: 90px;
   font-family: 'Noto Sans TC', sans-serif;
   
-  &.hide {
-    .left {
-      @include animate(fadeOutRight, .8s, 0);
-    }
+  // &.hide {
+  //   .left {
+  //     @include animate(fadeOutRight, .8s, 0);
+  //   }
 
-    .right {
-      @include animate(fadeOutLeft, .8s, 0);
-    }
+  //   .right {
+  //     @include animate(fadeOutLeft, .8s, 0);
+  //   }
 
-    .middle {
-      @include animate(fadeOut, .8s, 0);
-    }
+  //   .middle {
+  //     @include animate(fadeOut, .8s, 0);
+  //   }
 
-    .title-top {
-      @include animate(fadeOutUp, .8s, 0);
-    }
+  //   .title-top {
+  //     @include animate(fadeOutUp, .8s, 0);
+  //   }
 
-    .title-bottom {
-      @include animate(fadeOutUp, .8s, 0);
-    }
+  //   .title-bottom {
+  //     @include animate(fadeOutUp, .8s, 0);
+  //   }
 
-    .slogan-area-main {
-      @include animate(fadeOutUp, .8s, 0);
-    }
+  //   .slogan-area-main {
+  //     @include animate(fadeOutUp, .8s, 0);
+  //   }
 
-    .slogan-area-description {
-      @include animate(fadeOutUp, .8s, 0);
-    }
-  }
+  //   .slogan-area-description {
+  //     @include animate(fadeOutUp, .8s, 0);
+  //   }
+  // }
   
   &.show {
     .left {
@@ -77,6 +77,7 @@
     height: 212px;
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0;
   }
   .right {
     background-image: url('../../assets/img/sectionTitle/right.png');
@@ -84,6 +85,7 @@
     height: 212px;
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0;
   }
   .middle {
     display: flex;
@@ -91,6 +93,7 @@
     margin: 0 45px;
     position: relative;
     align-items: center;
+    opacity: 0;
   }
   .icon-container {
     display: flex;
@@ -110,6 +113,7 @@
     font-size: 58px;
     font-family: 'Noto Serif TC', serif;
     font-weight: 900;
+    opacity: 0;
   }
   .title-bottom {
     font-size: 36px;
@@ -119,6 +123,7 @@
     left: 0;
     width: 100%;
     text-align: center;
+    opacity: 0;
   }
   .slogan-area {
     text-align: center;
@@ -128,9 +133,11 @@
       font-size: 29px;
       font-weight: bold;
       margin-bottom: 20px;
+      opacity: 0;
     }
     .slogan-area-description {
       font-size: 17px;
+      opacity: 0;
     }
   }
 }
