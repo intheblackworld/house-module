@@ -35,7 +35,7 @@ $logoMobileWidth: 220px;
   height: auto;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -6px;
 }
 
 .mask {
@@ -82,6 +82,7 @@ $logoMobileWidth: 220px;
   .logo {
     width: $logoMobileWidth;
     left: 15px;
+    top: 10px;
   }
 
   .nav {
