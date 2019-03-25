@@ -1,6 +1,6 @@
 export default {
   address: '23943 新北市鶯歌區永和街83號',
-  phone: '02-86421155',
+  phone: '02-2677-1133',
   fbLink: 'https://www.facebook.com/sanfarlightluxury',
   googleLink: 'https://goo.gl/maps/3YwsMdrBB582',
   caseName: '一日林板新',
@@ -12,6 +12,6 @@ export default {
     ['基地地址', '新北市鶯歌區永和街 83 號'],
     ['工程營造', '京富祥營造股份有限公司'],
     ['企劃銷售', '太平洋代銷'],
-    ['建照號碼', '103 鶯建字第 00669 號'],
+    ['使照號碼', '106鶯使字第00432號'],
   ],
 }
