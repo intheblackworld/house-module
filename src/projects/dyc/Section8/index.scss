@@ -1,0 +1,12 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-size: cover;
+  background-position: center;
+  background-image: url('./bg.png');
+  // background-color: #c7b39f;
+  position: relative;
+  padding: 1px 0;
+}

@@ -1,0 +1,55 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-size: cover;
+  background-position: center;
+  background-image: url('./bg.png')
+}
+
+.container {
+  width: 70vw;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 60px;
+}
+
+h3.title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.desc {
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  p {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+}
+
+.flower {
+  width: 58%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

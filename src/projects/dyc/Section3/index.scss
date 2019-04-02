@@ -1,0 +1,81 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-size: cover;
+  background-position: center;
+  background-image: url('./bg.png');
+  background-color: #d4c9b8;
+}
+
+.title {
+  padding-top: 70px;
+  h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.container {
+  width: 1156px;
+  height: calc(100vh - 380px);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  .frame {
+    width: 25%;
+    height: 289px;
+    padding: 6px;
+  }
+  
+  .item {
+    width: 100%;
+    height: 100%;
+    border: 5px solid #901a1a;
+    border-radius: 50%;
+    padding: 12px;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #901a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.contentTitle {
+  color: #d5a875;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.desc {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
