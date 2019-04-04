@@ -21,7 +21,7 @@ const NavItems = [
   },
 
   {
-    name: '十大首選',
+    name: '十大優勢',
     imgSrc: '',
     section: 'section4',
     OffsetValue: -PCNavigationHeight,
