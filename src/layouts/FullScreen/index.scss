@@ -26,7 +26,7 @@
     height: 100vh;
 
     &.cutHeader {
-      height: calc(100vh - #{$navigationMobileHeight});
+      height: calc(100vh - #{$navigationTabletHeight});
       // margin-top: $navigationMobileHeight;
     }
   }

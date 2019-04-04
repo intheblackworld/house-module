@@ -2,11 +2,13 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
   background-image: url('./bg.png');
   background-color: #d4c9b8;
+  background-attachment: fixed;
 }
 
 .title {
@@ -25,11 +27,29 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin-top: 30px;
+
+  &.show {
+    .frame {
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeIn, .6s, $i * 0.2s);
+        }
+      }
+    }
+  }
+
+  &.hide {
+    .frame {
+      @include animate(fadeOut, .5s, 0s);
+    }
+  }
   .frame {
     width: 25%;
     height: 289px;
     padding: 6px;
+    opacity: 0;
   }
   
   .item {
@@ -70,10 +90,63 @@
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    height: calc(100vh - 60px);
+  }
+
+  .title {
+    h3 {
+      font-size: 29px;
+    }
+  }
+
+  .desc {
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .container {
+    width: 949px;
+    .frame {
+      width: 230px;
+      height: 230px;
+    }
+  }
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .bg {
+    height: auto;
+  }
+
+  .title {
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+
+    .frame {
+      width: 289px;
+      height: 289px;
+    }
+
+    .contentTitle {
+      font-size: 40px;
+    }
+
+    .desc {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

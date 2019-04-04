@@ -2,12 +2,13 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
-  // background-image: url('./bg.png');
+  background-image: url('./bg.png');
+  background-attachment: fixed;
   position: relative;
-  > div {
+  > .top, > .container {
     height: 50%;
   }
   display: flex;
@@ -22,6 +23,34 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  // .label, .title, .desc, .resume {
+  //   opacity: 0;
+  // }
+
+  // &.show {
+  //   .label {
+  //     @include animate(fadeInUp, .8s, 0s);   
+  //   }
+
+  //   .title {
+  //     @include animate(fadeInUp, .8s, .2s);   
+  //   }
+
+  //   .desc {
+  //     @include animate(fadeInUp, .8s, .4s);   
+  //   }
+
+  //   .resume {
+  //     @include animate(fadeInUp, .8s, .6s);   
+  //   }
+  // }
+
+  // &.hide {
+  //   .label, .title, .desc, .resume {
+  //     @include animate(fadeOut, 1s, 0);
+  //   }
+  // }
 }
 
 .label {
@@ -44,7 +73,7 @@
   line-height: 1.5;
 }
 
-img {
+.resume {
   display: block;
   width: 406px;
 }
@@ -54,6 +83,21 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // &.show {
+  //   .item {
+  //     @for $i from 1 through 4 {
+  //       &:nth-child(#{$i}) {
+  //         @include animate(fadeInUp, .6s, $i * 0.2s);
+  //       }
+  //     }
+  //   }
+  // }
+
+  // &.hide {
+  //   .item {
+  //     // @include animate(fadeOut, .5s, 0s);
+  //   }
+  // }
 
   .item {
     width: 264px;
@@ -91,3 +135,120 @@ img {
   }
 }
 
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    height: calc(100vh - 60px);
+  }
+
+  .label {
+    font-size: 16px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .desc {
+    width: 673px;
+    font-size: 12px;
+  }
+
+  .resume {
+    width: 292px;
+  }
+
+  .container {
+    width: 880px;
+  
+    .item {
+      width: 190px;
+      height: 100%;
+  
+      .frame {
+        padding: 7px;
+      }
+  
+      .content {
+        padding: 0 17px;
+        height: 100%;
+      }
+  
+      .contentTitle {
+        font-size: 17px;
+        margin-bottom: 30px;
+      }
+  
+      .contentDesc {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    height: auto;
+    background-image: url('./bg.png');
+  }
+
+  .label {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .desc {
+    width: 90%;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .resume {
+    width: 90%;
+  }
+
+  .top {
+    margin-bottom: 25px;
+  }
+
+  .container {
+    width: 90%;
+    flex-direction: column;
+  
+    .item {
+      width: 234px;
+      height: 355px;
+      margin-bottom: 20px;
+      opacity: 1 !important;
+  
+      .frame {
+        padding: 7px;
+      }
+  
+      .content {
+        padding: 0 17px;
+        height: 100%;
+      }
+  
+      .contentTitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+  
+      .contentDesc {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

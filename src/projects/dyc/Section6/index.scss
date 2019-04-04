@@ -3,11 +3,12 @@
 .bg {
   width: 100vw;
   background-size: cover;
-  background-position: center;
-  // background-image: url('./bg.png');
-  background-color: #c7b39f;
+  background-position: top;
+  background-image: url('./bg.png');
+  background-color: #eee8df;
+  background-attachment: fixed;
   position: relative;
-  padding: 1px 0;
+  padding: 60px 0 1px;
 }
 
 .item {
@@ -32,6 +33,34 @@
     color: #2d436e;
     line-height: 1.5;
     margin-bottom: 40px;
+  }
+
+  .label, .title, .desc, .slide {
+    opacity: 0;
+  }
+
+  &.show {
+    .label {
+      @include animate(fadeInUp, .8s, 0s);   
+    }
+
+    .title {
+      @include animate(fadeInUp, .8s, .2s);   
+    }
+
+    .desc {
+      @include animate(fadeInUp, .8s, .4s);   
+    }
+
+    .slide {
+      @include animate(fadeInUp, .8s, .6s);   
+    }
+  }
+
+  &.hide {
+    .label, .title, .desc, .slide {
+      @include animate(fadeOut, 1s, 0);
+    }
   }
 }
 
@@ -66,4 +95,94 @@
       left: 40px;
     }
   }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .item {
+    width: 419px;
+    .label {
+      font-size: 16px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .desc {
+      font-size: 12px;
+    }
+  }
+
+  .slide {
+    height: 330px;
+    .carousel {
+      width: 419px;
+      // height: 279px;
+    }
+  
+    .content {
+      width: 411px;
+      height: 298px;
+      left: -25px;
+  
+      .location {
+        font-size: 12px;
+        bottom: 20px;
+        left: 40px;
+      }
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    background-image: url('./bg-m.png');
+  }
+  .item {
+    width: 90%;
+    margin: 0 auto 60px;
+    .label {
+      font-size: 16px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .desc {
+      font-size: 12px;
+    }
+  }
+
+  .slide {
+    height: 192px;
+    .carousel {
+      width: 100%;
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+  
+    .content {
+      width: 100%;
+      height: 220px;
+      left: -10px;
+      top: 10px;
+  
+      .location {
+        font-size: 12px;
+        bottom: 5px;
+        left: 20px;
+      }
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }

@@ -60,7 +60,7 @@
   margin-bottom: 40px;
   margin-right: 160px;
   width: 260px;
-  border-left: 4px solid #9c1e23;
+  border-left: 4px solid #2d436e;
   padding-left: 12px;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@
 
   .label {
     font-size: 16px;
-    color: #9c1e23;
+    color: #2d436e;
     margin-bottom: 0;
     margin-right: 20px;
   }
@@ -103,6 +103,10 @@
 
   .info {
     width: 100%;
+  }
+
+  .desc {
+    white-space: normal;
   }
 }
 

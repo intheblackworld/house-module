@@ -2,14 +2,22 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-image: url('./bg.png')
 }
 
+.leaf {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('./leaf.png')
+}
+
 .title {
-  width: auto;
+  width: 110px;
   height: 70vh;
   position: absolute;
   left: 0;
@@ -17,11 +25,149 @@
   margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeIn, .8s, .5s);   
+  }
+
+  &.hide {
+    @include animate(fadeOut, .8s, 0s);   
+  }
+
+
+  .main {
+    color: #000;
+    writing-mode: vertical-rl;
+
+    h3 {
+      font-size: 32px;
+    }
+  }
+
+  .color {
+    color: #fff;
+    background-color: #a89054;
+    font-size: 24px;
+    width: 35px;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    text-align: center;
+
+    h3 {
+      line-height: 1.8;
+      padding: 8px 0px;
+    }
+  }
+
+  .sub {
+    font-size: 18px;
+    color: #323232;
+    writing-mode: vertical-rl;
+    margin: 10px auto;
+  }
 }
 
 .leftLeaf {
-  
-}
-.rightLeaf {
+  position: absolute;
+  left: 10%;
+  bottom: 30%;
+  width: 120px;
+  height: auto;
+  transform: scale(0) rotate(-60deg);
+  transition: all 1.5s;
 
+  &.show {
+    transform: scale(1) rotate(0deg);
+  }
+
+  &.hide {
+    transform: scale(0) rotate(-60deg);
+  }
+}
+.rightLeaf1 {
+  position: absolute;
+  right: 2%;
+  bottom: 10%;
+  width: 160px;
+  height: auto;
+
+  transform: scale(0) rotate(-60deg);
+  transition: all 1.5s;
+
+  &.show {
+    transform: scale(1) rotate(0deg);
+  }
+
+  &.hide {
+    transform: scale(0) rotate(-60deg);
+  }
+}
+
+.rightLeaf2 {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
+  width: 220px;
+  height: auto;
+
+  transform: scale(0) rotate(-60deg);
+  transition: all 1.5s;
+
+  &.show {
+    transform: scale(1) rotate(0deg);
+  }
+
+  &.hide {
+    transform: scale(0) rotate(-60deg);
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+
+  .title {
+    .main {
+      h3 {
+        font-size: 25px;
+      }
+    }
+  
+    .color {
+      font-size: 18px;
+      width: 35px;
+  
+      h3 {
+        padding: 8px 0px;
+      }
+    }
+  
+    .sub {
+      font-size: 12px;
+    }
+  }
+  .leftLeaf {
+    width: 80px;
+    top: 0;
+    left: 0;
+  }
+
+  .rightLeaf1 {
+    width: 100px;
+  }
+
+  .rightLeaf2 {
+    display: none;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }

@@ -1,9 +1,11 @@
-// import { withTrans } from 'utils'
+import { withTrans } from 'utils'
+import ViewPort from 'components/ViewPort'
 import c from './index.scss'
 
-const Section7 = () => (
-  <div className={c.bg}>
-    <div className={c.top}>
+const Top = ({ show }) => {
+  const topClass = withTrans('top', c, show)
+  return (
+    <div className={topClass}>
       <h3 className={c.label}>【建築安全履歷】</h3>
       <h3 className={c.title}>
         Alfa Safe系統工法
@@ -17,9 +19,15 @@ const Section7 = () => (
         抗震韌性可提升近1倍，除了鋼筋、樑、柱外，連管線的部份都有詳細紀錄，
         透明公開，時間是建築最完美的見證。
       </p>
-      <img src={require('./resume.png')} alt="" />
+      <img src={require('./resume.png')} className={c.resume} alt="" />
     </div>
-    <div className={c.container}>
+  )
+}
+
+const Container = ({ show }) => {
+  const containerClass = withTrans('container', c, show)
+  return (
+    <div className={containerClass}>
       <div className={c.item}>
         <div className={c.frame}>
           <div className={c.content}>
@@ -77,6 +85,16 @@ const Section7 = () => (
         </div>
       </div>
     </div>
+  )
+}
+const Section7 = () => (
+  <div className={c.bg}>
+    <ViewPort isBottom={false}>
+      <Top />
+    </ViewPort>
+    <ViewPort isBottom={false}>
+      <Container />
+    </ViewPort>
   </div>
 )
 

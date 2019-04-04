@@ -3,7 +3,7 @@
 .bg {
   background-color: #2d436e;
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,15 @@
   font-size: 24px;
   color: #fff;
   text-align: center;
-  margin-bottom: 60px; 
+  margin-bottom: 30px;
+  opacity: 0;
+  &.show {
+    @include animate(fadeIn, .8s, .0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .6s, 0);
+  }
 }
 
 .content {
@@ -54,6 +62,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    opacity: 0;
     .label {
       width: 167px;
       height: 53px;
@@ -79,12 +89,36 @@
       }
     }
   }
+
+  &.show {
+    .item {
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeInUp, .4s, $i * 0.1s);
+        }
+      }
+    }
+  }
+
+  &.hide {
+    .item {
+      @include animate(fadeOut, .5s, 0s);
+    }
+  }
 }
 
 .slider {
   position: relative;
-  height: 627px;
+  height: 565px;
   width: 582px;
+  opacity: 0;
+  &.show {
+    @include animate(fadeInUp, .8s, .6s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .6s, 0);
+  }
 }
 
 .blockWhite {
@@ -95,7 +129,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   .blockTitle {
     color: #000;
     font-size: 24px;
@@ -127,4 +161,232 @@
   top: 300px;
   top: 270px;
   z-index: 1;
+}
+
+.blockLabel {
+  position: absolute;
+  width: 152px;
+  height: 46px;
+  line-height: 46px;
+  background: #c7b39f;
+  text-align: center;
+  display: none;
+  color: #2d436e;
+  font-size: 16px;
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    height: calc(100vh - 60px);
+  }
+  .leftFlower {
+    width: 360px;
+  }
+  
+  .rightFlower {
+    width: 202px;
+  }
+
+  .sideBar {
+    img {
+      width: 44px;
+      height: 28px;
+    }
+
+    .item {
+      .label {
+        width: 167px;
+        height: 53px;
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+    height: 459px;
+    width: 582px;
+  }
+
+  .blockWhite {
+    width: 566px;
+    height: 380px;
+    top: 0;
+    right: 30px;
+    padding: 15px 16px 15px 23px;
+    .blockTitle {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  
+    .blockDesc {
+      font-size: 16px;
+    }
+  }
+  
+  .blockImg {
+    width: 440px;
+    top: 142px;
+    right: 200px;
+  }
+  
+  .blockYellow {
+    width: 533px;
+    height: 209px;
+    right: 140px;
+    top: 249px;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    height: calc(100vh - 45px);
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .leftFlower {
+    display: none;
+  }
+  
+  .rightFlower {
+    display: none;
+  }
+
+  .sideBar {
+    display: none;
+  }
+
+  .slider {
+    position: relative;
+    height: 400px;
+    width: 100%;
+  }
+
+  .blockWhite {
+    width: 233px;
+    height: 296px;
+    top: 0;
+    right: 30px;
+    padding: 15px 16px 15px 23px;
+    .blockTitle {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  
+    .blockDesc {
+      font-size: 12px;
+    }
+  }
+  
+  .blockImg {
+    width: 303px;
+    top: 185px;
+    right: 0px;
+  }
+  
+  .blockYellow {
+    width: 273px;
+    height: 166px;
+    right: 140px;
+    bottom: 0px;
+    top: initial;
+  }
+
+  .blockLabel {
+    position: absolute;
+    width: 125px;
+    height: 35px;
+    line-height: 35px;
+    background: #c7b39f;
+    text-align: center;
+    display: block;
+    color: #2d436e;
+    font-size: 18px;
+    left: -40px;
+    top: -23px;
+  }
+
+  .control {
+    background: url('./chevron-right.png');
+    width: 148px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    .left, .right {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  .leftFlower {
+    width: 420px;
+  }
+  
+  .rightFlower {
+    width: 202px;
+  }
+
+  .sideBar {
+    img {
+      width: 44px;
+      height: 28px;
+    }
+
+    .item {
+      .label {
+        width: 167px;
+        height: 53px;
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+    height: 459px;
+    width: 582px;
+  }
+
+  .blockWhite {
+    width: 566px;
+    height: 380px;
+    top: 0;
+    right: 0px;
+    padding: 15px 13px 15px 23px;
+    .blockTitle {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  
+    .blockDesc {
+      font-size: 16px;
+    }
+  }
+  
+  .blockImg {
+    width: 440px;
+    top: 142px;
+    right: 200px;
+  }
+  
+  .blockYellow {
+    width: 533px;
+    height: 209px;
+    right: 140px;
+    top: 249px;
+  }
 }

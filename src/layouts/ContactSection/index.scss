@@ -3,10 +3,24 @@
 }
 
 .orderBg {
-  background-color: #9c1e23;
+  background-color: #eee8df;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
 }
 
 .houseBg {
   background-color: #fff;
+}
+
+.leftLeaf {
+  position: aboslute;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.rightLeaf {
+  position: aboslute;
+  height: 100vh;
+  right: 0;
+  top: 0;
 }

@@ -2,11 +2,265 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
   background-image: url('./bg.png');
   // background-color: #c7b39f;
   position: relative;
   padding: 1px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top {
+   .title, .subTitle, .desc {
+    opacity: 0;
+  }
+
+  &.show {
+    .title {
+      @include animate(fadeInUp, .8s, 0s);   
+    }
+
+    .subTitle {
+      @include animate(fadeInUp, .8s, .2s);   
+    }
+
+    .desc {
+      @include animate(fadeInUp, .8s, .4s);   
+    }
+  }
+
+  &.hide {
+    .title, .subTitle, .desc {
+      @include animate(fadeOut, 1s, 0);
+    }
+  }
+}
+
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  color: #2d436e;
+  margin-bottom: 10px;
+}
+
+.subTitle {
+  font-size: 24px;
+  text-align: center;
+  color: #2d436e;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 16px;
+  text-align: center;
+  color: #2d436e;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1100px;
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeInUp, .8s, 1s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .6s, 0);
+  }
+}
+
+.item {
+  width: 354px;
+  height: 354px;
+  border-radius: 50%;
+  background-color: #901a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+  &:hover {
+    transform-origin: top center;
+    transform: scale(1.05);
+  }
+
+  &:nth-child(1) {
+    background-image: url('./item1.png')
+  }
+
+  &:nth-child(2) {
+    background-image: url('./item2.png')
+  }
+
+  &:nth-child(3) {
+    background-image: url('./item3.png')
+  }
+
+  .top {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 30px;
+  }
+
+  .bottom {
+    text-align: center;
+  }
+
+  .number {
+    font-size: 180px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .year {
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+    transform: translateY(-34px);
+    margin-left: 20px;
+  }
+
+  .bottomDesc {
+    color: #fff;
+
+    p {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    height: calc(100vh - 60px);
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .subTitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .desc {
+    font-size: 12px;
+    margin-bottom: 80px;
+  }
+  
+  .container {
+    width: 800px;
+  }
+  
+  .item {
+    width: 255px;
+    height: 255px;
+  
+    .top {
+      padding-left: 30px;
+    }
+  
+    .number {
+      font-size: 130px;
+    }
+  
+    .year {
+      font-size: 23px;
+      transform: translateY(-30px);
+      margin-left: 10px;
+    }
+  
+    .bottomDesc {
+      p {
+        font-size: 17px;
+      }
+  
+      h3 {
+        font-size: 23px;
+      }
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .subTitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  
+  .desc {
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .item {
+    width: 225px;
+    height: 225px;
+    margin-bottom: 30px;
+  
+    .top {
+      padding-left: 30px;
+    }
+  
+    .number {
+      font-size: 115px;
+    }
+  
+    .year {
+      font-size: 20px;
+      transform: translateY(-25px);
+      margin-left: 10px;
+    }
+  
+    .bottomDesc {
+      p {
+        font-size: 15px;
+      }
+  
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }

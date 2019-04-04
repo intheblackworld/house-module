@@ -8,48 +8,54 @@ import menu from './menu-btn.png'
 
 import css from './index.scss'
 
-const PCNavigationHeight = 60
+const PCNavigationHeight = 80
 const TabletNavigationHeight = 60
 const MobileNavigationHeight = 60
 
 const NavItems = [
   {
-    name: '超級任務',
-    imgSrc: '',
+    name: '收藏鴻海',
+    imgSrc: require('./nav1.png'),
+    subTitle: 'SCIENCE',
     section: 'point2',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '追片看明星',
-    imgSrc: '',
+    name: '典藏四喜',
+    imgSrc: require('./nav2.png'),
+    subTitle: 'COLLECTION',
     section: 'point3',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '鐵粉來踩點',
-    imgSrc: '',
+    name: '愛藏美學',
+    imgSrc: require('./nav3.png'),
+    subTitle: 'AESTHETICS',
     section: 'point4',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '新星領航員',
-    imgSrc: '',
+    name: '私藏稀有',
+    imgSrc: require('./nav4.png'),
+    subTitle: 'PRECIOUS',
     section: 'point5',
     OffsetValue: -PCNavigationHeight,
   },
   {
-    name: '挑戰成功',
-    imgSrc: '',
+    name: '珍藏精工',
+    imgSrc: require('./nav5.png'),
+    subTitle: 'MASTERPRIECE',
     section: 'point6',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '注意事項',
-    imgSrc: '',
+    name: '久藏卓越',
+    imgSrc: require('./nav6.png'),
+    subTitle: 'EXCELLENCY',
     section: 'point7',
     OffsetValue: -PCNavigationHeight,
   },
@@ -129,7 +135,10 @@ const Navigation = () => {
                   >
                     <span className={css.link}>
                       {item.imgSrc && <Image src={item.imgSrc} />}
-                      <span>{item.name}</span>
+                      <span>
+                        <p className={css.title}>{item.name}</p>
+                        <span className={css.subTitle}>{item.subTitle}</span>
+                      </span>
                     </span>
                   </Link>
                 ))}

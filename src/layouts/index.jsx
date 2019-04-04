@@ -3,9 +3,10 @@ import { Element } from 'react-scroll'
 import Mask from 'components/AstrictMask'
 // import Order from 'components/Order'
 import ViewPort from 'components/ViewPort'
-import FixLink from 'components/FixLink'
+// import FixLink from 'components/FixLink'
 import FullScreen from './FullScreen'
-// import Section from './Section'
+import ContactSection from './ContactSection'
+import { isMobile } from '../utils'
 
 import './index.scss'
 
@@ -20,34 +21,50 @@ const Section8 = lazy(() => import('projects/dyc/Section8'))
 // const MobileSection = lazy(() => import('projects/star/MobileSection'))
 // const Section6 = lazy(() => import('projects/start/Section6'))
 
-// const isMobile = window.navigator.userAgent.match(/iPhone/i) != null
-// || window.navigator.userAgent.match(/Android/i) != null
 const Layout = () => (
   <React.Fragment>
     <Mask />
-    <FixLink />
-    <FullScreen needCutHeader master>
+    {/* <FixLink /> */}
+    <FullScreen needCutHeader={false}>
       <Element id="master">
         <ViewPort isBottom={false}>
           <Master />
         </ViewPort>
       </Element>
     </FullScreen>
-    <FullScreen needCutHeader>
+    {isMobile ? (
       <Element id="point2">
         <Section2 />
       </Element>
-    </FullScreen>
-    <FullScreen needCutHeader>
+    ) : (
+      <FullScreen needCutHeader>
+        <Element id="point2">
+          <Section2 />
+        </Element>
+      </FullScreen>
+    )}
+    {isMobile ? (
       <Element id="point3">
         <Section3 />
       </Element>
-    </FullScreen>
-    <FullScreen needCutHeader>
+    ) : (
+      <FullScreen needCutHeader>
+        <Element id="point3">
+          <Section3 />
+        </Element>
+      </FullScreen>
+    )}
+    {isMobile ? (
       <Element id="point4">
         <Section4 />
       </Element>
-    </FullScreen>
+    ) : (
+      <FullScreen needCutHeader>
+        <Element id="point4">
+          <Section4 />
+        </Element>
+      </FullScreen>
+    )}
     <FullScreen needCutHeader>
       <Element id="point5">
         <Section5 />
@@ -56,16 +73,29 @@ const Layout = () => (
     <Element id="point6">
       <Section6 />
     </Element>
-    <FullScreen needCutHeader>
+    {isMobile ? (
       <Element id="point7">
         <Section7 />
       </Element>
-    </FullScreen>
-    <FullScreen needCutHeader>
+    ) : (
+      <FullScreen needCutHeader>
+        <Element id="point7">
+          <Section7 />
+        </Element>
+      </FullScreen>
+    )}
+    {isMobile ? (
       <Element id="point8">
         <Section8 />
       </Element>
-    </FullScreen>
+    ) : (
+      <FullScreen needCutHeader>
+        <Element id="point8">
+          <Section8 />
+        </Element>
+      </FullScreen>
+    )}
+    <ContactSection />
     {/* <Section>
     <Element id="section5">
       <Section5 />

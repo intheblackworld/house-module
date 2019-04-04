@@ -126,15 +126,15 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '一日林板新 挑戰當巨星｜活動官網',
-      metaTitle: '一日林板新 挑戰當巨星｜活動官網',
+      title: '德友藏︱一座不穿制服的建築︱官網',
+      metaTitle: '德友藏︱一座不穿制服的建築︱官網',
       metaDescription:
-        '在一個屋簷下，比巨星還閃亮的林板新特區裡，會激盪出什麼火花?！林板新特區好吃好住又好玩！三大任務、萬元獎金等你來挑戰！活動地點：新板巨星，活動專線：02-8201-5333',
-      metaKeywords: '新板巨星,一日林板新,新板特區,林板新',
-      ogMetaTitle: '一日林板新 挑戰當巨星｜活動官網',
+        '值得花三、五年排隊的日本精工新典範，頂埔捷運站出站就到家，接待中心：新北市土城區中央路四段26號，禮賓專線：02-2268-8765',
+      metaKeywords: '德友藏,德友,土城買房,土城建案,頂埔建案,土城新建案',
+      ogMetaTitle: '德友藏︱一座不穿制服的建築︱官網',
       ogMetaType: 'website',
       ogMetaDescription:
-        '在一個屋簷下，比巨星還閃亮的林板新特區裡，會激盪出什麼火花?！林板新特區好吃好住又好玩！三大任務、萬元獎金等你來挑戰！活動地點：新板巨星，活動專線：02-8201-5333',
+        '值得花三、五年排隊的日本精工新典範，頂埔捷運站出站就到家，接待中心：新北市土城區中央路四段26號，禮賓專線：02-2268-8765',
       template: 'index.html',
       hash: true,
     }),

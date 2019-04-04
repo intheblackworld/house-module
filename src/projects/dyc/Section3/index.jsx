@@ -1,13 +1,16 @@
-// import { withTrans } from 'utils'
+import { withTrans } from 'utils'
+import ViewPort from 'components/ViewPort'
+import cx from 'classnames'
 import c from './index.scss'
+import { isMobile } from '../../../utils'
 
-const Section3 = () => (
-  <div className={c.bg}>
-    <div className={c.title}>
-      <h3>日本真工新典範</h3>
-      <h3>21-47坪｜巨匠藏品</h3>
-    </div>
-    <div className={c.container}>
+const Container = ({ show }) => {
+  const containerClass = withTrans('container', c, show)
+  const containerShowClass = cx(c.container, {
+    [c.show]: true,
+  })
+  return (
+    <div className={isMobile ? containerShowClass : containerClass}>
       <div className={c.frame}>
         <div className={c.item}>
           <div className={c.content}>
@@ -58,6 +61,18 @@ const Section3 = () => (
         </div>
       </div>
     </div>
+  )
+}
+
+const Section3 = () => (
+  <div className={c.bg}>
+    <div className={c.title}>
+      <h3>日本真工新典範</h3>
+      <h3>21-47坪｜巨匠藏品</h3>
+    </div>
+    <ViewPort isBottom={false}>
+      <Container />
+    </ViewPort>
   </div>
 )
 
