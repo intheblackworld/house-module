@@ -90,7 +90,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
-    background: url('./mbg.png');
+    background-image: url('./mbg.png');
     width: 100vw;
     height: 897px;
   }
