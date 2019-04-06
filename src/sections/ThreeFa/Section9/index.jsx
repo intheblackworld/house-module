@@ -14,6 +14,7 @@ const imgList = [
   require('./team4.png'),
   require('./team5.png'),
   require('./team6.png'),
+  require('./team7.png'),
 ]
 
 const Sliders = ({ show = false }) => {

@@ -95,6 +95,13 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
+          <Image src={require('./person4-2.png')} alt="立信吾界的圖片" />
+          <div className={css.sliderContent}>
+            <p>建築行家 層峰格局 厚實資歷</p>
+            <h3>董事長特助 李宗錦</h3>
+          </div>
+        </div>
+        <div className={css.sliderItem}>
           <Image src={require('./person5.png')} alt="立信吾界的圖片" />
           <div className={css.sliderContent}>
             <p>工程精英 豪宅實力 優秀品質</p>

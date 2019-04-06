@@ -5,15 +5,14 @@ import css from './index.scss'
 
 const timeItems = [
   {
-    year: '2017',
-    img: require('./2017-1.jpg'),
-    desc: '仰真',
+    year: '2019',
+    img: require('./2019-1.jpg'),
+    desc: '新月天地',
   },
-
   {
     year: '',
-    img: require('./2017-2.jpg'),
-    desc: '雙江翠',
+    img: require('./2019-2.jpg'),
+    desc: '吾界',
   },
 
   {
@@ -22,15 +21,14 @@ const timeItems = [
     desc: '瀚疆',
   },
   {
-    year: '2019',
-    img: require('./2019-1.jpg'),
-    desc: '新月天地',
+    year: '2017',
+    img: require('./2017-1.jpg'),
+    desc: '仰真',
   },
-
   {
     year: '',
-    img: require('./2019-2.jpg'),
-    desc: '吾界',
+    img: require('./2017-2.jpg'),
+    desc: '雙江翠',
   },
 ]
 
