@@ -67,9 +67,12 @@ h3.title {
     height: calc(100vh - 60px);
   }
 
+  .container {
+    padding-top: 30px;
+  }
+
   h3.title {
     font-size: 24px;
-
   }
   
   .desc {
@@ -156,7 +159,7 @@ h3.title {
     width: 30%;
   }
 
-  .contaienr {
+  .container {
     padding-top: 120px;
   }
 }

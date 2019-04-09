@@ -1,14 +1,15 @@
-@import '../../../assets/animate.scss';
+@import "../../../assets/animate.scss";
 
 .bg {
   width: 100vw;
   height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
-  background-image: url('./bg.png');
+  background-image: url("./bg.png");
   background-attachment: fixed;
   position: relative;
-  > .top, > .container {
+  > .top,
+  > .container {
     height: 50%;
   }
   display: flex;
@@ -30,19 +31,19 @@
 
   // &.show {
   //   .label {
-  //     @include animate(fadeInUp, .8s, 0s);   
+  //     @include animate(fadeInUp, .8s, 0s);
   //   }
 
   //   .title {
-  //     @include animate(fadeInUp, .8s, .2s);   
+  //     @include animate(fadeInUp, .8s, .2s);
   //   }
 
   //   .desc {
-  //     @include animate(fadeInUp, .8s, .4s);   
+  //     @include animate(fadeInUp, .8s, .4s);
   //   }
 
   //   .resume {
-  //     @include animate(fadeInUp, .8s, .6s);   
+  //     @include animate(fadeInUp, .8s, .6s);
   //   }
   // }
 
@@ -166,16 +167,17 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
     height: calc(100vh - 60px);
+    background-size: contain;
   }
 
   .label {
     font-size: 16px;
   }
-  
+
   .title {
     font-size: 24px;
   }
-  
+
   .desc {
     width: 673px;
     font-size: 12px;
@@ -187,25 +189,25 @@
 
   .container {
     width: 880px;
-  
+
     .item {
       width: 190px;
       height: 100%;
-  
+
       .frame {
         padding: 7px;
       }
-  
+
       .content {
         padding: 0 17px;
         height: 100%;
       }
-  
+
       .contentTitle {
         font-size: 17px;
         margin-bottom: 30px;
       }
-  
+
       .contentDesc {
         font-size: 12px;
       }
@@ -217,19 +219,20 @@
 @media only screen and (max-width: 767px) {
   .bg {
     height: 100%;
-    background-image: url('./bg.png');
+    background-image: url("./bg.png");
+    background-size: contain;
   }
 
   .label {
     font-size: 16px;
     margin-bottom: 15px;
   }
-  
+
   .title {
     font-size: 24px;
     margin-bottom: 20px;
   }
-  
+
   .desc {
     width: 90%;
     font-size: 12px;
@@ -247,27 +250,27 @@
   .container {
     width: 80%;
     display: block;
-  
+
     .item {
       width: 234px;
       height: 355px;
       margin-bottom: 20px;
       opacity: 1 !important;
-  
+
       .frame {
         padding: 7px;
       }
-  
+
       .content {
         padding: 0 17px;
         height: 100%;
       }
-  
+
       .contentTitle {
         font-size: 18px;
         margin-bottom: 30px;
       }
-  
+
       .contentDesc {
         font-size: 12px;
       }
@@ -288,7 +291,6 @@
   .desc {
     font-size: 12px;
   }
-
 
   .resume {
     width: 280px;

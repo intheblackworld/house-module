@@ -5,7 +5,7 @@ import c from './loading.scss'
 const Loading = () => (
   <div
     style={{
-      backgroundImage: "url('../projects/dyc/Master/bg.png')",
+      // backgroundImage: "url('../projects/dyc/Master/bg.png')",
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

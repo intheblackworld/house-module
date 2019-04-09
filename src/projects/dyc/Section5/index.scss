@@ -247,6 +247,7 @@
 
   .title {
     font-size: 16px;
+    margin-bottom: 50px;
   }
 
   .leftFlower {
@@ -286,13 +287,14 @@
   .blockImg {
     width: 303px;
     top: 185px;
-    right: 0px;
+    right: 15px;
   }
   
   .blockYellow {
     width: 273px;
     height: 166px;
-    right: 140px;
+    right: auto;
+    left: 20px;
     bottom: 0px;
     top: initial;
   }

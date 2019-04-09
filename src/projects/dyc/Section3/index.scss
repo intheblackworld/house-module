@@ -92,6 +92,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
     height: calc(100vh - 60px);
+    background-size: contain;
   }
 
   .title {
@@ -119,6 +120,7 @@
 @media only screen and (max-width: 767px) {
   .bg {
     height: 100%;
+    background-size: contain;
   }
 
   .title {

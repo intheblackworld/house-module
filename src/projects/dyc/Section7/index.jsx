@@ -102,7 +102,7 @@ const Container = ({ show }) => {
         >
           <div className={c.item}>
             <div className={c.frame}>
-              <div className={c.content}>
+              <div className={c.content} style={{ background: '#9eafd0' }}>
                 <h3 className={c.contentTitle}>
                   系統規則化
                   <br />
@@ -116,7 +116,7 @@ const Container = ({ show }) => {
           </div>
           <div className={c.item}>
             <div className={c.frame}>
-              <div className={c.content}>
+              <div className={c.content} style={{ background: '#7d8fb4' }}>
                 <h3 className={c.contentTitle}>
                   規格標準化
                   <br />
@@ -130,7 +130,7 @@ const Container = ({ show }) => {
           </div>
           <div className={c.item}>
             <div className={c.frame}>
-              <div className={c.content}>
+              <div className={c.content} style={{ background: '#596c92' }}>
                 <h3 className={c.contentTitle}>
                   防呆配件化
                   <br />
@@ -144,7 +144,7 @@ const Container = ({ show }) => {
           </div>
           <div className={c.item}>
             <div className={c.frame}>
-              <div className={c.content}>
+              <div className={c.content} style={{ background: '#2d436e' }}>
                 <h3 className={c.contentTitle}>
                   作業效率化
                   <br />

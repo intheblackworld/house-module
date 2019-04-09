@@ -92,7 +92,9 @@
   .bg {
     background-image: url('./mbg.png');
     width: 100vw;
-    height: 897px;
+    min-height: 950px !important;
+    height: 950px !important;
+    background-size: cover;
   }
 
   .leftTitle {
