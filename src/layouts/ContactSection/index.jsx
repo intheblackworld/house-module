@@ -15,8 +15,9 @@ const {
 const ContactSection = () => (
   <div className={css.contactSection}>
     <div className={css.orderBg}>
-      <img src="./leftLeaf.png" className={css.leftLeaf} alt="" />
-      <img src="./rightLeaf.png" className={css.rightLeaf} alt="" />
+      <img src={require('./leftLeaf.png')} className={css.leftLeaf} alt="" />
+      <img src={require('./rightLeaf.png')} className={css.rightLeaf} alt="" />
+      <img src={require('./mleaf.png')} className={css.mleaf} alt="" />
       <FullScreen needCutHeader alignCenter>
         <Viewport>
           <Order />

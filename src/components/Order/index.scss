@@ -5,6 +5,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .form {
@@ -91,7 +93,7 @@
       width: 92px;
       font-size: 16px;
       opacity: 0.8;
-      color: #2d436e;
+      color: #000;
     }
   }
 
@@ -292,6 +294,7 @@
     margin-bottom: 12px !important;
     label {
       width: 30% !important;
+      color: #2d436e !important;
     }
 
     .field {

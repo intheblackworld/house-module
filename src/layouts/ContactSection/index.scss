@@ -5,6 +5,7 @@
 .orderBg {
   background-color: #eee8df;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
+  position: relative;
 }
 
 .houseBg {
@@ -12,15 +13,36 @@
 }
 
 .leftLeaf {
-  position: aboslute;
+  position: absolute;
   height: 100vh;
   left: 0;
   top: 0;
 }
 
 .rightLeaf {
-  position: aboslute;
+  position: absolute;
   height: 100vh;
   right: 0;
   top: 0;
+}
+
+.mleaf {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .leftLeaf, .rightLeaf {
+    display: none;
+  }
+
+  .mleaf {
+    display: block;
+    opacity: .6;
+  }
 }

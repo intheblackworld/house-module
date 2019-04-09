@@ -133,10 +133,15 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
 
+  .bg {
+    background-image: url('./mbg.png')
+  }
+
   .title {
+    width: 85px;
     .main {
       h3 {
-        font-size: 25px;
+        font-size: 30px;
       }
     }
   
@@ -150,17 +155,23 @@
     }
   
     .sub {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
+
   .leftLeaf {
     width: 80px;
     top: 0;
     left: 0;
   }
 
+  .leaf {
+    background-image: none;
+  }
+
   .rightLeaf1 {
     width: 100px;
+    display: none;
   }
 
   .rightLeaf2 {

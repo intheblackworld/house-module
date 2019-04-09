@@ -150,6 +150,13 @@ h3.title {
   }
 }
 
-// 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .flower {
+    width: 30%;
+  }
+
+  .contaienr {
+    padding-top: 120px;
+  }
 }

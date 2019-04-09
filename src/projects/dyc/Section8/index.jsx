@@ -1,5 +1,6 @@
 import { withTrans } from 'utils'
 import ViewPort from 'components/ViewPort'
+import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const Top = ({ show }) => {
@@ -7,7 +8,7 @@ const Top = ({ show }) => {
   return (
     <div className={topClass}>
       <h3 className={c.title}>城意實築 台灣首發</h3>
-      <h3 className={c.subTitle}>大建商不願做的，小公司做不來的，德友魄力一次包辦</h3>
+      <h3 className={c.subTitle}>大建商不願做的，小公司做不來的，{ isMobile && <br /> }德友魄力一次包辦</h3>
       <p className={c.desc}>
         銷售合約公開化｜保證產權清楚｜建築安全履歷認證
         <br />

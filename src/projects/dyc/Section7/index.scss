@@ -133,6 +133,32 @@
       color: #fff;
     }
   }
+
+  .item {
+    &:nth-child(1) {
+      .content {
+        background: #9eafd0;
+      }
+    }
+
+    &:nth-child(2) {
+      .content {
+        background: #7d8fb4;
+      }
+    }
+
+    &:nth-child(3) {
+      .content {
+        background: #596c92;
+      }
+    }
+
+    &:nth-child(4) {
+      .content {
+        background: #2d436e;
+      }
+    }
+  }
 }
 
 /* 螢幕尺寸標準 */
@@ -219,8 +245,8 @@
   }
 
   .container {
-    width: 90%;
-    flex-direction: column;
+    width: 80%;
+    display: block;
   
     .item {
       width: 234px;
@@ -249,6 +275,22 @@
   }
 }
 
-// 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .label {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+
+  .resume {
+    width: 280px;
+  }
 }

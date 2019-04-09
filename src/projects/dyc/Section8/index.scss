@@ -217,12 +217,12 @@
   .subTitle {
     font-size: 16px;
     margin-bottom: 20px;
-    width: 90%;
+    width: 100%;
   }
   
   .desc {
     font-size: 12px;
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
   
   .container {
@@ -261,6 +261,17 @@
   }
 }
 
-// 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .item {
+    transform: scale(0.9);
+    &:hover {
+      transform: scale(0.95);
+      transform-origin: top center;
+    }
+  } 
+
+  .top {
+    margin-bottom: 20px;
+  }
 }

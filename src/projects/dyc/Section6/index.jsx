@@ -1,23 +1,22 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import { withTrans } from 'utils'
 import ViewPort from 'components/ViewPort'
 import Carousel from 'components/Carousel'
 import c from './index.scss'
 
 const img1List = [
-  require('./slide-1-1.png'),
-  require('./slide-1-2.png'),
-  require('./slide-1-3.png'),
-  require('./slide-1-4.png'),
-  require('./slide-1-5.png'),
+  require('./item-1-1.png'),
+  // require('./item-1-2.png'),
+  require('./item-1-2.png'),
+  require('./item-1-3.png'),
 ]
 
-const img2List = [require('./slide-2-1.png'), require('./slide-2-2.png')]
+const img2List = [require('./item-2-1.png'), require('./item-2-2.png'), require('./item-2-3.png')]
 
 const Item1 = ({ show }) => {
   const itemClass = withTrans('item', c, show)
-  // const [index, setIndex] = useState(0)
-  // const locations = ['台北捷運板南線頂埔段', '北海道新千歲空港大樓', '神奈川潢濱21世紀地標大廈']
+  const [index, setIndex] = useState(0)
+  const locations = ['21世紀大樓', '新千歲空港', '頂埔捷運']
   return (
     <div className={itemClass}>
       <p className={c.label}>【岩田地崎建設株式会社】</p>
@@ -38,7 +37,7 @@ const Item1 = ({ show }) => {
           <Carousel
             slidesToShow={1}
             fade={false}
-            // afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
+            afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
           >
             {img1List.map(url => (
               <img src={url} alt="" key={url} />
@@ -46,7 +45,7 @@ const Item1 = ({ show }) => {
           </Carousel>
         </div>
         <div className={c.content}>
-          {/* <p className={c.location}>{locations[index]}</p> */}
+          <p className={c.location}>{locations[index]}</p>
         </div>
       </div>
     </div>
@@ -55,7 +54,8 @@ const Item1 = ({ show }) => {
 
 const Item2 = ({ show }) => {
   const itemClass = withTrans('item', c, show)
-  // const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0)
+  const locations = ['德友極', '一巷青', '德友藏']
   return (
     <div className={itemClass}>
       <p className={c.label}>【德友建設機構】</p>
@@ -75,7 +75,7 @@ const Item2 = ({ show }) => {
           <Carousel
             slidesToShow={1}
             fade={false}
-            // afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
+            afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
           >
             {img2List.map(url => (
               <img src={url} alt="" key={url} />
@@ -83,7 +83,7 @@ const Item2 = ({ show }) => {
           </Carousel>
         </div>
         <div className={c.content}>
-          {/* <p className={c.location}>北海道新千歲空港大樓</p> */}
+          <p className={c.location}>{locations[index]}</p>
         </div>
       </div>
     </div>

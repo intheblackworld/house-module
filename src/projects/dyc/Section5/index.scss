@@ -390,3 +390,10 @@
     top: 249px;
   }
 }
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .slider > div, .slider > .blockImg {
+    transform: scale(0.8);
+  }
+}
