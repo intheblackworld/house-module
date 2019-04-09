@@ -17,9 +17,9 @@ const Viewport = ({ children, isBottom = true }) => {
           onEnterViewport={() => {
             setShow(true)
           }}
-          onLeaveViewport={() => {
-            setShow(false)
-          }}
+          // onLeaveViewport={() => {
+          //   setShow(false)
+          // }}
         />
       )}
       {React.cloneElement(children || <div />, { show })}
@@ -28,9 +28,9 @@ const Viewport = ({ children, isBottom = true }) => {
           onEnterViewport={() => {
             setShow(true)
           }}
-          onLeaveViewport={() => {
-            setShow(false)
-          }}
+          // onLeaveViewport={() => {
+          //   setShow(false)
+          // }}
         />
       )}
     </React.Fragment>
