@@ -34,7 +34,7 @@
   }
 
   &.hide {
-    @include animate(fadeOut, .8s, 0s);   
+    @include animate(fadeOut, .8s, .3s);   
   }
 
 
