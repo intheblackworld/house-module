@@ -30,7 +30,7 @@
   opacity: 0;
 
   &.show {
-    @include animate(fadeIn, .8s, .5s);   
+    @include animate(fadeIn, .8s, 0s);
   }
 
   &.hide {
@@ -138,6 +138,7 @@
 
   .title {
     width: 85px;
+    opacity: 0;
     .main {
       h3 {
         font-size: 30px;
@@ -162,6 +163,7 @@
     width: 80px;
     top: 0;
     left: 0;
+    display: none;
   }
 
   .leaf {
