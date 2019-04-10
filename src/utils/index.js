@@ -15,27 +15,16 @@ export const imgUrls = (length, isFake, size = [300, 300]) => {
   // return urls
 }
 
-// export const withTrans = (className, c, show) => cx(c[className], {
-//   [c.show]: show,
-//   [c.hide]: !show,
-// })
+export const withTrans = (className, c, show) => cx(c[className], {
+  [c.show]: show,
+  [c.hide]: !show,
+})
 
-// export const withGlobal = className => cx(className, {
-//   className: true,
-// })
-
-
-const util = {
-  withTrans: (className, c, show) => cx(c[className], {
-    [c.show]: show,
-    [c.hide]: !show,
-  }),
-  withGlobal: className => cx(className, {
-    className: true,
-  }),
-}
+export const withGlobal = className => cx(className, {
+  className: true,
+})
 
 export const isMobile = window.navigator.userAgent.match(/iPhone/i) != null
   || window.navigator.userAgent.match(/Android/i) != null
 
-export default util
+export default null

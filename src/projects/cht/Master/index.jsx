@@ -1,10 +1,10 @@
-import util from 'utils'
+import { withTrans, withGlobal } from 'utils'
 // import ViewPort from 'components/ViewPort'
 // import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const Master = ({ show }) => {
-  const bgClass = util.withTrans('bg', c, show).withGlobal('bg')
+  const bgClass = withGlobal('bg', withTrans('bg', c, show))
 
   return (
     <div className={bgClass}>
