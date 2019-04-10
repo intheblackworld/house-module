@@ -11,7 +11,7 @@ import { isMobile } from '../utils'
 import './index.scss'
 
 const Master = lazy(() => import('projects/cht/Master'))
-const Section2 = lazy(() => import('projects/dyc/Section2'))
+const Section2 = lazy(() => import('projects/cht/Section2'))
 const Section3 = lazy(() => import('projects/dyc/Section3'))
 const Section4 = lazy(() => import('projects/dyc/Section4'))
 const Section5 = lazy(() => import('projects/dyc/Section5'))
@@ -37,11 +37,9 @@ const Layout = () => (
         <Section2 />
       </Element>
     ) : (
-      <FullScreen needCutHeader>
-        <Element id="point2">
-          <Section2 />
-        </Element>
-      </FullScreen>
+      <Element id="point2">
+        <Section2 />
+      </Element>
     )}
     {isMobile ? (
       <Element id="point3">

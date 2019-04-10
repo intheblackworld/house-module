@@ -2,7 +2,47 @@
 
 .bg {
   background-image: url('./bg.png');
-  compose: bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  width: 512px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.subTitle {
+  font-size: 32px;
+  height: 56px;
+  text-align: center;
+  color: #fbdda6;
+  border-top: 2px solid #fbdda6;
+  border-bottom: 2px solid #fbdda6;
+  opacity: 0;
+}
+
+// show hide
+.bg {
+  &.show {
+    .title {
+      @include animate(fadeIn, .8s, .0s);
+    }
+
+    .subTitle {
+      @include animate(fadeIn, .8s, .4s);
+    }
+    
+  }
+
+  &.hide {
+    
+    .title, .subTitle {
+      @include animate(fadeOut, .8s, .0s);
+    }
+  }
 }
 
 /* 螢幕尺寸標準 */
@@ -12,6 +52,16 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .title {
+    width: 188px;
+  }
+
+  .subTitle {
+    font-size: 20px;
+    width: 188px;
+    height: 65px;
+    margin-top: 10px;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

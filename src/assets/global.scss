@@ -15,13 +15,27 @@
   #app {
     width: 100vw;
     overflow: hidden;
+    background: #000;
+  }
+
+  .masterBg {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
   }
 
   .bg {
     width: 100vw;
-    height: calc(100vh - $navigationPCHeight);
+    height: calc(100vh - #{$navigationPCHeight});
     background-size: cover;
     background-position: center;
+  }
+
+  .flex-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* 螢幕尺寸標準 */
@@ -29,7 +43,7 @@
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
     .bg {
-      height: calc(100vh - $navigationTabletHeight);
+      height: calc(100vh - #{$navigationTabletHeight});
     }
   }
 
@@ -42,7 +56,7 @@
     }
 
     .bg {
-      height: calc(100vh - $navigationMobileHeight);
+      height: calc(100vh - #{$navigationMobileHeight});
     }
   }
 
