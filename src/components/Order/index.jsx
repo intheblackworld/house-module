@@ -10,12 +10,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import PolicyDialog from 'components/PolicyDialog'
+
 import info from '../../sections/ContactSection/info'
 
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
 
-const Order = ({ show }) => {
+const Order = ({ show, noTitle }) => {
   // 從網址接收 utm 資料
   const urlParams = new URLSearchParams(window.location.search)
   const utmSource = urlParams.get('utm_source')
@@ -44,6 +45,8 @@ const Order = ({ show }) => {
     [css.hide]: !show,
   })
 
+  const [isLoading, setLoading] = useState(false)
+
   // 彈窗
   const [isShow, toggleDialog] = useState(false)
   const showDialog = () => {
@@ -59,9 +62,9 @@ const Order = ({ show }) => {
   // 表單驗證
   const [alert, triggerAlert] = useState(false)
   const submitForm = () => {
-    console.log(1)
+    if (isLoading) return
+    setLoading(true)
     if (!isCheck) return
-    console.log(2)
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value
@@ -103,6 +106,7 @@ const Order = ({ show }) => {
         method: 'GET',
       },
     ).then(() => {
+      setLoading(false)
       fetch('contact-form.php', {
         method: 'POST',
         body: formData,
@@ -112,7 +116,11 @@ const Order = ({ show }) => {
         }
       })
     })
-
+    // .then((response) => {
+    //   if (response.status === 200) {
+    //     window.location.href = 'formThanks'
+    //   }
+    // })
     // .then((myJson) => {
     //   console.log(myJson)
     // })
@@ -139,10 +147,12 @@ const Order = ({ show }) => {
 
   return (
     <div className={css.orderContainer}>
-      <div className={titleClass}>
-        <h3>預約賞屋</h3>
-        <p>買得起，住更好</p>
-      </div>
+      {!noTitle && (
+        <div className={titleClass}>
+          <h3>預約賞屋</h3>
+          <p>買得起，住更好</p>
+        </div>
+      )}
       <Form className={formClass}>
         <div className={css.group}>
           <div className={css.control}>
