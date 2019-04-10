@@ -10,7 +10,7 @@ import { isMobile } from '../utils'
 
 import './index.scss'
 
-const Master = lazy(() => import('projects/dyc/Master'))
+const Master = lazy(() => import('projects/cht/Master'))
 const Section2 = lazy(() => import('projects/dyc/Section2'))
 const Section3 = lazy(() => import('projects/dyc/Section3'))
 const Section4 = lazy(() => import('projects/dyc/Section4'))
