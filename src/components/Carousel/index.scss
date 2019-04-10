@@ -2,25 +2,6 @@
 }
 
 :global {
-  .slick-arrow {
-    width: 24px !important;
-    height: 24px !important;
-
-    &.slick-next {
-      right: -30px !important;
-      // transform: rotate(180deg) !important;
-    }
-    &.slick-prev {
-      left: -30px !important;
-      // transform: rotate(180deg) !important;
-    }
-
-    &:before {
-      font-size: 24px !important;
-      opacity: 1 !important;
-      color: #666 !important;
-    }
-  }
 
   /* 手機尺寸 */
   @media only screen and (max-width: 767px) {
@@ -33,22 +14,6 @@
     .slick-arrow {
       width: 40px !important;
       height: 40px !important;
-
-      &.slick-next {
-        // left: -50px !important;
-        // transform: rotate(180deg) !important;
-      }
-      &.slick-prev {
-        display: block !important;
-        // left: 915px !important;
-        // transform: rotate(180deg) !important;
-      }
-
-      &:before {
-        font-size: 40px !important;
-        opacity: 1 !important;
-        color: #000 !important;
-      }
     }
   }
 

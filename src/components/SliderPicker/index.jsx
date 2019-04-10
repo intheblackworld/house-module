@@ -1,35 +1,53 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react'
 // import ViewPort from 'components/ViewPort'
-// import { isMobile } from '../../../utils'
 import Carousel from 'components/Carousel'
+import { isMobile } from '../../utils'
 import c from './index.scss'
 
 const SlidePicker = ({ slideList }) => {
   const [imgIndex, setImgIndex] = useState(0)
+  const addIndex = () => {
+    setImgIndex(imgIndex === slideList.length - 1 ? 0 : imgIndex + 1)
+    console.log(imgIndex)
+  }
+  // const descIndex = () => setImgIndex(imgIndex === 0 ? slideList.length - 1 : imgIndex - 1)
   return (
     <div className={c.slideContainer}>
-      <div className={c.slideView}>
-        <img key={slideList[imgIndex].src} src={slideList[imgIndex].src} alt="" />
-        <div className={c.slideTitle}>{slideList[imgIndex].desc}</div>
-      </div>
+      {!isMobile && (
+        <div className={c.slideView}>
+          <img key={slideList[imgIndex].src} src={slideList[imgIndex].src} alt="" />
+          <div className={c.slideTitle}>
+            <h3>{slideList[imgIndex].desc}</h3>
+          </div>
+        </div>
+      )}
       <div className={c.slideControl}>
         <Carousel
-          fade={false}
-          slidesToShow={5}
-          // afterChange={() => setImgIndex(imgIndex === slideList.length - 1 ? 0 : imgIndex + 1)}
+          fade={!!isMobile}
+          vertical={!isMobile}
+          arrows
+          slidesToShow={isMobile ? 1 : 5}
+          afterChange={addIndex}
+          initialSlide={imgIndex}
         >
           {slideList.map((slide, index) => (
-            <img
-              key={slide.src}
-              src={slide.src}
-              alt=""
-              onKeyDown={() => setImgIndex(index)}
-              onClick={() => setImgIndex(index)}
-              className={`${c.slideImg} ${imgIndex === index && 'active'}`}
-            />
+            <div key={slide.src}>
+              <img
+                src={slide.src}
+                alt=""
+                onKeyDown={() => setImgIndex(index)}
+                onClick={() => setImgIndex(index)}
+                className={`${c.slideImg} ${imgIndex === index && 'active'}`}
+              />
+            </div>
           ))}
         </Carousel>
+        {isMobile && (
+          <div className={c.arrows}>
+            <h3>{slideList[imgIndex].desc}</h3>
+          </div>
+        )}
       </div>
     </div>
   )

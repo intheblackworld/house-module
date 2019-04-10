@@ -45,6 +45,8 @@ const Order = ({ show, noTitle }) => {
     [css.hide]: !show,
   })
 
+  const [isLoading, setLoading] = useState(false)
+
   // 彈窗
   const [isShow, toggleDialog] = useState(false)
   const showDialog = () => {
@@ -60,6 +62,8 @@ const Order = ({ show, noTitle }) => {
   // 表單驗證
   const [alert, triggerAlert] = useState(false)
   const submitForm = () => {
+    if (isLoading) return
+    setLoading(true)
     if (!isCheck) return
     if (
       !document.getElementById('name').value
@@ -102,6 +106,7 @@ const Order = ({ show, noTitle }) => {
         method: 'GET',
       },
     ).then(() => {
+      setLoading(false)
       fetch('contact-form.php', {
         method: 'POST',
         body: formData,
