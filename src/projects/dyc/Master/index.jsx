@@ -6,10 +6,16 @@ const Master = ({ show }) => {
   const leftLeafClass = withTrans('leftLeaf', c, show)
   const rightLeaf1Class = withTrans('rightLeaf1', c, show)
   const rightLeaf2Class = withTrans('rightLeaf2', c, show)
+
+  const leftMLeaf1Class = withTrans('leftMLeaf1', c, show)
+  const leftMLeaf2Class = withTrans('leftMLeaf2', c, show)
+  const rightMLeafClass = withTrans('rightMLeaf', c, show)
   return (
     <div className={c.bg}>
       <div className={c.leaf}>
         <img className={leftLeafClass} src={require('./flower-left.png')} alt="" />
+        <img className={leftMLeaf1Class} src={require('./flower-left-m-1.png')} alt="" />
+        <img className={leftMLeaf2Class} src={require('./flower-left-m-2.png')} alt="" />
         <div className={titleClass}>
           <div className={c.main}>
             <h3>台湾に、日本の美しい立ち姿を</h3>
@@ -23,6 +29,7 @@ const Master = ({ show }) => {
         </div>
         <img className={rightLeaf1Class} src={require('./flower-right1.png')} alt="" />
         <img className={rightLeaf2Class} src={require('./flower-right2.png')} alt="" />
+        <img className={rightMLeafClass} src={require('./flower-right-m-1.png')} alt="" />
       </div>
     </div>
   )
