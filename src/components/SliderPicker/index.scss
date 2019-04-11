@@ -1,4 +1,4 @@
-// @import '../../../assets/animate.scss';
+@import '../../assets/animate.scss';
 
 .slideContainer {
   width: 100%;
@@ -7,9 +7,34 @@
   justify-content: space-between;
   margin-bottom: 40px;
 
+  // show hide
+  .slideView, .slideControl {
+    opacity: 0;
+  }
+
+  &.show {
+    .slideView {
+      @include animate(fadeInRight, .8s, 0s);
+    }
+
+    .slideControl {
+      @include animate(fadeInLeft, .8s, .5s);
+      // @for $i from 1 through 12 {
+      //   &:nth-child(#{$i}) {
+      //     @include animate(fadeInUp, .4s, 0.2s + $i * 0.15s);
+      //   }
+      // }
+    }
+  }
+
+  &.hide {
+    .slideView, .slideControl {
+      @include animate(fadeOut, .8s, 0s);
+    }
+  }
   .slideView {
     width: 779px;
-    height: 530px;
+    height: 519px;
     position: relative;
     img {
       width: 100%;
@@ -41,14 +66,13 @@
 
   .slideControl {
     display: block;
-    width: 134px;
-    height: 530px;
-    overflow-y: hidden;
+    width: 135px;
+    height: 519px;
     position: absolute;
     right: 0;
 
     .slideImg {
-      width: 134px;
+      width: 135px;
       height: auto;
       margin-bottom: 12px;
       display: block;
@@ -71,7 +95,7 @@
 
     .slideView {
       width: 779px;
-      height: 530px;
+      height: 519px;
       img {
       }
 

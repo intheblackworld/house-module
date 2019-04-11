@@ -1,19 +1,18 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react'
 // import ViewPort from 'components/ViewPort'
+import { withTrans } from 'utils'
 import Carousel from 'components/Carousel'
 import { isMobile } from '../../utils'
 import c from './index.scss'
 
-const SlidePicker = ({ slideList }) => {
+const SlidePicker = ({ show, slideList }) => {
   const [imgIndex, setImgIndex] = useState(0)
   const addIndex = () => {
     setImgIndex(imgIndex === slideList.length - 1 ? 0 : imgIndex + 1)
-    console.log(imgIndex)
   }
-  // const descIndex = () => setImgIndex(imgIndex === 0 ? slideList.length - 1 : imgIndex - 1)
   return (
-    <div className={c.slideContainer}>
+    <div className={withTrans('slideContainer', c, show)}>
       {!isMobile && (
         <div className={c.slideView}>
           <img key={slideList[imgIndex].src} src={slideList[imgIndex].src} alt="" />
@@ -26,7 +25,7 @@ const SlidePicker = ({ slideList }) => {
         <Carousel
           fade={!!isMobile}
           vertical={!isMobile}
-          arrows
+          arrows={isMobile}
           slidesToShow={isMobile ? 1 : 5}
           afterChange={addIndex}
           initialSlide={imgIndex}
