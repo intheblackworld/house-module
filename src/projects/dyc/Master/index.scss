@@ -5,7 +5,8 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: url('./bg.png')
+  background-image: url('./bg.png');
+  overflow: hidden;
 }
 
 .leaf {
@@ -41,7 +42,7 @@
   .main {
     color: #000;
     writing-mode: vertical-rl;
-    white-space: nowrap;
+    // white-space: nowrap;
 
     h3 {
       font-size: 32px;
@@ -160,7 +161,7 @@
     opacity: 0;
     .main {
       h3 {
-        font-size: 30px;
+        font-size: 28px;
       }
     }
   
