@@ -126,15 +126,15 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '德友藏︱一座不穿制服的建築︱官網',
-      metaTitle: '德友藏︱一座不穿制服的建築︱官網',
+      title: '長虹天際︱唯有長虹超越期待︱官網',
+      metaTitle: '長虹天際︱唯有長虹超越期待︱官網',
       metaDescription:
-        '值得花三、五年排隊的日本精工新典範，頂埔捷運站出站就到家，接待中心：新北市土城區中央路四段26號，禮賓專線：02-2268-8765',
-      metaKeywords: '德友藏,德友,土城買房,土城建案,頂埔建案,土城新建案',
-      ogMetaTitle: '德友藏︱一座不穿制服的建築︱官網',
+        '長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
+      metaKeywords: '長虹天際，長虹建設，林口建案，新北市建案，大坪數建案，文化三路建案',
+      ogMetaTitle: '長虹天際︱唯有長虹超越期待︱官網',
       ogMetaType: 'website',
       ogMetaDescription:
-        '值得花三、五年排隊的日本精工新典範，頂埔捷運站出站就到家，接待中心：新北市土城區中央路四段26號，禮賓專線：02-2268-8765',
+        '長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
       template: 'index.html',
       hash: true,
     }),

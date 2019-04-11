@@ -34,7 +34,7 @@ const slideList = [
   },
 ]
 
-const Section4 = () => (
+const Section5 = () => (
   <div>
     <Viewport isBottom={false}>
       <PreContainer title1="貼心幸福‧奢華無設限" title2="極上設施" desc="Be the Luxury Amenities" src={require('./preImg.jpg')} />
@@ -50,4 +50,4 @@ const Section4 = () => (
   </div>
 )
 
-export default Section4
+export default Section5
