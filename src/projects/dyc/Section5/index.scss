@@ -32,10 +32,10 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: 22px;
   color: #fff;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   opacity: 0;
   &.show {
     @include animate(fadeIn, .8s, .0s);
