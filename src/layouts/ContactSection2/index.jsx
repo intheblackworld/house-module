@@ -3,9 +3,9 @@
 // import { isMobile } from '../../../utils'
 // import c from './index.scss'
 import Viewport from 'components/ViewPort'
-// import GhostOrder from 'components/GhostOrder'
+import GhostOrder from 'components/GhostOrder'
 import FooterContactInfo from 'components/FooterContactInfo'
-// import FullScreen from 'layouts/FullScreen'
+import FullScreen from 'layouts/FullScreen'
 // import Section from 'layouts/Section'
 import GoogleMap from 'components/GoogleMap'
 // import HouseInfo from 'components/HouseInfo'
@@ -18,13 +18,13 @@ const {
 const ContactSection = () => (
   <div className={c.contactSection}>
     <GoogleMap />
-    {/* <div className={c.orderBg}>
+    <div className={`${c.orderBg} bg`}>
       <FullScreen needCutHeader alignCenter>
         <Viewport>
           <GhostOrder />
         </Viewport>
       </FullScreen>
-    </div> */}
+    </div>
     <Viewport isBottom={false}>
       <FooterContactInfo
         address={address}

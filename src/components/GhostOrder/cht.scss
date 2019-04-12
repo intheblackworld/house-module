@@ -1,0 +1,214 @@
+.orderContainer {
+  width: 932px;
+  margin: 0 auto;
+}
+
+.orderTitle {
+  width: 326px;
+  margin: 0 auto;
+  h3 {
+    width: 100%;
+    height: 51px;
+    font-size: 32px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(255, 255, 255, .3);
+  }
+
+  p {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.close {
+  font-size: 36px;
+  position: fixed;
+  right: 50%;
+  top: 15%;
+  transform: translateX(350px);
+  z-index: 200;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
+  }
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > div {
+    width: 100%;
+  }
+}
+
+.selectControl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > div {
+    width: 47%;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a, label {
+    color: #fff !important;
+  }
+}
+
+.submit {
+  width: 162px;
+  height: 35px;
+  border-radius: 21.6px !important;
+  background-color: #edd191 !important;
+  color: #2f525a !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+:global {
+
+  .field {
+    position: relative !important;
+    margin-bottom: 25px !important;
+  }
+  .ui.form {
+    .field > .selection.dropdown, input:not([type]):focus, input:not([type]),  textarea,  input:not([type]):focus, .field.field input:-webkit-autofill {
+      border-radius: 0 !important;
+      border: none !important;
+      border-bottom: 1px solid #fff !important;
+      background: transparent !important;
+      box-shadow: 0px 0px 0px 100px transparent inset !important;
+      color: rgba(255, 255, 255, 1) !important;
+      
+    }
+
+    input:not([type]):focus {
+      border-bottom: 1px solid #85B7D9 !important;
+
+      & + label {
+        font-size: 12px;
+        bottom: 25px;
+        left: 0px;
+      }
+    }
+
+    .field > .selection.dropdown {
+      width: 100% !important;
+    }
+
+    textarea {
+      border: 1px solid #fff !important;
+      margin-bottom: 25px;
+    }
+
+    
+
+    label {
+      color: #fff !important;
+      position: absolute;
+      font-size: 16px;
+      bottom: 5px;
+      left: 5px;
+      transition: all .3s;
+    }
+  }
+}
+
+
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .orderContainer {
+    width: 90%;
+  }
+  .orderTitle {
+    width: 100%;
+    h3 {
+      width: 114px;
+      height: 33px;
+      font-size: 20px;
+      margin: 0 auto 20px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+  .close {
+    right: 10%;
+    top: 10%;
+    transform: translateX(0);
+    font-size: 22px;
+    color: #666;
+  }
+
+  .selectControl {
+    display: block;
+
+    > div {
+      width: 100%;
+    }
+  }
+
+  :global {
+
+    .field {
+      position: relative !important;
+      margin-bottom: 10px !important;
+    }
+    // .ui.form {
+    //   input:not([type]):focus {
+    //     & + label {
+    //       font-size: 12px;
+    //       bottom: 25px;
+    //       left: 0px;
+    //     }
+    //   }
+  
+    //   .field > .selection.dropdown {
+    //     width: 100% !important;
+    //   }
+  
+    //   textarea {
+    //     border: 1px solid #fff !important;
+    //     margin-bottom: 25px;
+    //   }
+
+    //   label {
+    //     color: #fff !important;
+    //     position: absolute;
+    //     font-size: 16px;
+    //     bottom: 5px;
+    //     left: 5px;
+    //     transition: all .3s;
+    //   }
+    // }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}
