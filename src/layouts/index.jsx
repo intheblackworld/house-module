@@ -5,7 +5,8 @@ import Mask from 'components/AstrictMask'
 import ViewPort from 'components/ViewPort'
 // import FixLink from 'components/FixLink'
 import FullScreen from './FullScreen'
-import ContactSection from './ContactSection'
+// import ContactSection from './ContactSection'
+import ContactSection2 from './ContactSection2'
 // import { isMobile } from '../utils'
 
 import './index.scss'
@@ -44,7 +45,7 @@ const Layout = () => (
     <Element id="point5">
       <Section5 />
     </Element>
-    <ContactSection />
+    <ContactSection2 />
     {/* <Section>
     <Element id="section5">
       <Section5 />

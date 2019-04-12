@@ -5,7 +5,7 @@ import c from './loading.scss'
 const Loading = () => (
   <div
     style={{
-      // backgroundImage: "url('../projects/dyc/Master/bg.png')",
+      backgroundColor: '#000',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -14,7 +14,7 @@ const Loading = () => (
     }}
   >
     <div className={c.commicSuprice} />
-    <ClipLoader sizeUnit="px" size={150} color="#384b67" />
+    <ClipLoader sizeUnit="px" size={150} color="#fbdda6" />
   </div>
 )
 

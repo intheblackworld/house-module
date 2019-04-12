@@ -130,7 +130,7 @@ module.exports = {
       metaTitle: '長虹天際︱唯有長虹超越期待︱官網',
       metaDescription:
         '長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
-      metaKeywords: '長虹天際，長虹建設，林口建案，新北市建案，大坪數建案，文化三路建案',
+      metaKeywords: '長虹天際,長虹建設,林口建案,林口新建案,林口房屋,林口買房',
       ogMetaTitle: '長虹天際︱唯有長虹超越期待︱官網',
       ogMetaType: 'website',
       ogMetaDescription:

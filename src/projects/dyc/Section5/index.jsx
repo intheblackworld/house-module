@@ -71,7 +71,7 @@ const SideBar = ({ show, dispatch }) => {
           onMouseEnter={() => handleIndex(index)}
           onKeyDown={() => handleIndex(index)} /* eslint-disable-line */
         >
-          <img src={require('./fan.png')} alt="" />
+          <img src={require('./fan.png')} alt="長虹天際的圖片" />
           <div className={c.label}>
             <h3>{slide.label}</h3>
           </div>
@@ -79,25 +79,25 @@ const SideBar = ({ show, dispatch }) => {
       ))}
 
       {/* <li className={c.item}>
-        <img src={require('./fan.png')} alt="" />
+        <img src={require('./fan.png')} alt="長虹天際的圖片" />
         <div className={c.label}>
           <h3>藏動能</h3>
         </div>
       </li>
       <li className={c.item}>
-        <img src={require('./fan.png')} alt="" />
+        <img src={require('./fan.png')} alt="長虹天際的圖片" />
         <div className={c.label}>
           <h3>藏繁華</h3>
         </div>
       </li>
       <li className={c.item}>
-        <img src={require('./fan.png')} alt="" />
+        <img src={require('./fan.png')} alt="長虹天際的圖片" />
         <div className={c.label}>
           <h3>藏智慧</h3>
         </div>
       </li>
       <li className={c.item}>
-        <img src={require('./fan.png')} alt="" />
+        <img src={require('./fan.png')} alt="長虹天際的圖片" />
         <div className={c.label}>
           <h3>藏慢味</h3>
         </div>
@@ -115,7 +115,7 @@ const Slider = ({ show, index = 0 }) => {
         <h3 className={c.blockTitle}>{slideList[index].title}</h3>
         <p className={c.blockDesc}>{slideList[index].desc}</p>
       </div>
-      <img className={c.blockImg} src={slideList[index].src} alt="" />
+      <img className={c.blockImg} src={slideList[index].src} alt="長虹天際的圖片" />
       <div className={c.blockYellow} />
     </div>
   )
@@ -127,8 +127,8 @@ const Section5 = () => {
   const add = () => dispatch({ type: 'set', payload: state.index === slideList.length - 1 ? 0 : state.index + 1 })
   return (
     <div className={c.bg}>
-      <img src={require('./leftFlower.png')} alt="" className={c.leftFlower} />
-      <img src={require('./rightFlower.png')} alt="" className={c.rightFlower} />
+      <img src={require('./leftFlower.png')} alt="長虹天際的圖片" className={c.leftFlower} />
+      <img src={require('./rightFlower.png')} alt="長虹天際的圖片" className={c.rightFlower} />
       <div className={c.container}>
         <ViewPort>
           <Title />

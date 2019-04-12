@@ -1,6 +1,6 @@
 import React from 'react'
 import sliverStyle from './sliver'
-
+import info from '../../info'
 import css from './index.scss'
 
 const loadJS = (src) => {
@@ -27,7 +27,7 @@ export default class GooglMap extends React.Component {
   initMap = () => {
     const { google } = window
     // 座標位置
-    const position = { lat: 24.968053, lng: 121.333049 }
+    const position = { lat: info.locations.lat, lng: info.locations.lng }
     const map = new google.maps.Map(this.mapArea.current, {
       center: position,
       zoom: 18,

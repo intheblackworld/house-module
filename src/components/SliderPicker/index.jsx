@@ -15,7 +15,7 @@ const SlidePicker = ({ show, slideList }) => {
     <div className={withTrans('slideContainer', c, show)}>
       {!isMobile && (
         <div className={c.slideView}>
-          <img key={slideList[imgIndex].src} src={slideList[imgIndex].src} alt="" />
+          <img key={slideList[imgIndex].src} src={slideList[imgIndex].src} alt="長虹天際的圖片" />
           <div className={c.slideTitle}>
             <h3>{slideList[imgIndex].desc}</h3>
           </div>
@@ -34,7 +34,7 @@ const SlidePicker = ({ show, slideList }) => {
             <div key={slide.src}>
               <img
                 src={slide.src}
-                alt=""
+                alt="長虹天際的圖片"
                 onKeyDown={() => setImgIndex(index)}
                 onClick={() => setImgIndex(index)}
                 className={`${c.slideImg} ${imgIndex === index && 'active'}`}

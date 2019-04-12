@@ -68,7 +68,13 @@ const Section3 = () => (
       <Viewport>
         <DescContainer title="無與倫比，打造林口最宜居城市" section={3} />
       </Viewport>
-      {isMobile ? <AccordionContainer list={list} /> : <ListContainer list={list} />}
+      {isMobile ? (
+        <Viewport isBottom={false} showOneTime>
+          <AccordionContainer list={list} />
+        </Viewport>
+      ) : (
+        <ListContainer list={list} />
+      )}
     </div>
   </div>
 )

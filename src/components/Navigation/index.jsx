@@ -10,53 +10,38 @@ import css from './index.scss'
 
 const PCNavigationHeight = 80
 const TabletNavigationHeight = 60
-const MobileNavigationHeight = 60
+const MobileNavigationHeight = 45
 
 const NavItems = [
   {
-    name: '收藏鴻海',
-    imgSrc: require('./nav1.png'),
-    subTitle: 'SCIENCE',
+    name: '林口新地標',
+    imgSrc: '',
+    subTitle: '',
     section: 'point2',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '典藏四喜',
-    imgSrc: require('./nav2.png'),
-    subTitle: 'COLLECTION',
+    name: '七大價值',
+    imgSrc: '',
+    subTitle: '',
     section: 'point3',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '愛藏美學',
-    imgSrc: require('./nav3.png'),
-    subTitle: 'AESTHETICS',
+    name: '精工建築',
+    imgSrc: '',
+    subTitle: '',
     section: 'point4',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '私藏稀有',
-    imgSrc: require('./nav4.png'),
-    subTitle: 'PRECIOUS',
+    name: '頂級公設',
+    imgSrc: '',
+    subTitle: '',
     section: 'point5',
-    OffsetValue: -PCNavigationHeight,
-  },
-  {
-    name: '珍藏精工',
-    imgSrc: require('./nav5.png'),
-    subTitle: 'MASTERPRIECE',
-    section: 'point6',
-    OffsetValue: -PCNavigationHeight,
-  },
-
-  {
-    name: '久藏卓越',
-    imgSrc: require('./nav6.png'),
-    subTitle: 'EXCELLENCY',
-    section: 'point7',
     OffsetValue: -PCNavigationHeight,
   },
 ]
@@ -105,7 +90,7 @@ const Navigation = () => {
           <div className={css.nav}>
             <div className={css.logo}>
               <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
-                <Image src={logo} alt="新板巨星的圖片" />
+                <Image src={logo} alt="長虹天際的圖片" />
               </Link>
             </div>
             <div
@@ -114,7 +99,7 @@ const Navigation = () => {
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             >
-              <Image src={menu} alt="新板巨星的圖片" />
+              <Image src={menu} alt="長虹天際的圖片" />
             </div>
             <div
               className={mask}

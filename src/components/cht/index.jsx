@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { withTrans } from 'utils'
 import _ from 'lodash'
 import Viewport from 'components/ViewPort'
-import { Accordion, Icon } from 'semantic-ui-react'
+import { Accordion } from 'semantic-ui-react'
 import { isMobile } from '../../utils'
 import c from './index.scss'
 
@@ -18,7 +18,7 @@ export const PreContainer = ({
       </h3>
     </div>
     <div className={c.preImg}>
-      <img src={src} alt="" />
+      <img src={src} alt="長虹天際的圖片" />
       <p className={right ? c.right : ''}>{desc}</p>
     </div>
   </div>
@@ -81,7 +81,7 @@ export const Row = ({ show, items }) => (
     {items.map(item => (
       <div className={c.item} key={item.src}>
         <div className={`${c.label} flex-c`}>{item.label}</div>
-        <img src={item.src} alt="" className={c.itemImg} />
+        <img src={item.src} alt="長虹天際的圖片" className={c.itemImg} />
         <div className={c.title}>{item.title}</div>
         <div className={c.desc}>{item.desc}</div>
       </div>
@@ -101,20 +101,20 @@ export const AccordionContainer = ({ show, list }) => {
           <Accordion.Title
             active={activeIndex === index}
             index={index}
+            className={c.accordionTitle}
             onClick={() => handleIndex(index)}
           >
-            <div>
-              <div className={c.label}>{item.label}</div>
+            <div className={c.head}>
+              <div className={`${c.label} flex-c`}>{item.label}</div>
               <div>
                 <div className={c.title}>{item.title}</div>
                 <div className={c.desc}>{item.desc}</div>
               </div>
+              <img src={require('./down.png')} alt="長虹天際的圖片" className={c.icon} />
             </div>
-            {item.title}
-            <Icon name="dropdown" />
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 0}>
-            <img src={list[0].src} alt="" />
+          <Accordion.Content active={activeIndex === index} className={c.accordionContent}>
+            <img src={item.src} alt="長虹天際的圖片" />
           </Accordion.Content>
         </div>
       ))}

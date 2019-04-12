@@ -1,0 +1,85 @@
+@import '../../assets/animate.scss';
+
+.bg {
+  background: #000;
+}
+
+.container {
+  width: 932px;
+  margin: 80px auto;
+}
+
+.logo {
+  width: 233px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 60px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  > div {
+    width: 33.3%;
+    h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+
+  .contactInfo {
+    p {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid #fff;
+      padding: 0px 10px;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .map {
+      width: 170px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .socialInfo {
+    padding-left: 80px;
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+  .content {
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}
