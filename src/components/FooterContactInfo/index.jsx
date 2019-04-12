@@ -30,7 +30,28 @@ const FooterContactInfo = ({
           </div>
           <div className={c.socialInfo}>
             <h3>facebook</h3>
-            <div className={c.fbBlock} />
+            <div className={c.fbBlock}>
+              <div
+                className="fb-page"
+                data-href="https://www.facebook.com/%E9%95%B7%E8%99%B9%E5%A4%A9%E9%9A%9B-2731739126866550/"
+                data-tabs="timeline"
+                // data-width="200"
+                data-height="65"
+                data-small-header="false"
+                data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="false"
+              >
+                <blockquote
+                  cite="https://www.facebook.com/%E9%95%B7%E8%99%B9%E5%A4%A9%E9%9A%9B-2731739126866550/"
+                  className="fb-xfbml-parse-ignore"
+                >
+                  <a href="https://www.facebook.com/%E9%95%B7%E8%99%B9%E5%A4%A9%E9%9A%9B-2731739126866550/">
+                    長虹天際
+                  </a>
+                </blockquote>
+              </div>
+            </div>
           </div>
         </div>
       </div>

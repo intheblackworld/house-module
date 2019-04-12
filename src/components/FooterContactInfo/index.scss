@@ -67,12 +67,28 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .container {
-    width: 95%;
+    width: 90%;
   }
   .content {
     > div {
       width: 100%;
+      margin-bottom: 30px;
+
+      h3, p {
+        text-align: center;
+      }
     }
+
+    .socialInfo {
+      padding-left: 0px;
+      > div {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .logo {
+    width: 140px;
   }
 }
 
