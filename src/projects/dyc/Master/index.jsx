@@ -1,4 +1,4 @@
-import { withTrans } from 'utils'
+import { withTrans, isMobile } from 'utils'
 import c from './index.scss'
 
 const Master = ({ show }) => {
@@ -16,17 +16,11 @@ const Master = ({ show }) => {
         <img className={leftLeafClass} src={require('./flower-left.png')} alt="" />
         <img className={leftMLeaf1Class} src={require('./flower-left-m-1.png')} alt="" />
         <img className={leftMLeaf2Class} src={require('./flower-left-m-2.png')} alt="" />
-        <div className={titleClass}>
-          <div className={c.main}>
-            <h3>台湾に、日本の美しい立ち姿を</h3>
-          </div>
-          <div>
-            <div className={c.color}>
-              <h3>一座不穿制服的建築</h3>
-            </div>
-            <div className={c.sub}>值得花三、五年排隊的日本精工新典範</div>
-          </div>
-        </div>
+        {isMobile ? (
+          <img src={require('./title-pc.png')} alt="" className={titleClass} />
+        ) : (
+          <img src={require('./title-m.png')} alt="" className={titleClass} />
+        )}
         <img className={rightLeaf1Class} src={require('./flower-right1.png')} alt="" />
         <img className={rightLeaf2Class} src={require('./flower-right2.png')} alt="" />
         <img className={rightMLeafClass} src={require('./flower-right-m-1.png')} alt="" />

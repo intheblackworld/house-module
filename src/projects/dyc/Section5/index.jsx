@@ -54,12 +54,12 @@ const Title = ({ show }) => {
     <h3 className={titleClass}>
       中央大道にひとつだけ
       <br />
-      從日本到中央大道，美的世界級
+      <p>從日本到中央大道，美的世界級</p>
     </h3>
   )
 }
 
-const SideBar = ({ show, dispatch }) => {
+const SideBar = ({ show, dispatch, itemIndex }) => {
   const handleIndex = index => dispatch({ type: 'set', payload: index })
   const sideBarClass = withTrans('sideBar', c, show)
   return (
@@ -72,7 +72,7 @@ const SideBar = ({ show, dispatch }) => {
           onKeyDown={() => handleIndex(index)} /* eslint-disable-line */
         >
           <img src={require('./fan.png')} alt="" />
-          <div className={c.label}>
+          <div className={`${c.label} ${index === itemIndex && c.active}`}>
             <h3>{slide.label}</h3>
           </div>
         </li>
@@ -135,7 +135,7 @@ const Section5 = () => {
         </ViewPort>
         <div className={c.content}>
           <ViewPort>
-            <SideBar dispatch={dispatch} />
+            <SideBar dispatch={dispatch} itemIndex={state.index} />
           </ViewPort>
           <ViewPort>
             <Slider index={state.index} />

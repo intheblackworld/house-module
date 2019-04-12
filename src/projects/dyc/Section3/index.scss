@@ -9,10 +9,13 @@
   background-image: url('./bg.png');
   background-color: #d4c9b8;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
-  padding-top: 70px;
+  margin-bottom: 70px;
   h3 {
     font-size: 40px;
     margin-bottom: 15px;
@@ -22,13 +25,12 @@
 
 .container {
   width: 1156px;
-  height: calc(100vh - 380px);
+  // height: calc(100vh - 380px);
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 30px;
 
   &.show {
     .frame {
@@ -96,6 +98,7 @@
   }
 
   .title {
+    margin-bottom: 40px;
     h3 {
       font-size: 29px;
     }
@@ -124,6 +127,7 @@
   }
 
   .title {
+    margin-top: 50px;
     h3 {
       font-size: 24px;
     }
@@ -131,6 +135,7 @@
 
   .container {
     width: 100%;
+    margin-bottom: 30px;
     height: auto;
     flex-direction: column;
 
@@ -151,6 +156,9 @@
   }
 }
 
-// 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+// 避免過度到 1280 x 800 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .title {
+    margin-bottom: 30px;
+  }  
 }

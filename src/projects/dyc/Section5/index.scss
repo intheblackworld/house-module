@@ -32,11 +32,15 @@
 }
 
 .title {
-  font-size: 22px;
+  font-size: 32px;
   color: #fff;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   opacity: 0;
+
+  p {
+    font-size: 24px;
+  }
   &.show {
     @include animate(fadeIn, .8s, .0s);
   }
@@ -80,6 +84,7 @@
         transition: all .5s;
       }
 
+      &.active,
       &:hover {
         background-color: #c7b39f;
         
@@ -109,8 +114,8 @@
 
 .slider {
   position: relative;
-  height: 565px;
-  width: 582px;
+  height: 535px;
+  width: 562px;
   opacity: 0;
   &.show {
     @include animate(fadeInUp, .8s, .6s);
@@ -122,10 +127,10 @@
 }
 
 .blockWhite {
-  width: 582px;
-  height: 415px;
+  width: 542px;
+  height: 365px;
   background-color: #fff;
-  padding: 15px 26px 15px 40px;
+  padding: 10px 26px 15px 40px;
   position: absolute;
   top: 0;
   right: 0;
@@ -133,33 +138,32 @@
   .blockTitle {
     color: #000;
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .blockDesc {
-    font-size: 16px;
+    font-size: 15px;
     color: #000;
     line-height: 1.5;
   }
 }
 
 .blockImg {
-  width: 580px;
+  width: 550px;
   position: absolute;
-  top: 170px;
+  top: 140px;
   right: 50px;
   z-index: 2;
   box-shadow: -2px 2px 5px 0 #333;
 }
 
 .blockYellow {
-  width: 522px;
-  height: 318px;
+  width: 502px;
+  height: 298px;
   background-color: #c7b39f;
   position: absolute;
   right: 140px;
-  top: 300px;
-  top: 270px;
+  top: 240px;
   z-index: 1;
 }
 
@@ -398,4 +402,8 @@
   .slider > div, .slider > .blockImg {
     transform: scale(0.8);
   }
+
+  .title {
+    margin-bottom: 20px;
+  } 
 }

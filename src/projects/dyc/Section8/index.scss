@@ -16,7 +16,7 @@
 }
 
 .top {
-  margin-bottom: 30px;
+  margin-bottom: 70px;
    .title, .subTitle, .desc {
     opacity: 0;
   }
@@ -107,7 +107,7 @@
     background-image: url('./item3.png')
   }
 
-  .top {
+  .itemTop {
     display: flex;
     align-items: flex-end;
     padding-left: 30px;
@@ -177,7 +177,7 @@
     width: 255px;
     height: 255px;
   
-    .top {
+    .itemTop {
       padding-left: 30px;
     }
   
@@ -236,7 +236,7 @@
     height: 225px;
     margin-bottom: 30px;
   
-    .top {
+    .itemTop {
       padding-left: 30px;
       margin-bottom: 0;
     }
