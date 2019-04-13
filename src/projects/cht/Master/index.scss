@@ -1,16 +1,31 @@
 @import '../../../assets/animate.scss';
 
 .bg {
-  background-image: url('./bg.png');
+  background-image: url('./bg-1.png');
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.colorBg {
+  background-image: url('./bg-2.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
 }
 
 .title {
   width: 512px;
   display: block;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
   opacity: 0;
 }
 
@@ -21,24 +36,26 @@
   color: #fbdda6;
   border-top: 2px solid #fbdda6;
   border-bottom: 2px solid #fbdda6;
+  position: relative;
+  z-index: 2;
   opacity: 0;
 }
 
 // show hide
-.bg {
+.colorBg {
+  @include animate(fadeIn, .8s, .4s);
   &.show {
     .title {
-      @include animate(fadeIn, .8s, .0s);
+      @include animate(fadeIn, .8s, .8s);
     }
 
     .subTitle {
-      @include animate(fadeIn, .8s, .4s);
+      @include animate(fadeIn, .8s, 1.2s);
     }
     
   }
 
   &.hide {
-    
     .title, .subTitle {
       @include animate(fadeOut, .8s, .0s);
     }
