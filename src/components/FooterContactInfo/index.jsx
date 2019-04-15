@@ -1,12 +1,23 @@
 // import { withTrans } from 'utils'
 // import ViewPort from 'components/ViewPort'
-// import { isMobile } from '../../../utils'
+import { isMobile } from '../../utils'
 import c from './index.scss'
 
 const FooterContactInfo = ({
   address, phone, fbLink, googleLink, houseInfos,
 }) => {
-  console.log(fbLink, googleLink)
+  console.log(fbLink)
+  const redirectToPhoneThanks = (e) => {
+    e.preventDefault()
+    if (isMobile) {
+      window.location.href = `tel:${phone.replace('-', '')}`
+    } else {
+      return
+    }
+    setTimeout(() => {
+      window.location.href = 'phoneThanks'
+    }, 1000)
+  }
   return (
     <div className={c.bg}>
       <div className={c.container}>
@@ -24,8 +35,18 @@ const FooterContactInfo = ({
           </div>
           <div className={c.contactInfo}>
             <h3>聯絡資訊</h3>
-            <p>賞屋專線：{phone}</p>
-            <p>接待會館：{address}</p>
+            <a
+              href={`tel:${phone.replace('-', '')}`}
+              rel="noopener noreferrer"
+              onClick={redirectToPhoneThanks}
+            >
+              賞屋專線：{phone}
+            </a>
+            <a href={googleLink} target="_blank" rel="noopener noreferrer">
+              接待會館：{address}
+            </a>
+            {/* <p>賞屋專線：{phone}</p>
+            <p>接待會館：{address}</p> */}
             <img src={require('./map.png')} alt="" className={c.map} />
           </div>
           <div className={c.socialInfo}>
