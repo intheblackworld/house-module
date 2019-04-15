@@ -1,6 +1,6 @@
 export default {
   address: '23943 新北市鶯歌區永和街83號',
-  phone: '02-86421155',
+  phone: '02-26771133',
   fbLink: 'https://www.facebook.com/sanfarlightluxury',
   googleLink: 'https://goo.gl/maps/3YwsMdrBB582',
   caseName: '三發丰悅',
