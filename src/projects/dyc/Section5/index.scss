@@ -33,7 +33,7 @@
 
 .title {
   font-size: 32px;
-  color: #fff;
+  color: #a99054;
   text-align: center;
   margin-bottom: 40px;
   opacity: 0;
@@ -250,8 +250,12 @@
   }
 
   .title {
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: 50px;
+
+    p {
+      font-size: 16px;
+    }
   }
 
   .leftFlower {
@@ -297,8 +301,8 @@
   .blockYellow {
     width: 273px;
     height: 166px;
-    right: auto;
-    left: 20px;
+    right: 80px;
+    left: auto;
     bottom: 0px;
     top: initial;
   }

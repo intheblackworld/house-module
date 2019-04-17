@@ -7,15 +7,20 @@ const Master = ({ show }) => {
   const rightLeaf1Class = withTrans('rightLeaf1', c, show)
   const rightLeaf2Class = withTrans('rightLeaf2', c, show)
 
-  const leftMLeaf1Class = withTrans('leftMLeaf1', c, show)
-  const leftMLeaf2Class = withTrans('leftMLeaf2', c, show)
-  const rightMLeafClass = withTrans('rightMLeaf', c, show)
+  const downFlower1Class = withTrans('downFlower1', c, show)
+  const downFlower2Class = withTrans('downFlower2', c, show)
+  const topFlowerClass = withTrans('topFlower', c, show)
+
   return (
     <div className={c.bg}>
       <div className={c.leaf}>
+        <img src={require('./topLeaf.png')} alt="" className={c.topLeaf} />
+        <img src={require('./downLeaf.png')} alt="" className={c.downLeaf} />
+
+        <img src={require('./topFlower.png')} alt="" className={topFlowerClass} />
+        <img src={require('./downFlower1.png')} alt="" className={downFlower1Class} />
+        <img src={require('./downFlower2.png')} alt="" className={downFlower2Class} />
         <img className={leftLeafClass} src={require('./flower-left.png')} alt="" />
-        <img className={leftMLeaf1Class} src={require('./flower-left-m-1.png')} alt="" />
-        <img className={leftMLeaf2Class} src={require('./flower-left-m-2.png')} alt="" />
         {isMobile ? (
           <img src={require('./title-pc.png')} alt="" className={titleClass} />
         ) : (
@@ -23,7 +28,6 @@ const Master = ({ show }) => {
         )}
         <img className={rightLeaf1Class} src={require('./flower-right1.png')} alt="" />
         <img className={rightLeaf2Class} src={require('./flower-right2.png')} alt="" />
-        <img className={rightMLeafClass} src={require('./flower-right-m-1.png')} alt="" />
       </div>
     </div>
   )

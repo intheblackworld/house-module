@@ -22,6 +22,7 @@
   width: 92px;
   height: auto;
   position: absolute;
+  z-index: 3;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -29,11 +30,11 @@
   transform: translateY(-50%);
 
   &.show {
-    @include animate(fadeIn, .8s, 0s);
+    @include animate(fadeIn, 0.8s, 0s);
   }
 
   &.hide {
-    @include animate(fadeOut, .8s, .3s);   
+    @include animate(fadeOut, 0.8s, 0.3s);
   }
 }
 
@@ -92,7 +93,13 @@
   }
 }
 
-.leftMLeaf1, .leftMLeaf2, .rightMLeaf {
+.topLeaf,
+.downLeaf {
+  display: none;
+}
+.downFlower1,
+.downFlower2,
+.topFlower {
   display: none;
   transform: scale(0) rotate(-60deg);
   transition: all 1.5s;
@@ -113,18 +120,36 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
-    // background-image: url('./mbg.png')
+    background-image: url('./mbg.png');
   }
 
   .leaf {
-    background-image: url('./mbg.png');
+    background-image: none;
     height: 100vh;
+  }
+
+  .topLeaf,
+  .downLeaf {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+  }
+
+  .topLeaf {
+    top: 0;
+    left: 0;
+  }
+
+  .downLeaf {
+    bottom: 0;
+    left: 0;
   }
 
   .title {
     width: 62px;
     opacity: 0;
-  
+
     .sub {
       font-size: 13px;
     }
@@ -146,31 +171,33 @@
     display: none;
   }
 
-  .leftMLeaf1, .leftMLeaf2, .rightMLeaf {
+  .downFlower1,
+  .downFlower2,
+  .topFlower {
     display: block;
     position: absolute;
   }
 
-  .leftMLeaf1 {
-    width: 72px;
+  .downFlower1 {
+    width: 120px;
     height: auto;
-    top: 100px;
-    left: 30px;
+    bottom: 10px;
+    left: 200px;
     z-index: 1;
   }
 
-  .leftMLeaf2 {
-    width: 55px;
-    height: auto;
-    top: 160px;
-    left: 20px;
-  }
-
-  .rightMLeaf {
+  .downFlower2 {
     width: 100px;
     height: auto;
-    bottom: 100px;
-    right: 0px;
+    bottom: 0px;
+    left: 70px;
+  }
+
+  .topFlower {
+    width: 100px;
+    height: auto;
+    top: 70px;
+    right: 160px;
   }
 }
 
@@ -178,10 +205,8 @@
 @media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
 
-
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-
   .title {
-    width: 80px;   
+    width: 80px;
   }
 }

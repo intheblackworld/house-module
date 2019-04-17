@@ -9,6 +9,7 @@ const img1List = [
   // require('./item-1-2.png'),
   require('./item-1-2.png'),
   require('./item-1-3.png'),
+  require('./item-1-4.png'),
 ]
 
 const img2List = [require('./item-2-1.png'), require('./item-2-2.png'), require('./item-2-3.png')]
@@ -16,7 +17,7 @@ const img2List = [require('./item-2-1.png'), require('./item-2-2.png'), require(
 const Item1 = ({ show }) => {
   const itemClass = withTrans('item', c, show)
   const [index, setIndex] = useState(0)
-  const locations = ['21世紀大樓', '新千歲空港', '頂埔捷運']
+  const locations = ['21世紀大樓', '新千歲空港', '頂埔捷運', '札幌巨蛋']
   return (
     <div className={itemClass}>
       <p className={c.label}>【岩田地崎建設株式会社】</p>
@@ -30,7 +31,7 @@ const Item1 = ({ show }) => {
         <br />
         <br />
         【岩田地崎建設株式会社代表作】
-        台北捷運板南線頂埔段、北海道新千歲空港大樓、神奈川潢濱21世紀地標大廈
+        台北捷運板南線頂埔段、北海道新千歲空港大樓、神奈川潢濱21世紀地標大廈、札幌巨蛋
       </p>
       <div className={c.slide}>
         <div className={c.carousel}>
@@ -55,7 +56,7 @@ const Item1 = ({ show }) => {
 const Item2 = ({ show }) => {
   const itemClass = withTrans('item', c, show)
   const [index, setIndex] = useState(0)
-  const locations = ['德友極', '一巷青', '德友藏']
+  const locations = ['德友極', '一巷青', '築跡']
   return (
     <div className={itemClass}>
       <p className={c.label}>【德友建設機構】</p>

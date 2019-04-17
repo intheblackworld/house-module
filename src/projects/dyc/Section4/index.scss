@@ -29,10 +29,18 @@
   }
 }
 
+.table {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
 .content {
   position: absolute;
   width: 370px;
-  top: 50%;
+  top: 38%;
   transform: translate(-15%, -50%);
   left: 0;
   right: 0;
@@ -84,6 +92,11 @@
 
   .content {
     transform: translate(-7%, -50%);
+    top: 50%;
+  }
+
+  .table {
+    display: none;
   }
 }
 
@@ -92,24 +105,31 @@
   .bg {
     background-image: url('./mbg.png');
     width: 100vw;
-    min-height: 950px !important;
-    height: 950px !important;
+    min-height: 1250px !important;
+    height: 1250px !important;
     background-size: cover;
   }
 
   .leftTitle {
-    width: 75px;
     position: absolute;
-    top: 20%;
+    top: 30%;
     transform: translateY(-50%);
-    left: 25%;
-    font-size: 32px;
+    left: 0;
+    font-size: 50px;
+    right: 0;
+    margin: 0 auto;
+    width: 125px;
+  }
+
+  .table {
+    height: 120px;
+    // display: none;
   }
 
   .content {
     position: absolute;
     width: 300px;
-    top: 50%;
+    top: 55%;
     transform: translate(0%, -23%);
     left: 0;
     right: 0;

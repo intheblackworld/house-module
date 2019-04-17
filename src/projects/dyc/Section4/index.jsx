@@ -36,9 +36,10 @@ const Section4 = () => (
     <ViewPort>
       <LeftTitle />
     </ViewPort>
-    <ViewPort>
+    <ViewPort position="300px">
       <Content />
     </ViewPort>
+    <img src={require('./table.png')} alt="" className={c.table} />
   </div>
 )
 
