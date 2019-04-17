@@ -20,9 +20,7 @@ const ContactSection = () => (
     <GoogleMap />
     <div className={`${c.orderBg} bg`}>
       <FullScreen needCutHeader alignCenter>
-        <Viewport>
-          <GhostOrder />
-        </Viewport>
+        <GhostOrder />
       </FullScreen>
     </div>
     <Viewport isBottom={false}>
