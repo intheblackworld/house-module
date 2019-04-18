@@ -5,7 +5,7 @@ import Carousel from 'components/Carousel'
 import c from './index.scss'
 
 const img1List = [
-  require('./item-1-1.png'),
+  // require('./item-1-1.png'),
   // require('./item-1-2.png'),
   require('./item-1-2.png'),
   require('./item-1-3.png'),
@@ -17,7 +17,7 @@ const img2List = [require('./item-2-1.png'), require('./item-2-2.png'), require(
 const Item1 = ({ show }) => {
   const itemClass = withTrans('item', c, show)
   const [index, setIndex] = useState(0)
-  const locations = ['21世紀大樓', '新千歲空港', '頂埔捷運', '札幌巨蛋']
+  const locations = ['新千歲空港', '頂埔捷運', '札幌巨蛋']
   return (
     <div className={itemClass}>
       <p className={c.label}>【岩田地崎建設株式会社】</p>

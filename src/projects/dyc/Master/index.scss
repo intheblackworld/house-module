@@ -121,6 +121,7 @@
 @media only screen and (max-width: 767px) {
   .bg {
     background-image: url('./mbg.png');
+    height: 110vh;
   }
 
   .leaf {
@@ -142,7 +143,7 @@
   }
 
   .downLeaf {
-    bottom: 0;
+    bottom: calc(-30px - 10vh);
     left: 0;
   }
 
@@ -181,7 +182,7 @@
   .downFlower1 {
     width: 120px;
     height: auto;
-    bottom: 10px;
+    bottom: calc(10px - 10vh);
     left: 200px;
     z-index: 1;
   }
@@ -189,7 +190,7 @@
   .downFlower2 {
     width: 100px;
     height: auto;
-    bottom: 0px;
+    bottom: calc(0px - 10vh);
     left: 70px;
   }
 
