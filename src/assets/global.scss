@@ -27,7 +27,7 @@
 
   .bg {
     width: 100vw;
-    height: calc(100vh - #{$navigationPCHeight});
+    height: 100vh;
     background-size: cover;
     background-position: center;
   }
@@ -43,7 +43,7 @@
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
     .bg {
-      height: calc(100vh - #{$navigationTabletHeight});
+      height: 100vh;
     }
   }
 
@@ -56,7 +56,7 @@
     }
 
     .bg {
-      height: calc(100vh - #{$navigationMobileHeight});
+      height: 100vh;
     }
   }
 

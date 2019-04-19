@@ -11,11 +11,11 @@ import ContactSection2 from './ContactSection2'
 
 import './index.scss'
 
-const Master = lazy(() => import('projects/cht/Master'))
-const Section2 = lazy(() => import('projects/cht/Section2'))
-const Section3 = lazy(() => import('projects/cht/Section3'))
-const Section4 = lazy(() => import('projects/cht/Section4'))
-const Section5 = lazy(() => import('projects/cht/Section5'))
+const Master = lazy(() => import('projects/xs/Master'))
+const Section2 = lazy(() => import('projects/xs/Section2'))
+const Section3 = lazy(() => import('projects/xs/Section3'))
+const Section4 = lazy(() => import('projects/xs/Section4'))
+const Section5 = lazy(() => import('projects/xs/Section5'))
 // const Section6 = lazy(() => import('projects/dyc/Section6'))
 // const Section7 = lazy(() => import('projects/dyc/Section7'))
 // const Section8 = lazy(() => import('projects/dyc/Section8'))

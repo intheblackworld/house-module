@@ -14,7 +14,7 @@ const MobileNavigationHeight = 45
 
 const NavItems = [
   {
-    name: '林口新地標',
+    name: '建築美學',
     imgSrc: '',
     subTitle: '',
     section: 'point2',
@@ -22,7 +22,7 @@ const NavItems = [
   },
 
   {
-    name: '七大價值',
+    name: '隔震結構',
     imgSrc: '',
     subTitle: '',
     section: 'point3',
@@ -30,7 +30,7 @@ const NavItems = [
   },
 
   {
-    name: '精工建築',
+    name: '西域城心',
     imgSrc: '',
     subTitle: '',
     section: 'point4',
@@ -38,7 +38,7 @@ const NavItems = [
   },
 
   {
-    name: '頂級公設',
+    name: '新碩建設',
     imgSrc: '',
     subTitle: '',
     section: 'point5',
@@ -51,8 +51,21 @@ const menuStatus = false
 const Navigation = () => {
   const [list, setListItemOffsetValue] = useState(NavItems)
   const [isShowMenu, setMenu] = useState(menuStatus)
+  const [isShowNavbar, setNavbar] = useState(true)
   const toggleSidebar = () => {
     setMenu(!isShowMenu)
+  }
+
+  let prevScrollpos = window.pageYOffset
+  // eslint-disable-next-line func-names
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset
+    if (prevScrollpos > currentScrollPos) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+    prevScrollpos = currentScrollPos
   }
 
   useEffect(() => {
@@ -83,14 +96,18 @@ const Navigation = () => {
     [css.open]: isShowMenu,
   })
 
+  const navigationClass = cx(css.navigation, {
+    [css.hide]: !isShowNavbar,
+  })
+
   return (
-    <div className={css.navigation}>
+    <div className={navigationClass}>
       <Container fluid>
         <Container>
           <div className={css.nav}>
             <div className={css.logo}>
               <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
-                <Image src={logo} alt="長虹天際的圖片" />
+                <Image src={logo} alt="" />
               </Link>
             </div>
             <div
@@ -99,7 +116,7 @@ const Navigation = () => {
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             >
-              <Image src={menu} alt="長虹天際的圖片" />
+              <Image src={menu} alt="" />
             </div>
             <div
               className={mask}
@@ -115,7 +132,7 @@ const Navigation = () => {
                     spy
                     smooth
                     duration={500}
-                    offset={item.OffsetValue}
+                    offset={-60}
                     key={item.section}
                   >
                     <span className={css.link}>

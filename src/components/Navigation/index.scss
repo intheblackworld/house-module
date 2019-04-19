@@ -1,11 +1,11 @@
 $navigationPCHeight: 80px;
 $navigationTabletHeight: 60px;
 $navigationMobileHeight: 45px;
-$navigationBg: #1a2739; 
+$navigationBg: #932c59; 
 
-$logoPCWidth: 170px;
-$logoTabletWidth: 150px;
-$logoMobileWidth: 85px;
+$logoPCWidth: 224px;
+$logoTabletWidth: 180px;
+$logoMobileWidth: 101px;
 
 .navigation {
   background: $navigationBg;
@@ -17,6 +17,11 @@ $logoMobileWidth: 85px;
   display: flex !important;
   align-items: center;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+  transition: all .5s;
+
+  &.hide {
+    top: -$navigationPCHeight;
+  }
 }
 
 .nav {
@@ -91,6 +96,10 @@ $logoMobileWidth: 85px;
 @media only screen and (max-width: 767px) {
   .navigation {
     height: $navigationMobileHeight;
+
+    &.hide {
+      top: -$navigationMobileHeight;
+    }
   }
 
   .logo {
@@ -182,6 +191,10 @@ $logoMobileWidth: 85px;
   .navigation {
     height: $navigationTabletHeight;
     justify-content: center;
+    
+    &.hide {
+      top: -$navigationTabletHeight;
+    }
   }
 
   .logo {

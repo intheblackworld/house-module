@@ -9,8 +9,8 @@ import css from './index.scss'
 
 const Section6 = () => (
   <React.Fragment>
-    <Image src={leaf1} alt="長虹天際的圖片" className={css.leaf1} />
-    <Image src={leaf3} alt="長虹天際的圖片" className={css.leaf2} />
+    <Image src={leaf1} alt="" className={css.leaf1} />
+    <Image src={leaf3} alt="" className={css.leaf2} />
     <ViewPort>
       <SectionSubTitle title="上市公司 品質保證" />
     </ViewPort>

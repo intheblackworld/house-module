@@ -126,12 +126,12 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '長虹天際︱唯有長虹超越期待︱官網',
-      metaTitle: '長虹天際︱唯有長虹超越期待︱官網',
+      title: '新碩鼎和',
+      metaTitle: '新碩鼎和',
       metaDescription:
         '長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
       metaKeywords: '長虹天際,長虹建設,林口建案,林口新建案,林口房屋,林口買房',
-      ogMetaTitle: '長虹天際︱唯有長虹超越期待︱官網',
+      ogMetaTitle: '新碩鼎和',
       ogMetaType: 'website',
       ogMetaDescription:
         '長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',

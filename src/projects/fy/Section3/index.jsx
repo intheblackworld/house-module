@@ -32,9 +32,9 @@ const CompanyImgs = ({ show = false }) => {
   return (
     <React.Fragment>
       <div className={imgClass}>
-        <Image src={company1} alt="長虹天際的圖片" />
-        <Image src={cross} alt="長虹天際的圖片" />
-        <Image src={company2} alt="長虹天際的圖片" />
+        <Image src={company1} alt="" />
+        <Image src={cross} alt="" />
+        <Image src={company2} alt="" />
       </div>
       <div className={titleClass}>
         <h3>豪宅團隊聯名齊鑄，就像王與后生活!</h3>
@@ -49,7 +49,7 @@ const BuildImgs = ({ show = false }) => {
     [css.show]: show,
     [css.hide]: !show,
   })
-  return <img src={bg1} alt="長虹天際的圖片" className={buildingClass} />
+  return <img src={bg1} alt="" className={buildingClass} />
 }
 
 const Slides = ({ show = false }) => {
@@ -61,7 +61,7 @@ const Slides = ({ show = false }) => {
     <div className={sliderClass}>
       <Carousel slidesToShow={4} fade={false} arrows>
         <div className={css.sliderItem}>
-          <Image src={person1} alt="長虹天際的圖片" />
+          <Image src={person1} alt="" />
           <div className={css.sliderContent}>
             <h3>建築營照</h3>
             <p>
@@ -71,7 +71,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person2} alt="長虹天際的圖片" />
+          <Image src={person2} alt="" />
           <div className={css.sliderContent}>
             <h3>總體規劃</h3>
             <p>
@@ -81,7 +81,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person3} alt="長虹天際的圖片" />
+          <Image src={person3} alt="" />
           <div className={css.sliderContent}>
             <h3>外觀設計</h3>
             <p>
@@ -91,7 +91,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person4} alt="長虹天際的圖片" />
+          <Image src={person4} alt="" />
           <div className={css.sliderContent}>
             <h3>景觀設計</h3>
             <p>
@@ -101,7 +101,7 @@ const Slides = ({ show = false }) => {
           </div>
         </div>
         <div className={css.sliderItem}>
-          <Image src={person5} alt="長虹天際的圖片" />
+          <Image src={person5} alt="" />
           <div className={css.sliderContent}>
             <h3>公設設計</h3>
             <p>

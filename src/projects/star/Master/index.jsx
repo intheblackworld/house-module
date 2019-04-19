@@ -17,13 +17,13 @@ const Master = ({ show }) => {
     <div className={c.bg}>
       <div className={c.ray} />
       <div className={leftEffectClass}>
-        <img className={c.like} src={require('./like.png')} alt="長虹天際的圖片" />
-        <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
-        <img className={c.like} src={require('./like.png')} alt="長虹天際的圖片" />
-        <img className={c.flower} src={require('./flower.png')} alt="長虹天際的圖片" />
-        <img className={c.laugh} src={require('./laugh.png')} alt="長虹天際的圖片" />
-        <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
-        <img className={c.like} src={require('./like.png')} alt="長虹天際的圖片" />
+        <img className={c.like} src={require('./like.png')} alt="" />
+        <img className={c.love} src={require('./love.png')} alt="" />
+        <img className={c.like} src={require('./like.png')} alt="" />
+        <img className={c.flower} src={require('./flower.png')} alt="" />
+        <img className={c.laugh} src={require('./laugh.png')} alt="" />
+        <img className={c.love} src={require('./love.png')} alt="" />
+        <img className={c.like} src={require('./like.png')} alt="" />
       </div>
       <div className={c.main}>
         <div className={bubbleClass}>
@@ -43,7 +43,7 @@ const Master = ({ show }) => {
           )}
         </div>
 
-        <img className={brotherClass} src={require('./brother.png')} alt="長虹天際的圖片" />
+        <img className={brotherClass} src={require('./brother.png')} alt="" />
         {isMobile && (
           <Link
             className={c.link}
@@ -59,13 +59,13 @@ const Master = ({ show }) => {
         )}
       </div>
       <div className={rightEffectClass}>
-        <img className={c.flower} src={require('./flower.png')} alt="長虹天際的圖片" />
-        <img className={c.surprise} src={require('./surprise.png')} alt="長虹天際的圖片" />
-        <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
-        <img className={c.flower} src={require('./flower.png')} alt="長虹天際的圖片" />
-        <img className={c.smile} src={require('./smile.png')} alt="長虹天際的圖片" />
-        <img className={c.smile} src={require('./smile.png')} alt="長虹天際的圖片" />
-        <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
+        <img className={c.flower} src={require('./flower.png')} alt="" />
+        <img className={c.surprise} src={require('./surprise.png')} alt="" />
+        <img className={c.love} src={require('./love.png')} alt="" />
+        <img className={c.flower} src={require('./flower.png')} alt="" />
+        <img className={c.smile} src={require('./smile.png')} alt="" />
+        <img className={c.smile} src={require('./smile.png')} alt="" />
+        <img className={c.love} src={require('./love.png')} alt="" />
       </div>
     </div>
   )

@@ -35,7 +35,7 @@ const Container = ({ show }) => {
         <p>靜取萬方艷羨，歡迎有遠見的您就座，與鴻海面對面。</p>
         <p>人生、呼吸、視野開始世界級！</p>
       </div>
-      <img className={c.flower} src={require('./flower.png')} alt="長虹天際的圖片" />
+      <img className={c.flower} src={require('./flower.png')} alt="" />
     </div>
   )
 }
@@ -53,9 +53,9 @@ const Section2 = () => {
       <div className={c.scrollBg}>
         <div className={maskClass} onClick={showMask} onKeyDown={showMask} onTouchStart={showMask}>
           <h3 className={c.maskTitle}>請左右滑動</h3>
-          <img src={require('./hand.png')} className={c.hand} alt="長虹天際的圖片" />
+          <img src={require('./hand.png')} className={c.hand} alt="" />
         </div>
-        <img src={require('./bg.png')} className={c.scrollImg} alt="長虹天際的圖片" />
+        <img src={require('./bg.png')} className={c.scrollImg} alt="" />
       </div>
     </Fragment>
   ) : (
