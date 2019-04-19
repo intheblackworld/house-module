@@ -22,9 +22,9 @@ const Master = ({ show }) => {
         <img src={require('./downFlower2.png')} alt="" className={downFlower2Class} />
         <img className={leftLeafClass} src={require('./flower-left.png')} alt="" />
         {isMobile ? (
-          <img src={require('./title-pc.png')} alt="" className={titleClass} />
-        ) : (
           <img src={require('./title-m.png')} alt="" className={titleClass} />
+        ) : (
+          <img src={require('./title-pc.png')} alt="" className={titleClass} />
         )}
         <img className={rightLeaf1Class} src={require('./flower-right1.png')} alt="" />
         <img className={rightLeaf2Class} src={require('./flower-right2.png')} alt="" />

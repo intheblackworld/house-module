@@ -5,12 +5,7 @@ import { isMobile } from '../../../utils'
 
 const LeftTitle = ({ show }) => {
   const leftTitleClass = withTrans('leftTitle', c, show)
-  return (
-    <h3 className={leftTitleClass}>
-      一生の思い出に <br />
-      この機会が
-    </h3>
-  )
+  return <img className={leftTitleClass} src={require('./leftTitle.png')} alt="" />
 }
 
 const Content = ({ show }) => {

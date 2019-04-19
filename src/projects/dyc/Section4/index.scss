@@ -10,11 +10,11 @@
 }
 
 .leftTitle {
-  width: 102px;
+  width: 15%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 17%;
+  left: 10%;
   font-size: 40px;
   color: #000;
   writing-mode: vertical-lr;
@@ -41,7 +41,7 @@
   position: absolute;
   width: 370px;
   top: 38%;
-  transform: translate(-15%, -50%);
+  transform: translate(-35%, -50%);
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -141,7 +141,7 @@
 
     .desc {
       width: 200px;
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }

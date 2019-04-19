@@ -150,7 +150,7 @@ const Order = ({ show, noTitle }) => {
       {!noTitle && (
         <div className={titleClass}>
           <h3>預約賞屋</h3>
-          <p>買得起，住更好</p>
+          {/* <p>買得起，住更好</p> */}
         </div>
       )}
       <Form className={formClass}>
