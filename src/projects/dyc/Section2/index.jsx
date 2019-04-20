@@ -71,12 +71,12 @@ const Section2 = () => {
               </span>
             </div>
           </div> */}
-          <img src={require('./bg.png')} alt="" className={c.scrollImg} />
+          <img src={require('./bg.jpg')} alt="" className={c.scrollImg} />
         </div>
       </div>
     </Fragment>
   ) : (
-    <img src={require('./bg.png')} alt="" className={c.section2} />
+    <img src={require('./bg.jpg')} alt="" className={c.section2} />
     // <div className={c.bg}>
     //   <ViewPort>
     //     <Container />
