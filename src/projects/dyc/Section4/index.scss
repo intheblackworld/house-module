@@ -2,7 +2,7 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 80px);
+  height: calc(100vw * 0.625);
   background-size: cover;
   background-position: center;
   background-image: url('./bg.png');
@@ -10,18 +10,30 @@
 }
 
 .leftTitle {
-  width: 15%;
+  width: 22%;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10%;
-  font-size: 40px;
-  color: #000;
-  writing-mode: vertical-lr;
+  top: 0;
+  left: 0;
   opacity: 0;
 
   &.show {
     @include animate(fadeIn, 1s, 0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .6s, 0);
+  }
+}
+
+.rightDoor {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeIn, 1s, .5s);
   }
 
   &.hide {
@@ -41,7 +53,7 @@
   position: absolute;
   width: 370px;
   top: 38%;
-  transform: translate(-35%, -50%);
+  transform: translate(-45%, -50%);
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -111,14 +123,7 @@
   }
 
   .leftTitle {
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-    left: 0;
-    font-size: 50px;
-    right: 0;
-    margin: 0 auto;
-    width: 125px;
+    display: none;
   }
 
   .table {

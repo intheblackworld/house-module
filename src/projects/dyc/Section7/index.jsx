@@ -92,7 +92,11 @@ const Second = ({ show }) => {
         是土城首座以Alfa Safe柱中柱、系統柱及系統牆施作的建築結構，
         抗震韌性可提升近1倍，除了鋼筋、樑、柱外，連管線的部份都有詳細紀錄， 透明公開。
       </p>
-      <img src={require('./resume.png')} className={c.resume} alt="" />
+      <img src={require('./Alfa-17.png')} className={c.resume} alt="" />
+      <img src={require('./Alfa-18.png')} className={c.resume} alt="" />
+      <img src={require('./Alfa-19.png')} className={c.resume} alt="" />
+      <img src={require('./Alfa-20.png')} className={c.resume} alt="" />
+
     </div>
   )
 }

@@ -8,6 +8,11 @@ const LeftTitle = ({ show }) => {
   return <img className={leftTitleClass} src={require('./leftTitle.png')} alt="" />
 }
 
+const RightDoor = ({ show }) => {
+  const rightDoorClass = withTrans('rightDoor', c, show)
+  return <img className={rightDoorClass} src={require('./rightDoor.png')} alt="" />
+}
+
 const Content = ({ show }) => {
   const contentClass = withTrans('content', c, show)
   return (
@@ -31,10 +36,13 @@ const Section4 = () => (
     <ViewPort>
       <LeftTitle />
     </ViewPort>
-    <ViewPort position="300px">
+    <ViewPort position="400px">
       <Content />
     </ViewPort>
-    <img src={require('./table.png')} alt="" className={c.table} />
+    <ViewPort>
+      <RightDoor />
+    </ViewPort>
+    {/* <img src={require('./table.png')} alt="" className={c.table} /> */}
   </div>
 )
 
