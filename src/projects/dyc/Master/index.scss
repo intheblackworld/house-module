@@ -129,6 +129,7 @@
     height: 100vh;
   }
 
+
   .topLeaf,
   .downLeaf {
     display: block;
@@ -148,7 +149,8 @@
   }
 
   .title {
-    width: 62px;
+    width: auto;
+    height: 60vh;
     transform: translateY(-40%);
 
     .sub {
@@ -195,9 +197,9 @@
   }
 
   .topFlower {
-    width: 100px;
+    width: 80px;
     height: auto;
-    top: 70px;
+    top: 30px;
     right: 160px;
   }
 }

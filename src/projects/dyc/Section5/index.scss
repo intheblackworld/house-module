@@ -3,11 +3,13 @@
 .bg {
   background-color: #2d436e;
   width: 100vw;
-  height: calc(100vh - 80px);
+  // height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .leftFlower, .rightFlower {
@@ -35,7 +37,7 @@
   font-size: 32px;
   color: #a99054;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   opacity: 0;
 
   p {
@@ -183,7 +185,7 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
-    height: calc(100vh - 60px);
+    // height: calc(100vh - 60px);
   }
   .leftFlower {
     width: 360px;
@@ -246,7 +248,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
-    height: calc(100vh - 45px);
+    // height: calc(100vh - 45px);
   }
 
   .title {
@@ -293,7 +295,7 @@
   }
   
   .blockImg {
-    width: 303px;
+    width: 283px;
     top: 185px;
     right: 15px;
   }
