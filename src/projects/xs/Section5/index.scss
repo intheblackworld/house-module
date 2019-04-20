@@ -1,10 +1,69 @@
 @import '../../../assets/animate.scss';
 
 .container {
-  width: 932px;
-  margin: 0 auto;  
-}
+  display: flex;
+  background-color: #fff;
 
+  .leftImg, .title, .subTitle, .desc, .structure {
+    opacity: 0;
+  }
+  &.show {
+    .leftImg {
+      @include animate(fadeIn, .5s, 0s);
+    } .title {
+      @include animate(fadeIn, .5s, .4s);
+    } .subTitle {
+      @include animate(fadeIn, .5s, .5s);
+    } .desc {
+      @include animate(fadeIn, .5s, .7s);
+    }
+    .structure {
+      @include animate(fadeIn, .5s, 1s);
+    }
+  }
+
+  &.bg {
+    background-image: url('./downBg.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .leftImg {
+    width: 30%;
+  }
+
+  .content {
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .text {
+      width: 50%;
+      padding-left: 50px;
+    }
+    .title {
+      font-size: 24px;
+      color: #333;
+    }
+    .subTitle {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .desc {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .structure {
+      position: absolute;
+      width: 216px;
+      right: 50px;
+      bottom: 100px;
+    }
+  }
+}
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -14,7 +73,56 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .container {
-    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #fff;
+  
+    &.bg {
+      background-image: url('./downBg.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .leftImg {
+      width: 100%;
+    }
+  
+    .content {
+      width: 90%;
+      // height: 100vh;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 30px;
+      padding-bottom: 30px;
+  
+      .text {
+        width: 100%;
+        padding-left: 0px;
+      }
+      .title {
+        font-size: 18px;
+        color: #333;
+      }
+      .subTitle {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 30px;
+      }
+      .desc {
+        font-size: 16px;
+        color: #333;
+      }
+  
+      .structure {
+        position: relative;
+        width: 171px;
+        right: 0;
+        bottom: 20px;
+        left: 130px;
+      }
+    }
   }
 }
 

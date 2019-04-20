@@ -1,20 +1,145 @@
 @import '../../../assets/animate.scss';
 
-.container {
-  width: 932px;
-  margin: 0 auto;  
+.bg {
+  background-color: #932c59;
+  padding: 40px 0;
+
+  &.show {
+    .title {
+      @include animate(fadeIn, .5s, 0s);
+    }
+  }
+  .title {
+    display: block;
+    margin: 0 auto;
+    width: 447px;
+    height: 40px;
+    line-height: 40px;
+    background-image: url('./titleBg.png');
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1050px;
+    margin: 50px auto;
+
+    &.show {
+    > .item {
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeIn, .5s, $i * 0.2s);
+        }
+      }
+    }
+  }
+  }
+
+  .item {
+    width: 306px;
+    height: 326px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 40px 25px 20px;
+    opacity: 0;
+  }
+
+  .icon {
+    width: 55px;
+    display: inline;
+  }
+
+  .itemTitle {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    display: inline;
+  }
+
+  .desc {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #fff;
+  }
 }
 
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    .container {
+      width: 950px;
+    }
+  }
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .container {
-    width: 90%;
+  .bg {
+    background-color: #932c59;
+    padding: 40px 0;
+    .title {
+      width: 90%;
+      height: 31px;
+      line-height: 22px;
+      background-image: url('./mTitleBg.png');
+      background-size: cover;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 130px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: 50px auto 20px;
+    }
+  
+    .item {
+      width: 248px;
+      height: 171px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      padding: 15px 15px 20px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      position: relative;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+  
+    .icon {
+      width: 65px;
+      display: inline;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: -85px;
+    }
+  
+    .itemTitle {
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+      display: inline;
+    }
+  
+    .desc {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #fff;
+    }
   }
 }
 

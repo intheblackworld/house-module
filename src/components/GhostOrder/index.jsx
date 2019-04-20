@@ -14,7 +14,7 @@ import PolicyDialog from 'components/PolicyDialog'
 import info from '../../info'
 
 import { cityList, renderAreaList } from './address'
-import css from './cht.scss'
+import css from './xs.scss'
 
 const GhostOrder = ({ show, noTitle }) => {
   // 從網址接收 utm 資料

@@ -1,10 +1,62 @@
 @import '../../../assets/animate.scss';
 
-.container {
-  width: 932px;
-  margin: 0 auto;  
-}
+.bg {
+  background: #fff;
+  > div {
+    display: flex;
+  }
 
+  .leftImg,
+  .rightImg,
+  .text {
+    opacity: 0;
+  }
+
+  &.show {
+    .leftImg {
+      @include animate(fadeIn, 0.8s, 0s);
+    }
+    .rightImg {
+      @include animate(fadeIn, 0.8s, 0.3s);
+    }
+    .text {
+      @include animate(fadeIn, 0.8s, 0.6s);
+    }
+  }
+  .leftImg {
+    width: 30%;
+  }
+
+  .content {
+    padding: 50px 30px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    .rightImg {
+      width: 49%;
+      margin-right: 5px;
+      margin-bottom: 50px;
+    }
+
+    .text {
+      width: 49%;
+
+      h3 {
+        font-size: 32px;
+        color: #000;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        color: #000;
+      }
+    }
+  }
+}
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -13,8 +65,36 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .container {
+  .bg {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    > div {
+      display: block;
+    }
+
+    &.show {
+      .text {
+        @include animate(fadeIn, 0.8s, 0s);
+      }
+    }
+
+    .text {
+      width: 90%;
+      margin: 0 auto 30px;;
+      h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .carousel {
     width: 90%;
+    margin: 0 auto;
   }
 }
 

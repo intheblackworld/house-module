@@ -126,15 +126,15 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '新碩鼎和',
-      metaTitle: '新碩鼎和',
+      title: '【新碩鼎和】世界級隔震建築，傳承最好 延續感動',
+      metaTitle: '【新碩鼎和】世界級隔震建築，傳承最好 延續感動',
       metaDescription:
-        '長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
-      metaKeywords: '長虹天際,長虹建設,林口建案,林口新建案,林口房屋,林口買房',
-      ogMetaTitle: '新碩鼎和',
+        '以千年尺度淬鍊經典，0.32G抗震，超越頂級豪宅的隔震工法，打造台北城心最安全建築，接待中心：台北市萬華區長沙街二段148號，禮賓專線：02-2370-8588',
+      metaKeywords: '新碩鼎和、隔震建築、隔震宅、萬華建案、萬華新成屋、萬華新建案',
+      ogMetaTitle: '【新碩鼎和】世界級隔震建築，傳承最好 延續感動',
       ogMetaType: 'website',
       ogMetaDescription:
-        '長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
+        '以千年尺度淬鍊經典，0.32G抗震，超越頂級豪宅的隔震工法，打造台北城心最安全建築，接待中心：台北市萬華區長沙街二段148號，禮賓專線：02-2370-8588',
       template: 'index.html',
       hash: true,
     }),

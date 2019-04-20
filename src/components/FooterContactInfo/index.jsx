@@ -4,9 +4,8 @@ import { isMobile } from '../../utils'
 import c from './index.scss'
 
 const FooterContactInfo = ({
-  address, phone, fbLink, googleLink, houseInfos,
+  address, phone, fbLink, googleLink, houseInfos, caseName,
 }) => {
-  console.log(fbLink)
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
     if (isMobile) {
@@ -54,7 +53,7 @@ const FooterContactInfo = ({
             <div className={c.fbBlock}>
               <div
                 className="fb-page"
-                data-href="https://www.facebook.com/%E9%95%B7%E8%99%B9%E5%A4%A9%E9%9A%9B-2731739126866550/"
+                data-href={fbLink}
                 data-tabs="timeline"
                 // data-width="200"
                 data-height="65"
@@ -63,13 +62,8 @@ const FooterContactInfo = ({
                 data-hide-cover="false"
                 data-show-facepile="false"
               >
-                <blockquote
-                  cite="https://www.facebook.com/%E9%95%B7%E8%99%B9%E5%A4%A9%E9%9A%9B-2731739126866550/"
-                  className="fb-xfbml-parse-ignore"
-                >
-                  <a href="https://www.facebook.com/%E9%95%B7%E8%99%B9%E5%A4%A9%E9%9A%9B-2731739126866550/">
-                    長虹天際
-                  </a>
+                <blockquote cite={fbLink} className="fb-xfbml-parse-ignore">
+                  <a href={fbLink}>{caseName}</a>
                 </blockquote>
               </div>
             </div>

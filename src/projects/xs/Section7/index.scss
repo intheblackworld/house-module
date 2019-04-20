@@ -1,0 +1,123 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  background: url('./bg.png');
+  min-height: 780px;
+  height: 100vh;
+  padding: 30px 0;
+}
+
+.container {
+  width: 1040px;
+  margin: 0 auto 50px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-size: 32px;
+      display: inline-block;
+      text-align: center;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 5px solid #000;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.75;
+    }
+  }
+
+}
+
+.specialTitle {
+  text-align: center;
+  font-size: 30px;
+  margin: 30px auto;
+}
+
+.carousel {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+  .item {
+    flex: 1;
+    padding: 0 10px;
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    background: #fff;
+    min-height: auto;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 100%;
+  
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 30px auto;
+
+      h3 {
+        font-size: 20px;
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 5px solid #000;
+      }
+  
+      p {
+        font-size: 16px;
+        line-height: 1.75;
+        text-align: center;
+      }
+    }
+  
+  }
+  
+  .carousel {
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}

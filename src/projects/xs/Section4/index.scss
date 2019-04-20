@@ -1,10 +1,80 @@
 @import '../../../assets/animate.scss';
 
-.container {
-  width: 932px;
-  margin: 0 auto;  
-}
+.bg {
+  background-color: #932c59;
+  padding: 40px 0;
 
+  .title, .carousel, .content > div {
+    opacity: 0;
+  }
+
+  &.show {
+    .title {
+      @include animate(fadeIn, .5s, 0s);
+    }
+
+    .content > .item {
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeInUp, .8s, $i * 0.3s);
+        }
+      }
+    }
+
+    .carousel {
+      @include animate(fadeIn, .5s, .4s);
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    h3,
+    p {
+      text-align: center;
+      color: #fff;
+      display: inline-block;
+    }
+
+    h3 {
+      border-bottom: 2px solid #fff;
+      font-size: 32px;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .item {
+      flex: 1;
+      padding: 10px;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+}
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -13,8 +83,51 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .container {
-    width: 90%;
+  .bg {
+    .title {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 90%;
+      margin: 0 auto;
+      h3,
+      p {
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+      }
+
+      h3 {
+        border-bottom: 2px solid #fff;
+        font-size: 20px;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .carousel {
+      width: 90%;
+      margin: 0 auto;
+
+      p {
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  :global {
+    .slick-slide img {
+      width: 100%;
+    }
   }
 }
 

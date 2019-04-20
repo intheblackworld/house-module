@@ -29,6 +29,10 @@
       height: calc(100vh - #{$navigationTabletHeight});
       // margin-top: $navigationMobileHeight;
     }
+
+    &.master {
+      margin-top: $navigationTabletHeight;
+    }
   }
 }
 
@@ -42,6 +46,10 @@
     &.cutHeader {
       height: calc(100vh - #{$navigationMobileHeight});
       // margin-top: $navigationMobileHeight;
+    }
+
+    &.master {
+      margin-top: $navigationMobileHeight;
     }
   }
 }

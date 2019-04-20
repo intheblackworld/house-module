@@ -7,6 +7,10 @@
     box-sizing: border-box;
   }
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .viewport-frame {
     position: absolute;
     height: 400px;
@@ -38,10 +42,15 @@
     justify-content: center;
   }
 
+  .flex-ac {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   /* 螢幕尺寸標準 */
   /* 平板尺寸 */
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
     .bg {
       height: 100vh;
     }

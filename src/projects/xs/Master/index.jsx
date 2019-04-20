@@ -1,6 +1,6 @@
 import { withTrans } from 'utils'
 // import ViewPort from 'components/ViewPort'
-import { isMobile } from '../../../utils'
+// import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const Master = ({ show }) => {
@@ -10,8 +10,10 @@ const Master = ({ show }) => {
   return (
     <div className={`${bgClass} masterBg`}>
       <div className={c.container}>
-        {/* <img src={require('./title.png')} alt="" className={c.title} /> */}
-        <p className={`${c.subTitle} flex-c`}>公園富人區 地標落成{!isMobile && '˙'} 70-83坪</p>
+        <img src={require('./title1.png')} alt="" className={c.title1} />
+        <img src={require('./title2.png')} alt="" className={c.title2} />
+        <img src={require('./title3.png')} alt="" className={c.title3} />
+        <img src={require('./house.png')} alt="" className={c.house} />
       </div>
     </div>
   )

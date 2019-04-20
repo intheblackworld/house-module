@@ -1,82 +1,77 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-// import { withTrans } from 'utils'
+import { withTrans } from 'utils'
 // import ViewPort from 'components/ViewPort'
 // import SlidePicker from 'components/SliderPicker'
-import Viewport from 'components/ViewPort'
-import {
-  PreContainer, DescContainer, ListContainer, AccordionContainer,
-} from 'components/cht'
+// import Viewport from 'components/ViewPort'
+import Carousel from 'components/Carousel'
+// import {
+//   PreContainer, DescContainer, ListContainer, AccordionContainer,
+// } from 'components/cht'
 import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const list = [
   {
-    src: require('./best-1.png'),
+    src: require('./leftImg.png'),
     title: '【 觀光休閒消費首選 】',
     desc: '220間知名品牌進駐北台最大Outlet',
     label: 1,
   },
   {
-    src: require('./best-2.png'),
+    src: require('./right-img-1.png'),
     title: '【全台最大醫療機構】',
     desc: '豐富精密醫療儀器廠商聚集，全國規模最大',
     label: 2,
   },
   {
-    src: require('./best-3.png'),
+    src: require('./right-img-2.png'),
     title: '【全台最多國際學校】',
     desc: '新北市的天母區，教育國際、聯動區域行情',
     label: 3,
   },
-  {
-    src: require('./best-4.png'),
-    title: '【全台機能最好的重劃】',
-    desc: '雙影城、四百貨、九超商、百家異國料理齊聚',
-    label: 4,
-  },
-  {
-    src: require('./best-5.png'),
-    title: '【新北重劃區首選】',
-    desc: '各項建設萬箭齊發，唯有林口居域最超值',
-    label: 5,
-  },
-  {
-    src: require('./best-6.png'),
-    title: '【商機無限林口最卓越】',
-    desc: '閃耀首善型都會區的巨擘光芒，席捲雙北置產焦點',
-    label: 6,
-  },
-  {
-    src: require('./best-7.png'),
-    title: '【稀有價值天際享有】',
-    desc: '70-90坪市場缺稀，稀有性成為生活贏家價值',
-    label: 7,
-  },
 ]
 
-const Section3 = () => (
-  <div>
-    <Viewport isBottom={false}>
-      <PreContainer
-        title1="生活 盡享好樂趣"
-        title2="國際機能"
-        desc="Enjoy the Lifestyle"
-        src={require('./preImg.jpg')}
-      />
-    </Viewport>
-    <div className={c.container}>
-      <Viewport>
-        <DescContainer title="無與倫比，打造林口最宜居城市" section={3} />
-      </Viewport>
+const Section3 = ({ show }) => {
+  const bgClass = withTrans('bg', c, show)
+  return (
+    <div className={bgClass}>
       {isMobile ? (
-        <Viewport isBottom={false} showOneTime>
-          <AccordionContainer list={list} />
-        </Viewport>
+        <div>
+          <div className={c.text}>
+            <h3>經典，才值得一代傳一代</h3>
+            <p>
+              挑選台北西區最罕見黃金角地， 以三面臨路大器姿態，
+              成為城心亮眼地標。汲取「台北第一街」貴陽街豐厚歷史脈絡，
+              藉由500坪完整街廓、64米謙和標高，再現台北城心最動人的百年風華。
+            </p>
+          </div>
+          <div className={c.carousel}>
+            <Carousel slidesToShow={1} fade={false} dots arrows>
+              {list.map(item => (
+                <img src={item.src} alt="" key={item.src} />
+              ))}
+            </Carousel>
+          </div>
+        </div>
       ) : (
-        <ListContainer list={list} />
+        <div>
+          <img src={require('./leftImg.png')} alt="" className={c.leftImg} />
+          <div className={c.content}>
+            <img src={require('./right-img-1.png')} alt="" className={c.rightImg} />
+            <img src={require('./right-img-2.png')} alt="" className={c.rightImg} />
+            <div className={c.text}>
+              <h3>經典，才值得一代傳一代</h3>
+              <p>
+                挑選台北西區最罕見黃金角地， 以三面臨路大器姿態，
+                成為城心亮眼地標。汲取「台北第一街」貴陽街豐厚歷史脈絡，
+                藉由500坪完整街廓、64米謙和標高，再現台北城心最動人的百年風華。
+              </p>
+            </div>
+          </div>
+        </div>
       )}
     </div>
-  </div>
-)
+  )
+}
 
 export default Section3
