@@ -6,7 +6,8 @@ h2 {
   font-weight: normal;
 }
 h3 {
-  font-family: 'Noto Serif TC', serif;
+  font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', Helvetica,
+    Arial;
   margin: 0;
   font-weight: bold;
 }
@@ -18,11 +19,10 @@ p {
 
 /* animate css */
 
-
-
 /* font */
 @font-face {
   font-family: DFPingJuStd;
-  src: url('../assets/font/DFPingJuStd-W7.otf?#iefix') format('embedded-opentype'),
-  url('../assets/font/DFPingJuStd-W7.otf');
+  src: url('../assets/font/DFPingJuStd-W7.otf?#iefix')
+      format('embedded-opentype'),
+    url('../assets/font/DFPingJuStd-W7.otf');
 }
