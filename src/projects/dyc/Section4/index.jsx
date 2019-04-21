@@ -39,9 +39,7 @@ const Section4 = () => (
     <ViewPort position="400px">
       <Content />
     </ViewPort>
-    <ViewPort>
-      <RightDoor />
-    </ViewPort>
+    <ViewPort>{isMobile ? <img src={require('./table.png')} alt="" className={c.table} /> : <RightDoor />}</ViewPort>
     {/* <img src={require('./table.png')} alt="" className={c.table} /> */}
   </div>
 )

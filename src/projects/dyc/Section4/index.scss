@@ -94,17 +94,22 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
-    height: calc(100vh - 60px);
+    // height: calc(100vh - 60px);
   }
 
   .leftTitle {
-    left: 13%;
+    left: 0%;
     font-size: 32px;
   }
 
   .content {
-    transform: translate(-7%, -50%);
-    top: 50%;
+    top: 30%;
+    transform: translate(-20%, -50%);
+
+    .desc {
+      font-size: 14px;
+      margin-top: 25px;
+    }
   }
 
   .table {
