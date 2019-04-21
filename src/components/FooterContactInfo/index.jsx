@@ -4,7 +4,7 @@ import { isMobile } from '../../utils'
 import c from './index.scss'
 
 const FooterContactInfo = ({
-  address, phone, fbLink, googleLink, houseInfos, caseName,
+  address, phone, fbLink, googleLink, houseInfos,
 }) => {
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
@@ -63,7 +63,7 @@ const FooterContactInfo = ({
                 data-show-facepile="false"
               >
                 <blockquote cite={fbLink} className="fb-xfbml-parse-ignore">
-                  <a href={fbLink}>{caseName}</a>
+                  <a href={fbLink}>{houseInfos.caseName}</a>
                 </blockquote>
               </div>
             </div>
