@@ -4,7 +4,7 @@ import { isMobile } from '../../utils'
 import c from './index.scss'
 
 const FooterContactInfo = ({
-  address, phone, fbLink, googleLink, houseInfos, caseName
+  address, phone, fbLink, googleLink, houseInfos, caseName,
 }) => {
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()

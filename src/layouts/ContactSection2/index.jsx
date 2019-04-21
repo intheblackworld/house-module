@@ -13,7 +13,7 @@ import c from './index.scss'
 import info from '../../info'
 
 const {
-  address, phone, fbLink, googleLink, houseInfos, caseName
+  address, phone, fbLink, googleLink, houseInfos, caseName,
 } = info
 const ContactSection = () => (
   <div className={c.contactSection}>
