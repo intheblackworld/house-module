@@ -1,4 +1,5 @@
 // import { withTrans } from 'utils'
+import { useState, useEffect } from 'react'
 // import ViewPort from 'components/ViewPort'
 import { isMobile } from '../../utils'
 import c from './index.scss'
@@ -17,6 +18,12 @@ const FooterContactInfo = ({
       window.location.href = 'phoneThanks'
     }, 1000)
   }
+
+  const [link, setFbLink] = useState('')
+
+  useEffect(() => {
+    setFbLink(fbLink)
+  }, [fbLink])
   return (
     <div className={c.bg}>
       <div className={c.container}>
@@ -53,7 +60,7 @@ const FooterContactInfo = ({
             <div className={c.fbBlock}>
               <div
                 className="fb-page"
-                data-href={fbLink}
+                data-href={link}
                 data-tabs="timeline"
                 // data-width="200"
                 data-height="65"
@@ -62,8 +69,8 @@ const FooterContactInfo = ({
                 data-hide-cover="false"
                 data-show-facepile="false"
               >
-                <blockquote cite={fbLink} className="fb-xfbml-parse-ignore">
-                  <a href={fbLink}>{caseName}</a>
+                <blockquote cite={link} className="fb-xfbml-parse-ignore">
+                  <a href={link}>{caseName}</a>
                 </blockquote>
               </div>
             </div>
