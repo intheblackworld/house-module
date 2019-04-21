@@ -1,11 +1,11 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 // import { withTrans } from 'utils'
-import { useState, useEffect } from 'react'
 // import ViewPort from 'components/ViewPort'
 import { isMobile } from '../../utils'
 import c from './index.scss'
 
 const FooterContactInfo = ({
-  address, phone, fbLink, googleLink, houseInfos, caseName,
+  address, phone, googleLink, houseInfos,
 }) => {
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
@@ -19,11 +19,6 @@ const FooterContactInfo = ({
     }, 1000)
   }
 
-  const [link, setFbLink] = useState('')
-
-  useEffect(() => {
-    setFbLink(fbLink)
-  }, [fbLink])
   return (
     <div className={c.bg}>
       <div className={c.container}>
@@ -58,21 +53,14 @@ const FooterContactInfo = ({
           <div className={c.socialInfo}>
             <h3>facebook</h3>
             <div className={c.fbBlock}>
-              <div
-                className="fb-page"
-                data-href={link}
-                data-tabs="timeline"
-                // data-width="200"
-                data-height="65"
-                data-small-header="false"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="false"
-              >
-                <blockquote cite={link} className="fb-xfbml-parse-ignore">
-                  <a href={link}>{caseName}</a>
-                </blockquote>
-              </div>
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGreatManor%2F%3Fmodal%3Dadmin_todo_tour&height=170&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=318563575497575"
+                height="170"
+                width="240"
+                scrolling="no"
+                frameBorder="0"
+                allow="encrypted-media"
+              />
             </div>
           </div>
         </div>
