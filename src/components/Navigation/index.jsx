@@ -18,7 +18,7 @@ const NavItems = [
     imgSrc: '',
     subTitle: '',
     section: 'point2',
-    OffsetValue: -PCNavigationHeight,
+    OffsetValue: 0,
   },
 
   {
@@ -26,7 +26,7 @@ const NavItems = [
     imgSrc: '',
     subTitle: '',
     section: 'point3',
-    OffsetValue: -PCNavigationHeight,
+    OffsetValue: 0,
   },
 
   {
@@ -34,7 +34,7 @@ const NavItems = [
     imgSrc: '',
     subTitle: '',
     section: 'point4',
-    OffsetValue: -PCNavigationHeight,
+    OffsetValue: 0,
   },
 
   {
@@ -42,7 +42,7 @@ const NavItems = [
     imgSrc: '',
     subTitle: '',
     section: 'point5',
-    OffsetValue: -PCNavigationHeight,
+    OffsetValue: 0,
   },
 ]
 
@@ -132,7 +132,7 @@ const Navigation = () => {
                     spy
                     smooth
                     duration={500}
-                    offset={-60}
+                    offset={0}
                     key={item.section}
                   >
                     <span className={css.link}>
