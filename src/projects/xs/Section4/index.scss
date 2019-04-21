@@ -79,6 +79,29 @@
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .item {
+      flex: 1;
+      padding: 10px;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
 }
 
 /* 手機尺寸 */

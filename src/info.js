@@ -1,6 +1,6 @@
 export default {
-  address: '244新北市林口區文化三路二段292號',
-  locations: { lat: 25.0832356, lng: 121.3747939 },
+  address: '108台北市萬華區長沙街二段148號',
+  locations: { lat: 25.040423, lng: 121.4993403 },
   phone: '02-2370-8588',
   fbLink: 'https://www.facebook.com/GreatManor/?modal=admin_todo_tour',
   googleLink: 'https://goo.gl/maps/tbiucSHRpJ8Poajr7',
