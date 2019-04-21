@@ -13,7 +13,7 @@ import c from './index.scss'
 import info from '../../info'
 
 const {
-  address, phone, fbLink, googleLink, houseInfos,
+  address, phone, fbLink, googleLink, houseInfos, caseName
 } = info
 const ContactSection = () => (
   <div className={c.contactSection}>
@@ -30,6 +30,7 @@ const ContactSection = () => (
         fbLink={fbLink}
         googleLink={googleLink}
         houseInfos={houseInfos}
+        caseName={caseName}
       />
     </Viewport>
   </div>
