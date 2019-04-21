@@ -60,10 +60,10 @@ const Navigation = () => {
   // eslint-disable-next-line func-names
   window.onscroll = function () {
     const currentScrollPos = window.pageYOffset
-    if (prevScrollpos > currentScrollPos) {
-      setNavbar(true)
-    } else {
+    if (prevScrollpos < currentScrollPos && currentScrollPos > 200) {
       setNavbar(false)
+    } else {
+      setNavbar(true)
     }
     prevScrollpos = currentScrollPos
   }
