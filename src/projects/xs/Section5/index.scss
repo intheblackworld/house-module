@@ -36,11 +36,12 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
 
     .text {
-      width: 50%;
-      padding-left: 50px;
+      width: 390px;
+      margin-left: 50px;
+      margin-bottom: 50px;
     }
     .title {
       font-size: 24px;
@@ -53,7 +54,9 @@
     }
     .desc {
       font-size: 20px;
+      text-align: justify;
       color: #333;
+      line-height: 1.65;
     }
 
     .structure {
@@ -99,7 +102,7 @@
   
       .text {
         width: 100%;
-        padding-left: 0px;
+        margin-left: 0px;
       }
       .title {
         font-size: 18px;

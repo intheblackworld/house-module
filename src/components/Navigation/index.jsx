@@ -3,13 +3,15 @@ import { Container, Image } from 'semantic-ui-react'
 import { Link } from 'react-scroll'
 import cx from 'classnames'
 
+import { isMobile } from '../../utils'
+
 import logo from './logo.png'
 import menu from './menu-btn.png'
 
 import css from './index.scss'
 
-const PCNavigationHeight = 80
-const TabletNavigationHeight = 60
+const PCNavigationHeight = 159
+const TabletNavigationHeight = 129
 const MobileNavigationHeight = 45
 
 const NavItems = [
@@ -48,7 +50,7 @@ const NavItems = [
 
 const menuStatus = false
 
-const Navigation = () => {
+const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
   const [list, setListItemOffsetValue] = useState(NavItems)
   const [isShowMenu, setMenu] = useState(menuStatus)
   const [isShowNavbar, setNavbar] = useState(true)
@@ -100,55 +102,121 @@ const Navigation = () => {
     [css.hide]: !isShowNavbar,
   })
 
+  const redirectToPhoneThanks = (e) => {
+    e.preventDefault()
+    if (isMobile) {
+      window.location.href = `tel:${phone.replace('-', '')}`
+    } else {
+      return
+    }
+    setTimeout(() => {
+      window.location.href = 'phoneThanks'
+    }, 1000)
+  }
+
   return (
-    <div className={navigationClass}>
-      <Container fluid>
-        <Container>
-          <div className={css.nav}>
-            <div className={css.logo}>
-              <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
-                <Image src={logo} alt="" />
+    <React.Fragment>
+      {isMobile && (
+        <div className={css.contactNav}>
+          <div className={css.item}>
+            <a
+              href={`tel:${phone.replace('-', '')}`}
+              rel="noopener noreferrer"
+              onClick={redirectToPhoneThanks}
+            >
+              {isMobile ? <img src={require('./phoneIcon.png')} alt="" /> : '立即來電：'}
+              <span>{phone}</span>
+            </a>
+          </div>
+          <div className={css.item}>
+            <a href={googleLink} target="_blank" rel="noopener noreferrer">
+              <img src={require('./mapIcon.png')} alt="" />
+              <span>地圖導航</span>
+            </a>
+          </div>
+          <div className={css.item}>
+            <Link to="order" spy smooth duration={500} offset={0} key="order">
+              <img src={require('./orderIcon.png')} alt="" />
+              <span>立即預約</span>
+            </Link>
+          </div>
+        </div>
+      )}
+      <div className={navigationClass}>
+        {!isMobile && hasContactInfo && (
+          <div className={css.contactNav}>
+            <div className={css.item}>
+              <a
+                href={`tel:${phone.replace('-', '')}`}
+                rel="noopener noreferrer"
+                onClick={redirectToPhoneThanks}
+              >
+                {isMobile ? <img src={require('./phoneIcon.png')} alt="" /> : '立即來電：'}
+                <span>{phone}</span>
+              </a>
+            </div>
+            <div className={css.item}>
+              <a href={googleLink} target="_blank" rel="noopener noreferrer">
+                <img src={require('./mapIcon.png')} alt="" />
+                <span>地圖導航</span>
+              </a>
+            </div>
+            <div className={css.item}>
+              <Link to="order" spy smooth duration={500} offset={0} key="order">
+                <img src={require('./orderIcon.png')} alt="" />
+                <span>立即預約</span>
               </Link>
             </div>
-            <div
-              className={css.menu}
-              role="presentation"
-              onKeyDown={toggleSidebar}
-              onClick={toggleSidebar}
-            >
-              <Image src={menu} alt="" />
-            </div>
-            <div
-              className={mask}
-              role="presentation"
-              onKeyDown={toggleSidebar}
-              onClick={toggleSidebar}
-            />
-            <ul className={navlist}>
-              {list
-                && list.map(item => (
-                  <Link
-                    to={item.section}
-                    spy
-                    smooth
-                    duration={500}
-                    offset={0}
-                    key={item.section}
-                  >
-                    <span className={css.link}>
-                      {item.imgSrc && <Image src={item.imgSrc} />}
-                      <span>
-                        <p className={css.title}>{item.name}</p>
-                        <span className={css.subTitle}>{item.subTitle}</span>
-                      </span>
-                    </span>
-                  </Link>
-                ))}
-            </ul>
           </div>
+        )}
+        <Container fluid>
+          <Container>
+            <div className={`${css.nav} ${hasContactInfo && css.hasContactNav}`}>
+              <div className={css.logo}>
+                <Link
+                  to="master"
+                  spy
+                  smooth
+                  duration={500}
+                  offset={-PCNavigationHeight}
+                  key="master"
+                >
+                  <Image src={logo} alt="" />
+                </Link>
+              </div>
+              <div
+                className={css.menu}
+                role="presentation"
+                onKeyDown={toggleSidebar}
+                onClick={toggleSidebar}
+              >
+                <Image src={menu} alt="" />
+              </div>
+              <div
+                className={mask}
+                role="presentation"
+                onKeyDown={toggleSidebar}
+                onClick={toggleSidebar}
+              />
+              <ul className={navlist}>
+                {list
+                  && list.map(item => (
+                    <Link to={item.section} spy smooth duration={500} offset={0} key={item.section}>
+                      <span className={css.link}>
+                        {item.imgSrc && <Image src={item.imgSrc} />}
+                        <span>
+                          <p className={css.title}>{item.name}</p>
+                          <span className={css.subTitle}>{item.subTitle}</span>
+                        </span>
+                      </span>
+                    </Link>
+                  ))}
+              </ul>
+            </div>
+          </Container>
         </Container>
-      </Container>
-    </div>
+      </div>
+    </React.Fragment>
   )
 }
 

@@ -2,6 +2,9 @@ import React from 'react'
 import Navigation from 'components/Navigation'
 import Layout from 'layouts'
 import Footer from 'components/Footer'
+import info from '../info'
+
+const { phone, googleLink } = info
 
 // const Home = () => (
 //   <div>
@@ -44,7 +47,7 @@ export default class Home extends React.Component {
       <div>
         <div ref={this.script} />
         <div ref={this.noscript} />
-        <Navigation />
+        <Navigation phone={phone} googleLink={googleLink} hasContactInfo />
         <Layout />
         <Footer />
       </div>

@@ -1,5 +1,5 @@
-$navigationPCHeight: 80px;
-$navigationTabletHeight: 60px;
+$navigationPCHeight: 159px;
+$navigationTabletHeight: 129px;
 $navigationMobileHeight: 45px;
 $navigationBg: #932c59; 
 
@@ -14,7 +14,7 @@ $logoMobileWidth: 101px;
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex !important;
+  // display: flex !important;
   align-items: center;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
   transition: all .5s;
@@ -24,11 +24,52 @@ $logoMobileWidth: 101px;
   }
 }
 
+.contactNav {
+  height: 80px;
+  background: #9d8d8d;
+  display: flex;
+  justify-content: flex-end;
+
+  .item {
+    height: 100%;
+    border-right: 1px solid #fff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+      border-left: 1px solid #fff;
+    }
+
+    &:nth-last-child(1) {
+      border-left: none;
+    }
+
+    a {
+      color: #fff;
+      font-size: 16px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: relative;
+
+  &.hasContactNav {
+    justify-content: center;
+    margin-top: 30px;
+    .logo {
+      top: -95px;
+    }
+  }
+
   a {
     display: block;
     cursor: pointer;
@@ -102,6 +143,47 @@ $logoMobileWidth: 101px;
     }
   }
 
+  .contactNav {
+    height: 48px;
+    background: #9d8d8d;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    z-index: 2;
+  
+    .item {
+      height: 100%;
+      border: none !important;
+      padding: 0;
+      display: flex;
+      flex: 1;
+      align-items: center;
+  
+      a {
+        color: #fff;
+        font-size: 16px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+  
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        span {
+          width: 100%;
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
   .logo {
     width: $logoMobileWidth;
     left: 15px;
@@ -110,6 +192,14 @@ $logoMobileWidth: 101px;
 
   .nav {
     position: static;
+
+    &.hasContactNav {
+      justify-content: center;
+      margin-top: 20px;
+      .logo {
+        top: 10px;
+      }
+    }
   }
 
   .menu {
@@ -200,6 +290,16 @@ $logoMobileWidth: 101px;
   .logo {
     width: $logoTabletWidth;
     // left: -240px;
+  }
+
+  .nav {
+    &.hasContactNav {
+      justify-content: center;
+      margin-top: 15px;
+      .logo {
+        top: -75px;
+      }
+    }
   }
 
   .navlist .link {

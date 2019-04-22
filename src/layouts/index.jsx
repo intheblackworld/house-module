@@ -57,7 +57,9 @@ const Layout = () => (
     <Element id="point7">
       <Section7 />
     </Element>
-    <ContactSection2 />
+    <Element id="order">
+      <ContactSection2 />
+    </Element>
     {/* <Section>
     <Element id="section5">
       <Section5 />
