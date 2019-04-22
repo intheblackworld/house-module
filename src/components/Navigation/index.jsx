@@ -19,7 +19,7 @@ const NavItems = [
     name: '建築美學',
     imgSrc: '',
     subTitle: '',
-    section: 'point2',
+    section: 'point3',
     OffsetValue: 0,
   },
 
@@ -27,7 +27,7 @@ const NavItems = [
     name: '隔震結構',
     imgSrc: '',
     subTitle: '',
-    section: 'point3',
+    section: 'point5',
     OffsetValue: 0,
   },
 
@@ -35,7 +35,7 @@ const NavItems = [
     name: '西域城心',
     imgSrc: '',
     subTitle: '',
-    section: 'point4',
+    section: 'point6',
     OffsetValue: 0,
   },
 
@@ -43,7 +43,7 @@ const NavItems = [
     name: '新碩建設',
     imgSrc: '',
     subTitle: '',
-    section: 'point5',
+    section: 'point7',
     OffsetValue: 0,
   },
 ]
