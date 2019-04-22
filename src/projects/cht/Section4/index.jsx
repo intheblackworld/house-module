@@ -25,7 +25,7 @@ const slideList = [
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
   {
-    src: require('./slide-4.png'),
+    src: require('./slide-5.png'),
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
 ]
