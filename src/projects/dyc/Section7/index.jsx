@@ -92,11 +92,24 @@ const Second = ({ show }) => {
         是土城首座以Alfa Safe柱中柱、系統柱及系統牆施作的建築結構，
         抗震韌性可提升近1倍，除了鋼筋、樑、柱外，連管線的部份都有詳細紀錄， 透明公開。
       </p>
-      <img src={require('./Alfa-17.png')} className={c.resume} alt="" />
-      <img src={require('./Alfa-18.png')} className={c.resume} alt="" />
-      <img src={require('./Alfa-19.png')} className={c.resume} alt="" />
-      <img src={require('./Alfa-20.png')} className={c.resume} alt="" />
-
+      <div className={c.addonContent}>
+        <div className={c.item}>
+          <img src={require('./Alfa-17.png')} alt="" />
+          <p>【柱中柱系統示意圖 / 專利證號:M498780】</p>
+        </div>
+        <div className={c.item}>
+          <img src={require('./Alfa-18.png')} alt="" />
+          <p>【柱中柱系統示意圖 / 專利證號:M498780】</p>
+        </div>
+        <div className={c.item}>
+          <img src={require('./Alfa-19.png')} alt="" />
+          <p>【L型牆系統化鋼筋設計示意圖 / 專利證號:I570308】</p>
+        </div>
+        <div className={c.item}>
+          <img src={require('./Alfa-20.png')} alt="" />
+          <p>【T型牆系統化鋼筋設計示意圖 / 專利證號:I570308】</p>
+        </div>
+      </div>
     </div>
   )
 }
