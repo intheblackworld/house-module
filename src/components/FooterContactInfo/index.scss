@@ -91,6 +91,8 @@ $border: #932c59;
       padding-left: 0px;
       > div {
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
       }
     }
   }

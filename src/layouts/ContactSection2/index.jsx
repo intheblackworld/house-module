@@ -19,7 +19,7 @@ const ContactSection = () => (
   <div className={c.contactSection}>
     <GoogleMap />
     <div className={`${c.orderBg} bg`}>
-      <FullScreen needCutHeader alignCenter>
+      <FullScreen alignCenter>
         <GhostOrder />
       </FullScreen>
     </div>
