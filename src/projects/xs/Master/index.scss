@@ -108,9 +108,11 @@
   .bg {
     background: #fff;
     box-shadow: inset 10px 0px 0 0px #e37539;
+    padding-top: 0;
   
     .container {
       position: relative;
+      height: 100vh;
     }
   
     .title1, .title2, .title3, .house {
