@@ -48,21 +48,21 @@ const FooterContactInfo = ({
             </a>
             {/* <p>賞屋專線：{phone}</p>
             <p>接待會館：{address}</p> */}
-            <img src={require('./map.png')} alt="" className={c.map} />
-          </div>
-          <div className={c.socialInfo}>
-            <h3>facebook</h3>
             <div className={c.fbBlock}>
               <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E9%2595%25B7%25E8%2599%25B9%25E5%25A4%25A9%25E9%259A%259B-2731739126866550&tabs&width=240&height=170&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=654913588263352"
-                width="240"
-                height="170"
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E9%2595%25B7%25E8%2599%25B9%25E5%25A4%25A9%25E9%259A%259B-2731739126866550%2F&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=654913588263352"
+                width="330"
+                height="240"
                 scrolling="no"
                 frameBorder="0"
                 allowTransparency="true"
                 allow="encrypted-media"
               />
             </div>
+          </div>
+          <div className={c.socialInfo}>
+            <h3>地圖</h3>
+            <img src={require('./map.png')} alt="" className={c.map} />
           </div>
         </div>
       </div>
