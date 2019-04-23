@@ -41,10 +41,10 @@
 @media only screen and (max-width: 767px) {
   .fullScreen {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 112px);
 
     &.cutHeader {
-      height: calc(100vh - #{$navigationMobileHeight});
+      height: calc(100vh - #{$navigationMobileHeight} - 112px);
       // margin-top: $navigationMobileHeight;
     }
 

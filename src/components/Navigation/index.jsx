@@ -116,32 +116,6 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
 
   return (
     <React.Fragment>
-      {isMobile && (
-        <div className={css.contactNav}>
-          <div className={css.item}>
-            <a
-              href={`tel:${phone.replace('-', '')}`}
-              rel="noopener noreferrer"
-              onClick={redirectToPhoneThanks}
-            >
-              {isMobile ? <img src={require('./phoneIcon.png')} alt="" /> : '立即來電：'}
-              <span>{phone}</span>
-            </a>
-          </div>
-          <div className={css.item}>
-            <a href={googleLink} target="_blank" rel="noopener noreferrer">
-              <img src={require('./mapIcon.png')} alt="" />
-              <span>地圖導航</span>
-            </a>
-          </div>
-          <div className={css.item}>
-            <Link to="order" spy smooth duration={500} offset={0} key="order">
-              <img src={require('./orderIcon.png')} alt="" />
-              <span>立即預約</span>
-            </Link>
-          </div>
-        </div>
-      )}
       <div className={navigationClass}>
         {!isMobile && hasContactInfo && (
           <div className={css.contactNav}>
@@ -216,6 +190,32 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
           </Container>
         </Container>
       </div>
+      {isMobile && (
+        <div className={css.contactNav}>
+          <div className={css.item}>
+            <a
+              href={`tel:${phone.replace('-', '')}`}
+              rel="noopener noreferrer"
+              onClick={redirectToPhoneThanks}
+            >
+              {isMobile ? <img src={require('./phoneIcon.png')} alt="" /> : '立即來電：'}
+              <span>{phone}</span>
+            </a>
+          </div>
+          <div className={css.item}>
+            <a href={googleLink} target="_blank" rel="noopener noreferrer">
+              <img src={require('./mapIcon.png')} alt="" />
+              <span>地圖導航</span>
+            </a>
+          </div>
+          <div className={css.item}>
+            <Link to="order" spy smooth duration={500} offset={0} key="order">
+              <img src={require('./orderIcon.png')} alt="" />
+              <span>立即預約</span>
+            </Link>
+          </div>
+        </div>
+      )}
     </React.Fragment>
   )
 }

@@ -138,9 +138,13 @@ $logoMobileWidth: 101px;
   .navigation {
     height: $navigationMobileHeight;
 
-    &.hide {
-      top: -$navigationMobileHeight;
-    }
+    // &.hide {
+    //   top: -$navigationMobileHeight;
+
+    //   & + .contactNav {
+    //     opacity: 0;
+    //   }
+    // }
   }
 
   .contactNav {
@@ -151,6 +155,7 @@ $logoMobileWidth: 101px;
     position: absolute;
     width: 100vw;
     bottom: 0;
+    transition: all .3s;
     z-index: 2;
   
     .item {

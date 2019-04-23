@@ -110,7 +110,7 @@
   
     .container {
       position: relative;
-      height: calc(100vh - #{$navigationMobileHeight});
+      height: calc(100vh - #{$navigationMobileHeight} - 112px);
     }
   
     .title1, .title2, .title3, .house {
