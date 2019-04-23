@@ -2,7 +2,8 @@ $titleBg: transparent;
 $titleColor: #932c59;
 $subTitleColor: #932c59;
 $policyColor: #932c59;
-$buttonBg: #932c59;
+$buttonBg: #999;
+$buttonBgEnable: #932c59;
 $buttonColor: #fff;
 
 .orderContainer {
@@ -88,6 +89,10 @@ $buttonColor: #fff;
   color: $buttonColor !important;
   margin: 0 auto !important;
   display: block !important;
+
+  &.enable {
+    background-color: $buttonBgEnable !important;
+  }
 }
 
 :global {
