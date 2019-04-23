@@ -32,7 +32,7 @@ const NavItems = [
   },
 
   {
-    name: '西域城心',
+    name: '西區城心',
     imgSrc: '',
     subTitle: '',
     section: 'point6',
@@ -125,7 +125,7 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
                 rel="noopener noreferrer"
                 onClick={redirectToPhoneThanks}
               >
-                {isMobile ? <img src={require('./phoneIcon.png')} alt="" /> : '立即來電：'}
+                {isMobile ? <img src={require('./phoneIcon.png')} alt="" /> : <div>立即來電</div>}
                 <span>{phone}</span>
               </a>
             </div>
@@ -198,8 +198,12 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
               rel="noopener noreferrer"
               onClick={redirectToPhoneThanks}
             >
-              {isMobile ? <img src={require('./phoneIcon.png')} alt="" /> : '立即來電：'}
-              <span>{phone}</span>
+              {isMobile ? (
+                <img src={require('./phoneIcon.png')} alt="" className={css.marginB} />
+              ) : (
+                '立即來電：'
+              )}
+              <span>立即來電</span>
             </a>
           </div>
           <div className={css.item}>
@@ -209,7 +213,14 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
             </a>
           </div>
           <div className={css.item}>
-            <Link to="order" spy smooth duration={500} offset={0} key="order">
+            <Link
+              to="order"
+              spy
+              smooth
+              duration={500}
+              offset={0}
+              key="order"
+            >
               <img src={require('./orderIcon.png')} alt="" />
               <span>立即預約</span>
             </Link>

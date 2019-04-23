@@ -52,7 +52,7 @@ const Section6 = ({ show }) => {
           <p>提供全方位建築防震規劃與檢修能力。</p>
         </div>
         <h3 className={c.specialTitle}>
-          隔制震業績
+          - 隔制震業績 -
         </h3>
       </div>
       {isMobile ? (

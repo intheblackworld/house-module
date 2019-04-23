@@ -150,27 +150,27 @@ const GhostOrder = ({ show, noTitle }) => {
       {!noTitle && (
         <div className={titleClass}>
           <h3>預約賞屋</h3>
-          <p>專人將在24小時內與您聯繫</p>
+          {/* <p>專人將在24小時內與您聯繫</p> */}
         </div>
       )}
       <Form className={formClass}>
         <div className={css.group}>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="name" placeholder="" />
-              <label>姓名</label> {/* eslint-disable-line */}
+              <input id="name" placeholder="請輸入請輸入您的大名" />
+              {/* <label>姓名</label> eslint-disable-line */}
             </Form.Field>
           </div>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="phone" placeholder="" />
-              <label>聯絡電話</label> {/* eslint-disable-line */}
+              <input id="phone" placeholder="請輸入請輸入您的手機" />
+              {/* <label>聯絡電話</label> eslint-disable-line */}
             </Form.Field>
           </div>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="email" placeholder="" />
-              <label>email</label> {/* eslint-disable-line */}
+              <input id="email" placeholder="請輸入請輸入您的email" />
+              {/* <label>email</label> eslint-disable-line */}
             </Form.Field>
           </div>
           <div className={css.selectControl}>
@@ -196,7 +196,7 @@ const GhostOrder = ({ show, noTitle }) => {
         </div>
         <div className={css.group}>
           <div className={css.control}>
-            <TextArea id="msg" className={css.textarea} placeholder="您的訊息" />
+            <TextArea id="msg" className={css.textarea} placeholder="請輸入請輸入您的留言" />
           </div>
         </div>
       </Form>

@@ -4,7 +4,7 @@ import Mask from 'components/AstrictMask'
 // import Order from 'components/Order'
 import ViewPort from 'components/ViewPort'
 // import FixLink from 'components/FixLink'
-import FullScreen from './FullScreen'
+// import FullScreen from './FullScreen'
 // import ContactSection from './ContactSection'
 import ContactSection2 from './ContactSection2'
 // import { isMobile } from '../utils'
@@ -26,13 +26,11 @@ const Layout = () => (
   <React.Fragment>
     <Mask />
     {/* <FixLink /> */}
-    <FullScreen needCutHeader master>
-      <Element id="master">
-        <ViewPort isBottom={false}>
-          <Master />
-        </ViewPort>
-      </Element>
-    </FullScreen>
+    <Element id="master">
+      <ViewPort isBottom={false}>
+        <Master />
+      </ViewPort>
+    </Element>
     <Element id="point2">
       <ViewPort isBottom={false}>
         <Section2 />

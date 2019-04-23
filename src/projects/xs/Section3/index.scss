@@ -24,11 +24,11 @@
     }
   }
   .leftImg {
-    width: 30%;
+    width: auto;
   }
 
   .content {
-    padding: 50px 30px;
+    padding: 50px 87px;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -36,22 +36,22 @@
     flex-wrap: wrap;
 
     .rightImg {
-      width: 49%;
+      height: 200px;
       margin-right: 5px;
       margin-bottom: 50px;
     }
 
     .text {
-      width: 49%;
+      width: 444px;
 
       h3 {
-        font-size: 32px;
-        color: #000;
+        font-size: 30px;
+        color: #932c59;
         margin-bottom: 20px;
       }
 
       p {
-        font-size: 20px;
+        font-size: 18px;
         color: #000;
       }
     }

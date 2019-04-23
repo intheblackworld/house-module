@@ -48,10 +48,6 @@ const FooterContactInfo = ({
             </a>
             {/* <p>賞屋專線：{phone}</p>
             <p>接待會館：{address}</p> */}
-            <img src={require('./map.png')} alt="" className={c.map} />
-          </div>
-          <div className={c.socialInfo}>
-            <h3>facebook</h3>
             <div className={c.fbBlock}>
               <iframe
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGreatManor%2F%3Fmodal%3Dadmin_todo_tour&height=170&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=318563575497575"
@@ -62,6 +58,10 @@ const FooterContactInfo = ({
                 allow="encrypted-media"
               />
             </div>
+          </div>
+          <div className={c.socialInfo}>
+            <h3>地圖</h3>
+            <img src={require('./map.png')} alt="" className={c.map} />
           </div>
         </div>
       </div>

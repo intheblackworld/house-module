@@ -12,7 +12,7 @@ const itemList = [
   },
   {
     src: require('./icon-2.png'),
-    title: '西區，台北的根',
+    title: ' 西區，台北的根',
     desc:
       '捷運西門站750米，近擁24小時家樂福。歷史街區、西門商圈……，整個西區最繁華焦點都是你的勢力範圍。',
   },
@@ -27,12 +27,12 @@ const ItemList = ({ show }) => {
   const containerClass = withTrans('container', c, show)
   return (
     <div className={containerClass}>
-      {itemList.map(item => (
+      {itemList.map((item, index) => (
         <div className={c.item} key={item.title}>
           {isMobile && <img src={item.src} alt="" className={c.icon} />}
           <div className={isMobile ? 'flex-c' : 'flex-ac'}>
             {!isMobile && <img src={item.src} alt="" className={c.icon} />}
-            <h3 className={c.itemTitle}>{item.title}</h3>
+            {index === 2 ? <h3 className={`${c.itemTitle} ${c.itemTileF}`}>{item.title}</h3> : <h3 className={c.itemTitle}>{item.title}</h3>}
           </div>
           <p className={c.desc}>{item.desc}</p>
         </div>

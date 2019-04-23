@@ -41,7 +41,7 @@
 @media only screen and (max-width: 767px) {
   .fullScreen {
     width: 100vw;
-    height: calc(100vh - 112px);
+    height: calc(100vh - 70px);
 
     &.cutHeader {
       height: calc(100vh - #{$navigationMobileHeight} - 112px);

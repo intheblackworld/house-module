@@ -27,43 +27,52 @@
     background-size: cover;
     background-position: center;
   }
-  .leftImg {
-    width: 30%;
-  }
+  // .leftImg {
+  //   width: 30%;
+  // }
 
   .content {
     width: 70%;
+    padding: 20px 5% 0 10%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-end;
 
     .text {
-      width: 390px;
-      margin-left: 50px;
-      margin-bottom: 50px;
+      width: 445px;
+      margin-bottom: 180px;
+
+      &.sb {
+        margin-bottom: 100px;
+      }
     }
     .title {
-      font-size: 24px;
-      color: #333;
+      font-size: 22px;
+      color: #bd6f91;
     }
     .subTitle {
-      font-size: 32px;
-      color: #333;
+      font-size: 30px;
+      color: #932c59;
       margin-bottom: 30px;
     }
     .desc {
-      font-size: 20px;
+      font-size: 18px;
       text-align: justify;
       color: #333;
       line-height: 1.65;
     }
 
     .structure {
-      position: absolute;
       width: 216px;
-      right: 50px;
       bottom: 100px;
+      margin-bottom: 100px;
+    }
+
+    .promise {
+      width: 180px;
+      margin-bottom: 100px;
     }
   }
 }
@@ -93,6 +102,7 @@
     .content {
       width: 90%;
       // height: 100vh;
+      padding: 0;
       margin: 0 auto;
       position: relative;
       display: flex;
@@ -103,27 +113,34 @@
       .text {
         width: 100%;
         margin-left: 0px;
+        margin-bottom: 40px;
       }
       .title {
         font-size: 18px;
-        color: #333;
       }
       .subTitle {
         font-size: 22px;
-        color: #333;
         margin-bottom: 30px;
       }
       .desc {
         font-size: 16px;
-        color: #333;
       }
   
       .structure {
         position: relative;
         width: 171px;
-        right: 0;
-        bottom: 20px;
-        left: 130px;
+        margin: 0 auto;
+        transform: translateX(-20px);
+        margin-bottom: 40px;
+        bottom: 0;
+      }
+
+      .promise {
+        position: relative;
+        width: 210px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        bottom: 0;
       }
     }
   }

@@ -4,6 +4,7 @@
 .bg {
   background: #fff;
   box-shadow: inset 25px 0px 0 0px #e37539;
+  padding-top: $navigationPCHeight;
 
   &.show {
     .title1 {
@@ -31,7 +32,7 @@
 
   .container {
     position: relative;
-    height: calc(100vh - #{$navigationPCHeight});
+    height: calc(100vw * 0.5);
   }
 
   .title1, .title2, .title3, .house {
@@ -70,9 +71,9 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
-
+    padding-top: $navigationTabletHeight;
     .container {
-      height: calc(100vh - #{$navigationTabletHeight});
+      height: calc(100vw * 0.5);
     }
     .title1 {
       width: 150px;
@@ -110,7 +111,6 @@
   
     .container {
       position: relative;
-      height: calc(100vh - #{$navigationMobileHeight} - 112px);
     }
   
     .title1, .title2, .title3, .house {

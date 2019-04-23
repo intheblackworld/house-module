@@ -57,9 +57,9 @@ const Section3 = ({ show }) => {
         <div>
           <img src={require('./leftImg.png')} alt="" className={c.leftImg} />
           <div className={c.content}>
-            <img src={require('./right-img-1.png')} alt="" className={c.rightImg} />
-            <img src={require('./right-img-2.png')} alt="" className={c.rightImg} />
             <div className={c.text}>
+              <img src={require('./right-img-1.png')} alt="" className={c.rightImg} />
+              <img src={require('./right-img-2.png')} alt="" className={c.rightImg} />
               <h3>經典，才值得一代傳一代</h3>
               <p>
                 挑選台北西區最罕見黃金角地， 以三面臨路大器姿態，

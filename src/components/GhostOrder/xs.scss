@@ -1,13 +1,15 @@
-$titleBg: #932c59;
-$titleColor: #fff;
-$subTitleColor: #fff;
-$policyColor: #fff;
+$titleBg: transparent;
+$titleColor: #932c59;
+$subTitleColor: #932c59;
+$policyColor: #932c59;
 $buttonBg: #932c59;
 $buttonColor: #fff;
 
 .orderContainer {
   width: 932px;
   margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .orderTitle {
@@ -71,6 +73,8 @@ $buttonColor: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
   a, label {
     color: $policyColor !important;
   }
@@ -92,47 +96,47 @@ $buttonColor: #fff;
     position: relative !important;
     margin-bottom: 25px !important;
   }
-  .ui.form {
-    .field > .selection.dropdown, input:not([type]):focus, input:not([type]),  textarea,  input:not([type]):focus, .field.field input:-webkit-autofill {
-      border-radius: 0 !important;
-      border: none !important;
-      border-bottom: 1px solid #fff !important;
-      background: transparent !important;
-      box-shadow: 0px 0px 0px 100px transparent inset !important;
-      color: rgba(255, 255, 255, 1) !important;
+  // .ui.form {
+  //   .field > .selection.dropdown, input:not([type]):focus, input:not([type]),  textarea,  input:not([type]):focus, .field.field input:-webkit-autofill {
+  //     border-radius: 0 !important;
+  //     border: none !important;
+  //     border-bottom: 1px solid #fff !important;
+  //     background: transparent !important;
+  //     box-shadow: 0px 0px 0px 100px transparent inset !important;
+  //     color: rgba(255, 255, 255, 1) !important;
       
-    }
+  //   }
 
-    input:not([type]):focus {
-      border-bottom: 1px solid #85B7D9 !important;
+  //   input:not([type]):focus {
+  //     border-bottom: 1px solid #85B7D9 !important;
 
-      & + label {
-        font-size: 12px;
-        bottom: 25px;
-        left: 0px;
-      }
-    }
+  //     & + label {
+  //       font-size: 12px;
+  //       bottom: 25px;
+  //       left: 0px;
+  //     }
+  //   }
 
-    .field > .selection.dropdown {
-      width: 100% !important;
-    }
+  //   .field > .selection.dropdown {
+  //     width: 100% !important;
+  //   }
 
-    textarea {
-      border: 1px solid #fff !important;
-      margin-bottom: 25px;
-    }
+  //   textarea {
+  //     border: 1px solid #fff !important;
+  //     margin-bottom: 25px;
+  //   }
 
     
 
-    label {
-      color: #fff !important;
-      position: absolute;
-      font-size: 16px;
-      bottom: 5px;
-      left: 5px;
-      transition: all .3s;
-    }
-  }
+  //   label {
+  //     color: #fff !important;
+  //     position: absolute;
+  //     font-size: 16px;
+  //     bottom: 5px;
+  //     left: 5px;
+  //     transition: all .3s;
+  //   }
+  // }
 }
 
 

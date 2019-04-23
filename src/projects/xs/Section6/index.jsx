@@ -10,6 +10,7 @@ import c from './index.scss'
 
 const imgList = [
   require('./item-1.png'),
+  require('./item-1-2.png'),
   require('./item-2.png'),
   require('./item-3.png'),
   require('./item-4.png'),

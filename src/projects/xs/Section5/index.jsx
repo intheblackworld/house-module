@@ -8,7 +8,7 @@ import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const Container = ({
-  show, leftImg, title, subTitle, desc, bg = false, smallImg = true,
+  show, leftImg, title, subTitle, bg = false, smallImg = true, top, name,
 }) => {
   const containerClass = withTrans('container', c, show)
   return isMobile ? (
@@ -17,9 +17,33 @@ const Container = ({
         <div className={c.text}>
           <h3 className={c.title}>{title}</h3>
           <h3 className={c.subTitle}>{subTitle}</h3>
-          <p className={c.desc}>{desc}</p>
+          {top ? (
+            <p className={c.desc}>
+              安穩，是建築不可或缺的幸福。
+              <br />
+              【新碩鼎和】採用國際地標指名使用的紐西蘭隔震墊，
+              <br />
+              20顆LRB隔震墊＋6支美國ITT阻尼器，
+              <br />
+              0.32G抗震，耐震達六級以上，可減少60%以上地震力，
+              <br />
+              大幅減少地震侵襲時的搖晃感，提升居住舒適度。
+              <br />
+            </p>
+          ) : (
+            <p className={c.desc}>
+              20支深度達52.5~55.5米矩形樁，貫入承載層5~8米，
+              <br />
+              地下室外圍連續壁厚度達90公分、深度達36米，
+              <br />
+              龐大技術成本，只為兌現對安全的承諾，
+              <br />
+              無論世界如何震盪，依然震守你的家！
+              <br />
+            </p>
+          )}
         </div>
-        {smallImg && <img src={require('./structure.png')} alt="" className={c.structure} />}
+        <img src={smallImg} alt="" className={name} />
       </div>
       <img src={leftImg} alt="" className={c.leftImg} />
     </div>
@@ -27,12 +51,36 @@ const Container = ({
     <div className={`${containerClass} ${bg && c.bg}`}>
       <img src={leftImg} alt="" className={c.leftImg} />
       <div className={c.content}>
-        <div className={c.text}>
+        <div className={`${c.text} ${top ? '' : c.sb}`}>
           <h3 className={c.title}>{title}</h3>
           <h3 className={c.subTitle}>{subTitle}</h3>
-          <p className={c.desc}>{desc}</p>
+          {top ? (
+            <p className={c.desc}>
+              安穩，是建築不可或缺的幸福。
+              <br />
+              【新碩鼎和】採用國際地標指名使用的紐西蘭隔震墊，
+              <br />
+              20顆LRB隔震墊＋6支美國ITT阻尼器，
+              <br />
+              0.32G抗震，耐震達六級以上，可減少60%以上地震力，
+              <br />
+              大幅減少地震侵襲時的搖晃感，提升居住舒適度。
+              <br />
+            </p>
+          ) : (
+            <p className={c.desc}>
+              20支深度達52.5~55.5米矩形樁，貫入承載層5~8米，
+              <br />
+              地下室外圍連續壁厚度達90公分、深度達36米，
+              <br />
+              龐大技術成本，只為兌現對安全的承諾，
+              <br />
+              無論世界如何震盪，依然震守你的家！
+              <br />
+            </p>
+          )}
         </div>
-        {smallImg && <img src={require('./structure.png')} alt="" className={c.structure} />}
+        <img src={smallImg} alt="" className={name} />
       </div>
     </div>
   )
@@ -43,20 +91,23 @@ const Section5 = () => (
     <Viewport isBottom={false} position="200px">
       <Container
         bg={false}
+        name={c.structure}
+        smallImg={require('./structure.png')}
         leftImg={require('./topImg.png')}
         title="為愛，對抗大地撼動"
         subTitle="國際隔震建築 耐震達6級"
-        desc="安穩，是建築不可或缺的幸福。【新碩鼎和】採用全球享譽盛名，獲多座國際地標指名採用的紐西蘭隔震墊。以20顆LRB隔震墊，有效降低60%以上的地震力，0.32G抗震，可抗至少六級強震，更大幅減少地震侵襲時的搖晃感，提升居住舒適度。"
+        top
       />
     </Viewport>
     <Viewport isBottom={false} position="200px">
       <Container
         bg
-        smallImg={false}
+        name={c.promise}
+        smallImg={require('./promise.png')}
         leftImg={require('./downImg.png')}
         title="看不見的，更重要"
         subTitle="20支矩形基樁  深入承載層"
-        desc="整體結構基礎由20支矩形樁構成，深度達52.5~55.5米，貫入承載層5~8米，與大樓近乎1:1的高度比，緊抓地表，並搭配深度達36米地下室外圍連續壁，作一完全穩固結合。龐大技術成本，只為兌現對安全的承諾，無論世界如何震盪，依然震守你的家！"
+        top={false}
       />
     </Viewport>
   </div>

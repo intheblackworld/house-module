@@ -11,7 +11,7 @@ $border: #932c59;
 }
 
 .container {
-  width: 932px;
+  width: 1024px;
   margin: 0px auto;
 }
 
@@ -31,19 +31,21 @@ $border: #932c59;
   > div {
     width: 33.3%;
     h3 {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 20px;
       color: $title;
     }
 
     p {
-      font-size: 12px;
+      font-size: 14px;
+      line-height: 2;
       color: $desc;
     }
   }
 
   .contactInfo {
-    a, p {
+    a,
+    p {
       display: block;
       height: 40px;
       line-height: 40px;
@@ -64,12 +66,18 @@ $border: #932c59;
 
   .socialInfo {
     padding-left: 80px;
+    img {
+      width: 100%;
+    }
   }
 }
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    width: 980px;
+  }
 }
 
 /* 手機尺寸 */
@@ -82,7 +90,8 @@ $border: #932c59;
       width: 100%;
       margin-bottom: 30px;
 
-      h3, p {
+      h3,
+      p {
         text-align: center;
       }
     }

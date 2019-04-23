@@ -1,4 +1,4 @@
-$navigationPCHeight: 159px;
+$navigationPCHeight: 145px;
 $navigationTabletHeight: 129px;
 $navigationMobileHeight: 45px;
 $navigationBg: #932c59; 
@@ -36,9 +36,15 @@ $logoMobileWidth: 101px;
     padding: 0 20px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &:nth-child(1) {
+      cursor: initial;
       border-left: 1px solid #fff;
+
+      a {
+        cursor: initial !important;
+      }
     }
 
     &:nth-last-child(1) {
@@ -48,6 +54,10 @@ $logoMobileWidth: 101px;
     a {
       color: #fff;
       font-size: 16px;
+
+      div {
+        font-size: 12px;
+      }
 
       img {
         margin-right: 10px;
@@ -64,9 +74,9 @@ $logoMobileWidth: 101px;
 
   &.hasContactNav {
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
     .logo {
-      top: -95px;
+      top: -85px;
     }
   }
 
@@ -152,7 +162,7 @@ $logoMobileWidth: 101px;
     background: #9d8d8d;
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     bottom: 0;
     transition: all .3s;
@@ -178,6 +188,11 @@ $logoMobileWidth: 101px;
         img {
           display: block;
           margin: 0 auto;
+        }
+
+        .marginB {
+          margin-bottom: 6px;
+          margin-top: 5px;      
         }
 
         span {
