@@ -161,19 +161,19 @@ const GhostOrder = ({ show, noTitle }) => {
         <div className={css.group}>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="name" placeholder="" />
+              <input id="name" placeholder="" required />
               <label>姓名</label> {/* eslint-disable-line */}
             </Form.Field>
           </div>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="phone" placeholder="" />
+              <input id="phone" placeholder="" required />
               <label>聯絡電話</label> {/* eslint-disable-line */}
             </Form.Field>
           </div>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="email" placeholder="" />
+              <input id="email" placeholder="" required />
               <label>email</label> {/* eslint-disable-line */}
             </Form.Field>
           </div>
