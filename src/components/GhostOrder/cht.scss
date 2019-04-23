@@ -73,10 +73,14 @@
   width: 162px;
   height: 35px;
   border-radius: 21.6px !important;
-  background-color: #edd191 !important;
+  background-color: #999 !important;
   color: #2f525a !important;
   margin: 0 auto !important;
   display: block !important;
+
+  &.enable {
+    background-color: #edd191 !important;
+  }
 }
 
 :global {

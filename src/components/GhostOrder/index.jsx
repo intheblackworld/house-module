@@ -64,7 +64,10 @@ const GhostOrder = ({ show, noTitle }) => {
   const submitForm = () => {
     if (isLoading) return
     setLoading(true)
-    if (!isCheck) return
+    if (!isCheck) {
+      setLoading(false)
+      return
+    }
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value
@@ -72,6 +75,7 @@ const GhostOrder = ({ show, noTitle }) => {
       || !city
       || !area
     ) {
+      setLoading(false)
       triggerAlert(true)
       return
     }
