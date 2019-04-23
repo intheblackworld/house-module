@@ -46,11 +46,9 @@ const Layout = () => (
         <Section3 />
       </Element>
     ) : (
-      <FullScreen needCutHeader>
-        <Element id="point3">
-          <Section3 />
-        </Element>
-      </FullScreen>
+      <Element id="point3">
+        <Section3 />
+      </Element>
     )}
     {isMobile ? (
       <Element id="point4">

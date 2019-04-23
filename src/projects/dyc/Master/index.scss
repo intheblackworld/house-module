@@ -19,8 +19,8 @@
 }
 
 .title {
-  width: 92px;
-  height: auto;
+  width: auto;
+  height: 70vh;
   position: absolute;
   z-index: 3;
   left: 0;
@@ -150,7 +150,7 @@
 
   .title {
     width: auto;
-    height: 60vh;
+    height: 55vh;
     transform: translateY(-40%);
 
     .sub {
@@ -209,7 +209,7 @@
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-  .title {
-    width: 80px;
-  }
+  // .title {
+  //   width: 80px;
+  // }
 }

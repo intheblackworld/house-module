@@ -2,13 +2,13 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 80px);
-  min-height: calc(100vh - 80px);
+  // height: calc(100vh - 80px);
+  // min-height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
   background-image: url('./bg.png');
   background-color: #d4c9b8;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
