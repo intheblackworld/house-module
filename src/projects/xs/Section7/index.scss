@@ -111,6 +111,14 @@
   .carousel {
     width: 100vw;
     margin: 0 auto;
+
+    .slide {
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+    }
   }
 }
 

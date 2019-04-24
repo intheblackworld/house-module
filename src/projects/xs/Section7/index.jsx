@@ -51,15 +51,19 @@ const Section6 = ({ show }) => {
           <p>新碩建設精耕於營造、建設與防震技術領域之專業，</p>
           <p>提供全方位建築防震規劃與檢修能力。</p>
         </div>
-        <h3 className={c.specialTitle}>
-          - 隔制震業績 -
-        </h3>
+        <h3 className={c.specialTitle}>- 隔制震業績 -</h3>
       </div>
       {isMobile ? (
         <div className={c.carousel}>
           <Carousel slidesToShow={1} fade={false} dots>
             {list.map(item => (
-              <img src={item.src} alt="" className={c.slide} key={item.src} />
+              <div key={item.src}>
+                <img src={item.src} alt="" className={c.slide} />
+                <p>{item.p1}</p>
+                <p>{item.p2}</p>
+                <p>{item.p3}</p>
+                <p>{item.p4}</p>
+              </div>
             ))}
           </Carousel>
         </div>

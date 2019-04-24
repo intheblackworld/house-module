@@ -1,6 +1,6 @@
 import { withTrans } from 'utils'
 // import ViewPort from 'components/ViewPort'
-// import { isMobile } from '../../../utils'
+import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const Master = ({ show }) => {
@@ -11,7 +11,12 @@ const Master = ({ show }) => {
     <div className={`${bgClass} masterBg`}>
       <div className={c.container}>
         <img src={require('./title1.png')} alt="" className={c.title1} />
-        <img src={require('./title2.png')} alt="" className={c.title2} />
+        {isMobile ? (
+          <img src={require('./title-2-m.png')} alt="" className={c.title2m} />
+        ) : (
+          <img src={require('./title2.png')} alt="" className={c.title2} />
+        )}
+
         <img src={require('./title3.png')} alt="" className={c.title3} />
         <img src={require('./house.png')} alt="" className={c.house} />
       </div>

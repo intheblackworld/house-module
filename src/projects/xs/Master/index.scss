@@ -11,7 +11,7 @@
       @include animate(fadeIn, .5s, 0s);
     }
 
-    .title2 {
+    .title2, .title2m {
       @include animate(fadeIn, .5s, .2s);
     }
 
@@ -25,7 +25,7 @@
   }
 
   &.hide {
-    .title1, .title2, .title3, .house {
+    .title1, .title2, .title2m, .title3, .house {
       @include animate(fadeOut, .5s, 0s);
     }  
   }
@@ -35,7 +35,7 @@
     height: calc(100vw * 0.5);
   }
 
-  .title1, .title2, .title3, .house {
+  .title1, .title2, .title2m, .title3, .house {
     position: absolute;
     opacity: 0;
   }
@@ -130,6 +130,12 @@
     .title2 {
       width: 90px;
       bottom: 40px;
+      left: 20px;
+    }
+
+    .title2m {
+      width: 90px;
+      bottom: 60px;
       left: 20px;
     }
   
