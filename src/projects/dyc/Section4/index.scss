@@ -122,8 +122,7 @@
   .bg {
     background-image: url('./mbg.png');
     width: 100vw;
-    min-height: 1550px !important;
-    height: 1550px !important;
+    height: calc(100vw * 3.55);
     background-size: cover;
   }
 

@@ -123,7 +123,7 @@
 /* 本人知悉並同意個茲告知事項聲明內容 checkbox 樣式 */
 .checkbox {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 30px;
   // opacity: 0;
   // &.show {
   //   @include animate(fadeInUp, 0.8s, 0.6s);
@@ -183,6 +183,7 @@
 
 .orderTitle {
   text-align: center;
+  margin-top: 40px;
   margin-bottom: 40px;
 
   // & {
@@ -291,7 +292,7 @@
   }
 
   .control {
-    margin-bottom: 12px !important;
+    margin-bottom: 10px !important;
     label {
       width: 30% !important;
       color: #2d436e !important;
@@ -334,6 +335,7 @@
 
   .submit {
     width: 100% !important;
+    height: 40px !important;
     margin-top: 10px !important;
     font-size: 16px !important;
   }

@@ -1,10 +1,10 @@
-@import "../../../assets/animate.scss";
+@import '../../../assets/animate.scss';
 
 .bg {
   width: 100vw;
   background-size: cover;
   background-position: center;
-  background-image: url("./bg.png");
+  background-image: url('./bg.png');
   background-attachment: fixed;
   position: relative;
   display: flex;
@@ -188,6 +188,13 @@
     align-items: center;
     justify-content: space-between;
 
+    > span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .item {
       flex: 1;
       margin: 20px;
@@ -257,7 +264,7 @@
       }
     }
   }
-  
+
   .addon {
     width: 90%;
   }
@@ -267,7 +274,7 @@
 @media only screen and (max-width: 767px) {
   .bg {
     height: 100%;
-    background-image: url("./bg.png");
+    background-image: url('./bg.png');
     background-size: contain;
   }
 
@@ -331,22 +338,19 @@
 
     .addonContent {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-  
+      display: block;
+
       .item {
-        width: 100%;
-        flex: 1;
-        margin: 20px;
+        width: 234px;
+        margin: 0 auto;
       }
-  
+
       img {
         width: 200px;
+        margin: 0 auto;
         margin-bottom: 20px;
       }
-  
+
       p {
         font-size: 14px;
         color: #333;
