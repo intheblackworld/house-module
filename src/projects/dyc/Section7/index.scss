@@ -2,7 +2,6 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
   background-image: url("./bg.png");
@@ -78,10 +77,10 @@
 
 .container {
   width: 1150px;
-  height: 55%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 400px;
   // &.show {
   //   .item {
   //     @for $i from 1 through 4 {

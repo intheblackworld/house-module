@@ -2,7 +2,6 @@ import { Fragment } from 'react'
 import { withTrans } from 'utils'
 import ViewPort from 'components/ViewPort'
 import Carousel from 'components/Carousel'
-import FullScreen from 'layouts/FullScreen'
 import { isMobile } from '../../../utils'
 import c from './index.scss'
 
@@ -191,16 +190,14 @@ const Container = ({ show }) => {
 }
 const Section7 = () => (
   <Fragment>
-    <FullScreen needCutHeader>
-      <div className={c.bg}>
-        <ViewPort isBottom={false}>
-          <Top />
-        </ViewPort>
-        <ViewPort isBottom={false}>
-          <Container />
-        </ViewPort>
-      </div>
-    </FullScreen>
+    <div className={c.bg}>
+      <ViewPort isBottom={false}>
+        <Top />
+      </ViewPort>
+      <ViewPort isBottom={false}>
+        <Container />
+      </ViewPort>
+    </div>
     <Second />
   </Fragment>
 )

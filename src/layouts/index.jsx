@@ -81,11 +81,9 @@ const Layout = () => (
         <Section8 />
       </Element>
     ) : (
-      <FullScreen needCutHeader>
-        <Element id="point8">
-          <Section8 />
-        </Element>
-      </FullScreen>
+      <Element id="point8">
+        <Section8 />
+      </Element>
     )}
     <ContactSection />
     {/* <Section>

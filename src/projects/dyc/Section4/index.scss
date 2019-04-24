@@ -157,5 +157,20 @@
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .content {
+    top: 23%;
+    transform: translate(-35%, -23%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    .title {
+      font-size: 22px;
+    }
+
+    .desc {
+      font-size: 14px;
+    }
+  }
 }
