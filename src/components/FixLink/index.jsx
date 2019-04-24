@@ -1,9 +1,10 @@
+import { Link } from 'react-scroll'
 import c from './index.scss'
 
 const FixLink = () => (
-  <a className={c.fixLink} href="https://lbs.h35.tw/" target="_blank" rel="noopener noreferrer">
+  <Link to="contact" spy smooth duration={500} offset={-80} key="contact" className={c.fixLink}>
     <img src={require('./icon.png')} alt="" />
-  </a>
+  </Link>
 )
 
 export default FixLink

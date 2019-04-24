@@ -3,7 +3,7 @@ import { Element } from 'react-scroll'
 import Mask from 'components/AstrictMask'
 // import Order from 'components/Order'
 import ViewPort from 'components/ViewPort'
-// import FixLink from 'components/FixLink'
+import FixLink from 'components/FixLink'
 import FullScreen from './FullScreen'
 import ContactSection from './ContactSection'
 import { isMobile } from '../utils'
@@ -24,7 +24,7 @@ const Section8 = lazy(() => import('projects/dyc/Section8'))
 const Layout = () => (
   <React.Fragment>
     <Mask />
-    {/* <FixLink /> */}
+    <FixLink />
     <FullScreen needCutHeader={false}>
       <Element id="master">
         <ViewPort isBottom={false}>
@@ -85,7 +85,9 @@ const Layout = () => (
         <Section8 />
       </Element>
     )}
-    <ContactSection />
+    <Element id="contact">
+      <ContactSection />
+    </Element>
     {/* <Section>
     <Element id="section5">
       <Section5 />
