@@ -90,12 +90,18 @@ $border: #932c59;
       width: 100%;
       margin-bottom: 30px;
 
-      h3,
-      p {
+      h3{
         text-align: center;
       }
-    }
 
+      p{
+        text-align: left;
+      }
+    }
+    .houseInfo {
+      width: 80%;
+      margin: 0 auto 30px;
+    }
     .socialInfo {
       padding-left: 0px;
       > div {
