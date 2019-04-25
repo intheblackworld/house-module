@@ -31,7 +31,7 @@ const Section6 = ({ show }) => {
           <p>西區最閃耀的生活圈，讓每天都能隨意精彩。</p>
         </div>
         <div className={c.carousel}>
-          <Carousel autoplaySpeed={isMobile? 5000 : 3000} slidesToShow={1} fade={false} dots>
+          <Carousel autoplaySpeed={isMobile ? 5000 : 3000} slidesToShow={1} fade={false} dots>
             {imgList.map(img => (
               <img src={img} alt="" className={c.slide} key={img} />
             ))}
