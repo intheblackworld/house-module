@@ -145,6 +145,22 @@ const Order = ({ show, noTitle }) => {
     [css.hide]: !show,
   })
 
+  // 嘗試解決客戶反應問題：點擊姓名輸入框，鍵盤跳出後網址列遮擋輸入框
+  useEffect(() => {
+    const handleResize = () => {
+      if (document.activeElement.tagName === 'INPUT') {
+        // 延迟出现是因为有些 Android 手机键盘出现的比较慢
+        window.setTimeout(() => {
+          document.activeElement.scrollIntoViewIfNeeded();
+        }, 100);
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  })
+
   return (
     <div className={css.orderContainer}>
       {!noTitle && (
