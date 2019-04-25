@@ -44,9 +44,9 @@ const Container = ({
             </p>
           )}
         </div>
-        <img src={smallImg} alt="" className={name} />
       </div>
       <img src={leftImg} alt="" className={c.leftImg} />
+      <img src={smallImg} alt="" className={name} />
     </div>
   ) : (
     <div className={`${containerClass} ${bg && c.bg}`}>
