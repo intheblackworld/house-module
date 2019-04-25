@@ -70,7 +70,7 @@ const Section6 = ({ show }) => {
       </div>
       {isMobile ? (
         <div className={c.carousel}>
-          <Carousel slidesToShow={1} fade={false} dots>
+          <Carousel autoplaySpeed={5000} slidesToShow={1} fade={false} dots>
             {list.map(item => (
               <div key={item.src}>
                 <img src={item.src} alt="" className={c.slide} />

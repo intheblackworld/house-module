@@ -5,7 +5,7 @@ import Carousel from 'components/Carousel'
 // import SlidePicker from 'components/SliderPicker'
 // import Viewport from 'components/ViewPort'
 // import { PreContainer, DescContainer } from 'components/cht'
-// import { isMobile } from '../../../utils'
+import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const imgList = [
@@ -31,7 +31,7 @@ const Section6 = ({ show }) => {
           <p>西區最閃耀的生活圈，讓每天都能隨意精彩。</p>
         </div>
         <div className={c.carousel}>
-          <Carousel slidesToShow={1} fade={false} dots>
+          <Carousel autoplaySpeed={isMobile? 5000 : 3000} slidesToShow={1} fade={false} dots>
             {imgList.map(img => (
               <img src={img} alt="" className={c.slide} key={img} />
             ))}

@@ -46,7 +46,7 @@ const Section3 = ({ show }) => {
             </p>
           </div>
           <div className={c.carousel}>
-            <Carousel slidesToShow={1} fade={false} dots arrows>
+            <Carousel autoplaySpeed={5000} slidesToShow={1} fade={false} dots arrows>
               {list.map(item => (
                 <img src={item.src} alt="" key={item.src} />
               ))}
