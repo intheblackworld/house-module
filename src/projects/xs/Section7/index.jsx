@@ -24,6 +24,20 @@ const list = [
     p4: '抗震達六級',
   },
   {
+    src: require('./item-5.png'),
+    p1: '大衛營｜',
+    p2: '隔震工程規劃',
+    p3: '全國第一棟隔震豪宅',
+    p4: '抗震達六級',
+  },
+  {
+    src: require('./item-6.png'),
+    p1: '台北南山廣場｜',
+    p2: 'TMD減震工程',
+    p3: '兩組250頓調諧質量阻尼器',
+    p4: '',
+  },
+  {
     src: require('./item-3.png'),
     p1: '故宮博物院｜',
     p2: '耐震提升工程',
@@ -37,6 +51,7 @@ const list = [
     p3: '全球規模最大之醫療防震建築',
     p4: '抗震達七級',
   },
+
 ]
 
 const Section6 = ({ show }) => {
@@ -46,10 +61,10 @@ const Section6 = ({ show }) => {
       <div className={containerClass}>
         <div className={c.title}>
           <h3>防震建築巨擘－新碩建設</h3>
-          <p>遠碩團隊－新碩建設是國內少數具有深厚防震工程背景的公司，</p>
-          <p>不同於其他防震建築仰賴設備廠商之維護與設計，</p>
-          <p>新碩建設精耕於營造、建設與防震技術領域之專業，</p>
-          <p>提供全方位建築防震規劃與檢修能力。</p>
+          <p>新碩建設，國內罕具深厚防震工程背景的公司，</p>
+          <p>無需仰賴隔制震設備廠商之設計與維護，</p>
+          <p>從營造、建設到防震工程規劃皆親力親為，</p>
+          <p>提供全方位品質承諾，及隔震檢修服務。</p>
         </div>
         <h3 className={c.specialTitle}>- 隔制震業績 -</h3>
       </div>
@@ -63,6 +78,8 @@ const Section6 = ({ show }) => {
                 <p>{item.p2}</p>
                 <p>{item.p3}</p>
                 <p>{item.p4}</p>
+                <p>{item.p5}</p>
+                <p>{item.p6}</p>
               </div>
             ))}
           </Carousel>
@@ -76,6 +93,8 @@ const Section6 = ({ show }) => {
               <p>{item.p2}</p>
               <p>{item.p3}</p>
               <p>{item.p4}</p>
+              <p>{item.p5}</p>
+              <p>{item.p6}</p>
             </div>
           ))}
         </div>

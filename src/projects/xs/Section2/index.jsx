@@ -8,7 +8,7 @@ const itemList = [
   {
     src: require('./icon-1.png'),
     title: '安全，超乎期待',
-    desc: '20組紐西蘭LRB鉛心橡膠隔震墊＋長衝程制震阻尼器，抗震係數0.32G，可抗至少六級強震。',
+    desc: '20組紐西蘭LRB鉛心橡膠隔震墊＋6支長衝程阻尼器，抗震係數0.32G，可抗至少六級強震。',
   },
   {
     src: require('./icon-2.png'),
