@@ -102,8 +102,8 @@
     .promise {
       position: relative;
       width: 210px;
-      transform: translateX(55px);
-      margin-bottom: 40px;
+      display: block;
+      margin: 0 auto 40px;
       bottom: 0;
     }
     .structure {
