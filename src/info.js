@@ -1,6 +1,6 @@
 export default {
   address: '108台北市萬華區長沙街二段148號',
-  locations: { lat: 25.040423, lng: 121.4993403 },
+  locations: { lat: 25.0405227, lng: 121.5013042 },
   phone: '02-2370-8588',
   fbLink: 'https://www.facebook.com/GreatManor/?modal=admin_todo_tour',
   googleLink: 'https://goo.gl/maps/tbiucSHRpJ8Poajr7',
