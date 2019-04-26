@@ -14,7 +14,7 @@
     mysql_query("SET NAMES UTF8");
     mysql_select_db($db_name, $con);
 
-    $query = "SELECT tomail FROM susers WHERE email = cht";
+    $query = "SELECT tomail FROM susers WHERE email = 'cht'";
     $result = mysql_query($query, $con);
     $row = mysql_fetch_row($result);
 
