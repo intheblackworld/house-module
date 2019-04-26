@@ -44,7 +44,7 @@ const Section4 = ({ show }) => {
       </div>
       {isMobile ? (
         <div className={c.carousel}>
-          <Carousel slidesToShow={1} fade={false} dots>
+          <Carousel autoplaySpeed={5000} slidesToShow={1} fade={false} dots>
             {list.map(item => (
               <div className={c.item} key={item.src}>
                 <img src={item.src} alt="" className={c.itemImg} />
