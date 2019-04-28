@@ -12,6 +12,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import PolicyDialog from 'components/PolicyDialog'
 
 import info from '../../info'
+import { isMobile } from '../../utils'
 
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
@@ -147,7 +148,10 @@ const Order = ({ show, noTitle }) => {
 
   // 嘗試解決客戶反應問題：點擊姓名輸入框，鍵盤跳出後表單不間或被切掉
   useLayoutEffect(() => {
-    document.body.style.height = window.screen.availHeight +'px';
+    console.log('isMobile', isMobile)
+    if (isMobile) {
+      document.body.style.height = `${window.screen.availHeight}px`;
+    }
   })
 
   useEffect(() => {
