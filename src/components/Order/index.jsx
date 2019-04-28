@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import {
   Form, Checkbox, Button, Select, TextArea,
 } from 'semantic-ui-react'
@@ -145,12 +145,17 @@ const Order = ({ show, noTitle }) => {
     [css.hide]: !show,
   })
 
-  // 嘗試解決客戶反應問題：點擊姓名輸入框，鍵盤跳出後網址列遮擋輸入框
+  // 嘗試解決客戶反應問題：點擊姓名輸入框，鍵盤跳出後表單不間或被切掉
+  useLayoutEffect(() => {
+    document.body.style.height = window.screen.availHeight +'px';
+  })
+
   useEffect(() => {
     const handleResize = () => {
       if (document.activeElement.tagName === 'INPUT') {
         // 延迟出现是因为有些 Android 手机键盘出现的比较慢
         window.setTimeout(() => {
+          document.activeElement.scrollIntoView(true);
           document.activeElement.scrollIntoViewIfNeeded();
         }, 100);
       }
