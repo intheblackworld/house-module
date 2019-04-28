@@ -147,8 +147,8 @@ const Order = ({ show, noTitle }) => {
   })
 
   // 嘗試解決客戶反應問題：點擊姓名輸入框，鍵盤跳出後表單不間或被切掉
+  // start
   useLayoutEffect(() => {
-    console.log('isMobile', isMobile)
     if (isMobile) {
       document.body.style.height = `${window.screen.availHeight}px`;
     }
@@ -159,7 +159,6 @@ const Order = ({ show, noTitle }) => {
       if (document.activeElement.tagName === 'INPUT') {
         // 延迟出现是因为有些 Android 手机键盘出现的比较慢
         window.setTimeout(() => {
-          document.activeElement.scrollIntoView(true);
           document.activeElement.scrollIntoViewIfNeeded();
         }, 100);
       }
@@ -169,6 +168,31 @@ const Order = ({ show, noTitle }) => {
       window.removeEventListener('resize', handleResize)
     }
   })
+
+  useEffect(() => {
+    const handleClick = () => {
+      window.setTimeout(() => {
+        document.getElementById('city').scrollIntoViewIfNeeded();
+      }, 100);
+    }
+    document.getElementById('city').addEventListener('click', handleClick)
+    return () => {
+      document.getElementById('city').removeEventListener('click', handleClick)
+    }
+  })
+
+  useEffect(() => {
+    const handleClick = () => {
+      window.setTimeout(() => {
+        document.getElementById('area').scrollIntoViewIfNeeded();
+      }, 100);
+    }
+    document.getElementById('area').addEventListener('click', handleClick)
+    return () => {
+      document.getElementById('area').removeEventListener('click', handleClick)
+    }
+  })
+  // end
 
   return (
     <div className={css.orderContainer}>
