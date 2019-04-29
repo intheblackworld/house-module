@@ -106,7 +106,7 @@ export const AccordionContainer = ({ show, list }) => {
           >
             <div className={c.head}>
               <div className={`${c.label} flex-c`}>{item.label}</div>
-              <div>
+              <div className={c.titleAndDesc}>
                 <div className={c.title}>{item.title}</div>
                 <div className={c.desc}>{item.desc}</div>
               </div>
