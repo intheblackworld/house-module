@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import React, {
+  useState, useEffect, useLayoutEffect, useRef,
+} from 'react'
 import {
-  Form, Checkbox, Button, Select, TextArea,
+  Form, Checkbox, Button, Select, TextArea, Ref,
 } from 'semantic-ui-react'
 
 import cx from 'classnames'
@@ -146,8 +148,11 @@ const Order = ({ show, noTitle }) => {
     [css.hide]: !show,
   })
 
-  // 嘗試解決客戶反應問題：點擊姓名輸入框，鍵盤跳出後表單不間或被切掉
+  // 嘗試解決客戶反應問題：點擊輸入框或選項框，鍵盤跳出後表單不見，畫面往上跳或被切掉
   // start
+  const selectCityRef = useRef()
+  const selectAreaRef = useRef()
+
   useLayoutEffect(() => {
     if (isMobile) {
       document.body.style.height = `${window.screen.availHeight}px`;
@@ -172,24 +177,24 @@ const Order = ({ show, noTitle }) => {
   useEffect(() => {
     const handleClick = () => {
       window.setTimeout(() => {
-        document.getElementById('city').scrollIntoViewIfNeeded();
+        selectCityRef.current.scrollIntoViewIfNeeded();
       }, 100);
     }
-    document.getElementById('city').addEventListener('click', handleClick)
+    selectCityRef.current.addEventListener('click', handleClick)
     return () => {
-      document.getElementById('city').removeEventListener('click', handleClick)
+      selectCityRef.current.removeEventListener('click', handleClick)
     }
   })
 
   useEffect(() => {
     const handleClick = () => {
       window.setTimeout(() => {
-        document.getElementById('area').scrollIntoViewIfNeeded();
+        selectAreaRef.current.scrollIntoViewIfNeeded();
       }, 100);
     }
-    document.getElementById('area').addEventListener('click', handleClick)
+    selectAreaRef.current.addEventListener('click', handleClick)
     return () => {
-      document.getElementById('area').removeEventListener('click', handleClick)
+      selectAreaRef.current.removeEventListener('click', handleClick)
     }
   })
   // end
@@ -225,25 +230,29 @@ const Order = ({ show, noTitle }) => {
           <div className={css.control}>
             <label>居住城市</label> {/* eslint-disable-line */}
             <Form.Field className={css.field}>
-              <Select
-                id="city"
-                className={css.select}
-                placeholder="請選擇"
-                options={cityList}
-                onChange={(e, { value }) => setCity(value)}
-              />
+              <Ref innerRef={selectCityRef}>
+                <Select
+                  id="city"
+                  className={css.select}
+                  placeholder="請選擇"
+                  options={cityList}
+                  onChange={(e, { value }) => setCity(value)}
+                />
+              </Ref>
             </Form.Field>
           </div>
           <div className={css.control}>
             <label>居住地區</label> {/* eslint-disable-line */}
             <Form.Field className={css.field}>
-              <Select
-                id="area"
-                className={css.select}
-                placeholder="請選擇"
-                options={areas}
-                onChange={(e, { value }) => setArea(value)}
-              />
+              <Ref innerRef={selectAreaRef}>
+                <Select
+                  id="area"
+                  className={css.select}
+                  placeholder="請選擇"
+                  options={areas}
+                  onChange={(e, { value }) => setArea(value)}
+                />
+              </Ref>
             </Form.Field>
           </div>
         </div>
