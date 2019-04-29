@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const AsyncChunkNames = require('webpack-async-chunk-names-plugin')
 const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
+const imageminPngquant = require('imagemin-pngquant');
 
 module.exports = {
   entry: ['@babel/polyfill', './src/main.jsx'],
@@ -100,11 +101,25 @@ module.exports = {
 
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader: require.resolve('url-loader'),
-        options: {
-          limit: 10000,
-          name: 'static/media/[name].[hash:8].[ext]',
-        },
+        use: [
+          {
+            loader: require.resolve('url-loader'),
+            options: {
+              limit: 1000,
+              name: 'static/media/[name].[hash:8].[ext]',
+            },
+          },
+          {
+            loader: "img-loader",
+            options: {
+              plugins: [
+                imageminPngquant({
+                  quality: [0.7, 0.8] // the quality of zip
+                })
+              ]
+            }
+          },
+        ],
       },
       {
         test: [/\.eot$/, /\.ttf$/, /\.svg$/, /\.woff$/, /\.woff2$/, /\.otf$/],
