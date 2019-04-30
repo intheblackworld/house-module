@@ -155,7 +155,7 @@ const Order = ({ show, noTitle }) => {
 
   useLayoutEffect(() => {
     if (isMobile) {
-      document.body.style.height = `${window.screen.availHeight}px`;
+      document.getElementById('orderContainer').style.height = `${window.screen.availHeight}px`;
     }
   })
 
@@ -200,7 +200,7 @@ const Order = ({ show, noTitle }) => {
   // end
 
   return (
-    <div className={css.orderContainer}>
+    <div id="orderContainer" className={css.orderContainer}>
       {!noTitle && (
         <div className={titleClass}>
           <h3>預約賞屋</h3>
