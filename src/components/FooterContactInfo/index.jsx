@@ -62,7 +62,7 @@ const FooterContactInfo = ({
           </div>
           <div className={c.socialInfo}>
             <h3>地圖</h3>
-            <img src={require('./map.png')} alt="" className={c.map} />
+            <img src={require('./map.jpg')} alt="" className={c.map} />
           </div>
         </div>
       </div>

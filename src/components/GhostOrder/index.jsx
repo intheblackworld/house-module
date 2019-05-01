@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import {
   Form, Checkbox, Button, Select, TextArea,
 } from 'semantic-ui-react'
@@ -12,7 +12,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import PolicyDialog from 'components/PolicyDialog'
 
 import info from '../../info'
-
+import { isMobile } from '../../utils'
 import { cityList, renderAreaList } from './address'
 import css from './cht.scss'
 
@@ -147,6 +147,13 @@ const GhostOrder = ({ show, noTitle }) => {
   const checkboxClass = cx(css.checkbox, {
     [css.show]: show,
     [css.hide]: !show,
+  })
+
+  // 嘗試解決客戶反應問題：點擊輸入框或選項框，鍵盤跳出後表單不見，畫面往上跳或被切掉
+  useLayoutEffect(() => {
+    if (isMobile) {
+      document.getElementById('orderBg').style.height = `${window.screen.availHeight}px`;
+    }
   })
 
   return (
