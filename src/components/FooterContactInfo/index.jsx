@@ -50,9 +50,7 @@ const FooterContactInfo = ({
             <p>接待會館：{address}</p> */}
             <div className={c.fbBlock}>
               <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGreatManor%2F%3Fmodal%3Dadmin_todo_tour&height=170&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=318563575497575"
-                height="170"
-                width="240"
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGreatManor%2F%3Fmodal%3Dadmin_todo_tour&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=318563575497575"
                 scrolling="no"
                 frameBorder="0"
                 allow="encrypted-media"

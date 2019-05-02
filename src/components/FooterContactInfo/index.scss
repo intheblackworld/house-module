@@ -28,6 +28,11 @@ $border: #932c59;
   justify-content: space-between;
   flex-wrap: wrap;
 
+  iframe {
+    width: 100%;
+    display: block;
+  }
+
   > div {
     width: 33.3%;
     h3 {
