@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import {
   Form, Checkbox, Button, Select, TextArea,
 } from 'semantic-ui-react'
@@ -12,6 +12,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import PolicyDialog from 'components/PolicyDialog'
 
 import info from '../../sections/ContactSection/info'
+import { isMobile } from '../../utils'
 
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
@@ -100,7 +101,9 @@ const Order = ({ show, noTitle }) => {
     const sec = time.getSeconds()
     const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${info.caseName}
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${
+        info.caseName
+      }
       `,
       {
         method: 'GET',
@@ -143,6 +146,13 @@ const Order = ({ show, noTitle }) => {
   const checkboxClass = cx(css.checkbox, {
     [css.show]: show,
     [css.hide]: !show,
+  })
+
+  // 嘗試解決客戶反應問題：點擊輸入框或選項框，鍵盤跳出後表單不見，畫面往上跳或被切掉
+  useLayoutEffect(() => {
+    if (isMobile) {
+      document.getElementById('orderBg').style.height = `${window.screen.availHeight}px`
+    }
   })
 
   return (
