@@ -3,6 +3,7 @@ import Navigation from 'components/Navigation'
 import MobileNavigation from 'components/MobileNavigation'
 import SectionList from 'sections'
 import Footer from 'components/Footer'
+import { isMobile } from '../utils'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ export default class Home extends React.Component {
         <div ref={this.script} />
         <div ref={this.noscript} />
         <Navigation />
-        <MobileNavigation />
+        { isMobile && <MobileNavigation />}
         <SectionList />
         <Footer />
       </div>
