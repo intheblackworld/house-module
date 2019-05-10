@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { withTrans } from 'utils'
+import { withTrans, isMobile } from 'utils'
 import ViewPort from 'components/ViewPort'
 import Carousel from 'components/Carousel'
 import c from './index.scss'
@@ -12,12 +12,13 @@ const img1List = [
   require('./item-1-4.png'),
 ]
 
-const img2List = [require('./item-2-1.png'), require('./item-2-2.png'), require('./item-2-3.png')]
+const img2List = [require('./item-2-1.png'), require('./item-2-2.png'), require('./item-2-3.png'), require('./item-2-4.png'), require('./item-2-5.png')]
 
 const Item1 = ({ show }) => {
   const itemClass = withTrans('item', c, show)
   const [index, setIndex] = useState(0)
   const locations = ['新千歲空港', '頂埔捷運', '札幌巨蛋']
+
   return (
     <div className={itemClass}>
       <p className={c.label}>【岩田地崎建設株式会社】</p>
@@ -37,8 +38,8 @@ const Item1 = ({ show }) => {
         <div className={c.carousel}>
           <Carousel
             slidesToShow={1}
-            fade={false}
-            afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
+            fade={!!isMobile}
+            beforeChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
           >
             {img1List.map(url => (
               <img src={url} alt="" key={url} />
@@ -56,7 +57,7 @@ const Item1 = ({ show }) => {
 const Item2 = ({ show }) => {
   const itemClass = withTrans('item', c, show)
   const [index, setIndex] = useState(0)
-  const locations = ['德友極', '一巷青', '築跡']
+  const locations = ['德友極', '一巷青', '築跡', '德友臻美', '德友巨蛋']
   return (
     <div className={itemClass}>
       <p className={c.label}>【德友建設機構】</p>
@@ -75,8 +76,8 @@ const Item2 = ({ show }) => {
         <div className={c.carousel}>
           <Carousel
             slidesToShow={1}
-            fade={false}
-            afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
+            fade={!!isMobile}
+            beforeChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
           >
             {img2List.map(url => (
               <img src={url} alt="" key={url} />
