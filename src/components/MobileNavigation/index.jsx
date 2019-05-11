@@ -16,16 +16,6 @@ const MobileNavigation = () => {
         <img src={require('./phone.png')} alt="" className={c.navIcon} />
         <div className={c.label}>撥打電話</div>
       </a>
-
-      <a
-        className={c.navItem}
-        href="https://m.me/LSWG22508111"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={require('./chat.png')} alt="" className={c.navIcon} />
-        <div className={c.label}>FB諮詢</div>
-      </a>
       <Link
         className={c.navItem}
         to="section11"
@@ -38,6 +28,15 @@ const MobileNavigation = () => {
         <img src={require('./pen.png')} alt="" className={c.navIcon} />
         <div className={c.label}>預約賞屋</div>
       </Link>
+      <a
+        className={c.navItem}
+        href="https://m.me/LSWG22508111"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={require('./chat.png')} alt="" className={c.navIcon} />
+        <div className={c.label}>FB諮詢</div>
+      </a>
       <a className={c.navItem} href={googleLink} target="_blank" rel="noopener noreferrer">
         <img src={require('./map.png')} alt="" className={c.navIcon} />
         <div className={c.label}>地圖導航</div>

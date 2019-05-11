@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
   height: 100vh;
+  transition: all .3s;
   &.cutHeader {
     height: calc(100vh - #{$navigationPCHeight});
     margin-top: 0;
