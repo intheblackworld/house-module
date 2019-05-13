@@ -5,6 +5,12 @@ import c from './index.scss'
 
 const MobileNavigation = () => {
   const { phone, googleLink } = info
+  const redirectToPhoneThanks = (e) => {
+    e.preventDefault()
+    setTimeout(() => {
+      window.location.href = 'phoneThanks'
+    }, 1000)
+  }
   return (
     <div className={c.mobileNavigation}>
       <a
@@ -12,6 +18,7 @@ const MobileNavigation = () => {
         href={`tel:${phone.replace('-', '')}`}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={redirectToPhoneThanks}
       >
         <img src={require('./phone.png')} alt="" className={c.navIcon} />
         <div className={c.label}>撥打電話</div>
