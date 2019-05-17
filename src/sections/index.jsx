@@ -61,7 +61,7 @@ const SectionList = () => {
           </FullScreen>
         )}
       </Element>
-      <Section>
+      <Section style={{ height: '1400px' }}>
         <Element id="section5">
           <Section5 />
         </Element>

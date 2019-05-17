@@ -2,14 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap'
-
 import WJTimeline from 'components/WJTimeline'
+import { isMobile } from '../../utils'
+
 
 const HorizontalTimelineStyled = styled.div`
   overflow: hidden;
   #pinContainer {
     width: 100vw;
-    height: calc(100vh - 200px);
+    height: ${isMobile ? '500px' : 'calc(100vh - 200px)'};
     display: flex;
     align-items: center;
     overflow: hidden;

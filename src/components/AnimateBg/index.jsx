@@ -6,7 +6,7 @@ const AnimateBg = () => (
     id="bg-wrap"
     style={{
       width: '100vw',
-      height: '100vh',
+      // height: '100vh',
       overflow: 'hidden',
       position: 'absolute',
       zIndex: 0,
