@@ -5,7 +5,8 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: url('./bg.png')
+  background-image: url('./bg.png');
+  overflow: hidden;
 }
 
 .leaf {
@@ -13,60 +14,27 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: url('./leaf.png')
+  background-image: url('./leaf.png');
+  overflow: hidden;
 }
 
 .title {
-  width: 110px;
+  width: auto;
   height: 70vh;
   position: absolute;
+  z-index: 3;
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: space-around;
-  opacity: 0;
 
   &.show {
-    @include animate(fadeIn, .8s, 0s);
+    @include animate(fadeIn, 0.8s, 0s);
   }
 
   &.hide {
-    @include animate(fadeOut, .8s, .3s);   
-  }
-
-
-  .main {
-    color: #000;
-    writing-mode: vertical-rl;
-
-    h3 {
-      font-size: 32px;
-    }
-  }
-
-  .color {
-    color: #fff;
-    background-color: #a89054;
-    font-size: 24px;
-    width: 35px;
-    letter-spacing: 2px;
-    writing-mode: vertical-rl;
-    text-align: center;
-
-    h3 {
-      line-height: 1.8;
-      padding: 8px 0px;
-    }
-  }
-
-  .sub {
-    font-size: 18px;
-    color: #323232;
-    writing-mode: vertical-rl;
-    margin: 10px auto;
+    @include animate(fadeOut, 0.8s, 0.3s);
   }
 }
 
@@ -125,6 +93,25 @@
   }
 }
 
+.topLeaf,
+.downLeaf {
+  display: none;
+}
+.downFlower1,
+.downFlower2,
+.topFlower {
+  display: none;
+  transform: scale(0) rotate(-60deg);
+  transition: all 1.5s;
+  &.show {
+    transform: scale(1) rotate(0deg);
+  }
+
+  &.hide {
+    transform: scale(0) rotate(-60deg);
+  }
+}
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -133,32 +120,39 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
-    // background-image: url('./mbg.png')
+    background-image: url('./mbg.png');
+    height: 110vh;
   }
 
   .leaf {
-    background-image: url('./mbg.png');
-    height: calc(100vh - 50px);
+    background-image: none;
+    height: 100vh;
+  }
+
+
+  .topLeaf,
+  .downLeaf {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+  }
+
+  .topLeaf {
+    top: 0;
+    left: 0;
+  }
+
+  .downLeaf {
+    bottom: calc(-30px - 10vh);
+    left: 0;
   }
 
   .title {
-    width: 85px;
-    opacity: 0;
-    .main {
-      h3 {
-        font-size: 30px;
-      }
-    }
-  
-    .color {
-      font-size: 18px;
-      width: 35px;
-  
-      h3 {
-        padding: 8px 0px;
-      }
-    }
-  
+    width: auto;
+    height: 55vh;
+    transform: translateY(-40%);
+
     .sub {
       font-size: 13px;
     }
@@ -179,8 +173,42 @@
   .rightLeaf2 {
     display: none;
   }
+
+  .downFlower1,
+  .downFlower2,
+  .topFlower {
+    display: block;
+    position: absolute;
+  }
+
+  .downFlower1 {
+    width: 120px;
+    height: auto;
+    bottom: calc(10px - 10vh);
+    left: 200px;
+  }
+
+  .downFlower2 {
+    width: 100px;
+    height: auto;
+    bottom: calc(0px - 10vh);
+    left: 70px;
+  }
+
+  .topFlower {
+    width: 80px;
+    height: auto;
+    top: 30px;
+    right: 160px;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
 @media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  // .title {
+  //   width: 80px;
+  // }
 }

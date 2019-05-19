@@ -2,7 +2,7 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 80px);
+  height: calc(100vw * 0.625);
   background-size: cover;
   background-position: center;
   background-image: url('./bg.png');
@@ -10,14 +10,10 @@
 }
 
 .leftTitle {
-  width: 102px;
+  width: 22%;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 17%;
-  font-size: 40px;
-  color: #000;
-  writing-mode: vertical-lr;
+  top: 0;
+  left: 0;
   opacity: 0;
 
   &.show {
@@ -29,11 +25,35 @@
   }
 }
 
+.rightDoor {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+
+  &.show {
+    @include animate(fadeIn, 1s, .5s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .6s, 0);
+  }
+}
+
+.table {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
 .content {
   position: absolute;
   width: 370px;
-  top: 50%;
-  transform: translate(-15%, -50%);
+  top: 38%;
+  transform: translate(-45%, -50%);
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -74,16 +94,26 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
-    height: calc(100vh - 60px);
+    // height: calc(100vh - 60px);
   }
 
   .leftTitle {
-    left: 13%;
+    left: 0%;
     font-size: 32px;
   }
 
   .content {
-    transform: translate(-7%, -50%);
+    top: 30%;
+    transform: translate(-20%, -50%);
+
+    .desc {
+      font-size: 14px;
+      margin-top: 25px;
+    }
+  }
+
+  .table {
+    display: none;
   }
 }
 
@@ -92,18 +122,17 @@
   .bg {
     background-image: url('./mbg.png');
     width: 100vw;
-    min-height: 950px !important;
-    height: 950px !important;
+    height: calc(100vw * 3.55);
     background-size: cover;
   }
 
   .leftTitle {
-    width: 75px;
-    position: absolute;
-    top: 20%;
-    transform: translateY(-50%);
-    left: 25%;
-    font-size: 32px;
+    display: none;
+  }
+
+  .table {
+    height: auto;
+    // display: none;
   }
 
   .content {
@@ -121,11 +150,26 @@
 
     .desc {
       width: 200px;
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .content {
+    top: 23%;
+    transform: translate(-35%, -23%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    .title {
+      font-size: 22px;
+    }
+
+    .desc {
+      font-size: 14px;
+    }
+  }
 }

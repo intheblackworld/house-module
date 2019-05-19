@@ -1,12 +1,12 @@
-import { Fragment } from 'react';
-import { withTrans } from 'utils';
-import ViewPort from 'components/ViewPort';
-import Carousel from 'components/Carousel';
-import { isMobile } from '../../../utils';
-import c from './index.scss';
+import { Fragment } from 'react'
+import { withTrans } from 'utils'
+import ViewPort from 'components/ViewPort'
+import Carousel from 'components/Carousel'
+import { isMobile } from '../../../utils'
+import c from './index.scss'
 
 const Top = ({ show }) => {
-  const topClass = withTrans('top', c, show);
+  const topClass = withTrans('top', c, show)
   return (
     <div className={topClass}>
       <h3 className={c.label}>【建築安全履歷】</h3>
@@ -15,17 +15,9 @@ const Top = ({ show }) => {
         <br />
         建築結構界的Apple
       </h3>
-      <p className={c.desc}>
-        台灣屬地震帶，地震頻傳使台灣建築結構備受考驗，
-        「德友藏」採用經國家地震實驗中心測試耐震效果顯著提升的Alfa Safe結構安全系統工法，
-        是土城首座以Alfa Safe柱中柱、系統柱及系統牆施作的建築結構，
-        抗震韌性可提升近1倍，除了鋼筋、樑、柱外，連管線的部份都有詳細紀錄，
-        透明公開，時間是建築最完美的見證。
-      </p>
-      <img src={require('./resume.png')} className={c.resume} alt="長虹天際的圖片" />
     </div>
-  );
-};
+  )
+}
 
 const List = () => (
   <Fragment>
@@ -86,10 +78,73 @@ const List = () => (
       </div>
     </div>
   </Fragment>
-);
+)
+
+const Second = ({ show }) => {
+  console.log(show)
+  return (
+    <div className={c.addon}>
+      <h3>時間是建築最完美的見證</h3>
+      <p className={c.desc}>
+        台灣屬地震帶，地震頻傳使台灣建築結構備受考驗，
+        「德友藏」採用經國家地震實驗中心測試耐震效果顯著提升的Alfa Safe結構安全系統工法，
+        是土城首座以Alfa Safe柱中柱、系統柱及系統牆施作的建築結構，
+        抗震韌性可提升近1倍，除了鋼筋、樑、柱外，連管線的部份都有詳細紀錄， 透明公開。
+      </p>
+      <div className={c.addonContent}>
+        {isMobile ? (
+          <Carousel
+            slidesToShow={1}
+            fade={false}
+            autoplay={false}
+            dots
+            arrows
+            // afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
+          >
+            <div className={c.item}>
+              <img src={require('./Alfa-17.png')} alt="" />
+              <p>【柱中柱系統示意圖 / 專利證號:M498780】</p>
+            </div>
+            <div className={c.item}>
+              <img src={require('./Alfa-18.png')} alt="" />
+              <p>【柱中柱系統示意圖 / 專利證號:M498780】</p>
+            </div>
+            <div className={c.item}>
+              <img src={require('./Alfa-19.png')} alt="" />
+              <p>【L型牆系統化鋼筋設計示意圖 / 專利證號:I570308】</p>
+            </div>
+            <div className={c.item}>
+              <img src={require('./Alfa-20.png')} alt="" />
+              <p>【T型牆系統化鋼筋設計示意圖 / 專利證號:I570308】</p>
+            </div>
+          </Carousel>
+        ) : (
+          <span>
+            <div className={c.item}>
+              <img src={require('./Alfa-17.png')} alt="" />
+              <p>【柱中柱系統示意圖 / 專利證號:M498780】</p>
+            </div>
+            <div className={c.item}>
+              <img src={require('./Alfa-18.png')} alt="" />
+              <p>【柱中柱系統示意圖 / 專利證號:M498780】</p>
+            </div>
+            <div className={c.item}>
+              <img src={require('./Alfa-19.png')} alt="" />
+              <p>【L型牆系統化鋼筋設計示意圖 / 專利證號:I570308】</p>
+            </div>
+            <div className={c.item}>
+              <img src={require('./Alfa-20.png')} alt="" />
+              <p>【T型牆系統化鋼筋設計示意圖 / 專利證號:I570308】</p>
+            </div>
+          </span>
+        )}
+      </div>
+    </div>
+  )
+}
 
 const Container = ({ show }) => {
-  const containerClass = withTrans('container', c, show);
+  const containerClass = withTrans('container', c, show)
   return (
     <div className={containerClass}>
       {isMobile ? (
@@ -161,17 +216,20 @@ const Container = ({ show }) => {
         <List />
       )}
     </div>
-  );
-};
+  )
+}
 const Section7 = () => (
-  <div className={c.bg}>
-    <ViewPort isBottom={false}>
-      <Top />
-    </ViewPort>
-    <ViewPort isBottom={false}>
-      <Container />
-    </ViewPort>
-  </div>
-);
+  <Fragment>
+    <div className={c.bg}>
+      <ViewPort isBottom={false}>
+        <Top />
+      </ViewPort>
+      <ViewPort isBottom={false}>
+        <Container />
+      </ViewPort>
+    </div>
+    <Second />
+  </Fragment>
+)
 
-export default Section7;
+export default Section7

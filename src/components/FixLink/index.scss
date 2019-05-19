@@ -3,20 +3,21 @@
   z-index: 10;
   right: 20px;
   bottom: 20px;
+  cursor: pointer;
   img {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
   }
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .fixLink {
-    right: -5px;
+    right: 10px;
     bottom: 10px;
     img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
     }
   }
 }

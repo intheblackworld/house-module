@@ -5,12 +5,12 @@ import { isMobile } from '../../../utils'
 
 const LeftTitle = ({ show }) => {
   const leftTitleClass = withTrans('leftTitle', c, show)
-  return (
-    <h3 className={leftTitleClass}>
-      一生の思い出に <br />
-      この機会が
-    </h3>
-  )
+  return <img className={leftTitleClass} src={require('./leftTitle.png')} alt="" />
+}
+
+const RightDoor = ({ show }) => {
+  const rightDoorClass = withTrans('rightDoor', c, show)
+  return <img className={rightDoorClass} src={require('./rightDoor.png')} alt="" />
 }
 
 const Content = ({ show }) => {
@@ -36,9 +36,11 @@ const Section4 = () => (
     <ViewPort>
       <LeftTitle />
     </ViewPort>
-    <ViewPort>
+    <ViewPort position="400px">
       <Content />
     </ViewPort>
+    <ViewPort position="400px">{isMobile ? <img src={require('./table.png')} alt="" className={c.table} /> : <RightDoor />}</ViewPort>
+    {/* <img src={require('./table.png')} alt="" className={c.table} /> */}
   </div>
 )
 

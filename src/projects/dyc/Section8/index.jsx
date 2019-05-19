@@ -23,7 +23,7 @@ const Container = ({ show }) => {
   return (
     <div className={containerClass}>
       <div className={c.item}>
-        <div className={c.top}>
+        <div className={c.itemTop}>
           <h3 className={c.number}>15</h3>
           <h3 className={c.year}>年</h3>
         </div>
@@ -33,7 +33,7 @@ const Container = ({ show }) => {
         </div>
       </div>
       <div className={c.item}>
-        <div className={c.top}>
+        <div className={c.itemTop}>
           <h3 className={c.number}>10</h3>
           <h3 className={c.year}>年</h3>
         </div>
@@ -43,7 +43,7 @@ const Container = ({ show }) => {
         </div>
       </div>
       <div className={c.item}>
-        <div className={c.top}>
+        <div className={c.itemTop}>
           <h3 className={c.number}>3</h3>
           <h3 className={c.year}>年</h3>
         </div>

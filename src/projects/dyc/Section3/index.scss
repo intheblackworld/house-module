@@ -2,33 +2,48 @@
 
 .bg {
   width: 100vw;
-  height: calc(100vh - 80px);
-  min-height: calc(100vh - 80px);
+  height: calc(100vw * 0.625);
+  // height: calc(100vh - 80px);
+  // min-height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
   background-image: url('./bg.png');
   background-color: #d4c9b8;
-  background-attachment: fixed;
+  // background-attachment: fixed;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
-  padding-top: 70px;
+  width: 550px;
+  margin: 70px 0 30px;
+  position: relative;
+  left: 10%;
+
   h3 {
+    margin: 0 auto;
     font-size: 40px;
     margin-bottom: 15px;
     text-align: center;
   }
 }
 
+.house {
+  display: none;
+}
+
 .container {
-  width: 1156px;
-  height: calc(100vh - 380px);
-  margin: 0 auto;
+  width: 550px;
+  position: relative;
+  left: 10%;
+  // height: calc(100vh - 380px);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 30px;
+  flex-wrap: wrap;
 
   &.show {
     .frame {
@@ -45,35 +60,30 @@
       @include animate(fadeOut, .5s, 0s);
     }
   }
-  .frame {
-    width: 25%;
-    height: 289px;
-    padding: 6px;
-    opacity: 0;
-  }
   
   .item {
-    width: 100%;
-    height: 100%;
-    border: 5px solid #901a1a;
-    border-radius: 50%;
-    padding: 12px;
+    width: 50%;
+    margin-bottom: 40px;
 
     .content {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background-color: #901a1a;
+      background-image: url('./group.png');
+      background-size: cover;
+      width: calc(200px * 1.2);
+      height: calc(174px * 1.2);
+      padding: 12px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 0 auto;
     }
   }
 }
 
 .contentTitle {
   color: #d5a875;
+  border-top: 1px solid #d5a875;
+  border-bottom: 1px solid #d5a875;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
@@ -82,7 +92,7 @@
 
 .desc {
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
 }
@@ -92,10 +102,12 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
     height: calc(100vh - 60px);
-    background-size: contain;
+    background-size: cover;
+    background-attachment: initial;
   }
 
   .title {
+    margin-bottom: 40px;
     h3 {
       font-size: 29px;
     }
@@ -108,10 +120,14 @@
   }
 
   .container {
-    width: 949px;
-    .frame {
-      width: 230px;
-      height: 230px;
+    width: 550px;
+
+    .item {
+      margin-bottom: 20px;
+      .content {
+        width: calc(200px * 1.1);
+        height: calc(174px * 1.1);
+      }
     }
   }
 }
@@ -120,10 +136,18 @@
 @media only screen and (max-width: 767px) {
   .bg {
     height: 100%;
-    background-size: contain;
+    background-size: cover;
+    background-attachment: initial;
+    background-image: url('./mbg.png');
+    background-color: #fff;
   }
 
   .title {
+    width: 100%;
+    left: 0;
+    padding: 30px 0 30px;
+    position: relative;
+    margin-bottom: 30px;
     h3 {
       font-size: 24px;
     }
@@ -131,12 +155,15 @@
 
   .container {
     width: 100%;
+    margin-bottom: 30px;
     height: auto;
     flex-direction: column;
+    left: 0;
 
-    .frame {
-      width: 289px;
-      height: 289px;
+    .item {
+      width: 100%;
+      height: 213px;
+      margin-bottom: 0;
     }
 
     .contentTitle {
@@ -145,12 +172,41 @@
 
     .desc {
       p {
-        font-size: 16px;
+        font-size: 12px;
       }
     }
   }
+
+  .house {
+    display: block;
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+    width: 100%;
+    right: 0px;
+  }
 }
 
-// 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+// 避免過度到 1280 x 800 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+
+  .container {
+    .item {
+      margin-bottom: 20px;
+      .content {
+        width: calc(200px * 1.1);
+        height: calc(174px * 1.1);
+      }
+    }
+  }
+
 }

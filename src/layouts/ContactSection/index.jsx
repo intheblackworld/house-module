@@ -2,7 +2,7 @@ import React from 'react'
 import Viewport from 'components/ViewPort'
 import Order from 'components/Order'
 import ContactInfo from 'components/ContactInfo'
-import FullScreen from 'layouts/FullScreen'
+// import FullScreen from 'layouts/FullScreen'
 import Section from 'layouts/Section'
 import GoogleMap from 'components/GoogleMap'
 import HouseInfo from 'components/HouseInfo'
@@ -15,21 +15,16 @@ const {
 const ContactSection = () => (
   <div className={css.contactSection}>
     <div className={css.orderBg}>
-      <img src={require('./leftLeaf.png')} className={css.leftLeaf} alt="長虹天際的圖片" />
-      <img src={require('./rightLeaf.png')} className={css.rightLeaf} alt="長虹天際的圖片" />
-      <img src={require('./mleaf.png')} className={css.mleaf} alt="長虹天際的圖片" />
-      <FullScreen needCutHeader alignCenter>
-        <Viewport>
-          <Order />
-        </Viewport>
-      </FullScreen>
+      <img src={require('./leftLeaf.png')} className={css.leftLeaf} alt="" />
+      <img src={require('./rightLeaf.png')} className={css.rightLeaf} alt="" />
+      <img src={require('./mleaf.png')} className={css.mleaf} alt="" />
+      <Viewport>
+        <Order />
+      </Viewport>
+      {/* <FullScreen needCutHeader alignCenter>
+      </FullScreen> */}
       <Viewport isBottom={false}>
-        <ContactInfo
-          address={address}
-          phone={phone}
-          fbLink={fbLink}
-          googleLink={googleLink}
-        />
+        <ContactInfo address={address} phone={phone} fbLink={fbLink} googleLink={googleLink} />
       </Viewport>
     </div>
     <GoogleMap />
