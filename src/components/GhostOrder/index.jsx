@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import {
   Form, Checkbox, Button, Select, TextArea,
 } from 'semantic-ui-react'
@@ -12,7 +12,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import PolicyDialog from 'components/PolicyDialog'
 
 import info from '../../info'
-
+import { isMobile } from '../../utils'
 import { cityList, renderAreaList } from './address'
 import css from './cht.scss'
 
@@ -64,7 +64,10 @@ const GhostOrder = ({ show, noTitle }) => {
   const submitForm = () => {
     if (isLoading) return
     setLoading(true)
-    if (!isCheck) return
+    if (!isCheck) {
+      setLoading(false)
+      return
+    }
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value
@@ -72,6 +75,7 @@ const GhostOrder = ({ show, noTitle }) => {
       || !city
       || !area
     ) {
+      setLoading(false)
       triggerAlert(true)
       return
     }
@@ -145,6 +149,13 @@ const GhostOrder = ({ show, noTitle }) => {
     [css.hide]: !show,
   })
 
+  // 嘗試解決客戶反應問題：點擊輸入框或選項框，鍵盤跳出後表單不見，畫面往上跳或被切掉
+  useLayoutEffect(() => {
+    if (isMobile) {
+      document.getElementById('orderBg').style.height = `${window.screen.availHeight}px`;
+    }
+  })
+
   return (
     <div className={css.orderContainer}>
       {!noTitle && (
@@ -157,19 +168,19 @@ const GhostOrder = ({ show, noTitle }) => {
         <div className={css.group}>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="name" placeholder="" />
+              <input id="name" placeholder="" required />
               <label>姓名</label> {/* eslint-disable-line */}
             </Form.Field>
           </div>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="phone" placeholder="" />
+              <input id="phone" placeholder="" required />
               <label>聯絡電話</label> {/* eslint-disable-line */}
             </Form.Field>
           </div>
           <div className={css.control}>
             <Form.Field className={css.field}>
-              <input id="email" placeholder="" />
+              <input id="email" placeholder="" required />
               <label>email</label> {/* eslint-disable-line */}
             </Form.Field>
           </div>

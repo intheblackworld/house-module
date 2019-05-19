@@ -9,11 +9,10 @@ const Master = ({ show }) => {
 
   return (
     <div className={`${bgClass} masterBg`}>
-      <div className={`${colorBgClass} masterBg`}>
-        <div className={c.container}>
-          <img src={require('./title.png')} alt="長虹天際的圖片" className={c.title} />
-          <p className={`${c.subTitle} flex-c`}>公園富人區 地標落成{ !isMobile && '˙' }  70-83坪</p>
-        </div>
+      <div className={`${colorBgClass} masterBg`} />
+      <div className={c.container}>
+        <img src={require('./title.png')} alt="長虹天際的圖片" className={c.title} />
+        <p className={`${c.subTitle} flex-c`}>公園富人區 地標落成{!isMobile && '˙'} 70-83坪</p>
       </div>
     </div>
   )

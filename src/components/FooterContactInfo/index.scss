@@ -1,12 +1,18 @@
 @import '../../assets/animate.scss';
 
+$bg: #000;
+$title: #fff;
+$desc: #fff;
+$border: #fff;
+
 .bg {
-  background: #000;
+  background: $bg;
+  padding: 80px 0;
 }
 
 .container {
-  width: 932px;
-  margin: 80px auto;
+  width: 1024px;
+  margin: 0px auto;
 }
 
 .logo {
@@ -25,24 +31,26 @@
   > div {
     width: 33.3%;
     h3 {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 20px;
-      color: #fff;
+      color: $title;
     }
 
     p {
-      font-size: 12px;
-      color: #fff;
+      font-size: 14px;
+      line-height: 2;
+      color: $desc;
     }
   }
 
   .contactInfo {
-    a, p {
+    a,
+    p {
       display: block;
       height: 40px;
       line-height: 40px;
-      color: #fff !important;
-      border: 1px solid #fff;
+      color: $desc !important;
+      border: 1px solid $border;
       padding: 0px 3px;
       max-width: 100%;
       margin-bottom: 15px;
@@ -58,12 +66,18 @@
 
   .socialInfo {
     padding-left: 80px;
+    img {
+      width: 100%;
+    }
   }
 }
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    width: 980px;
+  }
 }
 
 /* 手機尺寸 */
@@ -76,7 +90,8 @@
       width: 100%;
       margin-bottom: 30px;
 
-      h3, p {
+      h3,
+      p {
         text-align: center;
       }
     }
@@ -85,6 +100,8 @@
       padding-left: 0px;
       > div {
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
       }
     }
   }

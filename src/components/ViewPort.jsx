@@ -9,7 +9,7 @@ const Frame = (props: { inViewport: boolean }) => {
 const ViewportFrame = handleViewport(Frame)
 
 const Viewport = ({
-  children, isBottom = true, position = null, showOneTime = false,
+  children, isBottom = true, position = null, showOneTime = true,
 }) => {
   const [show, setShow] = React.useState(false)
   return (

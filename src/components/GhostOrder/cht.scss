@@ -1,6 +1,7 @@
 .orderContainer {
   width: 932px;
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 .orderTitle {
@@ -73,10 +74,14 @@
   width: 162px;
   height: 35px;
   border-radius: 21.6px !important;
-  background-color: #edd191 !important;
+  background-color: #999 !important;
   color: #2f525a !important;
   margin: 0 auto !important;
   display: block !important;
+
+  &.enable {
+    background-color: #edd191 !important;
+  }
 }
 
 :global {
@@ -93,18 +98,18 @@
       background: transparent !important;
       box-shadow: 0px 0px 0px 100px transparent inset !important;
       color: rgba(255, 255, 255, 1) !important;
-      
     }
 
-    input:not([type]):focus {
+    input:not([type]):valid, input:not([type]):focus {
       border-bottom: 1px solid #85B7D9 !important;
-
       & + label {
         font-size: 12px;
         bottom: 25px;
         left: 0px;
       }
     }
+
+    
 
     .field > .selection.dropdown {
       width: 100% !important;
@@ -139,6 +144,7 @@
 @media only screen and (max-width: 767px) {
   .orderContainer {
     width: 90%;
+    padding-top: 0;
   }
   .orderTitle {
     width: 100%;

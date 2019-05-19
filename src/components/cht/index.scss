@@ -146,6 +146,7 @@
   width: 932px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 
   .item {
     .label, .itemImg, .title, .desc {
@@ -373,6 +374,10 @@
       font-size: 12px;
       color: #fff;
       width: 90%;
+    }
+
+    .titleAndDesc {
+      width: 70%;
     }
 
     .title {

@@ -10,6 +10,10 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .orderBg {
+    align-items: center;
+    display: flex;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
