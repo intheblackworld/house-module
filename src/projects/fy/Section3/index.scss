@@ -1,10 +1,6 @@
 @import '../../../assets/animate.scss';
-
-.imgs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 445px;
+.container {
+  width: 880px;
   margin: 0 auto;
   margin-bottom: 75px;
   opacity: 0;
@@ -48,100 +44,93 @@
   }
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 75px;
-  opacity: 0;
+.main {
+  width: 50%;
+  margin-bottom: 15px;
+  img,
+  .content {
+    opacity: 0;
+
+    & {
+      h3,
+      p {
+        opacity: 0;
+      }
+    }
+  }
 
   &.show {
-    @include animate(spreadIn, .8s, .2s);
-  }
-
-  &.hide {
-    @include animate(spreadOut, .8s, 0);
-  }
-
-  h3 {
-    font-size: 29px;
-    color: #b50007;
-  }
-
-  p {
-    font-size: 17px;
-    color: #333;
-  }
-}
-
-.slider {
-  width: 1150px;
-  margin: 0 auto;
-  opacity: 0;
-  &.show {
-    @include animate(fadeInRight, .6s, 0);
-  }
-  &.hide {
-    @include animate(fadeOutRight, .6s, 0);
-  }
-}
-
-.sliderItem {
-  max-width: 278px;
-  margin-right: 12px;
-
-  img {
-    width: 100%;
-    height: 400px;
-    margin-bottom: 24px;
-  }
-
-  .sliderContent {
-    border-left: 10px solid #e5d48f;
-    padding-left: 10px;
-    h3 {
-      font-size: 28px;
-      color: #b50007;
+    img {
+      @include animate(fadeInUp, 1s, 0);
     }
 
+    .content {
+      @include animate(fadeInUp, 0.8s, 0.2s);
+    }
+
+    .content {
+      h3,
+      p {
+        @include animate(fadeInUp, 0.6s, 0.6s);
+      }
+    }
+  }
+
+  &.hide {
+    &.right img {
+      @include animate(fadeOutRight, 1s, 0);
+    }
+
+    &.left img {
+      @include animate(fadeOutLeft, 1s, 0);
+    }
+
+    .content {
+      @include animate(fadeOutUp, 0.8s, 0);
+    }
+
+    .content {
+      h3,
+      p {
+        @include animate(fadeOutUp, 0.6s, 0);
+      }
+    }
+  }
+
+  img {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+    width: 407px;
+    height: 263px;
+    margin-bottom: 30px;
+  }
+  .content {
+    width: 407px;
+    position: relative;
+    margin: 0 auto;
+    h3 {
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      line-height: 1.5;
+    }
     p {
-      color: #333;
-      font-size: 16px;
+      font-size: 20px;
+      color: #fff;
       line-height: 1.5;
     }
   }
 }
 
-.leaf1 {
-  position: absolute !important;
-  transform: rotate(167deg);
-  right: -46px;
-  top: 20%;
-}
-.leaf2 {
-  position: absolute !important;
-  transform: rotate(8deg) scale(-1.5);
-  left: -96px;
-  top: 40%;
-}
 
 /* 螢幕尺寸標準 */
-/* 手機尺寸 */
-@media only screen and (max-width: 767px) {
-  .imgs {
+
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
     width: 100%;
-    margin-bottom: 50px;
-    img {
-      &:nth-child(1) {
-        width: 86px;
-      }
-
-      &:nth-child(2) {
-        width: 29px;
-      }
-
-      &:nth-child(3) {
-        width: 150px;
-      }
-    }
+    justify-content: center;
   }
 
   .buildImg {
@@ -149,53 +138,36 @@
   }
 
   .title {
-    margin-bottom: 48px;
-
-    h3 {
-      font-size: 18px;
-    }
-  
-    p {
-      font-size: 13px;
-    }
+    font-size: 34px;
+    line-height: 44px;
   }
-
-  .slider {
-    margin: 0 auto;
-    width: 900px;
-    float: none;
-    margin-left: calc(-50% + 10px);
-  }
-
-  .sliderItem {
-    max-width: 214px;
-
+  .main {
+    width: 375px;
+    margin-bottom: 14px;
     img {
-      height: 310px;
+      width: 257px;
+      height: auto;
     }
-
-    .sliderContent {
-      border-left: 7px solid #e5d48f;
-
+    .content {
+      width: 257px;
+      height: auto;
+      padding: 0px;
       h3 {
-        font-size: 22px;
+        font-size: 20px;
+        margin-bottom: 4px;
       }
-  
       p {
-        font-size: 13px;
+        font-size: 15px;
       }
     }
-  }
-  .leaf2 {
-    display: none !important;
   }
 }
 
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .imgs {
-    width: 340px;
-    margin-bottom: 50px;
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    justify-content: center;
   }
 
   .buildImg {
@@ -203,36 +175,27 @@
   }
 
   .title {
-    margin-bottom: 55px;
-
-    h3 {
-      font-size: 22px;
-    }
-  
-    p {
-      font-size: 13px;
-    }
+    font-size: 23px;
+    line-height: 25px;
   }
-
-  .slider {
-    margin: 0 auto;
-    width: 900px;
-    float: none;
-  }
-
-  .sliderItem {
-    max-width: 214px;
-
+  .main {
+    width: 100%;
+    margin-bottom: 14px;
     img {
-      height: 310px;
+      width: 100%;
+      height: auto;
     }
-
-    h3 {
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 13px;
+    .content {
+      width: 100%;
+      height: auto;
+      padding: 0px;
+      h3 {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      p {
+        font-size: 15px;
+      }
     }
   }
 }

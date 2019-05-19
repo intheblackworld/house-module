@@ -1,7 +1,4 @@
 import React from 'react'
-import { Image } from 'semantic-ui-react'
-import Viewport from 'components/ViewPort'
-import cx from 'classnames'
 import SectionTitle from 'components/SectionTitle'
 import SectionSubTitle from 'components/SectionSubTitle'
 import heart from './heart.png'
@@ -89,4 +86,4 @@ const Section5 = () => (
   </div>
 )
 
-export default Section5
+export default Section6

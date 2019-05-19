@@ -27,8 +27,8 @@ const imgList = [
   // require('assets/img/section4/public-12.png'),
 ]
 
-const Sliders = ({ show = false }) => {
-  const sliderClass = cx(css.slider, {
+const Item = ({ show, item }) => {
+  const itemClass = cx(css['detail-item'], {
     [css.show]: show,
     [css.hide]: !show,
   })
@@ -49,10 +49,10 @@ const Sliders = ({ show = false }) => {
         </h3>
         <p>在公設規劃的每一個角落，都有金革唱片的優雅音韻，伴隨著美好的生活，共舞！</p>
       </div>
+      <h3 className={css['item-title']}>{item.name}</h3>
     </div>
   )
 }
-
 const Section4 = () => (
   <Fragment>
     <Image src={leaf1} alt="1" className={css.leaf1} />

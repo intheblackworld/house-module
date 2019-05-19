@@ -1,67 +1,105 @@
-.master-carousel-wrap {
-  :global {
-    .slick-slider {
-      width: 512px;
-      height: 100vh;
-      margin: 0 auto;
-      position: relative;
-    }
-    .slick-list {
-      position: relative;
-      top: calc(50% - 230px);
-    }
-  }
-  .imgWrap {
-    width: 512px;
-    height: 342px;
-    display: flex;
-    align-content: center;
-  }
-  .imageTitle {
-    font-family: 'Noto Serif TC', serif;
-    line-height: 69px;
-    font-size: 69px;
-    text-align: center;
-    font-weight: 900;
-    padding-bottom: 30px;
-  }
-  .bgImage {
-    // width: 512px;
-    // height: 260px;
-    margin: 0 auto;
-    // margin-top: 40px;
-  }
-  .leaf1 {
+@import '../../../assets/animate.scss';
+
+.master {
+  .bg {
     position: absolute;
-    width: 500px;
-    top: -40px;
-    left: -70px;
-    animation: showHide 6s infinite;
-    animation-delay: 0;
+    background-image: url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
   }
 
-  @keyframes showHide {
-    0% {
-      opacity: 1;
+  .logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20%;
+    display: flex;
+    width: 400px;
+    > div {
+      background-size: cover;
     }
-
-    50% {
+    .logo1 {
+      background-image: url('./logo1.png');
+      width: 39px;
+      height: 61px;
       opacity: 0;
     }
-
-    100% {
-      opacity: 1;
+    .logo2 {
+      background-image: url('./logo2.png');
+      width: 154px;
+      height: 167px;
+      margin-left: -10px;
+      margin-right: 30px;
+      opacity: 0;
+    }
+    .logo3 {
+      background-image: url('./logo3.png');
+      width: 138px;
+      height: 250px;
+      opacity: 0;
     }
   }
-  .leaf2 {
-    position: absolute;
-    right: 0;
-    width: 500px;
-    animation: showHide 6s infinite;
-    animation-delay: 2s;
+
+  @keyframes blinkText {
+    0% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    2% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    2.5% {
+      text-shadow: 0 2px 24px #56d8ff, 0 1px 25px #ffffff;
+    }
+    3% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    6% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    6.5% {
+      text-shadow: 0 2px 24px #56d8ff, 0 1px 25px #ffffff;
+    }
+    7% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    8% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    10% {
+      text-shadow: 0 2px 24px #56d8ff, 0 1px 25px #ffffff;
+    }
+    20% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    40% {
+      text-shadow: 0 2px 24px #56d8ff, 0 1px 25px #ffffff;
+    }
+    60% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
+    70% {
+      text-shadow: 0 2px 24px #56d8ff, 0 1px 25px #ffffff;
+    }
+    100% {
+      text-shadow: 0 2px 24px #56d8ff;
+    }
   }
-  .leaf3 {
+
+  .text {
+    opacity: 0;
+    transition: all .3s;
+  }
+
+  .title {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
     position: absolute;
+    left: 0;
     right: 0;
     bottom: 0;
     width: 330px;
@@ -78,23 +116,20 @@
     margin-top: 30px;
     justify-content: center;
   }
-  .seal {
-    padding: 3px;
-    text-align: center;
-    width: 84px;
-    height: 84px;
-    background-color: #b50007;
+
+  .subTitle {
+    font-size: 24px;
     color: #fff;
-    font-size: 32px;
-    margin-right: 16px;
-    line-height: 38px;
-  }
-  .sealTitle {
-    font-weight: 600;
-    font-size: 70px;
-    line-height: 84px;
-    font-family: 'Noto Serif TC', serif;
-    letter-spacing: -4px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    text-shadow: 0 0 5px #000;
+    animation: blinkText;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
   }
 
   .smallTitle {
@@ -117,37 +152,30 @@
       width: 315px;
       height: 210px;
     }
-    .imgWrap {
-      height: 100%;
+    .logo1 {
+      @include animate(fadeInUp, 1s, 1s);
     }
-    .imageTitle {
-      line-height: 50px;
-      font-size: 50px;
+
+    .logo2 {
+      @include animate(fadeInRight, 1s, 1.2s);
     }
-    .leaf1 {
-      width: 260px;
-      top: -20px;
-      left: 0px;
+
+    .logo3 {
+      @include animate(fadeInLeft, 1s, 1.2s);
     }
-    .leaf2 {
-      width: 260px;
+
+    .text {
+      opacity: 1;
     }
-    .leaf3 {
-      width: 170px;
+  }
+
+  &.hide {
+    .bg, .logo1, .logo2, .logo3 {
+      @include animate(fadeOut, 3s, 0s);
     }
-    h3 {
-      font-size: 46px;
-    }
-    .seal {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
-      font-size: 22px;
-      line-height: 22px;
-    }
-    .sealTitle {
-      font-size: 46px;
-      line-height: 46px;
+
+    .text {
+      opacity: 0;
     }
 
     .smallTitle {
@@ -159,58 +187,41 @@
   }
 }
 
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .master-carousel-wrap {
-    :global {
-      .slick-slider {
-        width: 100%;
-      }
-      .slick-list {
-        position: relative;
-        top: calc(50% - 150px);
-      }
-    }
-    .imgWrap {
+  .master {
+    .logo {
       width: 100%;
-      height: 100%;
+      justify-content: center;
+
+      .logo1 {
+        width: 30px;
+        height: 50px;
+        margin-left: -20px;
+      }
+  
+      .logo2 {
+        width: 112px;
+        height: 122px;
+        margin-right: 10px;
+      }
+  
+      .logo3 {
+        width: 92px;
+        height: 167px;
+      }
     }
-    .imageTitle {
-      line-height: 36px;
-      font-size: 36px;
+  
+    .subTitle {
+      font-size: 18px;
     }
-    .bgImage {
-      width: 230px;
-      height: 150px;
-    }
-    .leaf1 {
-      width: 210px;
-      top: 0px;
-      left: 0px;
-    }
-    .leaf2 {
-      width: 200px;
-    }
-    .leaf3 {
-      width: 205px;
-    }
-    h3 {
-      font-size: 26px;
-    }
-    .sealWrap {
-      // justify-content: center;
-    }
-    .seal {
-      width: 36px;
-      height: 36px;
-      font-size: 12px;
-      line-height: 16px;
-      margin-right: 6px;
-    }
-    .sealTitle {
-      font-size: 32px;
-      line-height: 36px;
+
+    .title {
+      font-size: 30px;
     }
 
     .smallTitle {

@@ -1,0 +1,100 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*-------------------
+       Elements
+--------------------*/
+
+/* form 樣式變數 (select有bug還是要自己蓋) */
+@inputBackground: transparent;
+@borderColor: rgba(255, 255, 255, 0.6);
+@absoluteBorderRadius: 0;
+@focusedFormBorderColor: #56D8FF;
+@selectedTextColor: #fff;
+@textColor: #fff;
+
+/* Input */
+@inputFont: @pageFont;
+@inputWidth: 100%;
+@inputFontSize: 1em;
+@inputBorder: 1px solid @borderColor;
+@inputBorderRadius: @absoluteBorderRadius;
+@inputColor: @textColor;
+@inputBoxShadow: 0em 0em 0em 0em transparent inset;
+
+/* Select */
+@selectBackground: @inputBackground;
+@selectBorderRadius: @inputBorderRadius;
+@selectBorder: @inputBorder;
+@selectColor: @inputColor;
+
+/* Text Area */
+@textAreaBackground: @inputBackground;
+@textAreaBorder: @inputBorder;
+@textAreaFontSize: @inputFontSize;
+@textAreaTransition: @inputTransition;
+
+
+/*-------------------
+        States
+--------------------*/
+
+
+/* Input Focus */
+@inputFocusBackground: @inputBackground;
+@inputFocusBorderColor: @focusedFormBorderColor;
+@inputFocusColor: @selectedTextColor;
+@inputFocusBorderRadius: @inputBorderRadius;
+
+/* Text Area Focus */
+@textAreaFocusBackground: @inputFocusBackground;
+@textAreaFocusBorderColor: @inputFocusBorderColor;
+@textAreaFocusColor: @inputFocusColor;
+@textAreaFocusBorderRadius: @inputFocusBorderRadius;
+
+/* Disabled */
+@disabledLabelOpacity: @disabledOpacity;
+
+/* Errored Input */
+@formErrorColor: @negativeTextColor;
+@formErrorBorder: @negativeBorderColor;
+@formErrorBackground: @negativeBackgroundColor;
+
+/* AutoFill */
+@inputAutoFillBackground: #FFFFF0;
+@inputAutoFillBorder: #E5DFA1;
+@inputAutoFillFocusBackground: @inputAutoFillBackground;
+@inputAutoFillFocusBorder: #D5C315;
+@inputAutoFillErrorBackground: #FFFAF0;
+@inputAutoFillErrorBorder: #E0B4B4;
+
+
+/* Input Error */
+@inputErrorBorderRadius: '';
+@inputErrorBoxShadow: none;
+
+/* Dropdown Error */
+@dropdownErrorHoverBackground: #FBE7E7;
+@dropdownErrorSelectedBackground: @dropdownErrorHoverBackground;
+@dropdownErrorActiveBackground: #FDCFCF;
+@dropdownErrorLabelBackground: #EACBCB;
+@dropdownErrorLabelColor: @errorTextColor;
+
+/* Focused Error */
+@inputErrorFocusBackground: @negativeBackgroundColor;
+@inputErrorFocusColor: @negativeTextColor;
+@inputErrorFocusBorder: @negativeBorderColor;
+@inputErrorFocusBoxShadow: none;
+
+/* Placeholder Error */
+@inputErrorPlaceholderColor: lighten(@formErrorColor, 40);
+@inputErrorPlaceholderFocusColor: lighten(@formErrorColor, 30);
+
+/* Loading Dimmer */
+@loaderDimmerColor: rgba(255, 255, 255, 0.8);
+@loaderDimmerZIndex: 100;
+
+/* Loading Spinner */
+@loaderSize: 3em;
+@loaderLineZIndex: 101;

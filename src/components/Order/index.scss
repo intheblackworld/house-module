@@ -99,7 +99,9 @@
 
   .field {
     width: 310px;
-
+    .select {
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    }
     .select,
     .select div {
       border-radius: 0 !important;
@@ -110,7 +112,7 @@
     }
 
     .select i {
-      color: #e5d48f;
+      color: #56D8FF;
     }
   }
 }
@@ -143,7 +145,7 @@
       height: 24px !important;
       background: transparent !important;
       border-radius: 0 !important;
-      border: 1px solid #fff !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
     }
 
     &:after {
@@ -171,20 +173,24 @@
   margin: 0 auto !important;
   margin-top: 20px !important;
   transition: all 0.3s !important;
+  color: #333;
+  z-index: 10;
 
   // &.show {
   //   @include animate(fadeInUp, 0.8s, 0.6s);
   // }
 
-  // &.enable {
-  //   background-color: rgba(229, 212, 143, 1) !important;
-  // }
+  &.enable {
+    background-color: rgba(86, 216, 255, 1) !important;
+  }
 }
 
 .orderTitle {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
 
   // & {
   //   h3,
@@ -320,7 +326,7 @@
         height: 20px !important;
         background: transparent !important;
         border-radius: 0 !important;
-        border: 1px solid #fff !important;
+        border: 1px solid rgba(255, 255, 255, 0.6) !important;
       }
 
       &:after {

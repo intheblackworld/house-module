@@ -2,14 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap'
+import WJTimeline from 'components/WJTimeline'
+import { isMobile } from '../../utils'
 
-import ThreeFaTimeline from 'components/ThreeFaTimeline'
 
 const HorizontalTimelineStyled = styled.div`
   overflow: hidden;
   #pinContainer {
     width: 100vw;
-    height: calc(100vh + 128px);
+    height: ${isMobile ? '500px' : 'calc(100vh - 200px)'};
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -48,10 +49,10 @@ const HorizontalTimeline = () => {
   return (
     <HorizontalTimelineStyled>
       <Controller>
-        <Scene triggerHook="onLeave" duration="200%" pin>
+        <Scene triggerHook="onLeave" duration="100%" pin>
           <Timeline wrapper={<div id="pinContainer" />}>
-            <Tween from={{ x: '0' }} to={{ x: `${-3330 + width}px` }}>
-              <ThreeFaTimeline ref={ref} />
+            <Tween from={{ x: '0' }} to={{ x: `${width > 1800 ? 0 : -1800 + width}px` }}>
+              <WJTimeline ref={ref} />
             </Tween>
             {/* <Tween from={{ x: '-100%' }} to={{ x: '0%' }}>
 

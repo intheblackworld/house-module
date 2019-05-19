@@ -3,6 +3,14 @@
 
 :global {
 
+  .slick-list {
+    height: calc(100vh - 280px) !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
   /* 手機尺寸 */
   @media only screen and (max-width: 767px) {
     // .slick-arrow {
@@ -14,6 +22,14 @@
     .slick-arrow {
       width: 40px !important;
       height: 40px !important;
+    }
+
+    .slick-list {
+      height: auto !important;
+      display: block !important;
+      align-items: center !important;
+      flex-direction: column !important;
+      justify-content: center !important;
     }
   }
 

@@ -1,0 +1,67 @@
+@import '../../assets/animate.scss';
+
+.timeline {
+  display: flex;
+  position: absolute;
+}
+
+.item {
+  display: flex;
+
+  .title {
+    width: 100px;
+    font-size: 29px;
+    font-weight: bold;
+    color: #56d8ff;
+    font-family: 'Noto Seri TC', serif;
+    text-align: center;
+    transform: translateY(-10px);
+  }
+  
+  .content {
+    border-top: 2px solid #fff;
+    padding-top: 35px;
+    width: 300px;
+    
+    img {
+      width: 260px;
+      height: 150px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 18px;
+    }
+  
+    p {
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.4;
+      width: 100%;  
+      text-align: center;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .item {
+    display: flex;
+    .title, img, p, .content {
+      opacity: 1;
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .item {
+    display: flex;
+    .title, img, p, .content {
+      opacity: 1;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

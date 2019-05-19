@@ -1,0 +1,154 @@
+@import '../../../assets/animate.scss';
+
+.slider {
+  width: 872px;
+  position: relative;
+  margin: 20px auto;
+  margin-top: -40px;
+
+  p {
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    font-size: 16px;
+    line-height: 30px;
+    height: 30px;
+    opacity: 0;
+  }
+
+  .descBg {
+    background: rgba(35, 152, 187, 0.63);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    padding: 13px 40px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    li {
+      list-style: none;
+      min-width: 160px;
+      margin-right: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .carousel {
+    opacity: 0;
+  }
+
+  &.show {
+    .carousel, p {
+      @include animate(fadeInRight, 0.8s, 0);
+    }
+  }
+  &.hide {
+    .carousel {
+      @include animate(fadeOutRight, 0.8s, 0);
+    }
+    p {
+      @include animate(fadeOutUp, 0.8s, 0);
+    }
+  }
+}
+
+// .descBg {
+//   width: 407px;
+//   height: 222px;
+//   background-image: url('../../../assets/img/section4/desc-bg.png');
+//   background-size: cover;
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: center;
+//   position: absolute;
+//   z-index: 1;
+//   padding: 30px 72px;
+//   bottom: 30px;
+//   right: -210px;
+
+//   h3 {
+//     font-size: 29px;
+//     color: #b50007;
+//     line-height: 1.5;
+//   }
+
+//   p {
+//     font-size: 17px;
+//     color: #333;
+//     line-height: 1.5;
+//   }
+// }
+
+/* 螢幕尺寸標準 */
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .slider {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -20px;
+
+    p {
+      width: 80%;
+      bottom: -40px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-size: 12px;
+      height: 80px;
+    }
+  }
+
+  .descBg {
+    display: none !important;
+  }
+
+  // .descBg {
+  //   width: 200px;
+  //   height: 110px;
+  //   padding: 0;
+  //   position: absolute;
+  //   left: calc(50% - 100px);
+  //   bottom: -75px;
+
+  //   h3 {
+  //     font-size: 18px;
+  //     text-align: center;
+  //   }
+
+  //   p {
+  //     display: none;
+  //   }
+  // }
+  // .leaf1 {
+  //   display: none !important;
+  // }
+  // .leaf2 {
+  //   display: none !important;
+  // }
+}
+
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .slider {
+    width: 652px;
+    margin-top: -20px;
+
+    p {
+      font-size: 13px;
+      bottom: 30px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

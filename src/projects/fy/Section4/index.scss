@@ -1,50 +1,52 @@
 @import '../../../assets/animate.scss';
 
-.slider {
-  width: 859px;
-  position: relative;
-  margin-bottom: 20px;
+.section4 {
+  margin: 0 auto;
+  .container {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 88px;
+    width: 1050px;
+  }
+  .container-detail {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-  .carousel,
-  .descBg {
+  .detail-item {
+    width: 20%;
+    margin-bottom: 40px;
     opacity: 0;
-
-    & {
-      h3,
-      p {
-        opacity: 0;
+    @for $i from 1 through 30 {
+      &:nth-child(#{$i}) {
+        &.show {
+          @include animate(fadeIn, .6s, $i * 0.05s);
+        }
+        &.hide {
+          @include animate(fadeOut, .6s, 0);
+        }
       }
     }
-  }
-
-  &.show {
-    .carousel {
-      @include animate(fadeInRight, 0.8s, 0);
+    
+    
+    .item-icon-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      height: 90px;
     }
-    .descBg {
-      @include animate(fadeInUp, 0.8s, 0.2s);
+    
+    .item-icon {
+      width: 74px;
+      height: auto;
     }
-
-    .descBg {
-      h3,
-      p {
-        @include animate(fadeInUp, 0.8s, 0.6s);
-      }
-    }
-  }
-  &.hide {
-    .carousel {
-      @include animate(fadeOutRight, 0.8s, 0);
-    }
-    .descBg {
-      @include animate(fadeOutUp, 0.8s, 0);
-    }
-
-    .descBg {
-      h3,
-      p {
-        @include animate(fadeOutUp, 0.8s, 0);
-      }
+    .item-title {
+      font-size: 20px;
+      margin: 0 auto;
+      position: relative;
+      font-weight: normal;
     }
   }
 }
@@ -70,77 +72,33 @@
     line-height: 1.5;
   }
 
-  p {
-    font-size: 17px;
-    color: #333;
-    line-height: 1.5;
+    .container-detail {
+      justify-content: center;
+    }
+    .detail-item {
+      width: 340px;
+    }
   }
 }
 
-.leaf1 {
-  position: absolute !important;
-  transform: rotate(0deg);
-  left: 0px;
-  top: 50%;
-}
-.leaf2 {
-  position: absolute !important;
-  transform: rotate(96deg) scale(-1.5);
-  right: 0px;
-  top: 50%;
-}
-
-/* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .slider {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 70px;
-  }
-
-  .descBg {
-    width: 200px;
-    height: 110px;
-    padding: 0;
-    position: absolute;
-    left: calc(50% - 100px);
-    bottom: -75px;
-
-    h3 {
-      font-size: 18px;
-      text-align: center;
+  .section4 {
+    .container {
+      width: 100%;
+      margin-top: 40px;
     }
 
-    p {
-      display: none;
-    }
-  }
-  .leaf1 {
-    display: none !important;
-  }
-  .leaf2 {
-    display: none !important;
-  }
-}
-
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .slider {
-    width: 652px;
-  }
-
-  .descBg {
-    width: 311px;
-    height: 170px;
-    padding: 15px 55px;
-
-    h3 {
-      font-size: 22px;
+    .container-detail {
+      justify-content: center;
     }
 
-    p {
-      font-size: 13px;
+    .detail-item {
+      width: 50%;
+    }
+
+    .item-title {
+      font-size: 16px !important;
     }
   }
 }

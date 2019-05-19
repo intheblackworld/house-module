@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from 'components/Navigation'
 import Layout from 'layouts'
 import Footer from 'components/Footer'
+// import { isMobile } from '../utils'
 
 // const Home = () => (
 //   <div>

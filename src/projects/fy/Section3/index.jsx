@@ -1,9 +1,9 @@
 import React from 'react'
-import SectionTitle from 'components/SectionTitle'
 import { Image } from 'semantic-ui-react'
-import Carousel from 'components/Carousel'
+import SectionTitle from 'components/SectionTitle'
 import Viewport from 'components/ViewPort'
 import cx from 'classnames'
+import css from './index.scss'
 
 import home from './home.png'
 import bg1 from '../Master/bg1.png'
@@ -18,7 +18,11 @@ import cross from './cross.png'
 import leaf1 from '../Master/leaf-left-top.png'
 import leaf3 from '../Master/leaf-right-bottom.png'
 
-import css from './index.scss'
+  {
+    title: '超優質書香',
+    desc: '江翠國小、江翠國中、板橋圖書館總館、江子翠分館等，營造優雅文風。',
+    url: require('./item-5.jpg'),
+  },
 
 const CompanyImgs = ({ show = false }) => {
   const imgClass = cx(css.imgs, {
@@ -114,10 +118,10 @@ const Slides = ({ show = false }) => {
     </div>
   )
 }
+
 const Section3 = () => (
   <React.Fragment>
-    <Image src={leaf1} alt="1" className={css.leaf1} />
-    <Image src={leaf3} alt="1" className={css.leaf2} />
+    {/* <div className={css.title}>4招買房必勝關鍵</div> */}
     <Viewport>
       <SectionTitle
         titleTop="新板巨星"
@@ -139,15 +143,13 @@ const Section3 = () => (
         sloganDescription="上市公司品質保證更保心，加上金革唱片優雅音韻，品牌與品質的雙重加持，一次買最好！"
       />
     </Viewport>
-
-    <Viewport>
-      <CompanyImgs />
-    </Viewport>
-
-    <Viewport isBottom={false}>
-      <Slides />
-    </Viewport>
-    <div style={{ clear: 'both' }} />
+    <div className={css.container}>
+      {items.map(item => (
+        <Viewport key={item.url}>
+          <Item item={item} />
+        </Viewport>
+      ))}
+    </div>
   </React.Fragment>
 )
 
