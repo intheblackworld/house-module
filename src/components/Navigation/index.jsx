@@ -14,7 +14,7 @@ const MobileNavigationHeight = 45
 
 const NavItems = [
   {
-    name: '林口新地標',
+    name: '翻轉東區',
     imgSrc: '',
     subTitle: '',
     section: 'point2',
@@ -22,7 +22,7 @@ const NavItems = [
   },
 
   {
-    name: '七大價值',
+    name: '精彩生活',
     imgSrc: '',
     subTitle: '',
     section: 'point3',
@@ -30,7 +30,7 @@ const NavItems = [
   },
 
   {
-    name: '精工建築',
+    name: '頂級御所',
     imgSrc: '',
     subTitle: '',
     section: 'point4',
@@ -38,7 +38,7 @@ const NavItems = [
   },
 
   {
-    name: '頂級公設',
+    name: '珍藏精工',
     imgSrc: '',
     subTitle: '',
     section: 'point5',

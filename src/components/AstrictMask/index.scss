@@ -18,7 +18,7 @@
 
   p {
     @include animate(fadeInUp, .8s, .0s);
-    color: #000;
+    color: #0f9ad7;
     margin-top: 20px;
     font-size: 22px;
   }
@@ -28,7 +28,7 @@
     height: auto;
     @include animate(fadeInUp, .8s, .0s);
     svg {
-      fill: #000;
+      fill: #0f9ad7;
     }
 
   }

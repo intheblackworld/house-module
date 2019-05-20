@@ -1,15 +1,18 @@
 export default {
-  address: '244新北市林口區文化三路二段292號',
-  locations: { lat: 25.0832356, lng: 121.3769826 },
-  phone: '02-2268-8765',
-  fbLink: 'https://www.facebook.com/%E9%95%B7%E8%99%B9%E5%A4%A9%E9%9A%9B-2731739126866550/',
-  googleLink: 'https://goo.gl/maps/7cv2w5gGjgp',
-  caseName: '長虹天際',
+  address: '台南市東區中華東路三段65號(TOYOTA)旁',
+  locations: { lat: 22.9806059, lng: 120.2257531 },
+  phone: '06-289-6111',
+  fbLink: 'https://www.facebook.com/DTED062896111/',
+  googleLink: 'https://goo.gl/maps/JL78nmwc8a9T3nPg7',
+  caseName: '上東城',
 
   houseInfos: [
-    ['投資興建', '長虹建設'],
-    ['工程營造', '宏林營造'],
-    ['廣告企劃', '新開創廣告'],
-    ['接待中心', '新北市林口區文化三路二段292號'],
+    ['投資興建', '興富發集團·興富發建設'],
+    ['廣告代銷', '上揚國際建築團隊'],
+    ['建築設計', '梁正芳建築師'],
+    ['公設景觀', '李天鐸建築師'],
+    ['基地面積', '4000坪'],
+    ['樓層規劃', '地上24樓/地下4樓'],
+    ['坪數規劃', '26-36坪'],
   ],
 }

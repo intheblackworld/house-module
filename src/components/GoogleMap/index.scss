@@ -1,6 +1,7 @@
 .mapFrame {
   width: 100vw;
-  height: 420px;
+  // height: 420px;
+  height: 265px // for ded
 }
 
 /* 螢幕尺寸標準 */
@@ -14,7 +15,8 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .mapFrame {
-    height: 360px;
+    // height: 360px;
+    height: 186px; // for ded
   }
 }
 

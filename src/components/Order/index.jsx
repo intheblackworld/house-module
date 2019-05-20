@@ -17,7 +17,7 @@ import info from '../../info'
 import { isMobile } from '../../utils'
 
 import { cityList, renderAreaList } from './address'
-import css from './index.scss'
+import css from './ded.scss'
 
 const Order = ({ show, noTitle }) => {
   // 從網址接收 utm 資料

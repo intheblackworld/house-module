@@ -16,9 +16,11 @@ const SlidePicker = ({ show, slideList }) => {
       {!isMobile && (
         <div className={c.slideView}>
           <img key={slideList[imgIndex].src} src={slideList[imgIndex].src} alt="長虹天際的圖片" />
-          <div className={c.slideTitle}>
-            <h3>{slideList[imgIndex].desc}</h3>
-          </div>
+          {slideList[imgIndex].desc && (
+            <div className={c.slideTitle}>
+              <h3>{slideList[imgIndex].desc}</h3>
+            </div>
+          )}
         </div>
       )}
       <div className={c.slideControl}>
@@ -44,7 +46,7 @@ const SlidePicker = ({ show, slideList }) => {
         </Carousel>
         {isMobile && (
           <div className={c.arrows}>
-            <h3>{slideList[imgIndex].desc}</h3>
+            {slideList[imgIndex].desc && <h3>{slideList[imgIndex].desc}</h3>}
           </div>
         )}
       </div>

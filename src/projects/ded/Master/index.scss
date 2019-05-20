@@ -1,0 +1,103 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  background-image: url('./bg-1.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes showHide {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.colorBg {
+  background-image: url('./bg-2.png');
+  position: absolute;
+  // opacity: 0;
+  animation: showHide 5s linear 0s infinite;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  width: 512px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+
+.subTitle {
+  font-size: 32px;
+  height: 56px;
+  text-align: center;
+  color: #fbdda6;
+  border-top: 2px solid #fbdda6;
+  border-bottom: 2px solid #fbdda6;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+
+// show hide
+.bg {
+  // @include animate(fadeIn, .8s, .4s);
+  &.show {
+    .title {
+      @include animate(fadeIn, .8s, .8s);
+    }
+
+    .subTitle {
+      @include animate(fadeIn, .8s, 1.2s);
+    }
+    
+  }
+
+  &.hide {
+    .title, .subTitle {
+      @include animate(fadeOut, .8s, .0s);
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .title {
+    width: 188px;
+  }
+
+  .subTitle {
+    font-size: 20px;
+    width: 188px;
+    height: 65px;
+    margin-top: 10px;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}

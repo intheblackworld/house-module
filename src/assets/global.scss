@@ -9,13 +9,14 @@
 
   .viewport-frame {
     position: absolute;
-    height: 400px;
+    min-height: 400px;
+    height: 100%;
   }
 
   #app {
     width: 100vw;
     overflow: hidden;
-    background: #000;
+    background: #fff;
   }
 
   .masterBg {
@@ -27,7 +28,7 @@
 
   .bg {
     width: 100vw;
-    height: calc(100vh - #{$navigationPCHeight});
+    min-height: calc(100vh - #{$navigationPCHeight});
     background-size: cover;
     background-position: center;
   }
@@ -43,7 +44,7 @@
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
     .bg {
-      height: calc(100vh - #{$navigationTabletHeight});
+      min-height: calc(100vh - #{$navigationTabletHeight});
     }
   }
 
@@ -51,12 +52,17 @@
   @media only screen and (max-width: 767px) {
     .viewport-frame {
       position: absolute;
-      height: 100vh;
+      min-height: 100vh;
+      height: 100%;
       width: 100px;
     }
 
     .bg {
-      height: calc(100vh - #{$navigationMobileHeight});
+      min-height: calc(100vh - #{$navigationMobileHeight});
+    }
+
+    .flex-c {
+      flex-wrap: wrap;
     }
   }
 
