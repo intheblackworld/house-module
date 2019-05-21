@@ -7,6 +7,7 @@ const MobileNavigation = () => {
   const { phone, googleLink, fbLink } = info
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
+    window.location.href = `tel:${info.phone.replace('-', '')}`
     setTimeout(() => {
       window.location.href = 'phoneThanks'
     }, 1000)

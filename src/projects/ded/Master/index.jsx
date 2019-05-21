@@ -9,8 +9,10 @@ const Master = ({ show }) => {
 
   const [scroll, setScroll] = useState(0)
   window.addEventListener('scroll', () => {
+    if (scroll > 2000) {
+      return
+    }
     setScroll(window.pageYOffset)
-    console.log('in listener', scroll)
   })
 
   return (
