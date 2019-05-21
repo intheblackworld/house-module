@@ -12,7 +12,7 @@ import info from '../../../info'
 import c from './index.scss'
 
 const ContactBlock = ({ show }) => (
-  <div className={withTrans('block', c, show)}>
+  <div id="contact" className={withTrans('block', c, show)}>
     {isMobile ? (
       <img src={require('./contactm.png')} className={c.title} alt="" />
     ) : (

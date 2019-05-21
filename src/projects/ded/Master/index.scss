@@ -1,75 +1,87 @@
 @import '../../../assets/animate.scss';
 
 .bg {
-  background-image: url('./bg-1.png');
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
-}
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
 
-@keyframes showHide {
-  0% {
-    opacity: 0;
+
+  img {
+    width: 100%;
   }
 
-  50% {
-    opacity: 1;
+  .sky {
+    animation: cloud-small-moving 60s linear 0s infinite normal;
   }
 
-  100% {
-    opacity: 0;
+
+  @keyframes cloud-small-moving {
+    0% {
+      transform: scaleX(1);
+    }
+
+    95% {
+      opacity: 1;
+    }
+
+    99% {
+      transform: scaleX(2);
+      opacity: 0;
+    }
+
+    99.5% {
+      transform: scaleX(1);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
   }
-}
 
-.colorBg {
-  background-image: url('./bg-2.png');
-  position: absolute;
-  // opacity: 0;
-  animation: showHide 5s linear 0s infinite;
-}
+  .building {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
-.container {
-  position: relative;
-  z-index: 2;
-}
+  .title {
+    position: absolute;
+    display: block;
+    top: 10%;
+    z-index: 2;
+  }
 
-.title {
-  width: 512px;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-}
-
-.subTitle {
-  font-size: 32px;
-  height: 56px;
-  text-align: center;
-  color: #fbdda6;
-  border-top: 2px solid #fbdda6;
-  border-bottom: 2px solid #fbdda6;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
+  .train {
+    width: 50vw;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: -2px;
+    transform: translateX(120vw);
+  }
 }
 
 // show hide
 .bg {
+
+  .title {
+    opacity: 0;
+  }
   // @include animate(fadeIn, .8s, .4s);
   &.show {
     .title {
-      @include animate(fadeIn, .8s, .8s);
+      @include animate(fadeIn, .8s, .2s);
     }
-
-    .subTitle {
-      @include animate(fadeIn, .8s, 1.2s);
-    }
-    
   }
 
   &.hide {
-    .title, .subTitle {
+    .title {
       @include animate(fadeOut, .8s, .0s);
     }
   }
@@ -82,15 +94,14 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .title {
-    width: 188px;
-  }
-
-  .subTitle {
-    font-size: 20px;
-    width: 188px;
-    height: 65px;
-    margin-top: 10px;
+  .bg {
+    .title {
+      top: 30%;
+    }
+    .train {
+      width: 60vw;
+      transform: translateX(100vw);
+    }
   }
 }
 

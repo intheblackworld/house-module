@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-import info from '../../sections/ContactSection/info'
+import info from '../../info'
 import c from './index.scss'
 
 const MobileNavigation = () => {
-  const { phone, googleLink } = info
+  const { phone, googleLink, fbLink } = info
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
     setTimeout(() => {
@@ -25,19 +25,19 @@ const MobileNavigation = () => {
       </a>
       <Link
         className={c.navItem}
-        to="section11"
+        to="contact"
         spy
         smooth
         duration={500}
         offset={49}
-        key="section11"
+        key="contact"
       >
         <img src={require('./pen.png')} alt="" className={c.navIcon} />
         <div className={c.label}>預約賞屋</div>
       </Link>
       <a
         className={c.navItem}
-        href="https://m.me/LSWG22508111"
+        href={fbLink}
         target="_blank"
         rel="noopener noreferrer"
       >
