@@ -155,7 +155,7 @@ const Order = ({ show, noTitle }) => {
 
   useLayoutEffect(() => {
     if (isMobile) {
-      document.getElementById('orderContainer').style.height = `${window.screen.availHeight}px`;
+      // document.getElementById('orderContainer').style.height = `${window.screen.availHeight}px`;
     }
   })
 

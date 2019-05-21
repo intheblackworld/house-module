@@ -38,7 +38,7 @@ const ContactInfo = ({
         </div>
 
         <HButton icon={faFacebookF} link={fbLink}>
-          FACEBOOK
+          前往粉絲專頁
         </HButton>
         <MapLink link={googleLink}>{address}</MapLink>
       </div>
