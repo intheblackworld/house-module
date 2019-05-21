@@ -5,7 +5,7 @@ const MapLink = ({ children, link }) => (
   <div className={css.mapLink}>
     <div className={css.info}>{children}</div>
     <a className={css.link} href={link} target="_blank" rel="noopener noreferrer">
-      <span>開啟 Google 地圖</span>
+      <span>導航 Google 地圖</span>
     </a>
   </div>
 )

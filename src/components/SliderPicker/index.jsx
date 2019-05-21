@@ -49,6 +49,7 @@ const SlidePicker = ({ show, slideList }) => {
             {slideList[imgIndex].desc && <h3>{slideList[imgIndex].desc}</h3>}
           </div>
         )}
+        <div style={{ height: '30px' }} />
       </div>
     </div>
   )

@@ -14,7 +14,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import PolicyDialog from 'components/PolicyDialog'
 
 import info from '../../info'
-import { isMobile } from '../../utils'
+// import { isMobile } from '../../utils'
 
 import { cityList, renderAreaList } from './address'
 import css from './ded.scss'
@@ -154,9 +154,9 @@ const Order = ({ show, noTitle }) => {
   const selectAreaRef = useRef()
 
   useLayoutEffect(() => {
-    if (isMobile) {
-      document.getElementById('orderContainer').style.height = `${window.screen.availHeight}px`;
-    }
+    // if (isMobile) {
+    //   document.getElementById('orderContainer').style.height = `${window.screen.availHeight}px`;
+    // }
   })
 
   useEffect(() => {

@@ -6,14 +6,14 @@
   .block {
     // show hide
     // block1
-    .title,
+    .blockTitle,
     .leftImg,
     .itemList {
       opacity: 0;
     }
 
     &.show {
-      .title {
+      .blockTitle {
         @include animate(fadeInLeft, 0.8s, 0s);
       }
 
@@ -27,7 +27,7 @@
     }
 
     &.hide {
-      .title {
+      .blockTitle {
         @include animate(fadeOut, 0.8s, 0s);
       }
     }
@@ -77,9 +77,25 @@
     }
   }
 
-  .title {
+  .blockTitle {
     margin-top: 56px;
     margin-bottom: 45px;
+    width: 100%;
+    padding: 15px 0;
+    border-left: solid 64px #0f9ad7;
+    background-color: #fff400;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+
+    h3 {
+      font-size: 48px;
+      line-height: 1.38;
+      color: #0f9ad7;
+    }
+  }
+
+  .title {    
     width: 100%;
   }
 
@@ -271,6 +287,23 @@
   .container,
   .block {
     width: 100%;
+
+    .blockTitle {
+      margin: 20px 0;
+      width: 100%;
+      padding: 12px 0;
+      border-left: solid 22px #0f9ad7;
+      background-color: #fff400;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+  
+      h3 {
+        font-size: 30px;
+        line-height: 1.3;
+        color: #0f9ad7;
+      }
+    }
 
     // block1
     .title {

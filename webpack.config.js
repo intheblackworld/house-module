@@ -141,15 +141,15 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '長虹天際︱唯有長虹超越期待︱官網',
-      metaTitle: '長虹天際︱唯有長虹超越期待︱官網',
+      title: '上東城│訂金到交屋43萬起 住大東區│官網',
+      metaTitle: '上東城│訂金到交屋43萬起 住大東區│官網',
       metaDescription:
-        '德友藏：日本百年建築團隊岩田地崎建設跨海代表作，頂埔捷運站散步1分鐘出站就到家，接待中心：新北市土城區中央路四段26號，禮賓專線：02-2268-8765',
-      metaKeywords: '德友藏,德友,土城買房,土城建案,頂埔建案,土城新建案',
-      ogMetaTitle: '德友藏︱一座不穿制服的建築︱官網',
+        '上東城：台南大東區我做主！3分鐘仁德交流道、家樂福、近南科，李天鐸景觀公設中庭，2-3房，接待中心：台南市東區中華東路三段65號(TOYOTA旁)，禮賓專線：06-289-6111',
+      metaKeywords: '上東城,興富發上東城,仁德買房,永康買房,台南買房,台南東區買房',
+      ogMetaTitle: '上東城│訂金到交屋43萬起 住大東區│官網',
       ogMetaType: 'website',
       ogMetaDescription:
-        '德友藏：日本百年建築團隊岩田地崎建設跨海代表作，頂埔捷運站散步1分鐘出站就到家，接待中心：新北市土城區中央路四段26號，禮賓專線：02-2268-8765',
+        '上東城：台南大東區我做主！3分鐘仁德交流道、家樂福、近南科，李天鐸景觀公設中庭，2-3房，接待中心：台南市東區中華東路三段65號(TOYOTA旁)，禮賓專線：06-289-6111',
       template: 'index.html',
       hash: true,
     }),

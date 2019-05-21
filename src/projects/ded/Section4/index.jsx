@@ -14,13 +14,17 @@ import c from './index.scss'
 const ContactBlock = ({ show }) => (
   <div id="contact" className={withTrans('block', c, show)}>
     {isMobile ? (
-      <img src={require('./contactm.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>預約賞屋</h3>
+      </div>
     ) : (
-      <img src={require('./contact.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>預約賞屋</h3>
+      </div>
     )}
     {isMobile ? (
       <Viewport>
-        <div id="orderBg" className={`${c.order} bg`}>
+        <div id="orderBg" className={`${c.order}`}>
           <Order />
         </div>
       </Viewport>
@@ -61,7 +65,7 @@ const InfoBlock = ({ show }) => {
           </div>
           <div>
             <a href={info.fbLink} target="_blank" rel="noopener noreferrer">
-              facebook
+              前往粉絲專頁
             </a>
           </div>
           <div>
@@ -69,7 +73,7 @@ const InfoBlock = ({ show }) => {
           </div>
           <div>
             <a href={info.googleLink} target="_blank" rel="noopener noreferrer">
-              開啟google地圖
+              導航google地圖
             </a>
           </div>
         </div>

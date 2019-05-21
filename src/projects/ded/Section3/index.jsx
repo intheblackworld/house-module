@@ -63,9 +63,16 @@ import c from './index.scss'
 const Block1 = ({ show }) => (
   <div className={withTrans('block', c, show)}>
     {isMobile ? (
-      <img src={require('./titlem1.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          聚焦大東區 <br />
+          向上新未來
+        </h3>
+      </div>
     ) : (
-      <img src={require('./title1.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>聚焦大東區 向上新未來</h3>
+      </div>
     )}
     <div className={c.content}>
       <img src={require('./leftImg.png')} className={c.leftImg} alt="" />
@@ -130,9 +137,27 @@ const Block1 = ({ show }) => (
 const Block2 = ({ show }) => (
   <div id="point3" className={withTrans('block', c, show)}>
     {isMobile ? (
-      <img src={require('./titlem2.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          仁德交流道、
+          <br />
+          綜合轉運站交通
+          <br />
+          接線公園綠地、
+          <br />
+          優質學區
+          <br />
+          高端純住一氣呵成！
+        </h3>
+      </div>
     ) : (
-      <img src={require('./title2.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          仁德交流道、綜合轉運站交通接線
+          <br />
+          公園綠地、優質學區 高端純住一氣呵成！
+        </h3>
+      </div>
     )}
     <div className={c.topTitle}>
       <h3>南紡購物商圈×成大商圈×東門商圈×德安商圈×仁和商圈×家樂福商圈</h3>
@@ -172,9 +197,25 @@ const Block2 = ({ show }) => (
 const Block3 = ({ show, showDialog }) => (
   <div className={withTrans('block', c, show)}>
     {isMobile ? (
-      <img src={require('./titlem3.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          仁德交流道南北亨通
+          <br />
+          仁德綜合轉運站
+          <br />
+          實現中遠近動脈
+          <br />
+          一路暢旺！
+        </h3>
+      </div>
     ) : (
-      <img src={require('./title3.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          仁德交流道南北亨通 仁德綜合轉運站實現中
+          <br />
+          遠近動脈一路暢旺！
+        </h3>
+      </div>
     )}
     <div className="flex-c">
       <div className={c.mapBlock}>
@@ -280,9 +321,21 @@ const slideList = [
 const Block4 = ({ show }) => (
   <div id="point4" className={withTrans('block', c, show)}>
     {isMobile ? (
-      <img src={require('./titlem4.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          菁英獨享 VVIP御所
+          <br />
+          HOME & HOTEL
+        </h3>
+      </div>
     ) : (
-      <img src={require('./title4.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          菁英獨享 VVIP御所
+          <br />
+          HOME & HOTEL
+        </h3>
+      </div>
     )}
     <div className={`${c.topTitle} ${c.leftBarTitle}`}>
       <p>
@@ -310,9 +363,17 @@ const Block4 = ({ show }) => (
 const Block5 = ({ show }) => (
   <div id="point5" className={withTrans('block', c, show)}>
     {isMobile ? (
-      <img src={require('./titlem5.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>
+          興富發
+          <br />
+          為您榮耀幸福版圖
+        </h3>
+      </div>
     ) : (
-      <img src={require('./title5.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>興富發 為您榮耀幸福版圖</h3>
+      </div>
     )}
     <div className={`${c.carouselTitle} ${c.slideTitle}`}>
       <h3>建築龍頭 上市品牌</h3>
@@ -372,9 +433,13 @@ const Block5 = ({ show }) => (
 const Block6 = ({ show }) => (
   <div className={withTrans('block', c, show)}>
     {isMobile ? (
-      <img src={require('./titlem6.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>李天鐸豪宅氣度</h3>
+      </div>
     ) : (
-      <img src={require('./title6.png')} className={c.title} alt="" />
+      <div className={c.blockTitle}>
+        <h3>李天鐸豪宅氣度</h3>
+      </div>
     )}
     <div className={`${c.carouselTitle} ${c.slideTitle}`}>
       <h3>擘劃景觀共演飯店家</h3>

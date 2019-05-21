@@ -95,9 +95,14 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
+    
     .title {
-      top: 30%;
+      top: 10%;
     }
+
+    // .building {
+    //   bottom: 10%;
+    // }
     .train {
       width: 60vw;
       transform: translateX(100vw);
