@@ -446,6 +446,11 @@
         }
       }
   }
+
+  .dialog {
+    overflow-x: scroll;
+    z-index: 200 !important;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

@@ -14,6 +14,7 @@ const Carousel = ({
   infinite = true,
   dots = false,
   arrows = false,
+  swipe = true,
   pauseOnHover = false,
   speed = 500,
   accessibility = true,
@@ -21,6 +22,7 @@ const Carousel = ({
   slidesToScroll = 1,
   initialSlide = 0,
   afterChange,
+  beforeChange,
   vertical = false,
 }) => (
   <Slider
@@ -32,6 +34,7 @@ const Carousel = ({
     infinite={infinite}
     dots={dots}
     arrows={arrows}
+    swipe={swipe}
     pauseOnHover={pauseOnHover}
     speed={speed}
     accessibility={accessibility}
@@ -40,6 +43,7 @@ const Carousel = ({
     initialSlide={initialSlide}
     className={css.carousel}
     afterChange={afterChange}
+    beforeChange={beforeChange}
     vertical={vertical}
   >
     {children}

@@ -3,6 +3,7 @@ export default {
   locations: { lat: 22.9806059, lng: 120.2257531 },
   phone: '06-289-6111',
   fbLink: 'https://www.facebook.com/DTED062896111/',
+  fbMessage: 'https://m.me/DTED062896111/',
   googleLink: 'https://goo.gl/maps/JL78nmwc8a9T3nPg7',
   caseName: '上東城',
 

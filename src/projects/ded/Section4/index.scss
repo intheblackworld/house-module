@@ -277,3 +277,21 @@
 // 避免過度到 1280 x 720 時，設計未考量的調整
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
 }
+
+
+.closeCall,
+.closeMessage,
+.closeMap {
+  font-size: 36px;
+  width: 30px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 200;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
+  }
+}

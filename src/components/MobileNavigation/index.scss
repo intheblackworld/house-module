@@ -8,7 +8,6 @@
   z-index: 100;
   box-shadow: 0 -2px 5px 0 #000;
 
-
   .navItem {
     flex: 1;
     color: #fff;
@@ -32,5 +31,22 @@
 
   .label {
     text-align: center;
+  }
+}
+
+.closeCall,
+.closeMessage,
+.closeMap {
+  font-size: 36px;
+  width: 30px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 200;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
   }
 }

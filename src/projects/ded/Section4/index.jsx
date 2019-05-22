@@ -1,10 +1,13 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
+import { faPhone, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import cx from 'classnames'
 import { withTrans } from 'utils'
 import Viewport from 'components/ViewPort'
 import Order from 'components/Order'
 import GoogleMap from 'components/GoogleMap'
+import { CallDialog, MapDialog } from 'components/Dialog'
 // import FullScreen from 'layouts/FullScreen'
 // import { PreContainer, DescContainer } from 'components/cht'
 import { isMobile } from '../../../utils'
@@ -37,22 +40,50 @@ const ContactBlock = ({ show }) => (
 )
 
 const InfoBlock = ({ show }) => {
-  const redirectToPhoneThanks = (e) => {
-    e.preventDefault()
-    window.location.href = `tel:${info.phone.replace('-', '')}`
-    setTimeout(() => {
-      window.location.href = 'phoneThanks'
-    }, 1000)
+  const [isCallShow, toggleCallDialog] = useState(false)
+
+  const showCallDialog = () => {
+    toggleCallDialog(!isCallShow)
   }
 
+  const closeCallDialog = () => {
+    toggleCallDialog(false)
+  }
+
+  const [isMapShow, toggleMapDialog] = useState(false)
+
+  const showMapDialog = () => {
+    toggleMapDialog(!isMapShow)
+  }
+
+  const closeMapDialog = () => {
+    toggleMapDialog(false)
+  }
+
+  const closeCallClass = cx(c.closeCall, {
+    [c.show]: isCallShow,
+  })
+
+  const closeMapClass = cx(c.closeMap, {
+    [c.show]: isMapShow,
+  })
   return (
     <div className={withTrans('infoBg', c, show)}>
+      <CallDialog show={isCallShow} closeDialog={closeCallDialog} />
+      <div className={closeCallClass} onClick={closeCallDialog} onKeyDown={closeCallDialog}>
+        <FontAwesomeIcon icon={faTimes} />
+      </div>
+      <MapDialog show={isMapShow} closeDialog={closeMapDialog} />
+      <div className={closeMapClass} onClick={closeMapDialog} onKeyDown={closeMapDialog}>
+        <FontAwesomeIcon icon={faTimes} />
+      </div>
       <div className={c.infoContainer}>
         <img src={require('./infoLogo.png')} alt="" />
         <div className={c.infoList}>
           <div>
             {isMobile ? (
-              <a href={`tel:${info.phone.replace('-', '')}`} onClick={redirectToPhoneThanks}>
+              // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+              <a target="_blank" rel="noopener noreferrer" onClick={showCallDialog}>
                 <FontAwesomeIcon icon={faPhone} />
                 {info.phone}
               </a>
@@ -72,9 +103,16 @@ const InfoBlock = ({ show }) => {
             <p>{info.address}</p>
           </div>
           <div>
-            <a href={info.googleLink} target="_blank" rel="noopener noreferrer">
-              導航google地圖
-            </a>
+            {isMobile ? (
+              /* eslint-disable-next-line jsx-a11y/click-events-have-key-events */
+              <a onClick={showMapDialog} rel="noopener noreferrer">
+                導航google地圖
+              </a>
+            ) : (
+              <a href={info.googleLink} target="_blank" rel="noopener noreferrer">
+                導航google地圖
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -104,7 +142,7 @@ const InfoFooter = ({ show }) => (
     <div>
       <h3>facebook</h3>
       {/* eslint-disable-next-line */}
-      <iframe 
+      <iframe
         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDTED062896111%2F&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=654913588263352"
         width={`${isMobile ? '250' : '360'}`}
         height={`${isMobile ? '92' : '132'}`}
