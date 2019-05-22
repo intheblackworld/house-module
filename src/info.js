@@ -2,6 +2,7 @@ export default {
   address: '新北市板橋區華江一路（龍一駕訓班旁）',
   phone: '02-2250-8111',
   fbLink: 'https://www.facebook.com/%E7%AB%8B%E4%BF%A1%E5%90%BE%E7%95%8C-2242674725999748/',
+  fbMessage: 'https://m.me/LSWG22508111',
   googleLink: 'https://goo.gl/maps/25bztzCpW282',
   caseName: '立信吾界',
 

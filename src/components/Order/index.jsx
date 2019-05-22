@@ -11,7 +11,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import PolicyDialog from 'components/PolicyDialog'
 
-import info from '../../sections/ContactSection/info'
+import info from '../../info'
 import { isMobile } from '../../utils'
 
 import { cityList, renderAreaList } from './address'

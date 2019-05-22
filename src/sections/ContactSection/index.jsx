@@ -9,7 +9,7 @@ import HouseInfo from 'components/HouseInfo'
 import AnimateBg from 'components/AnimateBg'
 import { isMobile } from '../../utils'
 import css from './index.scss'
-import info from './info'
+import info from '../../info'
 
 const {
   address, phone, fbLink, googleLink, houseInfos,
