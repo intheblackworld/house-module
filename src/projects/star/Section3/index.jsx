@@ -189,7 +189,7 @@ const GoogleBtn = ({ show }) => (
       fontSize={isMobile ? '12px' : '20px'}
       link="https://goo.gl/maps/UUvHaMXa1at"
     >
-      開啟 Google Map 導航
+      導航 Google Map
     </IconBtn>
   </div>
 )
