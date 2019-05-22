@@ -11,6 +11,10 @@ const SlidePicker = ({ show, slideList }) => {
   const addIndex = () => {
     setImgIndex(imgIndex === slideList.length - 1 ? 0 : imgIndex + 1)
   }
+  // const subIndex = () => {
+  //   setImgIndex(imgIndex === 0 ? slideList.length - 1 : imgIndex - 1)
+  // }
+  // console.log(imgIndex)
   return (
     <div className={withTrans('slideContainer', c, show)}>
       {!isMobile && (

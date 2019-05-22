@@ -1,0 +1,505 @@
+@import '../../../assets/animate.scss';
+
+.container {
+  width: 1117px;
+  margin: 0 auto;
+  .block {
+    // show hide
+    // block1
+    .blockTitle,
+    .leftImg,
+    .itemList {
+      opacity: 0;
+    }
+
+    &.show {
+      .blockTitle {
+        @include animate(fadeInLeft, 0.8s, 0s);
+      }
+
+      .leftImg {
+        @include animate(fadeInUp, 0.8s, 0.4s);
+      }
+
+      .itemList {
+        @include animate(fadeInLeft, 0.8s, 0.8s);
+      }
+    }
+
+    &.hide {
+      .blockTitle {
+        @include animate(fadeOut, 0.8s, 0s);
+      }
+    }
+
+    // block2
+    .carousel {
+      opacity: 0;
+    }
+
+    .topTitle,
+    .carouselTitle {
+      h3,
+      p {
+        opacity: 0;
+      }
+    }
+
+    &.show {
+      .topTitle {
+        h3 {
+          @include animate(fadeInLeft, 0.8s, 0s);
+        }
+
+        p {
+          @include animate(fadeInUp, 0.8s, 0.2s);
+        }
+      }
+      .carouselTitle {
+        h3 {
+          @include animate(fadeInLeft, 0.8s, 0.4s);
+        }
+
+        p {
+          @include animate(fadeInUp, 0.8s, 0.6s);
+        }
+      }
+
+      .carousel {
+        @include animate(fadeInUp, 0.8s, 1s);
+      }
+    }
+
+    &.hide {
+      .title {
+        @include animate(fadeOut, 0.8s, 0s);
+      }
+    }
+  }
+
+  .blockTitle {
+    margin-top: 56px;
+    margin-bottom: 45px;
+    width: 100%;
+    padding: 15px 0;
+    border-left: solid 64px #0f9ad7;
+    background-color: #fff400;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+
+    h3 {
+      font-size: 48px;
+      line-height: 1.38;
+      color: #0f9ad7;
+    }
+  }
+
+  .title {    
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .leftImg {
+      width: 602px;
+    }
+
+    .itemList {
+      position: absolute;
+      width: 550px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      right: 50px;
+
+      .item {
+        width: 166px;
+        height: 166px;
+        margin: 5px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        transition: all 0.5s;
+
+        &:hover {
+          border: 5px solid #fff400;
+        }
+
+        .color {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: #0f9ad7;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            color: #fff;
+            font-size: 18px;
+          }
+
+          span {
+            font-size: 24px;
+            color: #fff400;
+          }
+        }
+      }
+    }
+  }
+  // block2
+  .topTitle {
+    h3 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .carouselTitle {
+    margin-bottom: 30px;
+    h3 {
+      text-align: center;
+      color: #0f9ad7;
+      font-size: 48px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.56;
+
+      span {
+        color: #0f9ad7;
+      }
+    }
+  }
+  .carousel {
+    width: 838px;
+    margin: 0 auto;
+  }
+
+  // block3
+  .mapBlock {
+    width: 489px;
+    position: relative;
+    &:hover {
+      .mask {
+        opacity: 1;
+      }
+    }
+  }
+  .map {
+    width: 100%;
+  }
+
+  .mask {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  .mapContent {
+    width: 449px;
+    margin-left: 45px;
+
+    .item {
+      margin-bottom: 40px;
+      h3 {
+        font-size: 28px;
+        color: #0f9ad7;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.56;
+      }
+    }
+  }
+
+  // block4
+  .leftBarTitle {
+    border-left: 7px solid #0f9ad7;
+    font-size: 18px;
+    padding-left: 18px;
+    margin-left: 140px;
+    margin-bottom: 30px;
+  }
+
+  .slideTitle {
+    h3 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+  }
+  .slide {
+    width: 950px;
+    margin: 0 auto;
+  }
+
+  // block5 {
+  .carousel.withMargin {
+    width: 980px;
+  }
+
+  .marginSlide {
+    margin: 0 10px;
+  }
+
+  
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    width: 950px;
+  }
+
+  .carousel.withMargin {
+    width: 850px !important;
+  }
+
+  .marginSlide {
+    margin: 0 10px;
+    img {
+      width: 270px;
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .container,
+  .block {
+    width: 100%;
+
+    .blockTitle {
+      margin: 20px 0;
+      width: 100%;
+      padding: 12px 0;
+      border-left: solid 22px #0f9ad7;
+      background-color: #fff400;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+  
+      h3 {
+        font-size: 30px;
+        line-height: 1.3;
+        color: #0f9ad7;
+      }
+    }
+
+    // block1
+    .title {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .content {
+      display: block;
+      .leftImg {
+        width: 100%;
+      }
+
+      .itemList {
+        position: relative;
+        width: 100%;
+        right: auto;
+        justify-content: center;
+
+        .item {
+          width: 115px;
+          height: 115px;
+          margin: 20px 12px;
+
+          .color {
+            p {
+              font-size: 12px;
+            }
+
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    // block2
+    .topTitle {
+      width: 90%;
+      margin: 0 auto;
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: normal;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .carouselTitle {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      h3 {
+        text-align: center;
+        color: #0f9ad7;
+        font-size: 33px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.56;
+        text-align: justify;
+
+        span {
+          color: #0f9ad7;
+        }
+      }
+    }
+    .carousel {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .mapBlock {
+      width: 100%;
+    }
+    .map {
+      width: 100%;
+      margin-top: -24px;
+      margin-bottom: 30px;
+    }
+
+    .mapContent {
+      width: 90%;
+      margin-left: 0px;
+
+      .item {
+        width: 100%;
+        margin-bottom: 10px;
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.56;
+          text-align: justify;
+        }
+      }
+    }
+
+    // block4
+    .leftBarTitle {
+      border-left: none;
+      text-align: center;
+      font-size: 18px;
+      padding-left: 0px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .slideTitle {
+      h3 {
+        margin-top: 0;
+        font-size: 20px;
+      }
+    }
+    .slide {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    // block5 {
+      .carousel.withMargin {
+        width: 100% !important;
+      }
+    
+      .marginSlide {
+        margin: 0 0px;
+        img {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+  }
+
+  .dialog {
+    overflow-x: scroll;
+    z-index: 200 !important;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}
+
+.dialog {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  left: 0;
+
+  .dialogContent {
+    width: auto;
+    max-height: 90vh;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 51;
+    transform: translateY(-50%);
+  }
+
+  &.show {
+    display: block;
+  }
+}
+
+.close {
+  font-size: 36px;
+  width: 30px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 200;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
+  }
+}

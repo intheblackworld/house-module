@@ -116,14 +116,17 @@
 @media only screen and (max-width: 767px) {
   .slideContainer {
     width: 100%;
-    display: flex;
+    display: block;
+    margin-bottom: 0;
 
     .slideView {
+      width: 100%;
+      height: auto;
     }
 
     .slideControl {
       width: 100%;
-      height: 280px;
+      height: auto;
       position: relative;
       
       .slideImg {
@@ -169,6 +172,20 @@
 
       .nextBtn {
         right: 0;
+      }
+
+      .prev {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+      }
+
+      .next {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 0;
+        top: 0;
       }
 
       :global {
