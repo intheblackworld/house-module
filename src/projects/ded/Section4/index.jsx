@@ -95,24 +95,32 @@ const InfoBlock = ({ show }) => {
             )}
           </div>
           <div>
-            <a href={info.fbLink} target="_blank" rel="noopener noreferrer">
-              前往粉絲專頁
+            <a href={info.fbMessage} target="_blank" rel="noopener noreferrer">
+              FB Messenger諮詢
             </a>
           </div>
-          <div>
-            <p>{info.address}</p>
-          </div>
+
           <div>
             {isMobile ? (
               /* eslint-disable-next-line jsx-a11y/click-events-have-key-events */
               <a onClick={showMapDialog} rel="noopener noreferrer">
                 導航google地圖
+                <br />
+                <span style={{ fontSize: '14px' }}>{info.address}</span>
               </a>
             ) : (
               <a href={info.googleLink} target="_blank" rel="noopener noreferrer">
                 導航google地圖
+                <br />
+                <span style={{ fontSize: '14px' }}>{info.address}</span>
               </a>
             )}
+          </div>
+
+          <div>
+            <a href={info.fbLink} target="_blank" rel="noopener noreferrer">
+              前往粉絲專頁
+            </a>
           </div>
         </div>
       </div>

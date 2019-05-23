@@ -28,7 +28,7 @@ const Container = ({ show }) => {
           近4000坪大器造鎮
         </h3>
         <div className={c.desc}>
-          <p>夢時代商圈 X 成大商圈 X 東門商圈 X 德安商圈 X 仁和商圈 X 家樂福商圈</p>
+          <p>南紡購物商圈 X 成大商圈 X 東門商圈 X 德安商圈 X 仁和商圈 X 家樂福商圈</p>
           <br />
         </div>
       </div>
@@ -57,7 +57,7 @@ const Section2 = () => {
             </h3>
             <div className={c.desc}>
               <p>
-                夢時代商圈 X 成大商圈 X <br />
+                南紡購物商圈 X 成大商圈 X <br />
                 東門商圈 X 德安商圈 X <br />
                 仁和商圈 X 家樂福商圈
               </p>

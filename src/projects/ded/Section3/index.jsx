@@ -425,6 +425,9 @@ const Block5 = ({ show }) => (
         <div className={c.marginSlide}>
           <img src={require('./Group8.png')} alt="長虹天際的圖片" key={require('./Group8.png')} />
         </div>
+        <div className={c.marginSlide}>
+          <img src={require('./Group9.png')} alt="長虹天際的圖片" key={require('./Group9.png')} />
+        </div>
       </Carousel>
     </div>
   </div>
