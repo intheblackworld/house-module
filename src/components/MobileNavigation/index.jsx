@@ -61,7 +61,7 @@ const MobileNavigation = () => {
         <FontAwesomeIcon icon={faTimes} />
       </div>
 
-      <Link className={c.navItem} to="contact" spy smooth duration={500} offset={49} key="contact">
+      <Link className={c.navItem} to="section11" spy smooth duration={500} offset={49} key="section11">
         <img src={require('./pen.png')} alt="" className={c.navIcon} />
         <div className={c.label}>預約賞屋</div>
       </Link>
