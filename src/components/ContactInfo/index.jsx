@@ -1,46 +1,124 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Image } from 'semantic-ui-react'
 import logo from 'assets/img/contactInfo/logo.png'
 import cx from 'classnames'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons'
+import { faTimes, faPhone } from '@fortawesome/free-solid-svg-icons'
 import HButton from 'components/Button'
 import MapLink from 'components/Button/MapLink'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
-
-// import
-
-import css from './index.scss'
+import { CallDialog, MessageDialog, MapDialog } from 'components/Dialog'
+import c from './index.scss'
 
 const ContactInfo = ({
-  phone, fbLink, address, googleLink, show,
+  phone, fbLink, fbMessage, address, googleLink, show,
 }) => {
-  const logoClass = cx(css.logo, {
-    [css.show]: show,
-    [css.hide]: !show,
+  const logoClass = cx(c.logo, {
+    [c.show]: show,
+    [c.hide]: !show,
   })
 
-  const infoClass = cx(css.info, {
-    [css.show]: show,
-    [css.hide]: !show,
+  const infoClass = cx(c.info, {
+    [c.show]: show,
+    [c.hide]: !show,
+  })
+
+  const [isCallShow, toggleCallDialog] = useState(false)
+
+  const showCallDialog = () => {
+    toggleCallDialog(!isCallShow)
+  }
+
+  const closeCallDialog = () => {
+    toggleCallDialog(false)
+  }
+
+  const [isMessageShow, toggleMessageDialog] = useState(false)
+
+  const showMessageDialog = () => {
+    toggleMessageDialog(!isMessageShow)
+  }
+
+  const closeMessageDialog = () => {
+    toggleMessageDialog(false)
+  }
+
+  const [isMapShow, toggleMapDialog] = useState(false)
+
+  const showMapDialog = () => {
+    toggleMapDialog(!isMapShow)
+  }
+
+  const closeMapDialog = () => {
+    toggleMapDialog(false)
+  }
+
+  const closeCallClass = cx(c.closeCall, {
+    [c.show]: isCallShow,
+  })
+
+  const closeMessageClass = cx(c.closeMessage, {
+    [c.show]: isMessageShow,
+  })
+
+  const closeMapClass = cx(c.closeMap, {
+    [c.show]: isMapShow,
   })
   return (
-    <div className={css.contactInfo}>
+    <div className={c.contactInfo}>
       <Image src={logo} className={logoClass} />
       <div className={infoClass}>
         {/* 在手機或平板上顯示可撥打電話的按鈕 */}
-        <div className={css.hideOnPhone}>
+        <div className={c.hideOnPhone}>
           <HButton icon={faPhone}>{phone}</HButton>
         </div>
-        <div className={css.showOnPhone}>
-          <HButton icon={faPhone} link={`tel:${phone.replace('-', '')}`}>
+        <div className={c.showOnPhone}>
+          <HButton icon={faPhone} click={showCallDialog}>
             {phone}
           </HButton>
+          <CallDialog show={isCallShow} closeDialog={closeCallDialog} />
+          <div className={closeCallClass} onClick={closeCallDialog} onKeyDown={closeCallDialog}>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
+        </div>
+        {/* FB Messenger 諮詢 */}
+        <div className={c.hideOnPhone}>
+          <HButton icon={faFacebookMessenger} link={fbMessage}>
+            FB Messenger 諮詢
+          </HButton>
+        </div>
+        <div className={c.showOnPhone}>
+          <HButton icon={faFacebookMessenger} click={showMessageDialog}>
+            FB Messenger 諮詢
+          </HButton>
+          <MessageDialog show={isMessageShow} closeDialog={closeMessageDialog} />
+          <div
+            className={closeMessageClass}
+            onClick={closeMessageDialog}
+            onKeyDown={closeMessageDialog}
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
         </div>
 
+        {/* FB 粉絲頁 */}
         <HButton icon={faFacebookF} link={fbLink}>
           前往粉絲專頁
         </HButton>
-        <MapLink link={googleLink}>{address}</MapLink>
+
+        {/* Google Map */}
+        <div className={c.hideOnPhone}>
+          <MapLink link={googleLink}>{address}</MapLink>
+        </div>
+        <div className={c.showOnPhone}>
+          <MapLink click={showMapDialog}>
+            {address}
+          </MapLink>
+          <MapDialog show={isMapShow} closeDialog={closeMapDialog} />
+          <div className={closeMapClass} onClick={closeMapDialog} onKeyDown={closeMapDialog}>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
+        </div>
       </div>
     </div>
   )

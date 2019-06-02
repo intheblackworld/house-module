@@ -1,8 +1,10 @@
+@import './variable.scss';
+
 .btn {
   width: 270px;
   height: 60px;
-  color: rgba(0, 0 ,0 , .6);
-  border: 1px solid #56D8FF;
+  color: $dark;
+  border: 1px solid $main;
   background: transparent;
   font-size: 16px;
   display: flex;
@@ -18,20 +20,25 @@
   transition: all 0.3s ease-in-out;
 
   svg {
+    color: $main;
     margin-right: 15px;
   }
 }
 .flashTwice {
   &:hover {
-    border: 1px solid #56D8FF; // first border
-    color: #fff !important;
+    border: 1px solid $main; // first border
+    color: $light !important;
+
+    svg {
+      color: $light;
+    }
   }
   &::before {
     content: '';
     width: 0%;
     height: 100%;
     display: block;
-    background: #56D8FF; // second bg
+    background: $main; // second bg
     position: absolute;
     transform: skewX(-20deg);
     left: -10%;
@@ -47,7 +54,7 @@
     width: 0%;
     height: 100%;
     display: block;
-    background: #000; // first bg
+    background: $dark; // first bg
     position: absolute;
     transform: skewX(-20deg);
     left: -10%;

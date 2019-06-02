@@ -7,7 +7,7 @@ import cx from 'classnames'
 import SweetAlert from 'sweetalert2-react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 import PolicyDialog from 'components/PolicyDialog'
 
@@ -38,15 +38,15 @@ const Order = ({ show, noTitle }) => {
     setArea('')
   }, [city])
 
+  const [isLoading, setLoading] = useState(false)
+
   // 是否同意個資聲明
   const [isCheck, check] = useState(false)
   const submitClassName = cx(css.submit, {
-    [css.enable]: isCheck,
+    [css.enable]: isCheck && !isLoading,
     [css.show]: show,
     [css.hide]: !show,
   })
-
-  const [isLoading, setLoading] = useState(false)
 
   // 彈窗
   const [isShow, toggleDialog] = useState(false)
@@ -225,7 +225,7 @@ const Order = ({ show, noTitle }) => {
               </a>
               內容
             </label>
-)}
+          )}
         />
       </Form.Field>
       <PolicyDialog show={isShow} />
@@ -243,6 +243,7 @@ const Order = ({ show, noTitle }) => {
         onConfirm={() => triggerAlert(false)}
       />
       <Button className={submitClassName} onClick={submitForm}>
+        { isLoading && <FontAwesomeIcon icon={faSpinner} spin />}
         立即預約
       </Button>
     </div>
