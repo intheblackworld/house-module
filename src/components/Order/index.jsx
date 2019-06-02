@@ -109,11 +109,11 @@ const Order = ({ show, noTitle }) => {
         method: 'GET',
       },
     ).then(() => {
-      setLoading(false)
       fetch('contact-form.php', {
         method: 'POST',
         body: formData,
       }).then((response) => {
+        setLoading(false)
         if (response.status === 200) {
           window.location.href = 'formThanks'
         }
