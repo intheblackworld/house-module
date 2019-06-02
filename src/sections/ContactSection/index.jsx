@@ -21,7 +21,7 @@ const ContactSection = () => (
       <AnimateBg />
       {isMobile ? (
         <Viewport>
-          <div id="orderBg" className={`${css.order} bg`}>
+          <div id="orderBg" className={`${css.order}`}>
             <Order />
           </div>
         </Viewport>
