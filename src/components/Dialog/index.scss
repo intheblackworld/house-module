@@ -1,3 +1,5 @@
+@import './variable.scss';
+
 .dialog {
   display: none;
   width: 100vw;
@@ -21,7 +23,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .dialogContent {
+  .dialog .dialogContent {
     width: 295px;
     height: 295px;
     border-radius: 5px;
@@ -34,6 +36,14 @@
     margin: 0 auto;
     padding: 20px;
 
+    svg {
+      width: 80px !important;
+      color: #a99054 !important;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      display: block;
+      height: 105px;
+    }
 
     .callIcon {
       width: 80px;
@@ -61,7 +71,7 @@
     .dialogDesc {
       font-size: 16px;
       text-align: center;
-      color: #0f9ad7;
+      color: $main;
       margin-bottom: 15px;
     }
 
@@ -79,7 +89,7 @@
       width: 263px;
       height: 56px;
       line-height: 56px;
-      background-color: #0f9ad7;
+      background-color: $main;
       color: #fff;
       text-align: center;
     }

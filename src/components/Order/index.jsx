@@ -64,8 +64,8 @@ const Order = ({ show, noTitle }) => {
   const [alert, triggerAlert] = useState(false)
   const submitForm = () => {
     if (isLoading) return
-    setLoading(true)
     if (!isCheck) return
+    setLoading(true)
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value
@@ -74,6 +74,7 @@ const Order = ({ show, noTitle }) => {
       || !area
     ) {
       triggerAlert(true)
+      setLoading(false)
       return
     }
     const name = document.getElementById('name').value
