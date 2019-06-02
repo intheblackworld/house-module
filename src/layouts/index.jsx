@@ -6,7 +6,7 @@ import ViewPort from 'components/ViewPort'
 // import FixLink from 'components/FixLink'
 import FullScreen from './FullScreen'
 // import ContactSection from './ContactSection'
-import ContactSection2 from './ContactSection2'
+import ContactSection from './ContactSection'
 // import { isMobile } from '../utils'
 
 import './index.scss'
@@ -45,7 +45,7 @@ const Layout = () => (
     <Element id="point5">
       <Section5 />
     </Element>
-    <ContactSection2 />
+    <ContactSection />
     {/* <Section>
     <Element id="section5">
       <Section5 />

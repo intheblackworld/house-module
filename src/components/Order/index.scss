@@ -93,7 +93,7 @@
       width: 92px;
       font-size: 16px;
       opacity: 0.8;
-      color: #000;
+      color: #fff;
     }
   }
 
@@ -103,10 +103,10 @@
     .select,
     .select div {
       border-radius: 0 !important;
-      background: #384b67 !important;
-      color: rgba(255, 255, 255, 0.8) !important;
+      background: rgba(255, 255, 255, 1) !important;
+      color: rgba(0, 0, 0, 1) !important;
       border: none !important;
-      opacity: 0.9;
+      opacity: 1;
     }
 
     .select i {
@@ -123,7 +123,7 @@
 /* 本人知悉並同意個茲告知事項聲明內容 checkbox 樣式 */
 .checkbox {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 30px;
   // opacity: 0;
   // &.show {
   //   @include animate(fadeInUp, 0.8s, 0.6s);
@@ -134,7 +134,7 @@
 
   label {
     font-size: 14px !important;
-    color: #2d436e !important;
+    color: #fff !important;
     line-height: 24px !important;
     padding-left: 35px !important;
 
@@ -156,7 +156,7 @@
   }
 
   a {
-    color: #2d436e !important;
+    color: #fff !important;
   }
 }
 
@@ -165,24 +165,32 @@
   height: 72px !important;
   // opacity: 0 !important;
   border-radius: 0 !important;
-  background-color: #c7b39f !important;
-  color: #2d436e !important;
+  background-color: rgba(229, 212, 143, .4) !important;
+  color: #666;
   font-size: 20px !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
   transition: all 0.3s !important;
+  cursor: not-allowed;
+
+  svg {
+    margin-right: 15px;
+  }
 
   // &.show {
   //   @include animate(fadeInUp, 0.8s, 0.6s);
   // }
 
-  // &.enable {
-  //   background-color: rgba(229, 212, 143, 1) !important;
-  // }
+  &.enable {
+    cursor: pointer;
+    color: #2d436e !important;
+    background-color: rgba(229, 212, 143, 1) !important;
+  }
 }
 
 .orderTitle {
   text-align: center;
+  margin-top: 40px;
   margin-bottom: 40px;
 
   // & {
@@ -215,13 +223,13 @@
   h3 {
     font-size: 36px;
     font-weight: bold;
-    color: #2d436e;
+    color: #fff;
   }
 
   p {
     font-size: 20px;
     font-family: 'Noto Serif TC', serif;
-    color: #2d436e;
+    color: #fff;
   }
 }
 
@@ -245,7 +253,7 @@
 @media only screen and (max-width: 767px) {
   .orderContainer {
     width: 100%;
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 
   .orderTitle {
@@ -291,10 +299,10 @@
   }
 
   .control {
-    margin-bottom: 12px !important;
+    margin-bottom: 10px !important;
     label {
       width: 30% !important;
-      color: #2d436e !important;
+      color: #fff !important;
     }
 
     .field {
@@ -307,7 +315,7 @@
   }
 
   .checkbox {
-    margin-top: 0;
+    // margin-top: 0;
     white-space: nowrap;
 
     label {
@@ -334,6 +342,7 @@
 
   .submit {
     width: 100% !important;
+    height: 40px !important;
     margin-top: 10px !important;
     font-size: 16px !important;
   }
@@ -424,8 +433,8 @@
 
 :global {
   .ui.form input:not([type]), .ui.form textarea, .ui.form input:not([type]):focus,.ui.form .field.field input:-webkit-autofill {
-    background: #384b67 !important;
-    box-shadow: 0px 0px 0px 100px #384b67 inset !important;
+    background: rgba(255, 255, 255, .1) !important;
+    box-shadow: 0px 0px 0px 150px rgba(255, 255, 255, .1) inset !important;
     color: rgba(255, 255, 255, 0.98) !important;
     opacity: 0.75;
   }
