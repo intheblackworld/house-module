@@ -3,6 +3,7 @@ export default {
   locations: { lat: 25.0405227, lng: 121.5013042 },
   phone: '02-2370-8588',
   fbLink: 'https://www.facebook.com/GreatManor/?modal=admin_todo_tour',
+  fbMessage: 'https://m.me/GreatManor',
   googleLink: 'https://goo.gl/maps/tbiucSHRpJ8Poajr7',
   caseName: '新碩鼎和',
 

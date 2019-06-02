@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import cx from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import { CallDialog, MapDialog } from 'components/Dialog'
+import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons'
+import {
+  faTimes, faPhone, faPen, faMapMarkerAlt,
+} from '@fortawesome/free-solid-svg-icons'
+import { CallDialog, MessageDialog, MapDialog } from 'components/Dialog'
 import c from './index.scss'
 
 const MobileNavigation = () => {
@@ -17,15 +20,15 @@ const MobileNavigation = () => {
     toggleCallDialog(false)
   }
 
-  // const [isMessageShow, toggleMessageDialog] = useState(false)
+  const [isMessageShow, toggleMessageDialog] = useState(false)
 
-  // const showMessageDialog = () => {
-  //   toggleMessageDialog(!isMessageShow)
-  // }
+  const showMessageDialog = () => {
+    toggleMessageDialog(!isMessageShow)
+  }
 
-  // const closeMessageDialog = () => {
-  //   toggleMessageDialog(false)
-  // }
+  const closeMessageDialog = () => {
+    toggleMessageDialog(false)
+  }
 
   const [isMapShow, toggleMapDialog] = useState(false)
 
@@ -41,9 +44,9 @@ const MobileNavigation = () => {
     [c.show]: isCallShow,
   })
 
-  // const closeMessageClass = cx(c.closeMessage, {
-  //   [c.show]: isMessageShow,
-  // })
+  const closeMessageClass = cx(c.closeMessage, {
+    [c.show]: isMessageShow,
+  })
 
   const closeMapClass = cx(c.closeMap, {
     [c.show]: isMapShow,
@@ -53,42 +56,50 @@ const MobileNavigation = () => {
     <div className={c.mobileNavigation}>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
       <a className={c.navItem} target="_blank" rel="noopener noreferrer" onClick={showCallDialog}>
-        <img src={require('./phoneIcon.png')} alt="" className={c.navIcon} />
-        <div className={c.label}>立即來電</div>
+        <FontAwesomeIcon icon={faPhone} />
+        <div className={c.label}>撥打電話</div>
       </a>
       <CallDialog show={isCallShow} closeDialog={closeCallDialog} />
       <div className={closeCallClass} onClick={closeCallDialog} onKeyDown={closeCallDialog}>
         <FontAwesomeIcon icon={faTimes} />
       </div>
 
+      <Link
+        className={c.navItem}
+        to="contact"
+        spy
+        smooth
+        duration={500}
+        offset={0}
+        key="contact"
+      >
+        <FontAwesomeIcon icon={faPen} />
+        <div className={c.label}>預約賞屋</div>
+      </Link>
+
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-      {/* <a className={c.navItem} onClick={showMessageDialog} rel="noopener noreferrer">
-        <img src={require('./chat.png')} alt="" className={c.navIcon} />
+      <a className={c.navItem} onClick={showMessageDialog} rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faFacebookMessenger} />
         <div className={c.label}>FB諮詢</div>
       </a>
-      <MessageDialog show={isMessageShow} closeDialog={closeMessageDialog} /> */}
-      {/* <div
+      <MessageDialog show={isMessageShow} closeDialog={closeMessageDialog} />
+      <div
         className={closeMessageClass}
         onClick={closeMessageDialog}
         onKeyDown={closeMessageDialog}
       >
         <FontAwesomeIcon icon={faTimes} />
-      </div> */}
+      </div>
 
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
       <a className={c.navItem} onClick={showMapDialog} rel="noopener noreferrer">
-        <img src={require('./mapIcon.png')} alt="" className={c.navIcon} />
+        <FontAwesomeIcon icon={faMapMarkerAlt} />
         <div className={c.label}>地圖導航</div>
       </a>
       <MapDialog show={isMapShow} closeDialog={closeMapDialog} />
       <div className={closeMapClass} onClick={closeMapDialog} onKeyDown={closeMapDialog}>
         <FontAwesomeIcon icon={faTimes} />
       </div>
-
-      <Link className={c.navItem} to="order" spy smooth duration={500} offset={360} key="order">
-        <img src={require('./orderIcon.png')} alt="" className={c.navIcon} />
-        <div className={c.label}>立即預約</div>
-      </Link>
     </div>
   )
 }

@@ -123,7 +123,7 @@
 /* 本人知悉並同意個茲告知事項聲明內容 checkbox 樣式 */
 .checkbox {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 30px;
   // opacity: 0;
   // &.show {
   //   @include animate(fadeInUp, 0.8s, 0.6s);
@@ -165,57 +165,38 @@
   height: 72px !important;
   // opacity: 0 !important;
   border-radius: 0 !important;
-  background-color: #c7b39f !important;
-  color: #2d436e !important;
+  background-color: rgba(229, 212, 143, .4) !important;
+  color: #666;
   font-size: 20px !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
   transition: all 0.3s !important;
+  cursor: not-allowed;
+
+  svg {
+    margin-right: 15px;
+  }
 
   // &.show {
   //   @include animate(fadeInUp, 0.8s, 0.6s);
   // }
 
-  // &.enable {
-  //   background-color: rgba(229, 212, 143, 1) !important;
-  // }
+  &.enable {
+    cursor: pointer;
+    color: #2d436e !important;
+    background-color: rgba(229, 212, 143, 1) !important;
+  }
 }
 
 .orderTitle {
   text-align: center;
+  margin-top: 40px;
   margin-bottom: 40px;
-
-  // & {
-  //   h3,
-  //   p {
-  //     opacity: 0;
-  //   }
-  // }
-
-  // &.show {
-  //   h3 {
-  //     @include animate(fadeInDown, 0.6s, 0);
-  //   }
-
-  //   p {
-  //     @include animate(fadeInUp, 0.6s, 0.4s);
-  //   }
-  // }
-
-  // &.hide {
-  //   h3 {
-  //     @include animate(fadeOutDown, 0.6s, 0);
-  //   }
-
-  //   p {
-  //     @include animate(fadeOutUp, 0.6s, 0);
-  //   }
-  // }
 
   h3 {
     font-size: 36px;
     font-weight: bold;
-    color: #2d436e;
+    color: #932c59;
   }
 
   p {
@@ -245,7 +226,7 @@
 @media only screen and (max-width: 767px) {
   .orderContainer {
     width: 100%;
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 
   .orderTitle {
@@ -291,7 +272,7 @@
   }
 
   .control {
-    margin-bottom: 12px !important;
+    margin-bottom: 10px !important;
     label {
       width: 30% !important;
       color: #2d436e !important;
@@ -307,7 +288,7 @@
   }
 
   .checkbox {
-    margin-top: 0;
+    // margin-top: 0;
     white-space: nowrap;
 
     label {
@@ -334,6 +315,7 @@
 
   .submit {
     width: 100% !important;
+    height: 40px !important;
     margin-top: 10px !important;
     font-size: 16px !important;
   }

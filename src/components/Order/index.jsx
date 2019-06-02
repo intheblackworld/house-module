@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, {
+  useState, useEffect, useLayoutEffect, useRef,
+} from 'react'
 import {
-  Form, Checkbox, Button, Select, TextArea,
+  Form, Checkbox, Button, Select, TextArea, Ref,
 } from 'semantic-ui-react'
 
 import cx from 'classnames'
 import SweetAlert from 'sweetalert2-react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 import PolicyDialog from 'components/PolicyDialog'
 
 import info from '../../info'
+import { isMobile } from '../../utils'
 
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
@@ -37,15 +40,15 @@ const Order = ({ show, noTitle }) => {
     setArea('')
   }, [city])
 
+  const [isLoading, setLoading] = useState(false)
+
   // 是否同意個資聲明
   const [isCheck, check] = useState(false)
   const submitClassName = cx(css.submit, {
-    [css.enable]: isCheck,
+    [css.enable]: isCheck && !isLoading,
     [css.show]: show,
     [css.hide]: !show,
   })
-
-  const [isLoading, setLoading] = useState(false)
 
   // 彈窗
   const [isShow, toggleDialog] = useState(false)
@@ -63,8 +66,8 @@ const Order = ({ show, noTitle }) => {
   const [alert, triggerAlert] = useState(false)
   const submitForm = () => {
     if (isLoading) return
-    setLoading(true)
     if (!isCheck) return
+    setLoading(true)
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value
@@ -73,6 +76,7 @@ const Order = ({ show, noTitle }) => {
       || !area
     ) {
       triggerAlert(true)
+      setLoading(false)
       return
     }
     const name = document.getElementById('name').value
@@ -100,17 +104,19 @@ const Order = ({ show, noTitle }) => {
     const sec = time.getSeconds()
     const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${info.caseName}
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${
+        info.caseName
+      }
       `,
       {
         method: 'GET',
       },
     ).then(() => {
-      setLoading(false)
       fetch('contact-form.php', {
         method: 'POST',
         body: formData,
       }).then((response) => {
+        setLoading(false)
         if (response.status === 200) {
           window.location.href = 'formThanks'
         }
@@ -145,12 +151,63 @@ const Order = ({ show, noTitle }) => {
     [css.hide]: !show,
   })
 
+  // 嘗試解決客戶反應問題：點擊輸入框或選項框，鍵盤跳出後表單不見，畫面往上跳或被切掉
+  // start
+  const selectCityRef = useRef()
+  const selectAreaRef = useRef()
+
+  useLayoutEffect(() => {
+    if (isMobile) {
+      // document.getElementById('orderContainer').style.height = `${window.screen.availHeight}px`;
+    }
+  })
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (document.activeElement.tagName === 'INPUT') {
+        // 延迟出现是因为有些 Android 手机键盘出现的比较慢
+        window.setTimeout(() => {
+          document.activeElement.scrollIntoViewIfNeeded()
+        }, 100)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  })
+
+  useEffect(() => {
+    const handleClick = () => {
+      window.setTimeout(() => {
+        selectCityRef.current.scrollIntoViewIfNeeded()
+      }, 100)
+    }
+    selectCityRef.current.addEventListener('click', handleClick)
+    return () => {
+      selectCityRef.current.removeEventListener('click', handleClick)
+    }
+  })
+
+  useEffect(() => {
+    const handleClick = () => {
+      window.setTimeout(() => {
+        selectAreaRef.current.scrollIntoViewIfNeeded()
+      }, 100)
+    }
+    selectAreaRef.current.addEventListener('click', handleClick)
+    return () => {
+      selectAreaRef.current.removeEventListener('click', handleClick)
+    }
+  })
+  // end
+
   return (
-    <div className={css.orderContainer}>
+    <div id="contact" className={css.orderContainer}>
       {!noTitle && (
         <div className={titleClass}>
           <h3>預約賞屋</h3>
-          <p>買得起，住更好</p>
+          {/* <p>買得起，住更好</p> */}
         </div>
       )}
       <Form className={formClass}>
@@ -176,25 +233,29 @@ const Order = ({ show, noTitle }) => {
           <div className={css.control}>
             <label>居住城市</label> {/* eslint-disable-line */}
             <Form.Field className={css.field}>
-              <Select
-                id="city"
-                className={css.select}
-                placeholder="請選擇"
-                options={cityList}
-                onChange={(e, { value }) => setCity(value)}
-              />
+              <Ref innerRef={selectCityRef}>
+                <Select
+                  id="city"
+                  className={css.select}
+                  placeholder="請選擇"
+                  options={cityList}
+                  onChange={(e, { value }) => setCity(value)}
+                />
+              </Ref>
             </Form.Field>
           </div>
           <div className={css.control}>
             <label>居住地區</label> {/* eslint-disable-line */}
             <Form.Field className={css.field}>
-              <Select
-                id="area"
-                className={css.select}
-                placeholder="請選擇"
-                options={areas}
-                onChange={(e, { value }) => setArea(value)}
-              />
+              <Ref innerRef={selectAreaRef}>
+                <Select
+                  id="area"
+                  className={css.select}
+                  placeholder="請選擇"
+                  options={areas}
+                  onChange={(e, { value }) => setArea(value)}
+                />
+              </Ref>
             </Form.Field>
           </div>
         </div>
@@ -233,6 +294,7 @@ const Order = ({ show, noTitle }) => {
         onConfirm={() => triggerAlert(false)}
       />
       <Button className={submitClassName} onClick={submitForm}>
+        {isLoading && <FontAwesomeIcon icon={faSpinner} spin />}
         立即預約
       </Button>
     </div>

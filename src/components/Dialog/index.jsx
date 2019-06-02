@@ -1,5 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons'
+import {
+  faPhone, faMapMarkerAlt,
+} from '@fortawesome/free-solid-svg-icons'
 import info from '../../info'
 import c from './index.scss'
 
@@ -18,7 +23,7 @@ export const CallDialog = (props) => {
   return (
     <div className={dialogClass}>
       <div className={c.dialogContent}>
-        <img src={require('./call.png')} className={c.callIcon} alt="" />
+        <FontAwesomeIcon icon={faPhone} />
         <div className={c.dialogDesc}>賞屋專線</div>
         <div className={c.info}>{info.phone}</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
@@ -38,7 +43,7 @@ export const MessageDialog = (props) => {
   return (
     <div className={dialogClass}>
       <div className={c.dialogContent}>
-        <img src={require('./message.png')} className={c.messageIcon} alt="" />
+        <FontAwesomeIcon icon={faFacebookMessenger} />
         <div className={c.dialogDesc}>Facebook Messenger</div>
         <div className={c.info}>線上諮詢</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
@@ -58,7 +63,7 @@ export const MapDialog = (props) => {
   return (
     <div className={dialogClass}>
       <div className={c.dialogContent}>
-        <img src={require('./navigation.png')} className={c.mapIcon} alt="" />
+        <FontAwesomeIcon icon={faMapMarkerAlt} />
         <div className={c.dialogDesc}>接待會館</div>
         <div className={c.info}>{info.address}</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}

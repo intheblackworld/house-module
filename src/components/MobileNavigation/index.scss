@@ -1,26 +1,34 @@
+@import './variable.scss';
+
 .mobileNavigation {
   width: 100%;
-  height: 48px;
-  background: #9d8d8d;
+  height: 63px;
+  background: $dark;
   display: flex;
   position: fixed;
   bottom: 0;
   z-index: 100;
-  // box-shadow: 0 -2px 5px 0 #000;
+  box-shadow: 0 -2px 5px 0 #000;
 
   .navItem {
     flex: 1;
-    color: #fff;
-    font-size: 12px;
+    color: $light;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #fff;
+    border-right: 1px solid $light;
 
     &:nth-last-child(1) {
       border-right: none;
     }
+  }
+
+  svg {
+    width: 20px !important;
+    height: 25px;
+    color: $main;
   }
 
   .navIcon {
@@ -46,6 +54,10 @@
   color: #ccc;
   display: none;
   cursor: pointer;
+
+  svg {
+    color: #ccc;
+  }
   &.show {
     display: block;
   }
