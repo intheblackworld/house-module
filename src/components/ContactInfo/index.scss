@@ -24,7 +24,6 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
   width: 193px;
   height: auto;
   margin: 0 auto;
-  // opacity: 0;
 
   // &.show {
   //   @include animate(fadeInUp, .6s, 0);
@@ -36,7 +35,7 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 }
 
 .info {
-  width: 566px;
+  width: 880px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +85,8 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     height: auto;
     padding: 40px;
-    transform: translateY(0);
+    transform: none;
+    position: static;
   }
 
   .info {
@@ -140,4 +140,22 @@ $boxShadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 
 // 避免內容電腦過渡平板時，設計未考量的調整
 @media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+
+.closeCall,
+.closeMessage,
+.closeMap {
+  font-size: 36px;
+  width: 30px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 200;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
+  }
 }

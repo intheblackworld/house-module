@@ -2,6 +2,7 @@ export default {
   address: '土城區中央路四段26號',
   phone: '02-2268-8765',
   fbLink: 'https://www.facebook.com/%E5%BE%B7%E5%8F%8B%E8%97%8F-263145487638369/',
+  fbMessage: 'https://m.me/263145487638369',
   googleLink: 'https://goo.gl/maps/3gCXyCLZwhB2',
   caseName: '德友藏',
 

@@ -24,7 +24,7 @@ const Section8 = lazy(() => import('projects/dyc/Section8'))
 const Layout = () => (
   <React.Fragment>
     <Mask />
-    <FixLink />
+    { !isMobile && <FixLink />}
     <FullScreen needCutHeader={false}>
       <Element id="master">
         <ViewPort isBottom={false}>

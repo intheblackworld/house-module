@@ -1,0 +1,101 @@
+@import './variable.scss';
+
+.dialog {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: 0;
+
+  &.show {
+    display: block;
+  }
+}
+
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .dialog .dialogContent {
+    width: 295px;
+    height: 295px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px;
+
+    svg {
+      width: 80px !important;
+      color: #a99054 !important;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      display: block;
+      height: 105px;
+    }
+
+    .callIcon {
+      width: 80px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .messageIcon {
+      width: 80px;
+      margin: 0 auto;
+      margin-top: 25px;
+      margin-bottom: 45px;
+      display: block;
+    }
+
+    .mapIcon {
+      width: 80px;
+      margin: 0 auto;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      display: block;
+    }
+
+    .dialogDesc {
+      font-size: 16px;
+      text-align: center;
+      color: $main;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      font-size: 24px;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .cta {
+      display: block;
+      width: 263px;
+      height: 56px;
+      line-height: 56px;
+      background-color: $main;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

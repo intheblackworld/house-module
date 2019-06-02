@@ -10,7 +10,7 @@ import css from './index.scss'
 import info from '../../info'
 
 const {
-  address, phone, fbLink, googleLink, houseInfos,
+  address, phone, fbLink, googleLink, houseInfos, fbMessage,
 } = info
 const ContactSection = () => (
   <div className={css.contactSection}>
@@ -24,7 +24,13 @@ const ContactSection = () => (
       {/* <FullScreen needCutHeader alignCenter>
       </FullScreen> */}
       <Viewport isBottom={false}>
-        <ContactInfo address={address} phone={phone} fbLink={fbLink} googleLink={googleLink} />
+        <ContactInfo
+          address={address}
+          phone={phone}
+          fbLink={fbLink}
+          googleLink={googleLink}
+          fbMessage={fbMessage}
+        />
       </Viewport>
     </div>
     <GoogleMap />

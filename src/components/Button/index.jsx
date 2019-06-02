@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import css from './index.scss'
 
 const Btn = ({
-  children, icon, hoverEffect = 'flashTwice', link = '', back = false,
+  children, icon, hoverEffect = 'flashTwice', link = '', back = false, click,
 }) => {
   const BtnClass = cx(css.btn, {
     [css.flash]: hoverEffect === 'flash',
@@ -32,7 +32,8 @@ const Btn = ({
       {children}
     </a>
   ) : (
-    <a className={BtnClass}>
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <a className={BtnClass} onClick={click}>
       {icon && <FontAwesomeIcon icon={icon} />}
       {children}
     </a>
