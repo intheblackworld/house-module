@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import {
   Form, Checkbox, Button, Select, TextArea,
 } from 'semantic-ui-react'
@@ -7,11 +7,12 @@ import cx from 'classnames'
 import SweetAlert from 'sweetalert2-react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 import PolicyDialog from 'components/PolicyDialog'
 
-import info from '../../sections/ContactSection/info'
+import info from '../../info'
+import { isMobile } from '../../utils'
 
 import { cityList, renderAreaList } from './address'
 import css from './index.scss'
@@ -37,15 +38,15 @@ const Order = ({ show, noTitle }) => {
     setArea('')
   }, [city])
 
+  const [isLoading, setLoading] = useState(false)
+
   // 是否同意個資聲明
   const [isCheck, check] = useState(false)
   const submitClassName = cx(css.submit, {
-    [css.enable]: isCheck,
+    [css.enable]: isCheck && !isLoading,
     [css.show]: show,
     [css.hide]: !show,
   })
-
-  const [isLoading, setLoading] = useState(false)
 
   // 彈窗
   const [isShow, toggleDialog] = useState(false)
@@ -63,8 +64,8 @@ const Order = ({ show, noTitle }) => {
   const [alert, triggerAlert] = useState(false)
   const submitForm = () => {
     if (isLoading) return
-    setLoading(true)
     if (!isCheck) return
+    setLoading(true)
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value
@@ -73,6 +74,7 @@ const Order = ({ show, noTitle }) => {
       || !area
     ) {
       triggerAlert(true)
+      setLoading(false)
       return
     }
     const name = document.getElementById('name').value
@@ -100,17 +102,19 @@ const Order = ({ show, noTitle }) => {
     const sec = time.getSeconds()
     const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${info.caseName}
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${
+        info.caseName
+      }
       `,
       {
         method: 'GET',
       },
     ).then(() => {
-      setLoading(false)
       fetch('contact-form.php', {
         method: 'POST',
         body: formData,
       }).then((response) => {
+        setLoading(false)
         if (response.status === 200) {
           window.location.href = 'formThanks'
         }
@@ -143,6 +147,13 @@ const Order = ({ show, noTitle }) => {
   const checkboxClass = cx(css.checkbox, {
     [css.show]: show,
     [css.hide]: !show,
+  })
+
+  // 嘗試解決客戶反應問題：點擊輸入框或選項框，鍵盤跳出後表單不見，畫面往上跳或被切掉
+  useLayoutEffect(() => {
+    if (isMobile) {
+      document.getElementById('orderBg').style.height = `${window.screen.availHeight}px`
+    }
   })
 
   return (
@@ -215,7 +226,7 @@ const Order = ({ show, noTitle }) => {
               </a>
               內容
             </label>
-)}
+          )}
         />
       </Form.Field>
       <PolicyDialog show={isShow} />
@@ -229,10 +240,11 @@ const Order = ({ show, noTitle }) => {
         text="「姓名、手機、 E-mail、居住城市、居住地區」
         是必填欄位"
         confirmButtonText="我知道了"
-        confirmButtonColor="#e5d48f"
+        confirmButtonColor="#56D8FF"
         onConfirm={() => triggerAlert(false)}
       />
       <Button className={submitClassName} onClick={submitForm}>
+        { isLoading && <FontAwesomeIcon icon={faSpinner} spin />}
         立即預約
       </Button>
     </div>

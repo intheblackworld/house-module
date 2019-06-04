@@ -1,0 +1,107 @@
+.orderContainer {
+  width: 850px;
+  margin-top: 130px;
+}
+
+.form {
+
+  .group {
+    &:nth-child(1) {
+      border-right: 1px solid #fff;
+    }
+  }
+  .control {
+    label {
+      color: #0047af;
+      font-family: 'DFPingJuStd';
+    }
+  }
+
+  .field {
+    .select,
+    .select div {
+      border-radius: 0 !important;
+      background: #fff !important;
+      color: rgba(0, 0, 0, 0.7) !important;
+      border: none !important;
+    }
+
+    .select i {
+      color: #404040;
+    }
+  }
+}
+
+.checkbox {
+  margin-top: 150px;
+
+  label {
+    &:before {
+      width: 22px !important;
+      height: 22px !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      border: 2px solid #fff !important;
+    }
+
+    &:after {
+      color: #0047af !important;
+      background: #fff !important;
+    }
+  }
+
+  a {
+    color: #0047af !important;
+  }
+}
+
+
+.submit {
+  background-color: rgba(0, 71, 175, .4) !important;
+  color: rgba(255, 255, 255, .4) !important;
+  border-radius: 36px / 36px !important;
+
+  &.enable {
+    background-color: rgba(0, 71, 175, 1) !important;
+    color: rgba(255, 255, 255, 1) !important;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .orderContainer {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .form .control {
+    label {
+      font-size: 12px;
+      width: 20%;
+    }
+
+    .field {
+      width: 78%;
+    }
+  }
+
+  .checkbox {
+    margin: 125px auto 0;
+  }
+
+  .submit {
+    width: 163px !important;
+    height: 36px !important;
+    font-size: 15px !important;
+  }
+
+  :global {
+    .ui.selection.dropdown {
+      min-width: 11.1em;
+      min-height: 2.4em;
+    }
+    .ui.form input:not([type]) {
+      height: 28px;
+    }
+  }
+}

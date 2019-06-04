@@ -2,36 +2,31 @@ import React from 'react'
 import Viewport from 'components/ViewPort'
 import Order from 'components/Order'
 import ContactInfo from 'components/ContactInfo'
-import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
 import GoogleMap from 'components/GoogleMap'
 import HouseInfo from 'components/HouseInfo'
-import { isMobile } from '../../utils'
 import css from './index.scss'
-import info from './info'
+import info from '../../info'
 
 const {
-  address, phone, fbLink, googleLink, houseInfos,
+  address, phone, fbLink, googleLink, houseInfos, fbMessage,
 } = info
 const ContactSection = () => (
   <div className={css.contactSection}>
-    <div className={css.orderBg}>
-      {isMobile ? (
-        <Viewport>
-          <div id="orderBg" className={`${css.order} bg`}>
-            <Order />
-          </div>
-        </Viewport>
-      ) : (
-        <FullScreen needCutHeader alignCenter>
-          <Viewport>
-            <Order />
-          </Viewport>
-        </FullScreen>
-      )}
-
+    <div className={css.orderBg} id="contact">
+      <Viewport>
+        <div id="orderBg" className={`${css.order}`}>
+          <Order />
+        </div>
+      </Viewport>
       <Viewport isBottom={false}>
-        <ContactInfo address={address} phone={phone} fbLink={fbLink} googleLink={googleLink} />
+        <ContactInfo
+          address={address}
+          fbMessage={fbMessage}
+          phone={phone}
+          fbLink={fbLink}
+          googleLink={googleLink}
+        />
       </Viewport>
     </div>
     <GoogleMap />

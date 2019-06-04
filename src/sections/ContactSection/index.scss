@@ -5,14 +5,62 @@
 .orderBg {
   background-color: #9c1e23;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
+  position: relative;
 }
 
 .houseBg {
   background-color: #fff;
 }
 
+.leftLeaf {
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.rightLeaf {
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+.mleaf {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .rightLeaf {
+    width: 35%;
+    height: auto;
+    opacity: .6;
+  }
+
+  .leftLeaf {
+    width: 20%;
+    height: auto;
+    opacity: .6;
+  }
+}
+
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .leftLeaf, .rightLeaf {
+    display: none;
+  }
+
+  .mleaf {
+    display: block;
+    opacity: .6;
+  }
+
   .order {
     align-items: center;
     display: flex;
