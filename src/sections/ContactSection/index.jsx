@@ -2,12 +2,10 @@ import React from 'react'
 import Viewport from 'components/ViewPort'
 import Order from 'components/Order'
 import ContactInfo from 'components/ContactInfo'
-import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
 import GoogleMap from 'components/GoogleMap'
 import HouseInfo from 'components/HouseInfo'
 import AnimateBg from 'components/AnimateBg'
-import { isMobile } from '../../utils'
 import css from './index.scss'
 import info from '../../info'
 
@@ -19,19 +17,11 @@ const ContactSection = () => (
   <div className={css.contactSection}>
     <div className={css.orderBg}>
       <AnimateBg />
-      {isMobile ? (
-        <Viewport>
-          <div id="orderBg" className={`${css.order}`}>
-            <Order />
-          </div>
-        </Viewport>
-      ) : (
-        <FullScreen needCutHeader alignCenter>
-          <Viewport>
-            <Order />
-          </Viewport>
-        </FullScreen>
-      )}
+      <Viewport>
+        <div id="orderBg" className={`${css.order}`}>
+          <Order />
+        </div>
+      </Viewport>
       <Viewport isBottom={false}>
         <ContactInfo
           address={address}
