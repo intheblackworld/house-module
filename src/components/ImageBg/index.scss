@@ -1,0 +1,21 @@
+@import '../../assets/animate.scss';
+
+.bg {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: center;
+}
+
+.imgBlock {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  &.show {
+    @include animate(fadeIn, 1.2s, 0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .8s, 0s);
+  }
+}

@@ -1,9 +1,9 @@
 $navigationPCHeight: 80px;
 $navigationTabletHeight: 60px;
 $navigationMobileHeight: 45px;
-$navigationBg: #1a2739; 
+$navigationBg: #2E252A; 
 
-$logoPCWidth: 170px;
+$logoPCWidth: 150px;
 $logoTabletWidth: 150px;
 $logoMobileWidth: 85px;
 
@@ -22,7 +22,7 @@ $logoMobileWidth: 85px;
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: relative;
   a {
     display: block;
@@ -35,7 +35,7 @@ $logoMobileWidth: 85px;
   height: auto;
   position: absolute;
   left: 0;
-  top: -6px;
+  top: -15px;
 }
 
 .mask {
@@ -46,13 +46,21 @@ $logoMobileWidth: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 200px;
+  a {
+    border-right: 1px solid #FFF000;
+
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+  }
 
   .link {
     color: #fff;
     text-align: center;
     display: block;
     cursor: pointer;
-    margin-right: 40px;
+    margin: 0 20px;
     transition: all 0.3s;
     display: flex;
     align-items: center;
@@ -84,6 +92,11 @@ $logoMobileWidth: 85px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 16px;
   font-family: 'Noto Sans TC', serif;
+}
+
+.phoneNumber {
+  position: absolute;
+  right: 0;
 }
 
 /* 螢幕尺寸標準 */
@@ -121,7 +134,9 @@ $logoMobileWidth: 85px;
     transition: all 0.3s ease-in;
     display: block;
     transform: translateX(40%);
-
+    a {
+      border-right: none;
+    }
     .link {
       height: 40px;
       width: 100%;
@@ -175,6 +190,10 @@ $logoMobileWidth: 85px;
       opacity: 1;
     }
   }
+
+  .phoneNumber {
+    display: none;
+  }
 }
 
 /* 平板尺寸 */
@@ -201,6 +220,10 @@ $logoMobileWidth: 85px;
     .divided {
       margin-left: 6px;
     }
+  }
+
+  .phoneNumber {
+    display: none;
   }
 
   :global {

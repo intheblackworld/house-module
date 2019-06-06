@@ -14,34 +14,41 @@ const MobileNavigationHeight = 45
 
 const NavItems = [
   {
-    name: '林口新地標',
+    name: '東區首席',
     imgSrc: '',
     subTitle: '',
-    section: 'point2',
+    section: 'section3',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '七大價值',
+    name: '公園樹海',
     imgSrc: '',
     subTitle: '',
-    section: 'point3',
+    section: 'section4',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '精工建築',
+    name: '壯闊造鎮',
     imgSrc: '',
     subTitle: '',
-    section: 'point4',
+    section: 'section5',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '頂級公設',
+    name: '菁英團隊',
     imgSrc: '',
     subTitle: '',
-    section: 'point5',
+    section: 'section6',
+    OffsetValue: -PCNavigationHeight,
+  },
+  {
+    name: '優質建材',
+    imgSrc: '',
+    subTitle: '',
+    section: 'section7',
     OffsetValue: -PCNavigationHeight,
   },
 ]
@@ -58,7 +65,7 @@ const Navigation = () => {
   useEffect(() => {
     const wh = window.innerWidth
     let h
-    if (wh < 1024 && wh > 767) {
+    if (wh <= 1024 && wh > 767) {
       h = TabletNavigationHeight
     } else if (wh < 768) {
       h = MobileNavigationHeight
@@ -128,6 +135,7 @@ const Navigation = () => {
                   </Link>
                 ))}
             </ul>
+            <img src={require('./phoneNumber.png')} alt="" className={css.phoneNumber} />
           </div>
         </Container>
       </Container>

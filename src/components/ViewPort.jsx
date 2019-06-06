@@ -1,7 +1,7 @@
 import React from 'react'
 import handleViewport from 'react-in-viewport'
 
-const Frame = (props: { inViewport: boolean }) => {
+const Frame = (props) => {
   const { innerRef } = props
   return <div className="viewport-frame" ref={innerRef} />
 }
@@ -9,7 +9,7 @@ const Frame = (props: { inViewport: boolean }) => {
 const ViewportFrame = handleViewport(Frame)
 
 const Viewport = ({
-  children, isBottom = true, position = null, showOneTime = true,
+  children, isBottom = true, position = null, showOneTime = false,
 }) => {
   const [show, setShow] = React.useState(false)
   return (

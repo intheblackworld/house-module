@@ -141,15 +141,15 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '長虹天際︱唯有長虹超越期待︱官網',
-      metaTitle: '長虹天際︱唯有長虹超越期待︱官網',
+      title: '東城大境︱5000坪樹海造鎮︱官網',
+      metaTitle: '東城大境︱5000坪樹海造鎮︱官網',
       metaDescription:
-        '長虹天際：長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
-      metaKeywords: '長虹天際,長虹建設,林口建案,林口新建案,林口房屋,林口買房',
-      ogMetaTitle: '長虹天際︱唯有長虹超越期待︱官網',
+        '市中心繁華康寧生活圈中，最稀有的5000坪整體開發計畫，將生態植入街廓，讓家的樓下就是公園。接待會館 : 新北市汐止區康寧街457號，禮賓專線02-2692-1155',
+      metaKeywords: '東城大境,汐科旁新成屋,汐止新成屋,御東城,耀東城,汐止買房',
+      ogMetaTitle: '東城大境︱5000坪樹海造鎮︱官網',
       ogMetaType: 'website',
       ogMetaDescription:
-        '長虹天際：長虹×P&T 雙塔擎天地標建築，與3000坪富貴公園綠意為鄰，SRC鋼骨結構×日本住友SRI制震，接待中心：新北市林口區文化三路二段292號，禮賓專線：02-2622-3888',
+        '市中心繁華康寧生活圈中，最稀有的5000坪整體開發計畫，將生態植入街廓，讓家的樓下就是公園。接待會館 : 新北市汐止區康寧街457號，禮賓專線02-2692-1155',
       template: 'index.html',
       hash: true,
     }),
