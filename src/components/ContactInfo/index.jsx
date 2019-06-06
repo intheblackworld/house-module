@@ -36,7 +36,6 @@ const ContactInfo = ({
   const [isMessageShow, toggleMessageDialog] = useState(false)
 
   const showMessageDialog = () => {
-    console.log(123)
     toggleMessageDialog(!isMessageShow)
   }
 
