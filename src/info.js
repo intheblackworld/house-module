@@ -1,7 +1,7 @@
 export default {
   address: '221新北市汐止區康寧街457號',
   locations: { lat: 25.068579, lng: 121.63142 },
-  phone: '02-2622-3888',
+  phone: '02-2692-1155',
   fbLink:
     'https://www.facebook.com/%E6%B1%90%E6%AD%A2%E6%9D%B1%E5%9F%8E%E5%A4%A7%E5%A2%83-584895791902170/',
   fbMessage: 'https://m.me/584895791902170',
