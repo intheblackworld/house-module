@@ -2,9 +2,51 @@
 
 .container {
   width: 932px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
+.imgContainer {
+  width: 70%;
+  margin: 30px auto;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .label {
+    position: absolute;
+    background-color: rgba(84, 148, 162, 0.56);
+    padding: 16px 27px;
+    color: #fff;
+    font-size: 16px;
+    bottom: 40px;
+    left: -145px;
+  }
+}
+
+.imgContainer {
+  opacity: 0;
+  &.show {
+    @include animate(fadeIn, 0.8s, 0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, 0.8s, 0s);
+  }
+}
+
+.containerBg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.containerWithBg {
+  position: relative;
+  height: 960px;
+  margin-bottom: 60px;
+}
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -15,6 +57,32 @@
 @media only screen and (max-width: 767px) {
   .container {
     width: 90%;
+  }
+
+  .imgContainer {
+    margin-left: -5%;
+    width: 100vw;
+    margin-bottom: 100px;
+
+    .label {
+      bottom: -70px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 250px;
+    }
+  }
+
+  .containerWithBg {
+    position: relative;
+    height: 580px;
+    margin-bottom: 60px;
+
+    img {
+      width: 100vw;
+      margin-left: -5%;
+      top: 220px;
+    }
   }
 }
 

@@ -4,7 +4,7 @@
 import SlidePicker from 'components/SliderPicker'
 import Viewport from 'components/ViewPort'
 import { PreContainer, DescContainer } from 'components/cht'
-// import { isMobile } from '../../../utils'
+import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const slideList = [
@@ -37,7 +37,12 @@ const slideList = [
 const Section5 = () => (
   <div>
     <Viewport isBottom={false}>
-      <PreContainer title1="貼心幸福‧奢華無設限" title2="極上設施" desc="Be the Luxury Amenities" src={require('./preImg.jpg')} />
+      <PreContainer
+        title1="貼心幸福‧奢華無設限"
+        title2="極上設施"
+        desc="Be the Luxury Amenities"
+        src={require('./preImg.jpg')}
+      />
     </Viewport>
     <div className={c.container}>
       <Viewport>
@@ -46,7 +51,29 @@ const Section5 = () => (
       <Viewport isBottom={false}>
         <SlidePicker slideList={slideList} />
       </Viewport>
+      {!isMobile && (
+        <iframe
+          title="youtube"
+          width="100%"
+          height="600px"
+          src="https://www.youtube.com/embed/TjejnVW0asU"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      )}
     </div>
+    {isMobile && (
+      <iframe
+        title="youtube"
+        width="100%"
+        height="315px"
+        src="https://www.youtube.com/embed/TjejnVW0asU"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    )}
   </div>
 )
 

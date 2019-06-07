@@ -75,6 +75,14 @@ const Section3 = () => (
       ) : (
         <ListContainer list={list} />
       )}
+      <Viewport isBottom={false}>
+        <PreContainer
+          title1="長虹× P&T‧品牌之最"
+          title2="精工團隊"
+          desc="Brand to the Future"
+          src={require('./lastImg.jpg')}
+        />
+      </Viewport>
     </div>
   </div>
 )

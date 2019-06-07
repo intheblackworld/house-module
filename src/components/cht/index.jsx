@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react'
 import { withTrans } from 'utils'
 import _ from 'lodash'
@@ -59,6 +60,36 @@ export const DescContainer = ({ title, show, section }) => (
         <p>【公設規劃一應俱全】{isMobile && <br />}美式主題實木撞球檯，放肆玩樂不用出門去</p>
         <p>【揮灑生活多采多姿】{isMobile && <br />}鋼琴館、桌球室、ktv、瑜珈室，全齡公設應有盡有</p>
         <p>【盡享風格繽紛鉅獻】{isMobile && <br />}雲端天際的空中花園，佇立高空享受天際人生</p>
+      </div>
+    )}
+    {section === 6 && (
+      <div>
+        <h3>3200坪綠海 尊貴富人區</h3>
+        <div className={c.desc}>
+          <p>
+            都心特區俯瞰綠海，真正的夢幻級地產由長虹建設、福樺建設、展悅建設三大
+            知名建商共同認養【富貴森林公園】，以3200坪超級綠地構築北林口最優美的
+            雙公園豪宅綠肺，蔚為林口最頂級的城心聚落，與大樹自然共呼吸的稀有立地
+            ，磁吸贏家領袖競相角逐的地段價值！
+          </p>
+        </div>
+      </div>
+    )}
+    {section === 7 && (
+      <div>
+        <h3>股王鉅鑄10大價值</h3>
+        <div className={c.desc}>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>品牌之王〉營建股王長虹林口代表作，43年卓譽品牌</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>領天建築〉北市豪宅御用"P&T"國際級外觀設計</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>極上公設〉五星飯店及北市破億豪宅御用“衡美設計”</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>傳世結構〉全棟SRC鋼骨結構，最安全的住家品質</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>第一耐震〉日系住友制震0負評，林口唯一全棟制震</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>雙贏機能〉中山路十家樂福完美商圈，機能正核心</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>公園首席〉3200坪富貴公園第一排，林口富人區</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>摩天氣勢〉雄偉雙塔36層擎天地標，俯視壯觀大林口</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>無敵空間〉精實30%超低公設比，零走道空間規劃</p>
+          <p style={{ whiteSpace: 'nowrap', textAlign: 'left' }}>均質奢華〉市場唯一 70-83坪，單層四戶，單純齊質</p>
+        </div>
       </div>
     )}
   </div>

@@ -80,8 +80,10 @@
 }
 
 .descContainer {
+  position: relative;
+  z-index: 1;
   // show hide
-  .title, .desc {
+  .title, .desc, h3 {
     opacity: 0;
   }
 
@@ -90,7 +92,7 @@
       @include animate(fadeIn, .8s, 0s);
     }
 
-    .desc {
+    .desc, h3 {
       @include animate(fadeIn, .8s, .3s);
     }
   }
@@ -126,6 +128,12 @@
     }
   }
 
+  h3 {
+    width: 70%;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 26px;
+  }
   .desc {
     width: 70%;
     margin: 0 auto;
@@ -312,13 +320,19 @@
       h3 {
         font-size: 16px;
         line-height: 2;
+        width: 100%;
       }
+    }
+
+    h3 {
+      font-size: 16px;
     }
   
     .desc, .singleDesc {
       width: 100%;
       border-left: none;
       padding-left: 0;
+
       p {
         text-align: center;
         font-size: 12.5px;
