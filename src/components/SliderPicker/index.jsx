@@ -30,7 +30,18 @@ const SlidePicker = ({ show, slideList }) => {
           afterChange={addIndex}
           initialSlide={imgIndex}
         >
-          {slideList.map((slide, index) => (
+          {slideList.map((slide, index) => (slide.link ? (
+            <a key={slide.src} href={slide.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={slide.src}
+                alt="長虹天際的圖片"
+                onKeyDown={() => setImgIndex(index)}
+                onClick={() => setImgIndex(index)}
+                className={`${c.slideImg} ${imgIndex === index && 'active'}`}
+              />
+              {slide.bDesc && <p>{slide.bDesc}</p>}
+            </a>
+          ) : (
             <div key={slide.src}>
               <img
                 src={slide.src}
@@ -39,12 +50,13 @@ const SlidePicker = ({ show, slideList }) => {
                 onClick={() => setImgIndex(index)}
                 className={`${c.slideImg} ${imgIndex === index && 'active'}`}
               />
+              {slide.bDesc && <p>{slide.bDesc}</p>}
             </div>
-          ))}
+          )))}
         </Carousel>
         {isMobile && (
           <div className={c.arrows}>
-            <h3>{slideList[imgIndex].desc}</h3>
+            {slideList[imgIndex].desc && <h3>{slideList[imgIndex].desc}</h3>}
           </div>
         )}
       </div>
