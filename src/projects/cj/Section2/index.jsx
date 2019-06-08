@@ -10,7 +10,7 @@ const Section2 = () => (
   <div>
     <Element id="section2" style={{ margin: '-5px 0' }}>
       <Viewport isBottom={false}>
-        <ImageBg imgSrc={require('./d2.jpg')} mImgSrc={require('./d2.jpg')} />
+        <ImageBg imgSrc={require('./d2.jpg')} mImgSrc={require('./m2.jpg')} />
       </Viewport>
     </Element>
     <Element id="section3" style={{ margin: '-5px 0' }}>
