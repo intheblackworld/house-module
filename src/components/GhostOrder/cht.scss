@@ -129,6 +129,10 @@
       bottom: 5px;
       left: 5px;
       transition: all .3s;
+
+      a {
+        text-decoration: underline;
+      }
     }
   }
 }
