@@ -9,27 +9,39 @@ import c from './index.scss'
 
 const slideList = [
   {
-    src: require('./slide-1.png'),
+    src: require('./slide-1.jpg'),
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
   {
-    src: require('./slide-2.png'),
+    src: require('./slide-2.jpg'),
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
   {
-    src: require('./slide-3.png'),
+    src: require('./slide-3.jpg'),
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
   {
-    src: require('./slide-4.png'),
+    src: require('./slide-4.jpg'),
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
   {
-    src: require('./slide-5.png'),
+    src: require('./slide-5.jpg'),
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
   {
-    src: require('./slide-6.png'),
+    src: require('./slide-6.jpg'),
+    desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
+  },
+  {
+    src: require('./slide-7.jpg'),
+    desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
+  },
+  {
+    src: require('./slide-8.jpg'),
+    desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
+  },
+  {
+    src: require('./slide-9.jpg'),
     desc: 'NO.1【得天獨厚的蛋黃位置】人口成長位新北之冠、新北及國門正中心位置',
   },
 ]
