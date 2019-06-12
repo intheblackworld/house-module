@@ -110,7 +110,7 @@ const ItemsContainer = ({ show, list }) => (
           <img src={item.src} alt="" />
           <div className={c.itemTitle}>{item.title}</div>
           <div className={c.itemDesc}>
-            <p>{item.desc}</p>
+            <p>{item.bDesc}</p>
           </div>
         </a>
       ))
