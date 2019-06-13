@@ -1,11 +1,8 @@
 @import '../../../assets/animate.scss';
 
 .bg {
-  background-image: url('./d1.jpg');
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
+  width: 100vw;
+  margin-top: 80px;
 }
 
 // show hide
@@ -24,15 +21,13 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
-    background-position: left;
+    margin-top: 60px;
   }
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
-    background-image: url('./m1.jpg');
-    height: calc(100vh - 105px);
     margin-top: 45px;
   }
 }
