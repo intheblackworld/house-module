@@ -166,7 +166,7 @@
   height: 72px !important;
   // opacity: 0 !important;
   border-radius: 0 !important;
-  background-color: rgba(229, 212, 143, .4) !important;
+  background-color: #999 !important;
   color: #666;
   font-size: 20px !important;
   margin: 0 auto !important;
@@ -184,8 +184,8 @@
 
   &.enable {
     cursor: pointer;
-    color: #2d436e !important;
-    background-color: rgba(229, 212, 143, 1) !important;
+    color: #fff !important;
+    background-color: #006BB4 !important;
   }
 }
 

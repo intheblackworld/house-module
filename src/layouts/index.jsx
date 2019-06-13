@@ -11,8 +11,8 @@ import ContactSection from './ContactSection'
 
 import './index.scss'
 
-const Master = lazy(() => import('projects/cj/Master'))
-const Section2 = lazy(() => import('projects/cj/Section2'))
+const Master = lazy(() => import('projects/zy/Master'))
+// const Section2 = lazy(() => import('projects/cj/Section2'))
 // const Section7 = lazy(() => import('projects/dyc/Section7'))
 // const Section8 = lazy(() => import('projects/dyc/Section8'))
 // const MobileSection = lazy(() => import('projects/star/MobileSection'))
@@ -29,7 +29,6 @@ const Layout = () => (
       </ViewPort>
     </Element>
     {/* </FullScreen> */}
-    <Section2 />
     <ContactSection />
     {/* <Section>
     <Element id="section5">

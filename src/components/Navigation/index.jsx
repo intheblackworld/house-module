@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 import cx from 'classnames'
 
 import logo from './logo.png'
-import menu from './menu-btn.png'
+// import menu from './menu-btn.png'
 
 import css from './index.scss'
 
@@ -82,9 +82,9 @@ const Navigation = () => {
     )
   }, [list])
 
-  const navlist = cx(css.navlist, {
-    [css.open]: isShowMenu,
-  })
+  // const navlist = cx(css.navlist, {
+  //   [css.open]: isShowMenu,
+  // })
 
   const mask = cx(css.mask, {
     [css.open]: isShowMenu,
@@ -100,21 +100,21 @@ const Navigation = () => {
                 <Image src={logo} alt="長虹天際的圖片" />
               </Link>
             </div>
-            <div
+            {/* <div
               className={css.menu}
               role="presentation"
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             >
               <Image src={menu} alt="長虹天際的圖片" />
-            </div>
+            </div> */}
             <div
               className={mask}
               role="presentation"
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             />
-            <ul className={navlist}>
+            {/* <ul className={navlist}>
               {list
                 && list.map(item => (
                   <Link
@@ -134,8 +134,8 @@ const Navigation = () => {
                     </span>
                   </Link>
                 ))}
-            </ul>
-            <img src={require('./phoneNumber.png')} alt="" className={css.phoneNumber} />
+            </ul> */}
+            {/* <img src={require('./phoneNumber.png')} alt="" className={css.phoneNumber} /> */}
           </div>
         </Container>
       </Container>
