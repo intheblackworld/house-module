@@ -6,7 +6,7 @@ export default {
     'https://www.facebook.com/%E6%B1%90%E6%AD%A2%E6%9D%B1%E5%9F%8E%E5%A4%A7%E5%A2%83-584895791902170/',
   fbMessage: 'https://m.me/584895791902170',
   googleLink: 'https://goo.gl/maps/cK2KFFP5boSLGX338',
-  caseName: '長虹天際',
+  caseName: '東城大境',
 
   houseInfos: [
     ['投資興建', '合康建設股份有限公司'],
