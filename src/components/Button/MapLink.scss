@@ -57,14 +57,14 @@
 
     &::before,
     &::after {
-      background: $dark;
+      background: $main;
       content: '';
       position: absolute;
       z-index: 2;
     }
 
     &:hover {
-      color: #fff;
+      color: $light;
     }
 
     &::after {
