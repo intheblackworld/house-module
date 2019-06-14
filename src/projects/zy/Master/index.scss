@@ -1,9 +1,17 @@
 @import '../../../assets/animate.scss';
 
 .bg {
+  // 圖片
+  // width: 100vw;
+  // display: block;
+  // margin-top: 80px;
+  // bg 一瓶高
   width: 100vw;
-  display: block;
   margin-top: 80px;
+  height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: center;
+  background-image: url('./d1.jpg');
 }
 
 // show hide
@@ -22,7 +30,10 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
+    width: 100vw;
     margin-top: 60px;
+    display: block;
+    height: auto;
   }
 }
 
@@ -30,6 +41,10 @@
 @media only screen and (max-width: 767px) {
   .bg {
     margin-top: 45px;
+
+    // bg 一瓶高
+    height: calc(100vh - 107px);
+    background-image: url('./m1.jpg');
   }
 }
 
