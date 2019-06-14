@@ -5,6 +5,7 @@ import cx from 'classnames'
 
 import logo from './logo.png'
 import menu from './menu-btn.png'
+import info from '../../info'
 
 import css from './index.scss'
 
@@ -135,7 +136,10 @@ const Navigation = () => {
                   </Link>
                 ))}
             </ul>
-            <img src={require('./phoneNumber.png')} alt="" className={css.phoneNumber} />
+            <div className={css.phoneNumber}>
+              <p>貴賓專線</p>
+              <h3>{info.phone}</h3>
+            </div>
           </div>
         </Container>
       </Container>
