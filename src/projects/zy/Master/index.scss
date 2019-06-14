@@ -2,16 +2,16 @@
 
 .bg {
   // 圖片
-  // width: 100vw;
-  // display: block;
-  // margin-top: 80px;
-  // bg 一瓶高
   width: 100vw;
+  display: block;
   margin-top: 80px;
-  height: calc(100vh - 80px);
-  background-size: cover;
-  background-position: center;
-  background-image: url('./d1.jpg');
+  // bg 一瓶高
+  // width: 100vw;
+  // margin-top: 80px;
+  // height: calc(100vh - 80px);
+  // background-size: cover;
+  // background-position: center;
+  // background-image: url('./d1.jpg');
 }
 
 // show hide
@@ -32,8 +32,8 @@
   .bg {
     width: 100vw;
     margin-top: 60px;
-    display: block;
-    height: auto;
+    // display: block;
+    // height: auto;
   }
 }
 
@@ -43,8 +43,8 @@
     margin-top: 45px;
 
     // bg 一瓶高
-    height: calc(100vh - 107px);
-    background-image: url('./m1.jpg');
+    // height: calc(100vh - 107px);
+    // background-image: url('./m1.jpg');
   }
 }
 
