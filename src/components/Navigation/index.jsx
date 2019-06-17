@@ -98,7 +98,7 @@ const Navigation = () => {
           <div className={css.nav}>
             <div className={css.logo}>
               <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
-                <Image src={logo} alt="長虹天際的圖片" />
+                <Image src={logo} alt="東城大境的圖片" />
               </Link>
             </div>
             <div
@@ -107,7 +107,7 @@ const Navigation = () => {
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             >
-              <Image src={menu} alt="長虹天際的圖片" />
+              <Image src={menu} alt="東城大境的圖片" />
             </div>
             <div
               className={mask}

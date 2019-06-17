@@ -26,8 +26,8 @@ const Task1 = ({ show }) => (
     <ViewPort position="-400px">
       <Title number="1" h2="任務一、追片看明星" p="按讚＋留言＋分享" />
     </ViewPort>
-    <img src={require('./brother1.png')} alt="長虹天際的圖片" className={c.brother1} />
-    <img src={require('./brother11.png')} alt="長虹天際的圖片" className={c.brother11} />
+    <img src={require('./brother1.png')} alt="東城大境的圖片" className={c.brother1} />
+    <img src={require('./brother11.png')} alt="東城大境的圖片" className={c.brother11} />
     <div className={c.taskHint1}>
       <h3>抽獎時間</h3>
       <p>第 1 次：108/03/23(六)下午 14:00 抽出 iPhoneXR 1台 (市價 26,900)</p>
@@ -38,25 +38,25 @@ const Task1 = ({ show }) => (
       <div className={c.item}>
         <div className={c.label}>Step 1</div>
         <div className={c.icon1}>
-          <img src={require('./step1.png')} alt="長虹天際的圖片" />
+          <img src={require('./step1.png')} alt="東城大境的圖片" />
         </div>
         <div className={c.desc}>到新板巨星 FB 按讚追蹤</div>
       </div>
-      {!isMobile && <img src={require('./arrowRight.png')} alt="長虹天際的圖片" className={c.arrowRight} />}
+      {!isMobile && <img src={require('./arrowRight.png')} alt="東城大境的圖片" className={c.arrowRight} />}
       <div className={c.item}>
         <div className={c.label}>Step 2</div>
         <div className={c.icon2}>
-          <img src={require('./step2.png')} alt="長虹天際的圖片" />
+          <img src={require('./step2.png')} alt="東城大境的圖片" />
         </div>
         <div className={c.desc}>
           看活動影片，於貼文按讚+留言 「我在林板新，最愛新板巨星」 +TAG 標記 3 位朋友
         </div>
       </div>
-      {!isMobile && <img src={require('./arrowRight.png')} alt="長虹天際的圖片" className={c.arrowRight} />}
+      {!isMobile && <img src={require('./arrowRight.png')} alt="東城大境的圖片" className={c.arrowRight} />}
       <div className={c.item}>
         <div className={c.label}>Step 3</div>
         <div className={c.icon3}>
-          <img src={require('./step3.png')} alt="長虹天際的圖片" />
+          <img src={require('./step3.png')} alt="東城大境的圖片" />
         </div>
         <div className={c.desc}>公開分享活動影片 到個人 FB 頁面</div>
       </div>
@@ -127,7 +127,7 @@ const Task2 = ({ show }) => {
       <ViewPort position="-400px">
         <Title number="2" h2="任務二、鐵粉來踩點" p="到兩大星據點拍照打卡" />
       </ViewPort>
-      <img src={require('./brother2.png')} alt="長虹天際的圖片" className={c.brother2} />
+      <img src={require('./brother2.png')} alt="東城大境的圖片" className={c.brother2} />
       <div className={c.taskHint2}>
         <p>不用抽即可領取百元 7-11 禮券</p>
       </div>
@@ -141,7 +141,7 @@ const Task2 = ({ show }) => {
             <br />－ 範例如圖 －
           </div>
         </div>
-        {!isMobile && <img src={require('./arrowDown.png')} alt="長虹天際的圖片" className={c.arrowDown} />}
+        {!isMobile && <img src={require('./arrowDown.png')} alt="東城大境的圖片" className={c.arrowDown} />}
         <div className={c.item}>
           <div className={c.label}>Step 2</div>
           <div className={c.desc}>
@@ -160,7 +160,7 @@ const Task2 = ({ show }) => {
         <div className={c.carouselBubble}>
           <h2>{steps[slideIndex]}</h2>
         </div>
-        {slideIndex === 2 ? <img src={require('./frame.png')} alt="長虹天際的圖片" className={c.frame} /> : ''}
+        {slideIndex === 2 ? <img src={require('./frame.png')} alt="東城大境的圖片" className={c.frame} /> : ''}
         <Carousel
           slidesToShow={1}
           fade={false}
@@ -169,9 +169,9 @@ const Task2 = ({ show }) => {
           autoplaySpeed={slideIndex === 2 ? 5000 : 3000}
           afterChange={index => setSlideIndex(index)}
         >
-          <img src={require('./slide1.png')} alt="長虹天際的圖片" />
-          <img src={require('./slide2.png')} alt="長虹天際的圖片" />
-          <img src={require('./slide3.png')} alt="長虹天際的圖片" />
+          <img src={require('./slide1.png')} alt="東城大境的圖片" />
+          <img src={require('./slide2.png')} alt="東城大境的圖片" />
+          <img src={require('./slide3.png')} alt="東城大境的圖片" />
         </Carousel>
         <div className={c.carouselDesc}>{descs[slideIndex]}</div>
       </div>
@@ -208,8 +208,8 @@ const Task3 = ({ show }) => (
     <ViewPort position="-400px">
       <Title number="3" h2="任務三、新星領航員" p="介紹賞屋簽約送" />
     </ViewPort>
-    <img src={require('./brother3.png')} alt="長虹天際的圖片" className={c.brother3} />
-    <img src={require('./brother31.png')} alt="長虹天際的圖片" className={c.brother31} />
+    <img src={require('./brother3.png')} alt="東城大境的圖片" className={c.brother3} />
+    <img src={require('./brother31.png')} alt="東城大境的圖片" className={c.brother31} />
     <div className={c.taskHint3}>
       <p>介紹親友到新板巨星賞屋：</p>
       <h3>・簽約成交 30坪(含)以下送 38,888 大紅包</h3>
@@ -223,21 +223,21 @@ const Map = ({ show }) => <div className={withTrans('map', c, show)} />
 
 const LeftEffect = ({ show }) => (
   <div className={withTrans('leftEffect', c, show)}>
-    <img className={c.like} src={require('./like.png')} alt="長虹天際的圖片" />
-    <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
-    <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
-    <img className={c.laugh} src={require('./laugh.png')} alt="長虹天際的圖片" />
-    <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
+    <img className={c.like} src={require('./like.png')} alt="東城大境的圖片" />
+    <img className={c.love} src={require('./love.png')} alt="東城大境的圖片" />
+    <img className={c.love} src={require('./love.png')} alt="東城大境的圖片" />
+    <img className={c.laugh} src={require('./laugh.png')} alt="東城大境的圖片" />
+    <img className={c.love} src={require('./love.png')} alt="東城大境的圖片" />
   </div>
 )
 
 const RightEffect = ({ show }) => (
   <div className={withTrans('rightEffect', c, show)}>
-    <img className={c.like} src={require('./like.png')} alt="長虹天際的圖片" />
-    <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
-    <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
-    <img className={c.laugh} src={require('./laugh.png')} alt="長虹天際的圖片" />
-    <img className={c.love} src={require('./love.png')} alt="長虹天際的圖片" />
+    <img className={c.like} src={require('./like.png')} alt="東城大境的圖片" />
+    <img className={c.love} src={require('./love.png')} alt="東城大境的圖片" />
+    <img className={c.love} src={require('./love.png')} alt="東城大境的圖片" />
+    <img className={c.laugh} src={require('./laugh.png')} alt="東城大境的圖片" />
+    <img className={c.love} src={require('./love.png')} alt="東城大境的圖片" />
   </div>
 )
 const Section3 = () => (

@@ -18,7 +18,7 @@ export const PreContainer = ({
       </h3>
     </div>
     <div className={c.preImg}>
-      <img src={src} alt="長虹天際的圖片" />
+      <img src={src} alt="東城大境的圖片" />
       <p className={right ? c.right : ''}>{desc}</p>
     </div>
   </div>
@@ -81,7 +81,7 @@ export const Row = ({ show, items }) => (
     {items.map(item => (
       <div className={c.item} key={item.src}>
         <div className={`${c.label} flex-c`}>{item.label}</div>
-        <img src={item.src} alt="長虹天際的圖片" className={c.itemImg} />
+        <img src={item.src} alt="東城大境的圖片" className={c.itemImg} />
         <div className={c.title}>{item.title}</div>
         <div className={c.desc}>{item.desc}</div>
       </div>
@@ -110,11 +110,11 @@ export const AccordionContainer = ({ show, list }) => {
                 <div className={c.title}>{item.title}</div>
                 <div className={c.desc}>{item.desc}</div>
               </div>
-              <img src={require('./down.png')} alt="長虹天際的圖片" className={c.icon} />
+              <img src={require('./down.png')} alt="東城大境的圖片" className={c.icon} />
             </div>
           </Accordion.Title>
           <Accordion.Content active={activeIndex === index} className={c.accordionContent}>
-            <img src={item.src} alt="長虹天際的圖片" />
+            <img src={item.src} alt="東城大境的圖片" />
           </Accordion.Content>
         </div>
       ))}
