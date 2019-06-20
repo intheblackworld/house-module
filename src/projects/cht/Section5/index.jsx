@@ -89,10 +89,10 @@ const itemList = [
   },
 
   {
-    title: '東森新聞雲',
+    title: '鉅亨網新聞',
     src: require('./7.png'),
     link: 'https://m.cnyes.com/news/id/4337686',
-    bDesc: '營建股王林口推案　主打3字頭讓利價',
+    bDesc: '長虹天際520檔期看屋 500組創盛況',
   },
 
   {
