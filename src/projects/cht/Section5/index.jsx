@@ -91,7 +91,7 @@ const itemList = [
   {
     title: '東森新聞雲',
     src: require('./7.png'),
-    link: 'https://house.ettoday.net/news/1445815',
+    link: 'https://m.cnyes.com/news/id/4337686',
     bDesc: '營建股王林口推案　主打3字頭讓利價',
   },
 
