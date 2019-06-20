@@ -22,7 +22,7 @@ const Top = ({ show }) => {
         抗震韌性可提升近1倍，除了鋼筋、樑、柱外，連管線的部份都有詳細紀錄，
         透明公開，時間是建築最完美的見證。
       </p>
-      <img src={require('./resume.png')} className={c.resume} alt="東城大境的圖片" />
+      <img src={require('./resume.png')} className={c.resume} alt="帝璽的圖片" />
     </div>
   );
 };

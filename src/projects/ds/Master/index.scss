@@ -1,0 +1,49 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  width: 100vw;
+  margin-top: 80px;
+  display: block;
+}
+
+// show hide
+.bg {
+  // @include animate(fadeIn, .8s, .4s);
+  // &.show {
+  //   @include animate(fadeIn, 0.8s, 0s);
+  // }
+
+  // &.hide {
+  //   @include animate(fadeOut, 0.8s, 0s);
+  // }
+}
+
+.container {
+  .logo1, .logo2, .title1, .title2 {
+    position: absolute;
+    top: 0;
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    margin-top: 60px;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    margin-top: 45px;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}

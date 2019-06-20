@@ -37,7 +37,7 @@ const Sliders = ({ show = false }) => {
       <div className={css.carousel}>
         <Carousel slidesToShow={1} fade={false} dots>
           {imgList.map(url => (
-            <Image src={url} alt="東城大境的圖片" key={url} />
+            <Image src={url} alt="帝璽的圖片" key={url} />
           ))}
         </Carousel>
       </div>

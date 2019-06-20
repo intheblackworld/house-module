@@ -2,7 +2,7 @@ import c from './index.scss'
 
 const FixLink = () => (
   <a className={c.fixLink} href="https://lbs.h35.tw/" target="_blank" rel="noopener noreferrer">
-    <img src={require('./icon.png')} alt="東城大境的圖片" />
+    <img src={require('./icon.png')} alt="帝璽的圖片" />
   </a>
 )
 

@@ -1,0 +1,134 @@
+@import '../../../assets/animate.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  .left {
+    width: calc(100vw - 610px);
+    height: 610px;
+    overflow: hidden;
+    position: relative;
+    > img {
+      height: 100%;
+    }
+
+    .btnGroup {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      border: 1px solid #fff;
+      > div {
+        width: 53px;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #fff;
+        cursor: pointer;
+
+        &:nth-last-child(1) {
+          border: none;
+        }
+
+        img {
+          width: 12px;
+        }
+      }
+
+      .pages {
+        font-size: 18px;
+      }
+    }
+  }
+  .right {
+    width: 610px;
+    height: 610px;
+    background-image: url('./bg.png');
+    background-size: cover;
+    position: relative;
+    .label {
+      width: 48px;
+      position: absolute;
+      right: -50px;
+      top: -125px;
+    }
+
+    .content {
+      width: 400px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #2b466f;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.container > .right {
+  h3,
+  p {
+    opacity: 0;
+  }
+}
+
+.container {
+  &.show {
+    .right {
+      h3 {
+        @include animate(fadeInUp, 1s, 0s);
+      }
+
+      p {
+        @include animate(fadeInUp, 0.8s, 0.6s);
+      }
+    }
+  }
+
+  &.hide {
+    .right {
+      h3 {
+        @include animate(fadeOut, 0.8s, 0s);
+      }
+
+      p {
+        @include animate(fadeOut, 0.8s, 0.6s);
+      }
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}

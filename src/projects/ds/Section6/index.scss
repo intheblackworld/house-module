@@ -1,0 +1,94 @@
+@import '../../../assets/animate.scss';
+
+.container {
+  position: relative;
+  .bg {
+    width: 100vw;
+    display: block;
+  }
+
+  .triangle, .bone {
+    position: absolute;
+  }
+
+  .dialogBox {
+    position: absolute;
+    width: 532px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    color: #fff;
+
+    .head {
+      font-size: 40px;
+      font-weight: 500;
+      height: 64px;
+      background-color: rgba(43, 70, 111, .5);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .body {
+      background: rgba(255, 255, 255, 0.6);
+      font-size: 24px;
+      line-height: 1.7;
+      font-weight: bold;
+      color: #2b466f;
+      padding: 25px 15px;
+    }
+  }
+}
+
+.container > .dialogBox {
+  .head, .body {
+    opacity: 0;
+  }
+}
+
+.container {
+  &.show {
+    .dialogBox {
+      .head {
+        @include animate(fadeInUp, 1s, 0s);
+      }
+
+      .body {
+        @include animate(fadeInUp, 0.8s, .6s);
+      }
+    }
+  }
+
+  &.hide {
+    .dialogBox {
+      .head {
+        @include animate(fadeOut, 0.8s, 0s);
+      }
+
+      .body {
+        @include animate(fadeOut, 0.8s, .6s);
+      }
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}

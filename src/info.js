@@ -1,12 +1,12 @@
 export default {
-  address: '221新北市汐止區康寧街457號',
-  locations: { lat: 25.068579, lng: 121.63142 },
-  phone: '02-2692-1155',
+  address: '台北市中山區建國北路二段76號',
+  locations: { lat: 25.055106, lng: 121.536435 },
+  phone: '02-2516-5888',
   fbLink:
-    'https://www.facebook.com/%E6%B1%90%E6%AD%A2%E6%9D%B1%E5%9F%8E%E5%A4%A7%E5%A2%83-584895791902170/',
-  fbMessage: 'https://m.me/584895791902170',
-  googleLink: 'https://goo.gl/maps/cK2KFFP5boSLGX338',
-  caseName: '東城大境',
+    'https://www.facebook.com/greatdici/',
+  fbMessage: 'https://m.me/greatdici/',
+  googleLink: 'https://goo.gl/maps/mAGcEpHjfzJCtPS68',
+  caseName: '帝璽',
 
   houseInfos: [
     ['投資興建', '合康建設股份有限公司'],

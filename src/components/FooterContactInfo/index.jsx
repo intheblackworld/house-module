@@ -22,7 +22,7 @@ const FooterContactInfo = ({
   return (
     <div className={c.bg}>
       <div className={c.container}>
-        <img src={require('./logo.png')} alt="東城大境的圖片" className={c.logo} />
+        <img src={require('./logo.png')} alt="帝璽的圖片" className={c.logo} />
         <div className={c.content}>
           <div className={c.houseInfo}>
             <h3>建案資訊</h3>
@@ -62,7 +62,7 @@ const FooterContactInfo = ({
           </div>
           <div className={c.socialInfo}>
             <h3>地圖</h3>
-            <img src={require('./map.jpg')} alt="東城大境的圖片" className={c.map} />
+            <img src={require('./map.jpg')} alt="帝璽的圖片" className={c.map} />
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ const Item = ({ show, item }) => {
   return (
     <div className={itemClass} key={item.desc}>
       <div className={css['item-icon-wrap']}>
-        <Image className={css['item-icon']} src={item.imgSrc} alt="東城大境的圖片" />
+        <Image className={css['item-icon']} src={item.imgSrc} alt="帝璽的圖片" />
       </div>
       <div className={css['item-title']}>{item.name}</div>
       <p className={css['item-description']}>{item.desc}</p>
@@ -62,8 +62,8 @@ const Item = ({ show, item }) => {
 }
 const Section5 = () => (
   <div className={css.section5}>
-    <Image src={leaf3} alt="東城大境的圖片" className={css.leaf1} />
-    <Image src={leaf3} alt="東城大境的圖片" className={css.leaf2} />
+    <Image src={leaf3} alt="帝璽的圖片" className={css.leaf1} />
+    <Image src={leaf3} alt="帝璽的圖片" className={css.leaf2} />
     <Viewport>
       <SectionTitle
         titleTop="無敵安心"

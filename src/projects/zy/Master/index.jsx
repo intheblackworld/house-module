@@ -9,7 +9,7 @@ const Master = ({ show }) => {
   // const colorBgClass = withTrans('colorBg', c, show)
 
   return (
-    <img className={bgClass} src={isMobile ? require('./m1.jpg') : require('./d1.jpg')} alt="東城大境的圖片" />
+    <img className={bgClass} src={isMobile ? require('./m1.jpg') : require('./d1.jpg')} alt="帝璽的圖片" />
   )
 }
 

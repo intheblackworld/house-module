@@ -5,7 +5,7 @@ import cx from 'classnames'
 
 import logo from './logo.png'
 import menu from './menu-btn.png'
-import info from '../../info'
+// import info from '../../info'
 
 import css from './index.scss'
 
@@ -15,15 +15,15 @@ const MobileNavigationHeight = 45
 
 const NavItems = [
   {
-    name: '東區首席',
+    name: '交通樞紐',
     imgSrc: '',
     subTitle: '',
-    section: 'section3',
+    section: 'section2',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '公園樹海',
+    name: '精工團隊',
     imgSrc: '',
     subTitle: '',
     section: 'section4',
@@ -31,7 +31,7 @@ const NavItems = [
   },
 
   {
-    name: '壯闊造鎮',
+    name: '帝制規格',
     imgSrc: '',
     subTitle: '',
     section: 'section5',
@@ -39,7 +39,7 @@ const NavItems = [
   },
 
   {
-    name: '菁英團隊',
+    name: '黃金格局',
     imgSrc: '',
     subTitle: '',
     section: 'section6',
@@ -98,7 +98,7 @@ const Navigation = () => {
           <div className={css.nav}>
             <div className={css.logo}>
               <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
-                <Image src={logo} alt="東城大境的圖片" />
+                <Image src={logo} alt="帝璽的圖片" />
               </Link>
             </div>
             <div
@@ -107,7 +107,7 @@ const Navigation = () => {
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             >
-              <Image src={menu} alt="東城大境的圖片" />
+              <Image src={menu} alt="帝璽的圖片" />
             </div>
             <div
               className={mask}
@@ -136,10 +136,10 @@ const Navigation = () => {
                   </Link>
                 ))}
             </ul>
-            <div className={css.phoneNumber}>
+            {/* <div className={css.phoneNumber}>
               <p>貴賓專線</p>
               <h3>{info.phone}</h3>
-            </div>
+            </div> */}
           </div>
         </Container>
       </Container>
