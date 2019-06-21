@@ -5,6 +5,7 @@ import { withTrans } from 'utils'
 // import { Element } from 'react-scroll'
 // import Viewport from 'components/ViewPort'
 // import ImageBg from 'components/ImageBg'
+import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const Section2 = ({ show }) => {
@@ -47,7 +48,7 @@ const Section2 = ({ show }) => {
       <div className={c.right}>
         <div className={c.content}>
           <img src={require('./label.png')} alt="" className={c.label} />
-          <h3>交通大格局 接軌國際正核心</h3>
+          <h3>交通大格局 {isMobile ? <br /> : ''}接軌國際正核心</h3>
           <p>
             近擁南京東路、敦化北路金融商圈繁榮，建國大道縱貫市心南北，一次連結平面路網核心，輕鬆接軌松山、桃園雙機場，同時鄰近松江南京站雙捷運線交匯
           </p>

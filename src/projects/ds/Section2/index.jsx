@@ -4,13 +4,14 @@ import { withTrans } from 'utils'
 // import { Element } from 'react-scroll'
 // import Viewport from 'components/ViewPort'
 // import ImageBg from 'components/ImageBg'
+import { isMobile } from '../../../utils'
 import c from './index.scss'
 
 const Section2 = ({ show }) => {
   const containerClass = withTrans('container', c, show)
   return (
     <div className={containerClass}>
-      <img src={require('./d2.png')} alt="" />
+      <img src={isMobile ? require('./m2.png') : require('./d2.png')} alt="" />
       <div className={c.content}>
         <h3>頂尖企業、跨國集團首選的經貿大道</h3>
         <p>國泰、富邦、新光、全球人壽、DHL…百大產業龍頭總部及國際跨國分公司在台分部，</p>

@@ -27,11 +27,11 @@
   background-color: rgba(136, 109, 75, 0.8);
   opacity: 0;
   &.show {
-    @include animate(fadeInUp, .8s, .0s);
+    @include animate(fadeInUp, 0.8s, 0s);
   }
 
   &.hide {
-    @include animate(fadeOut, .6s, 0);
+    @include animate(fadeOut, 0.6s, 0);
   }
 }
 
@@ -57,21 +57,21 @@
       width: 179px;
       height: 57px;
       background-color: transparent;
-      border-bottom: solid 2px #c7b39f;;
+      border-bottom: solid 2px #c7b39f;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all .5s;
+      transition: all 0.5s;
 
       h3 {
         font-size: 20px;
         color: #886d4b;
-        transition: all .5s;
+        transition: all 0.5s;
       }
 
       &:hover {
         background-color: #886d4b;
-        
+
         h3 {
           color: #fff;
         }
@@ -83,7 +83,7 @@
     .item {
       @for $i from 1 through 7 {
         &:nth-child(#{$i}) {
-          @include animate(fadeInRight, .4s, $i * 0.1s);
+          @include animate(fadeInRight, 0.4s, $i * 0.1s);
         }
       }
     }
@@ -91,7 +91,7 @@
 
   &.hide {
     .item {
-      @include animate(fadeOut, .5s, 0s);
+      @include animate(fadeOut, 0.5s, 0s);
     }
   }
 }
@@ -102,11 +102,11 @@
   width: 582px;
   opacity: 0;
   &.show {
-    @include animate(fadeInUp, .8s, .6s);
+    @include animate(fadeInUp, 0.8s, 0.6s);
   }
 
   &.hide {
-    @include animate(fadeOut, .6s, 0);
+    @include animate(fadeOut, 0.6s, 0);
   }
 }
 
@@ -151,7 +151,6 @@
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
   .sideBar {
     .item {
       .label {
@@ -173,29 +172,31 @@
   }
 
   .vrBanner {
+    width: 100vw;
     img {
-      width: 100vw;
+      width: 100%;
     }
   }
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .bg {
-    height: calc(100vh - 45px);
+  .container {
+    width: 100vw;
+    padding-top: 20px;
+  }
+
+  .content {
+    position: relative;
   }
 
   .title {
-    font-size: 16px;
-    margin-bottom: 50px;
-  }
-
-  .leftFlower {
-    display: none;
-  }
-  
-  .rightFlower {
-    display: none;
+    font-size: 23px;
+    width: 90%;
+    height: 64px;
+    line-height: 64px;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .sideBar {
@@ -204,39 +205,22 @@
 
   .slider {
     position: relative;
-    height: 400px;
+    height: 300px;
     width: 100%;
+    margin-top: 25px;
   }
 
-  .blockWhite {
-    width: 233px;
-    height: 296px;
-    top: 0;
-    right: 30px;
-    padding: 15px 16px 15px 23px;
-    .blockTitle {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-  
-    .blockDesc {
-      font-size: 12px;
-    }
-  }
-  
   .blockImg {
-    width: 303px;
-    top: 185px;
-    right: 15px;
+    width: 90%;
+    top: 25px;
+    right: 0;
   }
-  
+
   .blockYellow {
-    width: 273px;
-    height: 166px;
-    right: auto;
-    left: 20px;
-    bottom: 0px;
-    top: initial;
+    width: 90%;
+    height: 150px;
+    left: 0;
+    top: 40px;
   }
 
   .blockLabel {
@@ -253,29 +237,60 @@
     top: -23px;
   }
 
+  .mobileLabel {
+    width: 211px;
+    height: 54px;
+    background-color: #c7b39f;
+    color: #2d436e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -29px;
+    left: 30px;
+    img {
+      width: 36px;
+      height: 36px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
   .control {
-    // background: url('./chevron-right.png');
-    width: 148px;
-    height: 24px;
+    background-image: url('./chevron-right.png');
+    background-size: cover;
+    width: 175px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    bottom: 20px;
+    top: 240px;
     right: 0;
     left: 0;
     margin: 0 auto;
 
-    .left, .right {
+    .left,
+    .right {
       width: 20px;
       height: 20px;
+    }
+  }
+
+  .vrBanner {
+    width: 90vw;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
     }
   }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
 @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-
 }
 
 // 避免過度到 1280 x 720 時，設計未考量的調整

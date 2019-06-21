@@ -11,7 +11,7 @@ const Master = ({ show }) => {
 
   return (
     <div className={containerClass}>
-      <img className={bgClass} src={isMobile ? require('./m1.jpg') : require('./d1.png')} alt="帝璽的圖片" />
+      <img className={bgClass} src={isMobile ? require('./m1.png') : require('./d1.png')} alt="帝璽的圖片" />
       <img src={require('./logo-1.png')} alt="" className={c.logo1} />
       <img src={require('./logo-2.png')} alt="" className={c.logo2} />
       <img src={require('./title-1.png')} alt="" className={c.title1} />

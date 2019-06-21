@@ -88,6 +88,24 @@
   .bg {
     margin-top: 45px;
   }
+
+  .logo1 {
+    width: 60px;
+  }
+
+  .title1 {
+    width: 60px;
+    transform: translate(90px, -55px);
+  }
+
+  .title2 {
+    width: 60px;
+    transform: translate(-90px, 152px);
+  }
+
+  .logo2 {
+    width: 110px;
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

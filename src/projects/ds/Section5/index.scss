@@ -54,9 +54,9 @@
       background: rgba(255, 255, 255, 0.6);
       font-size: 24px;
       line-height: 1.7;
-      font-weight: bold;
       color: #2b466f;
       padding: 25px 15px;
+      font-weight: normal;
     }
   }
 }
@@ -101,7 +101,19 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .container {
-    width: 90%;
+    width: auto;
+
+    .dialogBox {
+      width: 205px;
+      .head {
+        font-size: 22px;
+        line-height: 1.4;
+      }
+      .body {
+        font-size: 14px;
+        font-weight: normal;
+      }
+    }
   }
 }
 

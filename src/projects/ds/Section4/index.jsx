@@ -4,6 +4,7 @@ import { withTrans } from 'utils'
 import Viewport from 'components/ViewPort'
 import Carousel from 'components/Carousel'
 import c from './index.scss'
+import { isMobile } from '../../../utils'
 // const bgClass = withTrans('bg', c, show)
 const hsList = [
   {
@@ -79,11 +80,13 @@ const Block1 = ({ show }) => {
   const blockClass = withTrans('block', c, show)
   return (
     <div className={blockClass}>
-      <div className={`${c.title} ${c.center}`}>長虹建設 ，與世界建築同步創新的 「豪宅第一品牌」</div>
+      <div className={`${c.title} ${c.center}`}>
+        長虹建設 ，與世界建築同步創新的 「豪宅第一品牌」
+      </div>
       <div className={`${c.desc} ${c.right}`}>
         誠信和品質是長虹建設40多年如一日的唯一堅持。這堅持讓長虹超越市場挑戰、無畏景氣，在專業上精益求精，每推出新案都能展現突破創新的能量及力道，成為客戶心中的”豪宅第一品牌”。
       </div>
-      <Carousel slidesToShow={4} fade={false} arrows>
+      <Carousel slidesToShow={isMobile ? 1 : 4} fade={false} arrows={!isMobile}>
         {hsList.map(hs => (
           <div className={c.sliderItem} key={hs.title}>
             <img src={hs.src} alt="" />
@@ -99,11 +102,13 @@ const Block2 = ({ show }) => {
   const blockClass = withTrans('block', c, show)
   return (
     <div className={blockClass}>
-      <div className={`${c.title} ${c.right}`}>宏盛建設，讓台灣建築榮登國際舞台的 「豪宅第⼀口碑」</div>
+      <div className={`${c.title} ${c.right}`}>
+        宏盛建設，讓台灣建築榮登國際舞台的 「豪宅第⼀口碑」
+      </div>
       <div className={`${c.desc} ${c.center}`}>
         仁愛帝寶、信義帝寶、宏盛陽明、宏盛得意山莊⋯，台北市心數一數二的鑽石地段，都有一座宏盛豪宅經典地標。亞洲10大豪宅的光環更是宏盛品牌實力的最佳見證。
       </div>
-      <Carousel slidesToShow={4} fade={false} arrows>
+      <Carousel slidesToShow={isMobile ? 1 : 4} fade={false} arrows={!isMobile}>
         {chList.map(hs => (
           <div className={c.sliderItem} key={hs.title}>
             <img src={hs.src} alt="" />
@@ -124,7 +129,7 @@ const Block3 = ({ show }) => {
         創意家行銷、金以容建築師聯合事務所、結構安全 凱巨工程、公設空間 顥斯設計、景觀設計
         方極景觀，攜手打造未來世代超豪宅
       </div>
-      <Carousel slidesToShow={4} fade={false} arrows>
+      <Carousel slidesToShow={isMobile ? 1 : 4} fade={false} arrows={!isMobile}>
         {pList.map(p => (
           <div className={c.sliderItem} key={p.title}>
             <img src={p.src} alt="" />

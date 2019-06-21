@@ -50,11 +50,7 @@ const slideList = [
 
 const Title = ({ show }) => {
   const titleClass = withTrans('title', c, show)
-  return (
-    <h3 className={titleClass}>
-      世界之門 瞬間為您開啟
-    </h3>
-  )
+  return <h3 className={titleClass}>世界之門 瞬間為您開啟</h3>
 }
 
 const SideBar = ({ show, dispatch }) => {
@@ -83,6 +79,12 @@ const Slider = ({ show, index = 0 }) => {
   const sliderClass = withTrans('slider', c, show)
   return (
     <div className={sliderClass}>
+      {isMobile && (
+        <div className={c.mobileLabel}>
+          <img src={slideList[index].labelImg} alt="帝璽的圖片" />
+          <h3>{slideList[index].label}</h3>
+        </div>
+      )}
       <img className={c.blockImg} src={slideList[index].src} alt="帝璽的圖片" />
       <div className={c.blockYellow} />
     </div>
@@ -114,7 +116,12 @@ const Section7 = () => {
           ) : null}
         </div>
       </div>
-      <a className={c.vrBanner} href="https://my.matterport.com/show/?m=Ggh26R1un73&utm_source=4" target="_blank" rel="noopener noreferrer">
+      <a
+        className={c.vrBanner}
+        href="https://my.matterport.com/show/?m=Ggh26R1un73&utm_source=4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src={require('./vr.png')} alt="" />
       </a>
     </div>
