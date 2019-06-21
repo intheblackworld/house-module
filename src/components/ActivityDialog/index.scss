@@ -1,0 +1,49 @@
+.dialog {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  left: 0;
+
+  .dialogImage {
+    width: 1000px;
+    height: auto;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.show {
+    display: block;
+  }
+}
+
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .dialog .dialogImage {
+    width: 90vw;
+    height: auto;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

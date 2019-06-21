@@ -1,0 +1,52 @@
+.fixLink {
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  bottom: 20px;
+  img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.close {
+  font-size: 36px;
+  position: fixed;
+  right: 50%;
+  top: 15%;
+  transform: translateX(500px);
+  z-index: 200;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .fixLink {
+    right: 5px;
+    bottom: 65px;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .close {
+    font-size: 36px;
+    position: fixed;
+    right: 50%;
+    top: 15%;
+    transform: translateX(45vw);
+    z-index: 200;
+    color: #ccc;
+    display: none;
+    cursor: pointer;
+    &.show {
+      display: block;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React, { lazy } from 'react'
 import { Element } from 'react-scroll'
 import FullScreen from 'components/FullScreen'
 import Section from 'components/Section'
+import Link from 'components/FixLink'
 import Mask from 'components/AstrictMask'
 import ViewPort from 'components/ViewPort'
 
@@ -28,6 +29,7 @@ const SectionList = () => {
   return (
     <React.Fragment>
       <Mask />
+      <Link />
       <Element id="master">
         <FullScreen needCutHeader={false}>
           <ViewPort>
