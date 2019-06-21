@@ -177,7 +177,29 @@ const Section5 = () => (
       <Viewport>
         <ItemsContainer list={itemList} />
       </Viewport>
+      {!isMobile && (
+        <iframe
+          title="youtube"
+          width="100%"
+          height="700px"
+          src="https://www.youtube.com/embed/aomkNByeChQ"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      )}
     </div>
+    {isMobile && (
+      <iframe
+        title="youtube"
+        width="100%"
+        height="255px"
+        src="https://www.youtube.com/embed/aomkNByeChQ"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    )}
   </div>
 )
 
