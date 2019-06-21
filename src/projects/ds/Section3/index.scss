@@ -116,6 +116,18 @@
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  .container {
+    .right {
+      width: 520px;
+      height: 520px;
+    }
+
+    .left {
+      width: calc(100vw - 520px);
+      height: 520px;
+    }
+  }
 }
 
 /* 手機尺寸 */

@@ -1,73 +1,114 @@
 @import '../../../assets/animate.scss';
 
+.bg, .triangle {
+  width: 100vw;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.bg {
+  min-height: 710px;
+}
+
+.triangle {
+  z-index: 1;
+}
+
 .container {
   position: relative;
-  .bg {
-    width: 100vw;
-    display: block;
-  }
+  overflow: hidden;
 
-  .triangle, .bone {
-    position: absolute;
+  .content {
+    width: 1200px;
+    height: 710px;
+    position: relative;
+    margin: 0 auto;
+    padding: 120px 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bone {
+    width: 451px;
   }
 
   .dialogBox {
-    position: absolute;
-    width: 532px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 5%;
+    width: 643px;
     color: #fff;
 
     .head {
       font-size: 40px;
       font-weight: 500;
       height: 64px;
-      background-color: rgba(43, 70, 111, .5);
-      color: #fff;
+      background-color: #fff;
+      color: rgba(43, 70, 111, 1);
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-left: 20px;
     }
 
     .body {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.8);
       font-size: 24px;
       line-height: 1.7;
-      font-weight: bold;
+      font-weight: normal;
       color: #2b466f;
       padding: 25px 15px;
     }
   }
 }
 
-.container > .dialogBox {
-  .head, .body {
+.container {
+
+  .triangle, .bone {
     opacity: 0;
+  }
+
+  .dialogBox {
+    .head, .body {
+      opacity: 0;
+    }
   }
 }
 
 .container {
   &.show {
+    .triangle {
+      @include animate(fadeInUp, .6s, 0s);
+    }
+
+    .bone {
+      @include animate(fadeInUp, 1s, .3s);
+    }
     .dialogBox {
       .head {
-        @include animate(fadeInUp, 1s, 0s);
+        @include animate(fadeInLeft, 1s, .6s);
       }
 
       .body {
-        @include animate(fadeInUp, 0.8s, .6s);
+        @include animate(fadeInLeft, 0.8s, .9s);
       }
     }
   }
 
   &.hide {
+    .triangle {
+      @include animate(fadeOut, 0.8s, 0s);
+    }
+
+    .bone {
+      @include animate(fadeOut, 0.8s, 0s);
+    }
     .dialogBox {
       .head {
         @include animate(fadeOut, 0.8s, 0s);
       }
 
       .body {
-        @include animate(fadeOut, 0.8s, .6s);
+        @include animate(fadeOut, 0.8s, 0s);
       }
     }
   }
@@ -76,6 +117,19 @@
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+
+    .content {
+      width: 90vw;
+    }
+    .bone {
+      width: 350px;
+    }
+
+    .dialogBox {
+      width: 550px;
+    }
+  }
 }
 
 /* 手機尺寸 */

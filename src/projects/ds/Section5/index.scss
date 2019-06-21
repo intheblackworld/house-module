@@ -87,7 +87,7 @@
       }
 
       .body {
-        @include animate(fadeOut, 0.8s, .6s);
+        @include animate(fadeOut, 0.8s, 0s);
       }
     }
   }

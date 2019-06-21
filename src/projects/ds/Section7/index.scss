@@ -1,0 +1,286 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  background-color: #fff;
+  background-image: url('./bg.png');
+  width: 100vw;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  width: 980px;
+  padding-top: 85px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  width: 520px;
+  height: 104px;
+  line-height: 104px;
+  margin: 0 auto;
+  background-color: rgba(136, 109, 75, 0.8);
+  opacity: 0;
+  &.show {
+    @include animate(fadeInUp, .8s, .0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .6s, 0);
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sideBar {
+  img {
+    width: 41px;
+    height: 41px;
+    margin: 0 10px;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    opacity: 0;
+    .label {
+      width: 179px;
+      height: 57px;
+      background-color: transparent;
+      border-bottom: solid 2px #c7b39f;;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .5s;
+
+      h3 {
+        font-size: 20px;
+        color: #886d4b;
+        transition: all .5s;
+      }
+
+      &:hover {
+        background-color: #886d4b;
+        
+        h3 {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.show {
+    .item {
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          @include animate(fadeInRight, .4s, $i * 0.1s);
+        }
+      }
+    }
+  }
+
+  &.hide {
+    .item {
+      @include animate(fadeOut, .5s, 0s);
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  height: 565px;
+  width: 582px;
+  opacity: 0;
+  &.show {
+    @include animate(fadeInUp, .8s, .6s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, .6s, 0);
+  }
+}
+
+.blockImg {
+  width: 683px;
+  position: absolute;
+  right: -85px;
+  top: 0px;
+  z-index: 2;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
+}
+
+.blockYellow {
+  width: 615px;
+  height: 315px;
+  background-color: #8c704d;
+  position: absolute;
+  right: 5px;
+  z-index: 1;
+  top: 50px;
+}
+
+.blockLabel {
+  position: absolute;
+  width: 152px;
+  height: 46px;
+  line-height: 46px;
+  background: #c7b39f;
+  text-align: center;
+  display: none;
+  color: #2d436e;
+  font-size: 16px;
+}
+
+.vrBanner {
+  display: block;
+  width: 1060px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  .sideBar {
+    .item {
+      .label {
+        width: 167px;
+        height: 53px;
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+    height: 459px;
+    width: 582px;
+  }
+
+  .blockImg {
+    width: 620px;
+    right: -30px;
+  }
+
+  .vrBanner {
+    img {
+      width: 100vw;
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    height: calc(100vh - 45px);
+  }
+
+  .title {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .leftFlower {
+    display: none;
+  }
+  
+  .rightFlower {
+    display: none;
+  }
+
+  .sideBar {
+    display: none;
+  }
+
+  .slider {
+    position: relative;
+    height: 400px;
+    width: 100%;
+  }
+
+  .blockWhite {
+    width: 233px;
+    height: 296px;
+    top: 0;
+    right: 30px;
+    padding: 15px 16px 15px 23px;
+    .blockTitle {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  
+    .blockDesc {
+      font-size: 12px;
+    }
+  }
+  
+  .blockImg {
+    width: 303px;
+    top: 185px;
+    right: 15px;
+  }
+  
+  .blockYellow {
+    width: 273px;
+    height: 166px;
+    right: auto;
+    left: 20px;
+    bottom: 0px;
+    top: initial;
+  }
+
+  .blockLabel {
+    position: absolute;
+    width: 125px;
+    height: 35px;
+    line-height: 35px;
+    background: #c7b39f;
+    text-align: center;
+    display: block;
+    color: #2d436e;
+    font-size: 18px;
+    left: -40px;
+    top: -23px;
+  }
+
+  .control {
+    // background: url('./chevron-right.png');
+    width: 148px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    .left, .right {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  // .slider > div, .slider > .blockImg {
+  //   transform: scale(0.8);
+  // }
+}

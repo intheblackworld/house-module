@@ -166,8 +166,8 @@
   height: 72px !important;
   // opacity: 0 !important;
   border-radius: 0 !important;
-  background-color: rgba(229, 212, 143, .4) !important;
-  color: #666;
+  background-color: rgba(43, 70, 111, .5) !important;
+  color: rgba(255, 255, 255, .6) !important;
   font-size: 20px !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
@@ -184,8 +184,8 @@
 
   &.enable {
     cursor: pointer;
-    color: #2d436e !important;
-    background-color: rgba(229, 212, 143, 1) !important;
+    color: #fff !important;
+    background-color: rgba(43, 70, 111, 1) !important;
   }
 }
 

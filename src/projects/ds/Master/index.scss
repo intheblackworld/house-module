@@ -7,22 +7,72 @@
 }
 
 // show hide
-.bg {
+.container {
+  .logo1, .title1, .title2 {
+    opacity: 0;
+  }
   // @include animate(fadeIn, .8s, .4s);
-  // &.show {
-  //   @include animate(fadeIn, 0.8s, 0s);
-  // }
+  &.show {
 
-  // &.hide {
-  //   @include animate(fadeOut, 0.8s, 0s);
-  // }
+    .logo1 {
+      @include animate(fadeIn, 0.6s, .3s);
+    }
+    
+    .title1 {
+      @include animate(fadeIn, 0.6s, 0s);
+    }
+
+    .title2 {
+      @include animate(fadeIn, 0.6s, .6s);
+    }
+  }
+
+  &.hide {
+    .logo1, .title1, .title2 {
+      @include animate(fadeOut, 0.8s, 0s);
+    }
+  }
 }
 
 .container {
-  .logo1, .logo2, .title1, .title2 {
+  position: relative;
+  .logo1, .title1, .title2 {
     position: absolute;
     top: 0;
   }
+}
+
+.logo1 {
+  left: 0;
+  right: 0;
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.logo2 {
+  position: absolute;
+  bottom: 67px;
+  left: 10%;
+  width: 163px;
+}
+
+.title1 {
+  left: 0;
+  right: 0;
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 70px;
+  transform: translate(120px, -55px);
+}
+
+.title2 {
+  left: 0;
+  right: 0;
+  width: 71px;
+  margin: 0 auto;
+  margin-top: 70px;
+  transform: translate(-120px, 152px);
 }
 
 /* 螢幕尺寸標準 */

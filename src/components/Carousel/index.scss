@@ -31,6 +31,18 @@
     }
   }
 
+  .slick-prev {
+    left: -40px;
+  }
+
+  .slick-next {
+    right: -40px;
+}
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 40px;
+  }
+
   /* 手機尺寸 */
   @media only screen and (max-width: 767px) {
     // .slick-dots {

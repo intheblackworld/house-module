@@ -16,6 +16,7 @@ const Section3 = lazy(() => import('projects/ds/Section3'))
 const Section4 = lazy(() => import('projects/ds/Section4'))
 const Section5 = lazy(() => import('projects/ds/Section5'))
 const Section6 = lazy(() => import('projects/ds/Section6'))
+const Section7 = lazy(() => import('projects/ds/Section7'))
 // const Section7 = lazy(() => import('projects/dyc/Section7'))
 // const Section8 = lazy(() => import('projects/dyc/Section8'))
 // const MobileSection = lazy(() => import('projects/star/MobileSection'))
@@ -51,6 +52,11 @@ const Layout = () => (
     <Element id="section6">
       <ViewPort isBottom={false}>
         <Section6 />
+      </ViewPort>
+    </Element>
+    <Element id="section7">
+      <ViewPort isBottom={false}>
+        <Section7 />
       </ViewPort>
     </Element>
     <ContactSection />
