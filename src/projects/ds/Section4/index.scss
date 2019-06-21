@@ -153,17 +153,73 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .container {
-    width: 90%;
+    width: 90vw;
     padding: 1px 0 60px;
+  }
+
+  .pSlider {
+    width: 234vw;
+    margin: 0 auto;
+    float: none;
+    margin-left: calc(-50% + -28vw);
+  }
+
+  .bBlock {
+    :global {
+      .slick-next {
+        right: 9px;
+        width: 30px;
+        height: 80px;
+        background: rgba(0, 0, 0, .5);
+        z-index: 2;
+      }
+
+      .slick-prev {
+        left: 9px;
+        width: 30px;
+        height: 80px;
+        background: rgba(0, 0, 0, .5);
+        z-index: 2;
+      }
+
+      .slick-next:before {
+        background-image: url('./arrow-right.png');
+        background-size: 30px 30px;
+        display: inline-block;
+        width: 30px; 
+        height: 30px;
+        content:"";
+      }
+
+      .slick-prev:before {
+        background-image: url('./arrow-left.png');
+        background-size: 30px 30px;
+        display: inline-block;
+        width: 30px; 
+        height: 30px;
+        content:"";
+      }
+    }
   }
 
   .block {
     margin-top: 30px;
+    overflow: hidden;
 
     .sliderItem {
       overflow: hidden;
-      .itemTitle {
-        width: 100%;
+      .itemTitle, .pTitle {
+        width: calc(90vw - 20px);
+      }
+    }
+
+    .pItem {
+      width: 80vw !important;
+      margin: 0 auto;
+      display: block !important;
+
+      .pTitle {
+        width: calc(80vw - 20px);
       }
     }
 
