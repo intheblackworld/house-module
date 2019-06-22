@@ -155,7 +155,7 @@ const Block3 = ({ show }) => {
           slidesToShow={isMobile ? 3 : 4}
           fade={false}
           arrows={false}
-          initialSlide={isMobile ? 5 : 1}
+          initialSlide={isMobile ? 5 : 0}
         >
           {pList.map(p => (
             <div className={`${c.sliderItem} ${c.pItem}`} key={p.title}>
