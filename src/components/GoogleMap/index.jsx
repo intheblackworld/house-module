@@ -45,7 +45,8 @@ export default class GooglMap extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ position: 'relative', background: '#fff' }}>
+        <img src={require('./map.png')} alt="" className={css.mapImage} />
         <div ref={this.mapArea} className={css.mapFrame} />
       </div>
     )

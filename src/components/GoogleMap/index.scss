@@ -3,17 +3,30 @@
   height: 420px;
 }
 
+.mapImage {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: 420px;
+}
+
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .mapFrame {
     height: 360px;
   }
+
+  .mapImage {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
 }
 
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .mapFrame {
+  .mapFrame, .mapImage {
     height: 360px;
   }
 }

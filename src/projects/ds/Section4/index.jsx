@@ -8,6 +8,10 @@ import { isMobile } from '../../../utils'
 // const bgClass = withTrans('bg', c, show)
 const hsList = [
   {
+    src: require('./hs1.jpg'),
+    title: '仁愛帝寶',
+  },
+  {
     src: require('./hs2.jpg'),
     title: '信義帝寶',
   },
@@ -18,10 +22,6 @@ const hsList = [
   {
     src: require('./hs4.jpg'),
     title: '宏盛得意山莊',
-  },
-  {
-    src: require('./hs1.jpg'),
-    title: '明日博',
   },
 ]
 
