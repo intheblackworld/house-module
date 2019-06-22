@@ -33,14 +33,14 @@
 
   .dialogBox {
     position: absolute;
-    width: 532px;
+    width: 432px;
     top: 50%;
     transform: translateY(-50%);
     left: 5%;
     color: #fff;
 
     .head {
-      font-size: 40px;
+      font-size: 32px;
       font-weight: 500;
       height: 64px;
       background-color: rgba(43, 70, 111, .5);
@@ -52,7 +52,7 @@
 
     .body {
       background: rgba(255, 255, 255, 0.6);
-      font-size: 24px;
+      font-size: 22px;
       line-height: 1.7;
       color: #2b466f;
       padding: 25px 15px;
@@ -96,6 +96,26 @@
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    
+  
+    .dialogBox {
+      width: 332px;
+  
+      .head {
+        font-size: 28px;
+      }
+  
+      .body {
+        background: rgba(255, 255, 255, 0.6);
+        font-size: 20px;
+        line-height: 1.7;
+        color: #2b466f;
+        padding: 25px 15px;
+        font-weight: normal;
+      }
+    }
+  }
 }
 
 /* 手機尺寸 */

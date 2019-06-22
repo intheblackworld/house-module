@@ -151,7 +151,12 @@ const Block3 = ({ show }) => {
         方極景觀，攜手打造未來世代超豪宅。
       </div>
       <div className={c.pSlider}>
-        <Carousel slidesToShow={isMobile ? 3 : 4} fade={false} arrows={false}>
+        <Carousel
+          slidesToShow={isMobile ? 3 : 4}
+          fade={false}
+          arrows={false}
+          initialSlide={isMobile ? 5 : 1}
+        >
           {pList.map(p => (
             <div className={`${c.sliderItem} ${c.pItem}`} key={p.title}>
               <img src={p.src} alt="" />
