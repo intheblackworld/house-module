@@ -8,22 +8,18 @@
 
 // show hide
 .container {
-  .logo1, .title1, .title2 {
+  .title1, .title2 {
     opacity: 0;
   }
   // @include animate(fadeIn, .8s, .4s);
   &.show {
-
-    .logo1 {
-      @include animate(fadeIn, 0.6s, .3s);
-    }
     
     .title1 {
-      @include animate(fadeIn, 0.6s, 0s);
+      @include animate(fadeIn, 1s, 0s);
     }
 
     .title2 {
-      @include animate(fadeIn, 0.6s, .6s);
+      @include animate(fadeIn, 1s, .6s);
     }
   }
 

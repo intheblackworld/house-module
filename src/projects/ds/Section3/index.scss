@@ -10,6 +10,7 @@
     position: relative;
     > img {
       height: 100%;
+      width: 100%;
     }
 
     .btnGroup {
@@ -126,6 +127,10 @@
     .left {
       width: calc(100vw - 520px);
       height: 520px;
+
+      img {
+        width: auto;
+      }
     }
   }
 }

@@ -59,7 +59,9 @@ const Layout = () => (
         <Section7 />
       </ViewPort>
     </Element>
-    <ContactSection />
+    <Element id="contact">
+      <ContactSection />
+    </Element>
     {/* <Section>
     <Element id="section5">
       <Section5 />

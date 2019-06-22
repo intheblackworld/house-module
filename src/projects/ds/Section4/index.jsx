@@ -8,10 +8,6 @@ import { isMobile } from '../../../utils'
 // const bgClass = withTrans('bg', c, show)
 const hsList = [
   {
-    src: require('./hs1.jpg'),
-    title: '明日博',
-  },
-  {
     src: require('./hs2.jpg'),
     title: '信義帝寶',
   },
@@ -22,6 +18,10 @@ const hsList = [
   {
     src: require('./hs4.jpg'),
     title: '宏盛得意山莊',
+  },
+  {
+    src: require('./hs1.jpg'),
+    title: '明日博',
   },
 ]
 
@@ -76,39 +76,8 @@ const pList = [
     name: '王思敏',
   },
 ]
-const Block1 = ({ show }) => {
-  const blockClass = withTrans('block', c, show)
-  return (
-    <div className={`${blockClass} ${c.bBlock}`}>
-      {isMobile ? (
-        <div className={`${c.title} ${c.center}`}>
-          長虹建設 <br />
-          與世界建築
-          <br />
-          同步創新的 <br />
-          「豪宅第一品牌」
-        </div>
-      ) : (
-        <div className={`${c.title} ${c.center}`}>
-          長虹建設 ，與世界建築同步創新的 「豪宅第一品牌」
-        </div>
-      )}
-      <div className={`${c.desc} ${c.right}`}>
-        誠信和品質是長虹建設40多年如一日的唯一堅持。這堅持讓長虹超越市場挑戰、無畏景氣，在專業上精益求精，每推出新案都能展現突破創新的能量及力道，成為客戶心中的”豪宅第一品牌”。
-      </div>
-      <Carousel slidesToShow={isMobile ? 1 : 4} fade={false} arrows>
-        {hsList.map(hs => (
-          <div className={c.sliderItem} key={hs.title}>
-            <img src={hs.src} alt="" />
-            <div className={c.itemTitle}>{hs.title}</div>
-          </div>
-        ))}
-      </Carousel>
-    </div>
-  )
-}
 
-const Block2 = ({ show }) => {
+const Block1 = ({ show }) => {
   const blockClass = withTrans('block', c, show)
   return (
     <div className={`${blockClass} ${c.bBlock}`}>
@@ -127,6 +96,38 @@ const Block2 = ({ show }) => {
       )}
       <div className={`${c.desc} ${c.center}`}>
         仁愛帝寶、信義帝寶、宏盛陽明、宏盛得意山莊⋯，台北市心數一數二的鑽石地段，都有一座宏盛豪宅經典地標。亞洲10大豪宅的光環更是宏盛品牌實力的最佳見證。
+      </div>
+      <Carousel slidesToShow={isMobile ? 1 : 4} fade={false} arrows>
+        {hsList.map(hs => (
+          <div className={c.sliderItem} key={hs.title}>
+            <img src={hs.src} alt="" />
+            <div className={c.itemTitle}>{hs.title}</div>
+          </div>
+        ))}
+      </Carousel>
+    </div>
+  )
+}
+
+const Block2 = ({ show }) => {
+  const blockClass = withTrans('block', c, show)
+  return (
+    <div className={`${blockClass} ${c.bBlock}`}>
+      {isMobile ? (
+        <div className={`${c.title} ${c.center}`}>
+          長虹建設 <br />
+          與世界建築
+          <br />
+          同步創新的 <br />
+          「豪宅第一品牌」
+        </div>
+      ) : (
+        <div className={`${c.title} ${c.center}`}>
+          長虹建設 ，與世界建築同步創新的 「豪宅第一品牌」
+        </div>
+      )}
+      <div className={`${c.desc} ${c.right}`}>
+        誠信和品質是長虹建設40多年如一日的唯一堅持。這堅持讓長虹超越市場挑戰、無畏景氣，在專業上精益求精，每推出新案都能展現突破創新的能量及力道，成為客戶心中的”豪宅第一品牌”。
       </div>
       <Carousel slidesToShow={isMobile ? 1 : 4} fade={false} arrows>
         {chList.map(hs => (
@@ -150,7 +151,7 @@ const Block3 = ({ show }) => {
         方極景觀，攜手打造未來世代超豪宅。
       </div>
       <div className={c.pSlider}>
-        <Carousel slidesToShow={isMobile ? 3 : 4} fade={false} arrows={!isMobile}>
+        <Carousel slidesToShow={isMobile ? 3 : 4} fade={false} arrows={false}>
           {pList.map(p => (
             <div className={`${c.sliderItem} ${c.pItem}`} key={p.title}>
               <img src={p.src} alt="" />

@@ -42,14 +42,14 @@ const NavItems = [
     name: '黃金格局',
     imgSrc: '',
     subTitle: '',
-    section: 'section6',
+    section: 'section7',
     OffsetValue: -PCNavigationHeight,
   },
   {
-    name: '優質建材',
+    name: '預約鑑賞',
     imgSrc: '',
     subTitle: '',
-    section: 'section7',
+    section: 'contact',
     OffsetValue: -PCNavigationHeight,
   },
 ]

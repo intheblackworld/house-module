@@ -91,10 +91,20 @@ const Slider = ({ show, index = 0 }) => {
   )
 }
 
-const Section7 = () => {
-  const [state, dispatch] = useReducer(reducer, initState)
+const Control = ({ show, dispatch, state }) => {
+  const controlClass = withTrans('control', c, show)
   const dec = () => dispatch({ type: 'set', payload: state.index === 0 ? slideList.length - 1 : state.index - 1 })
   const add = () => dispatch({ type: 'set', payload: state.index === slideList.length - 1 ? 0 : state.index + 1 })
+  return (
+    <div className={controlClass}>
+      <div className={c.left} onClick={dec} onKeyDown={dec} />
+      <div className={c.right} onClick={add} onKeyDown={add} />
+    </div>
+  )
+}
+
+const Section7 = () => {
+  const [state, dispatch] = useReducer(reducer, initState)
   return (
     <div className={c.bg}>
       <div className={c.container}>
@@ -109,10 +119,9 @@ const Section7 = () => {
             <Slider index={state.index} />
           </ViewPort>
           {isMobile ? (
-            <div className={c.control}>
-              <div className={c.left} onClick={dec} onKeyDown={dec} />
-              <div className={c.right} onClick={add} onKeyDown={add} />
-            </div>
+            <ViewPort>
+              <Control dispatch={dispatch} state={state} />
+            </ViewPort>
           ) : null}
         </div>
       </div>

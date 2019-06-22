@@ -77,19 +77,19 @@
 .container {
   &.show {
     .triangle {
-      @include animate(fadeInUp, .6s, 0s);
+      @include animate(fadeInUp, 1s, 0s);
     }
 
     .bone {
-      @include animate(fadeInUp, 1s, .3s);
+      @include animate(fadeInUp, 1s, .5s);
     }
     .dialogBox {
       .head {
-        @include animate(fadeInLeft, 1s, .6s);
+        @include animate(fadeInLeft, 1s, 1s);
       }
 
       .body {
-        @include animate(fadeInLeft, 0.8s, .9s);
+        @include animate(fadeInLeft, 1s, 1.5s);
       }
     }
   }
