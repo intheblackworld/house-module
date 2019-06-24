@@ -141,15 +141,15 @@ module.exports = {
   plugins: [
     // auto generage index.html base on template file and import xxx-bundle.js
     new HtmlWebpackPlugin({
-      title: '正義聯盟 | 小宅變身 正義看我 | 官網',
-      metaTitle: '正義聯盟 | 小宅變身 正義看我 | 官網',
+      title: '博悦 | 永華生活圈重現巴洛克不朽美學 | 官網',
+      metaTitle: '博悦 | 永華生活圈重現巴洛克不朽美學 | 官網',
       metaDescription:
-        '怪獸級18坪2房、零負評26坪3房，大台北高房價剋星，E化超能建築，北市豪宅大師呂建勳攜手宇宙超級英雄團隊，這一次要拯救你的成家夢想。正義聯盟專線：02-2293-1666',
-      metaKeywords: '正義聯盟,正義聯盟建案,正義聯盟社區,五股正義聯盟,五股建案,五股買房,洲子洋重劃區建案,五股新建案',
-      ogMetaTitle: '正義聯盟 | 小宅變身 正義看我 | 官網',
+        '博悦:交屋99萬元起，擁有巴洛克建築！接待中心:台南市永華路二段503號，禮賓專線:06 297 3366',
+      metaKeywords: '博悅,台南建案,台南買房,安平區建案,安平區新建案,台南新建案',
+      ogMetaTitle: '博悦 | 永華生活圈重現巴洛克不朽美學 | 官網',
       ogMetaType: 'website',
       ogMetaDescription:
-        '怪獸級18坪2房、零負評26坪3房，大台北高房價剋星，E化超能建築，北市豪宅大師呂建勳攜手宇宙超級英雄團隊，這一次要拯救你的成家夢想。正義聯盟專線：02-2293-1666',
+        '博悦:交屋99萬元起，擁有巴洛克建築！接待中心:台南市永華路二段503號，禮賓專線:06 297 3366',
       template: 'index.html',
       hash: true,
     }),

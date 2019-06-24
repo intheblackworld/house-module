@@ -3,9 +3,9 @@ export default {
   locations: { lat: 25.085396, lng: 121.442804 },
   phone: '02-22931666',
   fbLink:
-    'https://www.facebook.com/正義聯盟-小宅變身-正義看我-2066330633489731/',
-  fbMessage: 'https://m.me/2066330633489731',
-  googleLink: 'https://goo.gl/maps/ikUZ7Uvuy7Koco2Q7',
+    'https://www.facebook.com/1717533134999360/',
+  fbMessage: 'https://m.me/1717533134999360/',
+  googleLink: 'https://goo.gl/maps/A1YPkuH3oHtpg14K9',
   caseName: '正義聯盟',
 
   houseInfos: [
