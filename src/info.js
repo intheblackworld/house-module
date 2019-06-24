@@ -1,6 +1,6 @@
 export default {
-  address: '新北市五股區新五路二段550號旁',
-  locations: { lat: 25.085396, lng: 121.442804 },
+  address: '新北市五股區新五路三段二號旁',
+  locations: { lat: 25.086908, lng: 121.443971 },
   phone: '02-22931666',
   fbLink:
     'https://www.facebook.com/正義聯盟-小宅變身-正義看我-2066330633489731/',
@@ -9,7 +9,7 @@ export default {
   caseName: '正義聯盟',
 
   houseInfos: [
-    ['接待中心', '新北市五股區新五路二段550號旁'],
+    ['接待中心', '新北市五股區新五路三段二號旁'],
     ['聯絡電話', '02-22931666'],
   ],
 }
