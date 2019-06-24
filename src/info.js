@@ -6,7 +6,7 @@ export default {
     'https://www.facebook.com/1717533134999360/',
   fbMessage: 'https://m.me/1717533134999360/',
   googleLink: 'https://goo.gl/maps/A1YPkuH3oHtpg14K9',
-  caseName: '正義聯盟',
+  caseName: '博悅',
 
   houseInfos: [
     ['接待中心', '新北市五股區新五路二段550號旁'],
