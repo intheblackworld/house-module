@@ -11,7 +11,7 @@ import ContactSection from './ContactSection'
 
 import './index.scss'
 
-const Master = lazy(() => import('projects/zy/Master'))
+const Master = lazy(() => import('projects/by/Master'))
 // const Section2 = lazy(() => import('projects/cj/Section2'))
 // const Section7 = lazy(() => import('projects/dyc/Section7'))
 // const Section8 = lazy(() => import('projects/dyc/Section8'))

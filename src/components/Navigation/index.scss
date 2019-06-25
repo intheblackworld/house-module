@@ -1,7 +1,7 @@
 $navigationPCHeight: 80px;
 $navigationTabletHeight: 60px;
 $navigationMobileHeight: 45px;
-$navigationBg: #006BB4; 
+$navigationBg: transparent; 
 
 $logoPCWidth: 150px;
 $logoTabletWidth: 150px;
@@ -16,7 +16,7 @@ $logoMobileWidth: 85px;
   width: 100%;
   display: flex !important;
   align-items: center;
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav {
@@ -110,6 +110,7 @@ $logoMobileWidth: 85px;
     width: $logoMobileWidth;
     left: 15px;
     top: 10px;
+    display: none;
   }
 
   .nav {

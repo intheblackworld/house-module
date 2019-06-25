@@ -122,7 +122,7 @@ module.exports = {
         ],
       },
       {
-        test: [/\.eot$/, /\.ttf$/, /\.svg$/, /\.woff$/, /\.woff2$/, /\.otf$/],
+        test: [/\.eot$/, /\.ttf$/, /\.svg$/, /\.woff$/, /\.woff2$/, /\.otf$/, /\.mp4$/],
         loader: require.resolve('file-loader'),
         options: {
           name: '/static/media/[name].[hash:8].[ext]',

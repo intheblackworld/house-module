@@ -1,0 +1,198 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  // 圖片
+  // width: 100vw;
+  // display: block;
+  // margin-top: 80px;
+  // bg 一瓶高
+  // width: 100vw;
+  // margin-top: 80px;
+  // height: calc(100vh - 80px);
+  // background-size: cover;
+  // background-position: center;
+  // background-image: url('./d1.jpg');
+}
+
+// show hide
+.bg {
+  // @include animate(fadeIn, .8s, .4s);
+  &.show {
+    @include animate(fadeIn, 0.8s, 0s);
+  }
+
+  &.hide {
+    @include animate(fadeOut, 0.8s, 0s);
+  }
+}
+
+.mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  z-index: 1;
+}
+
+.title {
+  width: 730px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+  display: block;
+}
+
+.playBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 150px auto 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 44px;
+  border-radius: 22px / 22px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  color: #fff;
+
+  img {
+    width: 17px;
+    margin-right: 5px;
+  }
+}
+
+.video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  z-index: 200;
+  display: none;
+
+  iframe {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 60%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 200;
+  }
+  
+  
+  &.show {
+    display: block;
+  }
+}
+
+.close {
+  width: 32px;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+  top: 13%;
+  margin-right: 20%;
+  z-index: 300;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  
+  img {
+    width: 32px;
+  }
+  &.show {
+    display: block;
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    width: 100vw;
+    margin-top: 60px;
+    // display: block;
+    // height: auto;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    // margin-top: 45px;
+    height: auto;
+
+    // bg 一瓶高
+    // height: calc(100vh - 107px);
+    // background-image: url('./m1.jpg');
+  }
+
+  .mbg {
+    width: 100vw;
+    display: block;
+  }
+
+  .mcloud {
+    width: 100vw;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .mlogo {
+    width: 220px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20%;
+    z-index: 2;
+  }
+
+  .playBtn {
+    margin-top: 0px;
+  }
+
+  .video {
+    left: 0;
+    top: 0;
+
+    iframe {
+      width: 100%;
+      height: 50%;
+    }
+
+    .close {
+      top: 18%;
+      margin-right: 0%;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}
