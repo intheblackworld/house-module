@@ -93,13 +93,13 @@ const Navigation = () => {
   return (
     <div className={css.navigation}>
       <Container fluid>
+        <div className={css.logo}>
+          <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
+            <Image src={logo} alt="長虹天際的圖片" />
+          </Link>
+        </div>
         <Container>
           <div className={css.nav}>
-            <div className={css.logo}>
-              <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
-                <Image src={logo} alt="長虹天際的圖片" />
-              </Link>
-            </div>
             {/* <div
               className={css.menu}
               role="presentation"
