@@ -86,6 +86,20 @@ const Navigation = () => {
   //   [css.open]: isShowMenu,
   // })
 
+  const [isSmallLogo, setSmallLogo] = useState(false)
+
+  // let prevScrollpos = window.pageYOffset
+  // eslint-disable-next-line func-names
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset
+    if (currentScrollPos > 600) {
+      setSmallLogo(true)
+    } else {
+      setSmallLogo(false)
+    }
+    // prevScrollpos = currentScrollPos
+  }
+
   const mask = cx(css.mask, {
     [css.open]: isShowMenu,
   })
@@ -93,7 +107,7 @@ const Navigation = () => {
   return (
     <div className={css.navigation}>
       <Container fluid>
-        <div className={css.logo}>
+        <div className={`${css.logo} ${isSmallLogo ? css.small : ''}`}>
           <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
             <Image src={logo} alt="長虹天際的圖片" />
           </Link>

@@ -36,6 +36,10 @@ $logoMobileWidth: 85px;
   position: absolute;
   left: 50px;
   top: 25px;
+  transition: all .5s;
+  &.small {
+    width: 55px;
+  }
 }
 
 .mask {
