@@ -1,7 +1,7 @@
 export default {
-  address: '新北市五股區新五路二段550號旁',
-  locations: { lat: 25.085396, lng: 121.442804 },
-  phone: '02-22931666',
+  address: '台南市永華路二段503號',
+  locations: { lat: 22.990521, lng: 120.175240 },
+  phone: '06-2973366',
   fbLink: 'https://www.facebook.com/1717533134999360/',
   fbMessage: 'https://m.me/1717533134999360/',
   googleLink: 'https://goo.gl/maps/A1YPkuH3oHtpg14K9',
