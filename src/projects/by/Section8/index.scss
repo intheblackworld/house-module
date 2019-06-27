@@ -217,7 +217,7 @@
       transform: translateY(-50%);
       z-index: 2;
       width: 20px;
-      display: block;
+      display: block !important;
     }
     .leftBtn {
       left: 30px;
