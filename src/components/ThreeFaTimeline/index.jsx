@@ -91,7 +91,7 @@ const TimeItem = ({ show, item }) => {
     <div className={itemClass}>
       <div className={css.title}>{item.year}</div>
       <div className={css.content}>
-        {item.img && <img src={item.img} alt="長虹天際的圖片" />}
+        {item.img && <img src={item.img} alt="博悅的圖片" />}
         <div className={css.desc}>
           {item.desc.split('<br>').map((text, index) => (
             <p key={`${index}-${text}`}>{text}</p> // eslint-disable-line

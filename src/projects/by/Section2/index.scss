@@ -1,0 +1,159 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* Optional: show position indicator in red */
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  .buildingName,
+  .tag {
+    opacity: 0;
+  }
+
+  &.show {
+    .buildingName {
+      @include animate(fadeInUp, 1s, 0s);
+    }
+
+    .tag {
+      @include animate(fadeIn, 1s, 0.7s);
+    }
+  }
+
+  &.hide {
+    .buildingName,
+    .tag,
+    .hand {
+      @include animate(fadeOut, 0.6s, 0);
+    }
+  }
+}
+
+.bgImg {
+  width: 100vw;
+  // position: absolute;
+  display: block;
+}
+
+.buildingName {
+  width: 100vw;
+  position: absolute;
+}
+
+.tag {
+  width: 100vw;
+  position: absolute;
+}
+
+.hand {
+  position: absolute;
+  display: block;
+  width: 56px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 5%;
+  animation: swing 2.5s ease-in-out 0s infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(20px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .hand {
+    display: block;
+  }
+
+  .bgImg {
+    width: auto;
+    min-width: 100vw;
+    // position: absolute;
+    display: block;
+  }
+  
+  .buildingName {
+    width: auto;
+    min-width: 100vw;
+    position: absolute;
+  }
+  
+  .tag {
+    width: auto;
+    min-width: 100vw;
+    position: absolute;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .hand {
+    display: block;
+  }
+
+  .bgImg {
+    width: auto;
+    height: 100vh;
+  }
+  
+  .buildingName {
+    width: auto;
+    height: 100vh;
+  }
+  
+  .tag {
+    width: auto;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+}
+
+@media only screen and (min-width: 1440px) {
+  // .container {
+  //   padding-left: 0;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+  // .buildingName {
+  //   width: 90vw;
+  // }
+
+  // .tag {
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   margin: 0 auto;
+  //   top: 5%;
+  //   transform: translate(-25px, 0%);
+  // }
+  // .hand {
+  //   display: none;
+  // }
+}

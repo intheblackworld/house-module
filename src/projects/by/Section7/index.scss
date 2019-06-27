@@ -1,0 +1,346 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  &.show {
+    .slider {
+      @include animate(fadeInUp, 0.6s, 0s);  
+    }
+    
+    .bottomMask, .topMask {
+      @include animate(fadeInUp, 0.8s, .6s);
+    }
+  }
+
+  &.hide {
+    .slider, .bottomMask, .topMask {
+      @include animate(fadeOut, 0.6s, 0);
+    }
+  }
+}
+
+.bg {
+  background-color: #bb926d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-size: 43px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #bb926d;
+  }
+
+  .desc {
+    font-size: 16px;
+    width: 345px;
+    text-align: justify;
+    color: #444;
+  }
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  border: solid 5px #fff;
+  border-left: none;
+  position: relative;
+  background: #fff;
+  opacity: 0;
+
+  .container {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    transition: all 0.8s;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+
+    .slideItem {
+      width: 33.33%;
+      height: 100%;
+      border-right: 5px solid #fff;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      &:nth-last-child(1) {
+        border-right: none;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      img {
+        display: none;
+      }
+
+      .bottomMask {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 80px 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s;
+        opacity: 0;
+      }
+
+      .topMask {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 80px 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s;
+        opacity: 0;
+      }
+
+      h3 {
+        width: 60%;
+        font-size: 26px;
+        color: #bb926d;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      p {
+        width: 60%;
+        font-size: 16px;
+        text-align: justify;
+        color: #fff;
+      }
+    }
+  }
+
+  :global {
+    .slide-1-1 {
+      background-image: url('area7_slider1-1.jpg');
+    }
+    .slide-1-2 {
+      background-image: url('area7_slider1-2.jpg');
+    }
+    .slide-1-3 {
+      background-image: url('area7_slider1-3.jpg');
+    }
+    .slide-2-1 {
+      background-image: url('area7_slider2-1.jpg');
+    }
+    .slide-2-2 {
+      background-image: url('area7_slider2-2.jpg');
+    }
+    .slide-2-3 {
+      background-image: url('area7_slider2-3.jpg');
+    }
+    .slide-3-1 {
+      background-image: url('area7_slider3-1.jpg');
+    }
+    .slide-3-2 {
+      background-image: url('area7_slider3-2.jpg');
+    }
+    .slide-3-3 {
+      background-image: url('area7_slider3-3.jpg');
+    }
+  }
+
+  .btnGroup {
+    position: absolute;
+    right: 55px;
+    bottom: 30px;
+    width: 145px;
+    height: 73px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+
+    div {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #fff;
+
+      &:nth-last-child(1) {
+        border-right: none;
+      }
+    }
+
+    .left {
+      transform: rotate(90deg);
+      width: 20px;
+    }
+
+    .right {
+      transform: rotate(270deg);
+      width: 20px;
+    }
+  }
+
+  .slideImg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .slider {
+    .container {
+      .slideItem {
+
+        .bottomMask {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: 15px 0;
+          background: rgba(0, 0, 0, 0.6);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        .topMask {
+          position: absolute;
+          top: auto;
+          bottom: 0;
+          width: 100%;
+          padding: 15px 0;
+          background: rgba(0, 0, 0, 0.6);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        h3 {
+          width: 75%;
+          font-size: 26px;
+          color: #bb926d;
+          text-align: center;
+          margin-bottom: 25px;
+        }
+
+        p {
+          width: 75%;
+          font-size: 16px;
+          text-align: justify;
+          color: #fff;
+        }
+      }
+
+      .btnGroup {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .slider {
+    .container {
+      flex-wrap: wrap;
+      .slideItem {
+        width: 100%;
+        height: 33.33%;
+        position: relative;
+        border: 5px solid #fff;
+
+        .topMask, .bottomMask {
+          top: auto;
+          bottom: 0 !important;
+          padding: 0;
+          height: 50px;
+          transition: all .5s;
+          padding: 15px;
+
+          &.open {
+            height: 120px;
+          }
+        }
+
+        .btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 2;
+          width: 20px;
+          display: block;
+        }
+        .leftBtn {
+          left: 30px;
+        }
+    
+        .rightBtn {
+          right: 30px;
+        }
+
+        img {
+          width: 21px;
+          height: auto;
+          display: none;
+          position: absolute;
+          right: 10px;
+          top: 15px;
+
+          &.open {
+            display: block;
+          }
+        }
+        h3 {
+          width: 100%;
+          text-align: left;
+          font-size: 20px;
+          color: #bb926d;
+          margin-bottom: 15px;
+        }
+
+        p {
+          width: 100%;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .btnGroup {
+      display: none !important;
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}

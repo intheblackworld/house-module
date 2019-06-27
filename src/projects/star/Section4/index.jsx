@@ -10,24 +10,24 @@ const OhYa = ({ show }) => (
   <div className={withTrans('ohya', c, show)}>
     <div className={c.ray} />
     <div className={c.sayGroup}>
-      <img src={require('./say1.png')} alt="長虹天際的圖片" className={c.say1} />
-      <img src={require('./say2.png')} alt="長虹天際的圖片" className={c.say2} />
+      <img src={require('./say1.png')} alt="博悅的圖片" className={c.say1} />
+      <img src={require('./say2.png')} alt="博悅的圖片" className={c.say2} />
     </div>
     <div className={c.leftBrothers}>
-      <img src={require('./leftBrother.png')} alt="長虹天際的圖片" />
-      {!isMobile && <img src={require('./leftBrother.png')} alt="長虹天際的圖片" />}
-      {!isMobile && <img src={require('./leftBrother.png')} alt="長虹天際的圖片" />}
+      <img src={require('./leftBrother.png')} alt="博悅的圖片" />
+      {!isMobile && <img src={require('./leftBrother.png')} alt="博悅的圖片" />}
+      {!isMobile && <img src={require('./leftBrother.png')} alt="博悅的圖片" />}
     </div>
     <div className={c.rightBrothers}>
-      <img src={require('./rightBrother.png')} alt="長虹天際的圖片" />
-      {!isMobile && <img src={require('./rightBrother.png')} alt="長虹天際的圖片" />}
-      {!isMobile && <img src={require('./rightBrother.png')} alt="長虹天際的圖片" />}
+      <img src={require('./rightBrother.png')} alt="博悅的圖片" />
+      {!isMobile && <img src={require('./rightBrother.png')} alt="博悅的圖片" />}
+      {!isMobile && <img src={require('./rightBrother.png')} alt="博悅的圖片" />}
     </div>
   </div>
 )
 
 const OhYaTitle = ({ show }) => (
-  <img src={require('./ohyaTitle.png')} alt="長虹天際的圖片" className={withTrans('ohyaTitle', c, show)} />
+  <img src={require('./ohyaTitle.png')} alt="博悅的圖片" className={withTrans('ohyaTitle', c, show)} />
 )
 
 const Title = ({ show }) => (
@@ -41,7 +41,7 @@ const Title = ({ show }) => (
 
 const Present = ({ show }) => (
   <Fragment>
-    <img src={require('./present.png')} alt="長虹天際的圖片" className={withTrans('present', c, show)} />
+    <img src={require('./present.png')} alt="博悅的圖片" className={withTrans('present', c, show)} />
     <h3 className={withTrans('ps', c, show)}>
       一日林板新活動截止後，加碼抽獎時間另定，詳情將公佈於新板巨星FB粉絲頁
     </h3>
@@ -50,7 +50,7 @@ const Present = ({ show }) => (
 
 export const Desc = ({ show }) => (
   <Fragment>
-    <img src={require('./notice.png')} alt="長虹天際的圖片" className={c.notice} />
+    <img src={require('./notice.png')} alt="博悅的圖片" className={c.notice} />
     <Element id="point7" />
     <div className={withTrans('desc', c, show)}>
       <p>

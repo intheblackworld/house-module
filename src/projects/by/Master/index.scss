@@ -33,7 +33,7 @@
 .mask {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, .5);
+  // background-color: rgba(0, 0, 0, .5);
   position: absolute;
   z-index: 1;
 }
@@ -68,6 +68,8 @@
   border: 1px solid #fff;
   cursor: pointer;
   color: #fff;
+  text-shadow: 0 0 1px #000;
+  background: rgba(0, 0, 0, .6);
 
   img {
     width: 17px;
@@ -79,7 +81,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(187, 146, 109, .6);
   z-index: 200;
   display: none;
 
@@ -127,7 +129,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
     width: 100vw;
-    margin-top: 60px;
+    margin-top: 0px;
     // display: block;
     // height: auto;
   }

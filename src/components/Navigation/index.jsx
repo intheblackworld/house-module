@@ -4,33 +4,26 @@ import { Link } from 'react-scroll'
 import cx from 'classnames'
 
 import logo from './logo.png'
-// import menu from './menu-btn.png'
+import menu from './menu-btn.png'
+import close from './close.png'
 
-import css from './index.scss'
+import css from './by.scss'
 
-const PCNavigationHeight = 80
+const PCNavigationHeight = 0
 const TabletNavigationHeight = 60
 const MobileNavigationHeight = 45
 
 const NavItems = [
   {
-    name: '東區首席',
+    name: '精華地段',
     imgSrc: '',
     subTitle: '',
-    section: 'section3',
+    section: 'section2',
     OffsetValue: -PCNavigationHeight,
   },
 
   {
-    name: '公園樹海',
-    imgSrc: '',
-    subTitle: '',
-    section: 'section4',
-    OffsetValue: -PCNavigationHeight,
-  },
-
-  {
-    name: '壯闊造鎮',
+    name: '永恆建築',
     imgSrc: '',
     subTitle: '',
     section: 'section5',
@@ -38,17 +31,25 @@ const NavItems = [
   },
 
   {
-    name: '菁英團隊',
+    name: '奢華公設',
     imgSrc: '',
     subTitle: '',
-    section: 'section6',
+    section: 'section8',
+    OffsetValue: -PCNavigationHeight,
+  },
+
+  {
+    name: '實品屋',
+    imgSrc: '',
+    subTitle: '',
+    section: 'section9',
     OffsetValue: -PCNavigationHeight,
   },
   {
-    name: '優質建材',
+    name: '預約賞屋',
     imgSrc: '',
     subTitle: '',
-    section: 'section7',
+    section: 'contact',
     OffsetValue: -PCNavigationHeight,
   },
 ]
@@ -82,9 +83,9 @@ const Navigation = () => {
     )
   }, [list])
 
-  // const navlist = cx(css.navlist, {
-  //   [css.open]: isShowMenu,
-  // })
+  const navlist = cx(css.navlist, {
+    [css.open]: isShowMenu,
+  })
 
   const [isSmallLogo, setSmallLogo] = useState(false)
 
@@ -109,26 +110,30 @@ const Navigation = () => {
       <Container fluid>
         <div className={`${css.logo} ${isSmallLogo ? css.small : ''}`}>
           <Link to="master" spy smooth duration={500} offset={-PCNavigationHeight} key="master">
-            <Image src={logo} alt="長虹天際的圖片" />
+            <Image src={logo} alt="博悅的圖片" />
           </Link>
         </div>
         <Container>
           <div className={css.nav}>
-            {/* <div
+            <div
               className={css.menu}
               role="presentation"
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             >
-              <Image src={menu} alt="長虹天際的圖片" />
-            </div> */}
+              {isShowMenu ? (
+                <Image src={close} alt="博悅的圖片" />
+              ) : (
+                <Image src={menu} alt="博悅的圖片" />
+              )}
+            </div>
             <div
               className={mask}
               role="presentation"
               onKeyDown={toggleSidebar}
               onClick={toggleSidebar}
             />
-            {/* <ul className={navlist}>
+            <ul className={navlist}>
               {list
                 && list.map(item => (
                   <Link
@@ -148,8 +153,7 @@ const Navigation = () => {
                     </span>
                   </Link>
                 ))}
-            </ul> */}
-            {/* <img src={require('./phoneNumber.png')} alt="" className={css.phoneNumber} /> */}
+            </ul>
           </div>
         </Container>
       </Container>

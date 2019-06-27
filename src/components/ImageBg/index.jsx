@@ -8,7 +8,7 @@ const ImageBg = ({
 ) : (
   <div>
     <span>{show}</span>
-    <img src={isMobile ? mImgSrc : imgSrc} className={withTrans('imgBlock', c, show)} alt="" />
+    <img src={isMobile ? mImgSrc : imgSrc} className={withTrans('imgBlock', c, show)} alt="博悅的圖片" />
   </div>
 ))
 

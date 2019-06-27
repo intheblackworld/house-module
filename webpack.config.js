@@ -158,7 +158,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'), // 將 production 加入了全局的環境變數之後，第三方函式庫或專案內代碼會根據 production 做打包優化的判斷
     }),
     new AsyncChunkNames(), // TODO: change ENV config
-    new CopyPlugin([{ from: './src/assets/img/favicon.png', to: 'static/media/favicon.png' }]),
+    new CopyPlugin([{ from: './src/assets/img/favicon.ico', to: 'static/media/favicon.ico' }]),
   ],
 
   /* 抽公共代碼用的 (防止重复)

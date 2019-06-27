@@ -1,0 +1,314 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  // padding: 60px;
+
+  .container {
+    width: 1200px;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+
+    .top .item,
+    .bottom .item,
+    .right {
+      opacity: 0;
+    }
+
+    &.show {
+      .top .item {
+        @include animate(fadeInUp, 0.5s, 0.3s);
+      }
+      .bottom .item {
+        @include animate(fadeInUp, 0.5s, 0.6s);
+      }
+
+      .right {
+        @include animate(fadeInUp, 0.5s, 0.9s);
+      }
+    }
+
+    &.hide {
+      .top .item,
+      .bottom .item,
+      .right {
+        @include animate(fadeOut, 0.6s, 0);
+      }
+    }
+  }
+
+  .left {
+    width: 66.66%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .right {
+    width: 33.33%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    height: 50%;
+    padding-bottom: 10px;
+
+    .item {
+      width: 50%;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+
+      &:nth-child(1) {
+        margin-right: 10px;
+        background-image: url('./area4_img1.jpg');
+      }
+
+      &:nth-child(2) {
+        margin-left: 10px;
+        background-image: url('./area4_img2.jpg');
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    height: 50%;
+    padding-top: 10px;
+
+    .item {
+      width: 100%;
+      padding: 10px 0px;
+      overflow: hidden;
+      background-image: url('./area4_img3.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .showItem {
+    width: 100%;
+    height: 100%;
+    background-image: url('./area4_bgCover.jpg');
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    img {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 60px;
+    }
+  }
+
+  .content {
+    padding: 30px;
+    .title {
+      font-size: 26px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .desc {
+      font-size: 16px;
+      color: #fff;
+      text-align: justify;
+    }
+
+    hr {
+      border-top: 1px solid #fff;
+    }
+
+    .bottomTitle {
+      font-size: 47px;
+      white-space: nowrap;
+      color: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    .container {
+      width: 890px;
+      height: 75vh;
+    }
+
+    .showItem {
+      img {
+        top: 40px;
+      }
+    }
+
+    .content {
+      padding: 25px;
+      margin-top: 60px;
+      .title {
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .desc {
+        font-size: 16px;
+        color: #fff;
+        text-align: justify;
+      }
+
+      hr {
+        border-top: 1px solid #fff;
+      }
+
+      .bottomTitle {
+        font-size: 35px;
+        bottom: -6px;
+      }
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    height: auto;
+    display: block;
+    padding-top: 25px;
+  }
+  .mItem {
+    width: 90vw;
+    margin: 0 auto;
+    position: relative;
+    .image {
+      width: 100%;
+    }
+
+    .mBlock {
+      transform: translateY(-60px);
+      margin: 0 5%;
+      width: 90%;
+      background-image: url('./area4_bgCover.jpg');
+      position: relative;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 27px;
+      }
+    }
+
+    .mContent {
+      padding: 30px 30px 70px 30px;
+      .mTitle {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+      }
+  
+      .mDesc {
+        font-size: 16px;
+        color: #fff;
+        text-align: justify;
+      }
+  
+      hr {
+        border-top: 1px solid #fff;
+      }
+  
+      .mBottomTitle {
+        font-size: 38px;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+
+.imageDialog {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(187, 146, 109, .6);
+  z-index: 200;
+  top: 0;
+  left: 0;
+  display: none;
+
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 60%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 200;
+  }
+  
+  
+  &.show {
+    display: block;
+  }
+}
+
+.close {
+  width: 32px;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+  top: 13%;
+  margin-right: 20%;
+  z-index: 300;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  
+  img {
+    width: 32px;
+    height: 32px;
+  }
+  &.show {
+    display: block;
+  }
+}

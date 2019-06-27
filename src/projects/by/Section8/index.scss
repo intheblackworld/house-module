@@ -1,0 +1,285 @@
+@import '../../../assets/animate.scss';
+
+.bg {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 60px 0;
+  // padding: 60px;
+
+  .container {
+    width: 1040px;
+
+    .subTitle, .title,
+    .hint,
+    .tab,
+    .room, .desc {
+      opacity: 0;
+    }
+
+    &.show {
+      .subTitle {
+        @include animate(fadeInLeft, 0.5s, 0.3s);
+      }
+      .title {
+        @include animate(fadeInLeft, 0.5s, 0.6s);
+      }
+      .hint {
+        @include animate(fadeInUp, 0.5s, 0.9s);
+      }
+      .tab {
+        @include animate(fadeInUp, 0.5s, 1.2s);
+      }
+      .room {
+        @include animate(fadeInUp, 0.5s, 1.5s);
+      }
+      .desc {
+        @include animate(fadeInUp, 0.5s, 1.8s);
+      }
+    }
+
+    &.hide {
+      .subTitle .title,
+      .hint,
+      .tab,
+      .room {
+        @include animate(fadeOut, 0.6s, 0);
+      }
+    }
+  }
+
+  .top {
+    width: 880px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  > * {
+    width: 100%;
+  }
+
+  .subTitle {
+    font-size: 32px;
+    color: #bb926d;
+    margin-bottom: 13px;
+  }
+  .title {
+    font-size: 43px;
+    color: #bb926d;
+    margin-bottom: 20px;
+  }
+  .hint {
+    font-size: 20px;
+    color: #010101;
+    border-top: 1px solid #bb926d;
+    border-bottom: 1px solid #bb926d;
+    padding: 8px 0;
+    margin-bottom: 20px;
+  }
+  .tab {
+    height: 20px;
+    display: flex;
+
+    > li {
+      width: 20%;
+      text-align: center;
+      line-height: 20px;
+      color: #000;
+      box-shadow: 1px 0 0 #bb926d;
+      cursor: pointer;
+      list-style: none;
+      transition: all 0.3s;
+
+      &:nth-last-child(1) {
+        box-shadow: none;
+      }
+
+      &.active {
+        background: #bb926d;
+        color: #fff;
+      }
+    }
+  }
+  .room {
+    width: 1040px;
+    height: 473px;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    .btn {
+      display: none;
+    }
+
+    .border {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #fff;
+      border-radius: 20px;
+      position: relative;
+
+      h3 {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        font-size: 43px;
+        color: #fff;
+        text-shadow: 0 0 1px #333;
+      }
+    }
+  }
+  :global {
+    .area8-room-1 {
+      background-image: url('./area8_img1.jpg');
+    }
+    .area8-room-2 {
+      background-image: url('./area8_img2.jpg');
+    }
+    .area8-room-3 {
+      background-image: url('./area8_img3.jpg');
+    }
+    .area8-room-4 {
+      background-image: url('./area8_img4.jpg');
+    }
+    .area8-room-5 {
+      background-image: url('./area8_img5.jpg');
+    }
+  }
+
+  .desc {
+    list-style-type: square;
+    color: #bb926d;
+    span {
+      color: #333;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg .container {
+    width: 880px;
+
+    .room {
+      width: 880px;
+      height: 400px;
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .bg {
+    width: 100vw;
+    
+    padding: 45px 0;
+    // padding: 60px;
+  
+    .container {
+      width: 100%;
+    }
+  
+    .top {
+      width: 90%;
+      margin-bottom: 17px;
+    }
+  
+    > * {
+      width: 100%;
+    }
+  
+    .subTitle {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .title {
+      font-size: 32px;
+      color: #bb926d;
+      margin-bottom: 15px;
+    }
+    .hint {
+      font-size: 12px;
+      margin-bottom: 0px;
+    }
+    .tab {
+      height: 20px;
+      display: none;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 20px;
+      display: block;
+    }
+    .leftBtn {
+      left: 30px;
+    }
+
+    .rightBtn {
+      right: 30px;
+    }
+    .room {
+      width: 100vw;
+      height: 210px;
+      padding: 0;
+      position: relative;
+  
+      .border {
+        border: none;
+  
+        h3 {
+          position: absolute;
+          padding: 7px 20px;
+          text-align: center;
+          left: 0;
+          top: 23px;
+          right: auto;
+          bottom: auto;
+          font-size: 16px;
+          color: #fff;
+          background: #bb926d;
+          text-shadow: none;
+        }
+      }
+    }
+    :global {
+      .area8-room-1 {
+        background-image: url('./area8_img1.jpg');
+      }
+      .area8-room-2 {
+        background-image: url('./area8_img2.jpg');
+      }
+      .area8-room-3 {
+        background-image: url('./area8_img3.jpg');
+      }
+      .area8-room-4 {
+        background-image: url('./area8_img4.jpg');
+      }
+      .area8-room-5 {
+        background-image: url('./area8_img5.jpg');
+      }
+    }
+  
+    .desc {
+      list-style-type: none;
+      border-left: 2px solid #bb926d;
+      padding-left: 15px;
+      color: #bb926d;
+      span {
+        color: #333;
+      }
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}

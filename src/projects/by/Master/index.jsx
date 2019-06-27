@@ -35,14 +35,14 @@ const Master = ({ show }) => {
     <div className={bgClass}>
       {isMobile ? (
         <div>
-          <img className={c.mbg} src={require('./mbg.jpg')} alt="" />
-          <img className={c.mcloud} src={require('./mcloud.png')} alt="" />
-          <img className={c.mlogo} src={require('./mlogo.png')} alt="" />
+          <img className={c.mbg} src={require('./mbg.jpg')} alt="博悅的圖片" />
+          <img className={c.mcloud} src={require('./mcloud.png')} alt="博悅的圖片" />
+          <img className={c.mlogo} src={require('./mlogo.png')} alt="博悅的圖片" />
         </div>
       ) : (
         <div>
           <div className={c.mask} />
-          <img className={c.title} src={require('./title.png')} alt="" />
+          <img className={c.title} src={require('./title.png')} alt="博悅的圖片" />
           <BackgroundVideo
             src={require('./A.mp4')}
             containerWidth={window.innerWidth}
@@ -51,7 +51,7 @@ const Master = ({ show }) => {
         </div>
       )}
       <div className={c.playBtn} onClick={showVideoDialog} onKeyDown={showVideoDialog}>
-        <img src={require('./play-icon.png')} alt="" />
+        <img src={require('./play-icon.png')} alt="博悅的圖片" />
         PLAY FULL MOVIE
       </div>
       <div className={videoDialogClass}>
@@ -59,13 +59,13 @@ const Master = ({ show }) => {
           title="youtube"
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/J1P3H5xCWMA"
+          src="https://www.youtube.com/embed/XW9RuXEv0dY"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
         <div className={closeVideoClass} onClick={closeVideoDialog} onKeyDown={closeVideoDialog}>
-          <img src={require('./close.png')} alt="" />
+          <img src={require('./close.png')} alt="博悅的圖片" />
         </div>
       </div>
     </div>

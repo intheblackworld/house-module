@@ -1,5 +1,15 @@
 @import '../assets/global.scss';
 :global {
+
+  body {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    /* Optional: show position indicator in red */
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  }
   .ui.button {
     font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', Helvetica, Arial !important;
   }
@@ -21,8 +31,7 @@ h2 {
   font-weight: normal;
 }
 h3 {
-  font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', Helvetica,
-    Arial;
+  font-family: 'Noto Serif TC', serif !important;
   margin: 0;
   font-weight: bold;
 }

@@ -1,0 +1,222 @@
+@import '../../../assets/animate.scss';
+
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+
+  .subTitle,
+  .title,
+  hr,
+  .desc {
+    opacity: 0;
+  }
+
+  &.show {
+    .subTitle {
+      @include animate(fadeInUp, 0.5s, 0.3s);
+    }
+
+    .title {
+      @include animate(fadeInUp, 0.5s, 0.6s);
+    }
+
+    hr {
+      @include animate(fadeInUp, 0.5s, 0.9s);
+    }
+
+    .desc {
+      @include animate(fadeInUp, 0.5s, 1.2s);
+    }
+  }
+
+  &.hide {
+    .subTitle,
+    .title,
+    hr,
+    .desc {
+      @include animate(fadeOut, 0.6s, 0);
+    }
+  }
+}
+
+.bg {
+  min-width: 33.33%;
+  height: 600px;
+  border: solid 2px #bb926d;
+  background-color: #fff;
+  background-image: url('./bg.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 345px;
+  }
+
+  .subTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #bb926d;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-size: 43px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #bb926d;
+  }
+
+  hr {
+    height: 1px;
+    width: 338px;
+    border-top: solid 1px #bb926d;
+    margin-bottom: 30px;
+  }
+
+  .desc {
+    font-size: 16px;
+    width: 345px;
+    text-align: justify;
+    color: #444;
+  }
+}
+
+.slider {
+  width: 66.66%;
+  height: 600px;
+  overflow: hidden;
+  border: solid 2px #bb926d;
+  border-left: none;
+  position: relative;
+  background: #fff;
+
+  .btnGroup {
+    position: absolute;
+    right: 55px;
+    bottom: 30px;
+    width: 145px;
+    height: 73px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+
+    div {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #fff;
+
+      &:nth-last-child(1) {
+        border-right: none;
+      }
+    }
+
+    .left {
+      transform: rotate(90deg);
+      width: 20px;
+    }
+
+    .right {
+      transform: rotate(270deg);
+      width: 20px;
+    }
+  }
+
+  .slideImg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bg {
+    width: 50%;
+    height: 426px;
+  }
+
+  .slider {
+    width: 50%;
+    height: 426px;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .container {
+    display: block;
+  }
+
+  .bg {
+    min-width: 100vw;
+    height: 364px;
+
+    .content {
+      width: 90vw;
+    }
+
+    .subTitle {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 32px;
+      margin-bottom: 21px;
+      text-align: left;
+    }
+
+    hr {
+      width: 100%;
+      margin-bottom: 21px;
+    }
+
+    .desc {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  .slider {
+    width: 100vw;
+    height: auto;
+
+    .btnGroup {
+      position: absolute;
+      right: 24px;
+      bottom: 30px;
+      width: 102px;
+      height: 51px;
+    }
+
+    .slideImg {
+      width: 100vw;
+      &.active {
+        position: relative;
+      }
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}
