@@ -231,8 +231,8 @@
   
         .topMask {
           position: absolute;
-          top: auto;
-          bottom: 0;
+          top: 0;
+          bottom: auto;
           width: 100%;
           padding: 15px 0;
           background: rgba(0, 0, 0, 0.6);

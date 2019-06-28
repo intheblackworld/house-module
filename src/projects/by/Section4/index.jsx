@@ -52,15 +52,15 @@ const Section4 = ({ show }) => {
   return (
     <div className={c.bg}>
       {isMobile ? (
-        list.map(item => (
+        list.map((item, index) => (
           <div className={c.mItem} key={item.src}>
             <img className={c.image} src={item.src} alt="博悅的圖片" />
             <div className={c.mBlock}>
               <img src={require('./area4_logo.png')} alt="博悅的圖片" />
               <div className={c.mContent}>
-                <h3 className={c.mTitle}>{list[listIndex].title}</h3>
+                <h3 className={c.mTitle}>{list[index].title}</h3>
                 <hr />
-                <p className={c.mDesc}>{list[listIndex].desc}</p>
+                <p className={c.mDesc}>{list[index].desc}</p>
                 <h3 className={c.mBottomTitle}>introduction</h3>
               </div>
             </div>
