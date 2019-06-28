@@ -16,9 +16,16 @@ const slideList = [
     subTitle: '觀大器行止  品一世尊榮',
     desc:
       '生活是許多美好的總和，而體現的最高境界，就是打造最好的一切，用來寵愛主人與親愛家人，在這座工筆精湛的當代大宅裡，設計者精心提煉一切關於美的細節，轉化為生活品味的具體實踐，字裡行間巧妙引用微量新古典與現代簡約的交融，以沈穩的佈局、動線，描寫與眾不同的情境韻味。',
+    showOnPC: true,
   },
   {
+    label: 'Temperament Style',
     bg: `${require('./area9_img2.jpg')}`,
+    title: '爾雅氣質系  風華獨具',
+    subTitle: '微量和風語彙  純淨且自在',
+    desc:
+      '空間因人而生，各擁風情才是主人性格的真實寫照，基於現代新貴對於生活的高標要求，單純視覺上的美好，已然不足以迎合層峰需求，因此在設計師精心調和下，善用全案方正的室內格局加上流暢動線，賦予客、餐廳共享的深邃景深，而清爽恬靜的色彩、材質計畫，也為空間帶來舒適溫度與休閒感，賦予居宅活躍生命力。',
+    showOnPC: false,
   },
   {
     label: 'Temperament Style',
@@ -27,9 +34,16 @@ const slideList = [
     subTitle: '微量和風語彙  純淨且自在',
     desc:
       '空間因人而生，各擁風情才是主人性格的真實寫照，基於現代新貴對於生活的高標要求，單純視覺上的美好，已然不足以迎合層峰需求，因此在設計師精心調和下，善用全案方正的室內格局加上流暢動線，賦予客、餐廳共享的深邃景深，而清爽恬靜的色彩、材質計畫，也為空間帶來舒適溫度與休閒感，賦予居宅活躍生命力。',
+    showOnPC: true,
   },
   {
+    label: 'Elegant Impression',
     bg: `${require('./area9_img4.jpg')}`,
+    title: '新貴最愛  清雅時尚印象',
+    subTitle: '剔透昶朗  戀上宅時光',
+    desc:
+      '空間風格從來沒有定論，僅是使用者的喜好表述，但透過設計者的精心轉譯，倒也能展現若干的藝術價值。不過若是單從生活面著眼，空間的定義不妨更精準，既能滿足現代的生活步調，也能融入不同文明的細膩，因此在本案佈局上以大量暖木色為主，穿插精緻格柵、鐵件、大理石等元素，在不斷出現的線性語彙裡，交疊豐富立體層次與表情。',
+    showOnPC: false,
   },
   {
     label: 'Elegant Impression',
@@ -38,6 +52,7 @@ const slideList = [
     subTitle: '剔透昶朗  戀上宅時光',
     desc:
       '空間風格從來沒有定論，僅是使用者的喜好表述，但透過設計者的精心轉譯，倒也能展現若干的藝術價值。不過若是單從生活面著眼，空間的定義不妨更精準，既能滿足現代的生活步調，也能融入不同文明的細膩，因此在本案佈局上以大量暖木色為主，穿插精緻格柵、鐵件、大理石等元素，在不斷出現的線性語彙裡，交疊豐富立體層次與表情。',
+    showOnPC: true,
   },
 ]
 const Section9 = ({ show }) => {
@@ -98,7 +113,7 @@ const Section9 = ({ show }) => {
               />
             ))}
             <div className={c.container}>
-              <div className={`${c.item} ${slideList[imgIndex].label ? '' : c.hide}`}>
+              <div className={`${c.item} ${slideList[imgIndex].showOnPC ? '' : c.hide}`}>
                 <div className={c.mask}>
                   <p className={c.label}>{slideList[imgIndex].label}</p>
                   <h3 className={c.title}>{slideList[imgIndex].title}</h3>
