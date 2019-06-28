@@ -14,7 +14,7 @@ const Container = ({ show }) => {
     <div className={containerClass}>
       <img className={c.buildingName} src={require('./buildingName.png')} alt="博悅的圖片" />
       <img className={c.tag} src={require('./tag.png')} alt="博悅的圖片" />
-      <img src={require('./hand.png')} className={c.hand} alt="博悅的圖片" />
+      {/* <img src={require('./hand.png')} className={c.hand} alt="博悅的圖片" /> */}
       <img className={c.bgImg} src={require('./bg.png')} alt="博悅的圖片" />
     </div>
   )

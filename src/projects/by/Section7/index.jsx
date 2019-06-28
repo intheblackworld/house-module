@@ -22,6 +22,12 @@ const slideList = [
     desc1: '為此柱頭，飛向國外聘請泥塑師傅雕模實品模擬雄偉靈氣，以減少石匠雕工誤差，慢慢打鑿而成。',
     desc2: '每塊石材均由國外進口，一律排序出廠，塊塊價值連城，造價可觀，人力更是難以估算！',
   },
+  {
+    title1: '古典拱窗 雋永之美',
+    title2: '恢弘列柱 氣度之美',
+    desc1: '氣勢直逼天際，跳躍如樂符的拱窗、重現歐洲街道風景。柱子當成牆壁看，自然成為值得表現的空間。',
+    desc2: '打造千年神殿的工藝精神，費時慢慢一劍一鑿，細工打造，挑戰極高難度的新古典建築王者氣勢，渾然天成！',
+  },
 ]
 const Section3 = ({ show }) => {
   const [imgIndex, setImgIndex] = useState(0)
@@ -107,10 +113,10 @@ const Section3 = ({ show }) => {
           ))}
 
           <div className={c.btnGroup}>
-            <div onClick={addIndex} onKeyDown={addIndex}>
+            <div onClick={decIndex} onKeyDown={decIndex}>
               <img src={require('./triangle.png')} alt="博悅的圖片" className={c.left} />
             </div>
-            <div onClick={decIndex} onKeyDown={decIndex}>
+            <div onClick={addIndex} onKeyDown={addIndex}>
               <img src={require('./triangle.png')} alt="博悅的圖片" className={c.right} />
             </div>
           </div>

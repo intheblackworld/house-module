@@ -28,12 +28,12 @@ const list = [
     src: require('./area8_img3.jpg'),
   },
   {
-    title: '空中Lunge Bar',
+    title: '空中Lounge Bar',
     desc: 'Lounge Bar視野棒極了！戲水過後閑坐在精緻吧檯邊的那個瞬間，絕對是無價的幸福時刻。',
     src: require('./area8_img4.jpg'),
   },
   {
-    title: '天空泳池',
+    title: '空中無邊際泳池',
     desc:
       '頂樓無疑是景觀最佳的位置，一方長形沁涼泳池，享受世外桃源般的寧靜，細品優游碧波、身心舒暢的美好時光！',
     src: require('./area8_img5.jpg'),
@@ -50,6 +50,7 @@ const Section4 = ({ show }) => {
   }
   return (
     <div className={c.bg}>
+      <img className={c.bgItem} src={require('./area8_bg.png')} alt="" />
       <div className={withTrans('container', c, show)}>
         <div className={c.top}>
           <h3 className={c.subTitle}>GRAND HOTEL</h3>

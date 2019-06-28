@@ -14,6 +14,7 @@ const {
 const ContactSection = () => (
   <div className={css.contactSection}>
     <div className={css.orderBg}>
+      <img className={css.bgItem} src={require('./arae9_bg.png')} alt="" />
       <div id="orderBg" className={`${css.order}`}>
         <Order />
       </div>

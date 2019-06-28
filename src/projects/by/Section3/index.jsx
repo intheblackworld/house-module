@@ -52,10 +52,10 @@ const Section3 = ({ show }) => {
             />
           ))}
           <div className={c.btnGroup}>
-            <div onClick={addIndex} onKeyDown={addIndex}>
+            <div onClick={decIndex} onKeyDown={decIndex}>
               <img src={require('./triangle.png')} alt="博悅的圖片" className={c.left} />
             </div>
-            <div onClick={decIndex} onKeyDown={decIndex}>
+            <div onClick={addIndex} onKeyDown={addIndex}>
               <img src={require('./triangle.png')} alt="博悅的圖片" className={c.right} />
             </div>
           </div>

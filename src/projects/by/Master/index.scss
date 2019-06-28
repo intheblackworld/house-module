@@ -4,6 +4,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  border: solid 8px #bb926d;
   z-index: 5;
   // 圖片
   // width: 100vw;
@@ -69,7 +70,7 @@
   cursor: pointer;
   color: #fff;
   text-shadow: 0 0 1px #000;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
 
   img {
     width: 17px;
@@ -81,7 +82,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(187, 146, 109, .6);
+  background: rgba(187, 146, 109, 0.6);
   z-index: 200;
   display: none;
 
@@ -96,8 +97,7 @@
     margin: 0 auto;
     z-index: 200;
   }
-  
-  
+
   &.show {
     display: block;
   }
@@ -115,7 +115,7 @@
   color: #ccc;
   display: none;
   cursor: pointer;
-  
+
   img {
     width: 32px;
   }

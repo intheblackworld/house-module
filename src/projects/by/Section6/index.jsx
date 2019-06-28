@@ -35,6 +35,7 @@ const Section3 = ({ show }) => {
   return (
     <div>
       <div className={withTrans('bg', c, show)}>
+        <div className={c.mask} />
         <div className={c.slider}>
           {slideList.map((slide, index) => (
             <img

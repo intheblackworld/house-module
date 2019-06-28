@@ -18,12 +18,18 @@ const slideList = [
       '生活是許多美好的總和，而體現的最高境界，就是打造最好的一切，用來寵愛主人與親愛家人，在這座工筆精湛的當代大宅裡，設計者精心提煉一切關於美的細節，轉化為生活品味的具體實踐，字裡行間巧妙引用微量新古典與現代簡約的交融，以沈穩的佈局、動線，描寫與眾不同的情境韻味。',
   },
   {
+    bg: `${require('./area9_img2.jpg')}`,
+  },
+  {
     label: 'Temperament Style',
     bg: `${require('./area9_img3.jpg')}`,
     title: '爾雅氣質系  風華獨具',
     subTitle: '微量和風語彙  純淨且自在',
     desc:
       '空間因人而生，各擁風情才是主人性格的真實寫照，基於現代新貴對於生活的高標要求，單純視覺上的美好，已然不足以迎合層峰需求，因此在設計師精心調和下，善用全案方正的室內格局加上流暢動線，賦予客、餐廳共享的深邃景深，而清爽恬靜的色彩、材質計畫，也為空間帶來舒適溫度與休閒感，賦予居宅活躍生命力。',
+  },
+  {
+    bg: `${require('./area9_img4.jpg')}`,
   },
   {
     label: 'Elegant Impression',
@@ -92,23 +98,21 @@ const Section9 = ({ show }) => {
               />
             ))}
             <div className={c.container}>
-              {slideList.map((slide, index) => (
-                <div key={slide.bg} className={`${c.item} ${index === imgIndex ? c.active : ''}`}>
-                  <div className={c.mask}>
-                    <p className={c.label}>{slideList[imgIndex].label}</p>
-                    <h3 className={c.title}>{slideList[imgIndex].title}</h3>
-                    <p className={c.subTitle}>{slideList[imgIndex].subTitle}</p>
-                    <p className={c.desc}>{slideList[imgIndex].desc}</p>
-                  </div>
+              <div className={`${c.item} ${slideList[imgIndex].label ? '' : c.hide}`}>
+                <div className={c.mask}>
+                  <p className={c.label}>{slideList[imgIndex].label}</p>
+                  <h3 className={c.title}>{slideList[imgIndex].title}</h3>
+                  <p className={c.subTitle}>{slideList[imgIndex].subTitle}</p>
+                  <p className={c.desc}>{slideList[imgIndex].desc}</p>
                 </div>
-              ))}
+              </div>
             </div>
 
             <div className={c.btnGroup}>
-              <div onClick={addIndex} onKeyDown={addIndex}>
+              <div onClick={decIndex} onKeyDown={decIndex}>
                 <img src={require('./triangle.png')} alt="博悅的圖片" className={c.left} />
               </div>
-              <div onClick={decIndex} onKeyDown={decIndex}>
+              <div onClick={addIndex} onKeyDown={addIndex}>
                 <img src={require('./triangle.png')} alt="博悅的圖片" className={c.right} />
               </div>
             </div>

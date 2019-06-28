@@ -7,7 +7,14 @@
   align-items: center;
   background: #fff;
   padding: 60px 0;
+  position: relative;
   // padding: 60px;
+  .bgItem {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 473px !important;
+  }
 
   .container {
     width: 1040px;
