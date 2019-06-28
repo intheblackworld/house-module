@@ -11,20 +11,20 @@ import c from './index.scss'
 
 const list = [
   {
-    title: '與自然環境共舞 健康入主',
-    desc: '二二八紀念公園、慶平雕塑公園、府平公園、怡平公園，生活圈坐擁生態綠地環境！健康天天來!',
-    src: require('./area4_img1.jpg'),
-  },
-  {
     title: '住進校園生活圈 天天好青春',
     desc:
       '新南國小、安平國小、金城國中、安平國中，慈濟完全中學校落成後，教育也是一條龍；九年免接送家長最愛!',
-    src: require('./area4_img2.jpg'),
+    src: require('./area4_img1.jpg'),
   },
   {
     title: '安平五期重劃區核心 趴趴造PLAY',
     desc:
       '觀光、餐飲、娛樂日漸完善、多重商圈環繞，生活機能充足，流行時尚、創意文化，精彩品味最前線！',
+    src: require('./area4_img2.jpg'),
+  },
+  {
+    title: '與自然環境共舞 健康入主',
+    desc: '二二八紀念公園、慶平雕塑公園、府平公園、怡平公園，生活圈坐擁生態綠地環境！健康天天來!',
     src: require('./area4_img3.jpg'),
   },
 ]
