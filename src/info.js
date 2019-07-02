@@ -1,6 +1,6 @@
 export default {
   address: '台南市永華路二段503號',
-  locations: { lat: 22.990521, lng: 120.175240 },
+  googleSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.905789728328!2d120.17305111546692!3d22.990491584969337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7609509af8df%3A0x76989a56a993eb06!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5rC46I-v6Lev5LqM5q61NTAz6Jmf!5e0!3m2!1szh-TW!2stw!4v1562047635859!5m2!1szh-TW!2stw',
   phone: '06-2973366',
   fbLink: 'https://www.facebook.com/1717533134999360/',
   fbMessage: 'https://m.me/1717533134999360/',
