@@ -1,5 +1,5 @@
 export default {
-  address: '台南市東區中華東‧崇善路口(燦坤旁)',
+  address: '台南市東區中華東路三段176號(上東城)',
   googleSrc:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.2654357695706!2d120.22352281496687!3d22.977264784976015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769fb1e2574b%3A0x3c87b775f8dcd249!2zNzAx5Y-w5Y2X5biC5p2x5Y2A5Lit6I-v5p2x6Lev5LiJ5q61MTc26Jmf!5e0!3m2!1szh-TW!2stw!4v1562137269082!5m2!1szh-TW!2stw',
   phone: '06-289-6111',
