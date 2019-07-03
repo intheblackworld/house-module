@@ -1,11 +1,11 @@
 export default {
-  address: '台南市東區中華東路三段65號(TOYOTA)旁',
+  address: '台南市東區中華東‧崇善路口(燦坤旁)',
   googleSrc:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.197221174381!2d120.22632901546672!3d22.979774084974785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76a1f935f9e1%3A0xb0c2eb823eebab33!2zNzAx5Y-w5Y2X5biC5p2x5Y2A5Lit6I-v5p2x6Lev5LiJ5q61NjXomZ8!5e0!3m2!1szh-TW!2stw!4v1562049305738!5m2!1szh-TW!2stw',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.2654357695706!2d120.22352281496687!3d22.977264784976015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769fb1e2574b%3A0x3c87b775f8dcd249!2zNzAx5Y-w5Y2X5biC5p2x5Y2A5Lit6I-v5p2x6Lev5LiJ5q61MTc26Jmf!5e0!3m2!1szh-TW!2stw!4v1562137269082!5m2!1szh-TW!2stw',
   phone: '06-289-6111',
   fbLink: 'https://www.facebook.com/DTED062896111/',
   fbMessage: 'https://m.me/DTED062896111/',
-  googleLink: 'https://goo.gl/maps/JL78nmwc8a9T3nPg7',
+  googleLink: 'https://goo.gl/maps/mSePucqjw6VsLRVt8',
   caseName: '上東城',
 
   houseInfos: [
