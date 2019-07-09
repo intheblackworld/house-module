@@ -85,7 +85,7 @@
     $mail->CharSet = "utf-8"; //設定郵件編碼 
 
     $mail->Username = "service@h35.tw"; //設定驗證帳號 
-    $mail->Password = "justin0919"; //設定驗證密碼 
+    $mail->Password = "Lix800.lix35tw"; //設定驗證密碼 
 
     $mail->From = "noreply@h35.tw"; //設定寄件者信箱 
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名 
