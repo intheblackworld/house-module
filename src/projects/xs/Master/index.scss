@@ -2,8 +2,6 @@
 @import '../../../components/Navigation/index.scss';
 
 .bg {
-  background-image: url('./bg.jpg');
-  background-size: cover;
   margin-top: $navigationPCHeight;
 
   &.show {
@@ -32,7 +30,6 @@
 
   .container {
     position: relative;
-    height: calc(100vw * 0.5);
   }
 
   .title1, .title2, .title2m, .title3, .title4 {
@@ -63,6 +60,12 @@
     width: 170px;
     bottom: 50px;
   }
+
+  .bgImg {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
 }
 
 /* 螢幕尺寸標準 */
@@ -70,9 +73,6 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
     margin-top: $navigationTabletHeight;
-    .container {
-      height: calc(100vw * 0.5);
-    }
     .title1 {
       right: 40px;
       top: 30px;
@@ -104,11 +104,9 @@
 @media only screen and (max-width: 767px) {
   .bg {
     margin-top: 0;
-    background-image: url('./bgm.jpg');
   
     .container {
       position: relative;
-      height: 100vh;
       overflow: hidden;
     }
   
@@ -124,7 +122,7 @@
   
     .title2 {
       width: 60px;
-      bottom: 250px;
+      bottom: 200px;
       right: 10px;
       top: auto;
     }
@@ -133,7 +131,7 @@
       left: auto;
       margin: 0;
       right: 10px;
-      width: 100px;
+      width: 180px;
       top: auto;
       bottom: 230px;
     }
@@ -142,7 +140,7 @@
       right: 10px;
       width: 100px;
       top: auto;
-      bottom: 192px;
+      bottom: 130px;
       left: auto;
     }
   }

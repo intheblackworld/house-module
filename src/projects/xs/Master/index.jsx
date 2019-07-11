@@ -12,6 +12,7 @@ const Master = ({ show }) => {
     <div className={`${bgClass}`}>
       {isMobile ? (
         <div className={c.container}>
+          <img src={require('./bgm.jpg')} alt="" className={c.bgImg} />
           <img src={require('./title1m.png')} alt="" className={c.title1} />
           <img src={require('./title2m.png')} alt="" className={c.title2} />
 
@@ -20,6 +21,7 @@ const Master = ({ show }) => {
         </div>
       ) : (
         <div className={c.container}>
+        <img src={require('./bg.jpg')} alt="" className={c.bgImg} />
           <img src={require('./title1.png')} alt="" className={c.title1} />
           <img src={require('./title2.png')} alt="" className={c.title2} />
 
