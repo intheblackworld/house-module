@@ -2,9 +2,9 @@
 @import '../../../components/Navigation/index.scss';
 
 .bg {
-  background: #fff;
-  box-shadow: inset 25px 0px 0 0px #e37539;
-  padding-top: $navigationPCHeight;
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  margin-top: $navigationPCHeight;
 
   &.show {
     .title1 {
@@ -19,13 +19,13 @@
       @include animate(fadeIn, .5s, .4s);
     }
 
-    .house {
+    .title4 {
       @include animate(fadeInUp, .5s, .8s);
     }
   }
 
   &.hide {
-    .title1, .title2, .title2m, .title3, .house {
+    .title1, .title2, .title2m, .title3, .title4 {
       @include animate(fadeOut, .5s, 0s);
     }  
   }
@@ -35,35 +35,33 @@
     height: calc(100vw * 0.5);
   }
 
-  .title1, .title2, .title2m, .title3, .house {
+  .title1, .title2, .title2m, .title3, .title4 {
     position: absolute;
     opacity: 0;
   }
 
   .title1 {
-    width: 12%;
-    left: 80px;
+    right: 40px;
     top: 30px;
+    width: 400px;
   }
 
   .title2 {
-    width: 310px;
-    bottom: 40px;
-    left: 80px;
+    right: 155px;
+    width: 280px;
+    top: 270px;
   }
 
   .title3 {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 357px;
-    top: 50px;
+    right: 40px;
+    width: 400px;
+    top: 350px;
   }
 
-  .house {
-    width: 21%;
-    bottom: -5px;
-    right: 11%;
+  .title4 {
+    right: 40px;
+    width: 170px;
+    bottom: 50px;
   }
 }
 
@@ -71,45 +69,42 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .bg {
-    padding-top: $navigationTabletHeight;
+    margin-top: $navigationTabletHeight;
     .container {
       height: calc(100vw * 0.5);
     }
     .title1 {
-      width: 150px;
-      left: 100px;
-      top: 50px;
+      right: 40px;
+      top: 30px;
+      width: 250px;
     }
   
     .title2 {
-      width: 200px;
-      bottom: 100px;
-      left: 100px;
+      right: 110px;
+      width: 180px;
+      top: 180px;  
     }
   
     .title3 {
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 220px;
-      top: 50px;
+      right: 40px;
+      width: 250px;
+      top: 230px;
     }
   
-    .house {
-      width: 250px;
-      bottom: -5px;
-      right: 50px;
+    .title4 {
+      right: 40px;
+      width: 150px;
+      bottom: 50px;
     }
+
   }
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
-    background: #fff;
-    box-shadow: inset 10px 0px 0 0px #e37539;
-    padding-top: 0;
-    overflow: hidden;
+    margin-top: 0;
+    background-image: url('./bgm.jpg');
   
     .container {
       position: relative;
@@ -117,40 +112,38 @@
       overflow: hidden;
     }
   
-    .title1, .title2, .title3, .house {
+    .title1, .title2, .title3, .title4 {
       position: absolute;
     }
   
     .title1 {
-      width: 100px;
-      left: 20px;
-      top: 50px;
+      width: 75px;
+      right: 10px;
+      top: 60px;
     }
   
     .title2 {
-      width: 90px;
-      bottom: 40px;
-      left: 20px;
-    }
-
-    .title2m {
-      width: 90px;
-      bottom: 60px;
-      left: 20px;
+      width: 60px;
+      bottom: 250px;
+      right: 10px;
+      top: auto;
     }
   
     .title3 {
       left: auto;
       margin: 0;
-      right: 20px;
-      width: 162px;
-      top: 50px;
+      right: 10px;
+      width: 100px;
+      top: auto;
+      bottom: 230px;
     }
-  
-    .house {
-      width: 160px;
-      bottom: -5px;
-      right: 20px;
+
+    .title4 {
+      right: 10px;
+      width: 100px;
+      top: auto;
+      bottom: 192px;
+      left: auto;
     }
   }
 }

@@ -8,6 +8,10 @@
     .title {
       @include animate(fadeIn, .5s, 0s);
     }
+
+    iframe {
+      @include animate(fadeIn, .5s, 0s);
+    }
   }
   .title {
     display: block;
@@ -19,6 +23,13 @@
     font-size: 30px;
     color: #fff;
     text-align: center;
+    opacity: 0;
+  }
+
+  iframe {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: block;
     opacity: 0;
   }
   .container {
