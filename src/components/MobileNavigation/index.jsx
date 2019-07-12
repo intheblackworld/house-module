@@ -52,8 +52,21 @@ const MobileNavigation = () => {
     [c.show]: isMapShow,
   })
 
+  const [hasMargin, setMargin] = useState(false)
+  // eslint-disable-next-line func-names
+  window.onscroll = function () {
+    const d = document.documentElement
+    const offset = d.scrollTop + window.innerHeight
+    const height = document.querySelector('#app').offsetHeight
+    if (offset >= height) {
+      setMargin(true)
+    } else {
+      setMargin(false)
+    }
+  }
+
   return (
-    <div className={c.mobileNavigation}>
+    <div className={`${c.mobileNavigation} ${hasMargin ? c.hasMargin : ''}`}>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
       <a className={c.navItem} target="_blank" rel="noopener noreferrer" onClick={showCallDialog}>
         <FontAwesomeIcon icon={faPhone} />
@@ -64,15 +77,7 @@ const MobileNavigation = () => {
         <FontAwesomeIcon icon={faTimes} />
       </div>
 
-      <Link
-        className={c.navItem}
-        to="contact"
-        spy
-        smooth
-        duration={500}
-        offset={0}
-        key="contact"
-      >
+      <Link className={c.navItem} to="contact" spy smooth duration={500} offset={0} key="contact">
         <FontAwesomeIcon icon={faPen} />
         <div className={c.label}>預約賞屋</div>
       </Link>
