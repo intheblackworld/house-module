@@ -10,10 +10,7 @@
   z-index: 100;
   box-shadow: 0 -2px 5px 0 #000;
   transition: all .3s;
-
-  &.hasMargin {
-    bottom: 40px;
-  }
+  
   .navItem {
     flex: 1;
     color: $light;

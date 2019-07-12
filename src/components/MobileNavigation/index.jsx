@@ -52,21 +52,8 @@ const MobileNavigation = () => {
     [c.show]: isMapShow,
   })
 
-  const [hasMargin, setMargin] = useState(false)
-  // eslint-disable-next-line func-names
-  window.onscroll = function () {
-    const d = document.documentElement
-    const offset = d.scrollTop + window.innerHeight
-    const height = document.querySelector('#app').offsetHeight
-    if (offset >= height) {
-      setMargin(true)
-    } else {
-      setMargin(false)
-    }
-  }
-
   return (
-    <div className={`${c.mobileNavigation} ${hasMargin ? c.hasMargin : ''}`}>
+    <div className={c.mobileNavigation}>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
       <a className={c.navItem} target="_blank" rel="noopener noreferrer" onClick={showCallDialog}>
         <FontAwesomeIcon icon={faPhone} />
