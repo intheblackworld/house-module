@@ -12,9 +12,9 @@ const TitleHeader = ({ show }) => {
     || window.navigator.userAgent.match(/Android/i) != null
   return (
     <div className={c.titleHeader}>
-      <img src={require('./star.png')} alt="長虹天際的圖片" className={c.star} />
+      <img src={require('./star.png')} alt="正義聯盟的圖片" className={c.star} />
       <h2 className={withTrans('head', c, show)}>三大超級任務 {!isMobile && '．'}斗內超級巨星</h2>
-      <img src={require('./star.png')} alt="長虹天際的圖片" className={c.star} />
+      <img src={require('./star.png')} alt="正義聯盟的圖片" className={c.star} />
     </div>
   )
 }
@@ -34,7 +34,7 @@ const Task1 = ({ show }) => (
         <p>送你iphone XS！</p>
       </div>
       <div className={c.img1}>
-        <img src={require('./brother1.png')} alt="長虹天際的圖片" />
+        <img src={require('./brother1.png')} alt="正義聯盟的圖片" />
       </div>
     </div>
     <Link
@@ -69,7 +69,7 @@ const Task2 = ({ show }) => (
         </h3>
       </div>
       <div className={c.img2}>
-        <img src={require('./brother2.png')} alt="長虹天際的圖片" />
+        <img src={require('./brother2.png')} alt="正義聯盟的圖片" />
       </div>
     </div>
     <Link
@@ -101,7 +101,7 @@ const Task3 = ({ show }) => (
         <p>萬元紅包意思一下！</p>
       </div>
       <div className={c.img3}>
-        <img src={require('./brother3.png')} alt="長虹天際的圖片" />
+        <img src={require('./brother3.png')} alt="正義聯盟的圖片" />
       </div>
     </div>
     <Link

@@ -40,7 +40,7 @@ const Item1 = ({ show }) => {
             afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
           >
             {img1List.map(url => (
-              <img src={url} alt="長虹天際的圖片" key={url} />
+              <img src={url} alt="正義聯盟的圖片" key={url} />
             ))}
           </Carousel>
         </div>
@@ -78,7 +78,7 @@ const Item2 = ({ show }) => {
             afterChange={() => setIndex(index === locations.length - 1 ? 0 : index + 1)}
           >
             {img2List.map(url => (
-              <img src={url} alt="長虹天際的圖片" key={url} />
+              <img src={url} alt="正義聯盟的圖片" key={url} />
             ))}
           </Carousel>
         </div>

@@ -9,7 +9,7 @@ const Master = ({ show }) => {
   return (
     <div className={c.bg}>
       <div className={c.leaf}>
-        <img className={leftLeafClass} src={require('./flower-left.png')} alt="長虹天際的圖片" />
+        <img className={leftLeafClass} src={require('./flower-left.png')} alt="正義聯盟的圖片" />
         <div className={titleClass}>
           <div className={c.main}>
             <h3>台湾に、日本の美しい立ち姿を</h3>
@@ -21,8 +21,8 @@ const Master = ({ show }) => {
             <div className={c.sub}>值得花三、五年排隊的日本精工新典範</div>
           </div>
         </div>
-        <img className={rightLeaf1Class} src={require('./flower-right1.png')} alt="長虹天際的圖片" />
-        <img className={rightLeaf2Class} src={require('./flower-right2.png')} alt="長虹天際的圖片" />
+        <img className={rightLeaf1Class} src={require('./flower-right1.png')} alt="正義聯盟的圖片" />
+        <img className={rightLeaf2Class} src={require('./flower-right2.png')} alt="正義聯盟的圖片" />
       </div>
     </div>
   )
