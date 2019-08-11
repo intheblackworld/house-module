@@ -15,11 +15,6 @@ const useMask = () => {
   }, [])
   return { mask, showMask }
 }
-// const Container = ({ show }) => {
-//   const containerClass = cx(c.container, {
-//     [c.show]: show,
-//     [c.hide]: !show,
-//   })
 //   return (
 //     <div className={containerClass}>
 //       {/* {!isMobile && (
