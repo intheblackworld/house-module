@@ -50,7 +50,7 @@ export default class Home extends React.Component {
     this.setState({ isShow: true })
   }
 
-  closeDialog() {
+  closeDialog = () => {
     this.setState({ isShow: false })
   }
 
