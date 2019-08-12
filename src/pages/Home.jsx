@@ -4,6 +4,10 @@ import MobileNavigation from 'components/MobileNavigation'
 import Footer from 'components/Footer'
 import ActivityDialog from 'components/ActivityDialog'
 import SectionList from 'sections'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import cx from 'classnames'
+import c from './index.scss'
 import { isMobile } from '../utils'
 
 // const Home = () => (
@@ -46,7 +50,14 @@ export default class Home extends React.Component {
     this.setState({ isShow: true })
   }
 
+  closeDialog() {
+    this.setState({ isShow: false })
+  }
+
   render() {
+    const closeClass = cx(c.close, {
+      [c.show]: this.state.isShow,
+    })
     return (
       <div>
         <div ref={this.script} />
@@ -55,6 +66,9 @@ export default class Home extends React.Component {
         {isMobile && <MobileNavigation />}
         <SectionList />
         <Footer />
+        <div className={closeClass} onClick={this.closeDialog} onKeyDown={this.closeDialog}>
+          <FontAwesomeIcon icon={faTimes} />
+        </div>
         <ActivityDialog show={this.state.isShow} />
       </div>
     )
