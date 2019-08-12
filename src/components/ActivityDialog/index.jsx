@@ -9,7 +9,7 @@ const ActivityDialog = (props) => {
   })
   return (
     <div className={dialogClass}>
-      <img className={c.dialogImage} src={isMobile ? require('./am1.jpg') : require('./a1.jpg')} alt="" />
+      <img className={c.dialogImage} src={isMobile ? require('./a1m.jpg') : require('./a1.jpg')} alt="" />
     </div>
   )
 }
