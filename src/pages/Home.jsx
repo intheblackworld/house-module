@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from 'components/Navigation'
 import MobileNavigation from 'components/MobileNavigation'
 import Footer from 'components/Footer'
+import ActivityDialog from 'components/ActivityDialog'
 import SectionList from 'sections'
 import { isMobile } from '../utils'
 
@@ -20,6 +21,9 @@ export default class Home extends React.Component {
     super(props)
     this.script = React.createRef()
     this.noscript = React.createRef()
+    this.state = {
+      isShow: false,
+    }
   }
 
   componentDidMount() {
@@ -39,6 +43,7 @@ export default class Home extends React.Component {
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
     this.script.current.appendChild(s)
     this.noscript.current.appendChild(n)
+    this.setState({ isShow: true })
   }
 
   render() {
@@ -47,9 +52,10 @@ export default class Home extends React.Component {
         <div ref={this.script} />
         <div ref={this.noscript} />
         <Navigation />
-        { isMobile && <MobileNavigation />}
+        {isMobile && <MobileNavigation />}
         <SectionList />
         <Footer />
+        <ActivityDialog show={this.state.isShow} />
       </div>
     )
   }
