@@ -49,15 +49,26 @@ const Section2 = ({ show }) => {
   const bgClass = withTrans('bg', c, show)
   return (
     <div className={bgClass}>
-      <iframe
-        width={isMobile ? '100%' : '1024'}
-        height={isMobile ? '400' : '560'}
-        title="youtube"
-        src="https://www.youtube.com/embed/UkSMVh_7iK4"
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
+      <div className={c.videoContainer}>
+        <iframe
+          width={isMobile ? '100%' : '500'}
+          height={isMobile ? '400' : '280'}
+          title="youtube"
+          src="https://www.youtube.com/embed/UkSMVh_7iK4"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        <iframe
+          width={isMobile ? '100%' : '500'}
+          height={isMobile ? '400' : '280'}
+          title="youtube"
+          src="https://www.youtube.com/embed/YOvz8h8BGEI"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
       <h3 className={c.title}>西區城心{isMobile ? <br /> : ' '}誠心鉅獻</h3>
       <Viewport isBottom={false}>
         <ItemList />

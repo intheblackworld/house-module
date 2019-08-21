@@ -13,6 +13,11 @@
       @include animate(fadeIn, .5s, 0s);
     }
   }
+  .videoContainer {
+    display: flex;
+    width: 1024px;
+    margin: 0 auto;
+  }
   .title {
     display: block;
     margin: 0 auto;
@@ -98,6 +103,13 @@
   .bg {
     background-color: #932c59;
     padding: 40px 0;
+
+    .videoContainer {
+      display: flex;
+      width: 100vw;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
     .title {
       width: 90%;
       height: 31px;
