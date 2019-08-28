@@ -82,10 +82,10 @@ const itemList = [
   },
 
   {
-    title: '今日新聞',
-    src: require('./6.png'),
-    link: 'https://www.nownews.com/news/20190827/3593053/',
-    bDesc: '林口高規格豪宅長虹天際　開案熱銷250戶',
+    title: 'ETtoday房產雲',
+    src: require('./8.png'),
+    bDesc: '睽違3年　長虹在林口最強代表作圓滿落成',
+    link: 'https://house.ettoday.net/news/1522074',
   },
 
   {
@@ -97,10 +97,9 @@ const itemList = [
 
   {
     title: 'ETtoday房產雲',
-    src: require('./8.png'),
-    bDesc: '這區小坪數當道　他推大坪數逆勢突圍！「高CP值＋讓利」是關鍵',
-    link:
-      'https://house.ettoday.net/news/1522074',
+    src: require('./6.png'),
+    link: 'https://www.nownews.com/news/20190827/3593053/',
+    bDesc: '林口高規格豪宅長虹天際　開案熱銷250戶',
   },
 ]
 
