@@ -70,8 +70,8 @@ const itemList = [
   {
     title: '中時電子報',
     src: require('./4.png'),
-    link: 'https://www.chinatimes.com/realtimenews/20190517001677-260410?chdtv',
-    bDesc: '旺house》久違了！林口最強代表作 「長虹天際」圓滿落成',
+    link: 'https://www.chinatimes.com/realtimenews/20190826001551-260410?chdtv',
+    bDesc: '旺house》林口超強豪宅銷售開紅盤 長虹天際慶圓滿落成熱銷已逾230戶',
   },
 
   {
@@ -82,10 +82,10 @@ const itemList = [
   },
 
   {
-    title: '經濟日報',
+    title: '今日新聞',
     src: require('./6.png'),
-    link: 'https://money.udn.com/money/story/5638/3828639',
-    bDesc: '長虹天際 全棟SRC頂規制震',
+    link: 'https://www.nownews.com/news/20190827/3593053/',
+    bDesc: '林口高規格豪宅長虹天際　開案熱銷250戶',
   },
 
   {
@@ -96,11 +96,11 @@ const itemList = [
   },
 
   {
-    title: '風傳媒',
+    title: 'ETtoday房產雲',
     src: require('./8.png'),
-    bDesc: '睽違3年　長虹在林口最強代表作圓滿落成',
+    bDesc: '這區小坪數當道　他推大坪數逆勢突圍！「高CP值＋讓利」是關鍵',
     link:
-      'https://www.storm.mg/localarticle/1291929?srcid=7777772e73746f726d2e6d675f61373437623362393666333534316130_1559268655',
+      'https://house.ettoday.net/news/1522074',
   },
 ]
 
