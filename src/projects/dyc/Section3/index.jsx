@@ -59,7 +59,7 @@ const Section3 = () => (
   <div className={c.bg}>
     <div className={c.title}>
       <h3>日本真工新典範</h3>
-      <h3>21-47坪｜巨匠藏品</h3>
+      <h3>37-48坪｜巨匠藏品</h3>
     </div>
     <ViewPort isBottom={false}>
       <Container />
