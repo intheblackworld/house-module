@@ -1,9 +1,9 @@
 import React from 'react'
-import Navigation from 'components/Navigation'
-import MobileNavigation from 'components/MobileNavigation'
+// import Navigation from 'components/Navigation'
+// import MobileNavigation from 'components/MobileNavigation'
 import Layout from 'layouts'
 import Footer from 'components/Footer'
-import { isMobile } from '../utils'
+// import { isMobile } from '../utils'
 
 // const Home = () => (
 //   <div>
@@ -46,8 +46,8 @@ export default class Home extends React.Component {
       <div>
         <div ref={this.script} />
         <div ref={this.noscript} />
-        <Navigation />
-        { isMobile && <MobileNavigation />}
+        {/* <Navigation /> */}
+        {/* { isMobile && <MobileNavigation />} */}
         <Layout />
         <Footer />
       </div>

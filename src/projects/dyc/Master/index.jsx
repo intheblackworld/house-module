@@ -2,18 +2,26 @@ import { withTrans, isMobile } from 'utils'
 import c from './index.scss'
 
 const Master = ({ show }) => {
-  const titleClass = withTrans('title', c, show)
-  const leftLeafClass = withTrans('leftLeaf', c, show)
-  const rightLeaf1Class = withTrans('rightLeaf1', c, show)
-  const rightLeaf2Class = withTrans('rightLeaf2', c, show)
+  // const titleClass = withTrans('title', c, show)
+  // const leftLeafClass = withTrans('leftLeaf', c, show)
+  // const rightLeaf1Class = withTrans('rightLeaf1', c, show)
+  // const rightLeaf2Class = withTrans('rightLeaf2', c, show)
 
-  const downFlower1Class = withTrans('downFlower1', c, show)
-  const downFlower2Class = withTrans('downFlower2', c, show)
-  const topFlowerClass = withTrans('topFlower', c, show)
+  // const downFlower1Class = withTrans('downFlower1', c, show)
+  // const downFlower2Class = withTrans('downFlower2', c, show)
+  // const topFlowerClass = withTrans('topFlower', c, show)
+  const bgImgClass = withTrans('bgImg', c, show)
 
   return (
     <div className={c.bg}>
-      <div className={c.leaf}>
+      {
+        isMobile ? (
+          <img src={require('./mo.jpg')} alt="" className={bgImgClass} />
+        ) : (
+          <img src={require('./web.jpg')} alt="" className={bgImgClass} />
+        )
+      }
+      {/* <div className={c.leaf}>
         <img src={require('./topLeaf.png')} alt="" className={c.topLeaf} />
         <img src={require('./downLeaf.png')} alt="" className={c.downLeaf} />
 
@@ -28,7 +36,7 @@ const Master = ({ show }) => {
         )}
         <img className={rightLeaf1Class} src={require('./flower-right1.png')} alt="" />
         <img className={rightLeaf2Class} src={require('./flower-right2.png')} alt="" />
-      </div>
+      </div> */}
     </div>
   )
 }

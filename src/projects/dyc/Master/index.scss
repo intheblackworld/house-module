@@ -1,13 +1,21 @@
 @import '../../../assets/animate.scss';
 
-.bg {
+.bgImg {
   width: 100vw;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: url('./bg.png');
-  overflow: hidden;
+  min-height: calc(100vw * (1080 / 1920));
+  display: block;
+  object-fit: cover;
 }
+
+// .bg {
+//   width: 100vw;
+//   height: 100vh;
+//   background-size: cover;
+//   background-position: center;
+//   background-image: url('./bg.png');
+//   overflow: hidden;
+// }
 
 .leaf {
   width: 100vw;
@@ -119,10 +127,17 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .bg {
-    background-image: url('./mbg.png');
-    height: 110vh;
+  .bgImg {
+    width: 100vw;
+    height: 100vh;
+    min-height: calc(100vw * (1920 / 1080));
+    display: block;
+    object-fit: cover;
   }
+  // .bg {
+  //   background-image: url('./mbg.png');
+  //   height: 110vh;
+  // }
 
   .leaf {
     background-image: none;
