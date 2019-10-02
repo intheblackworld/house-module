@@ -3,10 +3,10 @@ import { Element } from 'react-scroll'
 import Mask from 'components/AstrictMask'
 // import Order from 'components/Order'
 import ViewPort from 'components/ViewPort'
-import FixLink from 'components/FixLink'
+// import FixLink from 'components/FixLink'
 // import FullScreen from './FullScreen'
 // import ContactSection from './ContactSection'
-import { isMobile } from '../utils'
+// import { isMobile } from '../utils'
 
 import './index.scss'
 
@@ -24,7 +24,7 @@ const Master = lazy(() => import('projects/dyc/Master'))
 const Layout = () => (
   <React.Fragment>
     <Mask />
-    {!isMobile && <FixLink />}
+    {/* {!isMobile && <FixLink />} */}
     <Element id="master">
       <ViewPort isBottom={false}>
         <Master />
