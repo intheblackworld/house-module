@@ -2,34 +2,58 @@
 
 .container {
   display: flex;
+  flex-direction: row-reverse;
   background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-  .leftImg, .title, .subTitle, .desc, .structure {
+  .leftImg,
+  .title,
+  .subTitle,
+  .desc,
+  .structure {
     opacity: 0;
   }
   &.show {
     .leftImg {
-      @include animate(fadeIn, .5s, 0s);
-    } .title {
-      @include animate(fadeIn, .5s, .4s);
-    } .subTitle {
-      @include animate(fadeIn, .5s, .5s);
-    } .desc {
-      @include animate(fadeIn, .5s, .7s);
+      @include animate(fadeIn, 0.5s, 0s);
+    }
+    .title {
+      @include animate(fadeIn, 0.5s, 0.4s);
+    }
+    .subTitle {
+      @include animate(fadeIn, 0.5s, 0.5s);
+    }
+    .desc {
+      @include animate(fadeIn, 0.5s, 0.7s);
     }
     .structure {
-      @include animate(fadeIn, .5s, 1s);
+      @include animate(fadeIn, 0.5s, 1s);
     }
   }
 
   &.bg {
-    background-image: url('./downBg.png');
     background-size: cover;
     background-position: center;
+  }
+
+  &.top {
+    flex-direction: row;
   }
   // .leftImg {
   //   width: 30%;
   // }
+
+  :global {
+    .slick-slider {
+      width: 50%;
+    }
+
+    .slick-slide img {
+      width: 100%;
+      height: calc(50vw * 640 / 960);
+    }
+  }
 
   .content {
     width: 70%;
@@ -38,30 +62,51 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
     .text {
       width: 445px;
-      margin-bottom: 180px;
 
       &.sb {
         margin-bottom: 100px;
       }
     }
+
     .title {
-      font-size: 22px;
-      color: #bd6f91;
+      background-color: #932c59;
+      display: inline-block;
+      padding: 7px 15px;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.25;
+      letter-spacing: 0.96px;
+      text-align: left;
+      color: #ffffff;
+      margin-bottom: 30px;
     }
+
     .subTitle {
       font-size: 30px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: 1.2px;
+      text-align: left;
       color: #932c59;
       margin-bottom: 30px;
     }
     .desc {
       font-size: 18px;
-      text-align: justify;
-      color: #333;
-      line-height: 1.65;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.44;
+      letter-spacing: 0.72px;
+      text-align: left;
+      color: #333333;
     }
 
     .structure {
@@ -80,19 +125,6 @@
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
-  .container {
-    .content {
-      padding: 50px 20px;
-      align-items: center;
-      .text {
-        width: 362px;
-      }
-      .rightImg {
-        height: 160px;
-      }
-    }
-  }
 }
 
 /* 手機尺寸 */
@@ -102,7 +134,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     background-color: #fff;
-  
+
     &.bg {
       background-image: url('./downBg.png');
       background-size: cover;
@@ -119,15 +151,7 @@
       margin: 0 auto 40px;
       bottom: 0;
     }
-    .structure {
-      position: relative;
-      width: 171px;
-      margin: 0 auto;
-      transform: translateX(-20px);
-      margin-bottom: 40px;
-      bottom: 0;
-    }
-  
+
     .content {
       width: 90%;
       // height: 100vh;
@@ -137,7 +161,7 @@
       display: flex;
       align-items: flex-start;
       padding-top: 30px;
-  
+
       .text {
         width: 100%;
         margin-left: 0px;
