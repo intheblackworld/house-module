@@ -115,8 +115,8 @@ const Section8 = () => (
       <div>
         <Viewport isBottom={false} position="200px">
           <Container
-            title="為愛，對抗大地撼動"
-            subTitle="國際隔震建築 耐震達6級"
+            title="28坪 2+1房"
+            subTitle="採光高坪效 大小最剛好"
             top
           />
         </Viewport>
