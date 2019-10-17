@@ -131,8 +131,8 @@ const Section8 = () => (
         </div>
         <Viewport isBottom={false} position="200px">
           <Container
-            title="看不見的，更重要"
-            subTitle="20支矩形基樁  深入承載層"
+            title="43、46坪 3房+2間"
+            subTitle="多2間超萬用 雜物沒了 空間更大"
             top={false}
           />
         </Viewport>
