@@ -3,6 +3,7 @@
   z-index: 10;
   right: 20px;
   bottom: 20px;
+  cursor: pointer;
   img {
     width: 120px;
     height: 120px;
@@ -13,10 +14,43 @@
 @media only screen and (max-width: 767px) {
   .fixLink {
     right: -5px;
-    bottom: 10px;
+    bottom: 63px;
     img {
       width: 100px;
       height: 100px;
+    }
+  }
+}
+
+.close {
+  font-size: 36px;
+  position: fixed;
+  right: 50%;
+  top: 15%;
+  transform: translateX(500px);
+  z-index: 300;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .close {
+    font-size: 36px;
+    position: fixed;
+    right: 50%;
+    top: 5%;
+    transform: translateX(45vw);
+    z-index: 300;
+    color: #ccc;
+    display: none;
+    cursor: pointer;
+    &.show {
+      display: block;
     }
   }
 }

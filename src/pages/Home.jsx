@@ -1,8 +1,6 @@
 import React from 'react'
 import Navigation from 'components/Navigation'
 import ActivityDialog from 'components/ActivityDialog'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
 import MobileNavigation from 'components/MobileNavigation'
 import Layout from 'layouts'
@@ -64,7 +62,7 @@ export default class Home extends React.Component {
         <div ref={this.noscript} />
         <ActivityDialog show={this.state.isShow} />
         <div className={closeClass} onClick={this.closeDialog} onKeyDown={this.closeDialog}>
-          <FontAwesomeIcon icon={faTimes} />
+          <img src={require('./close.png')} alt="" />
         </div>
         <Navigation />
         { isMobile && <MobileNavigation />}

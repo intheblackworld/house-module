@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import ActivityDialog from 'components/ActivityDialog'
 import cx from 'classnames'
 import c from './index.scss'
@@ -24,7 +22,7 @@ const FixLink = () => {
       </a>
       <ActivityDialog show={isShow} />
       <div className={closeClass} onClick={closeDialog} onKeyDown={closeDialog}>
-        <FontAwesomeIcon icon={faTimes} />
+        <img src={require('./close.png')} alt="" />
       </div>
     </div>
   )

@@ -25,3 +25,36 @@
     width: 270px !important;
   }
 }
+
+.close {
+  font-size: 36px;
+  position: fixed;
+  right: 50%;
+  top: 15%;
+  transform: translateX(500px);
+  z-index: 300;
+  color: #ccc;
+  display: none;
+  cursor: pointer;
+  &.show {
+    display: block;
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .close {
+    font-size: 36px;
+    position: fixed;
+    right: 50%;
+    top: 5%;
+    transform: translateX(45vw);
+    z-index: 300;
+    color: #ccc;
+    display: none;
+    cursor: pointer;
+    &.show {
+      display: block;
+    }
+  }
+}
