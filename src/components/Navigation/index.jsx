@@ -108,6 +108,7 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
       window.location.href = `tel:${phone.replace('-', '')}`
       window.CF_tel()
     } else {
+      window.CF_tel()
       return
     }
     setTimeout(() => {
