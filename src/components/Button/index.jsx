@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import css from './index.scss'
 
 const Btn = ({
-  children, icon, hoverEffect = 'flashTwice', link = '', back = false, click, type = ''
+  children, icon, hoverEffect = 'flashTwice', link = '', back = false, click, type = '',
 }) => {
   const BtnClass = cx(css.btn, {
     [css.flash]: hoverEffect === 'flash',
@@ -20,7 +20,7 @@ const Btn = ({
     }, 1000)
   }
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     if (type === 'fbMessenger') {
       window.CF_FBMessenger()
     }

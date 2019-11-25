@@ -48,7 +48,7 @@ export const MessageDialog = (props) => {
         <div className={c.dialogDesc}>Facebook Messenger</div>
         <div className={c.info}>線上諮詢</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-        <a className={c.cta} href={info.fbMessage} target="_blank" rel="noopener noreferrer">
+        <a className={c.cta} href={info.fbMessage} target="_blank" rel="noopener noreferrer" onClick={window.CF_FBMessenger}>
           立即諮詢
         </a>
       </div>
@@ -68,7 +68,7 @@ export const MapDialog = (props) => {
         <div className={c.dialogDesc}>接待會館</div>
         <div className={c.info}>{info.address}</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-        <a className={c.cta} href={info.googleLink} target="_blank" rel="noopener noreferrer">
+        <a className={c.cta} href={info.googleLink} target="_blank" rel="noopener noreferrer" onClick={window.CF_Map}>
           開啟導航
         </a>
       </div>
