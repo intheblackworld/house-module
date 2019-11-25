@@ -64,6 +64,7 @@ const GhostOrder = ({ show, noTitle }) => {
   const submitForm = () => {
     if (isLoading) return
     setLoading(true)
+    window.CF_submit()
     if (!isCheck) {
       setLoading(false)
       return

@@ -11,6 +11,7 @@ import c from './index.scss'
 export const CallDialog = (props) => {
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
+    window.CF_tel()
     window.location.href = `tel:${info.phone.replace('-', '')}`
     setTimeout(() => {
       window.location.href = 'phoneThanks'

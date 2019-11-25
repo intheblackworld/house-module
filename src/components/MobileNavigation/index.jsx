@@ -34,6 +34,7 @@ const MobileNavigation = () => {
 
   const showMapDialog = () => {
     toggleMapDialog(!isMapShow)
+    window.CF_map()
   }
 
   const closeMapDialog = () => {

@@ -83,13 +83,17 @@ const ContactInfo = ({
         </div>
         {/* FB Messenger 諮詢 */}
         <div className={c.hideOnPhone}>
-          <HButton icon={faFacebookMessenger} link={fbMessage}>
+          <HButton icon={faFacebookMessenger} link={fbMessage} onClick={window.CF_FBMessenger}>
             FB Messenger 諮詢
           </HButton>
         </div>
         <div className={c.showOnPhone}>
-          <HButton icon={faFacebookMessenger} click={showMessageDialog}>
-            FB Messenger 諮詢
+          <HButton
+            icon={faFacebookMessenger}
+            click={showMessageDialog}
+            onClick={window.CF_FBMessenger}
+          >
+              FB Messenger 諮詢
           </HButton>
           <MessageDialog show={isMessageShow} closeDialog={closeMessageDialog} />
           <div
@@ -102,7 +106,7 @@ const ContactInfo = ({
         </div>
 
         {/* FB 粉絲頁 */}
-        <HButton icon={faFacebookF} link={fbLink}>
+        <HButton icon={faFacebookF} link={fbLink} onClick={window.CF_fb}>
           前往粉絲專頁
         </HButton>
 

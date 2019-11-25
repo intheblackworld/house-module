@@ -68,6 +68,7 @@ const Order = ({ show, noTitle }) => {
     if (isLoading) return
     if (!isCheck) return
     setLoading(true)
+    window.CF_submit()
     if (
       !document.getElementById('name').value
       || !document.getElementById('phone').value

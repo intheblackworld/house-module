@@ -44,6 +44,127 @@
   <body>
     <div id="app"></div>
     <div id="fb-root"></div>
+    <script src="//cdn.doublemax.net/js/rtid.js"></script>
+    <script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker.js"></script>
+    <script async src="https://cdn.doublemax.net/dmp/cft/tracker.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151964671-1"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=DC-9720768"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-696385316"
+    ></script>
+    <script>
+      clickforce_rtid("9102001");
+      ElandTracker.Track({
+        source: "CAP9102",
+        trackType: "view",
+        trackSubfolderDepth: 3,
+        targetType: "usual"
+      });
+      clickforce_rtid("9102002");
+      ElandTracker.Track({
+        source: "CAP9102",
+        trackType: "view",
+        trackSubfolderDepth: 3,
+        targetType: "pageview"
+      });
+      window.cft =
+        window.cft ||
+        function() {
+          (cft.q = cft.q || []).push([].slice.call(arguments));
+        };
+      cft("setSiteId", "CF-191100050548");
+      cft("setEnableCookie");
+      cft("setViewPercentage");
+      cft("setTPCookie");
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151964671-1");
+      gtag("config", "DC-9720768");
+      gtag("config", "AW-696385316");
+      gtag("event", "conversion", {
+        send_to: "AW-696385316/RwY_CM7K4bMBEKT-h8wC"
+      });
+      gtag("event", "conversion", {
+        allow_custom_scripts: true,
+        send_to: "DC-9720768/invmedia/-pvj10+standard"
+      });
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "291374591592034");
+      fbq("track", "PageViewXsh35tw");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=291374591592034&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <script type="application/javascript">
+      (function(w, d, t, r, u) {
+        w[u] = w[u] || [];
+        w[u].push({ projectId: "10000", properties: { pixelId: "10092925" } });
+        var s = d.createElement(t);
+        s.src = r;
+        s.async = true;
+        s.onload = s.onreadystatechange = function() {
+          var y,
+            rs = this.readyState,
+            c = w[u];
+          if (rs && rs != "complete" && rs != "loaded") {
+            return;
+          }
+          try {
+            y = YAHOO.ywa.I13N.fireBeacon;
+            w[u] = [];
+            w[u].push = function(p) {
+              y([p]);
+            };
+            y(c);
+          } catch (e) {}
+        };
+        var scr = d.getElementsByTagName(t)[0],
+          par = scr.parentNode;
+        par.insertBefore(s, scr);
+      })(window, document, "script", "https://s.yimg.com/wi/ytc.js", "dotq");
+    </script>
     <script>
       function CF_tel() {
         clickforce_rtid("9102005");
@@ -70,8 +191,6 @@
           send_to: "AW-696385316/yus_COLS4bMBEKT-h8wC"
         });
       }
-
-      CF_tel()
     </script>
 
     <script>
@@ -100,163 +219,114 @@
           send_to: "AW-696385316/Q_HJCPy-0LMBEKT-h8wC"
         });
       }
-      CF_reception()
     </script>
     <script>
-      function CF_submit(){
-      clickforce_rtid("9102006");
-      ElandTracker.Track({'source':'CAP9102',
-      'trackType':'click',
-      'trackSubfolderDepth':3,
-      'targetType':'CF_submit'
-      });
-        cft('send', 'event', {
-          action: 'CF_submit',
-          category: '',
-          label: '',
+      function CF_submit() {
+        clickforce_rtid("9102006");
+        ElandTracker.Track({
+          source: "CAP9102",
+          trackType: "click",
+          trackSubfolderDepth: 3,
+          targetType: "CF_submit"
         });
-        gtag('event', 'CF_submit', {
-          'event_category': 'event',
-          'send_to': 'UA-151964671-1'
+        cft("send", "event", {
+          action: "CF_submit",
+          category: "",
+          label: ""
         });
-        gtag('event', 'conversion', {
-          'allow_custom_scripts': true,
-          'send_to': 'DC-9720768/invmedia/-cf_s0+standard'
+        gtag("event", "CF_submit", {
+          event_category: "event",
+          send_to: "UA-151964671-1"
         });
-        gtag('event', 'conversion', {'send_to': 'AW-696385316/T6EHCOvS4bMBEKT-h8wC'});
+        gtag("event", "conversion", {
+          allow_custom_scripts: true,
+          send_to: "DC-9720768/invmedia/-cf_s0+standard"
+        });
+        gtag("event", "conversion", {
+          send_to: "AW-696385316/T6EHCOvS4bMBEKT-h8wC"
+        });
       }
-      CF_submit()
-      </script>
-      <script>
-        function CF_map(){
+    </script>
+    <script>
+      function CF_map() {
         clickforce_rtid("9102003");
-        ElandTracker.Track({'source':'CAP9102',
-        'trackType':'click',
-        'trackSubfolderDepth':3,
-        'targetType':'CF_map'
+        ElandTracker.Track({
+          source: "CAP9102",
+          trackType: "click",
+          trackSubfolderDepth: 3,
+          targetType: "CF_map"
         });
-          cft('send', 'event', {
-            action: 'CF_map',
-            category: '',
-            label: '',
-          });
-          gtag('event', 'CF_map', {
-            'event_category': 'event',
-            'send_to': 'UA-151964671-1'
-          });
-          gtag('event', 'conversion', {
-            'allow_custom_scripts': true,
-            'send_to': 'DC-9720768/invmedia/uxiy10+standard'
-          });
-          gtag('event', 'conversion', {'send_to': 'AW-696385316/jKmFCLS10LMBEKT-h8wC'});
-        }
-        CF_map()
-        </script>    
-        <script>
-          function CF_FBMessenger(){
-          clickforce_rtid("9102008");
-          ElandTracker.Track({'source':'CAP9102',
-          'trackType':'click',
-          'trackSubfolderDepth':3,
-          'targetType':'CF_line'
-          });
-            cft('send', 'event', {
-              action: 'CF_line',
-              category: '',
-              label: '',
-            });
-            gtag('event', 'CF_line', {
-              'event_category': 'event',
-              'send_to': 'UA-151964671-1'
-            });
-            gtag('event', 'conversion', {
-              'allow_custom_scripts': true,
-              'send_to': 'DC-9720768/invmedia/-cf_l0+standard'
-            });
-            gtag('event', 'conversion', {'send_to': 'AW-696385316/8KR_CLrU4bMBEKT-h8wC'});
-          }
-          CF_FBMessenger()
-          </script>
-          <script>
-            function CF_fb(){
-            clickforce_rtid("9102007");
-            ElandTracker.Track({'source':'CAP9102',
-            'trackType':'click',
-            'trackSubfolderDepth':3,
-            'targetType':'CF_fb'
-            });
-              cft('send', 'event', {
-                action: 'CF_fb',
-                category: '',
-                label: '',
-              });
-              gtag('event', 'CF_fb', {
-                'event_category': 'event',
-                'send_to': 'UA-151964671-1'
-              });
-              gtag('event', 'conversion', {
-                'allow_custom_scripts': true,
-                'send_to': 'DC-9720768/invmedia/-cf_f0+standard'
-              });
-              gtag('event', 'conversion', {'send_to': 'AW-696385316/cQx_CNHG0LMBEKT-h8wC'});
-            }
-            CF_fb()
-            </script>
-            <script src="//cdn.doublemax.net/js/rtid.js"></script>
-            <script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker.js"></script>
-            <script async src="https://cdn.doublemax.net/dmp/cft/tracker.js"></script>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151964671-1"></script>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=DC-9720768"></script>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-696385316"></script>
-            <script>
-            clickforce_rtid("9102001");
-            ElandTracker.Track({'source':'CAP9102',
-            'trackType':'view',
-            'trackSubfolderDepth':3,
-            'targetType':'usual'
-            });
-            clickforce_rtid("9102002");
-            ElandTracker.Track({'source':'CAP9102',
-            'trackType':'view',
-            'trackSubfolderDepth':3,
-            'targetType':'pageview'
-            });
-              window.cft=window.cft||function(){(cft.q=cft.q||[]).push([].slice.call(arguments))};
-              cft('setSiteId', 'CF-191100050548');
-              cft('setEnableCookie');
-              cft('setViewPercentage');
-              cft('setTPCookie');
-            
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'UA-151964671-1');
-              gtag('config', 'DC-9720768');
-              gtag('config', 'AW-696385316');
-              gtag('event', 'conversion', {'send_to': 'AW-696385316/RwY_CM7K4bMBEKT-h8wC'});
-              gtag('event', 'conversion', {
-                'allow_custom_scripts': true,
-                'send_to': 'DC-9720768/invmedia/-pvj10+standard'
-              });
-            </script>
-            <!-- Facebook Pixel Code -->
-            <script>
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '291374591592034');
-            fbq('track', 'PageViewXsh35tw');
-            </script>
-            <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=291374591592034&ev=PageView&noscript=1"
-            /></noscript>
-            <!-- End Facebook Pixel Code -->
-            <script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'10092925'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+        cft("send", "event", {
+          action: "CF_map",
+          category: "",
+          label: ""
+        });
+        gtag("event", "CF_map", {
+          event_category: "event",
+          send_to: "UA-151964671-1"
+        });
+        gtag("event", "conversion", {
+          allow_custom_scripts: true,
+          send_to: "DC-9720768/invmedia/uxiy10+standard"
+        });
+        gtag("event", "conversion", {
+          send_to: "AW-696385316/jKmFCLS10LMBEKT-h8wC"
+        });
+      }
+    </script>
+    <script>
+      function CF_FBMessenger() {
+        clickforce_rtid("9102008");
+        ElandTracker.Track({
+          source: "CAP9102",
+          trackType: "click",
+          trackSubfolderDepth: 3,
+          targetType: "CF_line"
+        });
+        cft("send", "event", {
+          action: "CF_line",
+          category: "",
+          label: ""
+        });
+        gtag("event", "CF_line", {
+          event_category: "event",
+          send_to: "UA-151964671-1"
+        });
+        gtag("event", "conversion", {
+          allow_custom_scripts: true,
+          send_to: "DC-9720768/invmedia/-cf_l0+standard"
+        });
+        gtag("event", "conversion", {
+          send_to: "AW-696385316/8KR_CLrU4bMBEKT-h8wC"
+        });
+      }
+    </script>
+    <script>
+      function CF_fb() {
+        clickforce_rtid("9102007");
+        ElandTracker.Track({
+          source: "CAP9102",
+          trackType: "click",
+          trackSubfolderDepth: 3,
+          targetType: "CF_fb"
+        });
+        cft("send", "event", {
+          action: "CF_fb",
+          category: "",
+          label: ""
+        });
+        gtag("event", "CF_fb", {
+          event_category: "event",
+          send_to: "UA-151964671-1"
+        });
+        gtag("event", "conversion", {
+          allow_custom_scripts: true,
+          send_to: "DC-9720768/invmedia/-cf_f0+standard"
+        });
+        gtag("event", "conversion", {
+          send_to: "AW-696385316/cQx_CNHG0LMBEKT-h8wC"
+        });
+      }
+    </script>
   </body>
 </html>

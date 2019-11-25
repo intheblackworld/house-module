@@ -106,6 +106,7 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
     e.preventDefault()
     if (isMobile) {
       window.location.href = `tel:${phone.replace('-', '')}`
+      window.CF_tel()
     } else {
       return
     }
@@ -130,13 +131,13 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
               </a>
             </div>
             <div className={css.item}>
-              <a href={googleLink} target="_blank" rel="noopener noreferrer">
+              <a href={googleLink} target="_blank" rel="noopener noreferrer" onClick={window.CF_map}>
                 <img src={require('./mapIcon.png')} alt="" />
                 <span>地圖導航</span>
               </a>
             </div>
             <div className={css.item}>
-              <Link to="order" spy smooth duration={500} offset={0} key="order">
+              <Link to="order" spy smooth duration={500} offset={0} key="order" onClick={window.CF_reception}>
                 <img src={require('./orderIcon.png')} alt="" />
                 <span>立即預約</span>
               </Link>
@@ -207,7 +208,7 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
             </a>
           </div>
           <div className={css.item}>
-            <a href={googleLink} target="_blank" rel="noopener noreferrer">
+            <a href={googleLink} target="_blank" rel="noopener noreferrer" onClick={window.CF_map}>
               <img src={require('./mapIcon.png')} alt="" />
               <span>地圖導航</span>
             </a>
@@ -220,6 +221,7 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
               duration={500}
               offset={0}
               key="order"
+              onClick={window.CF_reception}
             >
               <img src={require('./orderIcon.png')} alt="" />
               <span>立即預約</span>

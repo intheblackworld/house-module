@@ -95,7 +95,7 @@ const InfoBlock = ({ show }) => {
             )}
           </div>
           <div>
-            <a href={info.fbLink} target="_blank" rel="noopener noreferrer">
+            <a href={info.fbLink} target="_blank" rel="noopener noreferrer" onClick={window.CF_fb}>
               前往粉絲專頁
             </a>
           </div>
