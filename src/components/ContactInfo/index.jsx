@@ -83,7 +83,7 @@ const ContactInfo = ({
         </div>
         {/* FB Messenger 諮詢 */}
         <div className={c.hideOnPhone}>
-          <HButton icon={faFacebookMessenger} link={fbMessage} onClick={window.CF_FBMessenger}>
+          <HButton icon={faFacebookMessenger} link={fbMessage} type="fbMessenger">
             FB Messenger 諮詢
           </HButton>
         </div>
@@ -91,7 +91,6 @@ const ContactInfo = ({
           <HButton
             icon={faFacebookMessenger}
             click={showMessageDialog}
-            onClick={window.CF_FBMessenger}
           >
               FB Messenger 諮詢
           </HButton>
@@ -106,13 +105,13 @@ const ContactInfo = ({
         </div>
 
         {/* FB 粉絲頁 */}
-        <HButton icon={faFacebookF} link={fbLink} onClick={window.CF_fb}>
+        <HButton icon={faFacebookF} link={fbLink} type="fb">
           前往粉絲專頁
         </HButton>
 
         {/* Google Map */}
         <div className={c.hideOnPhone}>
-          <MapLink link={googleLink}>{address}</MapLink>
+          <MapLink link={googleLink} type="googlemap">{address}</MapLink>
         </div>
         <div className={c.showOnPhone}>
           <MapLink click={showMapDialog}>

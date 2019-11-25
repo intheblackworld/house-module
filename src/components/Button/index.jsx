@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import css from './index.scss'
 
 const Btn = ({
-  children, icon, hoverEffect = 'flashTwice', link = '', back = false, click,
+  children, icon, hoverEffect = 'flashTwice', link = '', back = false, click, type = ''
 }) => {
   const BtnClass = cx(css.btn, {
     [css.flash]: hoverEffect === 'flash',
@@ -20,13 +20,22 @@ const Btn = ({
     }, 1000)
   }
 
+  const handleClick = (e) => {
+    if (type === 'fbMessenger') {
+      window.CF_FBMessenger()
+    }
+    if (type === 'fb') {
+      window.CF_fb()
+    }
+  }
+
   return link ? (
     <a
       href={link}
       target={(link.includes('tel') || back) ? '' : '_blank'}
       rel="noopener noreferrer"
       className={BtnClass}
-      onClick={link.includes('tel') ? redirectToPhoneThanks : () => null}
+      onClick={link.includes('tel') ? redirectToPhoneThanks : handleClick}
     >
       {icon && <FontAwesomeIcon icon={icon} />}
       {children}
