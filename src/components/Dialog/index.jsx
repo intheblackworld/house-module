@@ -11,7 +11,7 @@ import c from './index.scss'
 export const CallDialog = (props) => {
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
-    window.location.href = `tel:${info.phone[props.index].replace('-', '')}`
+    window.location.href = `tel:${info.phone.replace('-', '')}`
     setTimeout(() => {
       window.location.href = 'phoneThanks'
     }, 1000)
@@ -20,14 +20,12 @@ export const CallDialog = (props) => {
     [c.show]: props.show,
   })
 
-  console.log(props.index)
-
   return (
     <div className={dialogClass}>
       <div className={c.dialogContent}>
         <FontAwesomeIcon icon={faPhone} />
         <div className={c.dialogDesc}>賞屋專線</div>
-        <div className={c.info}>{info.phone[props.index]}</div>
+        <div className={c.info}>{info.phone}</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div className={c.cta} onClick={redirectToPhoneThanks}>
           撥打電話

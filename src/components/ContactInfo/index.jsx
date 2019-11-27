@@ -24,11 +24,9 @@ const ContactInfo = ({
   })
 
   const [isCallShow, toggleCallDialog] = useState(false)
-  const [showCallIndex, changeShowCallIndex] = useState(0)
 
-  const showCallDialog = (index) => {
+  const showCallDialog = () => {
     toggleCallDialog(!isCallShow)
-    changeShowCallIndex(index)
   }
 
   const closeCallDialog = () => {
@@ -74,19 +72,13 @@ const ContactInfo = ({
       <div className={infoClass}>
         {/* 在手機或平板上顯示可撥打電話的按鈕 */}
         <div className={c.hideOnPhone}>
-          <HButton icon={faPhone}>{phone[0]}</HButton>
-        </div>
-        <div className={c.hideOnPhone}>
-          <HButton icon={faPhone}>{phone[1]}</HButton>
+          <HButton icon={faPhone}>{phone}</HButton>
         </div>
         <div className={c.showOnPhone}>
-          <HButton icon={faPhone} click={() => showCallDialog(0)}>
-            {phone[0]}
+          <HButton icon={faPhone} click={showCallDialog}>
+            {phone}
           </HButton>
-          <HButton icon={faPhone} click={() => showCallDialog(1)}>
-            {phone[1]}
-          </HButton>
-          <CallDialog show={isCallShow} closeDialog={closeCallDialog} index={showCallIndex} />
+          <CallDialog show={isCallShow} closeDialog={closeCallDialog} />
           <div className={closeCallClass} onClick={closeCallDialog} onKeyDown={closeCallDialog}>
             <FontAwesomeIcon icon={faTimes} />
           </div>
