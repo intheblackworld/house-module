@@ -24,9 +24,11 @@ const ContactInfo = ({
   })
 
   const [isCallShow, toggleCallDialog] = useState(false)
+  const [showCallIndex, changeShowCallIndex] = useState(0)
 
-  const showCallDialog = () => {
+  const showCallDialog = (index) => {
     toggleCallDialog(!isCallShow)
+    changeShowCallIndex(index)
   }
 
   const closeCallDialog = () => {
@@ -45,8 +47,10 @@ const ContactInfo = ({
 
   const [isMapShow, toggleMapDialog] = useState(false)
 
-  const showMapDialog = () => {
+  const [showMapIndex, changeMapIndex] = useState(false)
+  const showMapDialog = (index) => {
     toggleMapDialog(!isMapShow)
+    changeMapIndex(index)
   }
 
   const closeMapDialog = () => {
@@ -70,13 +74,19 @@ const ContactInfo = ({
       <div className={infoClass}>
         {/* 在手機或平板上顯示可撥打電話的按鈕 */}
         <div className={c.hideOnPhone}>
-          <HButton icon={faPhone}>{phone}</HButton>
+          <HButton icon={faPhone}>{phone[0]}</HButton>
+        </div>
+        <div className={c.hideOnPhone}>
+          <HButton icon={faPhone}>{phone[1]}</HButton>
         </div>
         <div className={c.showOnPhone}>
-          <HButton icon={faPhone} click={showCallDialog}>
-            {phone}
+          <HButton icon={faPhone} click={() => showCallDialog(0)}>
+            {phone[0]}
           </HButton>
-          <CallDialog show={isCallShow} closeDialog={closeCallDialog} />
+          <HButton icon={faPhone} click={() => showCallDialog(1)}>
+            {phone[1]}
+          </HButton>
+          <CallDialog show={isCallShow} closeDialog={closeCallDialog} index={showCallIndex} />
           <div className={closeCallClass} onClick={closeCallDialog} onKeyDown={closeCallDialog}>
             <FontAwesomeIcon icon={faTimes} />
           </div>
@@ -108,13 +118,19 @@ const ContactInfo = ({
 
         {/* Google Map */}
         <div className={c.hideOnPhone}>
-          <MapLink link={googleLink}>{address}</MapLink>
+          <MapLink link={googleLink[0]}>{address[0]}</MapLink>
+        </div>
+        <div className={c.hideOnPhone}>
+          <MapLink link={googleLink[1]}>{address[1]}</MapLink>
         </div>
         <div className={c.showOnPhone}>
-          <MapLink click={showMapDialog}>
-            {address}
+          <MapLink click={() => showMapDialog(0)}>
+            {address[0]}
           </MapLink>
-          <MapDialog show={isMapShow} closeDialog={closeMapDialog} />
+          <MapLink click={() => showMapDialog(1)}>
+            {address[1]}
+          </MapLink>
+          <MapDialog show={isMapShow} closeDialog={closeMapDialog} index={showMapIndex} />
           <div className={closeMapClass} onClick={closeMapDialog} onKeyDown={closeMapDialog}>
             <FontAwesomeIcon icon={faTimes} />
           </div>

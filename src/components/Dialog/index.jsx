@@ -11,7 +11,7 @@ import c from './index.scss'
 export const CallDialog = (props) => {
   const redirectToPhoneThanks = (e) => {
     e.preventDefault()
-    window.location.href = `tel:${info.phone.replace('-', '')}`
+    window.location.href = `tel:${info.phone[props.index].replace('-', '')}`
     setTimeout(() => {
       window.location.href = 'phoneThanks'
     }, 1000)
@@ -20,12 +20,14 @@ export const CallDialog = (props) => {
     [c.show]: props.show,
   })
 
+  console.log(props.index)
+
   return (
     <div className={dialogClass}>
       <div className={c.dialogContent}>
         <FontAwesomeIcon icon={faPhone} />
         <div className={c.dialogDesc}>賞屋專線</div>
-        <div className={c.info}>{info.phone}</div>
+        <div className={c.info}>{info.phone[props.index]}</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div className={c.cta} onClick={redirectToPhoneThanks}>
           撥打電話
@@ -65,9 +67,9 @@ export const MapDialog = (props) => {
       <div className={c.dialogContent}>
         <FontAwesomeIcon icon={faMapMarkerAlt} />
         <div className={c.dialogDesc}>接待會館</div>
-        <div className={c.info}>{info.address}</div>
+        <div className={c.info}>{info.address[props.index]}</div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-        <a className={c.cta} href={info.googleLink} target="_blank" rel="noopener noreferrer">
+        <a className={c.cta} href={info.googleLink[props.index]} target="_blank" rel="noopener noreferrer">
           開啟導航
         </a>
       </div>
