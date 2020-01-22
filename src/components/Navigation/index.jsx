@@ -148,6 +148,7 @@ const Navigation = ({ hasContactInfo = false, phone, googleLink }) => {
         <Container fluid>
           <Container>
             <div className={`${css.nav} ${hasContactInfo && css.hasContactNav}`}>
+              <img src="https://bcp.crwdcntrl.net/5/c=13578/b=75034577" width="1" height="1" alt="" />
               <div className={css.logo}>
                 <Link
                   to="master"

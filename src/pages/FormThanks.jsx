@@ -34,6 +34,7 @@ export default class Thanks extends React.Component {
         <div ref={this.script} />
         <div ref={this.noscript} />
         <div className={css.thanks}>
+          <img src="https://bcp.crwdcntrl.net/5/c=13578/b=75034597" width="1" height="1" alt="" />
           <h3>感謝您</h3>
           <p>
             預約成功
