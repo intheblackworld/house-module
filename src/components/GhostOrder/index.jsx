@@ -109,16 +109,16 @@ const GhostOrder = ({ show, noTitle }) => {
       {
         method: 'GET',
       },
-    ).then(() => {
+    )
+
+    fetch('contact-form.php', {
+      method: 'POST',
+      body: formData,
+    }).then((response) => {
       setLoading(false)
-      fetch('contact-form.php', {
-        method: 'POST',
-        body: formData,
-      }).then((response) => {
-        if (response.status === 200) {
-          window.location.href = 'formThanks'
-        }
-      })
+      if (response.status === 200) {
+        window.location.href = 'formThanks'
+      }
     })
     // .then((response) => {
     //   if (response.status === 200) {
