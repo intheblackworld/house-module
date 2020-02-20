@@ -112,15 +112,14 @@ const Order = ({ show, noTitle }) => {
       {
         method: 'GET',
       },
-    ).then(() => {
-      fetch('contact-form.php', {
-        method: 'POST',
-        body: formData,
-      }).then((response) => {
-        if (response.status === 200) {
-          window.location.href = 'formThanks'
-        }
-      })
+    )
+    fetch('contact-form.php', {
+      method: 'POST',
+      body: formData,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = 'formThanks'
+      }
     })
     // .then((response) => {
     //   if (response.status === 200) {
