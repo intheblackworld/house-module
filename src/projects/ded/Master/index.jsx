@@ -16,28 +16,32 @@ const Master = ({ show }) => {
   })
 
   return (
-    <div className={`${bgClass}`}>
-      {isMobile ? (
-        <img src={require('./bgm.png')} alt="" className={c.sky} />
-      ) : (
-        <img src={require('./bg.png')} alt="" className={c.sky} />
-      )}
-      {isMobile ? (
-        <img src={require('./buildingm.png')} alt="" className={c.building} />
-      ) : (
-        <img src={require('./building.png')} alt="" className={c.building} />
-      )}
-      {isMobile ? (
-        <img src={require('./titlem.png')} alt="" className={c.title} />
-      ) : (
-        <img src={require('./title.png')} alt="" className={c.title} />
-      )}
-      <img
-        src={require('./train.png')}
-        alt=""
-        className={c.train}
-        style={{ left: `${-2 * scroll + 500}px` }}
-      />
+    <div className={`${bgClass} ${c.section1} ${c.bg} ${c.fullscreen}`}>
+      {/* <img src={require('./bgm.png')} alt="" className={c.sky} /> */}
+      <div className={c.light}>
+        <img src={require('./light.png')} alt="light" />
+      </div>
+      <div className={c.cloud1}>
+        <img src={require('./cloud1.png')} alt="light" />
+      </div>
+      <div className={c.cloud2}>
+        <img src={require('./cloud2.png')} alt="light" />
+      </div>
+      <div className={c.cloud3}>
+        <img src={require('./cloud3.png')} alt="light" />
+      </div>
+      <div className={c.building}>
+        <img src={require('./building.png')} alt="light" />
+      </div>
+      <div className={c.title}>
+        <img src={require('./title.png')} alt="light" />
+      </div>
+      <div className={c.title_bg}>
+        <img src={require('./titlebg.png')} alt="light" />
+      </div>
+      <div className={c.logo}>
+        <img src={require('./logo1.png')} alt="light" />
+      </div>
       {isMobile && <MobileNavigation />}
     </div>
   )

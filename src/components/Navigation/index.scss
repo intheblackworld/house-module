@@ -1,11 +1,11 @@
-$navigationPCHeight: 80px;
+$navigationPCHeight: 60px;
 $navigationTabletHeight: 60px;
 $navigationMobileHeight: 45px;
-$navigationBg: rgba(16, 156, 217, .8); 
+$navigationBg: #9d8f79; 
 
-$logoPCWidth: 52px;
-$logoTabletWidth: 45px;
-$logoMobileWidth: 30px;
+$logoPCWidth: 81px;
+$logoTabletWidth: 75px;
+$logoMobileWidth: 60px;
 
 .navigation {
   background: $navigationBg;
