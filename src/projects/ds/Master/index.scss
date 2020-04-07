@@ -30,45 +30,72 @@
   }
 }
 
-.container {
+.section1 {
+  width: 100%;
+  height: 100vh;
+  margin-top: 80px;
+  overflow: hidden;
   position: relative;
-  .logo1, .title1, .title2 {
-    position: absolute;
-    top: 0;
+}
+.img1,
+.img2,
+.img3,
+.img31,
+.img4 {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.img1,
+.img2 {
+  white-space: nowrap;
+  animation: cloud 60s linear reverse infinite;
+}
+.img2 {
+  animation-duration: 30s;
+}
+.img3 {
+  top: 30%;
+  animation: pc_01 1s forwards;
+}
+.img4 {
+  top: -10%;
+  width: 100%;
+  text-align: center;
+  animation: pc_01 1s forwards;
+}
+.img1 img,
+.img2 img {
+  height: 100%;
+}
+.img3 img,
+.img31 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img4 img {
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.img5 img {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes cloud {
+  to {
+    transform: translateX(-50%);
   }
 }
-
-.logo1 {
-  left: 0;
-  right: 0;
-  width: 80px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-
-.logo2 {
-  position: absolute;
-  bottom: 67px;
-  left: 10%;
-  width: 163px;
-}
-
-.title1 {
-  left: 0;
-  right: 0;
-  width: 80px;
-  margin: 0 auto;
-  margin-top: 70px;
-  transform: translate(120px, -55px);
-}
-
-.title2 {
-  left: 0;
-  right: 0;
-  width: 71px;
-  margin: 0 auto;
-  margin-top: 70px;
-  transform: translate(-120px, 152px);
+@keyframes pc_01 {
+  to {
+    top: 0;
+  }
 }
 
 /* 螢幕尺寸標準 */
@@ -77,12 +104,22 @@
   .bg {
     margin-top: 60px;
   }
+
+  .section1 {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+  }
 }
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
     margin-top: 45px;
+  }
+
+  .section1 {
+    margin-top: 45px;
+    height: calc(100vh - 105px);
   }
 
   .logo1 {
