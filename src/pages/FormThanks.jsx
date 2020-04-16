@@ -26,6 +26,20 @@ export default class Thanks extends React.Component {
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
     this.script.current.appendChild(s)
     this.noscript.current.appendChild(n)
+
+
+    const line = document.createElement('script')
+    line.type = 'text/javascript'
+    line.async = true
+    line.innerHTML = `_lt(
+      "send",
+      "cv",
+      {
+        type: "Conversion"
+      },
+      ["902ad94f-8656-40e1-8d9d-b0a2f0f65181"]
+    );`
+    this.script.current.appendChild(line)
   }
 
   render() {
