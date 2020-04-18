@@ -271,7 +271,7 @@ const MapDialog = (props) => {
 
   return (
     <div className={dialogClass}>
-      <img src={require('./map.png')} className={c.dialogContent} alt="" />
+      <img src={require('./map.jpg')} className={c.dialogContent} alt="" />
     </div>
   )
 }
