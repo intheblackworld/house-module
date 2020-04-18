@@ -219,7 +219,7 @@ const Block3 = ({ show, showDialog }) => (
     )}
     <div className="flex-c">
       <div className={c.mapBlock}>
-        <img src={require('./map.png')} className={c.map} alt="" />
+        <img src={require('./map.jpg')} className={c.map} alt="" />
         <img
           src={require('./mask.png')}
           className={c.mask}
