@@ -24,7 +24,7 @@ const Container = ({ show }) => {
     <div className={containerClass}>
       <div className={c.content}>
         <h3 className={c.title}>
-          翻轉大東區! <br />
+          翻轉新東區! <br />
           近4000坪大器造鎮
         </h3>
         <div className={c.desc}>
@@ -52,7 +52,7 @@ const Section2 = () => {
         <div>
           <div className={c.content}>
             <h3 className={c.title}>
-              翻轉大東區! <br />
+              翻轉新東區! <br />
               近4000坪大器造鎮
             </h3>
             <div className={c.desc}>
