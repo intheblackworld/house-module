@@ -30,7 +30,9 @@ const Master = ({ show }) => {
       <div className={c.cloud3}>
         <img src={require('./cloud3.png')} alt="light" />
       </div>
-      <div className={c.building}>
+      {isMobile && <div className={`${c.fullImg} ${c.mo}`} />}
+      {!isMobile && <div className={`${c.fullImg} ${c.w}`} />}
+      {/* <div className={c.building}>
         <img src={require('./building.png')} alt="light" />
       </div>
       <div className={c.title}>
@@ -41,7 +43,7 @@ const Master = ({ show }) => {
       </div>
       <div className={c.logo}>
         <img src={require('./logo1.png')} alt="light" />
-      </div>
+      </div> */}
       {isMobile && <MobileNavigation />}
     </div>
   )

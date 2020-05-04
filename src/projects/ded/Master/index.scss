@@ -98,6 +98,23 @@
   }
 }
 
+.w {
+  background-image: url('./w.jpg');
+}
+
+.mo {
+  background-image: url('./mo.jpg');
+}
+
+.fullImg {
+  width: 100%;
+  height: 100.5vh;
+  display: block;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+
 .light {
   bottom: 0;
   left: 34%;
@@ -244,6 +261,10 @@
         max-width: auto;
         width: 100%;
       }
+    }
+
+    .fullImg {
+      // height: calc(100vh - 63px);
     }
   }
 }
