@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -62,6 +63,7 @@ import c from './index.scss'
 
 const Block1 = ({ show }) => (
   <div className={withTrans('block', c, show)}>
+    <iframe className={c.video} src="https://www.youtube.com/embed/nRNeT9kqVcc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" />
     {isMobile ? (
       <div className={c.blockTitle}>
         <h3>
