@@ -1,3 +1,4 @@
+
 import { withTrans } from 'utils'
 // import ViewPort from 'components/ViewPort'
 import MobileNavigation from 'components/MobileNavigation'
@@ -13,20 +14,20 @@ const Master = ({ show }) => {
       {isMobile ? (
         <div className={c.container}>
           <img src={require('./bgm.jpg')} alt="" className={c.bgImg} />
-          <img src={require('./title1m.png')} alt="" className={c.title1} />
-          <img src={require('./title2m.png')} alt="" className={c.title2} />
+          {/* <img src={require('./title1m.png')} alt="" className={c.title1} />
+          <img src={require('./title2m.png')} alt="" className={c.title2} /> */}
 
-          <img src={require('./title3m.png')} alt="" className={c.title3} />
-          <img src={require('./title4m.png')} alt="" className={c.title4} />
+          {/* <img src={require('./title3m.png')} alt="" className={c.title3} />
+          <img src={require('./title4m.png')} alt="" className={c.title4} /> */}
         </div>
       ) : (
         <div className={c.container}>
           <img src={require('./bg.jpg')} alt="" className={c.bgImg} />
-          <img src={require('./title1.png')} alt="" className={c.title1} />
-          <img src={require('./title2.png')} alt="" className={c.title2} />
+          {/* <img src={require('./title1.png')} alt="" className={c.title1} />
+          <img src={require('./title2.png')} alt="" className={c.title2} /> */}
 
-          <img src={require('./title3.png')} alt="" className={c.title3} />
-          <img src={require('./title4.png')} alt="" className={c.title4} />
+          {/* <img src={require('./title3.png')} alt="" className={c.title3} />
+          <img src={require('./title4.png')} alt="" className={c.title4} /> */}
         </div>
       )}
 
