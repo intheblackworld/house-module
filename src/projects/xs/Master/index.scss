@@ -30,6 +30,7 @@
 
   .container {
     position: relative;
+    min-height: calc(100vh - 145px);
   }
 
   .title1, .title2, .title2m, .title3, .title4 {
@@ -103,11 +104,12 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .bg {
-    margin-top: 0;
+    margin-top: 45px;
   
     .container {
       position: relative;
       overflow: hidden;
+      min-height: 50vh;
     }
   
     .title1, .title2, .title3, .title4 {
