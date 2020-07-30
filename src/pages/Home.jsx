@@ -37,7 +37,8 @@ export default class Home extends React.Component {
     n.async = true
     n.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WK8TNQN"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
-    this.script.current.appendChild(s)
+    document.head.appendChild(s)
+    // this.script.current.appendChild(s)
     this.noscript.current.appendChild(n)
 
     const s2 = document.createElement('script')
@@ -54,7 +55,7 @@ export default class Home extends React.Component {
     n.async = true
     n.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RVX2N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
-    this.script.current.appendChild(s2)
+    document.head.appendChild(s2)
     this.noscript.current.appendChild(n2)
   }
 
