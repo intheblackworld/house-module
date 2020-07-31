@@ -48,12 +48,12 @@ export default class Home extends React.Component {
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5RVX2N');`
+    })(window,document,'script','dataLayer','GTM-5RVX2N5');`
 
     const n2 = document.createElement('noscript')
     n.type = 'text/javascript'
     n.async = true
-    n.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RVX2N"
+    n.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RVX2N5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
     document.head.appendChild(s2)
     this.noscript.current.appendChild(n2)
