@@ -39,7 +39,7 @@ export default class Home extends React.Component {
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
     document.head.appendChild(s)
     // this.script.current.appendChild(s)
-    this.noscript.current.appendChild(n)
+    // this.noscript.current.appendChild(n)
   }
 
   render() {

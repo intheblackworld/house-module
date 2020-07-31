@@ -24,8 +24,8 @@ export default class Thanks extends React.Component {
     n.async = true
     n.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RVX2N5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`
-    this.script.current.appendChild(s)
-    this.noscript.current.appendChild(n)
+    document.head.appendChild(s)
+    // this.noscript.current.appendChild(n)
 
     const line = document.createElement('script')
     line.type = 'text/javascript'
