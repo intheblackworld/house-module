@@ -26,7 +26,7 @@ const Layout = () => (
     <Mask />
     {/* <FixLink /> */}
     <Element id="master">
-      <ViewPort isBottom={true}>
+      <ViewPort isBottom={false}>
         <Master />
       </ViewPort>
     </Element>
