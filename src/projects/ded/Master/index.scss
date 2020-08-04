@@ -72,13 +72,22 @@
   }
   // @include animate(fadeIn, .8s, .4s);
   &.show {
-    .title {
-      @include animate(fadeIn, 0.8s, 0.2s);
+    .cloud1, .cloud2, .cloud3 {
+      opacity: 1;
+    }
+    .title,
+    .fullImg {
+      @include animate(fadeIn, 0.8s, 0.5s);
+    }
+
+    .light {
+      @include animate(fadeIn, 0.8s, 0.8s);
     }
   }
 
   &.hide {
-    .title {
+    .title,
+    .fullImg {
       @include animate(fadeOut, 0.8s, 0s);
     }
   }
@@ -99,11 +108,11 @@
 }
 
 .w {
-  background-image: url('./w.jpg');
+  background-image: url("./w.jpg");
 }
 
 .mo {
-  background-image: url('./mo.jpg');
+  background-image: url("./mo.jpg");
 }
 
 .fullImg {
@@ -113,12 +122,14 @@
   position: absolute;
   background-size: cover;
   background-position: center;
+  opacity: 0;
 }
 
 .light {
   bottom: 0;
   left: 34%;
   transform: translate(-50%, 30%);
+  opacity: 0;
   img {
     max-height: 140vh;
   }
@@ -128,18 +139,27 @@
   animation-delay: -20s;
   left: 0;
   top: 0px;
+  opacity: 0;
+  transition: .5s;
+  z-index: 3;
 }
 .cloud2 {
   animation: cloud 70s linear infinite;
   animation-delay: -50s;
   left: 0;
   top: 0px;
+  opacity: 0;
+  transition: .5s;
+  z-index: 3;
 }
 .cloud3 {
   animation: cloud 90s linear infinite;
   animation-delay: -30s;
   left: 0;
   top: 70px;
+  opacity: 0;
+  transition: .5s;
+  z-index: 3;
 }
 .building {
   bottom: 0;
