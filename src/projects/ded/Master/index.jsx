@@ -18,9 +18,9 @@ const Master = ({ show }) => {
   return (
     <div className={`${bgClass} ${c.section1} ${c.bg} ${c.fullscreen}`}>
       {/* <img src={require('./bgm.png')} alt="" className={c.sky} /> */}
-      <div className={c.light}>
+      {/* <div className={c.light}>
         <img src={require('./light.png')} alt="light" />
-      </div>
+      </div> */}
       <div className={c.cloud1}>
         <img src={require('./cloud1.png')} alt="light" />
       </div>
