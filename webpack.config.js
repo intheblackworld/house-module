@@ -34,15 +34,15 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        include: [path.resolve(__dirname, 'src')],
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options: {
-          configFile: '.eslintrc',
-        },
-      },
+      // {
+      //   test: /\.jsx?$/,
+      //   include: [path.resolve(__dirname, 'src')],
+      //   enforce: 'pre',
+      //   loader: 'eslint-loader',
+      //   options: {
+      //     configFile: '.eslintrc',
+      //   },
+      // },
       {
         test: [/\.jsx?$/, /\.js?$/],
         include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules/react-in-viewport')],

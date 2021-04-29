@@ -1,43 +1,50 @@
-import React, {
-  useState, useEffect, useLayoutEffect, useRef,
-} from 'react'
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react"
 import {
-  Form, Checkbox, Button, Select, TextArea, Ref,
-} from 'semantic-ui-react'
+  Form,
+  Checkbox,
+  Button,
+  Select,
+  TextArea,
+  Ref,
+} from "semantic-ui-react"
 
-import cx from 'classnames'
-import SweetAlert from 'sweetalert2-react'
+import cx from "classnames"
+import SweetAlert from "sweetalert2-react"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTimes, faSpinner } from "@fortawesome/free-solid-svg-icons"
+import ReCAPTCHA from "react-google-recaptcha"
 
-import PolicyDialog from 'components/PolicyDialog'
+import PolicyDialog from "components/PolicyDialog"
 
-import info from '../../info'
-import { isMobile } from '../../utils'
+import info from "../../info"
+import { isMobile } from "../../utils"
 
-import { cityList, renderAreaList } from './address'
-import css from './index.scss'
+import { cityList, renderAreaList } from "./address"
+import css from "./index.scss"
 
 const Order = ({ show, noTitle }) => {
   // 從網址接收 utm 資料
   const urlParams = new URLSearchParams(window.location.search)
-  const utmSource = urlParams.get('utm_source')
-  const utmMedium = urlParams.get('utm_medium')
-  const utmContent = urlParams.get('utm_content')
-  const utmCampaign = urlParams.get('utm_campaign')
-  const [utm_source] = useState(utmSource || '')
-  const [utm_medium] = useState(utmMedium || '')
-  const [utm_content] = useState(utmContent || '')
-  const [utm_campaign] = useState(utmCampaign || '')
+  const utmSource = urlParams.get("utm_source")
+  const utmMedium = urlParams.get("utm_medium")
+  const utmContent = urlParams.get("utm_content")
+  const utmCampaign = urlParams.get("utm_campaign")
+  const [utm_source] = useState(utmSource || "")
+  const [utm_medium] = useState(utmMedium || "")
+  const [utm_content] = useState(utmContent || "")
+  const [utm_campaign] = useState(utmCampaign || "")
+
+  // google 驗證
+  const [isVerify, verify] = useState(false)
 
   // 選擇居住
-  const [area, setArea] = useState('')
-  const [city, setCity] = useState('')
+  const [area, setArea] = useState("")
+  const [city, setCity] = useState("")
   const [areas, setAreas] = useState([])
   useEffect(() => {
     setAreas(renderAreaList(city))
-    setArea('')
+    setArea("")
   }, [city])
 
   const [isLoading, setLoading] = useState(false)
@@ -45,7 +52,7 @@ const Order = ({ show, noTitle }) => {
   // 是否同意個資聲明
   const [isCheck, check] = useState(false)
   const submitClassName = cx(css.submit, {
-    [css.enable]: isCheck && !isLoading,
+    [css.enable]: isCheck && !isLoading && isVerify,
     [css.show]: show,
     [css.hide]: !show,
   })
@@ -70,32 +77,32 @@ const Order = ({ show, noTitle }) => {
     setLoading(true)
     window.CF_submit()
     if (
-      !document.getElementById('name').value
-      || !document.getElementById('phone').value
-      || !document.getElementById('email').value
-      || !city
-      || !area
+      !document.getElementById("name").value ||
+      !document.getElementById("phone").value ||
+      !document.getElementById("email").value ||
+      !city ||
+      !area
     ) {
       triggerAlert(true)
       setLoading(false)
       return
     }
-    const name = document.getElementById('name').value
-    const phone = document.getElementById('phone').value
-    const email = document.getElementById('email').value
-    const msg = document.getElementById('msg').value
+    const name = document.getElementById("name").value
+    const phone = document.getElementById("phone").value
+    const email = document.getElementById("email").value
+    const msg = document.getElementById("msg").value
 
     const formData = new FormData()
-    formData.append('name', name)
-    formData.append('phone', phone)
-    formData.append('email', email)
-    formData.append('msg', msg)
-    formData.append('city', city)
-    formData.append('area', area)
-    formData.append('utm_source', utm_source)
-    formData.append('utm_medium', utm_medium)
-    formData.append('utm_content', utm_content)
-    formData.append('utm_campaign', utm_campaign)
+    formData.append("name", name)
+    formData.append("phone", phone)
+    formData.append("email", email)
+    formData.append("msg", msg)
+    formData.append("city", city)
+    formData.append("area", area)
+    formData.append("utm_source", utm_source)
+    formData.append("utm_medium", utm_medium)
+    formData.append("utm_content", utm_content)
+    formData.append("utm_campaign", utm_campaign)
     const time = new Date()
     const year = time.getFullYear()
     const month = time.getMonth() + 1
@@ -105,22 +112,21 @@ const Order = ({ show, noTitle }) => {
     const sec = time.getSeconds()
     const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${
-        info.caseName
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${name}&phone=${phone}&email=${email}&cityarea=${city}${area}&msg=${msg}&utm_source=${utm_source}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_campaign=${utm_campaign}&date=${date}&campaign_name=${info.caseName
       }
       `,
       {
-        method: 'GET',
-      },
+        method: "GET",
+      }
     )
 
-    fetch('contact-form.php', {
-      method: 'POST',
+    fetch("contact-form.php", {
+      method: "POST",
       body: formData,
     }).then((response) => {
       setLoading(false)
       if (response.status === 200) {
-        window.location.href = 'formThanks'
+        window.location.href = "formThanks"
       }
     })
     // .then((response) => {
@@ -165,16 +171,16 @@ const Order = ({ show, noTitle }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (document.activeElement.tagName === 'INPUT') {
+      if (document.activeElement.tagName === "INPUT") {
         // 延迟出现是因为有些 Android 手机键盘出现的比较慢
         window.setTimeout(() => {
           document.activeElement.scrollIntoViewIfNeeded()
         }, 100)
       }
     }
-    window.addEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener("resize", handleResize)
     }
   })
 
@@ -184,9 +190,9 @@ const Order = ({ show, noTitle }) => {
         selectCityRef.current.scrollIntoViewIfNeeded()
       }, 100)
     }
-    selectCityRef.current.addEventListener('click', handleClick)
+    selectCityRef.current.addEventListener("click", handleClick)
     return () => {
-      selectCityRef.current.removeEventListener('click', handleClick)
+      selectCityRef.current.removeEventListener("click", handleClick)
     }
   })
 
@@ -196,9 +202,9 @@ const Order = ({ show, noTitle }) => {
         selectAreaRef.current.scrollIntoViewIfNeeded()
       }, 100)
     }
-    selectAreaRef.current.addEventListener('click', handleClick)
+    selectAreaRef.current.addEventListener("click", handleClick)
     return () => {
-      selectAreaRef.current.removeEventListener('click', handleClick)
+      selectAreaRef.current.removeEventListener("click", handleClick)
     }
   })
   // end
@@ -262,14 +268,18 @@ const Order = ({ show, noTitle }) => {
         </div>
         <div className={css.group}>
           <div className={css.control}>
-            <TextArea id="msg" className={css.textarea} placeholder="請輸入您的留言" />
+            <TextArea
+              id="msg"
+              className={css.textarea}
+              placeholder="請輸入您的留言"
+            />
           </div>
         </div>
       </Form>
       <Form.Field className={checkboxClass}>
         <Checkbox
           onChange={(e, { checked }) => check(checked)}
-          label={(
+          label={
             <label>
               本人知悉並同意
               <a onClick={showDialog} onKeyDown={showDialog}>
@@ -277,7 +287,7 @@ const Order = ({ show, noTitle }) => {
               </a>
               內容
             </label>
-)}
+          }
         />
       </Form.Field>
       <PolicyDialog show={isShow} />
@@ -294,6 +304,13 @@ const Order = ({ show, noTitle }) => {
         confirmButtonColor="#e5d48f"
         onConfirm={() => triggerAlert(false)}
       />
+      <div style={{'margin': '15px auto','z-index':2}}>
+        <ReCAPTCHA
+          sitekey="6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz"
+          onChange={() => verify(true)}
+        />
+      </div>
+      
       <Button className={submitClassName} onClick={submitForm}>
         {isLoading && <FontAwesomeIcon icon={faSpinner} spin />}
         立即預約
